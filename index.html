@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="css/home.css" />
   <link rel="stylesheet" href="css/wallet.css" />
   <link rel="stylesheet" href="css/toast.css" />
+  <link rel="stylesheet" href="css/resources.css" />
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
@@ -47,6 +48,15 @@
         data-tooltip="Clases"
       >
         <i data-lucide="swords"></i>
+      </button>
+      <button
+        type="button"
+        class="atlas-nav-btn"
+        data-section="recursos"
+        aria-label="Rasgos activos"
+        data-tooltip="Rasgos activos"
+      >
+        <i data-lucide="flame"></i>
       </button>
       <button
         type="button"
@@ -94,6 +104,15 @@
               <span class="atlas-home__module-text">
                 <span class="atlas-home__module-label">Clases</span>
                 <span class="atlas-home__module-hint">Rasgos, arquetipos y conjuros de clase</span>
+              </span>
+            </button>
+            <button type="button" class="atlas-home__module" data-section="recursos">
+              <span class="atlas-home__module-icon" aria-hidden="true">
+                <i data-lucide="flame"></i>
+              </span>
+              <span class="atlas-home__module-text">
+                <span class="atlas-home__module-label">Rasgos activos</span>
+                <span class="atlas-home__module-hint">Slots, ki, rabia y usos de sesión</span>
               </span>
             </button>
             <button type="button" class="atlas-home__module" data-section="billetera">
@@ -173,6 +192,9 @@
           </div>
         </section>
       </div>
+
+      <!-- Sección Rasgos activos -->
+      <div class="atlas-resources-page atlas-section" id="resources-page" data-section-panel="recursos" hidden></div>
 
       <!-- Sección Billetera -->
       <div class="atlas-wallet-page atlas-section" id="wallet-page" data-section-panel="billetera" hidden></div>

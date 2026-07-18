@@ -30,6 +30,31 @@
   transition: opacity 0.22s ease, transform 0.22s ease;
 }
 
+.atlas-toast--interactive {
+  pointer-events: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 8px;
+}
+
+.atlas-toast__action {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+
+.atlas-toast__action:hover {
+  opacity: 0.9;
+}
+
 .atlas-toast--visible {
   opacity: 1;
   transform: translateY(0);

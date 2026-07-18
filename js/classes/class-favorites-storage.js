@@ -20,6 +20,7 @@ function storageKey(classId) {
  * @property {string[]} spellLevels
  * @property {boolean} previousFeaturesOpen
  * @property {string|null} [selectedSpellId]
+ * @property {boolean} [fromResources] favorito creado solo desde Recursos (efímero)
  */
 
 /**
@@ -59,6 +60,7 @@ export function loadClassFavorite(classId) {
         typeof data.selectedSpellId === 'string' && data.selectedSpellId
           ? data.selectedSpellId
           : null,
+      fromResources: !!data.fromResources,
     };
   } catch {
     return null;
@@ -83,6 +85,7 @@ export function saveClassFavorite(classId, snapshot) {
           : [],
         previousFeaturesOpen: !!snapshot.previousFeaturesOpen,
         selectedSpellId: snapshot.selectedSpellId ?? null,
+        fromResources: !!snapshot.fromResources,
       })
     );
   } catch {
@@ -100,4 +103,22 @@ export function clearClassFavorite(classId) {
   } catch {
     /* ignore */
   }
+}
+
+/**
+ * @returns {string[]}
+ */
+export function listClassFavoriteIds() {
+  const ids = [];
+  try {
+    for (let i = 0; i < localStorage.length; i += 1) {
+      const key = localStorage.key(i);
+      if (!key || !key.startsWith(KEY_PREFIX)) continue;
+      const id = key.slice(KEY_PREFIX.length);
+      if (id) ids.push(id);
+    }
+  } catch {
+    /* ignore */
+  }
+  return ids.sort();
 }

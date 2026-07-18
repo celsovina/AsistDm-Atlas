@@ -14,6 +14,7 @@ import { createFilterPanel } from './spells/filter-panel.js';
 import { createClassesPage } from './classes/class-page.js';
 import { createHomePage } from './home/home-page.js';
 import { createWalletPage } from './wallet/wallet-page.js';
+import { createResourcesPage } from './resources/resources-page.js';
 
 const MOBILE_MQ = window.matchMedia('(max-width: 767px)');
 
@@ -39,7 +40,7 @@ const els = {
 };
 
 function levelBadge(level) {
-  return level === 0 ? 'Truco' : `N${level}`;
+  return level === 0 ? 'Truco' : `Lvl ${level}`;
 }
 
 function getSpell(id) {
@@ -307,10 +308,12 @@ function init() {
 
   const spellsPage = document.getElementById('spells-page');
   const walletPageEl = document.getElementById('wallet-page');
+  const resourcesPageEl = document.getElementById('resources-page');
   const homePageEl = document.getElementById('home-page');
   let classesLoaded = false;
   let spellsLoaded = false;
   let walletLoaded = false;
+  let resourcesLoaded = false;
 
   const homePage = createHomePage({
     page: homePageEl,
@@ -319,6 +322,18 @@ function init() {
 
   const walletPage = createWalletPage({
     page: walletPageEl,
+  });
+
+  const resourcesPage = createResourcesPage({
+    page: resourcesPageEl,
+    onOpenClass: async (classId, opts = {}) => {
+      setSection('clases');
+      if (!classesLoaded) {
+        classesLoaded = true;
+        await classesPage.load();
+      }
+      await classesPage.openClass(classId, opts);
+    },
   });
 
   function setSection(sectionId) {
@@ -334,6 +349,7 @@ function init() {
     classesPage.hide();
     spellsPage.hidden = true;
     walletPage.hide();
+    resourcesPage.hide();
 
     els.app.classList.remove('has-selection');
     els.app.classList.remove('has-class-selection');
@@ -347,6 +363,10 @@ function init() {
         classesLoaded = true;
         classesPage.load();
       }
+    } else if (sectionId === 'recursos') {
+      resourcesPage.show();
+      resourcesPage.load();
+      resourcesLoaded = true;
     } else if (sectionId === 'billetera') {
       walletPage.show();
       if (!walletLoaded) {

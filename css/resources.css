@@ -1,0 +1,488 @@
+/* Atlas — módulo Rasgos activos */
+
+.atlas-resources-page {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.atlas-resources-page[hidden] {
+  display: none !important;
+}
+
+.atlas-resources-page:not([hidden]) {
+  display: flex !important;
+  flex-direction: column;
+}
+
+.resources-page {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  max-width: 560px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.resources-page__scroll {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 8px 4px 16px;
+  box-sizing: border-box;
+}
+
+.resources-page__footer {
+  flex: 0 0 auto;
+  padding: 12px 4px calc(12px + env(safe-area-inset-bottom, 0px));
+  background: transparent;
+  border-top: none;
+}
+
+.resources-rest-btn {
+  width: 100%;
+}
+
+.resources-page__header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.resources-page__title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.resources-page__title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--atlas-text);
+}
+
+.resources-add-btn {
+  flex: 0 0 auto;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--atlas-border);
+  border-radius: 8px;
+  background: var(--atlas-surface);
+  color: var(--atlas-text);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.resources-add-btn:hover {
+  border-color: #5a6578;
+  background: #2d3748;
+}
+
+.resources-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.resources-setup__fav {
+  margin-bottom: 10px;
+}
+
+.resources-level-chip {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  color: #e2e8f0;
+  flex: 0 0 auto;
+}
+
+.resources-level-chip__label {
+  color: #e0e0e0;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.resources-level-chip__btn {
+  background: #2d3748;
+  color: #e2e8f0;
+  border: 1px solid #4a5568;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 600;
+  min-width: 26px;
+  height: 26px;
+  line-height: 1;
+}
+
+.resources-level-chip__btn:hover {
+  background: #4a5568;
+  border-color: #5a6578;
+}
+
+.resources-box--session {
+  position: relative;
+  padding-top: 18px;
+}
+
+.resources-remove-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--atlas-text-muted);
+  cursor: pointer;
+}
+
+.resources-remove-btn:hover {
+  color: var(--atlas-text);
+  background: var(--atlas-surface);
+}
+
+.resources-remove-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.resources-page__lead {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--atlas-text-muted);
+}
+
+.resources-box {
+  border: 1px solid var(--atlas-border);
+  border-radius: var(--atlas-radius-lg);
+  padding: 14px;
+  background: var(--atlas-panel);
+}
+
+.resources-box__title {
+  margin: 0 0 12px;
+  font-size: 13px;
+  font-weight: 650;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--atlas-text-muted);
+}
+
+.resources-setup__row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.resources-box__actions {
+  margin-top: 14px;
+  display: flex;
+  gap: 10px;
+}
+
+.resources-box__actions .resources-btn {
+  flex: 1;
+}
+
+.resources-setup__archetype {
+  margin-top: 10px;
+}
+
+.resources-btn--ghost {
+  background: transparent;
+  border: 1px solid var(--atlas-border);
+  color: var(--atlas-text-muted);
+  flex: 0 0 auto;
+  padding: 8px 12px;
+  font-size: 13px;
+}
+
+.resources-btn--ghost:hover {
+  color: var(--atlas-text);
+  border-color: #5a6578;
+  background: var(--atlas-surface);
+}
+
+.resources-session__header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  margin-bottom: 14px;
+  padding-right: 28px;
+}
+
+.resources-session__title {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--atlas-text);
+}
+
+.resources-session__body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.resources-session__archetype {
+  margin: 0 0 12px;
+  padding-right: 28px;
+}
+
+.resources-block__head {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.resources-block__title {
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 650;
+  color: var(--atlas-text-muted);
+  text-transform: capitalize;
+}
+
+.resources-block__head .resources-block__title {
+  margin: 0;
+}
+
+.resources-block__head .resources-card__count {
+  margin-left: auto;
+}
+
+.resources-select {
+  width: 100%;
+}
+
+.resources-select select {
+  height: 42px;
+  box-sizing: border-box;
+}
+
+.resources-empty {
+  margin: 0;
+  padding: 16px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--atlas-text-muted);
+  border: 1px dashed var(--atlas-border-soft);
+  border-radius: var(--atlas-radius);
+}
+
+.resources-board {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.resources-card {
+  border: 1px solid var(--atlas-border);
+  border-radius: var(--atlas-radius-lg);
+  padding: 14px;
+  background: var(--atlas-panel);
+}
+
+.resources-card__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.resources-card__title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 650;
+  color: var(--atlas-text);
+}
+
+.resources-card__count {
+  font-size: 14px;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+  color: var(--atlas-accent);
+}
+
+.resources-card__note {
+  margin: 0 0 10px;
+  font-size: 12px;
+  color: var(--atlas-text-dim);
+  line-height: 1.4;
+}
+
+.resources-slot-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.resources-slot-label {
+  min-width: 52px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--atlas-text-muted);
+}
+
+.resources-slot-cells {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.resources-slot-btn {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--atlas-border);
+  border-radius: var(--atlas-radius);
+  background: #1a202c;
+  color: var(--atlas-text);
+  font-size: 12px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.resources-slot-btn--wide {
+  width: auto;
+  padding: 0 10px;
+  min-width: 64px;
+}
+
+.resources-slot-btn:hover {
+  border-color: var(--atlas-accent);
+}
+
+.resources-slot-btn.is-consumed {
+  background: rgba(229, 62, 62, 0.18);
+  color: #fc8181;
+  border-color: #e53e3e;
+  text-decoration: line-through;
+  opacity: 1;
+}
+
+.resources-slot-btn.is-consumed:hover {
+  border-color: #fc8181;
+  background: rgba(229, 62, 62, 0.28);
+}
+
+.resources-pool-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.resources-btn {
+  flex: 1;
+  background: #2c3e50;
+  border: 0;
+  color: var(--atlas-text);
+  padding: 10px 14px;
+  border-radius: var(--atlas-radius);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+}
+
+.resources-btn:hover {
+  background: #33485f;
+}
+
+.resources-btn--primary {
+  background: var(--atlas-accent);
+  color: #fff;
+}
+
+.resources-btn--primary:hover {
+  background: #3182ce;
+}
+
+.resources-btn:disabled,
+.resources-btn:disabled:hover {
+  opacity: 0.45;
+  cursor: not-allowed;
+  background: #2c3e50;
+  color: var(--atlas-text);
+}
+
+.resources-btn--primary:disabled,
+.resources-btn--primary:disabled:hover {
+  background: var(--atlas-accent);
+  color: #fff;
+  opacity: 0.45;
+}
+
+.resources-manual-uses {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--atlas-text-muted);
+}
+
+.resources-manual-uses__text {
+  white-space: nowrap;
+}
+
+.resources-manual-uses__input {
+  width: 44px;
+  background: #0f151c;
+  border: 1px solid #2a3b4e;
+  color: var(--atlas-text);
+  padding: 4px 6px;
+  border-radius: var(--atlas-radius-sm, 6px);
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+  text-align: center;
+}
+
+.resources-manual-uses__input:focus {
+  outline: none;
+  border-color: #4a5568;
+}
+
+@media (min-width: 480px) {
+  .resources-setup__row {
+    grid-template-columns: 1.4fr 1fr;
+  }
+}

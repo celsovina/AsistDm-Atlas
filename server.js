@@ -10,6 +10,7 @@ import { handleGetSpells } from './lib/spells-handler.js';
 import { handleGetClassSpells } from './lib/class-spells-handler.js';
 import { handleGetClasses } from './lib/classes-handler.js';
 import { handleGetProgression } from './lib/progression-handler.js';
+import { handleGetResources } from './lib/resources-handler.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PORT = Number(process.env.PORT) || 5180;
@@ -26,6 +27,8 @@ app.all('/api/classes', (req, res) => handleGetClasses(req, res));
 app.all('/api/classes/', (req, res) => handleGetClasses(req, res));
 app.all('/api/progression', (req, res) => handleGetProgression(req, res));
 app.all('/api/progression/', (req, res) => handleGetProgression(req, res));
+app.all('/api/resources', (req, res) => handleGetResources(req, res));
+app.all('/api/resources/', (req, res) => handleGetResources(req, res));
 
 app.use(express.static(__dirname, {
   extensions: ['html'],
@@ -51,4 +54,5 @@ app.listen(PORT, () => {
   console.log(`[Atlas] API GET /api/class-spells`);
   console.log(`[Atlas] API GET /api/classes`);
   console.log(`[Atlas] API GET /api/progression`);
+  console.log(`[Atlas] API GET /api/resources`);
 });

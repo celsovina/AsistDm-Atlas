@@ -58,5 +58,5 @@ export function renderSpellDetail(pane, spell) {
 }
 
 export function spellLevelBadge(level) {
-  return level === 0 ? 'Truco' : `N${level}`;
+  return level === 0 ? 'Truco' : `Lvl ${level}`;
 }

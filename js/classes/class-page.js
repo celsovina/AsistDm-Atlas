@@ -208,6 +208,8 @@ export function createClassesPage(rootEls) {
       spellLevels: [...state.spellLevelFilter],
       previousFeaturesOpen: state.previousFeaturesOpen,
       selectedSpellId: state.selectedSpellId,
+      // Uso en Clases = favorito real (deja de ser efímero de Recursos)
+      fromResources: false,
     };
   }
 
@@ -877,8 +879,40 @@ export function createClassesPage(rootEls) {
 
   return {
     load,
+    /**
+     * Abre una clase (p. ej. desde Rasgos activos para elegir arquetipo).
+     * @param {string} classId
+     * @param {{ classLevel?: number }} [opts]
+     */
+    async openClass(classId, opts = {}) {
+      if (!classId) return;
+      if (!state.classes.length) {
+        await load();
+      }
+      await selectClass(classId);
+
+      const preferred = Number(opts.classLevel);
+      if (!Number.isFinite(preferred) || preferred < 1) return;
+
+      const unlock = getArchetypeUnlockLevel(state.classDetail);
+      if (unlock == null) return;
+      if (state.selectedArchetypeId) return;
+
+      const target = Math.min(20, Math.max(1, Math.floor(preferred)));
+      if (target < unlock) return;
+      if (state.classLevel >= unlock && state.classLevel === target) return;
+
+      state.classLevel = Math.max(state.classLevel, target);
+      persistFavoriteIfNeeded();
+      await refreshProgression();
+      await renderDetail();
+    },
     show() {
       els.page.hidden = false;
+      // Refrescar lista: favoritos pueden haber cambiado desde Recursos
+      if (!state.loading && state.classes.length) {
+        renderClassList();
+      }
     },
     hide() {
       els.page.hidden = true;
