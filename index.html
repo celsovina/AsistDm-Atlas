@@ -4,8 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#2a2e36" />
-  <meta name="description" content="Atlas — Enciclopedia móvil del sistema AsistDM" />
-  <title>Atlas</title>
+  <meta name="description" content="Atlas — Guía de bolsillo para la mesa" />
+  <title>Atlas — Guía de bolsillo</title>
+  <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="stylesheet" href="css/tokens.css" />
   <link rel="stylesheet" href="css/layout.css" />
   <link rel="stylesheet" href="css/catalog.css" />
@@ -61,12 +62,23 @@
       <div class="atlas-home-page atlas-section" id="home-page" data-section-panel="home">
         <div class="atlas-home">
           <header class="atlas-home__header">
-            <h1 class="atlas-home__title">Guía de bolsillo</h1>
-            <p class="atlas-home__lead">
-              ¡Bienvenido! Aquí encontrarás la información que no siempre tienes
-              a mano, pero que te resulta útil en más de una ocasión: conjuros,
-              rasgos de clase y, pronto, tu monedero para la mesa.
-            </p>
+            <div class="atlas-home__brand">
+              <img
+                class="atlas-home__logo"
+                src="Logo.ico"
+                alt="Atlas"
+                width="140"
+                height="140"
+              />
+              <div class="atlas-home__brand-text">
+                <h1 class="atlas-home__title">Guía de bolsillo</h1>
+                <p class="atlas-home__lead">
+                  ¡Bienvenido! Aquí encontrarás la información que no siempre tienes
+                  a mano, pero que te resulta útil en más de una ocasión: conjuros,
+                  rasgos de clase y, pronto, tu monedero para la mesa.
+                </p>
+              </div>
+            </div>
           </header>
           <nav class="atlas-home__modules" aria-label="Módulos de Atlas">
             <button type="button" class="atlas-home__module" data-section="conjuros">
