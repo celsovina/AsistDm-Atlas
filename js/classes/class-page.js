@@ -508,9 +508,6 @@ export function createClassesPage(rootEls) {
     els.selectedBarName.textContent = cls.name || cls.id;
     els.selectedBarMeta.textContent = '';
     els.selectedBarMeta.hidden = true;
-    if (window.lucide && typeof window.lucide.createIcons === 'function') {
-      window.lucide.createIcons();
-    }
 
     syncArchetypeFromStorage();
     await refreshProgression();
@@ -696,6 +693,11 @@ export function createClassesPage(rootEls) {
     } else if (spellsPanel) {
       spellsPanel.reset();
       spellsPanel = null;
+    }
+
+    // Iconos Lucide (favorito, barra, etc.) después de montar el DOM
+    if (window.lucide && typeof window.lucide.createIcons === 'function') {
+      window.lucide.createIcons();
     }
   }
 

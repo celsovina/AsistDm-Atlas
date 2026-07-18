@@ -15,53 +15,27 @@
   display: block !important;
 }
 
-.atlas-home {
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-  max-width: 520px;
-  margin: 0 auto;
-  padding: 12px 8px 24px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
 .atlas-home__header {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.atlas-home__brand {
-  display: flex;
-  align-items: center;
-  gap: 16px;
+  display: block;
+  overflow: auto; /* clear float para que el header envuelva logo + texto */
 }
 
 .atlas-home__logo {
-  flex-shrink: 0;
+  float: left;
   display: block;
   width: 140px;
   height: 140px;
+  margin: 0 16px 8px 0;
   object-fit: contain;
   border-radius: 16px;
 }
 
-.atlas-home__brand-text {
-  flex: 1;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 10px;
-}
-
 .atlas-home__title {
-  margin: 0;
+  margin: 0 0 10px;
   font-size: 28px;
   font-weight: 700;
   letter-spacing: -0.02em;
-  color: #e2e8f0;
+  color: #d39b43;
 }
 
 .atlas-home__lead {
@@ -71,16 +45,24 @@
   color: #a0aec0;
 }
 
-@media (max-width: 480px) {
-  .atlas-home__brand {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+/* Home a pantalla completa: sin sidebar (los módulos del home navegan) */
+.atlas-app--home .atlas-sidebar {
+  display: none !important;
+}
 
-  .atlas-home__logo {
-    width: 120px;
-    height: 120px;
-  }
+.atlas-app--home .atlas-workspace {
+  padding: 20px 16px;
+}
+
+.atlas-home {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 12px 8px 24px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .atlas-home__modules {

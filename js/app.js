@@ -331,6 +331,7 @@ function init() {
 
     els.app.classList.remove('has-selection');
     els.app.classList.remove('has-class-selection');
+    els.app.classList.toggle('atlas-app--home', sectionId === 'home');
 
     if (sectionId === 'home') {
       homePage.show();
@@ -343,12 +344,15 @@ function init() {
     } else if (sectionId === 'billetera') {
       if (walletPage) walletPage.hidden = false;
     } else {
+      // Conjuros: siempre catálogo completo (sin conjuro abierto)
+      state.selectedId = null;
       spellsPage.hidden = false;
       if (!spellsLoaded) {
         spellsLoaded = true;
         loadSpells();
       } else {
         syncSelectionUi();
+        renderList();
       }
     }
 
