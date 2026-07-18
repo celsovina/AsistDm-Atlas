@@ -276,3 +276,12 @@ body {
     flex: 0 0 auto;
   }
 }
+
+/* —— Móvil: evitar auto-zoom de iOS al enfocar campos (<16px) —— */
+@media (max-width: 767px) {
+  .atlas-app input:not([type='checkbox']):not([type='radio']):not([type='range']):not([type='color']):not([type='button']):not([type='submit']):not([type='reset']):not([type='file']):not([type='hidden']):not([type='image']),
+  .atlas-app textarea,
+  .atlas-app select {
+    font-size: 16px !important;
+  }
+}
