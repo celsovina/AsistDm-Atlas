@@ -331,6 +331,32 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.wallet-modal__panel--ppt {
+  border-color: #95a0aa;
+  background: color-mix(in srgb, #95a0aa 16%, var(--atlas-panel));
+}
+
+.wallet-modal__panel--po {
+  border-color: #c9a227;
+  background: color-mix(in srgb, #c9a227 16%, var(--atlas-panel));
+}
+
+.wallet-modal__panel--pe {
+  border-color: #5aa2c8;
+  background: color-mix(in srgb, #5aa2c8 16%, var(--atlas-panel));
+}
+
+.wallet-modal__panel--pp {
+  border-color: #b8c1ca;
+  background: color-mix(in srgb, #b8c1ca 16%, var(--atlas-panel));
+}
+
+.wallet-modal__panel--pc {
+  border-color: #b16b3a;
+  background: color-mix(in srgb, #b16b3a 16%, var(--atlas-panel));
 }
 
 .wallet-modal__header {
@@ -340,11 +366,12 @@
   gap: 8px;
 }
 
-.wallet-modal__title {
+.wallet-modal__balance-line {
   margin: 0;
-  font-size: 16px;
   font-weight: 650;
-  color: var(--atlas-text);
+  font-size: 16px;
+  color: var(--atlas-text-muted);
+  min-width: 0;
 }
 
 .wallet-modal__close {
@@ -358,6 +385,7 @@
   line-height: 1;
   cursor: pointer;
   font-family: inherit;
+  flex-shrink: 0;
 }
 
 .wallet-modal__close:hover {
@@ -365,54 +393,95 @@
   background: rgba(255, 255, 255, 0.06);
 }
 
-.wallet-modal__visor {
-  border: 1px solid var(--atlas-border-soft);
-  border-radius: var(--atlas-radius);
-  background: #121820;
-  padding: 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.wallet-modal__balance-line--ppt {
+  color: #95a0aa;
 }
 
-.wallet-modal__visor-balance {
-  display: flex;
-  align-items: baseline;
-  gap: 10px;
+.wallet-modal__balance-line--po {
+  color: #c9a227;
 }
 
-.wallet-modal__visor-abbr {
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  color: var(--atlas-text-muted);
+.wallet-modal__balance-line--pe {
+  color: #5aa2c8;
 }
 
-.wallet-modal__visor-value {
-  font-size: 28px;
-  font-weight: 700;
-  color: var(--atlas-text);
-  font-variant-numeric: tabular-nums;
+.wallet-modal__balance-line--pp {
+  color: #b8c1ca;
 }
 
-.wallet-modal__visor-op {
+.wallet-modal__balance-line--pc {
+  color: #b16b3a;
+}
+
+.wallet-modal__ops {
   display: flex;
   flex-direction: column;
   gap: 4px;
   font-size: 13px;
+  line-height: 1.45;
   font-variant-numeric: tabular-nums;
 }
 
-.wallet-modal__visor-op--hint {
+/* Misma “transparencia” informativa: suma muted, resta rosada suave */
+.wallet-modal__op--add {
+  color: var(--atlas-text-muted);
+}
+
+.wallet-modal__op--sub {
+  color: rgba(232, 160, 176, 0.72);
+}
+
+.wallet-modal__amount {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border: 1px solid var(--atlas-border);
+  border-radius: var(--atlas-radius);
+  background: #1a2430;
+}
+
+.wallet-modal__amount-abbr {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--atlas-text-muted);
+  line-height: 1.1;
+  flex-shrink: 0;
+}
+
+.wallet-modal__amount-input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: var(--atlas-text);
+  font-size: 28px;
+  font-weight: 700;
+  font-family: inherit;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+  text-align: right;
+  padding: 0;
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.wallet-modal__amount-input::-webkit-outer-spin-button,
+.wallet-modal__amount-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.wallet-modal__amount-input::placeholder {
   color: var(--atlas-text-dim);
+  opacity: 0.7;
 }
 
-.wallet-modal__op--ok {
-  color: #bbf7d0;
-}
-
-.wallet-modal__op--bad {
-  color: #fde68a;
+.wallet-modal__amount:focus-within {
+  border-color: var(--atlas-accent);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
 }
 
 .wallet-modal__actions {

@@ -99,10 +99,12 @@ export function createWalletPage({ page }) {
   function getModalEls() {
     return {
       overlay: page.querySelector('#wallet-coin-modal'),
+      panel: page.querySelector('#wallet-modal-panel'),
       abbr: page.querySelector('#wallet-modal-abbr'),
-      balance: page.querySelector('#wallet-modal-balance'),
       input: page.querySelector('#wallet-modal-amount'),
-      visorOp: page.querySelector('#wallet-modal-visor-op'),
+      balanceLine: page.querySelector('#wallet-modal-balance-line'),
+      opAdd: page.querySelector('#wallet-modal-op-add'),
+      opSub: page.querySelector('#wallet-modal-op-sub'),
     };
   }
 
@@ -116,18 +118,24 @@ export function createWalletPage({ page }) {
   }
 
   function refreshModalVisor() {
-    const { abbr, balance, visorOp } = getModalEls();
-    if (!editingCurrency || !abbr || !balance || !visorOp) return;
+    const { panel, abbr, balanceLine, opAdd, opSub } = getModalEls();
+    if (!editingCurrency || !balanceLine || !opAdd || !opSub) return;
 
     const meta = COINS_META[editingCurrency];
     const current = Number(purse[editingCurrency]) || 0;
-    abbr.textContent = meta.abbr;
-    balance.textContent = String(current);
-
     const amount = parseModalAmount();
+
+    if (panel) {
+      panel.className = `wallet-modal__panel wallet-modal__panel--${editingCurrency}`;
+    }
+    if (abbr) abbr.textContent = meta.abbr;
+
+    balanceLine.textContent = `Tienes: ${current} ${meta.abbr}`;
+    balanceLine.className = `wallet-modal__balance-line wallet-modal__balance-line--${editingCurrency}`;
+
     if (amount <= 0) {
-      visorOp.textContent = 'Escribe una cantidad para ver el resultado.';
-      visorOp.className = 'wallet-modal__visor-op wallet-modal__visor-op--hint';
+      opAdd.textContent = `${current} + … = …`;
+      opSub.textContent = `${current} − … = …`;
       return;
     }
 
@@ -135,15 +143,10 @@ export function createWalletPage({ page }) {
     const canSubtract = amount <= current;
     const subResult = current - amount;
 
-    visorOp.innerHTML = `
-      <span class="wallet-modal__op wallet-modal__op--ok">
-        ${current} + ${amount} = ${addResult}
-      </span>
-      <span class="wallet-modal__op ${canSubtract ? 'wallet-modal__op--ok' : 'wallet-modal__op--bad'}">
-        ${current} − ${amount} = ${canSubtract ? subResult : '—'}
-      </span>
-    `;
-    visorOp.className = 'wallet-modal__visor-op';
+    opAdd.textContent = `${current} + ${amount} = ${addResult}`;
+    opSub.textContent = canSubtract
+      ? `${current} − ${amount} = ${subResult}`
+      : '¡No te alcanza!';
   }
 
   function openCoinModal(currency) {
@@ -167,15 +170,17 @@ export function createWalletPage({ page }) {
 
     window.setTimeout(() => {
       input?.focus();
+      input?.select?.();
     }, 30);
   }
 
   function closeCoinModal() {
-    const { overlay } = getModalEls();
+    const { overlay, panel } = getModalEls();
     if (overlay) {
       overlay.hidden = true;
       overlay.setAttribute('aria-hidden', 'true');
     }
+    if (panel) panel.className = 'wallet-modal__panel';
     editingCurrency = null;
     if (onModalKeydown) {
       document.removeEventListener('keydown', onModalKeydown);
@@ -609,38 +614,40 @@ export function createWalletPage({ page }) {
         aria-hidden="true"
         role="dialog"
         aria-modal="true"
-        aria-labelledby="wallet-modal-title"
+        aria-labelledby="wallet-modal-balance-line"
       >
-        <div class="wallet-modal__panel">
+        <div class="wallet-modal__panel" id="wallet-modal-panel">
           <div class="wallet-modal__header">
-            <h3 class="wallet-modal__title" id="wallet-modal-title">Ajustar monedas</h3>
+            <h3
+              class="wallet-modal__balance-line"
+              id="wallet-modal-balance-line"
+            >Tienes: 0</h3>
             <button type="button" class="wallet-modal__close" id="wallet-modal-close" aria-label="Cerrar">×</button>
           </div>
 
-          <div class="wallet-modal__visor" aria-live="polite">
-            <div class="wallet-modal__visor-balance">
-              <span class="wallet-modal__visor-abbr" id="wallet-modal-abbr">PO</span>
-              <span class="wallet-modal__visor-value" id="wallet-modal-balance">0</span>
-            </div>
-            <div class="wallet-modal__visor-op wallet-modal__visor-op--hint" id="wallet-modal-visor-op">
-              Escribe una cantidad para ver el resultado.
-            </div>
+          <div class="wallet-modal__amount">
+            <span class="wallet-modal__amount-abbr" id="wallet-modal-abbr">PO</span>
+            <input
+              class="wallet-modal__amount-input"
+              id="wallet-modal-amount"
+              type="number"
+              inputmode="numeric"
+              min="1"
+              step="1"
+              placeholder="0"
+              autocomplete="off"
+              aria-label="Cantidad"
+            />
           </div>
 
-          <input
-            class="wallet-input"
-            id="wallet-modal-amount"
-            type="number"
-            inputmode="numeric"
-            min="1"
-            step="1"
-            placeholder="Cantidad"
-            autocomplete="off"
-          />
+          <div class="wallet-modal__ops" aria-live="polite">
+            <div class="wallet-modal__op wallet-modal__op--add" id="wallet-modal-op-add">0 + … = …</div>
+            <div class="wallet-modal__op wallet-modal__op--sub" id="wallet-modal-op-sub">0 − … = …</div>
+          </div>
 
           <div class="wallet-modal__actions">
-            <button type="button" class="wallet-btn wallet-btn--primary wallet-btn--add" id="wallet-modal-add">Agregar</button>
             <button type="button" class="wallet-btn wallet-btn--sub" id="wallet-modal-sub">Retirar</button>
+            <button type="button" class="wallet-btn wallet-btn--primary wallet-btn--add" id="wallet-modal-add">Agregar</button>
           </div>
         </div>
       </div>
