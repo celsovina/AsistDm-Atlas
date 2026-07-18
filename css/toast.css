@@ -1,0 +1,60 @@
+/* Atlas — toasts */
+
+.atlas-toast-host {
+  position: fixed;
+  left: 50%;
+  bottom: calc(16px + var(--atlas-safe-bottom, 0px));
+  transform: translateX(-50%);
+  z-index: 10050;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 8px;
+  width: min(420px, calc(100vw - 24px));
+  pointer-events: none;
+}
+
+.atlas-toast {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border-radius: var(--atlas-radius);
+  border: 1px solid var(--atlas-border);
+  background: var(--atlas-panel);
+  color: var(--atlas-text);
+  font-size: 13px;
+  line-height: 1.4;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.22s ease, transform 0.22s ease;
+}
+
+.atlas-toast--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.atlas-toast--info {
+  border-color: #3b82f6;
+  background: #163b67;
+  color: #bfdbfe;
+}
+
+.atlas-toast--warning {
+  border-color: #d97706;
+  background: #5b3a08;
+  color: #fde68a;
+}
+
+.atlas-toast--error {
+  border-color: #dc2626;
+  background: #5b1616;
+  color: #fecaca;
+}
+
+.atlas-toast--success {
+  border-color: #16a34a;
+  background: #123b20;
+  color: #bbf7d0;
+}

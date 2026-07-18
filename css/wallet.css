@@ -1,0 +1,428 @@
+/* Atlas — módulo Billetera / monedero */
+
+.atlas-wallet-page {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  overflow-y: auto;
+  position: relative;
+}
+
+.atlas-wallet-page[hidden] {
+  display: none !important;
+}
+
+.atlas-wallet-page:not([hidden]) {
+  display: block !important;
+}
+
+.wallet-page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 8px 4px 28px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.wallet-page__header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.wallet-page__title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--atlas-text);
+}
+
+.wallet-page__lead {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--atlas-text-muted);
+}
+
+.wallet-box {
+  border: 1px solid var(--atlas-border);
+  border-radius: var(--atlas-radius-lg);
+  padding: 14px 14px 16px;
+  background: var(--atlas-panel);
+  position: relative;
+}
+
+.wallet-box__title {
+  margin: 0 0 12px;
+  font-size: 13px;
+  font-weight: 650;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--atlas-text-muted);
+}
+
+.wallet-box__title--inline {
+  margin: 0;
+}
+
+.wallet-box__title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.wallet-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.wallet-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--atlas-border);
+  background: #1a2430;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-family: inherit;
+  color: inherit;
+  text-align: left;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.wallet-pill:hover {
+  background: #212c3a;
+}
+
+.wallet-pill:focus-visible {
+  outline: 2px solid var(--atlas-accent);
+  outline-offset: 2px;
+}
+
+.wallet-pill__abbr {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--atlas-text-muted);
+}
+
+.wallet-pill__value {
+  font-weight: 650;
+  font-size: 15px;
+  color: var(--atlas-text);
+  margin-left: auto;
+  font-variant-numeric: tabular-nums;
+}
+
+.wallet-pill--ppt {
+  border-color: #95a0aa;
+}
+
+.wallet-pill--po {
+  border-color: #c9a227;
+}
+
+.wallet-pill--pe {
+  border-color: #5aa2c8;
+}
+
+.wallet-pill--pp {
+  border-color: #b8c1ca;
+}
+
+.wallet-pill--pc {
+  border-color: #b16b3a;
+}
+
+.wallet-input {
+  background: #0f151c;
+  border: 1px solid #2a3b4e;
+  color: var(--atlas-text);
+  padding: 10px 12px;
+  border-radius: var(--atlas-radius);
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.wallet-input:focus {
+  border-color: var(--atlas-accent);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.wallet-input[type='number'] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.wallet-input[type='number']::-webkit-outer-spin-button,
+.wallet-input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.wallet-btn {
+  background: #2c3e50;
+  border: 0;
+  color: var(--atlas-text);
+  padding: 10px 16px;
+  border-radius: var(--atlas-radius);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+}
+
+.wallet-btn:hover {
+  background: #33485f;
+}
+
+.wallet-btn.wallet-btn--primary {
+  background: var(--atlas-accent);
+  color: #fff;
+}
+
+.wallet-btn.wallet-btn--primary:hover {
+  background: #3182ce;
+  color: #fff;
+}
+
+.wallet-btn--add,
+.wallet-btn--sub {
+  flex: 1;
+}
+
+
+.wallet-calc {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.wallet-calc__row {
+  display: grid;
+  gap: 10px;
+}
+
+.wallet-calc__row--stack {
+  grid-template-columns: 1fr;
+}
+
+.wallet-calc__preview {
+  min-height: 40px;
+  padding: 10px 12px;
+  border: 1px solid var(--atlas-border-soft);
+  border-radius: var(--atlas-radius);
+  background: rgba(26, 36, 48, 0.55);
+  color: var(--atlas-text);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.wallet-calc__preview[data-empty='1']:empty::before,
+.wallet-calc__preview[data-empty='1'] {
+  color: var(--atlas-text-dim);
+}
+
+.wallet-calc__preview[data-empty='1']:empty::before {
+  content: 'El resultado aparecerá aquí.';
+}
+
+.wallet-calc__actions {
+  display: flex;
+  justify-content: stretch;
+}
+
+.wallet-calc__actions .wallet-btn {
+  width: 100%;
+}
+
+.wallet-select {
+  width: 100%;
+}
+
+.wallet-select select {
+  height: 42px;
+  box-sizing: border-box;
+}
+
+/* Help tooltip (equivalencias) */
+.wallet-help {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.wallet-help__btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  border: 1px solid var(--atlas-border);
+  background: #1a2430;
+  color: var(--atlas-text-muted);
+  font-size: 14px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.wallet-help__btn:hover,
+.wallet-help__btn[aria-expanded='true'] {
+  border-color: var(--atlas-accent);
+  color: var(--atlas-text);
+}
+
+.wallet-help__tooltip {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  z-index: 20;
+  min-width: 160px;
+  padding: 10px 12px;
+  border-radius: var(--atlas-radius);
+  border: 1px solid var(--atlas-border);
+  background: #121820;
+  color: var(--atlas-text-muted);
+  font-size: 12px;
+  line-height: 1.55;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4);
+}
+
+.wallet-help__tooltip[hidden] {
+  display: none !important;
+}
+
+/* Modal flotante */
+.wallet-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10040;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  background: rgba(8, 10, 14, 0.72);
+}
+
+.wallet-modal[hidden] {
+  display: none !important;
+}
+
+.wallet-modal__panel {
+  width: min(360px, 100%);
+  background: var(--atlas-panel);
+  border: 1px solid var(--atlas-border);
+  border-radius: var(--atlas-radius-lg);
+  padding: 16px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.wallet-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.wallet-modal__title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 650;
+  color: var(--atlas-text);
+}
+
+.wallet-modal__close {
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: var(--atlas-radius);
+  background: transparent;
+  color: var(--atlas-text-muted);
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.wallet-modal__close:hover {
+  color: var(--atlas-text);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.wallet-modal__visor {
+  border: 1px solid var(--atlas-border-soft);
+  border-radius: var(--atlas-radius);
+  background: #121820;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.wallet-modal__visor-balance {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.wallet-modal__visor-abbr {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--atlas-text-muted);
+}
+
+.wallet-modal__visor-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--atlas-text);
+  font-variant-numeric: tabular-nums;
+}
+
+.wallet-modal__visor-op {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+}
+
+.wallet-modal__visor-op--hint {
+  color: var(--atlas-text-dim);
+}
+
+.wallet-modal__op--ok {
+  color: #bbf7d0;
+}
+
+.wallet-modal__op--bad {
+  color: #fde68a;
+}
+
+.wallet-modal__actions {
+  display: flex;
+  gap: 10px;
+}
+
+@media (min-width: 640px) {
+  .wallet-calc__row--stack {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr) minmax(0, 1.2fr);
+    align-items: center;
+  }
+}

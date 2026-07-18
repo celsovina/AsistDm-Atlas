@@ -13,6 +13,7 @@ import {
 import { createFilterPanel } from './spells/filter-panel.js';
 import { createClassesPage } from './classes/class-page.js';
 import { createHomePage } from './home/home-page.js';
+import { createWalletPage } from './wallet/wallet-page.js';
 
 const MOBILE_MQ = window.matchMedia('(max-width: 767px)');
 
@@ -305,14 +306,19 @@ function init() {
   });
 
   const spellsPage = document.getElementById('spells-page');
-  const walletPage = document.getElementById('wallet-page');
+  const walletPageEl = document.getElementById('wallet-page');
   const homePageEl = document.getElementById('home-page');
   let classesLoaded = false;
   let spellsLoaded = false;
+  let walletLoaded = false;
 
   const homePage = createHomePage({
     page: homePageEl,
     onNavigate: (sectionId) => setSection(sectionId),
+  });
+
+  const walletPage = createWalletPage({
+    page: walletPageEl,
   });
 
   function setSection(sectionId) {
@@ -327,7 +333,7 @@ function init() {
     if (homePageEl) homePageEl.hidden = true;
     classesPage.hide();
     spellsPage.hidden = true;
-    if (walletPage) walletPage.hidden = true;
+    walletPage.hide();
 
     els.app.classList.remove('has-selection');
     els.app.classList.remove('has-class-selection');
@@ -342,7 +348,11 @@ function init() {
         classesPage.load();
       }
     } else if (sectionId === 'billetera') {
-      if (walletPage) walletPage.hidden = false;
+      walletPage.show();
+      if (!walletLoaded) {
+        walletLoaded = true;
+        walletPage.load();
+      }
     } else {
       // Conjuros: siempre catálogo completo (sin conjuro abierto)
       state.selectedId = null;

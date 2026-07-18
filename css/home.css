@@ -128,39 +128,3 @@
   color: var(--atlas-text-dim);
   line-height: 1.35;
 }
-
-.atlas-wallet-page {
-  flex: 1;
-  min-height: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-.atlas-wallet-page[hidden] {
-  display: none !important;
-}
-
-.atlas-wallet-placeholder {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  text-align: center;
-  padding: 24px;
-  color: var(--atlas-text-muted);
-}
-
-.atlas-wallet-placeholder h2 {
-  margin: 0;
-  font-size: 18px;
-  color: var(--atlas-text);
-}
-
-.atlas-wallet-placeholder p {
-  margin: 0;
-  max-width: 320px;
-  font-size: 13px;
-  line-height: 1.5;
-}
