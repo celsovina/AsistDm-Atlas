@@ -56,7 +56,9 @@ export function createFilterPanel({
   header.className = 'atlas-filter__header';
   header.innerHTML = `
     <span class="atlas-filter__title">Filtros</span>
-    <button type="button" class="atlas-filter__clear" id="${clearId}">Limpiar</button>
+    <button type="button" class="atlas-filter__clear" id="${clearId}" aria-label="Limpiar" title="Limpiar">
+      <i data-lucide="brush-cleaning"></i>
+    </button>
   `;
   panel.appendChild(header);
 
@@ -324,6 +326,10 @@ export function createFilterPanel({
   document.addEventListener('keydown', onDocKeydown);
 
   syncAllRows();
+
+  if (window.lucide && typeof window.lucide.createIcons === 'function') {
+    window.lucide.createIcons();
+  }
 
   return {
     root,

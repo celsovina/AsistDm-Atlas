@@ -1,0 +1,61 @@
+/* Atlas — botón limpiar en barras de búsqueda */
+
+.atlas-search-field {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  display: block;
+}
+
+.atlas-search-field .spells-search-input,
+.atlas-search-field input[type='search'],
+.atlas-search-field input[data-search-clear] {
+  width: 100%;
+  padding-right: 36px;
+}
+
+/* Ocultar cancel nativo (WebKit) — usamos el nuestro */
+.atlas-search-field input[type='search']::-webkit-search-cancel-button,
+.atlas-search-field input[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.atlas-search-clear {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: var(--atlas-radius, 6px);
+  background: transparent;
+  color: var(--atlas-text-muted, #a0aec0);
+  cursor: pointer;
+  line-height: 0;
+}
+
+.atlas-search-clear[hidden] {
+  display: none !important;
+}
+
+.atlas-search-clear:hover {
+  color: var(--atlas-text, #e2e8f0);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.atlas-search-clear:focus-visible {
+  outline: 2px solid var(--atlas-accent, #4299e1);
+  outline-offset: 1px;
+}
+
+.atlas-search-clear svg {
+  width: 16px;
+  height: 16px;
+  stroke-width: 2;
+}

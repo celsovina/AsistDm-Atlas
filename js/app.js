@@ -16,6 +16,7 @@ import { createHomePage } from './home/home-page.js';
 import { createWalletPage } from './wallet/wallet-page.js';
 import { createResourcesPage } from './resources/resources-page.js';
 import { createDicePage } from './dice/dice-page.js';
+import { enhanceAllSearchClears } from './ui/search-clear.js';
 
 const MOBILE_MQ = window.matchMedia('(max-width: 767px)');
 
@@ -408,6 +409,7 @@ function init() {
   });
 
   bindEvents();
+  enhanceAllSearchClears();
   refreshIcons();
   setSection('home');
 }

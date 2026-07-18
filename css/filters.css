@@ -72,13 +72,24 @@
 }
 
 .atlas-filter__clear {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
   background: transparent;
   border: 1px solid var(--atlas-border);
-  border-radius: 6px;
+  border-radius: var(--atlas-radius-lg, 12px);
   color: var(--atlas-text-muted);
-  font-size: 12px;
-  padding: 4px 8px;
   cursor: pointer;
+  line-height: 0;
+}
+
+.atlas-filter__clear svg {
+  width: 16px;
+  height: 16px;
+  stroke-width: 2;
 }
 
 .atlas-filter__clear:hover {
