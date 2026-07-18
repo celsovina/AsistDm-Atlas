@@ -51,7 +51,7 @@ export function createWalletPage({ page }) {
   /** @type {{ ppt: number, po: number, pe: number, pp: number, pc: number }} */
   let purse = createEmptyPurse();
 
-  let calculatorMode = 'complete';
+  let calculatorMode = 'specific';
   /** @type {string|null} */
   let editingCurrency = null;
   /** @type {CustomSelect|null} */
@@ -387,7 +387,7 @@ export function createWalletPage({ page }) {
         </div>
         <div class="wallet-calc__preview" id="wallet-calc-preview" data-empty="1"></div>
         <div class="wallet-calc__actions">
-          <button type="button" class="wallet-btn" id="wallet-calc-apply-specific">Calcular</button>
+          <button type="button" class="wallet-btn" id="wallet-calc-apply-specific">Convertir</button>
         </div>
       `;
 
@@ -399,7 +399,7 @@ export function createWalletPage({ page }) {
         id: 'wallet-calc-from',
         name: 'walletFrom',
         options: CURRENCY_OPTIONS,
-        value: 'po',
+        value: 'pp',
         className: 'wallet-select',
         onChange: () => refreshCalculatorPreview(),
       });
@@ -407,7 +407,7 @@ export function createWalletPage({ page }) {
         id: 'wallet-calc-to',
         name: 'walletTo',
         options: CURRENCY_OPTIONS,
-        value: 'ppt',
+        value: 'po',
         className: 'wallet-select',
         onChange: () => refreshCalculatorPreview(),
       });
@@ -439,7 +439,7 @@ export function createWalletPage({ page }) {
         </div>
         <div class="wallet-calc__preview" id="wallet-calc-preview" data-empty="1"></div>
         <div class="wallet-calc__actions">
-          <button type="button" class="wallet-btn" id="wallet-calc-apply-full">Calcular</button>
+          <button type="button" class="wallet-btn" id="wallet-calc-apply-full">Convertir</button>
         </div>
       `;
 
@@ -489,7 +489,7 @@ export function createWalletPage({ page }) {
       value: calculatorMode,
       className: 'wallet-select',
       onChange: (value) => {
-        calculatorMode = value || 'complete';
+        calculatorMode = value || 'specific';
         renderCalculatorPanel();
       },
     });

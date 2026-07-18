@@ -237,7 +237,7 @@
 }
 
 .wallet-calc__preview[data-empty='1']:empty::before {
-  content: 'El resultado aparecerá aquí.';
+  content: 'Conversión';
 }
 
 .wallet-calc__actions {
