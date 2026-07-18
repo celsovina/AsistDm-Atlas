@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="es" class="rd-standalone">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roll Dice — DnD AsistDM</title>
+    <link rel="stylesheet" href="./css/roll-dice.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="./assets/sprites/packs.manifest.js"></script>
+  </head>
+  <body>
+    <div class="rd-app">
+      <main class="rd-layout">
+        <section class="rd-panel rd-panel--catalog" aria-label="Selector de dados">
+          <div class="rd-catalog-block">
+            <div class="rd-panel__header">
+              <div class="rd-panel__header-row">
+                <h2 class="rd-panel__title">Dados</h2>
+                <div class="rd-panel__header-actions">
+                  <button
+                    class="rd-btn rd-btn--ghost rd-btn--icon rd-catalog-tool rd-clear-btn"
+                    id="rd-clear-pool"
+                    type="button"
+                    aria-label="Limpiar"
+                    title="Limpiar"
+                  >
+                    <i data-lucide="brush-cleaning"></i>
+                  </button>
+                </div>
+              </div>
+              <p class="rd-panel__hint">Pulsa para agregar al pool.<br />Ajusta cantidades con + / −.</p>
+            </div>
+            <div class="rd-catalog-actions">
+              <div id="rd-dice-catalog" class="rd-catalog" aria-label="Catálogo de dados"></div>
+              <button
+                class="rd-btn rd-btn--ghost rd-btn--icon rd-catalog-tool rd-cog-fab"
+                id="rd-open-custom"
+                type="button"
+                aria-label="Customizar"
+                title="Customizar"
+              >
+                <div class="icon-cog"></div>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section class="rd-panel rd-panel--tray" aria-label="Bandeja">
+          <div class="rd-panel__header">
+            <div class="rd-panel__header-row">
+              <h2 class="rd-panel__title">Bandeja</h2>
+              <button class="rd-btn rd-btn--primary" id="rd-roll" type="button">Tirar</button>
+            </div>
+            <p class="rd-panel__hint">Pulsa la bandeja para tirar.</p>
+          </div>
+          <div id="rd-tray" class="rd-tray" aria-label="Bandeja de tirada"></div>
+          <div id="rd-results-bar" class="rd-results-bar" aria-label="Resultados"></div>
+        </section>
+      </main>
+
+      <div class="rd-modal" id="rd-custom-modal" aria-label="Custom" aria-hidden="true">
+        <div class="rd-modal__backdrop" id="rd-custom-backdrop"></div>
+        <div class="rd-modal__panel" role="dialog" aria-modal="true" aria-labelledby="rd-custom-title">
+          <div class="rd-modal__header">
+            <div class="rd-modal__title" id="rd-custom-title">Custom</div>
+            <button class="rd-btn rd-btn--ghost rd-btn--icon" id="rd-custom-close" type="button" aria-label="Cerrar">
+              ✕
+            </button>
+          </div>
+
+          <div class="rd-modal__content">
+            <div class="rd-modal__section">
+              <div class="rd-modal__section-title">Pack de dados</div>
+              <div id="rd-pack-gallery" class="rd-pack-grid" aria-label="Galería de packs"></div>
+            </div>
+
+            <div class="rd-modal__section" id="rd-color-editor" aria-label="Editor de color">
+              <div class="rd-modal__section-title">Color de dados</div>
+
+              <div class="rd-color-modes" role="radiogroup" aria-label="Modo de color">
+                <label class="rd-radio">
+                  <input type="radio" name="rd-color-mode" value="none" />
+                  <span>Sin color</span>
+                </label>
+                <label class="rd-radio">
+                  <input type="radio" name="rd-color-mode" value="fixed" />
+                  <span>Color fijo</span>
+                </label>
+                <label class="rd-radio">
+                  <input type="radio" name="rd-color-mode" value="random" />
+                  <span>Random</span>
+                </label>
+              </div>
+
+              <div class="rd-color-row">
+                <label class="rd-color-field">
+                  <span class="rd-color-field__label">Color</span>
+                  <input id="rd-color-fixed" type="color" value="#60a5fa" />
+                </label>
+
+                <label class="rd-color-field rd-color-field--grow">
+                  <span class="rd-color-field__label">Intensidad <span id="rd-color-intensity-value">70%</span></span>
+                  <input id="rd-color-intensity" type="range" min="0" max="100" value="70" />
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/core/dice-engine.js"></script>
+    <script src="./js/ui/d6-cube-renderer.js"></script>
+    <script src="./js/ui/sprite-dice-renderer.js"></script>
+    <script src="./js/ui/tray-physics.js"></script>
+    <script src="./js/ui/canvas-tint-manager.js"></script>
+    <script src="./js/ui/sprite-canvas-tint-applier.js"></script>
+    <script src="./js/ui/color-prefs.js"></script>
+    <script src="./js/ui/tray-scene.js"></script>
+    <script src="./js/ui/color-editor-ui.js"></script>
+    <script src="./js/ui/custom-modal.js"></script>
+    <script src="./js/ui/dice-roller-ui.js"></script>
+  </body>
+</html>

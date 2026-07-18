@@ -75,6 +75,10 @@ body {
   border-color: rgba(66, 153, 225, 0.45);
 }
 
+.atlas-nav-btn--dock {
+  margin-top: auto;
+}
+
 /* Tooltip nativo mejorado vía data-tooltip */
 .atlas-nav-btn[data-tooltip]::after {
   content: attr(data-tooltip);

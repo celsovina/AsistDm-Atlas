@@ -67,6 +67,15 @@
       >
         <i data-lucide="coins"></i>
       </button>
+      <button
+        type="button"
+        class="atlas-nav-btn atlas-nav-btn--dock"
+        data-section="dados"
+        aria-label="Dados"
+        data-tooltip="Dados"
+      >
+        <i data-lucide="dices"></i>
+      </button>
     </aside>
 
     <main class="atlas-workspace">
@@ -122,6 +131,15 @@
               <span class="atlas-home__module-text">
                 <span class="atlas-home__module-label">Billetera</span>
                 <span class="atlas-home__module-hint">Monedas y conversiones</span>
+              </span>
+            </button>
+            <button type="button" class="atlas-home__module" data-section="dados">
+              <span class="atlas-home__module-icon" aria-hidden="true">
+                <i data-lucide="dices"></i>
+              </span>
+              <span class="atlas-home__module-text">
+                <span class="atlas-home__module-label">Dados</span>
+                <span class="atlas-home__module-hint">Por si los de la mesa no alcanzan</span>
               </span>
             </button>
           </nav>
@@ -195,6 +213,9 @@
 
       <!-- Sección Rasgos activos -->
       <div class="atlas-resources-page atlas-section" id="resources-page" data-section-panel="recursos" hidden></div>
+
+      <!-- Sección Dados -->
+      <div class="atlas-dice-page atlas-section" id="dice-page" data-section-panel="dados" hidden></div>
 
       <!-- Sección Billetera -->
       <div class="atlas-wallet-page atlas-section" id="wallet-page" data-section-panel="billetera" hidden></div>

@@ -15,6 +15,7 @@ import { createClassesPage } from './classes/class-page.js';
 import { createHomePage } from './home/home-page.js';
 import { createWalletPage } from './wallet/wallet-page.js';
 import { createResourcesPage } from './resources/resources-page.js';
+import { createDicePage } from './dice/dice-page.js';
 
 const MOBILE_MQ = window.matchMedia('(max-width: 767px)');
 
@@ -309,11 +310,13 @@ function init() {
   const spellsPage = document.getElementById('spells-page');
   const walletPageEl = document.getElementById('wallet-page');
   const resourcesPageEl = document.getElementById('resources-page');
+  const dicePageEl = document.getElementById('dice-page');
   const homePageEl = document.getElementById('home-page');
   let classesLoaded = false;
   let spellsLoaded = false;
   let walletLoaded = false;
   let resourcesLoaded = false;
+  let diceLoaded = false;
 
   const homePage = createHomePage({
     page: homePageEl,
@@ -336,6 +339,10 @@ function init() {
     },
   });
 
+  const dicePage = createDicePage({
+    page: dicePageEl,
+  });
+
   function setSection(sectionId) {
     document.querySelectorAll('.atlas-nav-btn').forEach((btn) => {
       btn.classList.toggle(
@@ -350,6 +357,7 @@ function init() {
     spellsPage.hidden = true;
     walletPage.hide();
     resourcesPage.hide();
+    dicePage.hide();
 
     els.app.classList.remove('has-selection');
     els.app.classList.remove('has-class-selection');
@@ -367,6 +375,10 @@ function init() {
       resourcesPage.show();
       resourcesPage.load();
       resourcesLoaded = true;
+    } else if (sectionId === 'dados') {
+      dicePage.show();
+      dicePage.load();
+      diceLoaded = true;
     } else if (sectionId === 'billetera') {
       walletPage.show();
       if (!walletLoaded) {
