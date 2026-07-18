@@ -1,0 +1,579 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "lastUpdated": "2024-12-19",
+    "description": "Base de datos de trasfondos para D&D 5e - Manual del Jugador (2018)",
+    "totalTrasfondos": 15
+  },
+  "trasfondos": [
+    {
+      "id": "acolito",
+      "nombre": "Acólito",
+      "descripcion": "Has dedicado tu vida al servicio de un templo consagrado a un dios o panteón de dioses, actuando como intermediario entre el mundo mortal y lo sagrado mediante rituales y ofrendas.",
+      "rasgos": [
+        {
+          "id": "refugio_del_fiel",
+          "nombre": "Refugio del fiel",
+          "descripcion": "Como acólito puedes oficiar ceremonias de tu fe y recibir respeto de quienes la comparten. Tú y tus compañeros podéis obtener sanación y cuidados sin coste en templos y santuarios de tu religión (aportando componentes materiales), y tu templo puede ofrecerte manutención modesta y apoyo si sigues bien considerado."
+        }
+      ],
+      "equipamiento": [
+        { "item_id": "simbolo_sagrado", "cantidad": 1 },
+        { "item_id": "devocionario_o_rueda_oraciones", "cantidad": 1 },
+        { "item_id": "incienso", "cantidad": 5 },
+        { "item_id": "vestiduras", "cantidad": 1 },
+        { "item_id": "ropa_comun", "cantidad": 1 },
+        { "item_id": "bolsa_monedas", "cantidad": 1 }
+      ],
+      "monedas": {
+        "po": 15
+      },
+      "competencias": [
+        "perspicacia",
+        "religion"
+      ],
+      "idiomas": [],
+      "herramientas": [],
+      "selecciones": [
+        {
+          "tipo": "idioma",
+          "cantidad": 2,
+          "origen": "Languages:any",
+          "descripcion": "Dos idiomas de tu elección."
+        }
+      ],
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "animador",
+      "nombre": "Animador",
+      "descripcion": "Tu lugar favorito es frente al público. Sabes cómo encandilarlo, divertirlo e incluso inspirarlo con tu música, historias, danza o burlas.",
+      "rasgos": [
+        {
+          "id": "por_peticion_popular",
+          "nombre": "Por petición popular",
+          "descripcion": "Siempre puedes encontrar un lugar donde actuar, normalmente en posadas, tabernas, circos, teatros o cortes nobles. A cambio de actuar cada noche tú y tus compañeros obtenéis comida y alojamiento modesto o cómodo según el lugar, y te conviertes en una pequeña celebridad local allí donde hayas actuado."
+        }
+      ],
+      "equipamiento": [
+        { "item_id": "instrumento_musical_generico", "cantidad": 1 },
+        { "item_id": "favor_admirador", "cantidad": 1 },
+        { "item_id": "kit_disfraz", "cantidad": 1 },
+        { "item_id": "bolsa_monedas", "cantidad": 1 }
+      ],
+      "monedas": {
+        "po": 15
+      },
+      "competencias": [
+        "acrobacia",
+        "interpretacion"
+      ],
+      "idiomas": [],
+      "herramientas": [
+        "kit_disfraz"
+      ],
+      "selecciones": [
+        {
+          "tipo": "herramienta",
+          "cantidad": 1,
+          "origen": "Tools:instrumento",
+          "descripcion": "Un tipo de instrumento musical a tu elección."
+        }
+      ],
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "artesano_gremial",
+      "nombre": "Artesano gremial",
+      "descripcion": "Eres miembro de un gremio de artesanos, hábil en un oficio concreto y con lazos estrechos con otros maestros de tu profesión.",
+      "rasgos": [
+        {
+          "id": "miembro_de_un_gremio",
+          "nombre": "Miembro de un gremio",
+          "descripcion": "Tu gremio te proporciona apoyo material y social. Puedes contar con comida, alojamiento y ayuda básica de otros miembros, acceder a contactos influyentes y usar la casa gremial como centro para conocer patrones o aliados, siempre que pagues tus cuotas y mantengas tu reputación."
+        }
+      ],
+      "equipamiento": [
+        { "item_id": "herramientas_artesano_genericas", "cantidad": 1 },
+        { "item_id": "carta_presentacion_gremio", "cantidad": 1 },
+        { "item_id": "ropa_viaje", "cantidad": 1 },
+        { "item_id": "bolsa_monedas", "cantidad": 1 }
+      ],
+      "monedas": {
+        "po": 15
+      },
+      "competencias": [
+        "perspicacia",
+        "persuasion"
+      ],
+      "idiomas": [],
+      "herramientas": [],
+      "selecciones": [
+        {
+          "tipo": "herramienta",
+          "cantidad": 1,
+          "origen": "Tools:herramienta",
+          "descripcion": "Un tipo de herramientas de artesano a tu elección."
+        },
+        {
+          "tipo": "idioma",
+          "cantidad": 1,
+          "origen": "Languages:any",
+          "descripcion": "Un idioma de tu elección."
+        }
+      ],
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "charlatan",
+      "nombre": "Charlatán",
+      "descripcion": "Siempre has sabido conseguir que los demás hagan lo que quieres, leyendo sus deseos y explotando sus debilidades mediante engaños y timos.",
+      "rasgos": [
+        {
+          "id": "identidad_falsa",
+          "nombre": "Identidad falsa",
+          "descripcion": "Posees una segunda identidad completa, con documentación, disfraces y contactos que la respaldan. Además, puedes falsificar documentos (incluidas cartas y credenciales oficiales) siempre que hayas visto un ejemplo del formato o la caligrafía."
+        }
+      ],
+      "equipamiento": [
+        { "item_id": "ropa_calidad", "cantidad": 1 },
+        { "item_id": "kit_disfraz", "cantidad": 1 },
+        { "item_id": "herramientas_timo_preferido", "cantidad": 1 },
+        { "item_id": "bolsa_monedas", "cantidad": 1 }
+      ],
+      "monedas": {
+        "po": 15
+      },
+      "competencias": [
+        "decepcion",
+        "juego_de_manos"
+      ],
+      "idiomas": [],
+      "herramientas": [
+        "kit_disfraz",
+        "kit_falsificacion"
+      ],
+      "selecciones": [],
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "criminal",
+      "nombre": "Criminal",
+      "descripcion": "Has pasado gran parte de tu vida al margen de la ley, moviéndote entre delincuentes y sobreviviendo gracias a tu falta de escrúpulos y tus contactos en el submundo.",
+      "rasgos": [
+        {
+          "id": "contacto_criminal",
+          "nombre": "Contacto criminal",
+          "descripcion": "Tienes un contacto fiable que actúa como enlace con una red de criminales. Sabes cómo enviar y recibir mensajes a través de mensajeros, caravaneros y marineros corruptos, incluso a grandes distancias."
+        }
+      ],
+      "equipamiento": [
+        { "item_id": "palanqueta", "cantidad": 1 },
+        { "item_id": "ropa_comun_oscura", "cantidad": 1 },
+        { "item_id": "bolsa_monedas", "cantidad": 1 }
+      ],
+      "monedas": {
+        "po": 15
+      },
+      "competencias": [
+        "decepcion",
+        "sigilo"
+      ],
+      "idiomas": [],
+      "herramientas": [
+        "herramientas_ladron"
+      ],
+      "selecciones": [
+        {
+          "tipo": "herramienta",
+          "cantidad": 1,
+          "origen": "Tools:juego",
+          "descripcion": "Un tipo de juego de azar a tu elección."
+        }
+      ],
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "ermitano",
+      "nombre": "Ermitaño",
+      "descripcion": "Has pasado años aislado del resto de la sociedad, en soledad o en una comunidad retirada, buscando respuestas espirituales, conocimiento o simplemente paz.",
+      "rasgos": [
+        {
+          "id": "descubrimiento",
+          "nombre": "Descubrimiento",
+          "descripcion": "Tu prolongado retiro te ha llevado a un descubrimiento único y poderoso sobre el cosmos, los dioses, la naturaleza o la historia. Su naturaleza exacta depende de tu experiencia y puede ser el centro de futuras aventuras."
+        }
+      ],
+      "equipamiento": [
+        { "item_id": "estuche_pergaminos_notas", "cantidad": 1 },
+        { "item_id": "manta_invierno", "cantidad": 1 },
+        { "item_id": "ropa_comun", "cantidad": 1 },
+        { "item_id": "herramientas_herbalismo", "cantidad": 1 }
+      ],
+      "monedas": {
+        "po": 5
+      },
+      "competencias": [
+        "medicina",
+        "religion"
+      ],
+      "idiomas": [],
+      "herramientas": [
+        "herramientas_herbalismo"
+      ],
+      "selecciones": [
+        {
+          "tipo": "idioma",
+          "cantidad": 1,
+          "origen": "Languages:any",
+          "descripcion": "Un idioma de tu elección."
+        }
+      ],
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "erudito",
+      "nombre": "Erudito",
+      "descripcion": "Has dedicado tu vida al estudio de manuscritos, pergaminos y enseñanzas de expertos, convirtiéndote en un maestro en un campo de conocimiento concreto.",
+      "rasgos": [
+        {
+          "id": "investigador",
+          "nombre": "Investigador",
+          "descripcion": "Cuando intentas aprender o recordar algo, incluso si no conoces el dato exacto, sueles saber dónde encontrar la información o quién puede proporcionarla, normalmente en bibliotecas, universidades u otros eruditos."
+        }
+      ],
+      "equipamiento": [
+        { "item_id": "tinta_negra", "cantidad": 1 },
+        { "item_id": "pluma_escritura", "cantidad": 1 },
+        { "item_id": "cuchillo_pequeno", "cantidad": 1 },
+        { "item_id": "carta_colega_muerto", "cantidad": 1 },
+        { "item_id": "ropa_comun", "cantidad": 1 },
+        { "item_id": "bolsa_monedas", "cantidad": 1 }
+      ],
+      "monedas": {
+        "po": 10
+      },
+      "competencias": [
+        "conocimiento_arcano",
+        "historia"
+      ],
+      "idiomas": [],
+      "herramientas": [],
+      "selecciones": [
+        {
+          "tipo": "idioma",
+          "cantidad": 2,
+          "origen": "Languages:any",
+          "descripcion": "Dos idiomas de tu elección."
+        }
+      ],
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "heroe_del_pueblo",
+      "nombre": "Héroe del pueblo",
+      "descripcion": "Procedente de un estrato humilde, tus hazañas te han convertido en el campeón de tu pueblo natal y estás destinado a enfrentarte a tiranos y monstruos.",
+      "rasgos": [
+        {
+          "id": "hospitalidad_rural",
+          "nombre": "Hospitalidad rural",
+          "descripcion": "La gente humilde se identifica contigo y está dispuesta a ofrecerte refugio, comida y un lugar donde esconderte tú y tus compañeros, siempre que no les pongas en peligro directo."
+        }
+      ],
+      "equipamiento": [
+        { "item_id": "herramientas_artesano_genericas", "cantidad": 1 },
+        { "item_id": "pala", "cantidad": 1 },
+        { "item_id": "olla_hierro", "cantidad": 1 },
+        { "item_id": "ropa_comun", "cantidad": 1 },
+        { "item_id": "bolsa_monedas", "cantidad": 1 }
+      ],
+      "monedas": {
+        "po": 10
+      },
+      "competencias": [
+        "supervivencia",
+        "trato_con_animales"
+      ],
+      "idiomas": [],
+      "herramientas": [
+        "vehiculos_terrestres"
+      ],
+      "selecciones": [
+        {
+          "tipo": "herramienta",
+          "cantidad": 1,
+          "origen": "Tools:herramienta",
+          "descripcion": "Un tipo de herramientas de artesano a tu elección."
+        }
+      ],
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "huerfano",
+      "nombre": "Huérfano",
+      "descripcion": "Creciste en las calles sin nadie que cuidara de ti, aprendiendo a sobrevivir por ti mismo entre la pobreza, el hambre y el peligro.",
+      "rasgos": [
+        {
+          "id": "secretos_de_la_ciudad",
+          "nombre": "Secretos de la ciudad",
+          "descripcion": "Conoces los patrones ocultos del movimiento urbano y puedes encontrar rutas rápidas entre dos puntos de una ciudad, permitiendo que tú y tus compañeros viajéis el doble de rápido cuando no estáis combatiendo."
+        }
+      ],
+      "equipamiento": [
+        { "item_id": "cuchillo_pequeno", "cantidad": 1 },
+        { "item_id": "mapa_ciudad_origen", "cantidad": 1 },
+        { "item_id": "raton_mascota", "cantidad": 1 },
+        { "item_id": "recuerdo_padres", "cantidad": 1 },
+        { "item_id": "ropa_comun", "cantidad": 1 },
+        { "item_id": "bolsa_monedas", "cantidad": 1 }
+      ],
+      "monedas": {
+        "po": 10
+      },
+      "competencias": [
+        "juego_de_manos",
+        "sigilo"
+      ],
+      "idiomas": [],
+      "herramientas": [
+        "herramientas_ladron",
+        "kit_disfraz"
+      ],
+      "selecciones": [],
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "marinero",
+      "nombre": "Marinero",
+      "descripcion": "Has pasado años navegando en un barco, enfrentándote a tormentas, monstruos marinos y peligros humanos mientras surcas los mares.",
+      "rasgos": [
+        {
+          "id": "pasaje_en_un_barco",
+          "nombre": "Pasaje en un barco",
+          "descripcion": "Puedes conseguir pasaje gratuito para ti y tus compañeros en un barco en el que hayas servido o con el que tengas buenas relaciones. A cambio se espera que ayudéis a la tripulación durante el viaje, cuya duración la determina el DM."
+        }
+      ],
+      "equipamiento": [
+        { "item_id": "cabilla", "cantidad": 1 },
+        { "item_id": "cuerda_seda_50_pies", "cantidad": 1 },
+        { "item_id": "amuleto_suerte", "cantidad": 1 },
+        { "item_id": "ropa_comun", "cantidad": 1 },
+        { "item_id": "bolsa_monedas", "cantidad": 1 }
+      ],
+      "monedas": {
+        "po": 10
+      },
+      "competencias": [
+        "atletismo",
+        "percepcion"
+      ],
+      "idiomas": [],
+      "herramientas": [
+        "herramientas_navegante",
+        "vehiculos_acuaticos"
+      ],
+      "selecciones": [],
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "noble",
+      "nombre": "Noble",
+      "descripcion": "Naciste en una familia noble que posee tierras, recauda impuestos y ejerce influencia política, y has crecido rodeado de privilegios y responsabilidades.",
+      "rasgos": [
+        {
+          "id": "posicion_de_privilegio",
+          "nombre": "Posición de privilegio",
+          "descripcion": "Tu linaje hace que la gente tienda a pensar lo mejor de ti. Eres bienvenido en la alta sociedad, puedes obtener audiencia con nobles locales y la gente común hará lo posible por complacerte y evitar tu desaprobación."
+        }
+      ],
+      "equipamiento": [
+        { "item_id": "ropa_calidad", "cantidad": 1 },
+        { "item_id": "anillo_sello", "cantidad": 1 },
+        { "item_id": "documento_linaje", "cantidad": 1 },
+        { "item_id": "bolsa_monedas", "cantidad": 1 }
+      ],
+      "monedas": {
+        "po": 25
+      },
+      "competencias": [
+        "historia",
+        "persuasion"
+      ],
+      "idiomas": [],
+      "herramientas": [],
+      "selecciones": [
+        {
+          "tipo": "herramienta",
+          "cantidad": 1,
+          "origen": "Tools:juego",
+          "descripcion": "Un tipo de juego a tu elección."
+        },
+        {
+          "tipo": "idioma",
+          "cantidad": 1,
+          "origen": "Languages:any",
+          "descripcion": "Un idioma de tu elección."
+        }
+      ],
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "salvaje",
+      "nombre": "Salvaje",
+      "descripcion": "Creciste en la naturaleza, lejos de la civilización, viviendo como nómada, cazador-recolector, guía o exiliado, con fuertes lazos con el mundo natural.",
+      "rasgos": [
+        {
+          "id": "vagabundo",
+          "nombre": "Vagabundo",
+          "descripcion": "Tienes una memoria excelente para mapas y geografía, recordando fácilmente el terreno y los asentamientos cercanos. Además, puedes encontrar comida y agua para hasta seis personas cada día si el entorno ofrece recursos básicos."
+        }
+      ],
+      "equipamiento": [
+        { "item_id": "baston", "cantidad": 1 },
+        { "item_id": "trampa_cazar", "cantidad": 1 },
+        { "item_id": "trofeo_animal", "cantidad": 1 },
+        { "item_id": "ropa_viaje", "cantidad": 1 },
+        { "item_id": "bolsa_monedas", "cantidad": 1 }
+      ],
+      "monedas": {
+        "po": 10
+      },
+      "competencias": [
+        "atletismo",
+        "supervivencia"
+      ],
+      "idiomas": [],
+      "herramientas": [],
+      "selecciones": [
+        {
+          "tipo": "herramienta",
+          "cantidad": 1,
+          "origen": "Tools:instrumento",
+          "descripcion": "Un tipo de instrumento musical a tu elección."
+        },
+        {
+          "tipo": "idioma",
+          "cantidad": 1,
+          "origen": "Languages:any",
+          "descripcion": "Un idioma de tu elección."
+        }
+      ],
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "soldado",
+      "nombre": "Soldado",
+      "descripcion": "La guerra ha sido tu vida desde joven. Te entrenaste en el uso de armas y armaduras, aprendiendo a sobrevivir en el campo de batalla como parte de un ejército, guardia o compañía mercenaria.",
+      "rasgos": [
+        {
+          "id": "rango_militar",
+          "nombre": "Rango militar",
+          "descripcion": "Posees un rango de tus días como militar. Aquellos leales a tu antigua organización reconocen tu autoridad e influencia y obedecen tus órdenes si son de rango inferior. Puedes usar tu posición para influir en otros soldados y solicitar equipo o monturas de forma temporal."
+        }
+      ],
+      "equipamiento": [
+        { "item_id": "insignia_rango_militar", "cantidad": 1 },
+        { "item_id": "trofeo_enemigo", "cantidad": 1 },
+        { "item_id": "juego_dados_o_cartas", "cantidad": 1 },
+        { "item_id": "ropa_comun", "cantidad": 1 },
+        { "item_id": "bolsa_monedas", "cantidad": 1 }
+      ],
+      "monedas": {
+        "po": 10
+      },
+      "competencias": [
+        "atletismo",
+        "intimidacion"
+      ],
+      "idiomas": [],
+      "herramientas": [
+        "vehiculos_terrestres"
+      ],
+      "selecciones": [
+        {
+          "tipo": "herramienta",
+          "cantidad": 1,
+          "origen": "Tools:juego",
+          "descripcion": "Un tipo de juego de azar a tu elección."
+        }
+      ],
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "forastero_errante",
+      "nombre": "Forastero errante",
+      "descripcion": "Procedente de una patria lejana casi desconocida en la Costa de la Espada y el Norte, has recorrido enormes distancias para llegar a estas tierras extrañas. Tus costumbres, acento y modales te delatan como extranjero allí donde vas.",
+      "rasgos": [
+        {
+          "id": "todos_se_fijan_en_ti",
+          "nombre": "Todos se fijan en ti",
+          "descripcion": "Tu forma de hablar, tu porte y tu aspecto son claramente foráneos. La gente tiende a observarte, hacerte preguntas y tratarte como una curiosidad exótica. Puedes convertir esta atención en una ventaja, usando el interés que despiertas para obtener información, acceso o ayuda que de otro modo no tendrías."
+        }
+      ],
+      "equipamiento": [
+        { "item_id": "ropa_viaje", "cantidad": 1 },
+        { "item_id": "instrumento_o_juego_patria", "cantidad": 1 },
+        { "item_id": "mapas_patria_toscos", "cantidad": 1 },
+        { "item_id": "pequena_joya_patria_10_po", "cantidad": 1 },
+        { "item_id": "bolsa_monedas", "cantidad": 1 }
+      ],
+      "monedas": {
+        "po": 5
+      },
+      "competencias": [
+        "percepcion",
+        "perspicacia"
+      ],
+      "idiomas": [],
+      "herramientas": [],
+      "selecciones": [
+        {
+          "tipo": "herramienta",
+          "cantidad": 1,
+          "origen": "Tools:any",
+          "descripcion": "Un instrumento musical o un juego a tu elección, preferiblemente propio de tu patria."
+        },
+        {
+          "tipo": "idioma",
+          "cantidad": 1,
+          "origen": "Languages:any",
+          "descripcion": "Un idioma de tu elección."
+        }
+      ],
+      "fuente": "Manual del Jugador (Forastero errante)"
+    },
+    {
+      "id": "forjador_de_luz",
+      "nombre": "Forjador de Luz",
+      "descripcion": "Eres un soldado draenei imbuido por la Luz, entrenado en la disciplina militar de Templeluz y al servicio de la Vindicaar. Tu vida combina fe, combate y estudio arcano, y ves cada batalla como parte de una misión divina.",
+      "rasgos": [
+        {
+          "id": "guia_de_los_naaru",
+          "nombre": "Guía de los Naaru",
+          "descripcion": "Una vez por descanso largo, cuando fallas una tirada importante (como un ataque, una tirada de habilidad o una tirada de salvación), puedes repetirla, aceptando el nuevo resultado. Esta guía refleja la intervención sutil de los Naaru sobre tu destino."
+        },
+        {
+          "id": "prestigio_de_luz",
+          "nombre": "Prestigio de la Luz",
+          "descripcion": "Tu historial como forjador de luz te otorga respeto entre templos, draenei y órdenes consagradas a la Luz. En contextos apropiados, es más fácil obtener audiencia, ayuda logística básica o un trato favorable por parte de estas organizaciones."
+        }
+      ],
+      "equipamiento": [
+        { "item_id": "herramientas_de_escriba", "cantidad": 1 }
+      ],
+      "monedas": {
+        "po": 5
+      },
+      "competencias": [
+        "conocimiento_arcano",
+        "atletismo"
+      ],
+      "idiomas": [],
+      "herramientas": [
+        "herramientas_de_escriba"
+      ],
+      "selecciones": [],
+      "fuente": "Trasfondo personalizado"
+    }
+  ]
+}

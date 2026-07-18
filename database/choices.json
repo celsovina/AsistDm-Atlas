@@ -1,0 +1,361 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "lastUpdated": "2025-11-11",
+    "description": "Grupos de opciones reutilizables para rasgos seleccionables (clases, razas, dotes, etc.)"
+  },
+  "choices": {
+  "Creatures": [
+      { "id": "aberration", "name": "Aberración" },
+      { "id": "beast", "name": "Bestia" },
+      { "id": "celestial", "name": "Celestial" },
+      { "id": "construct", "name": "Constructo" },
+      { "id": "dragon", "name": "Dragón" },
+      { "id": "elemental", "name": "Elemental" },
+      { "id": "fey", "name": "Hadas" },
+      { "id": "fiend", "name": "Infernales" },
+      { "id": "giant", "name": "Gigante" },
+      { "id": "monstrosity", "name": "Monstruosidad" },
+      { "id": "ooze", "name": "Limo" },
+      { "id": "humanoid", "name": "Humanoide" },
+      { "id": "plant", "name": "Planta" },
+      { "id": "undead", "name": "No muerto" }
+    ],
+    "Terrains": [
+      { "id": "forest", "name": "Bosque" },
+      { "id": "coast", "name": "Costa" },
+      { "id": "desert", "name": "Desierto" },
+      { "id": "mountain", "name": "Montaña" },
+      { "id": "swamp", "name": "Pantano" },
+      { "id": "grassland", "name": "Pradera" },
+      { "id": "arctic", "name": "Polar" },
+      { "id": "underdark", "name": "Underdark" }
+    ],
+    "combatStyles": [
+      { "id": "duelo", "name": "Duelo" },
+      { "id": "defensa", "name": "Defensa" },
+      { "id": "dos_armas", "name": "Dos Armas" },
+      { "id": "tiro_con_arco", "name": "Tiro con Arco" },
+      { "id": "proteccion", "name": "Protección" },
+      { "id": "combate_armado", "name": "Combate Armado" }
+    ],
+    "draconicAncestry": [
+      { "id": "red", "name": "Rojo (Fuego)" },
+      { "id": "blue", "name": "Azul (Rayo)" },
+      { "id": "green", "name": "Verde (Veneno)" },
+      { "id": "white", "name": "Blanco (Frío)" },
+      { "id": "black", "name": "Negro (Ácido)" },
+      { "id": "gold", "name": "Oro (Fuego)" },
+      { "id": "silver", "name": "Plata (Frío)" },
+      { "id": "bronze", "name": "Bronce (Rayo)" },
+      { "id": "copper", "name": "Cobre (Ácido)" },
+      { "id": "brass", "name": "Latón (Fuego)" }
+    ],
+    "Metamagic": [
+      { "id": "cuidado", "name": "Cuidado", "description": "Cuando lanzas un conjuro que obliga a otras criaturas a hacer una tirada de salvación, puedes gastar 1 punto de hechicería para elegir un número de esas criaturas igual a 1 + el modificador de tu aptitud mágica (mínimo una criatura). Una criatura elegida automáticamente tiene éxito en su tirada de salvación contra el conjuro." },
+      { "id": "distante", "name": "Distante", "description": "Cuando lanzas un conjuro que tiene un alcance de 5 pies o superior, puedes gastar 1 punto de hechicería para duplicar el alcance del conjuro. Cuando lanzas un conjuro de toque, puedes gastar 1 punto de hechicería para hacer que el alcance del conjuro sea de 30 pies." },
+      { "id": "empoderado", "name": "Empoderado", "description": "Cuando lanzas un conjuro que inflige daño, puedes gastar 1 punto de hechicería para rerrolar un número de dados de daño igual a tu modificador de aptitud mágica (mínimo uno). Debes usar los nuevos resultados. Puedes usar Metamagia Empoderado incluso si ya has usado una opción de metamagia diferente en el conjuro." },
+      { "id": "extendido", "name": "Extendido", "description": "Cuando lanzas un conjuro que tiene una duración de 1 minuto o más, puedes gastar 1 punto de hechicería para duplicar su duración, hasta un máximo de 24 horas." },
+      { "id": "sutil", "name": "Sutil", "description": "Cuando lanzas un conjuro, puedes gastar 1 punto de hechicería para lanzarlo sin componentes somáticos ni verbales." },
+      { "id": "rapido", "name": "Rápido", "description": "Cuando lanzas un conjuro que tiene un tiempo de lanzamiento de 1 acción, puedes gastar 2 puntos de hechicería para cambiar el tiempo de lanzamiento a 1 acción bonus para este lanzamiento." },
+      { "id": "ampliado", "name": "Ampliado", "description": "Cuando lanzas un conjuro que apunta solo a una criatura y no tiene un alcance personal, puedes gastar un número de puntos de hechicería igual al nivel del conjuro para apuntar a una segunda criatura en el alcance con el mismo conjuro (1 punto si el conjuro es un truco)." },
+      { "id": "elevado", "name": "Elevado", "description": "Cuando lanzas un conjuro que obliga a una criatura a hacer una tirada de salvación para resistir sus efectos, puedes gastar 3 puntos de hechicería para dar desventaja a una criatura objetivo en su primera tirada de salvación contra el conjuro." }
+    ],
+    "totems": [
+      { "id": "aguila", "name": "Águila" },
+      { "id": "lobo", "name": "Lobo" },
+      { "id": "oso", "name": "Oso" }
+    ],
+    "Skills": [
+      { "id": "atletismo", "name": "Atletismo" },
+      { "id": "acrobatias", "name": "Acrobacias" },
+      { "id": "juego_manos", "name": "Juego de manos" },
+      { "id": "sigilo", "name": "Sigilo" },
+      { "id": "conocimiento_arcano", "name": "Arcano" },
+      { "id": "historia", "name": "Historia" },
+      { "id": "investigacion", "name": "Investigación" },
+      { "id": "naturaleza", "name": "Naturaleza" },
+      { "id": "religion", "name": "Religión" },
+      { "id": "perspicacia", "name": "Perspicacia" },
+      { "id": "medicina", "name": "Medicina" },
+      { "id": "percepcion", "name": "Percepción" },
+      { "id": "trato_con_animales", "name": "Trato con animales" },
+      { "id": "supervivencia", "name": "Supervivencia" },
+      { "id": "decepcion", "name": "Engaño" },
+      { "id": "intimidacion", "name": "Intimidación" },
+      { "id": "actuacion", "name": "Actuación" },
+      { "id": "persuasion", "name": "Persuasión" }
+    ],
+    "pact_boons": [
+      { "id": "pacto_cadena", "name": "Pacto de la Cadena" },
+      { "id": "pacto_filo", "name": "Pacto del Filo" },
+      { "id": "pacto_grimorio", "name": "Pacto del Grimorio" }
+    ],
+    "Instruments": [
+      { "id": "laud", "name": "Laúd" },
+      { "id": "lira", "name": "Lira" },
+      { "id": "cuerno", "name": "Cuerno" },
+      { "id": "flauta", "name": "Flauta" },
+      { "id": "flauta_pan", "name": "Flauta de pan" },
+      { "id": "gaita", "name": "Gaita" },
+      { "id": "dulcimer", "name": "Dulcémele" },
+      { "id": "shawm", "name": "Chirimía" },
+      { "id": "tambor", "name": "Tambor" },
+      { "id": "viola", "name": "Viola" }
+    ],
+    "ItemCategories": [
+      { "id": "arma", "name": "Arma" },
+      { "id": "armadura", "name": "Armadura" },
+      { "id": "objeto_magico", "name": "Objeto mágico" },
+      { "id": "equipo", "name": "Equipo" },
+      { "id": "recurso", "name": "Recurso" },
+      { "id": "municion", "name": "Munición" },
+      { "id": "consumible", "name": "Consumible" },
+      { "id": "bagatela", "name": "Bagatela" },
+      { "id": "instrumento", "name": "Intrumento" },
+      { "id": "pack", "name": "Pack" },
+      { "id": "componente", "name": "Componente" }
+    ],
+    "ItemSubcategories": [
+      { "id": "arma_simple", "name": "Arma simple", "category": "arma" },
+      { "id": "arma_marcial", "name": "Arma marcial", "category": "arma" },
+      { "id": "armadura_ligera", "name": "Armadura ligera", "category": "armadura" },
+      { "id": "armadura_mediana", "name": "Armadura mediana", "category": "armadura" },
+      { "id": "armadura_pesada", "name": "Armadura pesada", "category": "armadura" },
+      { "id": "escudo", "name": "Escudo", "category": "armadura" },
+      { "id": "anillo", "name": "Anillo", "category": "equipo" },
+      { "id": "pocion", "name": "Poción", "category": "consumible" },
+      { "id": "grimorio", "name": "Grimorio", "category": "objeto_magico" },
+      { "id": "alimento", "name": "Alimento", "category": "consumible" },
+      { "id": "bebida", "name": "Bebida", "category": "consumible" },
+      { "id": "gema", "name": "Gema", "category": "recurso" },
+      { "id": "mineral", "name": "Mineral", "category": "recurso" },
+      { "id": "animal", "name": "Animal", "category": "recurso" },
+      { "id": "Vegetal", "name": "Vegetal", "category": "recurso" },
+      { "id": "herramienta", "name": "Herramienta", "category": "recurso" },
+      { "id": "herramienta", "name": "Herramienta", "category": "componente" },
+      { "id": "recurso", "name": "Recurso", "category": "componente" },
+      { "id": "recurso", "name": "Recurso", "category": "recurso" },
+      { "id": "bagatela", "name": "Bagatela", "category": "Bagatela" },
+      { "id": "pergamino", "name": "Pergamino", "category": "consumible" }
+    ],
+    "ItemCurrency": [
+      { "id": "ppt", "name": "ppt" },
+      { "id": "po", "name": "po" },
+      { "id": "pe", "name": "pe" },
+      { "id": "pp", "name": "pp" },
+      { "id": "pc", "name": "pc" }
+    ],
+    "CoinCalculatorModes": [
+      { "id": "complete", "name": "Conversión completa" },
+      { "id": "specific", "name": "Conversión específica" }
+    ],
+    "ItemRarity": [
+      { "id": "comun", "name": "Común" },
+      { "id": "raro", "name": "Raro" },
+      { "id": "muy_raro", "name": "Muy raro" },
+      { "id": "legendario", "name": "Legendario" },
+      { "id": "magico", "name": "Mágico" }
+    ],
+    "ShopType": [
+      { "id": "abarrotes", "name": "Abarrotes" },
+      { "id": "general", "name": "General" },
+      { "id": "armeria", "name": "Armería" },
+      { "id": "alquimia", "name": "Alquimia" },
+      { "id": "magica", "name": "Mágica" },
+      { "id": "joyeria", "name": "Joyería" }
+    ],
+    "ItemEffectStats": [
+      { "id": "DMG", "name": "Daño" },
+      { "id": "CA", "name": "Clase de armadura" },
+      { "id": "MOV", "name": "Movimiento" },
+      { "id": "HP", "name": "Vida" },
+      { "id": "MCW", "name": "Modificador carga" },
+      { "id": "STH", "name": "Sigilo" },
+      { "id": "GRIM", "name": "Grimorio" },
+      { "id": "AntiP", "name": "Antídoto" },
+      { "id": "conjuro", "name": "Conjuro (pergamino)" }
+    ],
+    "ItemEffectMods": [
+      { "id": "", "name": "—" },
+      { "id": "ModFUE", "name": "Fuerza" },
+      { "id": "ModDES", "name": "Destreza" },
+      { "id": "ModCON", "name": "Constitución" },
+      { "id": "ModINT", "name": "Inteligencia" },
+      { "id": "ModSAB", "name": "Sabiduría" },
+      { "id": "ModCAR", "name": "Carisma" }
+    ],
+    "ItemDamageTypes": [
+      { "id": "perforante", "name": "Perforante" },
+      { "id": "contundente", "name": "Contundente" },
+      { "id": "cortante", "name": "Cortante" },
+      { "id": "fuego", "name": "Fuego" },
+      { "id": "frio", "name": "Frío" },
+      { "id": "acido", "name": "Ácido" },
+      { "id": "electrico", "name": "Eléctrico" },
+      { "id": "veneno", "name": "Veneno" },
+      { "id": "necrotico", "name": "Necrótico" },
+      { "id": "radiante", "name": "Radiante" },
+      { "id": "trueno", "name": "Trueno" },
+      { "id": "psiquico", "name": "Psíquico" }
+    ],
+    "CreatureAffinityEffects": [
+      { "id": "fuego", "name": "Fuego" },
+      { "id": "frio", "name": "Frío" },
+      { "id": "electrico", "name": "Eléctrico" },
+      { "id": "acido", "name": "Ácido" },
+      { "id": "veneno", "name": "Veneno" },
+      { "id": "necrotico", "name": "Necrótico" },
+      { "id": "radiante", "name": "Radiante" },
+      { "id": "contundente", "name": "Contundente" },
+      { "id": "perforante", "name": "Perforante" },
+      { "id": "cortante", "name": "Cortante" },
+      { "id": "dormido", "name": "Sueño (dormido)" },
+      { "id": "encantado", "name": "Encantado" },
+      { "id": "paralizado", "name": "Paralizado" },
+      { "id": "agarrado", "name": "Agarrado (apresado)" },
+      { "id": "tumbado", "name": "Tumbado (Prone)" },
+      { "id": "petrificado", "name": "Petrificado" },
+      { "id": "aturdido", "name": "Aturdido" },
+      { "id": "asustado", "name": "Asustado" },
+      { "id": "incapacitado", "name": "Incapacitado" },
+      { "id": "inconsciente", "name": "Inconsciente" },
+      { "id": "invisible", "name": "Invisible" },
+      { "id": "sordo", "name": "Sordo" },
+      { "id": "cegado", "name": "Cegado" }
+    ],
+    "ItemWeaponProperties": [
+      { "id": "ligera", "name": "Ligera" },
+      { "id": "fina", "name": "Fina" },
+      { "id": "municion", "name": "Munición" },
+      { "id": "versatil", "name": "Versátil" },
+      { "id": "dos_manos", "name": "Dos manos" },
+      { "id": "pesada", "name": "Pesada" },
+      { "id": "alcance", "name": "Alcance" },
+      { "id": "especial", "name": "Especial" }
+    ],
+    "ItemStatModifiers": [
+      { "id": "ATK", "name": "Bonus ataque" },
+      { "id": "ST_FUE", "name": "Tirada salvación (Fuerza)" },
+      { "id": "ST_DES", "name": "Tirada salvación (Destreza)" },
+      { "id": "ST_CON", "name": "Tirada salvación (Constitución)" },
+      { "id": "ST_INT", "name": "Tirada salvación (Inteligencia)" },
+      { "id": "ST_SAB", "name": "Tirada salvación (Sabiduría)" },
+      { "id": "ST_CAR", "name": "Tirada salvación (Carisma)" },
+      { "id": "ADV", "name": "Ventaja" },
+      { "id": "DISADV", "name": "Desventaja" }
+    ],
+    "DoteEffectTypes": [
+      { "id": "caracteristicas", "name": "Características" },
+      { "id": "modificadores", "name": "Modificadores" },
+      { "id": "resistencias", "name": "Resistencias" },
+      { "id": "competencia", "name": "Competencia" },
+      { "id": "conjuros", "name": "Conjuros" },
+      { "id": "elemento", "name": "Elemento" }
+    ],
+    "DoteEffectCompetenciaTipo": [
+      { "id": "herramientas", "name": "Herramientas" },
+      { "id": "instrumentos", "name": "Instrumentos" },
+      { "id": "armas_simples", "name": "Armas simples" },
+      { "id": "armas_marciales", "name": "Armas marciales" },
+      { "id": "armadura_ligera", "name": "Armadura ligera" },
+      { "id": "armadura_media", "name": "Armadura media" },
+      { "id": "armadura_pesada", "name": "Armadura pesada" },
+      { "id": "escudo", "name": "Escudo" },
+      { "id": "idiomas", "name": "Idiomas" },
+      { "id": "armas_improvisadas", "name": "Armas improvisadas" }
+    ],
+    "DoteEffectCaracteristicas": [
+      { "id": "fuerza", "name": "Fuerza" },
+      { "id": "destreza", "name": "Destreza" },
+      { "id": "constitucion", "name": "Constitución" },
+      { "id": "inteligencia", "name": "Inteligencia" },
+      { "id": "sabiduria", "name": "Sabiduría" },
+      { "id": "carisma", "name": "Carisma" }
+    ],
+    "DoteEffectModificadores": [
+      { "id": "iniciativa", "name": "Iniciativa" },
+      { "id": "ca", "name": "CA (Clase de armadura)" },
+      { "id": "hp_por_nivel", "name": "HP por nivel" },
+      { "id": "movimiento", "name": "Movimiento" },
+      { "id": "percepcion_pasiva", "name": "Percepción pasiva" },
+      { "id": "investigacion_pasiva", "name": "Investigación pasiva" },
+      { "id": "reduccion_daño_armas_no_magicas", "name": "Reducción daño armas no mágicas" }
+    ],
+    "DoteEffectResistencias": [
+      { "id": "perforante", "name": "Perforante" },
+      { "id": "contundente", "name": "Contundente" },
+      { "id": "cortante", "name": "Cortante" },
+      { "id": "fuego", "name": "Fuego" },
+      { "id": "frio", "name": "Frío" },
+      { "id": "acido", "name": "Ácido" },
+      { "id": "electrico", "name": "Eléctrico" },
+      { "id": "veneno", "name": "Veneno" },
+      { "id": "necrotico", "name": "Necrótico" },
+      { "id": "radiante", "name": "Radiante" },
+      { "id": "trueno", "name": "Trueno" },
+      { "id": "psiquico", "name": "Psíquico" },
+      { "id": "trampas", "name": "Trampas" }
+    ],
+    "DoteEffectElemento": [
+      { "id": "acido", "name": "Ácido" },
+      { "id": "frio", "name": "Frío" },
+      { "id": "fuego", "name": "Fuego" },
+      { "id": "relampago", "name": "Relámpago" },
+      { "id": "trueno", "name": "Trueno" }
+    ],
+    "DotePrereqTypes": [
+      { "id": "caracteristica", "name": "Característica" },
+      { "id": "texto", "name": "Texto" },
+      { "id": "raza", "name": "Raza" },
+      { "id": "magia", "name": "Magia" },
+      { "id": "competencia", "name": "Competencia" }
+    ],
+    "DotePrereqOperadores": [
+      { "id": "<", "name": "<" },
+      { "id": ">", "name": ">" },
+      { "id": "<=", "name": "<=" },
+      { "id": ">=", "name": ">=" }
+    ],
+    "DoteEffectConjurosNiveles": [
+      { "id": "truco", "name": "Truco" },
+      { "id": "nivel_1", "name": "Nivel 1" },
+      { "id": "nivel_2", "name": "Nivel 2" },
+      { "id": "nivel_3", "name": "Nivel 3" },
+      { "id": "nivel_4", "name": "Nivel 4" },
+      { "id": "nivel_5", "name": "Nivel 5" },
+      { "id": "nivel_6", "name": "Nivel 6" },
+      { "id": "nivel_7", "name": "Nivel 7" },
+      { "id": "nivel_8", "name": "Nivel 8" },
+      { "id": "nivel_9", "name": "Nivel 9" }
+    ],
+    "disciplinas_elementales": [
+      { "id": "armonia_elementos", "name": "Armonía con los Elementos", "level": 3 },
+      { "id": "barrido_ascuas", "name": "Barrido de las Ascuas (manos ardientes)", "level": 3 },
+      { "id": "puño_cuatro_truenos", "name": "Puño de los Cuatro Truenos (Onda atronadora)", "level": 3 },
+      { "id": "puño_aire_ingobernable", "name": "Puño del Aire Inquebrantable (estallido de aire comprimido)", "level": 3 },
+      { "id": "rafaga_espiritus_vendaval", "name": "Ráfaga de los Espíritus del Vendaval (Ráfaga de viento)", "level": 3 },
+      { "id": "gong_cumbre", "name": "Gong de la Cumbre (añicos)", "level": 6 },
+      { "id": "agarrar_viento_norte", "name": "Agarre del Viento del Norte (Inmovilizar persona)", "level": 6 },
+      { "id": "latigo_agua", "name": "Látigo de Agua", "level": 3 },
+      { "id": "moldear_rio_fluye", "name": "Moldear el Río que Fluye", "level": 3 },
+      { "id": "colmillos_serpiente_ignea", "name": "Colmillos de la Serpiente Ígnea", "level": 3 },
+      { "id": "cabalgar_viento", "name": "Cabalgar el Viento (Volar)", "level": 11 },
+      { "id": "postura_niebla", "name": "Postura de la Niebla (Forma gaseosa)", "level": 11 },
+      { "id": "llamas_fenix", "name": "Llamas del Fénix (Bola de fuego)", "level": 11 },
+      { "id": "defensa_montana_eterna", "name": "Defensa de la Montaña Eterna (Piel pétrea)", "level": 17 },
+      { "id": "ola_tierra_ondulante", "name": "Ola de la Tierra Ondulante (Muro de piedra)", "level": 17 },
+      { "id": "rio_llama_insaciable", "name": "Río de la Llama Insaciable (Muro de fuego)", "level": 17 },
+      { "id": "aliento_invierno", "name": "Aliento del Invierno (Cono de frío)", "level": 17 }
+    ],
+    "Dice": [
+      { "id": "", "name": "selecciona un dado" },
+      { "id": "d4", "name": "d4" },
+      { "id": "d6", "name": "d6" },
+      { "id": "d8", "name": "d8" },
+      { "id": "d10", "name": "d10" },
+      { "id": "d12", "name": "d12" }
+    ]
+  }
+}
+

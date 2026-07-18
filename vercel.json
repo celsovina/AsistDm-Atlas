@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/api/spells/", "destination": "/api/spells" },
+    { "source": "/api/class-spells/", "destination": "/api/class-spells" },
+    { "source": "/api/classes/", "destination": "/api/classes" },
+    { "source": "/api/progression/", "destination": "/api/progression" }
+  ]
+}

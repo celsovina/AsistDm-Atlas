@@ -1,0 +1,1636 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "lastUpdated": "2024-12-19",
+    "description": "Base de datos de items para D&D 5e - Manual del Jugador (2018)",
+    "totalItems": 0
+  },
+  "items": [
+    {
+      "id": "daga",
+      "name": "Daga",
+      "category": "arma",
+      "subcategory": "arma_simple",
+      "weight": 0.5,
+      "rarity": null,
+      "baseEffect": {
+        "damage": "1d4 + ModFUE",
+        "damageType": "perforante",
+        "properties": [
+          "ligera",
+          "versatil",
+          "fina"
+        ],
+        "versatile": "1d4 + ModFUE"
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "baya_buena",
+      "name": "Buena baya",
+      "category": "recurso",
+      "subcategory": "alimento",
+      "weight": 0,
+      "rarity": "magico",
+      "baseEffect": {
+        "effects": [
+          { "name": "curacion", "description": "+1 HP por baya" }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Conjuro: Buenas bayas"
+    },
+    {
+      "id": "guiso_tonificante",
+      "name": "Guiso tonificante",
+      "category": "recurso",
+      "subcategory": "alimento",
+      "weight": 1,
+      "rarity": "magico",
+      "baseEffect": {
+        "effects": [
+          { "name": "curacion", "description": "Restaura 1d4 HP" }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Receta milagrosa"
+    },
+    {
+      "id": "banquete_heroe",
+      "name": "Banquete de héroes",
+      "category": "objeto_magico",
+      "subcategory": "alimento_magico",
+      "weight": 2,
+      "rarity": "legendario",
+      "baseEffect": {
+        "effects": [
+          { "name": "beneficio", "description": "Efectos mayores de banquete (temp HP/ventajas)" }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Conjuro: Banquete de héroes"
+    },
+    {
+      "id": "daga_curvada",
+      "name": "Daga curvada",
+      "category": "arma",
+      "subcategory": "arma_simple",
+      "weight": 1,
+      "rarity": null,
+      "baseEffect": {
+        "damage": "1d4 + ModFUE",
+        "damageType": "cortante",
+        "properties": [
+          "ligera",
+          "versatil",
+          "fina"
+        ],
+        "versatile": "1d4 + ModFUE"
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "espada_corta",
+      "name": "Espada corta",
+      "category": "arma",
+      "subcategory": "arma_simple",
+      "weight": 2,
+      "rarity": null,
+      "baseEffect": {
+        "damage": "1d6 + ModFUE",
+        "damageType": "cortante",
+        "properties": [
+          "ligera",
+          "versatil",
+          "fina"
+        ],
+        "versatile": "1d6 + ModFUE"
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "espada_larga",
+      "name": "Espada larga",
+      "category": "arma",
+      "subcategory": "arma_marcial",
+      "weight": 3,
+      "rarity": null,
+      "baseEffect": {
+        "damage": "1d8 + ModFUE",
+        "damageType": "cortante",
+        "properties": [
+          "versatil"
+        ],
+        "versatile": "1d10 + ModFUE"
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "arco_corto",
+      "name": "Arco corto",
+      "category": "arma",
+      "subcategory": "arma_simple",
+      "weight": 2,
+      "rarity": null,
+      "baseEffect": {
+        "damage": "1d6 + ModDES",
+        "damageType": "perforante",
+        "range": "80/320",
+        "properties": [
+          "dos_manos",
+          "municion"
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "arco_largo",
+      "name": "Arco largo",
+      "category": "arma",
+      "subcategory": "arma_marcial",
+      "weight": 2,
+      "rarity": null,
+      "baseEffect": {
+        "damage": "1d8 + ModDES",
+        "damageType": "perforante",
+        "range": "150/600",
+        "properties": [
+          "dos_manos",
+          "municion",
+          "pesada"
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "armadura_cuero",
+      "name": "Armadura de cuero",
+      "category": "armadura",
+      "subcategory": "armadura_ligera",
+      "weight": 10,
+      "rarity": null,
+      "baseEffect": {
+        "ac": "11 + ModDES"
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "armadura_cuero_tachonado",
+      "name": "Armadura de cuero tachonado",
+      "category": "armadura",
+      "subcategory": "armadura_ligera",
+      "weight": 13,
+      "rarity": null,
+      "baseEffect": {
+        "ac": "12 + ModDES"
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "cota_malla",
+      "name": "Cota de malla",
+      "category": "armadura",
+      "subcategory": "armadura_mediana",
+      "weight": 55,
+      "rarity": null,
+      "baseEffect": {
+        "ac": 16
+      },
+      "extraEffect": null,
+      "conditions": {
+        "requirements": [
+          {
+            "tipo": "competencia",
+            "competencia": "armaduras_medianas"
+          }
+        ],
+        "process": null
+      },
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "armadura_escamas",
+      "name": "Armadura de escamas",
+      "category": "armadura",
+      "subcategory": "armadura_mediana",
+      "weight": 45,
+      "rarity": null,
+      "baseEffect": {
+        "ac": "14 + ModDES (max 2)",
+        "effects": [
+          {
+            "description": "Da desventaja en tiradas de sigilo"
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": {
+        "requirements": [
+          {
+            "tipo": "competencia",
+            "competencia": "armaduras_medianas"
+          }
+        ],
+        "process": null
+      },
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "armadura_placas",
+      "name": "Armadura de placas",
+      "category": "armadura",
+      "subcategory": "armadura_pesada",
+      "weight": 65,
+      "rarity": null,
+      "baseEffect": {
+        "ac": 18,
+        "desventajaSigilo": true
+      },
+      "extraEffect": null,
+      "conditions": {
+        "requirements": [
+          {
+            "tipo": "competencia",
+            "competencia": "armaduras_pesadas"
+          }
+        ],
+        "process": null
+      },
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "armadura_completa",
+      "name": "Armadura completa",
+      "category": "armadura",
+      "subcategory": "armadura_pesada",
+      "weight": 55,
+      "rarity": null,
+      "baseEffect": {
+        "ac": 17,
+        "desventajaSigilo": true
+      },
+      "extraEffect": null,
+      "conditions": {
+        "requirements": [
+          {
+            "tipo": "competencia",
+            "competencia": "armaduras_pesadas"
+          }
+        ],
+        "process": null
+      },
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "lanza",
+      "name": "Lanza",
+      "category": "arma",
+      "subcategory": "arma_simple",
+      "weight": 3,
+      "rarity": null,
+      "baseEffect": {
+        "damage": "1d6 + ModFUE",
+        "damageType": "perforante",
+        "range": "20/60",
+        "properties": [
+          "versatil",
+          "municion"
+        ],
+        "versatile": "1d8 + ModFUE"
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "alabarda",
+      "name": "Alabarda",
+      "category": "arma",
+      "subcategory": "arma_marcial",
+      "weight": 6,
+      "rarity": null,
+      "baseEffect": {
+        "damage": "1d10 + ModFUE",
+        "damageType": "cortante",
+        "properties": [
+          "dos_manos",
+          "alcance",
+          "pesada"
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "pocion_curacion",
+      "name": "Poción de curación",
+      "category": "objeto_magico",
+      "subcategory": "pocion",
+      "weight": 0.5,
+      "rarity": "comun",
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "curacion",
+            "description": "Restaura 2d4 + 2 puntos de golpe"
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "pocion_curacion_superior",
+      "name": "Poción de curación superior",
+      "category": "objeto_magico",
+      "subcategory": "pocion",
+      "weight": 0.5,
+      "rarity": "raro",
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "curacion",
+            "description": "Restaura 8d4 + 8 puntos de golpe"
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "pergamino_fuego",
+      "name": "Pergamino de bola de fuego",
+      "category": "objeto_magico",
+      "subcategory": "pergamino",
+      "weight": 0.1,
+      "rarity": "poco_comun",
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "conjuro",
+            "spell": "fireball",
+            "level": 3
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": {
+        "requirements": [
+          {
+            "tipo": "conjuros",
+            "nivelMinimo": 3
+          },
+          {
+            "tipo": "caracteristica",
+            "caracteristica": "inteligencia",
+            "valor": 12,
+            "operador": ">="
+          }
+        ],
+        "process": null
+      },
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "pergamino_escudo",
+      "name": "Pergamino de escudo",
+      "category": "objeto_magico",
+      "subcategory": "pergamino",
+      "weight": 0.1,
+      "rarity": "comun",
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "conjuro",
+            "spell": "shield",
+            "level": 1
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": {
+        "requirements": [
+          {
+            "tipo": "conjuros",
+            "nivelMinimo": 1
+          },
+          {
+            "tipo": "caracteristica",
+            "caracteristica": "inteligencia",
+            "valor": 10,
+            "operador": ">="
+          }
+        ],
+        "process": null
+      },
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "pergamino_tormenta_espinas",
+      "name": "Pergamino de tormenta de espinas",
+      "category": "objeto_magico",
+      "subcategory": "pergamino",
+      "weight": 0.1,
+      "rarity": "poco_comun",
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "conjuro",
+            "spell": "spike_growth",
+            "level": 2
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": {
+        "requirements": [
+          {
+            "tipo": "conjuros",
+            "nivelMinimo": 2
+          },
+          {
+            "tipo": "caracteristica",
+            "caracteristica": "sabiduria",
+            "valor": 11,
+            "operador": ">="
+          }
+        ],
+        "process": null
+      },
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "pergamino_crecimiento_espinoso",
+      "name": "Pergamino de crecimiento espinoso",
+      "category": "objeto_magico",
+      "subcategory": "pergamino",
+      "weight": 0.1,
+      "rarity": "raro",
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "conjuro",
+            "spell": "spike_stones",
+            "level": 4
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": {
+        "requirements": [
+          {
+            "tipo": "conjuros",
+            "nivelMinimo": 4
+          },
+          {
+            "tipo": "caracteristica",
+            "caracteristica": "sabiduria",
+            "valor": 13,
+            "operador": ">="
+          }
+        ],
+        "process": null
+      },
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "pergamino_conjurar_animales",
+      "name": "Pergamino de conjurar animales",
+      "category": "objeto_magico",
+      "subcategory": "pergamino",
+      "weight": 0.1,
+      "rarity": "poco_comun",
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "conjuro",
+            "spell": "conjure_animals",
+            "level": 3
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": {
+        "requirements": [
+          {
+            "tipo": "conjuros",
+            "nivelMinimo": 3
+          },
+          {
+            "tipo": "caracteristica",
+            "caracteristica": "sabiduria",
+            "valor": 12,
+            "operador": ">="
+          }
+        ],
+        "process": null
+      },
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "pergamino_flecha_relampago",
+      "name": "Pergamino de flecha relámpago",
+      "category": "objeto_magico",
+      "subcategory": "pergamino",
+      "weight": 0.1,
+      "rarity": "poco_comun",
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "conjuro",
+            "spell": "lightning_arrow",
+            "level": 3
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": {
+        "requirements": [
+          {
+            "tipo": "conjuros",
+            "nivelMinimo": 3
+          },
+          {
+            "tipo": "caracteristica",
+            "caracteristica": "sabiduria",
+            "valor": 12,
+            "operador": ">="
+          }
+        ],
+        "process": null
+      },
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "escudo",
+      "name": "Escudo",
+      "category": "armadura",
+      "subcategory": "escudo",
+      "weight": 6,
+      "rarity": null,
+      "baseEffect": {
+        "ac": "+5"
+      },
+      "extraEffect": null,
+      "conditions": {
+        "requirements": [
+          {
+            "tipo": "competencia",
+            "competencia": "escudos"
+          }
+        ],
+        "process": null
+      },
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "escudo_torreta",
+      "name": "Escudo de torreta",
+      "category": "armadura",
+      "subcategory": "escudo",
+      "weight": 6,
+      "rarity": null,
+      "baseEffect": {
+        "ac": "+2",
+        "properties": [
+          "cubrir"
+        ]
+      },
+      "extraEffect": null,
+      "conditions": {
+        "requirements": [
+          {
+            "tipo": "competencia",
+            "competencia": "escudos"
+          }
+        ],
+        "process": null
+      },
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "espada_flamigera",
+      "name": "Espada flamígera",
+      "category": "arma",
+      "subcategory": "arma_marcial",
+      "weight": 3,
+      "rarity": "raro",
+      "baseEffect": {
+        "damage": "1d8 + ModFUE",
+        "damageType": "cortante",
+        "properties": [
+          "versatil"
+        ],
+        "versatile": "1d10 + ModFUE",
+        "effects": [
+          {
+            "name": "luz_tenue",
+            "description": "Emite luz tenue en un radio de 10 pies"
+          }
+        ]
+      },
+      "extraEffect": {
+        "damage": "1d6",
+        "damageType": "fuego",
+        "effects": [
+          {
+            "name": "luz_brillante",
+            "description": "Emite luz brillante en un radio de 40 pies"
+          }
+        ]
+      },
+      "conditions": {
+        "requirements": [
+          {
+            "tipo": "caracteristica",
+            "caracteristica": "fuerza",
+            "valor": 15,
+            "operador": ">="
+          }
+        ],
+        "process": {
+          "description": "Debe jurar lealtad a la causa del bien durante 1 hora",
+          "duration": "1 hora",
+          "frequency": "diaria"
+        }
+      },
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "anillo_proteccion",
+      "name": "Anillo de protección",
+      "category": "objeto_magico",
+      "subcategory": "anillo",
+      "weight": 0,
+      "rarity": "raro",
+      "baseEffect": {
+        "ac": "+2",
+        "effects": [
+          {
+            "name": "proteccion",
+            "description": "+2 a CA y tiradas de salvación"
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": {
+        "requirements": [
+          {
+            "tipo": "nivel",
+            "valor": 5,
+            "operador": ">="
+          }
+        ],
+        "process": null
+      },
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "capa_elvenkind",
+      "name": "Capa de elvenkind",
+      "category": "objeto_magico",
+      "subcategory": "capa",
+      "weight": 0.5,
+      "rarity": "poco_comun",
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "sigilo",
+            "description": "Ventaja en tiradas de Sigilo"
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": {
+        "requirements": [
+          {
+            "tipo": "caracteristica",
+            "caracteristica": "destreza",
+            "valor": 12,
+            "operador": ">="
+          }
+        ],
+        "process": null
+      },
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "botas_velocidad",
+      "name": "Botas de velocidad",
+      "category": "objeto_magico",
+      "subcategory": "botas",
+      "weight": 1,
+      "rarity": "raro",
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "velocidad",
+            "description": "Velocidad de caminar aumenta en 10 pies"
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": {
+        "requirements": [
+          {
+            "tipo": "nivel",
+            "valor": 3,
+            "operador": ">="
+          }
+        ],
+        "process": null
+      },
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "cuerda_seda",
+      "name": "Cuerda de seda",
+      "category": "recurso",
+      "subcategory": "herramienta",
+      "weight": 5,
+      "rarity": null,
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "escalada",
+            "description": "50 pies de cuerda para escalar"
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "kit_herrero",
+      "name": "Kit de herrero",
+      "category": "kit",
+      "subcategory": "herramienta",
+      "weight": 8,
+      "rarity": null,
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "herreria",
+            "description": "Herramientas para trabajar con metal"
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "pack_explorador",
+      "name": "Pack de explorador",
+      "category": "kit",
+      "subcategory": "pack",
+      "weight": 59,
+      "rarity": null,
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "equipamiento",
+            "description": "Contiene equipo básico para exploración"
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "pack_erudito",
+      "name": "Pack de erudito",
+      "category": "kit",
+      "subcategory": "pack",
+      "weight": 8,
+      "rarity": null,
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "equipamiento",
+            "description": "Contiene equipo básico para estudio"
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "flecha",
+      "name": "Flecha",
+      "category": "municion",
+      "subcategory": "Flecha",
+      "weight": 0.05,
+      "rarity": null,
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "municion",
+            "description": "Munición para arcos y ballestas. Se consume al usar el arco."
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "ballesta_ligera",
+      "name": "Ballesta ligera",
+      "category": "arma",
+      "subcategory": "arma_simple",
+      "weight": 5,
+      "rarity": null,
+      "baseEffect": {
+        "damage": "1d8 + ModDES",
+        "damageType": "perforante",
+        "range": "80/320",
+        "properties": [
+          "dos_manos",
+          "municion",
+          "recarga"
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "baston",
+      "name": "Bastón",
+      "category": "arma",
+      "subcategory": "arma_simple",
+      "weight": 4,
+      "rarity": null,
+      "baseEffect": {
+        "damage": "1d6 + ModFUE",
+        "damageType": "contundente",
+        "properties": [
+          "versatil"
+        ],
+        "versatile": "1d8 + ModFUE"
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "dardo",
+      "name": "Dardo",
+      "category": "arma",
+      "subcategory": "arma_simple",
+      "weight": 0.25,
+      "rarity": null,
+      "baseEffect": {
+        "damage": "1d4 + ModFUE",
+        "damageType": "perforante",
+        "range": "20/60",
+        "properties": [
+          "ligera",
+          "municion"
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "componentes_hechicero",
+      "name": "Componentes de hechicero",
+      "category": "recurso",
+      "subcategory": "herramienta",
+      "weight": 2,
+      "rarity": null,
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "componentes",
+            "description": "Componentes necesarios para lanzar conjuros"
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "bolsa_componentes",
+      "name": "Bolsa de componentes",
+      "category": "recurso",
+      "subcategory": "contenedor",
+      "weight": 2,
+      "rarity": null,
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "contenedor",
+            "description": "Contenedor para componentes de conjuros"
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "herramientas_explorador",
+      "name": "Herramientas de explorador",
+      "category": "kit",
+      "subcategory": "herramienta",
+      "weight": 2,
+      "rarity": null,
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "herramientas",
+            "description": "Herramientas especializadas para exploración"
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "Laud",
+      "name": "Laúd",
+      "category": "instrumento",
+      "subcategory": "herramienta",
+      "weight": 2,
+      "rarity": null,
+      "baseEffect": {
+        "damage": "1d6 + ModFUE",
+        "damageType": "contundente",
+        "properties": [
+          "versatil"
+        ],
+        "versatile": "1d8 + ModFUE",
+        "effects": [
+          {
+            "name": "instrumento",
+            "description": "Instrumento musical para entretenimiento. El arma de un bardo"
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "hierro",
+      "name": "Hierro",
+      "category": "recurso",
+      "subcategory": "mineral",
+      "weight": 1,
+      "rarity": null,
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "material",
+            "description": "Mineral común usado en herrería y construcción"
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "cobre",
+      "name": "Cobre",
+      "category": "recurso",
+      "subcategory": "mineral",
+      "weight": 1,
+      "rarity": null,
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "material",
+            "description": "Metal maleable usado en joyería y componentes eléctricos"
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "plata",
+      "name": "Plata",
+      "category": "recurso",
+      "subcategory": "mineral",
+      "weight": 1,
+      "rarity": null,
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "material",
+            "description": "Metal precioso resistente a criaturas sobrenaturales"
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "carne_oso",
+      "name": "Carne de oso",
+      "category": "recurso",
+      "subcategory": "animal",
+      "weight": 2,
+      "rarity": null,
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "alimento",
+            "description": "Carne nutritiva que puede alimentar a 4 personas por 1 día"
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "piel_lobo",
+      "name": "Piel de lobo",
+      "category": "recurso",
+      "subcategory": "animal",
+      "weight": 1,
+      "rarity": null,
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "material",
+            "description": "Piel resistente usada para hacer ropa de abrigo y equipamiento"
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "hueso_dragon",
+      "name": "Hueso de dragón",
+      "category": "recurso",
+      "subcategory": "animal",
+      "weight": 3,
+      "rarity": "raro",
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "material",
+            "description": "Hueso extremadamente resistente usado en la creación de armas mágicas"
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "pan_duro",
+      "name": "Pan duro",
+      "category": "recurso",
+      "subcategory": "alimento",
+      "weight": 0.5,
+      "rarity": null,
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "alimento",
+            "description": "Pan básico que alimenta a 1 persona por 1 día"
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "queso_duro",
+      "name": "Queso duro",
+      "category": "recurso",
+      "subcategory": "alimento",
+      "weight": 0.5,
+      "rarity": null,
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "alimento",
+            "description": "Queso curado que alimenta a 1 persona por 1 día"
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "carne_salada",
+      "name": "Carne salada",
+      "category": "recurso",
+      "subcategory": "alimento",
+      "weight": 1,
+      "rarity": null,
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "alimento",
+            "description": "Carne preservada que alimenta a 2 personas por 1 día"
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "rubi",
+      "name": "Rubí",
+      "category": "gema",
+      "subcategory": "piedra_preciosa",
+      "weight": 0.1,
+      "rarity": "raro",
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "gema",
+            "description": "Piedra preciosa roja valorada en 1000 po"
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "zafiro",
+      "name": "Zafiro",
+      "category": "gema",
+      "subcategory": "piedra_preciosa",
+      "weight": 0.1,
+      "rarity": "raro",
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "gema",
+            "description": "Piedra preciosa azul valorada en 1000 po"
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "esmeralda",
+      "name": "Esmeralda",
+      "category": "gema",
+      "subcategory": "piedra_preciosa",
+      "weight": 0.1,
+      "rarity": "raro",
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "gema",
+            "description": "Piedra preciosa verde valorada en 1000 po"
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "diamante",
+      "name": "Diamante",
+      "category": "gema",
+      "subcategory": "piedra_preciosa",
+      "weight": 0.1,
+      "rarity": "muy_raro",
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "gema",
+            "description": "Piedra preciosa transparente valorada en 5000 po"
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "oro",
+      "name": "Oro",
+      "category": "recurso",
+      "subcategory": "mineral",
+      "weight": 1,
+      "rarity": "poco_comun",
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "material",
+            "description": "Metal precioso maleable usado en joyería y monedas"
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "thin",
+      "name": "Estaño",
+      "category": "recurso",
+      "subcategory": "mineral",
+      "weight": 1,
+      "rarity": null,
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "material",
+            "description": "Metal blando usado en aleaciones y soldadura"
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "tendones_ciervo",
+      "name": "Tendones de ciervo",
+      "category": "recurso",
+      "subcategory": "animal",
+      "weight": 0.5,
+      "rarity": null,
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "material",
+            "description": "Tendones resistentes usados para hacer cuerdas y arcos"
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "colmillos_orco",
+      "name": "Colmillos de orco",
+      "category": "recurso",
+      "subcategory": "animal",
+      "weight": 0.2,
+      "rarity": "poco_comun",
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "material",
+            "description": "Colmillos afilados usados como adornos o componentes mágicos"
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "garras_grifo",
+      "name": "Garras de grifo",
+      "category": "recurso",
+      "subcategory": "animal",
+      "weight": 0.3,
+      "rarity": "raro",
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "material",
+            "description": "Garras extremadamente afiladas usadas en la creación de armas exóticas"
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "frutas_frescas",
+      "name": "Frutas frescas",
+      "category": "recurso",
+      "subcategory": "alimento",
+      "weight": 1,
+      "rarity": null,
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "alimento",
+            "description": "Frutas variadas que alimentan a 2 personas por 1 día"
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "galletas_duendes",
+      "name": "Galletas de duendes",
+      "category": "recurso",
+      "subcategory": "alimento",
+      "weight": 0.3,
+      "rarity": "poco_comun",
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "alimento",
+            "description": "Galletas mágicas que alimentan a 1 persona por 2 días"
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "pan_elfico",
+      "name": "Pan élfico",
+      "category": "objeto_magico",
+      "subcategory": "pocion",
+      "weight": 0.2,
+      "rarity": "poco_comun",
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "alimento",
+            "description": "Pan ligero y nutritivo que alimenta a 1 persona por 3 días"
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "topacio",
+      "name": "Topacio",
+      "category": "gema",
+      "subcategory": "piedra_preciosa",
+      "weight": 0.1,
+      "rarity": "poco_comun",
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "gema",
+            "description": "Piedra preciosa dorada valorada en 500 po"
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "amatista",
+      "name": "Amatista",
+      "category": "gema",
+      "subcategory": "piedra_preciosa",
+      "weight": 0.1,
+      "rarity": "poco_comun",
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "gema",
+            "description": "Piedra preciosa púrpura valorada en 500 po"
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "perla",
+      "name": "Perla",
+      "category": "gema",
+      "subcategory": "piedra_preciosa",
+      "weight": 0.1,
+      "rarity": "poco_comun",
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "gema",
+            "description": "Gema orgánica blanca valorada en 500 po"
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "arpa",
+      "name": "Arpa",
+      "category": "instrumento",
+      "subcategory": "herramienta",
+      "weight": 3,
+      "rarity": null,
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "instrumento",
+            "description": "Instrumento musical de cuerdas. Produce sonidos etéreos y melódicos, perfecto para música celestial y encantadora."
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "laud",
+      "name": "Laúd",
+      "category": "instrumento",
+      "subcategory": "herramienta",
+      "weight": 2,
+      "rarity": null,
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "instrumento",
+            "description": "Instrumento musical de cuerdas con un cuerpo redondeado. Es uno de los instrumentos más populares entre los bardos y músicos viajeros."
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "lira",
+      "name": "Lira",
+      "category": "instrumento",
+      "subcategory": "herramienta",
+      "weight": 2,
+      "rarity": null,
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "instrumento",
+            "description": "Instrumento musical de cuerdas pequeño y portátil. Fácil de transportar y tocar, popular entre los bardos nómadas."
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "cuerno",
+      "name": "Cuerno",
+      "category": "instrumento",
+      "subcategory": "herramienta",
+      "weight": 2,
+      "rarity": null,
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "instrumento",
+            "description": "Instrumento musical de viento hecho de cuerno de animal o metal. Produce sonidos potentes y resonantes, usado para señales y música de batalla."
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "flauta",
+      "name": "Flauta",
+      "category": "instrumento",
+      "subcategory": "herramienta",
+      "weight": 1,
+      "rarity": null,
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "instrumento",
+            "description": "Instrumento musical de viento pequeño y portátil. Produce melodías dulces y agradables, fácil de aprender y tocar."
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "tambor",
+      "name": "Tambor",
+      "category": "instrumento",
+      "subcategory": "herramienta",
+      "weight": 3,
+      "rarity": null,
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "instrumento",
+            "description": "Instrumento musical de percusión que produce ritmos marcados. Esencial para música de batalla y celebraciones."
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "dulcimer",
+      "name": "Dulcimer",
+      "category": "instrumento",
+      "subcategory": "herramienta",
+      "weight": 5,
+      "rarity": null,
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "instrumento",
+            "description": "Instrumento musical de cuerdas que se toca con mazos pequeños. Produce sonidos dulces y resonantes."
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "grimorio",
+      "name": "Libro de conjuros",
+      "category": "objeto_magico",
+      "subcategory": "grimorio",
+      "weight": 1,
+      "rarity": "comun",
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "grimorio",
+            "description": "Libro arcano donde se pueden copiar y preparar conjuros de cualquier escuela o nivel. El lanzador solo puede usar los conjuros para los que tiene nivel de conjuro suficiente.",
+            "spellStorage": {
+              "allowsAnySpell": true,
+              "maxTotalSpells": 20
+            }
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": ""
+    },
+    {
+      "id": "shawm",
+      "name": "Shawm",
+      "category": "instrumento",
+      "subcategory": "herramienta",
+      "weight": 1,
+      "rarity": null,
+      "baseEffect": {
+        "effects": [
+          {
+            "name": "instrumento",
+            "description": "Instrumento musical de viento similar a un oboe. Produce sonidos fuertes y penetrantes, usado en música al aire libre."
+          }
+        ]
+      },
+      "extraEffect": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    }
+  ]
+}

@@ -1,0 +1,191 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "lastUpdated": "2026-05-01",
+    "description": "Base de datos de items personalizados/homebrew para D&D 5e",
+    "totalItems": 7
+  },
+  "itemsPersonalizados": [
+    {
+      "id": "anillo_vuelo_velocidad",
+      "name": "Anillo de vuelo y velocidad",
+      "itemBase": "anillo",
+      "category": "objeto_magico",
+      "subcategory": "anillo",
+      "weight": 0,
+      "rarity": "muy_raro",
+      "price": {
+        "amount": 350,
+        "currency": "po"
+      },
+      "baseEffect": null,
+      "damage": [
+        {
+          "stat": "MOV",
+          "value": "+20",
+          "mod": ""
+        },
+        {
+          "stat": "MOV",
+          "value": "30",
+          "mod": "flying"
+        }
+      ],
+      "extraEffect": {
+        "effects": [
+          {
+            "name": "vuelo",
+            "description": "Concede velocidad de vuelo de 30 pies"
+          },
+          {
+            "name": "velocidad_mejorada",
+            "description": "Aumenta la velocidad de movimiento en 20 pies"
+          }
+        ]
+      },
+      "conditions": null,
+      "creadoPor": "dm_id",
+      "fechaCreacion": "2024-12-19",
+      "campaña": "campaña_id"
+    },
+    {
+      "id": "mangual",
+      "name": "Mangual",
+      "description": "Un arma que consta de una bola de hierro con picos, que está sujeta a un bastón, mediante una cadena",
+      "category": "arma",
+      "subcategory": "arma_marcial",
+      "weight": 2,
+      "rarity": "comun",
+      "price": {
+        "amount": 10,
+        "currency": "po"
+      },
+      "range": null,
+      "damage": [
+        {
+          "stat": "DMG",
+          "value": "1d8",
+          "mod": "ModFUE",
+          "damageType": "contundente"
+        }
+      ],
+      "conditions": null,
+      "source": "Personalizado"
+    },
+    {
+      "id": "pergamino_de_augurio",
+      "name": "Pergamino de Augurio",
+      "description": "Contiene el conjuro \"Augurio\" que puede lanzarse una sola vez. Tras lanzarlo, el pergamino se destruye.",
+      "category": "consumible",
+      "subcategory": "pergamino",
+      "weight": 0.1,
+      "rarity": "raro",
+      "price": {
+        "amount": 240,
+        "currency": "po"
+      },
+      "range": null,
+      "damage": [
+        {
+          "stat": "conjuro",
+          "value": "augury",
+          "mod": ""
+        }
+      ],
+      "conditions": null,
+      "source": "Personalizado"
+    },
+    {
+      "id": "pergamino_de_hechizar_persona",
+      "name": "Pergamino de Hechizar persona",
+      "description": "Contiene el conjuro \"Hechizar Persona\", que puede lanzarse una sola vez. Tras lanzarlo, el pergamino se destruye.",
+      "category": "consumible",
+      "subcategory": "pergamino",
+      "weight": 0.1,
+      "rarity": "comun",
+      "price": {
+        "amount": 75,
+        "currency": "po"
+      },
+      "range": null,
+      "damage": [
+        {
+          "stat": "conjuro",
+          "value": "charm_person",
+          "mod": ""
+        }
+      ],
+      "conditions": null,
+      "source": "Personalizado"
+    },
+    {
+      "id": "pergamino_de_bola_de_fuego",
+      "name": "Pergamino de Bola de Fuego",
+      "description": "Contiene el conjuro \"Bola de Fuego\" que puede lanzarse una sola vez. Tras lanzarlo, el pergamino se destruye.",
+      "category": "consumible",
+      "subcategory": "pergamino",
+      "weight": 0.1,
+      "rarity": "raro",
+      "price": {
+        "amount": 500,
+        "currency": "po"
+      },
+      "range": null,
+      "damage": [
+        {
+          "stat": "conjuro",
+          "value": "fireball",
+          "mod": ""
+        }
+      ],
+      "conditions": null,
+      "source": "Personalizado"
+    },
+    {
+      "id": "pergamino_de_rayo",
+      "name": "Pergamino de Rayo",
+      "description": "Contiene el conjuro \"Rayo/Relámpago\", que puede lanzarse una sola vez. Tras lanzarlo, el pergamino se destruye.",
+      "category": "consumible",
+      "subcategory": "pergamino",
+      "weight": 0.1,
+      "rarity": "muy_raro",
+      "price": {
+        "amount": 450,
+        "currency": "po"
+      },
+      "range": "100 ft",
+      "damage": [
+        {
+          "stat": "conjuro",
+          "value": "lightning_bolt",
+          "mod": ""
+        }
+      ],
+      "conditions": null,
+      "source": "Personalizado"
+    },
+    {
+      "id": "pergamino_de_paso_brumoso",
+      "name": "Pergamino de Paso Brumoso",
+      "description": "Contiene el conjuro \"Paso Brumoso\", que puede lanzarse una sola vez. Tras lanzarlo, el pergamino se destruye.",
+      "category": "consumible",
+      "subcategory": "pergamino",
+      "weight": 0.1,
+      "rarity": "muy_raro",
+      "price": {
+        "amount": 150,
+        "currency": ""
+      },
+      "range": null,
+      "damage": [
+        {
+          "stat": "conjuro",
+          "value": "misty_step",
+          "mod": ""
+        }
+      ],
+      "conditions": null,
+      "source": "Personalizado"
+    }
+  ]
+}

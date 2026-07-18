@@ -1,0 +1,186 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "lastUpdated": "2024-12-19",
+    "description": "Resistencias, inmunidades y debilidades para D&D 5e - Manual del Jugador (2018)",
+    "totalResistencias": 0
+  },
+  "resistencias": [
+    {
+      "id": "fuego",
+      "nombre": "Fuego",
+      "tipo": "resistencia",
+      "descripcion": "Tienes resistencia al daño de fuego",
+      "efecto": "mitad_dano",
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "frio",
+      "nombre": "Frío",
+      "tipo": "resistencia",
+      "descripcion": "Tienes resistencia al daño de frío",
+      "efecto": "mitad_dano",
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "electrico",
+      "nombre": "Eléctrico",
+      "tipo": "resistencia",
+      "descripcion": "Tienes resistencia al daño eléctrico",
+      "efecto": "mitad_dano",
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "acido",
+      "nombre": "Ácido",
+      "tipo": "resistencia",
+      "descripcion": "Tienes resistencia al daño de ácido",
+      "efecto": "mitad_dano",
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "necrotico",
+      "nombre": "Necrótico",
+      "tipo": "resistencia",
+      "descripcion": "Tienes resistencia al daño necrótico",
+      "efecto": "mitad_dano",
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "radiante",
+      "nombre": "Radiante",
+      "tipo": "resistencia",
+      "descripcion": "Tienes resistencia al daño radiante",
+      "efecto": "mitad_dano",
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "contundente",
+      "nombre": "Contundente",
+      "tipo": "resistencia",
+      "descripcion": "Tienes resistencia al daño contundente",
+      "efecto": "mitad_dano",
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "cortante",
+      "nombre": "Cortante",
+      "tipo": "resistencia",
+      "descripcion": "Tienes resistencia al daño cortante",
+      "efecto": "mitad_dano",
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "perforante",
+      "nombre": "Perforante",
+      "tipo": "resistencia",
+      "descripcion": "Tienes resistencia al daño perforante",
+      "efecto": "mitad_dano",
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "veneno",
+      "nombre": "Veneno",
+      "tipo": "inmunidad",
+      "descripcion": "Eres inmune al daño de veneno",
+      "efecto": "sin_dano",
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "fuego_inmune",
+      "nombre": "Fuego (Inmune)",
+      "tipo": "inmunidad",
+      "descripcion": "Eres inmune al daño de fuego",
+      "efecto": "sin_dano",
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "frio_inmune",
+      "nombre": "Frío (Inmune)",
+      "tipo": "inmunidad",
+      "descripcion": "Eres inmune al daño de frío",
+      "efecto": "sin_dano",
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "electrico_inmune",
+      "nombre": "Eléctrico (Inmune)",
+      "tipo": "inmunidad",
+      "descripcion": "Eres inmune al daño eléctrico",
+      "efecto": "sin_dano",
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "acido_inmune",
+      "nombre": "Ácido (Inmune)",
+      "tipo": "inmunidad",
+      "descripcion": "Eres inmune al daño de ácido",
+      "efecto": "sin_dano",
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "necrotico_inmune",
+      "nombre": "Necrótico (Inmune)",
+      "tipo": "inmunidad",
+      "descripcion": "Eres inmune al daño necrótico",
+      "efecto": "sin_dano",
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "radiante_inmune",
+      "nombre": "Radiante (Inmune)",
+      "tipo": "inmunidad",
+      "descripcion": "Eres inmune al daño radiante",
+      "efecto": "sin_dano",
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "fuego_debil",
+      "nombre": "Fuego (Débil)",
+      "tipo": "debilidad",
+      "descripcion": "Eres vulnerable al daño de fuego",
+      "efecto": "doble_dano",
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "frio_debil",
+      "nombre": "Frío (Débil)",
+      "tipo": "debilidad",
+      "descripcion": "Eres vulnerable al daño de frío",
+      "efecto": "doble_dano",
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "electrico_debil",
+      "nombre": "Eléctrico (Débil)",
+      "tipo": "debilidad",
+      "descripcion": "Eres vulnerable al daño eléctrico",
+      "efecto": "doble_dano",
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "acido_debil",
+      "nombre": "Ácido (Débil)",
+      "tipo": "debilidad",
+      "descripcion": "Eres vulnerable al daño de ácido",
+      "efecto": "doble_dano",
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "necrotico_debil",
+      "nombre": "Necrótico (Débil)",
+      "tipo": "debilidad",
+      "descripcion": "Eres vulnerable al daño necrótico",
+      "efecto": "doble_dano",
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "radiante_debil",
+      "nombre": "Radiante (Débil)",
+      "tipo": "debilidad",
+      "descripcion": "Eres vulnerable al daño radiante",
+      "efecto": "doble_dano",
+      "fuente": "Manual del Jugador"
+    }
+  ]
+}

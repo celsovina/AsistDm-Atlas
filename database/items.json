@@ -1,0 +1,5552 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "description": "Modelo unificado de ítems. Migrado desde items_Old.json. Array damage para efectos mecánicos; texto en description.",
+    "totalItems": 315,
+    "migratedAt": "2026-03-03"
+  },
+  "items": [
+    {
+      "id": "grimorio",
+      "name": "Libro de conjuros",
+      "category": "objeto_magico",
+      "subcategory": "grimorio",
+      "weight": 1,
+      "rarity": "comun",
+      "price": {
+        "amount": 40,
+        "currency": "ppt"
+      },
+      "range": null,
+      "description": "Libro arcano donde se pueden copiar y preparar conjuros de cualquier escuela o nivel. El lanzador solo puede usar los conjuros para los que tiene nivel de conjuro suficiente. Libro arcano donde se pueden copiar y preparar conjuros de cualquier escuela o nivel. El lanzador solo puede usar los conjuros para los que tiene nivel de conjuro suficiente.",
+      "damage": [
+        {
+          "stat": "GRIM",
+          "value": "20",
+          "mod": "",
+          "params": {
+            "allowsAnySpell": true
+          }
+        }
+      ],
+      "conditions": null,
+      "source": null
+    },
+    {
+      "id": "baya_buena",
+      "name": "Baya buena",
+      "category": "recurso",
+      "subcategory": "recurso",
+      "weight": 0,
+      "rarity": "magico",
+      "price": null,
+      "range": null,
+      "description": "+1 HP por baya",
+      "damage": [
+        {
+          "stat": "HP",
+          "value": "1",
+          "mod": ""
+        }
+      ],
+      "conditions": null,
+      "source": "Conjuro: Buenas bayas"
+    },
+    {
+      "id": "garrote",
+      "name": "Garrote",
+      "category": "arma",
+      "subcategory": "arma_simple",
+      "weight": 2,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "pp"
+      },
+      "range": null,
+      "damage": [
+        {
+          "stat": "DMG",
+          "value": "1d4",
+          "mod": "ModFUE",
+          "damageType": "contundente",
+          "properties": [
+            "ligera"
+          ]
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "daga",
+      "name": "Daga",
+      "category": "arma",
+      "subcategory": "arma_simple",
+      "weight": 1,
+      "rarity": null,
+      "price": {
+        "amount": 2,
+        "currency": "po"
+      },
+      "range": "20/60",
+      "damage": [
+        {
+          "stat": "DMG",
+          "value": "1d4",
+          "mod": "ModFUE",
+          "damageType": "perforante",
+          "range": "20/60",
+          "properties": [
+            "ligera",
+            "fina",
+            "municion"
+          ]
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "garrote_grande",
+      "name": "Garrote grande",
+      "category": "arma",
+      "subcategory": "arma_simple",
+      "weight": 10,
+      "rarity": null,
+      "price": {
+        "amount": 2,
+        "currency": "pp"
+      },
+      "range": null,
+      "damage": [
+        {
+          "stat": "DMG",
+          "value": "1d8",
+          "mod": "ModFUE",
+          "damageType": "contundente",
+          "properties": [
+            "dos_manos"
+          ]
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "hacha_mano",
+      "name": "Hacha de mano",
+      "category": "arma",
+      "subcategory": "arma_simple",
+      "weight": 2,
+      "rarity": null,
+      "price": {
+        "amount": 5,
+        "currency": "po"
+      },
+      "range": "20/60",
+      "damage": [
+        {
+          "stat": "DMG",
+          "value": "1d6",
+          "mod": "ModFUE",
+          "damageType": "cortante",
+          "range": "20/60",
+          "properties": [
+            "ligera",
+            "municion"
+          ]
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "jabalina",
+      "name": "Jabalina",
+      "category": "municion",
+      "subcategory": "recurso",
+      "weight": 2,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "pe"
+      },
+      "range": "30/120",
+      "damage": [
+        {
+          "stat": "DMG",
+          "value": "1d6",
+          "mod": "ModFUE",
+          "damageType": "perforante",
+          "range": "30/120",
+          "properties": [
+            "municion"
+          ]
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "martillo_ligero",
+      "name": "Martillo ligero",
+      "category": "arma",
+      "subcategory": "arma_simple",
+      "weight": 2,
+      "rarity": null,
+      "price": {
+        "amount": 2,
+        "currency": "po"
+      },
+      "range": "20/60",
+      "damage": [
+        {
+          "stat": "DMG",
+          "value": "1d4",
+          "mod": "ModFUE",
+          "damageType": "contundente",
+          "range": "20/60",
+          "properties": [
+            "ligera",
+            "municion"
+          ]
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "maza",
+      "name": "Maza",
+      "category": "arma",
+      "subcategory": "arma_simple",
+      "weight": 4,
+      "rarity": null,
+      "price": {
+        "amount": 5,
+        "currency": "po"
+      },
+      "range": null,
+      "damage": [
+        {
+          "stat": "DMG",
+          "value": "1d6",
+          "mod": "ModFUE",
+          "damageType": "contundente"
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "baston",
+      "name": "Bastón",
+      "category": "arma",
+      "subcategory": "arma_simple",
+      "weight": 4,
+      "rarity": null,
+      "price": {
+        "amount": 2,
+        "currency": "pp"
+      },
+      "range": null,
+      "damage": [
+        {
+          "stat": "DMG",
+          "value": "1d6",
+          "mod": "ModFUE",
+          "damageType": "contundente",
+          "properties": [
+            "versatil"
+          ],
+          "versatile": "1d8 + ModFUE"
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "hoz",
+      "name": "Hoz",
+      "category": "arma",
+      "subcategory": "arma_simple",
+      "weight": 2,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "po"
+      },
+      "range": null,
+      "damage": [
+        {
+          "stat": "DMG",
+          "value": "1d4",
+          "mod": "ModFUE",
+          "damageType": "cortante",
+          "properties": [
+            "ligera"
+          ]
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "lanza",
+      "name": "Lanza",
+      "category": "arma",
+      "subcategory": "arma_simple",
+      "weight": 3,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "po"
+      },
+      "range": "20/60",
+      "damage": [
+        {
+          "stat": "DMG",
+          "value": "1d6",
+          "mod": "ModFUE",
+          "damageType": "perforante",
+          "range": "20/60",
+          "properties": [
+            "versatil",
+            "municion"
+          ],
+          "versatile": "1d8 + ModFUE"
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "ballesta_ligera",
+      "name": "Ballesta ligera",
+      "category": "arma",
+      "subcategory": "arma_simple",
+      "weight": 5,
+      "rarity": null,
+      "price": {
+        "amount": 25,
+        "currency": "po"
+      },
+      "range": "80/320",
+      "damage": [
+        {
+          "stat": "DMG",
+          "value": "1d8",
+          "mod": "ModDES",
+          "damageType": "perforante",
+          "range": "80/320",
+          "properties": [
+            "dos_manos",
+            "municion",
+            "recarga"
+          ]
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "dardo",
+      "name": "Dardo",
+      "category": "municion",
+      "subcategory": "recurso",
+      "weight": 0.25,
+      "rarity": null,
+      "price": {
+        "amount": 5,
+        "currency": "pc"
+      },
+      "range": "20/60",
+      "damage": [
+        {
+          "stat": "DMG",
+          "value": "1d4",
+          "mod": "ModFUE",
+          "damageType": "perforante",
+          "range": "20/60",
+          "properties": [
+            "fina",
+            "municion"
+          ]
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "arco_corto",
+      "name": "Arco corto",
+      "category": "arma",
+      "subcategory": "arma_simple",
+      "weight": 2,
+      "rarity": null,
+      "price": {
+        "amount": 25,
+        "currency": "po"
+      },
+      "range": "80/320",
+      "damage": [
+        {
+          "stat": "DMG",
+          "value": "1d6",
+          "mod": "ModDES",
+          "damageType": "perforante",
+          "range": "80/320",
+          "properties": [
+            "dos_manos",
+            "municion"
+          ]
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "honda",
+      "name": "Honda",
+      "category": "arma",
+      "subcategory": "arma_simple",
+      "weight": 0,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "pp"
+      },
+      "range": "30/120",
+      "damage": [
+        {
+          "stat": "DMG",
+          "value": "1d4",
+          "mod": "ModDES",
+          "damageType": "contundente",
+          "range": "30/120",
+          "properties": [
+            "municion"
+          ]
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "hacha_batalla",
+      "name": "Hacha de batalla",
+      "category": "arma",
+      "subcategory": "arma_marcial",
+      "weight": 4,
+      "rarity": null,
+      "price": {
+        "amount": 10,
+        "currency": "po"
+      },
+      "range": null,
+      "damage": [
+        {
+          "stat": "DMG",
+          "value": "1d8",
+          "mod": "ModFUE",
+          "damageType": "cortante",
+          "properties": [
+            "versatil"
+          ],
+          "versatile": "1d10 + ModFUE"
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "mayal",
+      "name": "Mayal",
+      "category": "arma",
+      "subcategory": "arma_marcial",
+      "weight": 2,
+      "rarity": null,
+      "price": {
+        "amount": 10,
+        "currency": "po"
+      },
+      "range": null,
+      "damage": [
+        {
+          "stat": "DMG",
+          "value": "1d8",
+          "mod": "ModFUE",
+          "damageType": "contundente"
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "guja",
+      "name": "Guja",
+      "category": "arma",
+      "subcategory": "arma_marcial",
+      "weight": 6,
+      "rarity": null,
+      "price": {
+        "amount": 20,
+        "currency": "po"
+      },
+      "range": null,
+      "damage": [
+        {
+          "stat": "DMG",
+          "value": "1d10",
+          "mod": "ModFUE",
+          "damageType": "cortante",
+          "properties": [
+            "alcance",
+            "dos_manos",
+            "pesada"
+          ]
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "gran_hacha",
+      "name": "Gran hacha",
+      "category": "arma",
+      "subcategory": "arma_marcial",
+      "weight": 7,
+      "rarity": null,
+      "price": {
+        "amount": 30,
+        "currency": "po"
+      },
+      "range": null,
+      "damage": [
+        {
+          "stat": "DMG",
+          "value": "1d12",
+          "mod": "ModFUE",
+          "damageType": "cortante",
+          "properties": [
+            "dos_manos",
+            "pesada"
+          ]
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "mandoble",
+      "name": "Mandoble",
+      "category": "arma",
+      "subcategory": "arma_marcial",
+      "weight": 6,
+      "rarity": null,
+      "price": {
+        "amount": 50,
+        "currency": "po"
+      },
+      "range": null,
+      "damage": [
+        {
+          "stat": "DMG",
+          "value": "2d6",
+          "mod": "ModFUE",
+          "damageType": "cortante",
+          "properties": [
+            "dos_manos",
+            "pesada"
+          ]
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "alabarda",
+      "name": "Alabarda",
+      "category": "arma",
+      "subcategory": "arma_marcial",
+      "weight": 6,
+      "rarity": null,
+      "price": {
+        "amount": 20,
+        "currency": "po"
+      },
+      "range": null,
+      "damage": [
+        {
+          "stat": "DMG",
+          "value": "1d10",
+          "mod": "ModFUE",
+          "damageType": "cortante",
+          "properties": [
+            "alcance",
+            "dos_manos",
+            "pesada"
+          ]
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "lanza_caballeria",
+      "name": "Lanza de caballería",
+      "category": "arma",
+      "subcategory": "arma_marcial",
+      "weight": 6,
+      "rarity": null,
+      "price": {
+        "amount": 10,
+        "currency": "po"
+      },
+      "range": null,
+      "damage": [
+        {
+          "stat": "DMG",
+          "value": "1d12",
+          "mod": "ModFUE",
+          "damageType": "perforante",
+          "properties": [
+            "alcance",
+            "especial"
+          ]
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "espada_larga",
+      "name": "Espada larga",
+      "category": "arma",
+      "subcategory": "arma_marcial",
+      "weight": 3,
+      "rarity": null,
+      "price": {
+        "amount": 15,
+        "currency": "po"
+      },
+      "range": null,
+      "damage": [
+        {
+          "stat": "DMG",
+          "value": "1d8",
+          "mod": "ModFUE",
+          "damageType": "cortante",
+          "properties": [
+            "versatil"
+          ],
+          "versatile": "1d10 + ModFUE"
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "martillo_dos_manos",
+      "name": "Martillo a dos manos",
+      "category": "arma",
+      "subcategory": "arma_marcial",
+      "weight": 10,
+      "rarity": null,
+      "price": {
+        "amount": 10,
+        "currency": "po"
+      },
+      "range": null,
+      "damage": [
+        {
+          "stat": "DMG",
+          "value": "2d6",
+          "mod": "ModFUE",
+          "damageType": "contundente",
+          "properties": [
+            "dos_manos",
+            "pesada"
+          ]
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "lucero_alba",
+      "name": "Lucero del alba",
+      "category": "arma",
+      "subcategory": "arma_marcial",
+      "weight": 4,
+      "rarity": null,
+      "price": {
+        "amount": 15,
+        "currency": "po"
+      },
+      "range": null,
+      "damage": [
+        {
+          "stat": "DMG",
+          "value": "1d8",
+          "mod": "ModFUE",
+          "damageType": "perforante"
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "pica",
+      "name": "Pica",
+      "category": "arma",
+      "subcategory": "arma_marcial",
+      "weight": 18,
+      "rarity": null,
+      "price": {
+        "amount": 5,
+        "currency": "po"
+      },
+      "range": null,
+      "damage": [
+        {
+          "stat": "DMG",
+          "value": "1d10",
+          "mod": "ModFUE",
+          "damageType": "perforante",
+          "properties": [
+            "alcance",
+            "dos_manos",
+            "pesada"
+          ]
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "estoque",
+      "name": "Estoque",
+      "category": "arma",
+      "subcategory": "arma_marcial",
+      "weight": 2,
+      "rarity": null,
+      "price": {
+        "amount": 25,
+        "currency": "po"
+      },
+      "range": null,
+      "damage": [
+        {
+          "stat": "DMG",
+          "value": "1d8",
+          "mod": "ModFUE",
+          "damageType": "perforante",
+          "properties": [
+            "fina"
+          ]
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "cimitarra",
+      "name": "Cimitarra",
+      "category": "arma",
+      "subcategory": "arma_marcial",
+      "weight": 3,
+      "rarity": null,
+      "price": {
+        "amount": 25,
+        "currency": "po"
+      },
+      "range": null,
+      "damage": [
+        {
+          "stat": "DMG",
+          "value": "1d6",
+          "mod": "ModFUE",
+          "damageType": "cortante",
+          "properties": [
+            "fina",
+            "ligera"
+          ]
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "espada_corta",
+      "name": "Espada corta",
+      "category": "arma",
+      "subcategory": "arma_marcial",
+      "weight": 2,
+      "rarity": null,
+      "price": {
+        "amount": 10,
+        "currency": "po"
+      },
+      "range": null,
+      "damage": [
+        {
+          "stat": "DMG",
+          "value": "1d6",
+          "mod": "ModFUE",
+          "damageType": "perforante",
+          "properties": [
+            "fina",
+            "ligera"
+          ]
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "tridente",
+      "name": "Tridente",
+      "category": "arma",
+      "subcategory": "arma_marcial",
+      "weight": 4,
+      "rarity": null,
+      "price": {
+        "amount": 5,
+        "currency": "po"
+      },
+      "range": "20/60",
+      "damage": [
+        {
+          "stat": "DMG",
+          "value": "1d6",
+          "mod": "ModFUE",
+          "damageType": "perforante",
+          "range": "20/60",
+          "properties": [
+            "versatil",
+            "municion"
+          ],
+          "versatile": "1d8 + ModFUE"
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "pico_guerra",
+      "name": "Pico de guerra",
+      "category": "arma",
+      "subcategory": "arma_marcial",
+      "weight": 2,
+      "rarity": null,
+      "price": {
+        "amount": 5,
+        "currency": "po"
+      },
+      "range": null,
+      "damage": [
+        {
+          "stat": "DMG",
+          "value": "1d8",
+          "mod": "ModFUE",
+          "damageType": "perforante"
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "martillo_guerra",
+      "name": "Martillo de guerra",
+      "category": "arma",
+      "subcategory": "arma_marcial",
+      "weight": 2,
+      "rarity": null,
+      "price": {
+        "amount": 15,
+        "currency": "po"
+      },
+      "range": null,
+      "damage": [
+        {
+          "stat": "DMG",
+          "value": "1d8",
+          "mod": "ModFUE",
+          "damageType": "contundente",
+          "properties": [
+            "versatil"
+          ],
+          "versatile": "1d10 + ModFUE"
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "latigo",
+      "name": "Látigo",
+      "category": "arma",
+      "subcategory": "arma_marcial",
+      "weight": 3,
+      "rarity": null,
+      "price": {
+        "amount": 2,
+        "currency": "po"
+      },
+      "range": null,
+      "damage": [
+        {
+          "stat": "DMG",
+          "value": "1d4",
+          "mod": "ModFUE",
+          "damageType": "cortante",
+          "properties": [
+            "fina",
+            "alcance"
+          ]
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "cerbatana",
+      "name": "Cerbatana",
+      "category": "arma",
+      "subcategory": "arma_marcial",
+      "weight": 1,
+      "rarity": null,
+      "price": {
+        "amount": 10,
+        "currency": "po"
+      },
+      "range": "25/100",
+      "damage": [
+        {
+          "stat": "DMG",
+          "value": "1",
+          "mod": "ModDES",
+          "damageType": "perforante",
+          "range": "25/100",
+          "properties": [
+            "municion",
+            "recarga"
+          ]
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "ballesta_mano",
+      "name": "Ballesta de mano",
+      "category": "arma",
+      "subcategory": "arma_marcial",
+      "weight": 3,
+      "rarity": null,
+      "price": {
+        "amount": 75,
+        "currency": "po"
+      },
+      "range": "30/120",
+      "damage": [
+        {
+          "stat": "DMG",
+          "value": "1d6",
+          "mod": "ModDES",
+          "damageType": "perforante",
+          "range": "30/120",
+          "properties": [
+            "ligera",
+            "municion",
+            "recarga"
+          ]
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "ballesta_pesada",
+      "name": "Ballesta pesada",
+      "category": "arma",
+      "subcategory": "arma_marcial",
+      "weight": 18,
+      "rarity": null,
+      "price": {
+        "amount": 50,
+        "currency": "ppt"
+      },
+      "range": "100/400",
+      "damage": [
+        {
+          "stat": "DMG",
+          "value": "1d10",
+          "mod": "ModDES",
+          "damageType": "perforante",
+          "range": "100/400",
+          "properties": [
+            "dos_manos",
+            "municion",
+            "recarga",
+            "pesada"
+          ]
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "arco_largo",
+      "name": "Arco largo",
+      "category": "arma",
+      "subcategory": "arma_marcial",
+      "weight": 2,
+      "rarity": null,
+      "price": {
+        "amount": 50,
+        "currency": "po"
+      },
+      "range": "150/600",
+      "damage": [
+        {
+          "stat": "DMG",
+          "value": "1d8",
+          "mod": "ModDES",
+          "damageType": "perforante",
+          "range": "150/600",
+          "properties": [
+            "dos_manos",
+            "municion",
+            "pesada"
+          ]
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "red",
+      "name": "Red",
+      "category": "arma",
+      "subcategory": "arma_marcial",
+      "weight": 3,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "po"
+      },
+      "range": "5/15",
+      "description": "No inflige daño, pero puede inmovilizar a una criatura mediana o más pequeña según las reglas de la red.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "escudo",
+      "name": "Escudo",
+      "category": "armadura",
+      "subcategory": "escudo",
+      "weight": 6,
+      "rarity": null,
+      "price": {
+        "amount": 10,
+        "currency": "po"
+      },
+      "range": null,
+      "damage": [
+        {
+          "stat": "CA",
+          "value": "+2",
+          "mod": ""
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "armadura_acolchada",
+      "name": "Armadura acolchada",
+      "category": "armadura",
+      "subcategory": "armadura_ligera",
+      "weight": 8,
+      "rarity": null,
+      "price": {
+        "amount": 5,
+        "currency": "po"
+      },
+      "range": null,
+      "damage": [
+        {
+          "stat": "CA",
+          "value": "11",
+          "mod": "ModDES"
+        },
+        {
+          "stat": "STH",
+          "value": "minus",
+          "mod": ""
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "armadura_cuero",
+      "name": "Armadura de cuero",
+      "category": "armadura",
+      "subcategory": "armadura_ligera",
+      "weight": 10,
+      "rarity": null,
+      "price": {
+        "amount": 10,
+        "currency": "po"
+      },
+      "range": null,
+      "damage": [
+        {
+          "stat": "CA",
+          "value": "11",
+          "mod": "ModDES"
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "armadura_cuero_tachonado",
+      "name": "Armadura de cuero tachonado",
+      "category": "armadura",
+      "subcategory": "armadura_ligera",
+      "weight": 13,
+      "rarity": null,
+      "price": {
+        "amount": 45,
+        "currency": "po"
+      },
+      "range": null,
+      "damage": [
+        {
+          "stat": "CA",
+          "value": "12",
+          "mod": "ModDES"
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "armadura_pieles",
+      "name": "Armadura de pieles",
+      "category": "armadura",
+      "subcategory": "armadura_mediana",
+      "weight": 12,
+      "rarity": null,
+      "price": {
+        "amount": 10,
+        "currency": "po"
+      },
+      "range": null,
+      "damage": [
+        {
+          "stat": "CA",
+          "value": "12",
+          "mod": "ModDES"
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "camisote_malla",
+      "name": "Camisote de malla",
+      "category": "armadura",
+      "subcategory": "armadura_mediana",
+      "weight": 20,
+      "rarity": null,
+      "price": {
+        "amount": 5,
+        "currency": "ppt"
+      },
+      "range": null,
+      "damage": [
+        {
+          "stat": "CA",
+          "value": "13",
+          "mod": "ModDES"
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "armadura_escamas",
+      "name": "Armadura de escamas",
+      "category": "armadura",
+      "subcategory": "armadura_mediana",
+      "weight": 45,
+      "rarity": null,
+      "price": {
+        "amount": 50,
+        "currency": "po"
+      },
+      "range": null,
+      "damage": [
+        {
+          "stat": "CA",
+          "value": "14",
+          "mod": "ModDES"
+        },
+        {
+          "stat": "STH",
+          "value": "minus",
+          "mod": ""
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "coraza",
+      "name": "Coraza",
+      "category": "armadura",
+      "subcategory": "armadura_mediana",
+      "weight": 20,
+      "rarity": null,
+      "price": {
+        "amount": 40,
+        "currency": "ppt"
+      },
+      "range": null,
+      "damage": [
+        {
+          "stat": "CA",
+          "value": "14",
+          "mod": "ModDES"
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "armadura_medias_placas",
+      "name": "Armadura de medias placas",
+      "category": "armadura",
+      "subcategory": "armadura_mediana",
+      "weight": 40,
+      "rarity": null,
+      "price": {
+        "amount": 75,
+        "currency": "ppt"
+      },
+      "range": null,
+      "damage": [
+        {
+          "stat": "CA",
+          "value": "15",
+          "mod": "ModDES"
+        },
+        {
+          "stat": "STH",
+          "value": "minus",
+          "mod": ""
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "armadura_anillas",
+      "name": "Armadura de anillas",
+      "category": "armadura",
+      "subcategory": "armadura_pesada",
+      "weight": 40,
+      "rarity": null,
+      "price": {
+        "amount": 30,
+        "currency": "po"
+      },
+      "range": null,
+      "damage": [
+        {
+          "stat": "CA",
+          "value": "14",
+          "mod": ""
+        },
+        {
+          "stat": "STH",
+          "value": "minus",
+          "mod": ""
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "cota_malla",
+      "name": "Cota de malla",
+      "category": "armadura",
+      "subcategory": "armadura_pesada",
+      "weight": 55,
+      "rarity": null,
+      "price": {
+        "amount": 75,
+        "currency": "po"
+      },
+      "range": null,
+      "damage": [
+        {
+          "stat": "CA",
+          "value": "16",
+          "mod": ""
+        },
+        {
+          "stat": "STH",
+          "value": "minus",
+          "mod": ""
+        }
+      ],
+      "conditions": {
+        "requirements": [
+          {
+            "tipo": "caracteristica",
+            "caracteristica": "fuerza",
+            "valor": 13,
+            "operador": ">="
+          }
+        ],
+        "process": null
+      },
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "armadura_segmentada",
+      "name": "Armadura segmentada",
+      "category": "armadura",
+      "subcategory": "armadura_pesada",
+      "weight": 60,
+      "rarity": null,
+      "price": {
+        "amount": 20,
+        "currency": "ppt"
+      },
+      "range": null,
+      "damage": [
+        {
+          "stat": "CA",
+          "value": "17",
+          "mod": ""
+        },
+        {
+          "stat": "STH",
+          "value": "minus",
+          "mod": ""
+        }
+      ],
+      "conditions": {
+        "requirements": [
+          {
+            "tipo": "caracteristica",
+            "caracteristica": "fuerza",
+            "valor": 15,
+            "operador": ">="
+          }
+        ],
+        "process": null
+      },
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "armadura_placas",
+      "name": "Armadura de placas",
+      "category": "armadura",
+      "subcategory": "armadura_pesada",
+      "weight": 65,
+      "rarity": null,
+      "price": {
+        "amount": 150,
+        "currency": "ppt"
+      },
+      "range": null,
+      "damage": [
+        {
+          "stat": "CA",
+          "value": "18",
+          "mod": ""
+        },
+        {
+          "stat": "STH",
+          "value": "minus",
+          "mod": ""
+        }
+      ],
+      "conditions": {
+        "requirements": [
+          {
+            "tipo": "caracteristica",
+            "caracteristica": "fuerza",
+            "valor": 15,
+            "operador": ">="
+          }
+        ],
+        "process": null
+      },
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "ropa_comun",
+      "name": "Ropa común",
+      "category": "recurso",
+      "subcategory": "recurso",
+      "weight": 3,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "pe"
+      },
+      "range": null,
+      "description": "Conjunto sencillo de ropa cotidiana para gente común (incluye prendas básicas y calzado). Conjunto sencillo de ropa cotidiana para gente común (incluye prendas básicas y calzado).",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "ropa_disfraz",
+      "name": "Ropa de disfraz",
+      "category": "recurso",
+      "subcategory": "recurso",
+      "weight": 4,
+      "rarity": null,
+      "price": {
+        "amount": 5,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Conjunto de ropa llamativa o temática usada para disfraces o actuaciones. Conjunto de ropa llamativa o temática usada para disfraces o actuaciones.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "ropa_fina",
+      "name": "Ropa fina",
+      "category": "recurso",
+      "subcategory": "recurso",
+      "weight": 6,
+      "rarity": null,
+      "price": {
+        "amount": 15,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Conjunto de ropa elegante y costosa adecuada para nobles y eventos formales. Conjunto de ropa elegante y costosa adecuada para nobles y eventos formales.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "ropa_viajero",
+      "name": "Ropa de viajero",
+      "category": "recurso",
+      "subcategory": "recurso",
+      "weight": 4,
+      "rarity": null,
+      "price": {
+        "amount": 2,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Ropa resistente y práctica para viajes largos, normalmente con capa y botas robustas. Ropa resistente y práctica para viajes largos, normalmente con capa y botas robustas.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "tunica",
+      "name": "Túnica",
+      "category": "recurso",
+      "subcategory": "recurso",
+      "weight": 4,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Túnica sencilla de tela, típica de magos, monjes u otros personajes arcanos o religiosos. Túnica sencilla de tela, típica de magos, monjes u otros personajes arcanos o religiosos.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "aljaba",
+      "name": "Aljaba",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 1,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Puede contener hasta 20 flechas u otra munición similar. Puede contener hasta 20 flechas u otra munición similar.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "anillo_sellado",
+      "name": "Anillo de sellar",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 0,
+      "rarity": null,
+      "price": {
+        "amount": 5,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Permite estampar un sello personal en lacre u otros documentos. Permite estampar un sello personal en lacre u otros documentos.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "ariete_portatil",
+      "name": "Ariete portátil",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 35,
+      "rarity": null,
+      "price": {
+        "amount": 4,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Otorga +4 a las pruebas de Fuerza para echar puertas abajo. Con ayuda de otra criatura competente, se obtiene ventaja en estas pruebas. Otorga +4 a las pruebas de Fuerza para echar puertas abajo. Con ayuda de otra criatura competente, se obtiene ventaja en estas pruebas.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "balanza_mercader",
+      "name": "Balanza de mercader",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 3,
+      "rarity": null,
+      "price": {
+        "amount": 5,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Permite pesar objetos pequeños como metales preciosos o mercancías hasta 5 lb. Permite pesar objetos pequeños como metales preciosos o mercancías hasta 5 lb.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "bolas_metal",
+      "name": "Bolas de metal",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 2,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Una bolsa contiene 1000 bolas que cubren un área de 10 pies cuadrados. Criaturas que se muevan por la zona deben superar una salvación de Destreza CD 10 o caer derribadas. Una bolsa contiene 1000 bolas que cubren un área de 10 pies cuadrados. Criaturas que se muevan por la zona deben superar una salvación de Destreza CD 10 o caer derribadas.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "bolsa",
+      "name": "Bolsa",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 1,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "pe"
+      },
+      "range": null,
+      "description": "Pequeña bolsa de cuero o tela que puede contener hasta 6 lb de objetos pequeños o monedas. Pequeña bolsa de cuero o tela que puede contener hasta 6 lb de objetos pequeños o monedas.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "botella_cristal",
+      "name": "Botella de cristal",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 2,
+      "rarity": null,
+      "price": {
+        "amount": 2,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Botella de cristal resistente para almacenar líquidos como vino, pociones u otros fluidos. Botella de cristal resistente para almacenar líquidos como vino, pociones u otros fluidos.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "cadena_10",
+      "name": "Cadena (10 ft)",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 10,
+      "rarity": null,
+      "price": {
+        "amount": 5,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Cadena de hierro con 10 pies de longitud. Tiene 10 puntos de golpe y una prueba de Fuerza CD 20 es necesaria para romperla. Cadena de hierro con 10 pies de longitud. Tiene 10 puntos de golpe y una prueba de Fuerza CD 20 es necesaria para romperla.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "campana",
+      "name": "Campana",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 0,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Pequeña campana metálica que puede usarse como señal acústica o alarma improvisada. Pequeña campana metálica que puede usarse como señal acústica o alarma improvisada.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "canalizador_arcano_cristal",
+      "name": "Canalizador arcano (Cristal)",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 1,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "ppt"
+      },
+      "range": null,
+      "description": "Cristal diseñado para canalizar magia arcana. Usado por brujos, hechiceros y magos como foco de conjuros. Cristal diseñado para canalizar magia arcana. Usado por brujos, hechiceros y magos como foco de conjuros.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "canalizador_arcano_baston",
+      "name": "Canalizador arcano (Bastón)",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 4,
+      "rarity": null,
+      "price": {
+        "amount": 5,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Bastón especialmente fabricado para ser usado como foco arcano. Bastón especialmente fabricado para ser usado como foco arcano.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "canalizador_arcano_orbe",
+      "name": "Canalizador arcano (Orbe)",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 3,
+      "rarity": null,
+      "price": {
+        "amount": 2,
+        "currency": "ppt"
+      },
+      "range": null,
+      "description": "Orbe de cristal o vidrio usado como foco para lanzar conjuros arcanos. Orbe de cristal o vidrio usado como foco para lanzar conjuros arcanos.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "canalizador_arcano_vara",
+      "name": "Canalizador arcano (Vara)",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 2,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "ppt"
+      },
+      "range": null,
+      "description": "Vara sólida diseñada para servir como foco mágico arcano. Vara sólida diseñada para servir como foco mágico arcano.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "canalizador_arcano_varita",
+      "name": "Canalizador arcano (Varita)",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 1,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "ppt"
+      },
+      "range": null,
+      "description": "Varita ligera usada como foco por lanzadores arcanos. Varita ligera usada como foco por lanzadores arcanos.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "canalizador_druidico_baston",
+      "name": "Canalizador druídico (Bastón de madera)",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 4,
+      "rarity": null,
+      "price": {
+        "amount": 5,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Bastón de madera cortado de una sola pieza de un árbol sagrado, usado como foco por druidas. Bastón de madera cortado de una sola pieza de un árbol sagrado, usado como foco por druidas.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "canalizador_druidico_muerdago",
+      "name": "Canalizador druídico (Rama de muérdago)",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 0,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Pequeña rama de muérdago usada por druidas como foco de sus conjuros. Pequeña rama de muérdago usada por druidas como foco de sus conjuros.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "canalizador_druidico_totem",
+      "name": "Canalizador druídico (Tótem)",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 0,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Pequeño tótem con plumas, pelo o huesos de animales sagrados usado como foco druídico. Pequeño tótem con plumas, pelo o huesos de animales sagrados usado como foco druídico.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "canalizador_druidico_varita_tejo",
+      "name": "Canalizador druídico (Varita de tejo)",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 1,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "ppt"
+      },
+      "range": null,
+      "description": "Varita tallada en madera de tejo, usada como foco por druidas. Varita tallada en madera de tejo, usada como foco por druidas.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "cantimplora",
+      "name": "Cantimplora",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 5,
+      "rarity": null,
+      "price": {
+        "amount": 2,
+        "currency": "pp"
+      },
+      "range": null,
+      "description": "Odre de agua de cuero con capacidad para 4 pintas de líquido. El peso indicado asume que está llena. Odre de agua de cuero con capacidad para 4 pintas de líquido. El peso indicado asume que está llena.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "cana_pescar",
+      "name": "Caña de pescar",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 4,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Incluye caña, sedal, anzuelos y otros componentes básicos para pescar. Incluye caña, sedal, anzuelos y otros componentes básicos para pescar.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "catalejo",
+      "name": "Catalejo",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 1,
+      "rarity": null,
+      "price": {
+        "amount": 100,
+        "currency": "ppt"
+      },
+      "range": null,
+      "description": "Permite ver objetos a aproximadamente el doble de su tamaño aparente. Permite ver objetos a aproximadamente el doble de su tamaño aparente.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "cerradura",
+      "name": "Cerradura",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 1,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "ppt"
+      },
+      "range": null,
+      "description": "Cerradura con llave. Una criatura competente con herramientas de ladrón puede forzarla con una prueba de Destreza CD 15. Cerradura con llave. Una criatura competente con herramientas de ladrón puede forzarla con una prueba de Destreza CD 15.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "cesta",
+      "name": "Cesta",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 2,
+      "rarity": null,
+      "price": {
+        "amount": 4,
+        "currency": "pp"
+      },
+      "range": null,
+      "description": "Cesta de mimbre que puede transportar hasta 2 pies cúbicos o 40 lb de equipo ligero. Cesta de mimbre que puede transportar hasta 2 pies cúbicos o 40 lb de equipo ligero.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "cofre",
+      "name": "Cofre",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 25,
+      "rarity": null,
+      "price": {
+        "amount": 5,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Cofre de madera reforzada con capacidad para 12 pies cúbicos o 300 lb de contenido. Cofre de madera reforzada con capacidad para 12 pies cúbicos o 300 lb de contenido.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "cuerda_canamo_50",
+      "name": "Cuerda de cáñamo (50 pies)",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 10,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Cuerda de cáñamo de 50 pies. Tiene 2 puntos de golpe y CD 17 de Fuerza para romperla. Cuerda de cáñamo de 50 pies. Tiene 2 puntos de golpe y CD 17 de Fuerza para romperla.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "cuerda_seda_50",
+      "name": "Cuerda de seda (50 pies)",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 5,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "ppt"
+      },
+      "range": null,
+      "description": "Cuerda de seda de 50 pies, más ligera y resistente que la de cáñamo. Comparte la misma CD para romperla. Cuerda de seda de 50 pies, más ligera y resistente que la de cáñamo. Comparte la misma CD para romperla.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "cubo",
+      "name": "Cubo",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 2,
+      "rarity": null,
+      "price": {
+        "amount": 5,
+        "currency": "pc"
+      },
+      "range": null,
+      "description": "Cubo de madera con capacidad aproximada de 3 galones de líquido o 1/2 pie cúbico de sólido. Cubo de madera con capacidad aproximada de 3 galones de líquido o 1/2 pie cúbico de sólido.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "escalera_10",
+      "name": "Escalera (10 pies)",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 25,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "pp"
+      },
+      "range": null,
+      "description": "Escalera de madera de 10 pies de largo, útil para trepar o salvar obstáculos verticales. Escalera de madera de 10 pies de largo, útil para trepar o salvar obstáculos verticales.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "espejo_acero",
+      "name": "Espejito de acero",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 0.5,
+      "rarity": null,
+      "price": {
+        "amount": 5,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Permite ver esquinas o comprobar la apariencia propia; puede usarse para observar sin exponerse directamente. Permite ver esquinas o comprobar la apariencia propia; puede usarse para observar sin exponerse directamente.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "esposas",
+      "name": "Esposas",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 6,
+      "rarity": null,
+      "price": {
+        "amount": 2,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Grilletes de metal para criaturas Medianas o Pequeñas. Se requieren pruebas de Destreza o Fuerza CD 20 para escapar o romperlas. Tienen 15 puntos de golpe. Grilletes de metal para criaturas Medianas o Pequeñas. Se requieren pruebas de Destreza o Fuerza CD 20 para escapar o romperlas. Tienen 15 puntos de golpe.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "estuche_mapa",
+      "name": "Estuche para mapa o pergamino",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 1,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Estuche cilíndrico de cuero capaz de contener hasta 10 hojas de papel o 5 de pergamino enrolladas. Estuche cilíndrico de cuero capaz de contener hasta 10 hojas de papel o 5 de pergamino enrolladas.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "estuche_virotes",
+      "name": "Estuche para virotes de ballesta",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 1,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Caja de madera que puede contener hasta 20 virotes de ballesta. Caja de madera que puede contener hasta 20 virotes de ballesta.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "frasco_jarra",
+      "name": "Frasco o jarra",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 1,
+      "rarity": null,
+      "price": {
+        "amount": 2,
+        "currency": "pc"
+      },
+      "range": null,
+      "description": "Pequeño recipiente de cerámica o metal con capacidad de aproximadamente 1 pinta de líquido. Pequeño recipiente de cerámica o metal con capacidad de aproximadamente 1 pinta de líquido.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "garfio_escalada",
+      "name": "Garfio de escalada",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 4,
+      "rarity": null,
+      "price": {
+        "amount": 2,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Gancho metálico que puede fijarse a cornisas u otros puntos de agarre para facilitar la escalada con cuerda. Gancho metálico que puede fijarse a cornisas u otros puntos de agarre para facilitar la escalada con cuerda.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "jabon",
+      "name": "Jabón",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 0,
+      "rarity": null,
+      "price": {
+        "amount": 2,
+        "currency": "pc"
+      },
+      "range": null,
+      "description": "Pastilla o bloque pequeño de jabón para limpieza personal u otros usos. Pastilla o bloque pequeño de jabón para limpieza personal u otros usos.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "jarro_cantaro",
+      "name": "Jarro o cántaro",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 4,
+      "rarity": null,
+      "price": {
+        "amount": 2,
+        "currency": "pc"
+      },
+      "range": null,
+      "description": "Recipiente grande con capacidad aproximada de 1 galón de líquido. Recipiente grande con capacidad aproximada de 1 galón de líquido.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "lacre",
+      "name": "Lacre",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 0,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "pe"
+      },
+      "range": null,
+      "description": "Barra de cera dura usada junto con un sello para cerrar cartas o documentos importantes. Barra de cera dura usada junto con un sello para cerrar cartas o documentos importantes.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "lampara",
+      "name": "Lámpara",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 1,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "pe"
+      },
+      "range": null,
+      "description": "Emite luz brillante en un radio de 15 pies y luz tenue 15 pies más allá usando aceite como combustible (hasta 6 horas por frasco de aceite). Emite luz brillante en un radio de 15 pies y luz tenue 15 pies más allá usando aceite como combustible (hasta 6 horas por frasco de aceite).",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "libro_generico",
+      "name": "Libro",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 5,
+      "rarity": null,
+      "price": {
+        "amount": 25,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Contiene texto o dibujos sobre un tema concreto (historia, poesía, saber arcano, etc.). No es un libro de conjuros. Contiene texto o dibujos sobre un tema concreto (historia, poesía, saber arcano, etc.). No es un libro de conjuros.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "linterna_ojo_buey",
+      "name": "Linterna de ojo de buey",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 2,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "ppt"
+      },
+      "range": null,
+      "description": "Emite luz brillante en un cono de 60 pies y luz tenue 60 pies más allá. Funciona hasta 6 horas con un frasco de aceite. Emite luz brillante en un cono de 60 pies y luz tenue 60 pies más allá. Funciona hasta 6 horas con un frasco de aceite.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "linterna_sorda",
+      "name": "Linterna sorda",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 2,
+      "rarity": null,
+      "price": {
+        "amount": 5,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Emite luz brillante en un radio de 30 pies y luz tenue 30 pies más allá. Una tapa permite reducirla a luz tenue en 5 pies. Funciona hasta 6 horas con un frasco de aceite. Emite luz brillante en un radio de 30 pies y luz tenue 30 pies más allá. Una tapa permite reducirla a luz tenue en 5 pies. Funciona hasta 6 horas con un frasco de aceite.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "lupa",
+      "name": "Lupa",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 0,
+      "rarity": null,
+      "price": {
+        "amount": 10,
+        "currency": "ppt"
+      },
+      "range": null,
+      "description": "Permite observar con detalle objetos pequeños. Da ventaja a ciertas pruebas para tasar u observar detalles finos y puede encender fuego enfocando luz solar intensa durante varios minutos. Permite observar con detalle objetos pequeños. Da ventaja a ciertas pruebas para tasar u observar detalles finos y puede encender fuego enfocando luz solar intensa durante varios minutos.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "manta",
+      "name": "Manta",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 3,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "pe"
+      },
+      "range": null,
+      "description": "Manta gruesa usada para abrigarse al dormir o protegerse del frío moderado. Manta gruesa usada para abrigarse al dormir o protegerse del frío moderado.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "martillo_herramienta",
+      "name": "Martillo",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 3,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Herramienta de mano usada para clavar pitones, clavos y realizar tareas básicas de construcción o demolición ligera. Herramienta de mano usada para clavar pitones, clavos y realizar tareas básicas de construcción o demolición ligera.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "mazo_herramienta",
+      "name": "Mazo",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 10,
+      "rarity": null,
+      "price": {
+        "amount": 2,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Mazo pesado similar a un martillo de herrero o martillo a dos manos, usado para romper objetos o ayudar a clavar estacas grandes. Mazo pesado similar a un martillo de herrero o martillo a dos manos, usado para romper objetos o ayudar a clavar estacas grandes.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "mochila",
+      "name": "Mochila",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 5,
+      "rarity": null,
+      "price": {
+        "amount": 2,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Mochila con correas para la espalda capaz de cargar aproximadamente 1 pie cúbico o 30 lb de equipo, además de objetos atados por fuera. Mochila con correas para la espalda capaz de cargar aproximadamente 1 pie cúbico o 30 lb de equipo, además de objetos atados por fuera.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "olla_hierro",
+      "name": "Olla de hierro",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 10,
+      "rarity": null,
+      "price": {
+        "amount": 2,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Olla pesada de hierro utilizada para cocinar sobre el fuego o hervir agua. Olla pesada de hierro utilizada para cocinar sobre el fuego o hervir agua.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "pala",
+      "name": "Pala",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 5,
+      "rarity": null,
+      "price": {
+        "amount": 2,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Herramienta para excavar, enterrar objetos o trabajar tierra y escombros. Herramienta para excavar, enterrar objetos o trabajar tierra y escombros.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "palanqueta",
+      "name": "Palanqueta",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 5,
+      "rarity": null,
+      "price": {
+        "amount": 2,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Barra metálica que otorga ventaja a las pruebas de Fuerza en las que hacer palanca resulte útil (forzar puertas, levantar objetos pesados, etc.). Barra metálica que otorga ventaja a las pruebas de Fuerza en las que hacer palanca resulte útil (forzar puertas, levantar objetos pesados, etc.).",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "papel_hoja",
+      "name": "Papel (una hoja)",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 0,
+      "rarity": null,
+      "price": {
+        "amount": 2,
+        "currency": "pp"
+      },
+      "range": null,
+      "description": "Hoja de papel adecuada para escribir o dibujar. Más cara que el pergamino común. Hoja de papel adecuada para escribir o dibujar. Más cara que el pergamino común.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "perfume",
+      "name": "Perfume (vial)",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 0,
+      "rarity": null,
+      "price": {
+        "amount": 5,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Vial de fragancia concentrada utilizado para enmascarar olores o mejorar la presencia social. Vial de fragancia concentrada utilizado para enmascarar olores o mejorar la presencia social.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "pergamino_hoja",
+      "name": "Pergamino (una hoja)",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 0,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "pp"
+      },
+      "range": null,
+      "description": "Hoja de pergamino usada para escribir documentos, mapas o notas duraderas. No es un pergamino de conjuro. Hoja de pergamino usada para escribir documentos, mapas o notas duraderas. No es un pergamino de conjuro.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "petate",
+      "name": "Petate",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 7,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Saco acolchado para dormir, proporciona comodidad básica durante los descansos largos fuera de posadas. Saco acolchado para dormir, proporciona comodidad básica durante los descansos largos fuera de posadas.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "pico_minero",
+      "name": "Pico de minero",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 10,
+      "rarity": null,
+      "price": {
+        "amount": 2,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Pico pesado utilizado para excavar roca o tierra dura, así como para trabajos de minería. Pico pesado utilizado para excavar roca o tierra dura, así como para trabajos de minería.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "piedra_afilar",
+      "name": "Piedra de afilar",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 1,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "pc"
+      },
+      "range": null,
+      "description": "Piedra pequeña utilizada para afilar hojas y puntas metálicas, manteniendo el equipo cortante en buen estado. Piedra pequeña utilizada para afilar hojas y puntas metálicas, manteniendo el equipo cortante en buen estado.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "pinchos_hierro",
+      "name": "Pinchos de hierro (10)",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 5,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Diez pinchos de hierro que pueden usarse para fijar cuerda, asegurar puertas o montar trampas improvisadas. Diez pinchos de hierro que pueden usarse para fijar cuerda, asegurar puertas o montar trampas improvisadas.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "piton",
+      "name": "Pitón",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 0.25,
+      "rarity": null,
+      "price": {
+        "amount": 5,
+        "currency": "pc"
+      },
+      "range": null,
+      "description": "Estaca metálica pequeña que puede clavarse en piedra o madera para fijar cuerda o asegurar puntos de escalada. Estaca metálica pequeña que puede clavarse en piedra o madera para fijar cuerda o asegurar puntos de escalada.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "pluma",
+      "name": "Pluma (para escribir)",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 0,
+      "rarity": null,
+      "price": {
+        "amount": 2,
+        "currency": "pc"
+      },
+      "range": null,
+      "description": "Pluma de escribir simple, usada junto con tinta para redactar cartas o documentos. Pluma de escribir simple, usada junto con tinta para redactar cartas o documentos.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "polipasto",
+      "name": "Polipasto",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 5,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Conjunto de poleas y cable que permite levantar hasta cuatro veces el peso normal que podría manejar el usuario. Conjunto de poleas y cable que permite levantar hasta cuatro veces el peso normal que podría manejar el usuario.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "reloj_arena",
+      "name": "Reloj de arena",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 1,
+      "rarity": null,
+      "price": {
+        "amount": 25,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Reloj de arena que mide aproximadamente una hora cuando la arena fluye de una cavidad a otra. Reloj de arena que mide aproximadamente una hora cuando la arena fluye de una cavidad a otra.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "saco",
+      "name": "Saco",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 0.5,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "pc"
+      },
+      "range": null,
+      "description": "Saco de tela simple que puede contener aproximadamente 1 pie cúbico o 30 lb de equipo. Saco de tela simple que puede contener aproximadamente 1 pie cúbico o 30 lb de equipo.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "saquito_componentes",
+      "name": "Saquito de componentes",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 2,
+      "rarity": null,
+      "price": {
+        "amount": 25,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Pequeña bolsa con compartimentos para componentes materiales de conjuros que no tienen un coste específico indicado en el conjuro. Pequeña bolsa con compartimentos para componentes materiales de conjuros que no tienen un coste específico indicado en el conjuro.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "silbato_supervivencia",
+      "name": "Silbato de supervivencia",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 0,
+      "rarity": null,
+      "price": {
+        "amount": 5,
+        "currency": "pc"
+      },
+      "range": null,
+      "description": "Silbato pequeño que puede oírse a gran distancia, útil para dar señales en entornos salvajes o en combate. Silbato pequeño que puede oírse a gran distancia, útil para dar señales en entornos salvajes o en combate.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "simbolo_sagrado_amuleto",
+      "name": "Símbolo sagrado (Amuleto)",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 1,
+      "rarity": null,
+      "price": {
+        "amount": 5,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Amuleto con el símbolo de una deidad o panteón, usado por clérigos y paladines como foco para lanzar conjuros divinos. Amuleto con el símbolo de una deidad o panteón, usado por clérigos y paladines como foco para lanzar conjuros divinos.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "simbolo_sagrado_emblema",
+      "name": "Símbolo sagrado (Emblema)",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 0,
+      "rarity": null,
+      "price": {
+        "amount": 5,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Emblema o placa con el símbolo sagrado grabado, que puede fijarse en armadura o escudos para servir como foco divino. Emblema o placa con el símbolo sagrado grabado, que puede fijarse en armadura o escudos para servir como foco divino.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "simbolo_sagrado_relicario",
+      "name": "Símbolo sagrado (Relicario)",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 2,
+      "rarity": null,
+      "price": {
+        "amount": 5,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Pequeña caja que contiene una reliquia sagrada y sirve como foco divino para clérigos y paladines. Pequeña caja que contiene una reliquia sagrada y sirve como foco divino para clérigos y paladines.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "tienda_campana_2p",
+      "name": "Tienda para dos personas",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 20,
+      "rarity": null,
+      "price": {
+        "amount": 2,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Pequeña tienda transportable de lona donde pueden dormir dos criaturas de tamaño Mediano cómodamente. Pequeña tienda transportable de lona donde pueden dormir dos criaturas de tamaño Mediano cómodamente.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "tinta",
+      "name": "Tinta (botella de 1 onza)",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 0,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "ppt"
+      },
+      "range": null,
+      "description": "Botella pequeña con tinta suficiente para escribir muchos documentos antes de agotarse. Botella pequeña con tinta suficiente para escribir muchos documentos antes de agotarse.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "tiza",
+      "name": "Tiza (1 trozo)",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 0,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "pc"
+      },
+      "range": null,
+      "description": "Trozo de tiza, útil para marcar paredes, dibujar símbolos o escribir mensajes temporales en superficies sólidas. Trozo de tiza, útil para marcar paredes, dibujar símbolos o escribir mensajes temporales en superficies sólidas.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "trampa_cazar",
+      "name": "Trampa para cazar",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 25,
+      "rarity": null,
+      "price": {
+        "amount": 5,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Trampa mecánica de dientes de acero que se cierra sobre una criatura que pise su placa de presión (salvación de Destreza CD 13 o queda atrapada y sufre 1d4 de daño perforante). Trampa mecánica de dientes de acero que se cierra sobre una criatura que pise su placa de presión (salvación de Destreza CD 13 o queda atrapada y sufre 1d4 de daño perforante).",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "utensilios_cocina",
+      "name": "Utensilios de cocina",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 1,
+      "rarity": null,
+      "price": {
+        "amount": 2,
+        "currency": "pp"
+      },
+      "range": null,
+      "description": "Kit básico con una taza, cubiertos y contenedor que sirve como olla y plato, usado para preparar y consumir comidas de viaje. Kit básico con una taza, cubiertos y contenedor que sirve como olla y plato, usado para preparar y consumir comidas de viaje.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "vara_10",
+      "name": "Vara (10 pies)",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 7,
+      "rarity": null,
+      "price": {
+        "amount": 5,
+        "currency": "pc"
+      },
+      "range": null,
+      "description": "Pértiga de madera de 10 pies usada para comprobar el terreno, activar trampas a distancia o medir distancias cortas. Pértiga de madera de 10 pies usada para comprobar el terreno, activar trampas a distancia o medir distancias cortas.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "vela",
+      "name": "Vela",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 0,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "pc"
+      },
+      "range": null,
+      "description": "Proporciona luz brillante en un radio de 5 pies y luz tenue 5 pies más allá durante aproximadamente 1 hora. Proporciona luz brillante en un radio de 5 pies y luz tenue 5 pies más allá durante aproximadamente 1 hora.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "vial",
+      "name": "Vial",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 0,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Pequeño vial de cristal que contiene hasta 4 onzas de líquido, usado para pociones, venenos u otros fluidos de valor. Pequeño vial de cristal que contiene hasta 4 onzas de líquido, usado para pociones, venenos u otros fluidos de valor.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "yesquero",
+      "name": "Yesquero",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 1,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "pe"
+      },
+      "range": null,
+      "description": "Caja pequeña con pedernal, chispero y yesca. Permite encender antorchas u objetos muy inflamables como acción, y otros fuegos en aproximadamente 1 minuto. Caja pequeña con pedernal, chispero y yesca. Permite encender antorchas u objetos muy inflamables como acción, y otros fuegos en aproximadamente 1 minuto.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "pack_artista",
+      "name": "Paquete de artista",
+      "category": "recurso",
+      "subcategory": "recurso",
+      "weight": 38,
+      "rarity": null,
+      "price": {
+        "amount": 4,
+        "currency": "ppt"
+      },
+      "range": null,
+      "description": "Incluye una mochila, un petate, 2 disfraces, 5 velas, raciones para 5 días, una cantimplora y útiles para disfrazarse. Incluye una mochila, un petate, 2 disfraces, 5 velas, raciones para 5 días, una cantimplora y útiles para disfrazarse.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "pack_diplomatico",
+      "name": "Paquete de diplomático",
+      "category": "recurso",
+      "subcategory": "recurso",
+      "weight": 39,
+      "rarity": null,
+      "price": {
+        "amount": 39,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Incluye un cofre, 2 estuches para mapas o pergaminos, una muda de ropas de calidad, una botella de tinta, una pluma, 2 frascos de aceite, 5 hojas de papel, un vial de perfume, lacre y un jabón. Incluye un cofre, 2 estuches para mapas o pergaminos, una muda de ropas de calidad, una botella de tinta, una pluma, 2 frascos de aceite, 5 hojas de papel, un vial de perfume, lacre y un jabón.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "pack_erudito",
+      "name": "Paquete de erudito",
+      "category": "recurso",
+      "subcategory": "recurso",
+      "weight": 10,
+      "rarity": null,
+      "price": {
+        "amount": 4,
+        "currency": "ppt"
+      },
+      "range": null,
+      "description": "Incluye una mochila, un libro de algún saber concreto, una botella de tinta, una pluma, 10 hojas de pergamino, una bolsita con arena y un cuchillo pequeño. Incluye una mochila, un libro de algún saber concreto, una botella de tinta, una pluma, 10 hojas de pergamino, una bolsita con arena y un cuchillo pequeño.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "pack_explorador",
+      "name": "Paquete de explorador",
+      "category": "recurso",
+      "subcategory": "recurso",
+      "weight": 59,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "ppt"
+      },
+      "range": null,
+      "description": "Incluye una mochila, un petate, utensilios de cocina, un yesquero, 10 antorchas, raciones para 10 días, una cantimplora y una cuerda de cáñamo de 50 pies atada a un lado. Incluye una mochila, un petate, utensilios de cocina, un yesquero, 10 antorchas, raciones para 10 días, una cantimplora y una cuerda de cáñamo de 50 pies atada a un lado.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "pack_explorador_mazmorras",
+      "name": "Paquete de explorador de mazmorras",
+      "category": "recurso",
+      "subcategory": "recurso",
+      "weight": 61,
+      "rarity": null,
+      "price": {
+        "amount": 12,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Incluye una mochila, una palanqueta, un martillo, 10 pitones, 10 antorchas, un yesquero, raciones para 10 días, una cantimplora y una cuerda de cáñamo de 50 pies atada a un lado. Incluye una mochila, una palanqueta, un martillo, 10 pitones, 10 antorchas, un yesquero, raciones para 10 días, una cantimplora y una cuerda de cáñamo de 50 pies atada a un lado.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "pack_ladron",
+      "name": "Paquete de ladrón",
+      "category": "recurso",
+      "subcategory": "recurso",
+      "weight": 45,
+      "rarity": null,
+      "price": {
+        "amount": 16,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Incluye una mochila, una bolsa con 1000 bolas de metal, 10 pies de cordel, una campana, 5 velas, una palanqueta, un martillo, 10 pitones, una linterna sorda, 2 frascos de aceite, raciones para 5 días, un yesquero, una cantimplora y una cuerda de cáñamo de 50 pies atada a un lado. Incluye una mochila, una bolsa con 1000 bolas de metal, 10 pies de cordel, una campana, 5 velas, una palanqueta, un martillo, 10 pitones, una linterna sorda, 2 frascos de aceite, raciones para 5 días, un yesquero, una cantimplora y una cuerda de cáñamo de 50 pies atada a un lado.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "herramientas_de_escriba",
+      "name": "Herramientas de escriba",
+      "category": "recurso",
+      "subcategory": "herramienta",
+      "weight": 5,
+      "rarity": null,
+      "price": {
+        "amount": 2,
+        "currency": "ppt"
+      },
+      "range": null,
+      "description": "Conjunto de plumas, tinta, pergamino y otros materiales necesarios para escribir y copiar documentos. Conjunto de plumas, tinta, pergamino y otros materiales necesarios para escribir y copiar documentos.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "pack_sacerdote",
+      "name": "Paquete de sacerdote",
+      "category": "recurso",
+      "subcategory": "recurso",
+      "weight": 24,
+      "rarity": null,
+      "price": {
+        "amount": 19,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Incluye una mochila, una manta, 10 velas, un yesquero, una caja para limosnas, 2 barras de incienso, un incensario, vestiduras, raciones para 2 días y una cantimplora. Incluye una mochila, una manta, 10 velas, un yesquero, una caja para limosnas, 2 barras de incienso, un incensario, vestiduras, raciones para 2 días y una cantimplora.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "acido",
+      "name": "Ácido (vial)",
+      "category": "equipo",
+      "subcategory": "pocion",
+      "weight": 1,
+      "rarity": null,
+      "price": {
+        "amount": 25,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Como acción, puedes esparcir el contenido de este vial sobre una criatura a 5 pies o lanzarlo hasta 20 pies. Si impacta, el objetivo sufre 2d6 de daño de ácido. Como acción, puedes esparcir el contenido de este vial sobre una criatura a 5 pies o lanzarlo hasta 20 pies. Si impacta, el objetivo sufre 2d6 de daño de ácido.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "agua_bendita",
+      "name": "Agua bendita (frasco)",
+      "category": "equipo",
+      "subcategory": "pocion",
+      "weight": 1,
+      "rarity": null,
+      "price": {
+        "amount": 25,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Como acción, puedes esparcir el contenido de este frasco sobre una criatura a 5 pies o lanzarlo hasta 20 pies. Si impacta a un infernal o muerto viviente, el objetivo sufre 2d6 de daño radiante. Como acción, puedes esparcir el contenido de este frasco sobre una criatura a 5 pies o lanzarlo hasta 20 pies. Si impacta a un infernal o muerto viviente, el objetivo sufre 2d6 de daño radiante.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "fuego_alquimista",
+      "name": "Fuego de alquimista (frasco)",
+      "category": "equipo",
+      "subcategory": "pocion",
+      "weight": 1,
+      "rarity": null,
+      "price": {
+        "amount": 5,
+        "currency": "ppt"
+      },
+      "range": null,
+      "description": "Este fluido pegajoso prende al entrar en contacto con el aire. Como acción, puedes lanzar el frasco hasta 20 pies; si impacta, el objetivo sufre 1d4 de daño de fuego al comienzo de cada uno de sus turnos hasta que use una acción para apagar las llamas con una prueba de Destreza CD 10. Este fluido pegajoso prende al entrar en contacto con el aire. Como acción, puedes lanzar el frasco hasta 20 pies; si impacta, el objetivo sufre 1d4 de daño de fuego al comienzo de cada uno de sus turnos hasta que use una acción para apagar las llamas con una prueba de Destreza CD 10.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "antitoxina",
+      "name": "Antitoxina (vial)",
+      "category": "equipo",
+      "subcategory": "pocion",
+      "weight": 0,
+      "rarity": null,
+      "price": {
+        "amount": 5,
+        "currency": "ppt"
+      },
+      "range": null,
+      "description": "La criatura que beba el contenido de este vial obtiene ventaja en las tiradas de salvación contra veneno durante 1 hora. No tiene efecto sobre muertos vivientes ni constructos.",
+      "damage": [
+        {
+          "stat": "AntiP",
+          "value": null,
+          "mod": ""
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "veneno_basico",
+      "name": "Veneno básico (vial)",
+      "category": "equipo",
+      "subcategory": "pocion",
+      "weight": 0,
+      "rarity": null,
+      "price": {
+        "amount": 10,
+        "currency": "ppt"
+      },
+      "range": null,
+      "description": "Puedes usar el veneno de este vial para untar un arma cortante o perforante o hasta tres piezas de munición (acción). Un objetivo impactado debe superar una tirada de salvación de Constitución CD 10 o sufrir 1d4 de daño de veneno. El veneno permanece activo durante 1 minuto antes de secarse. Puedes usar el veneno de este vial para untar un arma cortante o perforante o hasta tres piezas de munición (acción). Un objetivo impactado debe superar una tirada de salvación de Constitución CD 10 o sufrir 1d4 de daño de veneno. El veneno permanece activo durante 1 minuto antes de secarse.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "pocion_curacion",
+      "name": "Poción de curación",
+      "category": "objeto_magico",
+      "subcategory": "pocion",
+      "weight": 0.5,
+      "rarity": "comun",
+      "price": {
+        "amount": 50,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Un personaje que beba el mágico fluido rojo de este vial recupera 2d4 + 2 puntos de golpe. Beber o administrar la poción requiere una acción.",
+      "damage": [
+        {
+          "stat": "HP",
+          "value": "2d4+2",
+          "mod": ""
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "pocion_curacion_superior",
+      "name": "Poción de curación superior",
+      "category": "objeto_magico",
+      "subcategory": "recurso",
+      "weight": 0.5,
+      "rarity": "raro",
+      "price": null,
+      "range": null,
+      "description": "Un personaje que beba el contenido de este vial recupera 8d4 + 8 puntos de golpe. Beber o administrar la poción requiere una acción.",
+      "damage": [
+        {
+          "stat": "HP",
+          "value": "8d4+8",
+          "mod": ""
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "pergamino_conjuro",
+      "name": "Pergamino de conjuro",
+      "category": "consumible",
+      "subcategory": "pergamino",
+      "weight": 0.1,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Contiene un único conjuro que puede lanzarse una sola vez. Tras lanzarlo, el pergamino se destruye.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "raciones",
+      "name": "Raciones (1 día)",
+      "category": "consumible",
+      "subcategory": "recurso",
+      "weight": 2,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "pe"
+      },
+      "range": null,
+      "description": "Raciones compactas y secas que alimentan a una criatura durante 1 día. Incluyen carne salada, galletas, fruta deshidratada y frutos secos, pensadas para viajes largos. Raciones compactas y secas que alimentan a una criatura durante 1 día. Incluyen carne salada, galletas, fruta deshidratada y frutos secos, pensadas para viajes largos.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "balas_honda",
+      "name": "Balas de honda (20)",
+      "category": "municion",
+      "subcategory": "recurso",
+      "weight": 0.5,
+      "rarity": null,
+      "price": {
+        "amount": 4,
+        "currency": "pc"
+      },
+      "range": null,
+      "description": "Paquete de 20 balas de honda de plomo o piedra. Se usan como munición para hondas; cada ataque consume una bala y, tras el combate, se puede recuperar aproximadamente la mitad con 1 minuto de búsqueda.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "dardos_cerbatana",
+      "name": "Dardos de cerbatana (50)",
+      "category": "municion",
+      "subcategory": "recurso",
+      "weight": 1,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Paquete de 50 dardos delgados diseñados para ser disparados con una cerbatana. Cada ataque consume un dardo y es posible recuperar aproximadamente la mitad tras el combate con 1 minuto de búsqueda.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "flechas",
+      "name": "Flechas",
+      "category": "municion",
+      "subcategory": "recurso",
+      "weight": 1,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Paquete de 20 flechas para arcos. Cada ataque consume una flecha; al finalizar el combate puede recuperarse aproximadamente la mitad de la munición empleada dedicando 1 minuto a buscar.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "virotes_ballesta",
+      "name": "Virotes de ballesta (20)",
+      "category": "municion",
+      "subcategory": "recurso",
+      "weight": 1.5,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Paquete de 20 virotes para ballestas ligeras o pesadas. Cada ataque consume un virote; al final del combate se puede recuperar aproximadamente la mitad de la munición invertida con 1 minuto de búsqueda.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "hierro",
+      "name": "Hierro",
+      "category": "recurso",
+      "subcategory": "mineral",
+      "weight": 1,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "pp"
+      },
+      "range": null,
+      "description": "Mineral común usado en herrería, construcción y fabricación de armas y armaduras básicas. El precio indicado corresponde a 1 libra de hierro en bruto. Mineral común usado en herrería, construcción y fabricación de armas y armaduras básicas. El precio indicado corresponde a 1 libra de hierro en bruto.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "cobre",
+      "name": "Cobre",
+      "category": "recurso",
+      "subcategory": "mineral",
+      "weight": 1,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "pe"
+      },
+      "range": null,
+      "description": "Metal maleable usado en joyería barata, utensilios y acuñación de monedas de cobre. El precio indicado corresponde a 1 libra de cobre en bruto. Metal maleable usado en joyería barata, utensilios y acuñación de monedas de cobre. El precio indicado corresponde a 1 libra de cobre en bruto.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "plata",
+      "name": "Plata",
+      "category": "recurso",
+      "subcategory": "mineral",
+      "weight": 1,
+      "rarity": null,
+      "price": {
+        "amount": 5,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Metal precioso muy valorado, resistente a ciertas criaturas sobrenaturales y usado en joyería, monedas y baño de armas. El precio indicado corresponde a 1 libra de plata en bruto. Metal precioso muy valorado, resistente a ciertas criaturas sobrenaturales y usado en joyería, monedas y baño de armas. El precio indicado corresponde a 1 libra de plata en bruto.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "oro",
+      "name": "Oro",
+      "category": "recurso",
+      "subcategory": "mineral",
+      "weight": 1,
+      "rarity": null,
+      "price": {
+        "amount": 5,
+        "currency": "ppt"
+      },
+      "range": null,
+      "description": "Metal precioso estándar para joyería fina, tesoros y acuñación de monedas de oro. El precio indicado corresponde a 1 libra de oro en bruto. Metal precioso estándar para joyería fina, tesoros y acuñación de monedas de oro. El precio indicado corresponde a 1 libra de oro en bruto.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "thin",
+      "name": "Estaño",
+      "category": "recurso",
+      "subcategory": "mineral",
+      "weight": 1,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Metal blando usado principalmente en aleaciones y soldadura. El valor concreto por libra depende del mercado y no figura en las tablas básicas, por lo que se deja sin precio fijo. Metal blando usado principalmente en aleaciones y soldadura. El valor concreto por libra depende del mercado y no figura en las tablas básicas, por lo que se deja sin precio fijo.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "rubi",
+      "name": "Rubí",
+      "category": "recurso",
+      "subcategory": "recurso",
+      "weight": 0.1,
+      "rarity": null,
+      "price": {
+        "amount": 100,
+        "currency": "ppt"
+      },
+      "range": null,
+      "description": "Piedra preciosa roja de gran pureza, muy valorada como tesoro y como componente material de conjuros que requieren gemas de 1000 po. Piedra preciosa roja de gran pureza, muy valorada como tesoro y como componente material de conjuros que requieren gemas de 1000 po.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "zafiro",
+      "name": "Zafiro",
+      "category": "recurso",
+      "subcategory": "recurso",
+      "weight": 0.1,
+      "rarity": null,
+      "price": {
+        "amount": 100,
+        "currency": "ppt"
+      },
+      "range": null,
+      "description": "Piedra preciosa azul profunda, usada tanto en joyas nobles como en rituales que exigen gemas de 1000 po. Piedra preciosa azul profunda, usada tanto en joyas nobles como en rituales que exigen gemas de 1000 po.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "esmeralda",
+      "name": "Esmeralda",
+      "category": "recurso",
+      "subcategory": "recurso",
+      "weight": 0.1,
+      "rarity": null,
+      "price": {
+        "amount": 100,
+        "currency": "ppt"
+      },
+      "range": null,
+      "description": "Piedra preciosa verde intensa, muy cotizada y empleada como componente material en conjuros que requieren gemas de 1000 po. Piedra preciosa verde intensa, muy cotizada y empleada como componente material en conjuros que requieren gemas de 1000 po.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "diamante",
+      "name": "Diamante",
+      "category": "recurso",
+      "subcategory": "recurso",
+      "weight": 0.1,
+      "rarity": null,
+      "price": {
+        "amount": 500,
+        "currency": "ppt"
+      },
+      "range": null,
+      "description": "Piedra preciosa transparente de altísimo valor, frecuente como componente material para conjuros potentes que requieren diamantes de 5000 po. Piedra preciosa transparente de altísimo valor, frecuente como componente material para conjuros potentes que requieren diamantes de 5000 po.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "topacio",
+      "name": "Topacio",
+      "category": "recurso",
+      "subcategory": "recurso",
+      "weight": 0.1,
+      "rarity": null,
+      "price": {
+        "amount": 50,
+        "currency": "ppt"
+      },
+      "range": null,
+      "description": "Piedra preciosa dorada de valor medio, adecuada como tesoro o componente material para conjuros que exigen gemas de 500 po. Piedra preciosa dorada de valor medio, adecuada como tesoro o componente material para conjuros que exigen gemas de 500 po.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "amatista",
+      "name": "Amatista",
+      "category": "recurso",
+      "subcategory": "recurso",
+      "weight": 0.1,
+      "rarity": null,
+      "price": {
+        "amount": 50,
+        "currency": "ppt"
+      },
+      "range": null,
+      "description": "Piedra preciosa púrpura de valor medio, apreciada tanto en joyería como en rituales que requieren gemas de 500 po. Piedra preciosa púrpura de valor medio, apreciada tanto en joyería como en rituales que requieren gemas de 500 po.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "perla",
+      "name": "Perla",
+      "category": "recurso",
+      "subcategory": "recurso",
+      "weight": 0.1,
+      "rarity": null,
+      "price": {
+        "amount": 50,
+        "currency": "ppt"
+      },
+      "range": null,
+      "description": "Gema orgánica blanca muy valorada, habitual tanto en joyas como en conjuros que requieren perlas u otras gemas de 500 po. Gema orgánica blanca muy valorada, habitual tanto en joyas como en conjuros que requieren perlas u otras gemas de 500 po.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "piel_animal_cruda",
+      "name": "Piel animal cruda",
+      "category": "recurso",
+      "subcategory": "animal",
+      "weight": 1,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Piel sin curtir recién obtenida de una criatura. Debe ser tratada y curtida para evitar que se pudra y poder usarse como materia prima de cuero o telas rústicas. Piel sin curtir recién obtenida de una criatura. Debe ser tratada y curtida para evitar que se pudra y poder usarse como materia prima de cuero o telas rústicas.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "cuero_animal",
+      "name": "Cuero animal",
+      "category": "recurso",
+      "subcategory": "animal",
+      "weight": 1,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Piel de criatura ya curtida y preparada para su uso. Sirve como material base para armaduras ligeras, ropa resistente, arreos y otros objetos de cuero. Piel de criatura ya curtida y preparada para su uso. Sirve como material base para armaduras ligeras, ropa resistente, arreos y otros objetos de cuero.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "huesos_criatura",
+      "name": "Huesos de criatura",
+      "category": "recurso",
+      "subcategory": "animal",
+      "weight": 1,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Conjunto de huesos limpios y aprovechables (costillas, fémures, cuernos, etc.) que pueden tallarse para fabricar mangos, puntas, fetiches o servir como componentes materiales. Conjunto de huesos limpios y aprovechables (costillas, fémures, cuernos, etc.) que pueden tallarse para fabricar mangos, puntas, fetiches o servir como componentes materiales.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "escamas_criatura",
+      "name": "Escamas de criatura",
+      "category": "recurso",
+      "subcategory": "animal",
+      "weight": 1,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Conjunto de escamas duras procedentes de bestias o reptiles. Pueden emplearse para reforzar armaduras, adornos exóticos o como componentes en rituales y conjuros. Conjunto de escamas duras procedentes de bestias o reptiles. Pueden emplearse para reforzar armaduras, adornos exóticos o como componentes en rituales y conjuros.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "fibras_vegetales",
+      "name": "Fibras vegetales",
+      "category": "recurso",
+      "subcategory": "vegetal",
+      "weight": 1,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Fibras de plantas (cáñamo, lino, etc.) preparadas para ser hiladas o trenzadas. Se usan para fabricar cuerdas, telas bastas, rellenos y otros productos sencillos. Fibras de plantas (cáñamo, lino, etc.) preparadas para ser hiladas o trenzadas. Se usan para fabricar cuerdas, telas bastas, rellenos y otros productos sencillos.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "tela_ruda",
+      "name": "Tela ruda",
+      "category": "recurso",
+      "subcategory": "vegetal",
+      "weight": 1,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Pieza de tela simple y resistente tejida a partir de fibras vegetales. Sirve como base para ropa común, sacos, vendas y otros productos textiles de baja calidad. Pieza de tela simple y resistente tejida a partir de fibras vegetales. Sirve como base para ropa común, sacos, vendas y otros productos textiles de baja calidad.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "alforjas",
+      "name": "Alforjas",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 8,
+      "rarity": null,
+      "price": {
+        "amount": 4,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Par de bolsas que se colocan a ambos lados de una montura para transportar equipo adicional. Pueden llevar hasta 1 pie cúbico o 30 lb de equipo por lado. Par de bolsas que se colocan a ambos lados de una montura para transportar equipo adicional. Pueden llevar hasta 1 pie cúbico o 30 lb de equipo por lado.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "barda",
+      "name": "Barda",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Armadura diseñada para proteger a una montura. Su coste es cuatro veces el de la misma armadura para humanoides y su peso el doble. Se calcula caso por caso en función del tipo de armadura base. Armadura diseñada para proteger a una montura. Su coste es cuatro veces el de la misma armadura para humanoides y su peso el doble. Se calcula caso por caso en función del tipo de armadura base.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "bocado_bridas",
+      "name": "Bocado y bridas",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 1,
+      "rarity": null,
+      "price": {
+        "amount": 2,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Conjunto de correas y pieza de metal para la boca del animal que permite controlar la montura cuando está ensillada o enganchada a un vehículo. Conjunto de correas y pieza de metal para la boca del animal que permite controlar la montura cuando está ensillada o enganchada a un vehículo.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "carreta",
+      "name": "Carreta",
+      "category": "recurso",
+      "subcategory": "recurso",
+      "weight": 200,
+      "rarity": null,
+      "price": {
+        "amount": 15,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Vehículo de dos ruedas tirado normalmente por una criatura de tiro. Se usa para transportar mercancías o equipo pesado a velocidad moderada. Vehículo de dos ruedas tirado normalmente por una criatura de tiro. Se usa para transportar mercancías o equipo pesado a velocidad moderada.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "carro",
+      "name": "Carro",
+      "category": "recurso",
+      "subcategory": "recurso",
+      "weight": 400,
+      "rarity": null,
+      "price": {
+        "amount": 35,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Vehículo más grande y pesado que una carreta, normalmente tirado por dos animales de tiro. Adecuado para caravanas y grandes cargamentos. Vehículo más grande y pesado que una carreta, normalmente tirado por dos animales de tiro. Adecuado para caravanas y grandes cargamentos.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "carro_guerra",
+      "name": "Carro de guerra",
+      "category": "recurso",
+      "subcategory": "recurso",
+      "weight": 100,
+      "rarity": null,
+      "price": {
+        "amount": 25,
+        "currency": "ppt"
+      },
+      "range": null,
+      "description": "Vehículo ligero de dos ruedas preparado para el combate y las maniobras rápidas en el campo de batalla. Normalmente tirado por dos monturas rápidas. Vehículo ligero de dos ruedas preparado para el combate y las maniobras rápidas en el campo de batalla. Normalmente tirado por dos monturas rápidas.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "carruaje",
+      "name": "Carruaje",
+      "category": "recurso",
+      "subcategory": "recurso",
+      "weight": 600,
+      "rarity": null,
+      "price": {
+        "amount": 10,
+        "currency": "ppt"
+      },
+      "range": null,
+      "description": "Vehículo cerrado de varias plazas usado para transportar pasajeros con cierta comodidad. Suele ser tirado por dos o más caballos de tiro. Vehículo cerrado de varias plazas usado para transportar pasajeros con cierta comodidad. Suele ser tirado por dos o más caballos de tiro.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "silla_tiro",
+      "name": "Silla de tiro",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 15,
+      "rarity": null,
+      "price": {
+        "amount": 5,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Silla sencilla diseñada para sujetar cargas sobre la montura más que para montar cómodamente. Usada con animales de tiro o de carga. Silla sencilla diseñada para sujetar cargas sobre la montura más que para montar cómodamente. Usada con animales de tiro o de carga.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "silla_monta",
+      "name": "Silla de monta",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 25,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "ppt"
+      },
+      "range": null,
+      "description": "Silla común para montar, adecuada para la mayoría de caballos y ponis usada en viajes y desplazamientos cotidianos. Silla común para montar, adecuada para la mayoría de caballos y ponis usada en viajes y desplazamientos cotidianos.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "silla_exotica",
+      "name": "Silla exótica",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 40,
+      "rarity": null,
+      "price": {
+        "amount": 6,
+        "currency": "ppt"
+      },
+      "range": null,
+      "description": "Silla diseñada para monturas inusuales (como camellos, elefantes o bestias fantásticas), con cinchas y sujeciones especiales. Silla diseñada para monturas inusuales (como camellos, elefantes o bestias fantásticas), con cinchas y sujeciones especiales.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "silla_militar",
+      "name": "Silla militar",
+      "category": "equipo",
+      "subcategory": "recurso",
+      "weight": 40,
+      "rarity": null,
+      "price": {
+        "amount": 2,
+        "currency": "ppt"
+      },
+      "range": null,
+      "description": "Silla reforzada que ayuda a mantener al jinete firme en combate, proporcionando mejor estabilidad al cargar y al luchar montado. Silla reforzada que ayuda a mantener al jinete firme en combate, proporcionando mejor estabilidad al cargar y al luchar montado.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "trineo",
+      "name": "Trineo",
+      "category": "recurso",
+      "subcategory": "recurso",
+      "weight": 300,
+      "rarity": null,
+      "price": {
+        "amount": 2,
+        "currency": "ppt"
+      },
+      "range": null,
+      "description": "Vehículo sin ruedas diseñado para deslizarse sobre nieve o hielo, tirado normalmente por animales de tiro u otras monturas adaptadas al frío. Vehículo sin ruedas diseñado para deslizarse sobre nieve o hielo, tirado normalmente por animales de tiro u otras monturas adaptadas al frío.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "drakkar",
+      "name": "Drakkar",
+      "category": "recurso",
+      "subcategory": "recurso",
+      "weight": 0,
+      "rarity": null,
+      "price": {
+        "amount": 1000,
+        "currency": "ppt"
+      },
+      "range": null,
+      "description": "Barco largo impulsado por remos y vela, adecuado tanto para navegación costera como para incursiones fluviales. Barco largo impulsado por remos y vela, adecuado tanto para navegación costera como para incursiones fluviales.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "galera",
+      "name": "Galera",
+      "category": "recurso",
+      "subcategory": "recurso",
+      "weight": 0,
+      "rarity": null,
+      "price": {
+        "amount": 3000,
+        "currency": "ppt"
+      },
+      "range": null,
+      "description": "Gran barco impulsado principalmente por remos y velas, usado a menudo como nave de guerra o transporte de gran capacidad. Gran barco impulsado principalmente por remos y velas, usado a menudo como nave de guerra o transporte de gran capacidad.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "navio_guerra",
+      "name": "Navío de guerra",
+      "category": "recurso",
+      "subcategory": "recurso",
+      "weight": 0,
+      "rarity": null,
+      "price": {
+        "amount": 2500,
+        "currency": "ppt"
+      },
+      "range": null,
+      "description": "Gran embarcación fuertemente armada y reforzada, diseñada para el combate naval prolongado y el transporte de tropas. Gran embarcación fuertemente armada y reforzada, diseñada para el combate naval prolongado y el transporte de tropas.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "velero",
+      "name": "Velero",
+      "category": "recurso",
+      "subcategory": "recurso",
+      "weight": 0,
+      "rarity": null,
+      "price": {
+        "amount": 1000,
+        "currency": "ppt"
+      },
+      "range": null,
+      "description": "Barco de tamaño medio impulsado principalmente por velas, usado para comercio, exploración o transporte de pasajeros en mar abierto. Barco de tamaño medio impulsado principalmente por velas, usado para comercio, exploración o transporte de pasajeros en mar abierto.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "trigo",
+      "name": "Trigo (1 lb)",
+      "category": "recurso",
+      "subcategory": "recurso",
+      "weight": 1,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "pc"
+      },
+      "range": null,
+      "description": "Saco o medida de 1 libra de trigo, usado como alimento básico o parte de transacciones de trueque y comercio rural. Saco o medida de 1 libra de trigo, usado como alimento básico o parte de transacciones de trueque y comercio rural.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "harina",
+      "name": "Harina (1 lb)",
+      "category": "recurso",
+      "subcategory": "recurso",
+      "weight": 1,
+      "rarity": null,
+      "price": {
+        "amount": 2,
+        "currency": "pc"
+      },
+      "range": null,
+      "description": "Saco o medida de 1 libra de harina, usada para hornear pan y otros alimentos; más cara que el trigo sin procesar. Saco o medida de 1 libra de harina, usada para hornear pan y otros alimentos; más cara que el trigo sin procesar.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "sal_mercancia",
+      "name": "Sal (1 lb)",
+      "category": "recurso",
+      "subcategory": "recurso",
+      "weight": 1,
+      "rarity": null,
+      "price": {
+        "amount": 5,
+        "currency": "pc"
+      },
+      "range": null,
+      "description": "Una libra de sal, valiosa tanto para condimentar como para conservar alimentos y para ciertas prácticas rituales. Una libra de sal, valiosa tanto para condimentar como para conservar alimentos y para ciertas prácticas rituales.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "comida_miserable",
+      "name": "Comida miserable (1 día)",
+      "category": "recurso",
+      "subcategory": "recurso",
+      "weight": 0,
+      "rarity": null,
+      "price": {
+        "amount": 3,
+        "currency": "pc"
+      },
+      "range": null,
+      "description": "Comida de muy baja calidad: sobras, gachas aguadas o alimentos casi en mal estado, suficientes solo para sobrevivir un día. Comida de muy baja calidad: sobras, gachas aguadas o alimentos casi en mal estado, suficientes solo para sobrevivir un día.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "comida_pobre",
+      "name": "Comida pobre (1 día)",
+      "category": "recurso",
+      "subcategory": "recurso",
+      "weight": 0,
+      "rarity": null,
+      "price": {
+        "amount": 6,
+        "currency": "pc"
+      },
+      "range": null,
+      "description": "Raciones sencillas pero suficientes: pan grueso, sopa aguada y algo de legumbre o carne barata, cubriendo las necesidades básicas de un día. Raciones sencillas pero suficientes: pan grueso, sopa aguada y algo de legumbre o carne barata, cubriendo las necesidades básicas de un día.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "comida_modesta",
+      "name": "Comida modesta (1 día)",
+      "category": "recurso",
+      "subcategory": "recurso",
+      "weight": 0,
+      "rarity": null,
+      "price": {
+        "amount": 3,
+        "currency": "pp"
+      },
+      "range": null,
+      "description": "Tres comidas sencillas pero nutritivas, con pan fresco, guisos básicos y algo de fruta o verdura, adecuadas para la mayoría de artesanos y soldados. Tres comidas sencillas pero nutritivas, con pan fresco, guisos básicos y algo de fruta o verdura, adecuadas para la mayoría de artesanos y soldados.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "comida_comoda",
+      "name": "Comida cómoda (1 día)",
+      "category": "recurso",
+      "subcategory": "recurso",
+      "weight": 0,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "pe"
+      },
+      "range": null,
+      "description": "Comidas bien preparadas con ingredientes decentes, incluyendo carne, pan de calidad y bebida aceptable, típicas de una buena posada. Comidas bien preparadas con ingredientes decentes, incluyendo carne, pan de calidad y bebida aceptable, típicas de una buena posada.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "comida_lujosa",
+      "name": "Comida lujosa (1 día)",
+      "category": "recurso",
+      "subcategory": "recurso",
+      "weight": 0,
+      "rarity": null,
+      "price": {
+        "amount": 8,
+        "currency": "pp"
+      },
+      "range": null,
+      "description": "Platos elaborados con buenos vinos, carnes selectas y postres refinados, propios de posadas caras o casas nobles de segundo rango. Platos elaborados con buenos vinos, carnes selectas y postres refinados, propios de posadas caras o casas nobles de segundo rango.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "comida_aristocratica",
+      "name": "Comida aristocrática (1 día)",
+      "category": "recurso",
+      "subcategory": "recurso",
+      "weight": 0,
+      "rarity": null,
+      "price": {
+        "amount": 2,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Banquetes continuos de varias carnes, vinos finos y platos exóticos dignos de nobles y grandes señores durante un día completo. Banquetes continuos de varias carnes, vinos finos y platos exóticos dignos de nobles y grandes señores durante un día completo.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "carne_trozo",
+      "name": "Carne (trozo)",
+      "category": "recurso",
+      "subcategory": "recurso",
+      "weight": 0,
+      "rarity": null,
+      "price": {
+        "amount": 3,
+        "currency": "pp"
+      },
+      "range": null,
+      "description": "Porción de carne cocinada o asada servida en tabernas y posadas modestas, suficiente para una comida abundante. Porción de carne cocinada o asada servida en tabernas y posadas modestas, suficiente para una comida abundante.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "cerveza_galon",
+      "name": "Cerveza (galón)",
+      "category": "recurso",
+      "subcategory": "recurso",
+      "weight": 0,
+      "rarity": null,
+      "price": {
+        "amount": 2,
+        "currency": "pp"
+      },
+      "range": null,
+      "description": "Un galón de cerveza común, suficiente para un grupo pequeño durante una noche de bebida abundante. Un galón de cerveza común, suficiente para un grupo pequeño durante una noche de bebida abundante.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "cerveza_jarra",
+      "name": "Cerveza (jarra)",
+      "category": "recurso",
+      "subcategory": "recurso",
+      "weight": 0,
+      "rarity": null,
+      "price": {
+        "amount": 4,
+        "currency": "pc"
+      },
+      "range": null,
+      "description": "Una jarra de cerveza común servida en tabernas habituales, apropiada para la mayoría de clientes y aventureros. Una jarra de cerveza común servida en tabernas habituales, apropiada para la mayoría de clientes y aventureros.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "pan_hogaza",
+      "name": "Pan (hogaza)",
+      "category": "recurso",
+      "subcategory": "recurso",
+      "weight": 0,
+      "rarity": null,
+      "price": {
+        "amount": 2,
+        "currency": "pc"
+      },
+      "range": null,
+      "description": "Una hogaza de pan básico, a menudo servida como acompañamiento en comidas baratas o vendida por separado en mercados y panaderías. Una hogaza de pan básico, a menudo servida como acompañamiento en comidas baratas o vendida por separado en mercados y panaderías.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "queso_trozo",
+      "name": "Queso (trozo)",
+      "category": "consumible",
+      "subcategory": "alimento",
+      "weight": 0,
+      "rarity": null,
+      "price": {
+        "amount": 1,
+        "currency": "pp"
+      },
+      "range": null,
+      "description": "Porción de queso curado que puede complementar una comida sencilla o servir como ración de viaje de mayor calidad. Porción de queso curado que puede complementar una comida sencilla o servir como ración de viaje de mayor calidad.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "vino_comun_jarra",
+      "name": "Vino común (jarra)",
+      "category": "consumible",
+      "subcategory": "bebida",
+      "weight": 0,
+      "rarity": null,
+      "price": {
+        "amount": 2,
+        "currency": "pp"
+      },
+      "range": null,
+      "description": "Jarra de vino sencillo servido en tabernas comunes, apreciado por campesinos y aventureros por igual. Jarra de vino sencillo servido en tabernas comunes, apreciado por campesinos y aventureros por igual.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "vino_calidad_botella",
+      "name": "Vino de calidad (botella)",
+      "category": "consumible",
+      "subcategory": "bebida",
+      "weight": 0,
+      "rarity": null,
+      "price": {
+        "amount": 10,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Botella de vino de excelente añada, habitualmente servida en banquetes, reuniones nobles o tabernas de lujo. Botella de vino de excelente añada, habitualmente servida en banquetes, reuniones nobles o tabernas de lujo.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "mano_momificada_goblin",
+      "name": "Mano momificada de un goblin",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "La mano momificada de un goblin.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "cristal_luz_luna",
+      "name": "Trozo de cristal que brilla a la luz de la luna",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un trozo de cristal que brilla débilmente a la luz de la luna.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "moneda_oro_tierra_desconocida",
+      "name": "Moneda de oro de tierra desconocida",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Una moneda de oro acuñada en una tierra desconocida.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "diario_idioma_desconocido",
+      "name": "Diario en idioma desconocido",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un diario escrito en un idioma que no conoces.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "anillo_bronce_lustre",
+      "name": "Anillo de bronce lustroso",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un anillo de bronce que nunca pierde su lustre.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "pieza_ajedrez_vidrio",
+      "name": "Pieza de ajedrez de vidrio antigua",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Una antigua pieza de ajedrez hecha de vidrio.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "dados_hueso_nudillo",
+      "name": "Dados de hueso de nudillo",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un par de dados hechos de huesos de nudillo, ambos con una calavera en lugar del seis.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "idolo_criatura_pesadilla",
+      "name": "Ídolo de criatura de pesadilla",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un pequeño ídolo que representa una criatura de pesadilla que te causa sueños inquietantes cuando duermes cerca de él.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "collar_dedos_elfo_momificados",
+      "name": "Collar con dedos de elfo momificados",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un collar de cuerda del que cuelgan cuatro dedos de elfo momificados.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "documento_propiedad_reino_desconocido",
+      "name": "Documento de propiedad de reino desconocido",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "El documento de propiedad sobre un terreno situado en un reino que no conoces.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "bloque_material_desconocido",
+      "name": "Bloque de material desconocido",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un bloque que pesa una onza hecho de un material desconocido.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "muneca_trapo_agujas",
+      "name": "Muñeca de trapo atravesada por agujas",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Una pequeña muñeca de trapo atravesada por agujas.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "diente_bestia_desconocida",
+      "name": "Diente de bestia desconocida",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un diente de una bestia desconocida.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "escama_enorme_dragon",
+      "name": "Escama enorme de dragón",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Una escama enorme, quizá de un dragón.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "pluma_verde_viva",
+      "name": "Pluma verde muy viva",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Una pluma de un color verde muy vivo.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "carta_adivinacion_efigie",
+      "name": "Carta de adivinación con tu efigie",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Una antigua carta para adivinar el futuro que lleva tu efigie.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "orbe_vidrio_humo",
+      "name": "Orbe de vidrio con humo serpenteante",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un orbe de vidrio lleno de humo serpenteante.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "huevo_rojo_pesado",
+      "name": "Huevo rojo brillante pesado",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 1,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un huevo con la cáscara de color rojo brillante que pesa una libra.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "pipa_burbujas",
+      "name": "Pipa que expulsa burbujas",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Una pipa que expulsa burbujas.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "jarra_carne_flotante",
+      "name": "Jarra con carne flotante en fluido rosáceo",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Una jarra de cristal que contiene un extraño trozo de carne que flota en un fluido rosáceo.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "caja_musica_gnoma",
+      "name": "Caja de música gnoma",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Una minúscula caja de música de manufactura gnoma que toca una canción que recuerdas levemente de tu juventud.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "estatuilla_mediano_engreido",
+      "name": "Estatuilla de mediano engreído",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Una pequeña estatuilla de madera que representa un mediano engreído.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "orbe_bronce_runas",
+      "name": "Orbe de bronce con runas extrañas",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un orbe de bronce grabado con runas extrañas.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "disco_piedra_multicolor",
+      "name": "Disco de piedra multicolor",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un disco de piedra multicolor.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "icono_plata_cuervo",
+      "name": "Icono de plata con forma de cuervo",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un icono de plata diminuto con la forma de un cuervo.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "bolsa_dientes_humanoide",
+      "name": "Bolsa con dientes de humanoide",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Una bolsa que contiene cuarenta y siete dientes de humanoide, uno de ellos podrido.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "esquirla_obsidiana_caliente",
+      "name": "Esquirla de obsidiana caliente",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Una esquirla de obsidiana que siempre está caliente al tacto.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "garra_dragon_colgante",
+      "name": "Garra de dragón en colgante",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Una huesuda garra de dragón que cuelga de un, por lo demás, ordinario colgante de cuero.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "calcetines_viejos",
+      "name": "Par de calcetines viejos",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un par de calcetines viejos.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "libro_en_blanco_inmarcable",
+      "name": "Libro en blanco que no retiene marcas",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un libro en blanco cuyas hojas no logran retener tinta, tiza, grafito o cualquier otra sustancia con la que hacer marcas.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "emblema_plata_estrella_cinco_puntas",
+      "name": "Emblema de plata de estrella de cinco puntas",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un emblema de plata con la forma de una estrella de cinco puntas.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "cuchillo_familiar",
+      "name": "Cuchillo de un familiar",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un cuchillo que perteneció a un familiar.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "vial_unas_cortadas",
+      "name": "Vial con uñas cortadas",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un vial de cristal lleno de uñas cortadas.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "artilugio_metal_chispas",
+      "name": "Artilugio de metal que lanza chispas",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un artilugio de metal de forma rectangular con dos minúsculas copas de metal en uno de sus lados que lanza chispas cuando se moja.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "guante_blanco_lentejuelas",
+      "name": "Guante blanco con lentejuelas",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un guante blanco con lentejuelas de talla humana.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "chaleco_cien_bolsillos",
+      "name": "Chaleco con cien bolsillos diminutos",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un chaleco con cien bolsillos diminutos.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "bloque_piedra_sin_peso",
+      "name": "Bloque de piedra que no pesa nada",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un pequeño bloque de piedra que no pesa nada.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "retrato_goblin",
+      "name": "Retrato abocetado de un goblin",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un pequeño retrato abocetado de un goblin.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "vial_perfume_fantasma",
+      "name": "Vial con olor a perfume",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un vial de cristal vacío que desprende un olor a perfume cuando se abre.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "gema_carbon_personal",
+      "name": "Gema que parece carbón para otros",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Una gema que parece un pedazo de carbón cuando la mira cualquiera que no seas tú.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "jirones_estandarte_viejo",
+      "name": "Jirón de estandarte viejo",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un jirón de tela de un estandarte viejo.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "insignia_legionario_perdido",
+      "name": "Insignia de legionario perdido",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "La insignia que indica el rango de un legionario perdido.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "campanita_plata_sin_badajo",
+      "name": "Campanita de plata sin badajo",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Una campanita de plata sin el badajo.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "canario_mecanico_lampara_gnoma",
+      "name": "Canario mecánico en lámpara gnoma",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un canario mecánico que está dentro de una lámpara gnoma.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "cofre_muchos_pies",
+      "name": "Cofre con muchos pies tallados",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un pequeño cofre tallado para que parezca que tiene muchos pies en la base.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "duendecillo_muerto_botella",
+      "name": "Duendecillo muerto en botella",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un duendecillo muerto dentro de una botella de cristal.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "lata_misteriosa",
+      "name": "Lata de metal misteriosa",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Una lata de metal que no tiene por dónde abrirse pero que suena como si estuviera llena de líquido, arena, arañas o cristales rotos (a tu elección).",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "orbe_cristal_pez_mecanico",
+      "name": "Orbe de cristal con pez mecánico",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un orbe de cristal lleno de agua en el que nada un pez mecánico.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "cuchara_plata_m",
+      "name": "Cuchara de plata con \"M\" grabada",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Una cuchara de plata con una \"M\" grabada en el mango.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "silbato_madera_dorada",
+      "name": "Silbato de madera dorada",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un silbato hecho de madera de color dorado.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "escarabajo_muerto_grande",
+      "name": "Escarabajo muerto del tamaño de tu mano",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un escarabajo muerto del tamaño de tu mano.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "soldados_juguete_sin_cabeza",
+      "name": "Soldados de juguete, uno sin cabeza",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Dos soldados de juguete, a uno de los cuales le falta la cabeza.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "invitacion_fiesta_asesinato",
+      "name": "Invitación a fiesta con asesinato",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Una invitación a una fiesta en la que se produjo un asesinato.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "caja_botones",
+      "name": "Caja con botones de diferentes tamaños",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Una pequeña caja llena de botones de diferentes tamaños.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "pentaculo_rata_cabeza",
+      "name": "Pentáculo de bronce con cabeza de rata",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un pentáculo de bronce con la cabeza de una rata grabada en el centro.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "vela_que_no_enciende",
+      "name": "Vela que no se puede encender",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Una vela que no se puede encender.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "jaula_minusc_sin_puerta",
+      "name": "Jaula minúscula sin puerta",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Una jaula minúscula sin puerta.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "panuelo_purpura_archimago",
+      "name": "Pañuelo púrpura del archimago",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un pañuelo púrpura bordado con el nombre de un poderoso archimago.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "llave_vieja",
+      "name": "Llave vieja",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Una llave vieja.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "plano_mitad_templo",
+      "name": "Mitad de plano de templo o castillo",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "La mitad del plano de un templo, castillo u otra estructura similar.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "mapa_tesoro_indescifrable",
+      "name": "Mapa del tesoro indescifrable",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un mapa del tesoro indescifrable.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "empuñadura_espada_rota",
+      "name": "Empuñadura de espada rota",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "La empuñadura de una espada rota.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "trozo_tela_gorro_distinguido",
+      "name": "Trozo de tela que se convierte en gorro distinguido",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un trozo de tela doblado que, al desplegarse, se convierte en un distinguido gorro.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "pata_conejo",
+      "name": "Pata de conejo",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Una pata de conejo.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "recibo_banco_remoto",
+      "name": "Recibo de banco de ciudad remota",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un recibo de un depósito hecho en un banco de una ciudad remota.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "ojo_vidrio",
+      "name": "Ojo de vidrio",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un ojo de vidrio.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "camafeo_rostro_horroroso",
+      "name": "Camafeo con efigie horrorosa",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un camafeo tallado con la efigie de una persona horrorosa.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "diario_faltan_paginas",
+      "name": "Diario al que le faltan páginas",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un diario al que le faltan siete páginas.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "calavera_plata_moneda",
+      "name": "Calavera de plata del tamaño de una moneda",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Una calavera de plata del tamaño de una moneda.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "petaca_suenos",
+      "name": "Petaca de plata \"sueños\"",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Una petaca para tabaco vacía hecha de plata, con una inscripción que reza \"sueños\".",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "mascara_alabastro",
+      "name": "Máscara de alabastro",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Una máscara de alabastro.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "piramide_incienso_negro",
+      "name": "Pirámide de incienso negro",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Una pirámide de incienso negro pegajoso y que huele muy mal.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "incienso",
+      "name": "Barrita de incienso",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Una barrita de incienso con aroma agradable.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "simbolo_sagrado_hierro_desconocido",
+      "name": "Símbolo sagrado de hierro desconocido",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un símbolo sagrado de hierro dedicado a un dios desconocido.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "gorro_dormir_suenos_agradables",
+      "name": "Gorro de dormir de sueños agradables",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un gorro de dormir que, cuando lo llevas puesto, te produce sueños agradables.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "libro_heroe_sin_final",
+      "name": "Libro de héroe sin último capítulo",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un libro que cuenta la historia del ascenso y caída de un héroe legendario, pero al que le falta el último capítulo.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "abrojo_hueso_unico",
+      "name": "Abrojo de hueso único",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un único abrojo hecho de hueso.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "vial_sangre_dragon",
+      "name": "Vial de sangre de dragón",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un vial de sangre de dragón.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "montura_monoculo_oro",
+      "name": "Montura de monóculo de oro sin lente",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Una montura de monóculo de oro, sin la lente.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "flecha_elfica_antigua",
+      "name": "Flecha élfica antigua",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Una antigua flecha de diseño élfico.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "cubo_pulgada_colores",
+      "name": "Cubo de una pulgada multicolor",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un cubo de una pulgada, con cada lado pintado de un color distinto.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "aguja_que_no_se_dobla",
+      "name": "Aguja que nunca se dobla",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Una aguja que nunca se dobla.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "broche_diseno_enano",
+      "name": "Broche de diseño enano",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un ornamentado broche de diseño enano.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "pomo_cristal",
+      "name": "Pomo de cristal",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un pomo hecho de cristal.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "botella_vino_mago_vinos",
+      "name": "Botella de vino \"Mago de los Vinos\" vacía",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Una botella de vino vacía con una etiqueta bonita que dice: \"Bodega el Mago de los Vinos, Cosecha del Dragón Rojo, 331422-W\".",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "fragmento_cancion_pergamino",
+      "name": "Fragmento de canción en pergamino",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un fragmento de una canción hermosa, escrito en forma de notas musicales en dos trozos de pergamino.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "loseta_mosaico_vidriada",
+      "name": "Loseta de mosaico vidriada multicolor",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Una loseta de un mosaico cuya superficie es vidriada y multicolor.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "pendiente_lagrima_plata",
+      "name": "Pendiente de plata en forma de lágrima",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un pendiente de plata con forma de lágrima hecho a partir de una lágrima de verdad.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "raton_petrificado",
+      "name": "Ratón petrificado",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un ratón petrificado.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "cascaron_huevo_miseria",
+      "name": "Cáscara de huevo con escenas de miseria",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Una cáscara de huevo pintada con escenas de miseria humana en perverso detalle.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "bandera_pirata_dragon",
+      "name": "Bandera pirata con cráneo de dragón",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Una bandera pirata negra adornada con el cráneo de un dragón y dos tibias.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "abanico_gato_durmiendo",
+      "name": "Abanico con gato durmiendo",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un abanico que, extendido, muestra un gato durmiendo.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "cangrejo_araña_mecanico",
+      "name": "Cangrejo o araña mecánico diminuto",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un diminuto cangrejo o araña mecánico que se mueve cuando no está siendo observado.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "juego_pipas_hueso",
+      "name": "Juego de pipas de hueso",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un juego de pipas de hueso.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "trebol_cuatro_hojas_libro",
+      "name": "Trébol de cuatro hojas en libro",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un trébol de cuatro hojas prensado en el interior de un libro que habla de modales y etiqueta.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "jarra_grasa_grifo",
+      "name": "Jarra de \"Grasa de Grifo\"",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Una jarra de cristal llena de manteca cuya etiqueta reza: \"Grasa de Grifo\".",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "pergamino_artefacto_mecanico",
+      "name": "Pergamino con artilugio mecánico",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Un pergamino sobre el que se encuentra dibujado un complejo artilugio mecánico.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "caja_madera_gusano_doble",
+      "name": "Caja con gusano de dos cabezas",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Una caja de madera con el fondo hecho de cerámica que contiene un gusano vivo con una cabeza en cada extremo de su cuerpo.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "vaina_ornamentada_sin_arma",
+      "name": "Vaina ornamentada sin arma adecuada",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Una ornamentada vaina que no encaja con ningún arma que hayas encontrado aún.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "vestiduras",
+      "name": "Vestiduras",
+      "category": "recurso",
+      "subcategory": "recurso",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Atuendo típico de un monje para protegerse del frío y el viento. Atuendo típico de un monje para protegerse del frío y el viento.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "urna_cenizas_heroe",
+      "name": "Urna con cenizas de un héroe",
+      "category": "bagatela",
+      "subcategory": "bagatela",
+      "weight": 0,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Una urna de metal que alberga las cenizas de un héroe.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "arpa",
+      "name": "Arpa",
+      "category": "instrumento",
+      "subcategory": "recurso",
+      "weight": 3,
+      "rarity": null,
+      "price": null,
+      "range": null,
+      "description": "Instrumento musical de cuerdas que se toca con los dedos. Produce sonidos etéreos y melódicos, perfecto para música celestial y encantadora.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "laud",
+      "name": "Laúd",
+      "category": "instrumento",
+      "subcategory": "recurso",
+      "weight": 2,
+      "rarity": null,
+      "price": {
+        "amount": 35,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Instrumento musical de cuerdas con un cuerpo redondeado. Es uno de los instrumentos más populares entre los bardos y músicos viajeros.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "lira",
+      "name": "Lira",
+      "category": "instrumento",
+      "subcategory": "recurso",
+      "weight": 2,
+      "rarity": null,
+      "price": {
+        "amount": 3,
+        "currency": "ppt"
+      },
+      "range": null,
+      "description": "Instrumento musical de cuerdas pequeño y portátil. Fácil de transportar y tocar, popular entre los bardos nómadas.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "cuerno",
+      "name": "Cuerno",
+      "category": "instrumento",
+      "subcategory": "recurso",
+      "weight": 2,
+      "rarity": null,
+      "price": {
+        "amount": 3,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Instrumento musical de viento hecho de cuerno de animal o metal. Produce sonidos potentes y resonantes, usado para señales y música de batalla.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "flauta",
+      "name": "Flauta",
+      "category": "instrumento",
+      "subcategory": "recurso",
+      "weight": 1,
+      "rarity": null,
+      "price": {
+        "amount": 2,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Instrumento musical de viento pequeño y portátil. Produce melodías dulces y agradables, fácil de aprender y tocar.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "flauta_pan",
+      "name": "Flauta de pan",
+      "category": "instrumento",
+      "subcategory": "recurso",
+      "weight": 2,
+      "rarity": null,
+      "price": {
+        "amount": 12,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Instrumento musical de viento compuesto por una serie de tubos. Produce un sonido suave y melódico, típico de la música pastoral.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "gaita",
+      "name": "Gaita",
+      "category": "instrumento",
+      "subcategory": "recurso",
+      "weight": 6,
+      "rarity": null,
+      "price": {
+        "amount": 3,
+        "currency": "ppt"
+      },
+      "range": null,
+      "description": "Instrumento musical de viento con una bolsa de aire y varios tubos. Produce un sonido potente y continuo, ideal para marchas y música de guerra.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "dulcimer",
+      "name": "Dulcémele",
+      "category": "instrumento",
+      "subcategory": "recurso",
+      "weight": 10,
+      "rarity": null,
+      "price": {
+        "amount": 25,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Instrumento musical de cuerdas que se toca con mazos pequeños. Produce sonidos dulces y resonantes.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "shawm",
+      "name": "Chirimía",
+      "category": "instrumento",
+      "subcategory": "recurso",
+      "weight": 1,
+      "rarity": null,
+      "price": {
+        "amount": 2,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Instrumento musical de viento similar a un oboe. Produce sonidos fuertes y penetrantes, usado en música al aire libre.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "tambor",
+      "name": "Tambor",
+      "category": "instrumento",
+      "subcategory": "recurso",
+      "weight": 3,
+      "rarity": null,
+      "price": {
+        "amount": 6,
+        "currency": "po"
+      },
+      "range": null,
+      "description": "Instrumento musical de percusión que produce ritmos marcados. Esencial para música de batalla y celebraciones.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "viola",
+      "name": "Viola",
+      "category": "instrumento",
+      "subcategory": "recurso",
+      "weight": 1,
+      "rarity": null,
+      "price": {
+        "amount": 3,
+        "currency": "ppt"
+      },
+      "range": null,
+      "description": "Instrumento musical de cuerdas frotadas similar al violín pero de tono más grave, usado tanto en música de cámara como en interpretaciones solistas.",
+      "damage": null,
+      "conditions": null,
+      "source": "Manual del Jugador"
+    }
+  ]
+}

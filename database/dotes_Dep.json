@@ -1,0 +1,185 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "lastUpdated": "2024-12-19",
+    "description": "Base de datos de dotes para D&D 5e - Manual del Jugador (2018)",
+    "totalDotes": 7
+  },
+  "dotes": [
+    {
+      "id": "tirador_experto",
+      "name": "Tirador Experto",
+      "prerequisitos": [
+        {
+          "tipo": "caracteristica",
+          "caracteristica": "destreza",
+          "valor": 13,
+          "operador": ">="
+        }
+      ],
+      "description": "Ignoras la cobertura parcial y tres cuartos de cobertura cuando haces un ataque a distancia. No tienes desventaja en ataques a distancia cuando estás dentro de 5 pies de un enemigo hostil. Cuando haces un ataque a distancia contra un objetivo que está dentro del alcance normal, tu alcance largo no impone desventaja en la tirada de ataque.",
+      "beneficios": [
+        "Ignoras la cobertura parcial y tres cuartos de cobertura cuando haces un ataque a distancia",
+        "No tienes desventaja en ataques a distancia cuando estás dentro de 5 pies de un enemigo hostil",
+        "Cuando haces un ataque a distancia contra un objetivo que está dentro del alcance normal, tu alcance largo no impone desventaja en la tirada de ataque"
+      ],
+      "efectos": {},
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "guerrero_duro",
+      "name": "Guerrero Duro",
+      "prerequisitos": [
+        {
+          "tipo": "caracteristica",
+          "caracteristica": "constitucion",
+          "valor": 13,
+          "operador": ">="
+        }
+      ],
+      "description": "Tu máximo de puntos de golpe aumenta en 1 y aumenta en 1 cada vez que subes de nivel. Cuando estés a 0 puntos de golpe pero no estés muerto, puedes usar tu reacción para caer a 1 punto de golpe en su lugar.",
+      "beneficios": [
+        "Tu máximo de puntos de golpe aumenta en 1 y aumenta en 1 cada vez que subes de nivel",
+        "Cuando estés a 0 puntos de golpe pero no estés muerto, puedes usar tu reacción para caer a 1 punto de golpe en su lugar"
+      ],
+      "efectos": {
+        "modificadores": {
+          "hp_por_nivel": 1
+        }
+      },
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "luchador",
+      "name": "Luchador",
+      "prerequisitos": [
+        {
+          "tipo": "caracteristica",
+          "caracteristica": "fuerza",
+          "valor": 13,
+          "operador": ">="
+        }
+      ],
+      "description": "Ganas +1 a tu puntuación de Fuerza, hasta un máximo de 20. Aprendes a luchar con armas improvisadas y armas no letales. Cuando haces un ataque con un arma improvisada o no letal, puedes usar tu modificador de Fuerza en lugar del modificador normal para la tirada de ataque y daño.",
+      "beneficios": [
+        "Ganas +1 a tu puntuación de Fuerza, hasta un máximo de 20",
+        "Aprendes a luchar con armas improvisadas y armas no letales",
+        "Cuando haces un ataque con un arma improvisada o no letal, puedes usar tu modificador de Fuerza en lugar del modificador normal para la tirada de ataque y daño"
+      ],
+      "efectos": {
+        "caracteristicas": {
+          "fuerza": 1
+        }
+      },
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "observador",
+      "name": "Observador",
+      "prerequisitos": [
+        {
+          "tipo": "caracteristica",
+          "caracteristica": "sabiduria",
+          "valor": 13,
+          "operador": ">="
+        }
+      ],
+      "description": "Ganas +1 a tu puntuación de Sabiduría, hasta un máximo de 20. Si puedes ver la boca de una criatura que habla un idioma que conoces, puedes interpretar lo que dice leyendo sus labios. Tienes un +5 de bonificador a tu puntuación pasiva de Percepción e Investigación.",
+      "beneficios": [
+        "Ganas +1 a tu puntuación de Sabiduría, hasta un máximo de 20",
+        "Si puedes ver la boca de una criatura que habla un idioma que conoces, puedes interpretar lo que dice leyendo sus labios",
+        "Tienes un +5 de bonificador a tu puntuación pasiva de Percepción e Investigación"
+      ],
+      "efectos": {
+        "caracteristicas": {
+          "sabiduria": 1
+        },
+        "modificadores": {
+          "percepcion_pasiva": 5,
+          "investigacion_pasiva": 5
+        }
+      },
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "magico_iniciado",
+      "name": "Mágico Iniciado",
+      "prerequisitos": [
+        {
+          "tipo": "caracteristica",
+          "caracteristica": "inteligencia",
+          "valor": 13,
+          "operador": ">="
+        }
+      ],
+      "description": "Aprendes dos trucos de una lista de conjuros de una clase de tu elección. Aprendes un conjuro de nivel 1 de esa misma lista. Puedes lanzar ese conjuro una vez sin gastar un espacio de conjuro.",
+      "beneficios": [
+        "Aprendes dos trucos de una lista de conjuros de una clase de tu elección",
+        "Aprendes un conjuro de nivel 1 de esa misma lista",
+        "Puedes lanzar ese conjuro una vez sin gastar un espacio de conjuro"
+      ],
+      "efectos": {
+        "conjuros": {
+          "trucos": 2,
+          "nivel1": 1,
+          "clase": "selector"
+        }
+      },
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "movimiento_rapido",
+      "name": "Movimiento Rápido",
+      "prerequisitos": [
+        {
+          "tipo": "caracteristica",
+          "caracteristica": "destreza",
+          "valor": 13,
+          "operador": ">="
+        }
+      ],
+      "description": "Tu velocidad de movimiento aumenta en 10 pies. No tienes desventaja en tiradas de sigilo cuando te mueves a tu velocidad completa.",
+      "beneficios": [
+        "Tu velocidad de movimiento aumenta en 10 pies",
+        "No tienes desventaja en tiradas de sigilo cuando te mueves a tu velocidad completa"
+      ],
+      "efectos": {
+        "modificadores": {
+          "movimiento": "+10"
+        }
+      },
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "linguista",
+      "name": "Lingüista",
+      "prerequisitos": [
+        {
+          "tipo": "caracteristica",
+          "caracteristica": "inteligencia",
+          "valor": 13,
+          "operador": ">="
+        }
+      ],
+      "description": "Ganas +1 a tu puntuación de Inteligencia, hasta un máximo de 20. Aprendes tres idiomas de tu elección. También puedes crear mensajes codificados. Tú y cualquier criatura que conozca al menos un idioma en común pueden entender estos mensajes.",
+      "beneficios": [
+        "Ganas +1 a tu puntuación de Inteligencia, hasta un máximo de 20",
+        "Aprendes tres idiomas de tu elección",
+        "Puedes crear mensajes codificados que solo pueden entender criaturas que conozcan al menos un idioma en común contigo"
+      ],
+      "efectos": {
+        "caracteristicas": {
+          "inteligencia": 1
+        },
+        "competencias": {
+          "idiomas": {
+            "cantidad": 3,
+            "fuente": "competencias.Languages",
+            "selectMulti": true
+          }
+        }
+      },
+      "fuente": "Manual del Jugador"
+    }
+  ]
+}

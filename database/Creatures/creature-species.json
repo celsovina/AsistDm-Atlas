@@ -1,0 +1,361 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "lastUpdated": "2025-01-XX",
+    "description": "Especies base de criaturas - Grupos que comparten características comunes dentro de un tipo",
+    "totalSpecies": 21
+  },
+  "species": [
+    {
+      "id": "razas_jugables",
+      "name": "Humanoide",
+      "typeId": "humanoid",
+      "description": "Humanoides que corresponden a las razas jugables del juego: elfos (incl. drow), enanos, humanos, dracónidos, aarakocra, gnomos, medianos, etc. Usar esta especie cuando la criatura sea una raza del Manual del Jugador u otras fuentes de razas jugables.",
+      "commonTraits": [],
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "goblinoid",
+      "name": "Trasgo",
+      "typeId": "humanoid",
+      "description": "Los trasgos son humanoides pequeños y agresivos que incluyen goblins, hobgoblins, bugbears y orcos. Comparten características comunes como visión en la oscuridad y una naturaleza agresiva.",
+      "commonTraits": [
+        {
+          "id": "goblinoid_darkvision",
+          "name": "Visión en la Oscuridad",
+          "description": "Todos los trasgos tienen visión en la oscuridad de 60 pies."
+        }
+      ],
+      "source": "Manual de Monstruos"
+    },
+    {
+      "id": "gith",
+      "name": "Gith",
+      "typeId": "humanoid",
+      "description": "Los gith son humanoides que escaparon de la esclavitud de los mind flayers. Incluyen githyanki y githzerai, que comparten una herencia común pero han desarrollado culturas diferentes.",
+      "commonTraits": [
+        {
+          "id": "gith_psionics",
+          "name": "Psiónica Gith",
+          "description": "Todos los gith tienen habilidades psiónicas innatas."
+        }
+      ],
+      "source": "Manual de Monstruos"
+    },
+    {
+      "id": "yugoloth",
+      "name": "Yugoloth",
+      "typeId": "fiend",
+      "description": "Los yugoloths son demonios neutrales que habitan en los Planos Inferiores. Son mercenarios que venden sus servicios al mejor postor. Incluyen arcanaloths, mezzoloths, nycaloths y ultroloths.",
+      "commonTraits": [
+        {
+          "id": "yugoloth_immunity",
+          "name": "Inmunidades Yugoloth",
+          "description": "Todos los yugoloths son inmunes al fuego y al veneno, y no pueden ser envenenados."
+        },
+        {
+          "id": "yugoloth_telepathy",
+          "name": "Telepatía Yugoloth",
+          "description": "Todos los yugoloths pueden comunicarse telepáticamente."
+        }
+      ],
+      "commonImmunities": ["fire", "poison"],
+      "commonConditionImmunities": ["poisoned"],
+      "source": "Manual de Monstruos"
+    },
+    {
+      "id": "demon",
+      "name": "Demonio",
+      "typeId": "fiend",
+      "description": "Los demonios son criaturas caóticas y malvadas nativas del Abismo. Son conocidos por su naturaleza destructiva y su deseo de corromper y destruir.",
+      "commonTraits": [
+        {
+          "id": "demon_immunity",
+          "name": "Inmunidades Demoníacas",
+          "description": "Todos los demonios son inmunes al fuego y al veneno, y no pueden ser envenenados."
+        }
+      ],
+      "commonImmunities": ["fire", "poison"],
+      "commonConditionImmunities": ["poisoned"],
+      "source": "Manual de Monstruos"
+    },
+    {
+      "id": "devil",
+      "name": "Diablo",
+      "typeId": "fiend",
+      "description": "Los diablos son criaturas legales y malvadas nativas de los Nueve Infiernos. Son conocidos por su naturaleza organizada y su deseo de hacer pactos y corromper a los mortales.",
+      "commonTraits": [
+        {
+          "id": "devil_immunity",
+          "name": "Inmunidades Diabólicas",
+          "description": "Todos los diablos son inmunes al fuego y al veneno, y no pueden ser envenenados."
+        },
+        {
+          "id": "devil_resistance",
+          "name": "Resistencias Diabólicas",
+          "description": "Todos los diablos tienen resistencia al daño frío y al daño no mágico que no provenga de armas de plata."
+        }
+      ],
+      "commonImmunities": ["fire", "poison"],
+      "commonConditionImmunities": ["poisoned"],
+      "commonResistances": ["cold"],
+      "source": "Manual de Monstruos"
+    },
+    {
+      "id": "genie",
+      "name": "Genio",
+      "typeId": "elemental",
+      "description": "Los genios son elementales poderosos que habitan en los Planos Elementales. Incluyen djinn (aire), efreet (fuego), marids (agua) y dao (tierra).",
+      "commonTraits": [
+        {
+          "id": "genie_elemental_resistance",
+          "name": "Resistencia Elemental",
+          "description": "Todos los genios tienen resistencia al daño de su elemento asociado."
+        }
+      ],
+      "source": "Manual de Monstruos"
+    },
+    {
+      "id": "yuan_ti",
+      "name": "Yuan-ti",
+      "typeId": "monstrosity",
+      "description": "Los yuan-ti son humanoides serpiente que fueron creados mediante magia oscura. Incluyen varias variantes desde humanoides con rasgos de serpiente hasta serpientes gigantes con brazos.",
+      "commonTraits": [
+        {
+          "id": "yuan_ti_immunity",
+          "name": "Inmunidad al Veneno",
+          "description": "Todos los yuan-ti son inmunes al daño de veneno y no pueden ser envenenados."
+        },
+        {
+          "id": "yuan_ti_magic_resistance",
+          "name": "Resistencia Mágica",
+          "description": "Todos los yuan-ti tienen ventaja en tiradas de salvación contra magia."
+        }
+      ],
+      "commonImmunities": ["poison"],
+      "commonConditionImmunities": ["poisoned"],
+      "source": "Manual de Monstruos"
+    },
+    {
+      "id": "shapeshifter",
+      "name": "Cambiaformas",
+      "typeId": "humanoid",
+      "description": "Los cambiaformas son criaturas que pueden alterar su forma física. Incluyen doppelgangers, kitsune y otras criaturas con habilidades de cambio de forma.",
+      "commonTraits": [
+        {
+          "id": "shapeshifter_ability",
+          "name": "Cambio de Forma",
+          "description": "Todos los cambiaformas pueden cambiar su apariencia física."
+        }
+      ],
+      "source": "Manual de Monstruos"
+    },
+    {
+      "id": "titan",
+      "name": "Titán",
+      "typeId": "celestial",
+      "description": "Los titanes son criaturas celestiales inmensamente poderosas que sirven a las deidades. Son conocidos por su tamaño colosal y su poder divino.",
+      "commonTraits": [
+        {
+          "id": "titan_divine_power",
+          "name": "Poder Divino",
+          "description": "Todos los titanes tienen acceso a poderes divinos y magia."
+        }
+      ],
+      "source": "Manual de Monstruos"
+    },
+    {
+      "id": "bullywug",
+      "name": "Bullywug",
+      "typeId": "humanoid",
+      "description": "Los bullywugs son humanoides anfibios que habitan en pantanos y marismas. Son criaturas agresivas y territoriales.",
+      "commonTraits": [
+        {
+          "id": "bullywug_amphibious",
+          "name": "Anfibio",
+          "description": "Todos los bullywugs pueden respirar aire y agua."
+        },
+        {
+          "id": "bullywug_swamp_camouflage",
+          "name": "Camuflaje de Pantano",
+          "description": "Los bullywugs tienen ventaja en tiradas de Sigilo realizadas en terrenos pantanosos."
+        }
+      ],
+      "source": "Manual de Monstruos"
+    },
+    {
+      "id": "kenku",
+      "name": "Kenku",
+      "typeId": "humanoid",
+      "description": "Los kenku son humanoides con forma de cuervo que perdieron su capacidad de volar y su voz. Son conocidos por su habilidad de imitar sonidos.",
+      "commonTraits": [
+        {
+          "id": "kenku_mimicry",
+          "name": "Mimetismo",
+          "description": "Los kenku pueden imitar cualquier sonido que hayan escuchado."
+        }
+      ],
+      "source": "Manual de Monstruos"
+    },
+    {
+      "id": "kobold",
+      "name": "Kobold",
+      "typeId": "humanoid",
+      "description": "Los kobolds son humanoides pequeños y reptilianos que viven en túneles y cuevas. Son conocidos por su naturaleza cobarde pero astuta.",
+      "commonTraits": [
+        {
+          "id": "kobold_sunlight_sensitivity",
+          "name": "Sensibilidad a la Luz Solar",
+          "description": "Los kobolds tienen desventaja en tiradas de ataque y en tiradas de Sabiduría (Percepción) que dependan de la vista cuando están expuestos a la luz solar."
+        },
+        {
+          "id": "kobold_pack_tactics",
+          "name": "Tácticas de Manada",
+          "description": "Los kobolds tienen ventaja en tiradas de ataque contra una criatura si al menos uno de sus aliados está a 5 pies de la criatura y no está incapacitado."
+        }
+      ],
+      "source": "Manual de Monstruos"
+    },
+    {
+      "id": "kuo_toa",
+      "name": "Kuo-toa",
+      "typeId": "humanoid",
+      "description": "Los kuo-toa son humanoides anfibios que habitan en las profundidades del Underdark. Son conocidos por su adoración de deidades extrañas y su capacidad para crear dioses a través de su fe colectiva.",
+      "commonTraits": [
+        {
+          "id": "kuo_toa_amphibious",
+          "name": "Anfibio",
+          "description": "Los kuo-toa pueden respirar aire y agua."
+        },
+        {
+          "id": "kuo_toa_otherworldly_perception",
+          "name": "Percepción de Otro Mundo",
+          "description": "Los kuo-toa pueden percibir criaturas invisibles y etéreas."
+        }
+      ],
+      "source": "Manual de Monstruos"
+    },
+    {
+      "id": "lizardfolk",
+      "name": "Hombre Lagarto",
+      "typeId": "humanoid",
+      "description": "Los hombres lagarto son humanoides reptilianos que habitan en pantanos y junglas. Son conocidos por su naturaleza primitiva y su capacidad de adaptación.",
+      "commonTraits": [
+        {
+          "id": "lizardfolk_hold_breath",
+          "name": "Aguantar la Respiración",
+          "description": "Los hombres lagarto pueden aguantar la respiración hasta 15 minutos."
+        },
+        {
+          "id": "lizardfolk_hungry_jaws",
+          "name": "Mandíbulas Hambrientas",
+          "description": "Los hombres lagarto pueden usar sus mandíbulas como arma natural."
+        }
+      ],
+      "source": "Manual de Monstruos"
+    },
+    {
+      "id": "quaggoth",
+      "name": "Quaggoth",
+      "typeId": "humanoid",
+      "description": "Los quaggoths son humanoides peludos que habitan en el Underdark. Son criaturas primitivas y agresivas que se vuelven más peligrosas cuando están enojadas.",
+      "commonTraits": [
+        {
+          "id": "quaggoth_wounded_fury",
+          "name": "Furia Herida",
+          "description": "Los quaggoths tienen ventaja en tiradas de ataque cuando tienen menos de la mitad de sus puntos de golpe."
+        }
+      ],
+      "source": "Manual de Monstruos"
+    },
+    {
+      "id": "sahuagin",
+      "name": "Sahuagin",
+      "typeId": "humanoid",
+      "description": "Los sahuagin son humanoides depredadores que habitan en las profundidades del océano. Son conocidos por su naturaleza agresiva y su organización tribal.",
+      "commonTraits": [
+        {
+          "id": "sahuagin_blood_frenzy",
+          "name": "Frenesí de Sangre",
+          "description": "Los sahuagin tienen ventaja en tiradas de ataque contra criaturas que no tienen todos sus puntos de golpe."
+        },
+        {
+          "id": "sahuagin_limited_amphibiousness",
+          "name": "Anfibio Limitado",
+          "description": "Los sahuagin pueden respirar aire y agua, pero necesitan sumergirse al menos una vez cada 4 horas para evitar asfixiarse."
+        }
+      ],
+      "source": "Manual de Monstruos"
+    },
+    {
+      "id": "siren",
+      "name": "Sirenido",
+      "typeId": "monstrosity",
+      "description": "Los sirenidos son criaturas con forma de ave que tienen la capacidad de hipnotizar a sus víctimas con su canto. Son conocidos por atraer a los marineros hacia su perdición.",
+      "commonTraits": [
+        {
+          "id": "siren_luring_song",
+          "name": "Canto Seductor",
+          "description": "Los sirenidos pueden usar su canto para hipnotizar a las criaturas."
+        }
+      ],
+      "source": "Manual de Monstruos"
+    },
+    {
+      "id": "thri_kreen",
+      "name": "Thri-kreen",
+      "typeId": "humanoid",
+      "description": "Los thri-kreen son humanoides insectoides que habitan en desiertos y praderas. Son conocidos por su naturaleza nómada y su capacidad de comunicarse telepáticamente.",
+      "commonTraits": [
+        {
+          "id": "thri_kreen_telepathy",
+          "name": "Telepatía",
+          "description": "Los thri-kreen pueden comunicarse telepáticamente con otras criaturas."
+        }
+      ],
+      "source": "Manual de Monstruos"
+    },
+    {
+      "id": "troglodyte",
+      "name": "Troglodita",
+      "typeId": "humanoid",
+      "description": "Los trogloditas son humanoides reptilianos que habitan en cuevas y túneles del Underdark. Son conocidos por su olor fétido y su naturaleza caníbal.",
+      "commonTraits": [
+        {
+          "id": "troglodyte_stench",
+          "name": "Hedor",
+          "description": "Los trogloditas emiten un olor fétido que puede nauseabundo para otras criaturas."
+        },
+        {
+          "id": "troglodyte_sunlight_sensitivity",
+          "name": "Sensibilidad a la Luz Solar",
+          "description": "Los trogloditas tienen desventaja en tiradas de ataque cuando están expuestos a la luz solar."
+        }
+      ],
+      "source": "Manual de Monstruos"
+    },
+    {
+      "id": "gnoll",
+      "name": "Gnoll",
+      "typeId": "humanoid",
+      "description": "Los gnolls son humanoides híbridos de hiena y humanoide que son conocidos por su naturaleza caníbal y su adoración de demonios. Son criaturas caóticas y malvadas.",
+      "commonTraits": [
+        {
+          "id": "gnoll_rampage",
+          "name": "Alboroto",
+          "description": "Cuando un gnoll reduce a 0 los puntos de golpe de una criatura con un ataque cuerpo a cuerpo, puede realizar una acción adicional para moverse hasta la mitad de su velocidad y hacer un ataque con mordisco."
+        }
+      ],
+      "source": "Manual de Monstruos"
+    },    
+    {
+      "id": "construct",
+      "name": "Constructo",
+      "typeId": "construct",
+      "description": "Los constructos son criaturas artificiales creadas mediante magia. Incluyen golems, autómatas y otras criaturas animadas. Son inmunes a muchos efectos que afectan a criaturas vivas.",
+      "commonTraits": [],
+      "source": "Manual de Monstruos"
+    }
+  ]
+}
+

@@ -1,0 +1,193 @@
+/* Atlas — catálogo / detalle
+ * Estilos calcados del modal de conjuros (create-character / set-spells / spellbook)
+ */
+
+.spells-search-input {
+  background: #1a202c;
+  border: 1px solid #4a5568;
+  border-radius: 6px;
+  color: #e2e8f0;
+  padding: 10px 12px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.spells-search-input::placeholder {
+  color: #718096;
+}
+
+.spells-search-input:focus {
+  border-color: #4299e1;
+}
+
+.description-box {
+  background: #1a202c;
+  border: 1px solid #4a5568;
+  border-radius: 6px;
+  padding: 8px;
+  overflow-y: auto;
+  font-size: 13px;
+  line-height: 1.4;
+  scrollbar-width: thin;
+  scrollbar-color: #4a5568 #1a202c;
+  flex: 1;
+  min-height: 0;
+}
+
+.description-box::-webkit-scrollbar {
+  width: 6px;
+}
+
+.description-box::-webkit-scrollbar-track {
+  background: #1a202c;
+  border-radius: 3px;
+}
+
+.description-box::-webkit-scrollbar-thumb {
+  background: #4a5568;
+  border-radius: 3px;
+}
+
+.description-box::-webkit-scrollbar-thumb:hover {
+  background: #5a6578;
+}
+
+.description-placeholder {
+  color: #a0aec0;
+  font-style: italic;
+  text-align: center;
+  padding: 20px;
+}
+
+.spells-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  overflow-y: auto;
+  padding: 0;
+}
+
+.spells-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 8px 0;
+  border: none;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: 0;
+  background: transparent;
+  color: #e2e8f0;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+  width: 100%;
+  text-align: left;
+  font-family: inherit;
+}
+
+.spells-list-item:hover {
+  background: rgba(46, 60, 82, 0.2);
+  border-bottom-color: rgba(59, 130, 246, 0.6);
+  transform: translateY(-0.5px);
+}
+
+.spells-list-item--selected {
+  background: rgba(59, 130, 246, 0.14);
+  border-bottom-color: rgba(59, 130, 246, 0.9);
+}
+
+.spells-list-item__name {
+  font-weight: 500;
+  flex: 1;
+  padding-left: 10px;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.spells-list-item__meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-right: 10px;
+  flex-shrink: 0;
+}
+
+.spells-badge {
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.12);
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  color: #94a3b8;
+  white-space: nowrap;
+}
+
+/* Detalle — mismo formato que SpellsKnownSelector / SpellbookModal */
+.spells-detail-content {
+  padding: 4px 6px 8px;
+}
+
+.spells-detail-content h4 {
+  color: #e2e8f0;
+  margin: 0 0 10px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.spells-detail-content ul {
+  list-style: none;
+  margin: 0 0 14px;
+  padding: 0;
+  display: grid;
+  gap: 4px;
+}
+
+.spells-detail-content li {
+  color: #cbd5e0;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.spells-detail-content li strong {
+  color: #a0aec0;
+  font-weight: 600;
+  margin-right: 4px;
+}
+
+.spells-description-content {
+  border-top: 1px solid #2d3748;
+  padding-top: 12px;
+}
+
+.spells-description-content p {
+  margin: 0;
+  color: #cbd5e0;
+  font-size: 13px;
+  line-height: 1.55;
+  white-space: pre-wrap;
+}
+
+.spells-description-content .spells-upcast {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid #2d3748;
+  color: #a0aec0;
+  font-size: 12px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.spells-description-content .spells-upcast strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #94a3b8;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}

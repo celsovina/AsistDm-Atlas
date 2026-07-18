@@ -1,0 +1,278 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "description": "Hoja de ruta: modelo unificado de ítems. Un ítem por tipo para cubrir todos los casos de modificación. Array 'damage' solo para efectos mecánicos; texto descriptivo en campo básico 'description'.",
+    "schema": "Campos básicos del ítem: id, name, category, subcategory, weight, price, rarity, description (opcional), range, damage (array), conditions, source. range: alcance en pies (armas); null si no aplica. damage: array de entradas con ESTRUCTURA ÚNICA. Cada entrada: stat (requerido), value (requerido, string|number|null si no aplica), y opcionales: mod, damageType, range, properties, versatile, statModifiers, params.",
+    "damageEntryStandard": "Toda entrada: stat (req), value (req, string|number|null), mod (req, string, '' si no aplica). Opcionales: damageType, range, properties, versatile, statModifiers, params. Sin campos propietarios; usar stats estándar (STH para sigilo, GRIM para grimorio).",
+    "stats": {
+      "DMG": "Daño. value, mod, damageType, range, versatile, properties, statModifiers.",
+      "CA": "Clase de armadura. value, mod.",
+      "MOV": "Movimiento. value, mod (''|flying|climbing|etc).",
+      "ATK": "Bonus a ataque (en statModifiers de DMG).",
+      "HP": "Modificar vida: curar o descontar. value = fórmula (ej. 2d4+2).",
+      "MCW": "Modificador de carga (en statModifiers).",
+      "STH": "Sigilo (stealth). value: 'minus' = desventaja en sigilo (nomenclatura ampliable).",
+      "GRIM": "Grimorio/libro de conjuros. value = máx. conjuros (ej. 20). params.allowsAnySpell opcional.",
+      "RemX": "Familia: quitar estado (AntiP, etc.).",
+      "AntiP": "Antitoxina. Quita estado veneno. value: null.",
+      "_AddX_reserva": "Aplicar estado. No implementado."
+    }
+  },
+  "items": [
+    {
+      "id": "daga",
+      "name": "Daga",
+      "category": "arma",
+      "subcategory": "arma_simple",
+      "weight": 1,
+      "rarity": null,
+      "price": { "amount": 2, "currency": "po" },
+      "range": "20/60",
+      "damage": [
+        {
+          "stat": "DMG",
+          "value": "1d4",
+          "mod": "ModFUE",
+          "damageType": "perforante",
+          "range": "20/60",
+          "properties": ["ligera", "fina", "municion"]
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "baston",
+      "name": "Bastón",
+      "category": "arma",
+      "subcategory": "arma_simple",
+      "weight": 4,
+      "rarity": null,
+      "price": { "amount": 0.2, "currency": "po" },
+      "range": "5",
+      "damage": [
+        {
+          "stat": "DMG",
+          "value": "1d6",
+          "mod": "ModFUE",
+          "damageType": "contundente",
+          "versatile": "1d8 + ModFUE",
+          "properties": ["versatil"]
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "arco_precision",
+      "name": "Arco de precisión +2",
+      "category": "arma",
+      "subcategory": "arma_marcial",
+      "weight": 2,
+      "rarity": "raro",
+      "price": null,
+      "range": "150/600",
+      "damage": [
+        {
+          "stat": "DMG",
+          "value": "1d8",
+          "mod": "ModDES",
+          "damageType": "perforante",
+          "range": "150/600",
+          "properties": ["dos_manos", "municion", "pesada"],
+          "statModifiers": { "ATK": "+2" }
+        }
+      ],
+      "conditions": null,
+      "source": "Personalizado"
+    },
+    {
+      "id": "armadura_cuero",
+      "name": "Armadura de cuero",
+      "category": "armadura",
+      "subcategory": "armadura_ligera",
+      "weight": 10,
+      "rarity": null,
+      "price": { "amount": 10, "currency": "po" },
+      "range": null,
+      "damage": [
+        {
+          "stat": "CA",
+          "value": "11",
+          "mod": "ModDES"
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "armadura_acolchada",
+      "name": "Armadura acolchada",
+      "category": "armadura",
+      "subcategory": "armadura_ligera",
+      "weight": 8,
+      "rarity": null,
+      "price": { "amount": 5, "currency": "po" },
+      "range": null,
+      "damage": [
+        {
+          "stat": "CA",
+          "value": "11",
+          "mod": "ModDES"
+        },
+        {
+          "stat": "STH",
+          "value": "minus",
+          "mod": ""
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "escudo",
+      "name": "Escudo",
+      "category": "armadura",
+      "subcategory": "escudo",
+      "weight": 6,
+      "rarity": null,
+      "price": { "amount": 10, "currency": "po" },
+      "range": null,
+      "damage": [
+        {
+          "stat": "CA",
+          "value": "+2",
+          "mod": ""
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "anillo_vuelo_velocidad",
+      "name": "Anillo de vuelo y velocidad",
+      "category": "objeto_magico",
+      "subcategory": "anillo",
+      "weight": 0,
+      "rarity": "muy_raro",
+      "price": null,
+      "range": null,
+      "description": "Concede velocidad de vuelo de 30 pies. Aumenta la velocidad de movimiento en 20 pies.",
+      "damage": [
+        {
+          "stat": "MOV",
+          "value": "+20",
+          "mod": ""
+        },
+        {
+          "stat": "MOV",
+          "value": "30",
+          "mod": "flying"
+        }
+      ],
+      "conditions": null,
+      "source": "Personalizado"
+    },
+    {
+      "id": "pocion_curacion",
+      "name": "Poción de curación",
+      "category": "objeto_magico",
+      "subcategory": "pocion",
+      "weight": 0.5,
+      "rarity": "comun",
+      "price": { "amount": 50, "currency": "po" },
+      "range": null,
+      "description": "Un personaje que beba el mágico fluido rojo de este vial recupera 2d4 + 2 puntos de golpe. Beber o administrar la poción requiere una acción.",
+      "damage": [
+        {
+          "stat": "HP",
+          "value": "2d4+2",
+          "mod": ""
+        }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "antitoxina",
+      "name": "Antitoxina (vial)",
+      "category": "equipo",
+      "subcategory": "pocion",
+      "weight": 0,
+      "rarity": null,
+      "price": { "amount": 50, "currency": "po" },
+      "range": null,
+      "description": "La criatura que beba el contenido de este vial obtiene ventaja en las tiradas de salvación contra veneno durante 1 hora. No tiene efecto sobre muertos vivientes ni constructos.",
+      "damage": [
+        { "stat": "AntiP", "value": null, "mod": "" }
+      ],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "grimorio",
+      "name": "Libro de conjuros",
+      "category": "objeto_magico",
+      "subcategory": "grimorio",
+      "weight": 1,
+      "rarity": "comun",
+      "price": null,
+      "range": null,
+      "description": "Libro arcano donde se pueden copiar y preparar conjuros de cualquier escuela o nivel. El lanzador solo puede usar los conjuros para los que tiene nivel de conjuro suficiente.",
+      "damage": [
+        {
+          "stat": "GRIM",
+          "value": "20",
+          "mod": "",
+          "params": { "allowsAnySpell": true }
+        }
+      ],
+      "conditions": null,
+      "source": ""
+    },
+    {
+      "id": "raciones",
+      "name": "Raciones (1 día)",
+      "category": "recurso",
+      "subcategory": "alimento",
+      "weight": 2,
+      "rarity": null,
+      "price": { "amount": 0.5, "currency": "po" },
+      "range": null,
+      "description": "Raciones compactas y secas que alimentan a una criatura durante 1 día. Incluyen carne salada, galletas, fruta deshidratada y frutos secos, pensadas para viajes largos.",
+      "damage": [],
+      "conditions": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "espada_sombra",
+      "name": "Espada corta de la sombra",
+      "category": "arma",
+      "subcategory": "arma_simple",
+      "weight": 2,
+      "rarity": "raro",
+      "price": null,
+      "range": "5",
+      "description": "Puede atacar desde las sombras con ventaja.",
+      "damage": [
+        {
+          "stat": "DMG",
+          "value": "1d6",
+          "mod": "ModFUE",
+          "damageType": "cortante",
+          "properties": ["ligera", "versatil"],
+          "versatile": "1d6 + ModFUE"
+        },
+        {
+          "stat": "DMG",
+          "value": "1d4",
+          "mod": "",
+          "damageType": "necrótico",
+          "properties": []
+        }
+      ],
+      "conditions": null,
+      "source": "Personalizado"
+    }
+  ]
+}

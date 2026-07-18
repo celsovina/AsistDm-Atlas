@@ -1,0 +1,2431 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "lastUpdated": "2024-12-19",
+    "description": "Base de datos de clases para D&D 5e - Manual del Jugador (2018)",
+    "totalClases": 7
+  },
+  "clases": [
+    {
+      "id": "explorador",
+      "name": "Explorador",
+      "description": "Los exploradores son cazadores y rastreadores que se especializan en sobrevivir en la naturaleza y combatir enemigos específicos. Son expertos en rastrear, acechar y eliminar amenazas.",
+      "hitDie": "d10",
+      "primaryAbility": "Destreza",
+      "spellcastingAbility": "Sabiduría",
+      "spellCasterType": "aprendidos",
+      "savingThrowProficiencies": [
+        "Fuerza",
+        "Destreza"
+      ],
+      "skillProficiencies": "Elige tres de: Animal Handling, Athletics, Insight, Investigation, Nature, Perception, Stealth, Survival",
+      "abilities": [
+        {
+          "quantity": 3,
+          "proficiencies": [
+            "trato_con_animales",
+            "atletismo",
+            "perspicacia",
+            "investigacion",
+            "naturaleza",
+            "percepcion",
+            "sigilo",
+            "supervivencia"
+          ]
+        }
+      ],
+      "proficiencies": {
+        "armas": [
+          "armas_simples",
+          "armas_marciales"
+        ],
+        "armaduras": [
+          "armadura_ligera",
+          "armadura_mediana",
+          "escudos"
+        ],
+        "herramientas": [
+          "herramientas_explorador"
+        ]
+      },
+      "startingMoney": {
+        "coin": "po",
+        "dice": { "count": 5, "sides": 4, "multiplier": 10 }
+      },
+      "features": [
+        {
+          "level": 1,
+          "id": "enemigo_predilecto",
+          "name": "Enemigo predilecto",
+          "description": "Desde el nivel 1, tienes una experiencia significativa estudiando, rastreando, cazando e incluso hablando con un cierto tipo de enemigo. Elige un tipo de enemigo predilecto: aberraciones, bestias, celestes, constructos, dragones, elementales, feéricos, infernales, gigantes, monstruos, no muertos. O elige dos razas de humanoides (como gnolls y orcos) como enemigos predilectos. Tienes ventaja en las tiradas de Sabiduría (Supervivencia) para rastrear tus enemigos predilectos, así como en las tiradas de Inteligencia para recordar información sobre ellos.",
+          "type": "pasivo",
+          "uses": null,
+          "canSelected": true,
+          "options": "Creatures",
+          "selectMulti": false
+        },
+        {
+          "level": 1,
+          "id": "explorador_nato",
+          "name": "Explorador nato",
+          "description": "Eres particularmente familiarizado con un tipo de entorno natural y eres adaptado para viajar y sobrevivir en tales regiones. Elige un tipo de terreno favorito: ártico, costa, desierto, bosque, pradera, montaña, pantano o el Inframundo. Cuando hagas una tirada de Inteligencia o Sabiduría relacionada con tu terreno favorito, tu bonificador de competencia se duplica si ya eres competente en la habilidad.",
+          "type": "pasivo",
+          "uses": null,
+          "canSelected": true,
+          "options": "Terrains",
+          "selectMulti": false
+        },
+        {
+          "level": 2,
+          "id": "estilo_de_combate",
+          "name": "Estilo de combate",
+          "description": "Adoptas un estilo particular de combate como tu especialidad. Elige una de las siguientes opciones: Arquero, Defensa, Duelista, Dos armas, Lucha, Tiro certero.",
+          "type": "pasivo",
+          "uses": null,
+          "canSelected": true,
+          "options": "combatStyles",
+          "selectMulti": false
+        },
+        {
+          "level": 6,
+          "id": "enemigo_predilecto",
+          "name": "Enemigo predilecto",
+          "description": "Ganas un enemigo predilecto adicional. Elige otro tipo de criatura (o dos humanoides). Se aplican los mismos beneficios de Enemigo Predilecto.",
+          "type": "pasivo",
+          "uses": null,
+          "canSelected": true,
+          "options": "Creatures",
+          "selectMulti": false
+        },
+        {
+          "level": 6,
+          "id": "explorador_nato",
+          "name": "Explorador nato",
+          "description": "Ganas un terreno favorito adicional. Elige un tipo de terreno adicional para tu Explorador Nato.",
+          "type": "pasivo",
+          "uses": null,
+          "canSelected": true,
+          "options": "Terrains",
+          "selectMulti": false
+        },
+        {
+          "level": 2,
+          "id": "lanzamiento_de_conjuros",
+          "name": "Lanzamiento de conjuros",
+          "description": "Has aprendido a usar la magia natural para ayudarte en tus aventuras. Tu tabla de conjuros de explorador muestra cuántos espacios de conjuro tienes para lanzar tus conjuros de explorador de nivel 1 y superior. Para lanzar uno de tus conjuros de explorador, debes gastar un espacio de conjuro del nivel del conjuro o superior. Recuperas todos los espacios de conjuro gastados cuando termines un descanso largo.",
+          "type": "pasivo",
+          "uses": null
+        },
+        {
+          "level": 3,
+          "id": "percepcion_primigenia",
+          "name": "Percepción primigenia",
+          "description": "Tu experiencia especializada te otorga ventaja en las tiradas de Iniciativa. Además, puedes actuar normalmente en el primer turno de un combate incluso si te sorprenden.",
+          "type": "pasivo",
+          "uses": null
+        },
+        {
+          "level": 3,
+          "id": "arquetipo_explorador",
+          "name": "Arquetipo de explorador",
+          "description": "Elige un arquetipo de explorador. Tu elección te otorga rasgos en los niveles 3, 7, 11, 15.",
+          "type": "pasivo",
+          "uses": null,
+          "selector_arquetipo": true,
+          "canSelected": false,
+          "options": "ranger_archetypes",
+          "selectMulti": false
+        },
+        {
+          "level": 5,
+          "id": "ataque_adicional",
+          "name": "Ataque adicional",
+          "description": "Puedes atacar dos veces, en lugar de una, siempre que tomes la acción de Ataque en tu turno.",
+          "type": "pasivo",
+          "uses": null
+        },
+        {
+          "level": 8,
+          "id": "paso_de_la_tierra",
+          "name": "Paso de la tierra",
+          "description": "Puedes pasar por terreno difícil sin que cuente como terreno difícil. Además, tienes ventaja en las tiradas de salvación contra efectos que te muevan contra tu voluntad, como ser empujado o arrastrado.",
+          "type": "pasivo",
+          "uses": null
+        },
+        {
+          "level": 10,
+          "id": "explorador_nato",
+          "name": "Explorador nato",
+          "description": "Ganas un terreno favorito adicional. Elige un tipo de terreno adicional para tu Explorador Nato.",
+          "type": "pasivo",
+          "uses": null,
+          "canSelected": true,
+          "options": "Terrains",
+          "selectMulti": false
+        },
+        {
+          "level": 10,
+          "id": "esconderse_a_plena_vista",
+          "name": "Esconderse a plena vista",
+          "description": "Puedes gastar 1 minuto creando un camuflaje para ti mismo. Debes tener acceso a materiales frescos de plantas, barro, nieve, polvo, piedras o arena. Una vez que hayas creado el camuflaje, puedes intentar ocultarte incluso cuando solo estés ligeramente oculto por el follaje, la lluvia intensa, la nieve caída, la niebla natural u otros fenómenos naturales.",
+          "type": "accion",
+          "uses": "1 minuto de preparación"
+        },
+        {
+          "level": 14,
+          "id": "desvanecerse",
+          "name": "Desvanecerse",
+          "description": "Puedes usar la acción de Esconderse como una acción adicional en tu turno. Además, no puedes ser rastreado por medios no mágicos, a menos que elijas dejar un rastro.",
+          "type": "accion",
+          "uses": "1 por turno"
+        },
+        {
+          "level": 14,
+          "id": "enemigo_predilecto",
+          "name": "Enemigo predilecto",
+          "description": "Ganas un enemigo predilecto adicional. Elige otro tipo de criatura (o dos humanoides). Se aplican los mismos beneficios de Enemigo Predilecto.",
+          "type": "pasivo",
+          "uses": null,
+          "canSelected": true,
+          "options": "Creatures",
+          "selectMulti": false
+        },
+        {
+          "level": 18,
+          "id": "sentidos_salvajes",
+          "name": "Sentidos salvajes",
+          "description": "Tienes ventaja en las tiradas de Iniciativa y no puedes ser sorprendido mientras estés consciente. Además, otras criaturas tienen desventaja en las tiradas de ataque contra ti si no te han visto antes de este turno.",
+          "type": "pasivo",
+          "uses": null
+        },
+        {
+          "level": 20,
+          "id": "azote_de_enemigos",
+          "name": "Azote de enemigos",
+          "description": "Una vez en cada uno de tus turnos, cuando hagas un ataque con arma, puedes hacer otro ataque con la misma arma contra una criatura diferente que esté a 5 pies de la primera criatura y dentro del alcance de tu arma.",
+          "type": "pasivo",
+          "uses": "1 por turno"
+        }
+      ],
+      "archetypes": [
+        {
+          "id": "cazador",
+          "name": "Cazador",
+          "description": "Los cazadores son exploradores especializados en rastrear y eliminar enemigos específicos. Son expertos en combate y tienen habilidades únicas para enfrentar diferentes tipos de amenazas.",
+          "obtainedLevel": 3,
+          "features": [
+            {
+              "level": 3,
+              "id": "el_cazador_y_la_presa",
+              "name": "El cazador y la presa",
+              "description": "Elige una de las siguientes opciones: Asesino de Gigantes (daño extra contra criaturas grandes), Azote de Colosos (daño extra contra criaturas heridas), Destructor de Hordas (ataque adicional contra criaturas adyacentes).",
+              "type": "pasivo",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            },
+            {
+              "level": 7,
+              "id": "tacticas_defensivas",
+              "name": "Tácticas defensivas",
+              "description": "Elige una de las siguientes opciones: Defensa contra Ataques Múltiples (reducción de daño), Escapar de la Horda (movimiento sin oportunidad), Voluntad de Acero (resistencia a encantamiento y miedo).",
+              "type": "pasivo",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            },
+            {
+              "level": 11,
+              "id": "ataque_multiple",
+              "name": "Ataque múltiple",
+              "description": "Elige una de las siguientes opciones: Andanada (ataque contra múltiples criaturas en área), Ataque Huracanado (ataque contra todas las criaturas adyacentes).",
+              "type": "accion",
+              "uses": "1 por turno",
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            },
+            {
+              "level": 15,
+              "id": "defensa_de_cazador_experto",
+              "name": "Defensa de cazador experto",
+              "description": "Elige una de las siguientes opciones: Aguantar la Marea (redirigir ataques), Esquiva Asombrosa (reducir daño a la mitad).",
+              "type": "reaccion",
+              "uses": "1 por turno",
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            }
+          ]
+        },
+        {
+          "id": "bestia",
+          "name": "Señor de las bestias",
+          "description": "Los señores de las bestias forman un vínculo mágico con una criatura que los acompaña en sus aventuras. Esta criatura se convierte en su compañero inseparable.",
+          "obtainedLevel": 3,
+          "features": [
+            {
+              "level": 3,
+              "id": "companero_del_explorador",
+              "name": "Compañero del explorador",
+              "description": "Obtienes un compañero animal que te acompaña en tus aventuras. El compañero es una bestia de desafío 1/4 o inferior. El compañero actúa en tu turno y obedece tus comandos.",
+              "type": "pasivo",
+          "uses": null,
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false
+            },
+            {
+              "level": 7,
+              "id": "entrenamiento_excepcional",
+              "name": "Entrenamiento excepcional",
+              "description": "Puedes usar tu acción para comandar a tu compañero animal para que use su acción de ataque contra una criatura que puedas ver. Además, tu compañero puede realizar acciones adicionales.",
+              "type": "accion",
+          "uses": "1 por turno",
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false
+            },
+            {
+              "level": 11,
+              "id": "furia_bestial",
+              "name": "Furia bestial",
+              "description": "Tu compañero animal puede hacer dos ataques cuando usa la acción de Ataque, o puede realizar un ataque múltiple. Además, gana resistencia a todo el daño.",
+              "type": "pasivo",
+          "uses": null,
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false
+            },
+            {
+              "level": 15,
+              "id": "compartir_conjuros",
+              "name": "Compartir conjuros",
+              "description": "Cuando lances un conjuro que te afecte a ti, también afecta a tu compañero animal si está a 30 pies de ti. Tu compañero animal se convierte en una bestia de desafío 1.",
+              "type": "pasivo",
+          "uses": null,
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false
+            }
+          ]
+        }
+      ],
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "hechicero",
+      "name": "Hechicero",
+      "description": "Los hechiceros son lanzadores de conjuros que obtienen su poder de una fuente interna de magia. Su magia es innata y fluye a través de su sangre, permitiéndoles lanzar conjuros sin necesidad de estudiar o rezar.",
+      "hitDie": "d6",
+      "primaryAbility": "Carisma",
+      "spellcastingAbility": "Carisma",
+      "spellCasterType": "aprendidos",
+      "savingThrowProficiencies": [
+        "Constitución",
+        "Carisma"
+      ],
+      "skillProficiencies": "Elige dos de: Arcana, Deception, Insight, Intimidation, Persuasion, Religion",
+      "abilities": [
+        {
+          "quantity": 2,
+          "proficiencies": [
+            "conocimiento_arcano",
+            "engano",
+            "perspicacia",
+            "intimidacion",
+            "persuasion",
+            "religion"
+          ]
+        }
+      ],
+      "proficiencies": {
+        "armas": [
+          "ballesta_ligera",
+          "daga",
+          "dardo",
+          "honda",
+          "baston",
+          "espada_corta"
+        ],
+        "armaduras": [],
+        "herramientas": []
+      },
+      "startingMoney": {
+        "coin": "po",
+        "dice": { "count": 3, "sides": 4, "multiplier": 10 }
+      },
+      "features": [
+        {
+          "level": 1,
+          "id": "lanzamiento_de_conjuros",
+          "name": "Lanzamiento de conjuros",
+          "description": "Tu tabla de conjuros de hechicero muestra cuántos espacios de conjuro tienes para lanzar tus conjuros de hechicero de nivel 1 y superior. Para lanzar uno de tus conjuros de hechicero, debes gastar un espacio de conjuro del nivel del conjuro o superior. Recuperas todos los espacios de conjuro gastados cuando termines un descanso largo.",
+          "type": "pasivo",
+          "uses": null,
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false
+        },
+        {
+          "level": 1,
+          "id": "origen_magico",
+          "name": "Origen mágico",
+          "description": "Elige un origen mágico que determine la fuente de tu poder mágico innato. Tu elección te otorga rasgos en los niveles 1, 6, 14 y 18.",
+          "type": "pasivo",
+          "uses": null,
+          "selector_arquetipo": true,
+          "canSelected": false,
+          "options": "sorcerer_archetypes",
+          "selectMulti": false
+        },
+        {
+          "level": 2,
+          "id": "puntos_de_hechiceria",
+          "name": "Puntos de hechicería",
+          "description": "Tienes 2 puntos de hechicería, y obtienes más conforme subes de nivel. Puedes gastar estos puntos para obtener beneficios adicionales. Recuperas todos los puntos de hechicería gastados cuando termines un descanso largo.",
+          "type": "pasivo",
+          "uses": null,
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false,
+          "unlocksResource": "puntos_hechiceria"
+        },
+        {
+          "level": 2,
+          "id": "flexibilidad_de_conjuros",
+          "name": "Flexibilidad de conjuros",
+          "description": "Puedes gastar 1 punto de hechicería para cambiar un espacio de conjuro de un nivel por un espacio de conjuro de otro nivel. El nuevo nivel debe ser igual o menor que tu nivel de hechicero.",
+          "type": "accion",
+          "uses": null,
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false,
+          "consumesResource": "puntos_hechiceria",
+          "resourceCost": 1
+        },
+        {
+          "level": 3,
+          "id": "metamagia",
+          "name": "Metamagia",
+          "description": "Aprendes dos opciones de metamagia de tu elección. Puedes usar solo una opción de metamagia por conjuro. Aprendes una opción adicional en los niveles 10 y 17.",
+          "type": "pasivo",
+          "uses": null,
+          "canSelected": true,
+          "options": "Metamagic",
+          "selectMulti": true,
+          "selectQuantity": 2
+        },
+        {
+          "level": 5,
+          "id": "restauracion_de_hechiceria",
+          "name": "Restauración de hechicería",
+          "description": "Puedes gastar 1 acción para recuperar 4 puntos de hechicería gastados. No puedes usar esta característica de nuevo hasta que termines un descanso largo.",
+          "type": "accion",
+          "uses": "1 por descanso largo",
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false
+        },
+        {
+          "level": 6,
+          "id": "rasgo_de_origen_magico",
+          "name": "Rasgo de origen mágico",
+          "description": "Obtienes un rasgo adicional de tu origen mágico.",
+          "type": "pasivo",
+          "uses": null,
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false
+        },
+        {
+          "level": 10,
+          "id": "metamagia_2",
+          "name": "Metamagia",
+          "description": "Aprendes una opción adicional de metamagia de tu elección.",
+          "type": "pasivo",
+          "uses": null,
+          "canSelected": true,
+          "options": "Metamagic",
+          "selectMulti": true,
+          "selectQuantity": 1
+        },
+        {
+          "level": 14,
+          "id": "rasgo_de_origen_magico_2",
+          "name": "Rasgo de origen mágico",
+          "description": "Obtienes un rasgo adicional de tu origen mágico.",
+          "type": "pasivo",
+          "uses": null,
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false
+        },
+        {
+          "level": 17,
+          "id": "metamagia_3",
+          "name": "Metamagia",
+          "description": "Aprendes una opción adicional de metamagia de tu elección.",
+          "type": "pasivo",
+          "uses": null,
+          "canSelected": true,
+          "options": "Metamagic",
+          "selectMulti": true,
+          "selectQuantity": 1
+        },
+        {
+          "level": 18,
+          "id": "rasgo_de_origen_magico_3",
+          "name": "Rasgo de origen mágico",
+          "description": "Obtienes un rasgo adicional de tu origen mágico.",
+          "type": "pasivo",
+          "uses": null,
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false
+        },
+        {
+          "level": 20,
+          "id": "restauracion_de_hechiceria_2",
+          "name": "Restauración de hechicería",
+          "description": "Recuperas 4 puntos de hechicería gastados cada vez que termines un descanso corto.",
+          "type": "pasivo",
+          "uses": "4 puntos por descanso corto",
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false
+        }
+      ],
+      "archetypes": [
+        {
+          "id": "draconico",
+          "name": "Linaje draconico",
+          "description": "Tu poder mágico proviene de un ancestro draconico. Puede ser un dragón que te otorgó poder, o tal vez un antepasado lejano que se emparejó con un dragón.",
+          "obtainedLevel": 1,
+          "features": [
+            {
+              "level": 1,
+              "id": "ascendencia_draconica",
+              "name": "Ascendencia draconica",
+              "description": "Elige un tipo de dragón. El daño asociado con tu ascendencia draconica se determina por el tipo de dragón. Además, cuando hagas una tirada de golpe con un conjuro de hechicero, puedes gastar 1 punto de hechicería para hacer que el daño del conjuro sea del tipo asociado con tu ascendencia draconica.",
+              "type": "pasivo",
+              "uses": null,
+              "canSelected": true,
+              "options": "draconicAncestry",
+              "selectMulti": false,
+              "consumesResource": "puntos_hechiceria",
+              "resourceCost": 1
+            },
+            {
+              "level": 1,
+              "id": "resistencia_draconica",
+              "name": "Resistencia draconica",
+              "description": "Tienes resistencia al tipo de daño asociado con tu ascendencia draconica.",
+              "type": "pasivo",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            },
+            {
+              "level": 6,
+              "id": "aliento_de_dragon",
+              "name": "Aliento de dragón",
+              "description": "Puedes gastar 2 puntos de hechicería como una acción para exhalar energía destructiva. Todas las criaturas en un área deben hacer una tirada de salvación. El daño es del tipo asociado con tu ascendencia draconica.",
+              "type": "accion",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false,
+              "consumesResource": "puntos_hechiceria",
+              "resourceCost": 2
+            },
+            {
+              "level": 14,
+              "id": "alas_de_dragon",
+              "name": "Alas de dragón",
+              "description": "Puedes gastar 2 puntos de hechicería como una acción para hacer crecer alas de dragón de tu espalda. Las alas duran hasta que termines un descanso corto o largo. Mientras tengas las alas, tienes una velocidad de vuelo de 30 pies.",
+              "type": "accion",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false,
+              "consumesResource": "puntos_hechiceria",
+              "resourceCost": 2
+            },
+            {
+              "level": 18,
+              "id": "aspecto_de_dragon",
+              "name": "Aspecto de dragón",
+              "description": "Puedes gastar 5 puntos de hechicería como una acción para asumir el aspecto de un dragón. Mientras mantengas este aspecto, tienes resistencia al daño no mágico, y puedes usar tu aliento de dragón una vez por turno sin gastar puntos de hechicería.",
+              "type": "accion",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false,
+              "consumesResource": "puntos_hechiceria",
+              "resourceCost": 5
+            }
+          ]
+        },
+        {
+          "id": "salvaje",
+          "name": "Magia salvaje",
+          "description": "Tu poder mágico proviene de la magia salvaje que fluye a través de ti. Esta magia es impredecible y puede tener efectos inesperados.",
+          "obtainedLevel": 1,
+          "features": [
+            {
+              "level": 1,
+              "id": "magia_salvaje",
+              "name": "Magia salvaje",
+              "description": "Cada vez que lances un conjuro de hechicero, el DM puede hacer que hagas una tirada en la tabla de magia salvaje. Si sacas un 1, ocurre un efecto de magia salvaje.",
+              "type": "pasivo",
+              "uses": "Cuando el DM lo determine",
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            },
+            {
+              "level": 1,
+              "id": "bendicion_de_la_suerte",
+              "name": "Bendición de la suerte",
+              "description": "Puedes gastar 2 puntos de hechicería como una reacción para hacer que otra criatura rerrolle un d20. Debes elegir hacer esto antes de que se determine el resultado del dado.",
+              "type": "reaccion",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false,
+              "consumesResource": "puntos_hechiceria",
+              "resourceCost": 2
+            },
+            {
+              "level": 6,
+              "id": "control_de_la_magia_salvaje",
+              "name": "Control de la magia salvaje",
+              "description": "Puedes gastar 2 puntos de hechicería como una acción para hacer que la próxima vez que lances un conjuro de hechicero, no ocurra un efecto de magia salvaje.",
+              "type": "accion",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false,
+              "consumesResource": "puntos_hechiceria",
+              "resourceCost": 2
+            },
+            {
+              "level": 14,
+              "id": "bendicion_de_la_suerte_2",
+              "name": "Bendición de la suerte",
+              "description": "Puedes gastar 2 puntos de hechicería como una reacción para hacer que otra criatura rerrolle un d20. Debes elegir hacer esto antes de que se determine el resultado del dado.",
+              "type": "reaccion",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false,
+              "consumesResource": "puntos_hechiceria",
+              "resourceCost": 2
+            },
+            {
+              "level": 18,
+              "id": "magia_salvaje_2",
+              "name": "Magia salvaje",
+              "description": "Cada vez que lances un conjuro de hechicero, el DM puede hacer que hagas una tirada en la tabla de magia salvaje. Si sacas un 1, ocurre un efecto de magia salvaje.",
+              "type": "pasivo",
+              "uses": "Cuando el DM lo determine",
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            }
+          ]
+        }
+      ],
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "monje",
+      "name": "Monje",
+      "description": "Los monjes son maestros de las artes marciales que canalizan su poder a través de la disciplina y la meditación. Son luchadores ágiles que pueden usar su cuerpo como arma y acceder a poderes místicos.",
+      "hitDie": "d8",
+      "primaryAbility": "Destreza",
+      "spellcastingAbility": "Sabiduría",
+      "spellCasterType": null,
+      "savingThrowProficiencies": [
+        "Fuerza",
+        "Destreza"
+      ],
+      "skillProficiencies": "Elige dos de: Acrobatics, Athletics, History, Insight, Religion, Stealth",
+      "abilities": [
+        {
+          "quantity": 2,
+          "proficiencies": [
+            "acrobacia",
+            "atletismo",
+            "historia",
+            "perspicacia",
+            "religion",
+            "sigilo"
+          ]
+        }
+      ],
+      "proficiencies": {
+        "armas": [
+          "armas_simples",
+          "espada_corta"
+        ],
+        "armaduras": [],
+        "herramientas": {
+          "select": true,
+          "options": "competencias.Tools",
+          "filter": {
+            "category_link": ["instrumento", "herramienta"]
+          },
+          "selectQuantity": 1,
+          "description": "Elige una competencia con instrumentos musicales o un tipo de herramientas de artesano."
+        }
+      },
+      "startingMoney": {
+        "coin": "po",
+        "dice": { "count": 5, "sides": 4, "multiplier": 1 }
+      },
+      "features": [
+        {
+          "level": 1,
+          "id": "defensa_sin_armadura",
+          "name": "Defensa sin armadura",
+          "description": "Mientras no lleves armadura, tu CA es igual a 10 + tu modificador de Destreza + tu modificador de Sabiduría.",
+          "type": "pasivo",
+          "uses": null,
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false
+        },
+        {
+          "level": 1,
+          "id": "artes_marciales",
+          "name": "Artes marciales",
+          "description": "Puedes usar Destreza en lugar de Fuerza para las tiradas de ataque y daño con ataques desarmados y armas de monje. Puedes hacer un ataque desarmado como una acción adicional en tu turno. El daño de tus ataques desarmados es 1d4 + tu modificador de Destreza.",
+          "type": "pasivo",
+          "uses": null,
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false
+        },
+        {
+          "level": 2,
+          "id": "ki",
+          "name": "Ki",
+          "description": "Tienes 2 puntos de ki, y obtienes más conforme subes de nivel. Puedes gastar estos puntos para usar varias características de monje. Recuperas todos los puntos de ki gastados cuando termines un descanso corto o largo.",
+          "type": "pasivo",
+          "uses": "2 puntos por descanso",
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false,
+          "unlocksResource": "ki"
+        },
+        {
+          "level": 2,
+          "id": "movimiento_sin_armadura",
+          "name": "Movimiento sin armadura",
+          "description": "Mientras no lleves armadura, tu velocidad aumenta en 10 pies.",
+          "type": "pasivo",
+          "uses": null,
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false
+        },
+        {
+          "level": 2,
+          "id": "deflectar_proyectiles",
+          "name": "Deflectar proyectiles",
+          "description": "Puedes usar tu reacción para deflectar o atrapar un proyectil cuando seas atacado con un ataque a distancia. Reduce el daño en 1d10 + tu modificador de Destreza + tu nivel de monje. ",
+          "type": "reaccion",
+          "uses": "1 por turno",
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false
+        },
+        {
+          "level": 3,
+          "id": "deflectar_proyectiles_2",
+          "name": "Deflectar proyectiles",
+          "description": "Puedes usar tu reacción para deflectar o atrapar un proyectil cuando seas atacado con un ataque a distancia. Reduce el daño en 1d10 + tu modificador de Destreza + tu nivel de monje.",
+          "type": "reaccion",
+          "uses": "1 por turno",
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false
+        },
+        {
+          "level": 3,
+          "id": "arquetipo_monje",
+          "name": "Arquetipo de monje",
+          "description": "Elige un arquetipo de monje. Tu elección te otorga rasgos en los niveles 3, 6, 11, 17.",
+          "type": "pasivo",
+          "uses": null,
+          "selector_arquetipo": true,
+          "canSelected": false,
+          "options": "monk_archetypes",
+          "selectMulti": false
+        },
+        {
+          "level": 5,
+          "id": "ataque_adicional",
+          "name": "Ataque adicional",
+          "description": "Puedes atacar dos veces, en lugar de una, siempre que tomes la acción de Ataque en tu turno.",
+          "type": "pasivo",
+          "uses": null,
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false
+        },
+        {
+          "level": 5,
+          "id": "golpe_aturdidor",
+          "name": "Golpe aturdidor",
+          "description": "Puedes gastar 1 punto de ki cuando golpees a una criatura con un ataque desarmado para intentar aturdirlo. La criatura debe hacer una tirada de salvación de Constitución.",
+          "type": "accion",
+          "uses": null,
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false,
+          "consumesResource": "ki",
+          "resourceCost": 1
+        },
+        {
+          "level": 6,
+          "id": "golpe_aturdidor_2",
+          "name": "Golpe aturdidor",
+          "description": "Puedes gastar 1 punto de ki cuando golpees a una criatura con un ataque desarmado para intentar aturdirlo. La criatura debe hacer una tirada de salvación de Constitución.",
+          "type": "accion",
+          "uses": null,
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false,
+          "consumesResource": "ki",
+          "resourceCost": 1
+        },
+        {
+          "level": 7,
+          "id": "evasion",
+          "name": "Evasión",
+          "description": "Cuando seas objeto de un efecto que te permita hacer una tirada de salvación de Destreza para recibir solo la mitad del daño, en lugar de eso no recibes daño si tienes éxito en la tirada de salvación, y solo recibes la mitad del daño si fallas.",
+          "type": "pasivo",
+          "uses": null
+        },
+        {
+          "level": 7,
+          "id": "tranquilidad_mental",
+          "name": "Tranquilidad mental",
+          "description": "Puedes usar tu acción para terminar un efecto que te esté causando estar asustado o encantado.",
+          "type": "accion",
+          "uses": "1 por descanso largo"
+        },
+        {
+          "level": 9,
+          "id": "movimiento_sin_armadura_2",
+          "name": "Movimiento sin armadura",
+          "description": "Mientras no lleves armadura, tu velocidad aumenta en 15 pies.",
+          "type": "pasivo",
+          "uses": null
+        },
+        {
+          "level": 10,
+          "id": "pureza_del_cuerpo",
+          "name": "Pureza del cuerpo",
+          "description": "Tu entrenamiento te hace inmune a las enfermedades y al veneno.",
+          "type": "pasivo",
+          "uses": null
+        },
+        {
+          "level": 11,
+          "id": "golpe_aturdidor_3",
+          "name": "Golpe aturdidor",
+          "description": "Puedes gastar 1 punto de ki cuando golpees a una criatura con un ataque desarmado para intentar aturdirlo. La criatura debe hacer una tirada de salvación de Constitución.",
+          "type": "accion",
+          "uses": null,
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false,
+          "consumesResource": "ki",
+          "resourceCost": 1
+        },
+        {
+          "level": 13,
+          "id": "idioma_de_la_luz_y_la_oscuridad",
+          "name": "Idioma de la luz y la oscuridad",
+          "description": "Aprendes a tocar la esencia de la luz y la oscuridad. Puedes gastar 4 puntos de ki como una acción para proyectar un rayo de luz brillante de 60 pies de largo y 5 pies de ancho. Las criaturas en el área deben hacer una tirada de salvación de Constitución.",
+          "type": "accion",
+          "uses": null,
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false,
+          "consumesResource": "ki",
+          "resourceCost": 4
+        },
+        {
+          "level": 14,
+          "id": "diamante_del_alma",
+          "name": "Diamante del alma",
+          "description": "Tu cuerpo y alma se han vuelto tan resistentes que tienes resistencia a todo el daño.",
+          "type": "pasivo",
+          "uses": null
+        },
+        {
+          "level": 15,
+          "id": "timeless_body",
+          "name": "Cuerpo atemporal",
+          "description": "Tu entrenamiento te permite vivir más tiempo. Por cada 10 años que pases, envejeces solo 1 año.",
+          "type": "pasivo",
+          "uses": null
+        },
+        {
+          "level": 17,
+          "id": "golpe_aturdidor_4",
+          "name": "Golpe aturdidor",
+          "description": "Puedes gastar 1 punto de ki cuando golpees a una criatura con un ataque desarmado para intentar aturdirlo. La criatura debe hacer una tirada de salvación de Constitución.",
+          "type": "accion",
+          "uses": null,
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false,
+          "consumesResource": "ki",
+          "resourceCost": 1
+        },
+        {
+          "level": 18,
+          "id": "cuerpo_vacio",
+          "name": "Cuerpo vacío",
+          "description": "Puedes gastar 4 puntos de ki como una acción para volverte invisible hasta el final de tu próximo turno. Durante ese tiempo, también eres etéreo.",
+          "type": "accion",
+          "uses": null,
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false,
+          "consumesResource": "ki",
+          "resourceCost": 4
+        },
+        {
+          "level": 20,
+          "id": "perfeccion_perfecta",
+          "name": "Perfección perfecta",
+          "description": "Cuando hagas una tirada de ataque y falles, puedes gastar 1 punto de ki para rerrolar el dado y usar el nuevo resultado.",
+          "type": "pasivo",
+          "uses": null,
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false,
+          "consumesResource": "ki",
+          "resourceCost": 1
+        }
+      ],
+      "archetypes": [
+        {
+          "id": "camino_mano_vacia",
+          "name": "Camino de la mano vacía",
+          "description": "Los monjes del camino de la mano vacía son maestros del combate desarmado que pueden usar su cuerpo como arma letal.",
+          "obtainedLevel": 3,
+          "features": [
+            {
+              "level": 3,
+              "id": "golpe_de_mano_vacia",
+              "name": "Golpe de mano vacía",
+              "description": "Puedes gastar 1 punto de ki cuando golpees a una criatura con un ataque desarmado para hacer que la criatura sea empujada hasta 15 pies lejos de ti o sea derribada.",
+              "type": "accion",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false,
+              "consumesResource": "ki",
+              "resourceCost": 1
+            },
+            {
+              "level": 6,
+              "id": "golpe_de_mano_vacia_2",
+              "name": "Golpe de mano vacía",
+              "description": "Puedes gastar 1 punto de ki cuando golpees a una criatura con un ataque desarmado para hacer que la criatura sea empujada hasta 15 pies lejos de ti o sea derribada.",
+              "type": "accion",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false,
+              "consumesResource": "ki",
+              "resourceCost": 1
+            },
+            {
+              "level": 11,
+              "id": "golpe_de_mano_vacia_3",
+              "name": "Golpe de mano vacía",
+              "description": "Puedes gastar 1 punto de ki cuando golpees a una criatura con un ataque desarmado para hacer que la criatura sea empujada hasta 15 pies lejos de ti o sea derribada.",
+              "type": "accion",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false,
+              "consumesResource": "ki",
+              "resourceCost": 1
+            },
+            {
+              "level": 17,
+              "id": "golpe_de_mano_vacia_4",
+              "name": "Golpe de mano vacía",
+              "description": "Puedes gastar 1 punto de ki cuando golpees a una criatura con un ataque desarmado para hacer que la criatura sea empujada hasta 15 pies lejos de ti o sea derribada.",
+              "type": "accion",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false,
+              "consumesResource": "ki",
+              "resourceCost": 1
+            }
+          ]
+        },
+        {
+          "id": "camino_sombra",
+          "name": "Camino de la sombra",
+          "description": "Los monjes del camino de la sombra son maestros del sigilo y la infiltración que pueden usar la magia para moverse en las sombras.",
+          "obtainedLevel": 3,
+          "features": [
+            {
+              "level": 3,
+              "id": "artes_de_la_sombra",
+              "name": "Artes de la sombra",
+              "description": "Puedes gastar 2 puntos de ki como una acción para lanzar oscuridad, silencio o paso brumoso. También puedes gastar 2 puntos de ki como una acción para teletransportarte hasta 60 pies a un lugar que puedas ver.",
+              "type": "accion",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false,
+              "consumesResource": "ki",
+              "resourceCost": 2
+            },
+            {
+              "level": 6,
+              "id": "paso_de_la_sombra",
+              "name": "Paso de la sombra",
+              "description": "Puedes gastar 2 puntos de ki como una acción para teletransportarte hasta 60 pies a un lugar que puedas ver. Si terminas en un lugar que está en sombra, puedes hacer un ataque con ventaja contra una criatura que puedas ver.",
+              "type": "accion",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false,
+              "consumesResource": "ki",
+              "resourceCost": 2
+            },
+            {
+              "level": 11,
+              "id": "manto_de_sombras",
+              "name": "Manto de sombras",
+              "description": "Puedes gastar 4 puntos de ki como una acción para volverte invisible hasta el final de tu próximo turno. Durante ese tiempo, también eres etéreo.",
+              "type": "accion",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false,
+              "consumesResource": "ki",
+              "resourceCost": 4
+            },
+            {
+              "level": 17,
+              "id": "oportunista",
+              "name": "Oportunista",
+              "description": "Puedes gastar 3 puntos de ki como una reacción para hacer un ataque de oportunidad contra una criatura que se mueva a 5 pies de ti.",
+              "type": "reaccion",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false,
+              "consumesResource": "ki",
+              "resourceCost": 3
+            }
+          ]
+        }
+      ],
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "guerrero",
+      "name": "Guerrero",
+      "description": "Los guerreros son maestros del combate, expertos en el uso de armas y armaduras. Son versátiles y pueden adaptarse a cualquier situación de combate.",
+      "hitDie": "d10",
+      "primaryAbility": "Fuerza",
+      "spellcastingAbility": null,
+      "spellCasterType": null,
+      "savingThrowProficiencies": [
+        "Fuerza",
+        "Constitución"
+      ],
+      "skillProficiencies": "Elige dos de: Acrobacia, Atletismo, Historia, Intimidación, Percepción, Supervivencia",
+      "abilities": [
+        {
+          "quantity": 2,
+          "proficiencies": [
+            "acrobacia",
+            "atletismo",
+            "historia",
+            "intimidacion",
+            "percepcion",
+            "supervivencia"
+          ]
+        }
+      ],
+      "proficiencies": {
+        "armas": [
+          "armas_simples",
+          "armas_marciales"
+        ],
+        "armaduras": [
+          "armadura_ligera",
+          "armadura_mediana",
+          "armadura_pesada",
+          "escudos"
+        ],
+        "herramientas": []
+      },
+      "startingMoney": {
+        "coin": "po",
+        "dice": { "count": 5, "sides": 4, "multiplier": 10 }
+      },
+      "features": [
+        {
+          "level": 1,
+          "id": "estilo_de_combate",
+          "name": "Estilo de combate",
+          "description": "Adoptas un estilo particular de combate como tu especialidad. Elige una de las siguientes opciones: Arquero, Defensa, Duelista, Dos armas, Lucha, Protección.",
+          "type": "pasivo",
+          "uses": null,
+          "canSelected": true,
+          "options": "combatStyles",
+          "selectMulti": false
+        },
+        {
+          "level": 1,
+          "id": "segunda_respiracion",
+          "name": "Segunda respiración",
+          "description": "Tienes una reserva limitada de resistencia en la que puedes recurrir para protegerse del daño. En tu turno, puedes usar una acción bonus para recuperar puntos de golpe iguales a 1d10 + tu nivel de guerrero. Una vez que uses esta característica, debes terminar un descanso corto o largo antes de poder usarla de nuevo.",
+          "type": "accion_bonus",
+          "uses": "1 por descanso corto o largo",
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false
+        },
+        {
+          "level": 2,
+          "id": "accion_adicional",
+          "name": "Acción adicional",
+          "description": "Puedes tomar una acción adicional en tu turno.",
+          "type": "pasivo",
+          "uses": "1 por descanso corto o largo",
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false
+        },
+        {
+          "level": 3,
+          "id": "arquetipo_marcial",
+          "name": "Arquetipo marcial",
+          "description": "Elige un arquetipo que se esfuerza por perfeccionar una forma particular de combate. Tu elección te otorga rasgos en los niveles 3, 7, 10, 15 y 18.",
+          "type": "pasivo",
+          "uses": null,
+          "selector_arquetipo": true,
+          "canSelected": false,
+          "options": "fighter_archetypes",
+          "selectMulti": false
+        },
+        {
+          "level": 5,
+          "id": "ataque_adicional",
+          "name": "Ataque adicional",
+          "description": "Puedes atacar dos veces, en lugar de una, cuando tomas la acción de ataque en tu turno.",
+          "type": "pasivo",
+          "uses": null,
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false
+        },
+        {
+          "level": 9,
+          "id": "indomable",
+          "name": "Indomable",
+          "description": "Puedes usar tu acción para terminar un efecto en ti mismo que te cause la condición asustado o encantado.",
+          "type": "accion",
+          "uses": "1 por descanso largo",
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false
+        },
+        {
+          "level": 11,
+          "id": "ataque_adicional_2",
+          "name": "Ataque adicional (2)",
+          "description": "Puedes atacar tres veces, en lugar de una, cuando tomas la acción de ataque en tu turno.",
+          "type": "pasivo",
+          "uses": null,
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false
+        },
+        {
+          "level": 13,
+          "id": "indomable_2",
+          "name": "Indomable (2)",
+          "description": "Puedes usar tu acción para terminar un efecto en ti mismo que te cause la condición asustado o encantado. Puedes usar esta característica dos veces entre descansos largos.",
+          "type": "accion",
+          "uses": "2 por descanso largo",
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false
+        },
+        {
+          "level": 17,
+          "id": "accion_adicional_2",
+          "name": "Acción adicional (2)",
+          "description": "Puedes tomar una acción adicional en tu turno. Puedes usar esta característica dos veces entre descansos largos.",
+          "type": "pasivo",
+          "uses": "2 por descanso corto o largo",
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false
+        },
+        {
+          "level": 20,
+          "id": "ataque_adicional_3",
+          "name": "Ataque adicional (3)",
+          "description": "Puedes atacar cuatro veces, en lugar de una, cuando tomas la acción de ataque en tu turno.",
+          "type": "pasivo",
+          "uses": null,
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false
+        }
+      ],
+      "archetypes": [
+        {
+          "id": "campeon",
+          "name": "Campeón",
+          "description": "El arquetipo de campeón se centra en el desarrollo de la fuerza bruta y la resistencia. Los campeones son guerreros que se especializan en el combate directo y la supervivencia.",
+          "obtainedLevel": 3,
+          "features": [
+            {
+              "level": 3,
+              "id": "critico_mejorado",
+              "name": "Crítico mejorado",
+              "description": "Tu arma ataca con un crítico en un 19 o 20.",
+              "type": "pasivo",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            },
+            {
+              "level": 7,
+              "id": "estilo_de_combate_adicional",
+              "name": "Estilo de combate adicional",
+              "description": "Puedes elegir un segundo estilo de combate. No puedes elegir el mismo estilo de combate dos veces.",
+              "type": "pasivo",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            },
+            {
+              "level": 10,
+              "id": "critico_superior",
+              "name": "Crítico superior",
+              "description": "Tu arma ataca con un crítico en un 18-20.",
+              "type": "pasivo",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            },
+            {
+              "level": 15,
+              "id": "critico_supremo",
+              "name": "Crítico supremo",
+              "description": "Tu arma ataca con un crítico en un 17-20.",
+              "type": "pasivo",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            },
+            {
+              "level": 18,
+              "id": "supervivencia",
+              "name": "Supervivencia",
+              "description": "Recuperas un número de puntos de golpe igual a tu nivel de guerrero + tu modificador de Constitución (mínimo 1) al inicio de cada uno de tus turnos si tienes al menos 1 punto de golpe.",
+              "type": "pasivo",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            }
+          ]
+        },
+        {
+          "id": "maestro_armas",
+          "name": "Maestro de Armas",
+          "description": "Los maestros de armas son guerreros que han perfeccionado el uso de maniobras especiales en combate. Utilizan dados de superioridad para realizar técnicas avanzadas.",
+          "obtainedLevel": 3,
+          "features": [
+            {
+              "level": 3,
+              "id": "maniobras_de_combate",
+              "name": "Maniobras de combate",
+              "description": "Aprendes tres maniobras de tu elección. Muchas maniobras mejoran un ataque de alguna manera. Solo puedes usar una maniobra por ataque. Aprendes maniobras adicionales en los niveles 7, 10 y 15.",
+              "type": "pasivo",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            },
+            {
+              "level": 3,
+              "id": "dados_de_superioridad",
+              "name": "Dados de superioridad",
+              "description": "Tienes cuatro dados de superioridad, que son d6. Un dado de superioridad se gasta cuando lo usas. Recuperas todos los dados gastados cuando termines un descanso corto o largo.",
+              "type": "recurso",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false,
+              "unlocksResource": "dados_superioridad"
+            },
+            {
+              "level": 3,
+              "id": "salvacion_de_maniobra",
+              "name": "Salvación de maniobra",
+              "description": "Algunas de tus maniobras requieren que tu objetivo haga una tirada de salvación para resistir el efecto de la maniobra. La CD de salvación de la maniobra es 8 + tu bonificador de competencia + tu modificador de Fuerza o Destreza (tu elección).",
+              "type": "pasivo",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            },
+            {
+              "level": 7,
+              "id": "conocimiento_de_armas",
+              "name": "Conocimiento de armas",
+              "description": "Tu práctica con armas te permite modificar tu estilo de combate. Puedes cambiar uno de tus estilos de combate por otro estilo de combate disponible para guerreros.",
+              "type": "pasivo",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            },
+            {
+              "level": 10,
+              "id": "maniobras_mejoradas",
+              "name": "Maniobras mejoradas",
+              "description": "Tus dados de superioridad se convierten en d8. En el nivel 18, se convierten en d10.",
+              "type": "pasivo",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            },
+            {
+              "level": 15,
+              "id": "relajacion",
+              "name": "Relajación",
+              "description": "Recuperas un dado de superioridad gastado cuando terminas un turno en el que no has usado ninguna maniobra.",
+              "type": "pasivo",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            },
+            {
+              "level": 18,
+              "id": "maniobras_supremas",
+              "name": "Maniobras supremas",
+              "description": "Tus dados de superioridad se convierten en d10. Si tienes menos de tres dados de superioridad, recuperas uno al inicio de tu turno.",
+              "type": "pasivo",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            }
+          ]
+        },
+        {
+          "id": "caballero_arcano",
+          "name": "Caballero Arcano",
+          "description": "Los caballeros arcanos combinan la destreza marcial con la magia arcana. Son guerreros que han aprendido a lanzar conjuros para complementar sus habilidades de combate.",
+          "obtainedLevel": 3,
+          "features": [
+            {
+              "level": 3,
+              "id": "lanzamiento_de_conjuros",
+              "name": "Lanzamiento de conjuros",
+              "description": "Has aprendido a lanzar conjuros. Tu tabla de conjuros de caballero arcano muestra cuántos espacios de conjuro tienes para lanzar tus conjuros de caballero arcano de nivel 1 y superior. Para lanzar uno de tus conjuros de caballero arcano, debes gastar un espacio de conjuro del nivel del conjuro o superior. Recuperas todos los espacios de conjuro gastados cuando termines un descanso largo.",
+              "type": "pasivo",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            },
+            {
+              "level": 3,
+              "id": "aptitud_magica",
+              "name": "Aptitud mágica",
+              "description": "Inteligencia es tu aptitud mágica para tus conjuros de caballero arcano. Usas tu Inteligencia siempre que un conjuro se refiera a tu aptitud mágica. Además, usas tu modificador de Inteligencia para establecer la CD de salvación de conjuros de caballero arcano y para hacer tiradas de ataque con ellos.",
+              "type": "pasivo",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            },
+            {
+              "level": 3,
+              "id": "conjuros_de_caballero_arcano",
+              "name": "Conjuros de caballero arcano",
+              "description": "Conoces tres trucos de la lista de conjuros de mago. Aprendes trucos adicionales de caballero arcano de tu elección en los niveles 7, 10 y 15. Cada vez que aprendas un nuevo truco, puedes reemplazar uno que ya conozcas.",
+              "type": "pasivo",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            },
+            {
+              "level": 7,
+              "id": "golpe_magico",
+              "name": "Golpe mágico",
+              "description": "Cuando golpeas con un ataque con arma, puedes gastar un espacio de conjuro para causar daño de energía adicional al objetivo. El daño adicional es 2d8 por el nivel del espacio de conjuro gastado, y el tipo de daño es el mismo que el de tu arma.",
+              "type": "pasivo",
+              "uses": "espacios de conjuro",
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            },
+            {
+              "level": 10,
+              "id": "contraconjuro",
+              "name": "Contraconjuro",
+              "description": "Puedes usar tu acción para interrumpir un lanzador de conjuros en el proceso de lanzar un conjuro. Si el lanzador de conjuros está a 60 pies de ti y lanza un conjuro de nivel 3 o inferior, su conjuro falla y no tiene efecto.",
+              "type": "accion",
+              "uses": "1 por descanso largo",
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            },
+            {
+              "level": 15,
+              "id": "golpe_magico_mejorado",
+              "name": "Golpe mágico mejorado",
+              "description": "Tu golpe mágico causa daño adicional igual a 3d8 por el nivel del espacio de conjuro gastado.",
+              "type": "pasivo",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            },
+            {
+              "level": 18,
+              "id": "contraconjuro_mejorado",
+              "name": "Contraconjuro mejorado",
+              "description": "Tu contraconjuro puede interrumpir conjuros de nivel 4 o inferior. Puedes usar esta característica dos veces entre descansos largos.",
+              "type": "accion",
+              "uses": "2 por descanso largo",
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            }
+          ]
+        }
+      ],
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "bardo",
+      "name": "Bardo",
+      "description": "Los bardos son maestros de las artes, usando su música, palabras y magia para inspirar aliados, desmoralizar enemigos, manipular mentes, crear ilusiones e incluso sanar heridas. Son versátiles y carismáticos, capaces de adaptarse a cualquier situación.",
+      "hitDie": "d8",
+      "primaryAbility": "Carisma",
+      "spellcastingAbility": "Carisma",
+      "spellCasterType": "aprendidos",
+      "savingThrowProficiencies": [
+        "Destreza",
+        "Carisma"
+      ],
+      "skillProficiencies": "Elige tres de: Animal Handling, Athletics, Insight, Investigation, Nature, Perception, Stealth, Survival",
+      "abilities": [
+        {
+          "quantity": 3,
+          "proficiencies": [
+            "trato_con_animales",
+            "atletismo",
+            "perspicacia",
+            "investigacion",
+            "naturaleza",
+            "percepcion",
+            "sigilo",
+            "supervivencia",
+            "actuacion",
+            "decepcion",
+            "historia",
+            "interpretacion",
+            "intimidacion",
+            "medicina",
+            "persuasion",
+            "religion"
+          ]
+        }
+      ],
+      "proficiencies": {
+        "armas": [
+          "armas_simples",
+          "ballesta_de_mano",
+          "espada_larga",
+          "espada_corta"
+        ],
+        "armaduras": [
+          "armadura_ligera"
+        ],
+        "herramientas": {
+          "select": true,
+          "options": "competencias.Tools",
+          "filter": {
+            "category_link": "instrumento"
+          },
+          "selectQuantity": 3,
+          "description": "Elige tres competencias con instrumentos musicales."
+        }
+      },
+      "startingMoney": {
+        "coin": "po",
+        "dice": { "count": 5, "sides": 4, "multiplier": 10 }
+      },
+      "features": [
+        {
+          "level": 1,
+          "id": "inspiracion_bardica",
+          "name": "Inspiración bárdica",
+          "description": "Puedes inspirar a otros mediante palabras o música. Para hacerlo, usas una acción bono en tu turno para elegir a una criatura que no sea tú misma y que esté a 30 pies de ti y que pueda oírte. Esa criatura gana un dado de inspiración bárdica (d6).",
+          "type": "accion_bono",
+          "uses": null,
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false,
+          "unlocksResource": "inspiracion_bardica",
+          "consumesResource": "inspiracion_bardica",
+          "resourceCost": 1
+        },
+        {
+          "level": 2,
+          "id": "cortesano",
+          "name": "Cortesano",
+          "description": "Aprendes dos idiomas de tu elección. También adquieres competencia con el kit de disfraz.",
+          "type": "pasivo",
+          "uses": null,
+          "canSelected": true,
+          "options": "competencias.Languages",
+          "selectMulti": true,
+          "cantidad": 2
+        },
+        {
+          "level": 3,
+          "id": "colegio_bardico",
+          "name": "Colegio bárdico",
+          "description": "Elige un colegio bárdico. Tu elección te otorga rasgos en los niveles 3, 6, 14.",
+          "type": "pasivo",
+          "uses": null,
+          "selector_arquetipo": true,
+          "canSelected": true,
+          "options": "bard_colleges",
+          "selectMulti": false
+        },
+        {
+          "level": 5,
+          "id": "inspiracion_bardica_2",
+          "name": "Inspiración bárdica",
+          "description": "El dado de inspiración bárdica cambia a un d8.",
+          "type": "pasivo",
+          "uses": null,
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false
+        },
+        {
+          "level": 10,
+          "id": "inspiracion_bardica_3",
+          "name": "Inspiración bárdica",
+          "description": "El dado de inspiración bárdica cambia a un d10.",
+          "type": "pasivo",
+          "uses": null,
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false
+        },
+        {
+          "level": 15,
+          "id": "inspiracion_bardica_4",
+          "name": "Inspiración bárdica",
+          "description": "El dado de inspiración bárdica cambia a un d12.",
+          "type": "pasivo",
+          "uses": null,
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false
+        },
+        {
+          "level": 20,
+          "id": "inspiracion_superior",
+          "name": "Inspiración superior",
+          "description": "Cuando uses tu acción de Inspiración bárdica, puedes elegir a un número de criaturas igual a tu modificador de Carisma (mínimo 1) dentro del alcance, en lugar de solo una.",
+          "type": "pasivo",
+          "uses": null,
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false
+        }
+      ],
+      "archetypes": [
+        {
+          "id": "colegio_lore",
+          "name": "Colegio del Conocimiento",
+          "description": "Los bardos del Colegio del Conocimiento son los maestros de las historias, la música y la magia. Son eruditos que buscan preservar el conocimiento y compartirlo con otros.",
+          "obtainedLevel": 3,
+          "features": [
+            {
+              "level": 3,
+              "id": "competencia_adicional",
+              "name": "Competencia adicional",
+              "description": "Ganas competencia con tres habilidades adicionales de tu elección.",
+              "type": "pasivo",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            },
+            {
+              "level": 3,
+              "id": "palabras_cortantes",
+              "name": "Palabras cortantes",
+              "description": "Cuando una criatura que puedas ver dentro de 60 pies de ti hace un ataque, puedes usar tu reacción para gastar una de tus inspiraciones bárdicas, lanzar un d6 y restar el número resultante de la tirada de ataque de la criatura. Puedes elegir usar esta característica después de que la criatura lance el dado, pero antes de que el DM determine si el ataque impacta o falla.",
+              "type": "reaccion",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false,
+              "consumesResource": "inspiracion_bardica",
+              "resourceCost": 1
+            },
+            {
+              "level": 6,
+              "id": "secreto_magico_adicional",
+              "name": "Secreto mágico adicional",
+              "description": "Aprendes dos conjuros de cualquier clase. Un conjuro que elijas debe ser de un nivel que puedas lanzar, como se muestra en la tabla de Conjuros de Bardo. El otro debe ser de un nivel no superior a la mitad de tu nivel de bardo (redondeado hacia arriba). Los conjuros elegidos cuentan como conjuros de bardo para ti y se incluyen en el número de conjuros conocidos que se muestra en la tabla de Conjuros de Bardo.",
+              "type": "pasivo",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            },
+            {
+              "level": 14,
+              "id": "palabras_cortantes_mejoradas",
+              "name": "Palabras cortantes mejoradas",
+              "description": "Cuando usas Palabras cortantes, el dado que lanzas aumenta a un d8. Además, si la criatura ataca a un aliado en lugar de a ti, puedes lanzar el dado y restar el número resultante de la tirada de ataque de la criatura.",
+              "type": "pasivo",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            }
+          ]
+        },
+        {
+          "id": "colegio_valor",
+          "name": "Colegio del Valor",
+          "description": "Los bardos del Colegio del Valor son guerreros habilidosos que combinan el arte de la palabra y la música con el arte de la espada. Son combatientes versátiles que inspiran a sus aliados en la batalla.",
+          "obtainedLevel": 3,
+          "features": [
+            {
+              "level": 3,
+              "id": "competencia_armas_armaduras",
+              "name": "Competencia con armas y armaduras",
+              "description": "Ganas competencia con armas marciales, armaduras medias y escudos.",
+              "type": "pasivo",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            },
+            {
+              "level": 3,
+              "id": "combate_extra",
+              "name": "Combate extra",
+              "description": "Cuando usas tu acción de Ataque, puedes hacer un ataque con arma como acción bono.",
+              "type": "accion_bono",
+              "uses": "1 por turno",
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            },
+            {
+              "level": 6,
+              "id": "inspiracion_bardica_combate",
+              "name": "Inspiración bárdica de combate",
+              "description": "Cuando usas tu Inspiración bárdica en una criatura, puedes elegir que la criatura pueda usar la inspiración para añadir el dado a su tirada de ataque con arma o a su tirada de daño con arma. Alternativamente, cuando una criatura aliada (que no seas tú) dentro de 60 pies de ti hace un ataque con arma, puedes usar tu reacción para gastar una de tus inspiraciones bárdicas, lanzar un d6 y añadir el número resultante a la tirada de ataque de la criatura.",
+              "type": "reaccion",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false,
+              "consumesResource": "inspiracion_bardica",
+              "resourceCost": 1
+            },
+            {
+              "level": 14,
+              "id": "ataque_extra",
+              "name": "Ataque extra",
+              "description": "Puedes hacer dos ataques con arma en lugar de uno cuando uses tu acción de Ataque.",
+              "type": "pasivo",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            }
+          ]
+        }
+      ],
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "druida",
+      "name": "Druida",
+      "description": "Los druidas son guardianes de la naturaleza que canalizan el poder primigenio del mundo para sanar, proteger y desatar fuerzas elementales. Sus conjuros provienen de su vínculo con la naturaleza más que del estudio o la devoción.",
+      "hitDie": "d8",
+      "primaryAbility": "Sabiduría",
+      "spellcastingAbility": "Sabiduría",
+      "spellCasterType": "preparados",
+      "savingThrowProficiencies": [
+        "Inteligencia",
+        "Sabiduría"
+      ],
+      "skillProficiencies": "Elige dos de: Naturaleza, Medicina, Perspicacia, Religión, Percepción, Supervivencia, Trato con animales",
+      "abilities": [
+        {
+          "quantity": 2,
+          "proficiencies": [
+            "naturaleza",
+            "medicina",
+            "perspicacia",
+            "religion",
+            "percepcion",
+            "supervivencia",
+            "trato_con_animales"
+          ]
+        }
+      ],
+      "proficiencies": {
+        "armas": [
+          "armas_simples"
+        ],
+        "armaduras": [
+          "armadura_ligera",
+          "armadura_mediana",
+          "escudos"
+        ],
+        "herramientas": []
+      },
+      "startingMoney": {
+        "coin": "po",
+        "dice": { "count": 5, "sides": 4, "multiplier": 10 }
+      },
+      "features": [
+        {
+          "level": 1,
+          "id": "lanzamiento_de_conjuros",
+          "name": "Lanzamiento de conjuros",
+          "description": "Has aprendido a canalizar la magia de la naturaleza en forma de conjuros de druida. Preparas tus conjuros cada día a partir de la lista de conjuros de druida y los lanzas usando Sabiduría como característica de conjuro.",
+          "type": "pasivo",
+          "uses": null,
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false
+        },
+        {
+          "level": 1,
+          "id": "idioma_druidico",
+          "name": "Idioma druídico",
+          "description": "Conoces el idioma secreto de los druidas. Puedes hablarlo y escribirlo, y puedes ocultar mensajes en inscripciones o marcas naturales que solo otros druidas pueden reconocer.",
+          "type": "pasivo",
+          "uses": null,
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false
+        },
+        {
+          "level": 2,
+          "id": "forma_salvaje",
+          "name": "Forma salvaje",
+          "description": "Puedes usar tu acción para transformarte mágicamente en una bestia que hayas visto antes. Tus opciones de forma, la duración y otras limitaciones dependen de tu nivel de druida.",
+          "type": "accion",
+          "uses": "2 por descanso corto o largo",
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false
+        },
+        {
+          "level": 2,
+          "id": "circulo_druidico",
+          "name": "Círculo druídico",
+          "description": "Te unes a un círculo de druidas que comparte tu filosofía sobre la naturaleza, como el Círculo de la Tierra o el Círculo de la Luna. Tu elección te otorga rasgos adicionales en los niveles 2, 6, 10 y 14.",
+          "type": "pasivo",
+          "uses": null,
+          "selector_arquetipo": true,
+          "canSelected": false,
+          "options": "druid_circles",
+          "selectMulti": false
+        },
+        {
+          "level": 18,
+          "id": "forma_temporal",
+          "name": "Forma atemporal",
+          "description": "El paso del tiempo casi no te afecta. Dejas de envejecer y eres inmune a los efectos mágicos que causarían envejecimiento.",
+          "type": "pasivo",
+          "uses": null,
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false
+        },
+        {
+          "level": 20,
+          "id": "arquidruida",
+          "name": "Arquidruida",
+          "description": "Puedes usar Forma salvaje un número ilimitado de veces y puedes lanzar ciertos conjuros de druida en tu forma salvaje sin necesidad de componentes materiales ni somáticos.",
+          "type": "pasivo",
+          "uses": null,
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false
+        }
+      ],
+      "archetypes": [
+        {
+          "id": "circulo_tierra",
+          "name": "Círculo de la Tierra",
+          "description": "Eres un druida profundamente ligado a una región o bioma concreto, como bosques, montañas o costas, y obtienes poder adicional de esa tierra.",
+          "obtainedLevel": 2,
+          "features": [
+            {
+              "level": 2,
+              "id": "vinculo_con_la_tierra",
+              "name": "Vínculo con la tierra",
+              "description": "Elige un tipo de terreno como tu círculo (bosque, montaña, pantano, etc.). Obtienes ventaja en tiradas de Sabiduría (Supervivencia) y de Inteligencia (Naturaleza) relacionadas con ese entorno.",
+              "type": "pasivo",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            },
+            {
+              "level": 6,
+              "id": "recuperacion_natural",
+              "name": "Recuperación natural",
+              "description": "Durante un descanso corto en tu terreno de círculo, recuperas espacios de conjuro gastados con un valor combinado igual o inferior a la mitad de tu nivel de druida (redondeado hacia arriba).",
+              "type": "pasivo",
+              "uses": "1 por descanso largo",
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            },
+            {
+              "level": 10,
+              "id": "caminar_sin_rastro",
+              "name": "Caminar sin rastro",
+              "description": "Mientras estés en tu terreno de círculo, tú y los aliados que elijas a 30 pies de ti no dejáis rastro alguno y tenéis ventaja en pruebas de Destreza (Sigilo) para evitar ser detectados.",
+              "type": "pasivo",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            },
+            {
+              "level": 14,
+              "id": "guardian_primigenio",
+              "name": "Guardián primigenio",
+              "description": "Cuando estés en tu terreno de círculo, puedes usar tu reacción para imponer desventaja a una tirada de ataque dirigida contra una criatura aliada a 30 pies de ti.",
+              "type": "reaccion",
+              "uses": "1 por turno",
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            }
+          ]
+        },
+        {
+          "id": "circulo_luna",
+          "name": "Círculo de la Luna",
+          "description": "Te especializas en adoptar formas salvajes más poderosas, convirtiéndote en una bestia temible en combate.",
+          "obtainedLevel": 2,
+          "features": [
+            {
+              "level": 2,
+              "id": "forma_salvaje_mejorada",
+              "name": "Forma salvaje mejorada",
+              "description": "Puedes usar Forma salvaje como acción bonus y puedes adoptar formas de bestias más poderosas que otros druidas del mismo nivel.",
+              "type": "pasivo",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            },
+            {
+              "level": 6,
+              "id": "defensa_primitiva",
+              "name": "Defensa primitiva",
+              "description": "Mientras estás en Forma salvaje, tienes resistencia al daño cortante, perforante y contundente de ataques no mágicos.",
+              "type": "pasivo",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            },
+            {
+              "level": 10,
+              "id": "forma_guardiana",
+              "name": "Forma guardiana",
+              "description": "Mientras estás en Forma salvaje, las criaturas hostiles a 5 pies de ti tienen desventaja en las tiradas de ataque contra objetivos que no seas tú.",
+              "type": "pasivo",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            },
+            {
+              "level": 14,
+              "id": "metamorfosis_incesante",
+              "name": "Metamorfosis incesante",
+              "description": "Cuando tus puntos de golpe en Forma salvaje se reducen a 0, puedes gastar una de tus usos de Forma salvaje para adoptar otra forma de bestia como reacción, recuperando puntos de golpe de la nueva forma.",
+              "type": "reaccion",
+              "uses": "1 por turno",
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            }
+          ]
+        }
+      ],
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "mago",
+      "name": "Mago",
+      "description": "Los magos son estudiosos de la magia arcana que obtienen su poder a través de años de estudio y práctica. Guardan sus conjuros en un grimorio y los preparan cada día a partir de éste.",
+      "hitDie": "d6",
+      "primaryAbility": "Inteligencia",
+      "spellcastingAbility": "Inteligencia",
+      "spellCasterType": "grimorio",
+      "savingThrowProficiencies": [
+        "Inteligencia",
+        "Sabiduría"
+      ],
+      "skillProficiencies": "Elige dos de: Arcana, Historia, Investigación, Perspicacia, Religión, Medicina",
+      "abilities": [
+        {
+          "quantity": 2,
+          "proficiencies": [
+            "conocimiento_arcano",
+            "historia",
+            "investigacion",
+            "perspicacia",
+            "religion",
+            "medicina"
+          ]
+        }
+      ],
+      "proficiencies": {
+        "armas": [
+          "daga",
+          "baston",
+          "dardo",
+          "honda",
+          "ballesta_ligera"
+        ],
+        "armaduras": [],
+        "herramientas": []
+      },
+      "startingMoney": {
+        "coin": "po",
+        "dice": { "count": 3, "sides": 4, "multiplier": 10 }
+      },
+      "features": [
+        {
+          "level": 1,
+          "id": "lanzamiento_de_conjuros",
+          "name": "Lanzamiento de conjuros",
+          "description": "Tu estudio de la magia arcana te ha permitido dominar el lanzamiento de conjuros de mago. Guardas tus conjuros en un grimorio, y debes tener un grimorio equipado para poder lanzar conjuros de nivel 1 o superior.",
+          "type": "pasivo",
+          "uses": null,
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false
+        },
+        {
+          "level": 1,
+          "id": "recuperacion_arcana",
+          "name": "Recuperación arcana",
+          "description": "Has aprendido a recuperar parte de tu energía mágica durante un descanso corto. Una vez por día, cuando termines un descanso corto, puedes elegir espacios de conjuro que tengan un nivel combinado igual o inferior a la mitad de tu nivel de mago (redondeado hacia arriba). Los espacios elegidos se recuperan.",
+          "type": "pasivo",
+          "uses": "1 por descanso largo",
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false
+        },
+        {
+          "level": 2,
+          "id": "tradicion_arcana",
+          "name": "Tradición arcana",
+          "description": "A partir del nivel 2, eliges una tradición arcana que refleja tu enfoque en el estudio de la magia, como la escuela de Evocación o la escuela de Ilusión. Tu elección te otorga rasgos adicionales en los niveles 2, 6, 10 y 14.",
+          "type": "pasivo",
+          "uses": null,
+          "selector_arquetipo": true,
+          "canSelected": false,
+          "options": "wizard_schools",
+          "selectMulti": false
+        },
+        {
+          "level": 18,
+          "id": "maestria_de_conjuros",
+          "name": "Maestría de conjuros",
+          "description": "Eliges un conjuro de mago de nivel 1 y otro de nivel 2 de tu grimorio. Puedes lanzar estos conjuros a su nivel más bajo sin gastar espacios de conjuro siempre que los tengas preparados.",
+          "type": "pasivo",
+          "uses": null,
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false
+        },
+        {
+          "level": 20,
+          "id": "firma_magica",
+          "name": "Firma mágica",
+          "description": "Eliges dos conjuros de mago de nivel 3 en tu grimorio como tu firma mágica. Siempre tienes estos conjuros preparados y puedes lanzarlos una vez cada uno sin gastar espacios de conjuro.",
+          "type": "pasivo",
+          "uses": null,
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false
+        }
+      ],
+      "archetypes": [
+        {
+          "id": "escuela_evocacion",
+          "name": "Escuela de evocación",
+          "description": "Te especializas en conjuros que manipulan energía elemental y fuerza bruta para causar daño devastador.",
+          "obtainedLevel": 2,
+          "features": [
+            {
+              "level": 2,
+              "id": "evocador_experto",
+              "name": "Evocador experto",
+              "description": "Dado tu enfoque en la escuela de Evocación, cuando lances un conjuro de evocación puedes añadir tu modificador de Inteligencia a una de las tiradas de daño del conjuro.",
+              "type": "pasivo",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            },
+            {
+              "level": 6,
+              "id": "escultura_de_conjuros",
+              "name": "Escultura de conjuros",
+              "description": "Puedes modelar tus conjuros de área de tal forma que eviten golpear a ciertos aliados. Cuando lanzas un conjuro de evocación que afecta a otras criaturas que puedas ver, puedes elegir un número de ellas igual a 1 + el nivel del conjuro. Las criaturas elegidas superan automáticamente sus tiradas de salvación contra el conjuro y no reciben daño si normalmente recibirían la mitad.",
+              "type": "pasivo",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            },
+            {
+              "level": 10,
+              "id": "evocacion_potente",
+              "name": "Evocación potente",
+              "description": "Cuando una criatura que realiza una tirada de salvación contra uno de tus conjuros de evocación consigue una tirada para recibir solo la mitad del daño, en su lugar recibe el daño completo.",
+              "type": "pasivo",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            },
+            {
+              "level": 14,
+              "id": "sobrecarga_de_poder",
+              "name": "Sobrecarga de poder",
+              "description": "Cuando lanzas un conjuro de evocación de nivel 5 o inferior que inflige daño, puedes decidir maximizar el daño del conjuro. Una vez que uses esta característica, debes terminar un descanso largo antes de poder usarla de nuevo.",
+              "type": "pasivo",
+              "uses": "1 por descanso largo",
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            }
+          ]
+        },
+        {
+          "id": "escuela_ilusion",
+          "name": "Escuela de ilusión",
+          "description": "Te especializas en conjuros que engañan los sentidos, crean imágenes falsas y manipulan la percepción de la realidad.",
+          "obtainedLevel": 2,
+          "features": [
+            {
+              "level": 2,
+              "id": "ilusionista_novato",
+              "name": "Ilusionista novato",
+              "description": "Aumentas el alcance de tus conjuros de ilusión en 10 pies y tienes ventaja en tiradas de habilidad para mantener o reforzar una ilusión convincente.",
+              "type": "pasivo",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            },
+            {
+              "level": 6,
+              "id": "realidad_maleable",
+              "name": "Realidad maleable",
+              "description": "Cuando una criatura supera una tirada de salvación para ver a través de una de tus ilusiones, puedes usar tu reacción para forzarla a repetir la tirada con desventaja.",
+              "type": "reaccion",
+              "uses": "1 por turno",
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            },
+            {
+              "level": 10,
+              "id": "ilusiones_persistentes",
+              "name": "Ilusiones persistentes",
+              "description": "Las ilusiones de duración limitada que creas con conjuros de mago duran 1 minuto adicional después de su duración normal, siempre que te mantengas concentrado en mantener el efecto.",
+              "type": "pasivo",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            },
+            {
+              "level": 14,
+              "id": "realidad_mejorada",
+              "name": "Realidad mejorada",
+              "description": "Puedes imbuir parte de tus ilusiones con un toque de realidad. Una vez por turno, cuando una criatura falle una tirada de salvación contra una de tus ilusiones, puedes hacer que reciba 2d8 de daño psíquico adicional.",
+              "type": "pasivo",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            }
+          ]
+        }
+      ],
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "barbaro",
+      "name": "Bárbaro",
+      "description": "Los bárbaros son guerreros primitivos que canalizan una furia interior para desatar una fuerza, resistencia e instintos sobrenaturales en combate.",
+      "hitDie": "d12",
+      "primaryAbility": "Fuerza",
+      "spellcastingAbility": null,
+      "spellCasterType": null,
+      "savingThrowProficiencies": [
+        "Fuerza",
+        "Constitución"
+      ],
+      "skillProficiencies": "Elige dos de: Atletismo, Intimidación, Naturaleza, Percepción, Supervivencia, Trato con animales",
+      "abilities": [
+        {
+          "quantity": 2,
+          "proficiencies": [
+            "atletismo",
+            "intimidacion",
+            "naturaleza",
+            "percepcion",
+            "supervivencia",
+            "trato_con_animales"
+          ]
+        }
+      ],
+      "proficiencies": {
+        "armas": [
+          "armas_simples",
+          "armas_marciales"
+        ],
+        "armaduras": [
+          "armadura_ligera",
+          "armadura_mediana",
+          "escudos"
+        ],
+        "herramientas": []
+      },
+      "startingMoney": {
+        "coin": "po",
+        "dice": { "count": 2, "sides": 4, "multiplier": 10 }
+      },
+      "features": [
+        {
+          "level": 1,
+          "id": "furia",
+          "name": "Furia",
+          "description": "En combate puedes usar tu acción adicional para entrar en furia. Mientras estés enfurecido y no lleves armadura pesada, tienes ventaja en pruebas y tiradas de salvación de Fuerza, obtienes un bonificador al daño con ataques cuerpo a cuerpo basados en Fuerza y tienes resistencia al daño contundente, cortante y perforante. No puedes lanzar ni concentrarte en conjuros mientras estés enfurecido. La furia dura 1 minuto o hasta que caigas inconsciente, termines tu turno sin haber atacado o sufrido daño desde tu turno anterior, o la termines voluntariamente como acción adicional. El número de veces que puedes entrar en furia entre descansos largos depende de tu nivel de bárbaro.",
+          "type": "accion_bonus",
+          "uses": null,
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false,
+          "unlocksResource": "rabia"
+        },
+        {
+          "level": 1,
+          "id": "defensa_sin_armadura",
+          "name": "Defensa sin armadura",
+          "description": "Si no llevas ninguna armadura, tu Clase de Armadura es 10 + tu modificador por Destreza + tu modificador por Constitución. Puedes usar un escudo y seguir beneficiándote de este rasgo.",
+          "type": "pasivo",
+          "uses": null,
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false
+        },
+        {
+          "level": 2,
+          "id": "ataque_temerario",
+          "name": "Ataque temerario",
+          "description": "Cuando haces tu primer ataque en cada turno puedes decidir atacar temerariamente. Si lo haces, tienes ventaja en las tiradas de ataque cuerpo a cuerpo con Fuerza durante ese turno, pero las tiradas de ataque contra ti tienen ventaja hasta el inicio de tu siguiente turno.",
+          "type": "pasivo",
+          "uses": null,
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false
+        },
+        {
+          "level": 2,
+          "id": "sentir_el_peligro",
+          "name": "Sentir el peligro",
+          "description": "Eres capaz de percibir de forma casi sobrenatural cuándo lo que te rodea no es como debería ser. Tienes ventaja en las tiradas de salvación de Destreza contra efectos que puedas ver, como trampas y conjuros. No obtienes este beneficio si estás cegado, ensordecido o incapacitado.",
+          "type": "pasivo",
+          "uses": null,
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false
+        },
+        {
+          "level": 3,
+          "id": "senda_primordial",
+          "name": "Senda primordial",
+          "description": "Eliges una senda que determina la naturaleza de tu furia, como la Senda del Berserker o la Senda del Guerrero Totémico. Esta elección te otorga rasgos adicionales en los niveles 3, 6, 10 y 14.",
+          "type": "pasivo",
+          "uses": null,
+          "selector_arquetipo": true,
+          "canSelected": false,
+          "options": "barbarian_paths",
+          "selectMulti": false
+        },
+        {
+          "level": 5,
+          "id": "ataque_adicional",
+          "name": "Ataque adicional",
+          "description": "Cuando realizas la acción de Ataque en tu turno, puedes atacar dos veces en lugar de una.",
+          "type": "pasivo",
+          "uses": null,
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false
+        },
+        {
+          "level": 5,
+          "id": "movimiento_rapido",
+          "name": "Movimiento rápido",
+          "description": "Si no llevas armadura pesada, tu velocidad aumenta en 10 pies.",
+          "type": "pasivo",
+          "uses": null,
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false
+        },
+        {
+          "level": 7,
+          "id": "instinto_salvaje",
+          "name": "Instinto salvaje",
+          "description": "Tienes ventaja en las tiradas de iniciativa. Además, si estás sorprendido al inicio de un combate puedes actuar con normalidad en tu primer turno si te enfureces antes de hacer cualquier otra cosa en ese turno.",
+          "type": "pasivo",
+          "uses": null,
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false
+        },
+        {
+          "level": 9,
+          "id": "critico_brutal",
+          "name": "Crítico brutal",
+          "description": "Cuando saques un golpe crítico con un ataque cuerpo a cuerpo tiras un dado de daño adicional del arma y lo sumas al daño extra del crítico. A niveles superiores tiras más dados adicionales según indica la tabla del bárbaro.",
+          "type": "pasivo",
+          "uses": null,
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false
+        },
+        {
+          "level": 11,
+          "id": "furia_implacable",
+          "name": "Furia implacable",
+          "description": "Si tus puntos de golpe se reducen a 0 mientras estás enfurecido y no mueres instantáneamente, puedes hacer una tirada de salvación de Constitución CD 10. Si la superas, pasas a tener 1 punto de golpe en lugar de 0. Cada vez que uses este rasgo antes de terminar un descanso corto o largo, la CD aumenta en 5. Tras descansar, la CD vuelve a 10.",
+          "type": "pasivo",
+          "uses": null,
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false
+        },
+        {
+          "level": 15,
+          "id": "furia_persistente",
+          "name": "Furia persistente",
+          "description": "Tu furia solo termina antes de tiempo si quedas inconsciente o la finalizas voluntariamente en tu turno como acción adicional.",
+          "type": "pasivo",
+          "uses": null,
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false
+        },
+        {
+          "level": 18,
+          "id": "poderio_indomito",
+          "name": "Poderío indómito",
+          "description": "Cuando hagas una prueba de Fuerza y el resultado del dado sea menor que tu puntuación de Fuerza, puedes usar tu puntuación de Fuerza en lugar del resultado obtenido.",
+          "type": "pasivo",
+          "uses": null,
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false
+        },
+        {
+          "level": 20,
+          "id": "campeon_primordial",
+          "name": "Campeón primordial",
+          "description": "Encarnas el poder de la naturaleza salvaje. Tus puntuaciones de Fuerza y Constitución aumentan en 4 y su valor máximo pasa a ser 24.",
+          "type": "pasivo",
+          "uses": null,
+          "canSelected": false,
+          "options": "",
+          "selectMulti": false
+        }
+      ],
+      "archetypes": [
+        {
+          "id": "berserker",
+          "name": "Senda del Berserker",
+          "description": "La Senda del Berserker se centra en una furia sin cortapisas cubierta de sangre, en la que el bárbaro sacrifica su propia seguridad por una violencia desatada.",
+          "obtainedLevel": 3,
+          "features": [
+            {
+              "level": 3,
+              "id": "frenesi",
+              "name": "Frenesí",
+              "description": "Cuando entras en furia puedes elegir entrar en frenesí. Mientras dure, puedes hacer un ataque cuerpo a cuerpo adicional como acción bonus en cada uno de tus turnos, empezando por el siguiente al que entraste en furia. Cuando la furia termina sufres un nivel de cansancio.",
+              "type": "accion_bonus",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            },
+            {
+              "level": 6,
+              "id": "furia_irracional",
+              "name": "Furia irracional",
+              "description": "Mientras estés enfurecido no puedes ser asustado ni hechizado. Si estabas asustado o hechizado antes de enfurecerte, esos efectos quedan suprimidos mientras dure tu furia.",
+              "type": "pasivo",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            },
+            {
+              "level": 10,
+              "id": "presencia_intimidante",
+              "name": "Presencia intimidante",
+              "description": "Puedes usar tu acción para intentar asustar a una criatura que puedas ver a 30 pies o menos de ti. Si puede verte u oírte, debe hacer una tirada de salvación de Sabiduría (CD 8 + tu bonificador de competencia + tu modificador de Carisma) o quedará asustada de ti hasta el final de tu siguiente turno. Puedes usar tu acción en turnos posteriores para mantener el efecto. Si supera la tirada, no puedes volver a usar este rasgo contra ella hasta pasadas 24 horas.",
+              "type": "accion",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            },
+            {
+              "level": 14,
+              "id": "represalia",
+              "name": "Represalia",
+              "description": "Cuando una criatura a 5 pies o menos de ti te haga daño, puedes usar tu reacción para hacer un ataque cuerpo a cuerpo con arma contra esa criatura.",
+              "type": "reaccion",
+              "uses": "1 por turno",
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            }
+          ]
+        },
+        {
+          "id": "guerrero_totemico",
+          "name": "Senda del Guerrero Totémico",
+          "description": "Los bárbaros de la Senda del Guerrero Totémico aceptan a un espíritu animal como guía y protector, canalizando energía mágica a través de su furia.",
+          "obtainedLevel": 3,
+          "features": [
+            {
+              "level": 3,
+              "id": "buscador_de_espiritus",
+              "name": "Buscador de espíritus",
+              "description": "Puedes lanzar hablar con los animales y sentidos de la bestia como rituales, representando tu vínculo espiritual con las criaturas salvajes.",
+              "type": "pasivo",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            },
+            {
+              "level": 3,
+              "id": "espiritu_totemico",
+              "name": "Espíritu totémico",
+              "description": "Eliges un espíritu animal totémico (águila, lobo u oso) que te concede un rasgo mientras estás enfurecido, como mejorar tu movilidad, apoyar a tus aliados o proporcionarte una resistencia extraordinaria. Debes crear o portar un tótem físico asociado al animal.",
+              "type": "pasivo",
+              "uses": null,
+              "canSelected": true,
+              "options": "totems",
+              "selectMulti": false
+            },
+            {
+              "level": 6,
+              "id": "semblanza_de_la_bestia",
+              "name": "Semblanza de la bestia",
+              "description": "Eliges de nuevo un tótem animal (o repites el anterior) y obtienes un poder mágico asociado, como vista aguda, instinto de caza o fuerza incrementada y capacidad de carga superior.",
+              "type": "pasivo",
+              "uses": null,
+              "canSelected": true,
+              "options": "totems",
+              "selectMulti": false
+            },
+            {
+              "level": 10,
+              "id": "caminante_espiritual",
+              "name": "Caminante espiritual",
+              "description": "Puedes lanzar comunión con la naturaleza como ritual. La información te llega a través de una versión espiritual de uno de tus animales totémicos.",
+              "type": "pasivo",
+              "uses": null,
+              "canSelected": false,
+              "options": "",
+              "selectMulti": false
+            },
+            {
+              "level": 14,
+              "id": "armonia_totemica",
+              "name": "Armonía totémica",
+              "description": "Eliges de nuevo un tótem animal (o uno nuevo) y obtienes un rasgo poderoso asociado, como vuelo mientras estés enfurecido, derribar enemigos con tus ataques o proteger a aliados cercanos imponiendo desventaja a los ataques contra ellos.",
+              "type": "pasivo",
+              "uses": null,
+              "canSelected": true,
+              "options": "totems",
+              "selectMulti": false
+            }
+          ]
+        }
+      ],
+      "source": "Manual del Jugador"
+    }
+  ]
+}

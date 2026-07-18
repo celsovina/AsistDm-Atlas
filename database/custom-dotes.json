@@ -1,0 +1,30 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "lastUpdated": "2026-03-04",
+    "description": "Dotes personalizadas creadas desde el modal de dotes.",
+    "totalDotes": 1
+  },
+  "dotes": [
+    {
+      "id": "dotetest",
+      "name": "DoteTest",
+      "description": "Dote de prueba",
+      "beneficios": [
+        "Test"
+      ],
+      "prerequisitos": [
+        {
+          "tipo": "raza",
+          "raza": "genasi"
+        }
+      ],
+      "efectos": {
+        "modificadores": {
+          "ca": "+12"
+        }
+      },
+      "fuente": "Personalizado"
+    }
+  ]
+}

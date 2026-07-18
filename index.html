@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#2a2e36" />
+  <meta name="description" content="Atlas — Enciclopedia móvil del sistema AsistDM" />
+  <title>Atlas</title>
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/catalog.css" />
+  <link rel="stylesheet" href="css/filters.css" />
+  <link rel="stylesheet" href="css/classes.css" />
+  <link rel="stylesheet" href="css/custom-select.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div class="atlas-app" id="atlas-app">
+    <aside class="atlas-sidebar" aria-label="Menú Atlas">
+      <button
+        type="button"
+        class="atlas-nav-btn atlas-nav-btn--active"
+        data-section="home"
+        aria-label="Inicio"
+        data-tooltip="Inicio"
+      >
+        <i data-lucide="house"></i>
+      </button>
+      <button
+        type="button"
+        class="atlas-nav-btn"
+        data-section="conjuros"
+        aria-label="Conjuros"
+        data-tooltip="Conjuros"
+      >
+        <i data-lucide="wand"></i>
+      </button>
+      <button
+        type="button"
+        class="atlas-nav-btn"
+        data-section="clases"
+        aria-label="Clases"
+        data-tooltip="Clases"
+      >
+        <i data-lucide="swords"></i>
+      </button>
+      <button
+        type="button"
+        class="atlas-nav-btn"
+        data-section="billetera"
+        aria-label="Billetera"
+        data-tooltip="Billetera"
+      >
+        <i data-lucide="coins"></i>
+      </button>
+    </aside>
+
+    <main class="atlas-workspace">
+      <!-- Inicio -->
+      <div class="atlas-home-page atlas-section" id="home-page" data-section-panel="home">
+        <div class="atlas-home">
+          <header class="atlas-home__header">
+            <h1 class="atlas-home__title">Guía de bolsillo</h1>
+            <p class="atlas-home__lead">
+              ¡Bienvenido! Aquí encontrarás la información que no siempre tienes
+              a mano, pero que te resulta útil en más de una ocasión: conjuros,
+              rasgos de clase y, pronto, tu monedero para la mesa.
+            </p>
+          </header>
+          <nav class="atlas-home__modules" aria-label="Módulos de Atlas">
+            <button type="button" class="atlas-home__module" data-section="conjuros">
+              <span class="atlas-home__module-icon" aria-hidden="true">
+                <i data-lucide="wand"></i>
+              </span>
+              <span class="atlas-home__module-text">
+                <span class="atlas-home__module-label">Conjuros</span>
+                <span class="atlas-home__module-hint">Trucos y hechizos por nivel, escuela y clase</span>
+              </span>
+            </button>
+            <button type="button" class="atlas-home__module" data-section="clases">
+              <span class="atlas-home__module-icon" aria-hidden="true">
+                <i data-lucide="swords"></i>
+              </span>
+              <span class="atlas-home__module-text">
+                <span class="atlas-home__module-label">Clases</span>
+                <span class="atlas-home__module-hint">Rasgos, arquetipos y conjuros de clase</span>
+              </span>
+            </button>
+            <button type="button" class="atlas-home__module" data-section="billetera">
+              <span class="atlas-home__module-icon" aria-hidden="true">
+                <i data-lucide="coins"></i>
+              </span>
+              <span class="atlas-home__module-text">
+                <span class="atlas-home__module-label">Billetera</span>
+                <span class="atlas-home__module-hint">Monedas y conversiones (próximamente)</span>
+              </span>
+            </button>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Sección Conjuros -->
+      <div class="atlas-spells-page atlas-section" id="spells-page" data-section-panel="conjuros" hidden>
+        <section class="atlas-catalog" id="atlas-catalog" aria-label="Catálogo de conjuros">
+          <div class="atlas-search-row" id="atlas-search-row">
+            <input
+              type="search"
+              id="spells-search-input"
+              class="spells-search-input"
+              placeholder="Buscar hechizo, conjuro o truco"
+              autocomplete="off"
+              enterkeyhint="search"
+            />
+            <div id="filter-mount"></div>
+          </div>
+
+          <div class="description-box spells-list" id="spells-list"></div>
+
+          <button type="button" class="atlas-selected-bar" id="selected-bar" hidden>
+            <span class="atlas-selected-bar__back" aria-hidden="true">
+              <i data-lucide="chevron-left"></i>
+            </span>
+            <span class="atlas-selected-bar__name" id="selected-bar-name">—</span>
+            <span class="spells-badge" id="selected-bar-meta"></span>
+          </button>
+        </section>
+
+        <section class="atlas-detail spells-detail" id="atlas-detail" aria-label="Detalle del conjuro">
+          <div class="description-box spells-description" id="spells-detail-pane">
+            <div class="description-placeholder">Selecciona un hechizo para ver su información detallada.</div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Sección Clases -->
+      <div class="atlas-classes-page atlas-section" id="classes-page" data-section-panel="clases" hidden>
+        <section class="atlas-catalog" id="classes-catalog" aria-label="Catálogo de clases">
+          <div class="atlas-search-row">
+            <input
+              type="search"
+              id="classes-search-input"
+              class="spells-search-input"
+              placeholder="Buscar clase…"
+              autocomplete="off"
+              enterkeyhint="search"
+            />
+          </div>
+
+          <button type="button" class="atlas-selected-bar" id="classes-selected-bar" hidden>
+            <span class="atlas-selected-bar__back" aria-hidden="true">
+              <i data-lucide="chevron-left"></i>
+            </span>
+            <span class="atlas-selected-bar__name" id="classes-selected-bar-name">—</span>
+            <span class="spells-badge" id="classes-selected-bar-meta"></span>
+          </button>
+
+          <div class="description-box spells-list" id="classes-list"></div>
+        </section>
+
+        <section class="atlas-detail" id="classes-detail" aria-label="Detalle de la clase">
+          <div class="description-box" id="classes-detail-pane">
+            <div class="description-placeholder">Selecciona una clase para ver su información.</div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Sección Billetera (placeholder) -->
+      <div class="atlas-wallet-page atlas-section" id="wallet-page" data-section-panel="billetera" hidden>
+        <div class="atlas-wallet-placeholder">
+          <h2>Billetera</h2>
+          <p>Monedas y conversiones estándar de D&amp;D. Este módulo se implementará a continuación.</p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

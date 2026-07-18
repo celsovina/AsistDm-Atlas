@@ -1,0 +1,60 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "lastUpdated": "2024-12-19",
+    "description": "Tipos de daño para D&D 5e - Manual del Jugador (2018)",
+    "totalTipos": 10
+  },
+  "tipos": [
+    {
+      "id": "cortante",
+      "nombre": "Cortante",
+      "descripcion": "Daño causado por armas afiladas como espadas, hachas o garras de criaturas."
+    },
+    {
+      "id": "perforante",
+      "nombre": "Perforante",
+      "descripcion": "Daño causado por armas puntiagudas como lanzas, flechas o colmillos."
+    },
+    {
+      "id": "contundente",
+      "nombre": "Contundente",
+      "descripcion": "Daño causado por armas pesadas como martillos, mazas o puños."
+    },
+    {
+      "id": "fuego",
+      "nombre": "Fuego",
+      "descripcion": "Daño causado por llamas, calor extremo o energía ígnea."
+    },
+    {
+      "id": "frio",
+      "nombre": "Frío",
+      "descripcion": "Daño causado por temperaturas extremadamente bajas o energía gélida."
+    },
+    {
+      "id": "electrico",
+      "nombre": "Eléctrico",
+      "descripcion": "Daño causado por descargas eléctricas o energía relámpago."
+    },
+    {
+      "id": "acido",
+      "nombre": "Ácido",
+      "descripcion": "Daño causado por sustancias corrosivas o energía ácida."
+    },
+    {
+      "id": "veneno",
+      "nombre": "Veneno",
+      "descripcion": "Daño causado por toxinas, venenos o energía tóxica."
+    },
+    {
+      "id": "necrotico",
+      "nombre": "Necrótico",
+      "descripcion": "Daño causado por energía que drena la vida o corrompe la materia."
+    },
+    {
+      "id": "radiante",
+      "nombre": "Radiante",
+      "descripcion": "Daño causado por energía divina, luz sagrada o energía celestial."
+    }
+  ]
+}

@@ -1,0 +1,571 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "lastUpdated": "2024-12-19",
+    "description": "Base de datos de competencias para D&D 5e - Manual del Jugador (2018)"
+  },
+  "Weapons": [
+    {
+      "id": "armas_simples",
+      "name": "Armas Simples",
+      "description": "Estas armas son fáciles de usar y de aprender a manejar. Reflejan las armas que la gente común usa para cazar, defenderse o trabajar. Las armas simples incluyen garrotes, dagas, hondas y otras armas similares.\n\nDominio de Armas Simples: Cualquiera puede usar un arma simple sin entrenamiento, pero un personaje que tiene dominio de armas simples puede añadir su bonificador de competencia a las tiradas de ataque que haga con ellas.",
+      "content": [
+        "Garrote",
+        "Daga",
+        "Gran maza",
+        "Hacha de mano",
+        "Jabalina",
+        "Maza",
+        "Vara",
+        "Hoz",
+        "Boleadoras",
+        "Cerbatana",
+        "Honda",
+        "Dardo"
+      ],
+      "category_link": "arma_simple",
+      "item_reference": null
+    },
+    {
+      "id": "armas_marciales",
+      "name": "Armas Marciales",
+      "description": "Las armas marciales, incluyendo espadas, hachas y arcos, requieren más habilidad especializada para usarlas eficazmente. La mayoría de guerreros las usan, y muchas personas prefieren las armas simples por su simplicidad y confiabilidad.\n\nDominio de Armas Marciales: Un personaje que tiene dominio de armas marciales puede añadir su bonificador de competencia a las tiradas de ataque que haga con armas marciales.",
+      "content": [
+        "Espada larga",
+        "Espada corta",
+        "Espadón",
+        "Hacha de batalla",
+        "Hacha de guerra",
+        "Martillo de guerra",
+        "Maza de guerra",
+        "Lanza",
+        "Alabarda",
+        "Guja",
+        "Tridente",
+        "Látigo",
+        "Ballesta ligera",
+        "Ballesta de mano",
+        "Ballesta pesada",
+        "Arco corto",
+        "Arco largo",
+        "Red"
+      ],
+      "category_link": "arma_marcial",
+      "item_reference": null
+    },
+    {
+      "id": "armas_de_fuego",
+      "name": "Armas de Fuego",
+      "description": "Las armas de fuego son armas avanzadas que utilizan pólvora para propulsar proyectiles. Estas armas son raras en la mayoría de los mundos de D&D, pero pueden encontrarse en campañas con tecnología más avanzada o en mundos con acceso a la pólvora.\n\nDominio de Armas de Fuego: Un personaje que tiene dominio de armas de fuego puede añadir su bonificador de competencia a las tiradas de ataque que haga con armas de fuego.",
+      "content": [
+        "Pistola",
+        "Mosquete",
+        "Pistola de duelo",
+        "Revólver",
+        "Rifle",
+        "Escopeta",
+        "Rifle de asalto"
+      ],
+      "category_link": "arma_de_fuego",
+      "item_reference": null
+    },
+    {
+      "id": "armas_de_asedio",
+      "name": "Armas de Asedio",
+      "description": "Las armas de asedio son armas masivas diseñadas para derribar fortificaciones y causar devastación en el campo de batalla. Estas armas requieren múltiples operadores y son demasiado grandes para ser usadas en combate personal.\n\nDominio de Armas de Asedio: Un personaje que tiene dominio de armas de asedio puede operar estas armas eficazmente. Normalmente se requiere un equipo de personas para operar estas armas.",
+      "content": [
+        "Catapulta",
+        "Ballesta de asedio",
+        "Trebuchet",
+        "Ariete",
+        "Torre de asedio",
+        "Cañón"
+      ],
+      "category_link": "arma_de_asedio",
+      "item_reference": null
+    }
+  ],
+  "Armors": [
+    {
+      "id": "armadura_ligera",
+      "name": "Armadura Ligera",
+      "description": "Hecha de materiales flexibles y finos, la armadura ligera favorece a los aventureros ágiles, ya que ofrece protección sin sacrificar la movilidad. Si llevas armadura ligera, añades tu modificador de Destreza al número de tu Clase de Armadura.\n\nDominio de Armadura Ligera: Cualquiera puede ponerse una armadura, pero solo aquellos competentes en el uso de armaduras saben cómo llevarla eficazmente. Tu clase te otorga competencia con ciertos tipos de armadura. Si llevas una armadura con la que no eres competente, tienes desventaja en cualquier prueba de característica, tirada de salvación o tirada de ataque que implique Fuerza o Destreza, y no puedes lanzar conjuros.",
+      "content": [
+        "Armadura de cuero",
+        "Armadura de cuero tachonado"
+      ],
+      "category_link": "armadura_ligera",
+      "item_reference": null
+    },
+    {
+      "id": "armadura_mediana",
+      "name": "Armadura Mediana",
+      "description": "La armadura mediana ofrece más protección que la armadura ligera, pero también impone más restricciones. Si llevas armadura mediana, añades tu modificador de Destreza (máximo +2) al número de tu Clase de Armadura.\n\nDominio de Armadura Mediana: Cualquiera puede ponerse una armadura, pero solo aquellos competentes en el uso de armaduras saben cómo llevarla eficazmente. Tu clase te otorga competencia con ciertos tipos de armadura. Si llevas una armadura con la que no eres competente, tienes desventaja en cualquier prueba de característica, tirada de salvación o tirada de ataque que implique Fuerza o Destreza, y no puedes lanzar conjuros.",
+      "content": [
+        "Cota de malla",
+        "Armadura de escamas"
+      ],
+      "category_link": "armadura_mediana",
+      "item_reference": null
+    },
+    {
+      "id": "armadura_pesada",
+      "name": "Armadura Pesada",
+      "description": "De todas las categorías de armadura, la armadura pesada ofrece la mejor protección. Estas armaduras cubren todo el cuerpo y están diseñadas para detener una amplia variedad de ataques. Solo los maestros guerreros pueden manejar su peso y volumen.\n\nDominio de Armadura Pesada: Cualquiera puede ponerse una armadura, pero solo aquellos competentes en el uso de armaduras saben cómo llevarla eficazmente. Tu clase te otorga competencia con ciertos tipos de armadura. Si llevas una armadura con la que no eres competente, tienes desventaja en cualquier prueba de característica, tirada de salvación o tirada de ataque que implique Fuerza o Destreza, y no puedes lanzar conjuros. Las armaduras pesadas no permiten añadir el modificador de Destreza a la CA, pero también no imponen límite máximo a ese modificador.",
+      "content": [
+        "Armadura de placas",
+        "Armadura completa"
+      ],
+      "category_link": "armadura_pesada",
+      "item_reference": null
+    },
+    {
+      "id": "escudos",
+      "name": "Escudos",
+      "description": "Un escudo está hecho de madera o metal y se lleva en una mano. Llevar un escudo aumenta tu Clase de Armadura en 2. Puedes beneficiarte de un solo escudo a la vez.\n\nDominio de Escudos: Cualquiera puede usar un escudo, pero solo aquellos competentes en el uso de escudos saben cómo usarlo eficazmente para protegerse. Tu clase te otorga competencia con escudos si tienes competencia con armaduras.",
+      "content": [
+        "Escudo",
+        "Escudo de combate"
+      ],
+      "category_link": "escudo",
+      "item_reference": null
+    }
+  ],
+  "Languages": [
+    {
+      "id": "comun",
+      "name": "Común",
+      "description": "El idioma más hablado en los Reinos Olvidados y la mayoría de los mundos de D&D. Es el idioma estándar para el comercio y la comunicación entre diferentes razas y culturas.",
+      "content": null,
+      "category_link": null,
+      "item_reference": null
+    },
+    {
+      "id": "elfico",
+      "name": "Élfico",
+      "description": "Un idioma fluido y elegante con una larga historia literaria. Los elfos valoran mucho la poesía y las canciones, y muchos bardos aprenden este idioma para incorporar sus melodías en sus actuaciones.",
+      "content": null,
+      "category_link": null,
+      "item_reference": null
+    },
+    {
+      "id": "enano",
+      "name": "Enano",
+      "description": "El idioma de los enanos, escrito con runas. Es un idioma fuerte y resonante, perfecto para las canciones de batalla y los relatos de grandes hazañas.",
+      "content": null,
+      "category_link": null,
+      "item_reference": null
+    },
+    {
+      "id": "gigante",
+      "name": "Gigante",
+      "description": "El idioma de los gigantes, un idioma poderoso y resonante que refleja la fuerza y la grandeza de estas criaturas. Es usado por gigantes de todas las variedades.",
+      "content": null,
+      "category_link": null,
+      "item_reference": null
+    },
+    {
+      "id": "gnomico",
+      "name": "Gnómico",
+      "description": "El idioma de los gnomos, conocido por sus descripciones técnicas y sus inventos. Los gnomos aman los juegos de palabras y los acertijos.",
+      "content": null,
+      "category_link": null,
+      "item_reference": null
+    },
+    {
+      "id": "goblin",
+      "name": "Goblin",
+      "description": "El idioma de los goblins y otras criaturas relacionadas. Es un idioma simple y directo, adecuado para órdenes y estrategias de batalla.",
+      "content": null,
+      "category_link": null,
+      "item_reference": null
+    },
+    {
+      "id": "mediano",
+      "name": "Mediano",
+      "description": "El idioma de los medianos, un idioma no secreto pero poco conocido. Los medianos no guardan secretos, pero rara vez viajan lejos de sus hogares, por lo que pocos conocen este idioma.",
+      "content": null,
+      "category_link": null,
+      "item_reference": null
+    },
+    {
+      "id": "orco",
+      "name": "Orco",
+      "description": "Un idioma áspero y gutural con consonantes duras. Los orcos usan este idioma para comunicarse entre tribus y para intimidar a sus enemigos.",
+      "content": null,
+      "category_link": null,
+      "item_reference": null
+    },
+    {
+      "id": "abisal",
+      "name": "Abisal",
+      "description": "El idioma de los demonios y otras criaturas del Abismo. Es un idioma caótico y corrupto, lleno de sonidos guturales y palabras que hieren los oídos de los mortales.",
+      "content": null,
+      "category_link": null,
+      "item_reference": null
+    },
+    {
+      "id": "celestial",
+      "name": "Celestial",
+      "description": "El idioma de los ángeles y otras criaturas celestiales. Es un idioma hermoso y armonioso, a menudo descrito como música para los oídos.",
+      "content": null,
+      "category_link": null,
+      "item_reference": null
+    },
+    {
+      "id": "infernal",
+      "name": "Infernal",
+      "description": "El idioma de los diablos y otras criaturas de los Nueve Infiernos. Es un idioma estructurado y legalista, perfecto para contratos y pactos.",
+      "content": null,
+      "category_link": null,
+      "item_reference": null
+    },
+    {
+      "id": "draconico",
+      "name": "Dracónico",
+      "description": "Uno de los idiomas más antiguos, el Dracónico es usado por los dragones, dragonianos y otros seres con ascendencia draconica. Es un idioma poderoso y majestuoso, a menudo usado en la magia arcana.",
+      "content": null,
+      "category_link": null,
+      "item_reference": null
+    },
+    {
+      "id": "undercommon",
+      "name": "Idioma de los Subterráneos (Undercommon)",
+      "description": "Un idioma común usado por los habitantes del Underdark, incluyendo a los drows, duergars y svirfneblins. Es una mezcla de varios idiomas adaptada para la comunicación en las profundidades.",
+      "content": null,
+      "category_link": null,
+      "item_reference": null
+    },
+    {
+      "id": "silvano",
+      "name": "Silvano",
+      "description": "El idioma de las criaturas del Plano Fey y los bosques mágicos. Es un idioma musical y encantador, lleno de referencias a la naturaleza y las estaciones.",
+      "content": null,
+      "category_link": null,
+      "item_reference": null
+    },
+    {
+      "id": "auran",
+      "name": "Auran",
+      "description": "El dialecto del Primordial hablado por los elementales de aire y las criaturas relacionadas con el viento y las nubes.",
+      "content": null,
+      "category_link": null,
+      "item_reference": null
+    },
+    {
+      "id": "aquan",
+      "name": "Aquan",
+      "description": "El dialecto del Primordial hablado por los elementales de agua y las criaturas acuáticas.",
+      "content": null,
+      "category_link": null,
+      "item_reference": null
+    },
+    {
+      "id": "ignan",
+      "name": "Ignan",
+      "description": "El dialecto del Primordial hablado por los elementales de fuego y las criaturas relacionadas con el fuego y el calor.",
+      "content": null,
+      "category_link": null,
+      "item_reference": null
+    },
+    {
+      "id": "terran",
+      "name": "Terran",
+      "description": "El dialecto del Primordial hablado por los elementales de tierra y las criaturas relacionadas con la piedra y la tierra.",
+      "content": null,
+      "category_link": null,
+      "item_reference": null
+    },
+    {
+      "id": "thieves_cant",
+      "name": "Lenguaje Criminal (Thieves' Cant)",
+      "description": "Un idioma secreto mezclado con el Común, usado por los pícaros, ladrones y otros criminales. Incluye jerga, señales y códigos que permiten a los miembros de la comunidad criminal comunicarse sin ser entendidos por extraños.",
+      "content": null,
+      "category_link": null,
+      "item_reference": null
+    }
+  ],
+  "Tools": [
+    {
+      "id": "herramientas_alquimista",
+      "name": "Herramientas de Alquimista",
+      "description": "Un conjunto de herramientas para crear pociones, venenos y otros brebajes alquímicos. Incluye frascos, alambiques, morteros y otros equipos necesarios para la alquimia.",
+      "content": null,
+      "category_link": "herramienta",
+      "item_reference": null
+    },
+    {
+      "id": "herramientas_cervecero",
+      "name": "Herramientas de Cervecero",
+      "description": "Equipamiento para elaborar cerveza, sidra y otras bebidas alcohólicas. Incluye cubas, barriles, embudos y otros utensilios de fermentación.",
+      "content": null,
+      "category_link": "herramienta",
+      "item_reference": null
+    },
+    {
+      "id": "herramientas_caligrafo",
+      "name": "Herramientas de Calígrafo",
+      "description": "Herramientas para crear documentos y obras de arte escritas de alta calidad. Incluye plumas, tintas especiales, pergaminos y otros materiales de escritura fina.",
+      "content": null,
+      "category_link": "herramienta",
+      "item_reference": null
+    },
+    {
+      "id": "herramientas_carpintero",
+      "name": "Herramientas de Carpintero",
+      "description": "Herramientas para construir y reparar estructuras de madera. Incluye sierras, martillos, cinceles, formones y otros instrumentos de carpintería.",
+      "content": null,
+      "category_link": "herramienta",
+      "item_reference": null
+    },
+    {
+      "id": "herramientas_cartografo",
+      "name": "Herramientas de Cartógrafo",
+      "description": "Herramientas para crear mapas precisos y detallados. Incluye compases, reglas, lápices especiales, papel de calidad y otros instrumentos de medición y dibujo.",
+      "content": null,
+      "category_link": "herramienta",
+      "item_reference": null
+    },
+    {
+      "id": "herramientas_zapatero",
+      "name": "Herramientas de Zapatero",
+      "description": "Herramientas para fabricar y reparar calzado. Incluye leznas, agujas especiales, hormas, cuero y otros materiales para trabajar el calzado.",
+      "content": null,
+      "category_link": "herramienta",
+      "item_reference": null
+    },
+    {
+      "id": "herramientas_cocinero",
+      "name": "Herramientas de Cocinero",
+      "description": "Utensilios para preparar comidas elaboradas y nutritivas. Incluye cuchillos especializados, ollas, sartenes, especias y otros equipos de cocina profesional.",
+      "content": null,
+      "category_link": "herramienta",
+      "item_reference": null
+    },
+    {
+      "id": "herramientas_vidriero",
+      "name": "Herramientas de Vidriero",
+      "description": "Herramientas para crear objetos de vidrio. Incluye sopletes, moldes, herramientas de corte y otros instrumentos para trabajar el vidrio.",
+      "content": null,
+      "category_link": "herramienta",
+      "item_reference": null
+    },
+    {
+      "id": "herramientas_joyero",
+      "name": "Herramientas de Joyero",
+      "description": "Herramientas para crear joyas y objetos ornamentales. Incluye pinzas, limas, herramientas de grabado, yunque pequeño y otros instrumentos de joyería.",
+      "content": null,
+      "category_link": "herramienta",
+      "item_reference": null
+    },
+    {
+      "id": "herramientas_curtidor",
+      "name": "Herramientas de Curtidor",
+      "description": "Herramientas para trabajar el cuero y fabricar armaduras y otros objetos de cuero. Incluye cuchillos de curtidor, herramientas de estampado, agujas y otros utensilios.",
+      "content": null,
+      "category_link": "herramienta",
+      "item_reference": null
+    },
+    {
+      "id": "herramientas_albanil",
+      "name": "Herramientas de Albañil",
+      "description": "Herramientas para construir y reparar estructuras de piedra. Incluye cinceles, martillos de albañil, niveles, plomadas y otros instrumentos de construcción.",
+      "content": null,
+      "category_link": "herramienta",
+      "item_reference": null
+    },
+    {
+      "id": "herramientas_pintor",
+      "name": "Herramientas de Pintor",
+      "description": "Herramientas para crear pinturas y obras de arte visual. Incluye pinceles, paletas, pigmentos, lienzos y otros materiales de pintura.",
+      "content": null,
+      "category_link": "herramienta",
+      "item_reference": null
+    },
+    {
+      "id": "herramientas_alfarero",
+      "name": "Herramientas de Alfarero",
+      "description": "Herramientas para crear objetos de cerámica. Incluye rueda de alfarero, herramientas de modelado, hornos y otros utensilios para trabajar la arcilla.",
+      "content": null,
+      "category_link": "herramienta",
+      "item_reference": null
+    },
+    {
+      "id": "herramientas_herrero",
+      "name": "Herramientas de Herrero",
+      "description": "Herramientas para forjar armas, armaduras y otros objetos de metal. Incluye yunque, martillos, tenazas, fragua y otros instrumentos de herrería.",
+      "content": null,
+      "category_link": "herramienta",
+      "item_reference": null
+    },
+    {
+      "id": "herramientas_sastre",
+      "name": "Herramientas de Sastre",
+      "description": "Herramientas para tejer telas y crear prendas de vestir. Incluye agujas, hilos, tijeras, dedales y otros utensilios de costura.",
+      "content": null,
+      "category_link": "herramienta",
+      "item_reference": null
+    },
+    {
+      "id": "herramientas_tallista",
+      "name": "Herramientas de Tallista",
+      "description": "Herramientas para tallar objetos de madera decorativos. Incluye cuchillos de tallar, gubias, formones y otros instrumentos de tallado en madera.",
+      "content": null,
+      "category_link": "herramienta",
+      "item_reference": null
+    },
+    {
+      "id": "arpa",
+      "name": "Arpa",
+      "description": "Un instrumento musical de cuerdas que se toca con los dedos. Produce sonidos etéreos y melódicos, perfecto para música celestial y encantadora.",
+      "content": null,
+      "category_link": "instrumento",
+      "item_reference": "arpa"
+    },
+    {
+      "id": "laud",
+      "name": "Laúd",
+      "description": "Un instrumento musical de cuerdas con un cuerpo redondeado. Es uno de los instrumentos más populares entre los bardos y músicos viajeros.",
+      "content": null,
+      "category_link": "instrumento",
+      "item_reference": "laud"
+    },
+    {
+      "id": "lira",
+      "name": "Lira",
+      "description": "Un instrumento musical de cuerdas pequeño y portátil. Fácil de transportar y tocar, popular entre los bardos nómadas.",
+      "content": null,
+      "category_link": "instrumento",
+      "item_reference": "lira"
+    },
+    {
+      "id": "cuerno",
+      "name": "Cuerno",
+      "description": "Un instrumento musical de viento hecho de cuerno de animal o metal. Produce sonidos potentes y resonantes, usado para señales y música de batalla.",
+      "content": null,
+      "category_link": "instrumento",
+      "item_reference": "cuerno"
+    },
+    {
+      "id": "flauta",
+      "name": "Flauta",
+      "description": "Un instrumento musical de viento pequeño y portátil. Produce melodías dulces y agradables, fácil de aprender y tocar.",
+      "content": null,
+      "category_link": "instrumento",
+      "item_reference": "flauta"
+    },
+    {
+      "id": "tambor",
+      "name": "Tambor",
+      "description": "Un instrumento musical de percusión que produce ritmos marcados. Esencial para música de batalla y celebraciones.",
+      "content": null,
+      "category_link": "instrumento",
+      "item_reference": "tambor"
+    },
+    {
+      "id": "dulcimer",
+      "name": "Dulcémele",
+      "description": "Un instrumento musical de cuerdas que se toca con mazos pequeños. Produce sonidos dulces y resonantes.",
+      "content": null,
+      "category_link": "instrumento",
+      "item_reference": "dulcimer"
+    },
+    {
+      "id": "shawm",
+      "name": "Chirimía",
+      "description": "Un instrumento musical de viento similar a un oboe. Produce sonidos fuertes y penetrantes, usado en música al aire libre.",
+      "content": null,
+      "category_link": "instrumento",
+      "item_reference": "shawm"
+    },
+    {
+      "id": "flauta_pan",
+      "name": "Flauta de pan",
+      "description": "Un instrumento musical de viento compuesto por una serie de tubos. Produce un sonido suave y melódico, típico de la música pastoral.",
+      "content": null,
+      "category_link": "instrumento",
+      "item_reference": "flauta_pan"
+    },
+    {
+      "id": "gaita",
+      "name": "Gaita",
+      "description": "Un instrumento musical de viento con una bolsa de aire y varios tubos. Produce un sonido potente y continuo, ideal para marchas y música de guerra.",
+      "content": null,
+      "category_link": "instrumento",
+      "item_reference": "gaita"
+    },
+    {
+      "id": "viola",
+      "name": "Viola",
+      "description": "Un instrumento musical de cuerdas frotadas similar al violín pero de tono más grave, usado tanto en música de cámara como en interpretaciones solistas.",
+      "content": null,
+      "category_link": "instrumento",
+      "item_reference": "viola"
+    },
+    {
+      "id": "dados",
+      "name": "Dados",
+      "description": "Un conjunto de dados para juegos de azar. Incluye varios tipos de dados (d4, d6, d8, d10, d12, d20) para diferentes juegos y apuestas.",
+      "content": null,
+      "category_link": "juego",
+      "item_reference": "dados"
+    },
+    {
+      "id": "naipes",
+      "name": "Naipes",
+      "description": "Un mazo de cartas para juegos de cartas. Incluye un mazo estándar de 52 cartas o variantes regionales para diferentes juegos.",
+      "content": null,
+      "category_link": "juego",
+      "item_reference": "naipes"
+    },
+    {
+      "id": "three_dragon_ante",
+      "name": "Three-Dragon Ante",
+      "description": "Un juego de cartas estratégico popular en los Reinos Olvidados. Requiere habilidad, suerte y conocimiento de las reglas del juego.",
+      "content": null,
+      "category_link": "juego",
+      "item_reference": null
+    },
+    {
+      "id": "kit_disfraz",
+      "name": "Kit de Disfraz",
+      "description": "Un conjunto de herramientas y materiales para crear disfraces y alterar la apariencia. Incluye maquillaje, pelucas, ropa variada y otros accesorios para el disfraz.",
+      "content": null,
+      "category_link": "kit",
+      "item_reference": "kit_disfraz"
+    },
+    {
+      "id": "kit_falsificacion",
+      "name": "Kit de Falsificación",
+      "description": "Herramientas para crear documentos falsos y duplicar firmas. Incluye papel de calidad, tintas especiales, sellos y otros materiales para la falsificación.",
+      "content": null,
+      "category_link": "kit",
+      "item_reference": "kit_falsificacion"
+    },
+    {
+      "id": "herramientas_herbalismo",
+      "name": "Herramientas de Herbalismo",
+      "description": "Herramientas para identificar y recolectar hierbas, y crear remedios herbales. Incluye morteros, frascos, herramientas de recolección y guías de hierbas.",
+      "content": null,
+      "category_link": "kit",
+      "item_reference": "herramientas_herbalismo"
+    },
+    {
+      "id": "herramientas_ladron",
+      "name": "Herramientas de Ladrón",
+      "description": "Herramientas especializadas para abrir cerraduras, desactivar trampas y realizar otras tareas relacionadas con el robo. Incluye ganzúas, palancas, pinzas y otros instrumentos delicados.",
+      "content": null,
+      "category_link": "kit",
+      "item_reference": "herramientas_robo"
+    },
+    {
+      "id": "herramientas_explorador",
+      "name": "Herramientas de Explorador",
+      "description": "Las herramientas de explorador están diseñadas para proporcionar a un aventurero los elementos esenciales para sobrevivir en la naturaleza. Son un equipo estándar para aquellos que planean viajar y explorar áreas salvajes.",
+      "content": null,
+      "category_link": "pack",
+      "item_reference": null
+    }
+  ]
+}
+

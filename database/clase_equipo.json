@@ -1,0 +1,346 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "lastUpdated": "2024-12-19",
+    "description": "Equipamiento inicial por clase - D&D 5e",
+    "totalClasses": 11
+  },
+  "startingEquipment": {
+    "barbaro": {
+      "option1": [
+        { "item": "hacha_batalla", "quantity": 1 }
+      ],
+      "option2": [
+        { "item": "hacha_mano", "quantity": 2 }
+      ],
+      "additionalEquipment": [
+        { "item": "pack_explorador", "quantity": 1 },
+        { "item": "jabalina", "quantity": 4 }
+      ]
+    },
+    "explorador": {
+      "option1": [
+        { "item": "armadura_escamas", "quantity": 1 },
+        { "item": "espada_corta", "quantity": 2 },
+        { "item": "pack_explorador_mazmorras", "quantity": 1 }
+      ],
+      "option2": [
+        { "item": "armadura_escamas", "quantity": 1 },
+        { "item": "espada_corta", "quantity": 2 },
+        { "item": "pack_explorador", "quantity": 1 }
+      ],
+      "option3": [
+        { "item": "armadura_cuero", "quantity": 1 },
+        { "item": "espada_corta", "quantity": 2 },
+        { "item": "pack_explorador_mazmorras", "quantity": 1 }
+      ],
+      "option4": [
+        { "item": "armadura_cuero", "quantity": 1 },
+        { "item": "espada_corta", "quantity": 2 },
+        { "item": "pack_explorador", "quantity": 1 }
+      ],
+      "additionalEquipment": [
+        { "item": "arco_largo", "quantity": 1 },
+        { "item": "aljaba", "quantity": 1 }
+      ]
+    },
+    "hechicero": {
+      "option1": [
+        { "item": "ballesta_ligera", "quantity": 1 },
+        { "item": "virotes_ballesta", "quantity": 1 },
+        { "item": "saquito_componentes", "quantity": 1 },
+        { "item": "pack_explorador_mazmorras", "quantity": 1 }
+      ],
+      "option2": [
+        { "item": "ballesta_ligera", "quantity": 1 },
+        { "item": "virotes_ballesta", "quantity": 1 },
+        { "item": "saquito_componentes", "quantity": 1 },
+        { "item": "pack_explorador", "quantity": 1 }
+      ],
+      "option3": [
+        { "item": "baston", "quantity": 1 },
+        { "item": "saquito_componentes", "quantity": 1 },
+        { "item": "pack_explorador_mazmorras", "quantity": 1 }
+      ],
+      "option4": [
+        { "item": "baston", "quantity": 1 },
+        { "item": "saquito_componentes", "quantity": 1 },
+        { "item": "pack_explorador", "quantity": 1 }
+      ],
+      "option5": [
+        { "item": "daga", "quantity": 1 },
+        { "item": "saquito_componentes", "quantity": 1 },
+        { "item": "pack_explorador_mazmorras", "quantity": 1 }
+      ],
+      "option6": [
+        { "item": "daga", "quantity": 1 },
+        { "item": "saquito_componentes", "quantity": 1 },
+        { "item": "pack_explorador", "quantity": 1 }
+      ],
+      "additionalEquipment": [
+        { "item": "daga", "quantity": 2 }
+      ]
+    },
+    "monje": {
+      "option1": [
+        { "item": "espada_corta", "quantity": 1 },
+        { "item": "pack_explorador_mazmorras", "quantity": 1 }
+      ],
+      "option2": [
+        { "item": "espada_corta", "quantity": 1 },
+        { "item": "pack_explorador", "quantity": 1 }
+      ],
+      "option3": [
+        { "item": "daga", "quantity": 1 },
+        { "item": "pack_explorador_mazmorras", "quantity": 1 }
+      ],
+      "option4": [
+        { "item": "daga", "quantity": 1 },
+        { "item": "pack_explorador", "quantity": 1 }
+      ],
+      "additionalEquipment": [
+        { "item": "dardo", "quantity": 10 }
+      ]
+    },
+    "mago": {
+      "option1": [
+        { "item": "baston", "quantity": 1 },
+        { "item": "saquito_componentes", "quantity": 1 },
+        { "item": "pack_erudito", "quantity": 1 },
+        { "item": "grimorio", "quantity": 1 }
+      ],
+      "option2": [
+        { "item": "baston", "quantity": 1 },
+        { "item": "saquito_componentes", "quantity": 1 },
+        { "item": "pack_explorador_mazmorras", "quantity": 1 },
+        { "item": "grimorio", "quantity": 1 }
+      ],
+      "option3": [
+        { "item": "baston", "quantity": 1 },
+        { "item": "canalizador_arcano_cristal", "quantity": 1 },
+        { "item": "pack_erudito", "quantity": 1 },
+        { "item": "grimorio", "quantity": 1 }
+      ],
+      "option4": [
+        { "item": "baston", "quantity": 1 },
+        { "item": "canalizador_arcano_cristal", "quantity": 1 },
+        { "item": "pack_explorador_mazmorras", "quantity": 1 },
+        { "item": "grimorio", "quantity": 1 }
+      ],
+      "option5": [
+        { "item": "daga", "quantity": 1 },
+        { "item": "saquito_componentes", "quantity": 1 },
+        { "item": "pack_erudito", "quantity": 1 },
+        { "item": "grimorio", "quantity": 1 }
+      ],
+      "option6": [
+        { "item": "daga", "quantity": 1 },
+        { "item": "saquito_componentes", "quantity": 1 },
+        { "item": "pack_explorador_mazmorras", "quantity": 1 },
+        { "item": "grimorio", "quantity": 1 }
+      ],
+      "option7": [
+        { "item": "daga", "quantity": 1 },
+        { "item": "canalizador_arcano_cristal", "quantity": 1 },
+        { "item": "pack_erudito", "quantity": 1 },
+        { "item": "grimorio", "quantity": 1 }
+      ],
+      "option8": [
+        { "item": "daga", "quantity": 1 },
+        { "item": "canalizador_arcano_cristal", "quantity": 1 },
+        { "item": "pack_explorador_mazmorras", "quantity": 1 },
+        { "item": "grimorio", "quantity": 1 }
+      ],
+      "additionalEquipment": []
+    },
+    "bardo": {
+      "option1": [
+        { "item": "estoque", "quantity": 1 },
+        { "item": "pack_diplomatico", "quantity": 1 },
+        { "item": "laud", "quantity": 1 }
+      ],
+      "option2": [
+        { "item": "espada_larga", "quantity": 1 },
+        { "item": "pack_diplomatico", "quantity": 1 },
+        { "item": "laud", "quantity": 1 }
+      ],
+      "option3": [
+        { "item": "estoque", "quantity": 1 },
+        { "item": "pack_artista", "quantity": 1 },
+        { "item": "laud", "quantity": 1 }
+      ],
+      "option4": [
+        { "item": "espada_larga", "quantity": 1 },
+        { "item": "pack_artista", "quantity": 1 },
+        { "item": "laud", "quantity": 1 }
+      ],
+      "additionalEquipment": [
+        { "item": "armadura_cuero", "quantity": 1 },
+        { "item": "daga", "quantity": 1 }
+      ]
+    },
+    "brujo": {
+      "option1": [
+        { "item": "ballesta_ligera", "quantity": 1 },
+        { "item": "virotes_ballesta", "quantity": 1 },
+        { "item": "saquito_componentes", "quantity": 1 },
+        { "item": "pack_erudito", "quantity": 1 }
+      ],
+      "option2": [
+        { "item": "ballesta_ligera", "quantity": 1 },
+        { "item": "virotes_ballesta", "quantity": 1 },
+        { "item": "saquito_componentes", "quantity": 1 },
+        { "item": "pack_explorador_mazmorras", "quantity": 1 }
+      ],
+      "additionalEquipment": [
+        { "item": "armadura_cuero", "quantity": 1 },
+        { "item": "daga", "quantity": 2 }
+      ]
+    },
+    "clerigo": {
+      "option1": [
+        { "item": "maza", "quantity": 1 },
+        { "item": "armadura_escamas", "quantity": 1 },
+        { "item": "ballesta_ligera", "quantity": 1 },
+        { "item": "virotes_ballesta", "quantity": 1 },
+        { "item": "pack_sacerdote", "quantity": 1 }
+      ],
+      "option2": [
+        { "item": "maza", "quantity": 1 },
+        { "item": "armadura_escamas", "quantity": 1 },
+        { "item": "ballesta_ligera", "quantity": 1 },
+        { "item": "virotes_ballesta", "quantity": 1 },
+        { "item": "pack_explorador", "quantity": 1 }
+      ],
+      "additionalEquipment": [
+        { "item": "escudo", "quantity": 1 },
+        { "item": "simbolo_sagrado_amuleto", "quantity": 1 }
+      ]
+    },
+    "paladin": {
+      "option1": [
+        { "item": "espada_larga", "quantity": 1 },
+        { "item": "escudo", "quantity": 1 },
+        { "item": "jabalina", "quantity": 5 },
+        { "item": "pack_sacerdote", "quantity": 1 }
+      ],
+      "option2": [
+        { "item": "espada_larga", "quantity": 1 },
+        { "item": "escudo", "quantity": 1 },
+        { "item": "jabalina", "quantity": 5 },
+        { "item": "pack_explorador", "quantity": 1 }
+      ],
+      "additionalEquipment": [
+        { "item": "cota_malla", "quantity": 1 },
+        { "item": "simbolo_sagrado_amuleto", "quantity": 1 }
+      ]
+    },
+    "druida": {
+      "option1": [
+        { "item": "escudo", "quantity": 1 },
+        { "item": "cimitarra", "quantity": 1 }
+      ],
+      "additionalEquipment": [
+        { "item": "armadura_cuero", "quantity": 1 },
+        { "item": "pack_explorador", "quantity": 1 },
+        { "item": "canalizador_druidico_muerdago", "quantity": 1 }
+      ]
+    },
+    "picaro": {
+      "option1": [
+        { "item": "estoque", "quantity": 1 }
+      ],
+      "option2": [
+        { "item": "espada_corta", "quantity": 1 }
+      ],
+      "option3": [
+        { "item": "arco_corto", "quantity": 1 },
+        { "item": "aljaba", "quantity": 1 }
+      ],
+      "option4": [
+        { "item": "espada_corta", "quantity": 1 }
+      ],
+      "option5": [
+        { "item": "pack_explorador_mazmorras", "quantity": 1 }
+      ],
+      "option6": [
+        { "item": "pack_explorador", "quantity": 1 }
+      ],
+      "option7": [
+        { "item": "pack_ladron", "quantity": 1 }
+      ],
+      "additionalEquipment": [
+        { "item": "armadura_cuero", "quantity": 1 },
+        { "item": "daga", "quantity": 2 },
+        { "item": "herramientas_ladron", "quantity": 1 }
+      ]
+    },
+    "guerrero": {
+      "option1": [
+        { "item": "cota_malla", "quantity": 1 },
+        { "item": "espada_larga", "quantity": 1 },
+        { "item": "escudo", "quantity": 1 },
+        { "item": "ballesta_ligera", "quantity": 1 },
+        { "item": "virotes_ballesta", "quantity": 1 },
+        { "item": "pack_explorador_mazmorras", "quantity": 1 }
+      ],
+      "option2": [
+        { "item": "cota_malla", "quantity": 1 },
+        { "item": "espada_larga", "quantity": 1 },
+        { "item": "escudo", "quantity": 1 },
+        { "item": "ballesta_ligera", "quantity": 1 },
+        { "item": "virotes_ballesta", "quantity": 1 },
+        { "item": "pack_explorador", "quantity": 1 }
+      ],
+      "option3": [
+        { "item": "cota_malla", "quantity": 1 },
+        { "item": "espada_larga", "quantity": 1 },
+        { "item": "escudo", "quantity": 1 },
+        { "item": "hacha_mano", "quantity": 2 },
+        { "item": "pack_explorador_mazmorras", "quantity": 1 }
+      ],
+      "option4": [
+        { "item": "cota_malla", "quantity": 1 },
+        { "item": "espada_larga", "quantity": 1 },
+        { "item": "escudo", "quantity": 1 },
+        { "item": "hacha_mano", "quantity": 2 },
+        { "item": "pack_explorador", "quantity": 1 }
+      ],
+      "option5": [
+        { "item": "armadura_cuero", "quantity": 1 },
+        { "item": "arco_largo", "quantity": 1 },
+        { "item": "aljaba", "quantity": 1 },
+        { "item": "espada_larga", "quantity": 2 },
+        { "item": "ballesta_ligera", "quantity": 1 },
+        { "item": "virotes_ballesta", "quantity": 1 },
+        { "item": "pack_explorador_mazmorras", "quantity": 1 }
+      ],
+      "option6": [
+        { "item": "armadura_cuero", "quantity": 1 },
+        { "item": "arco_largo", "quantity": 1 },
+        { "item": "aljaba", "quantity": 1 },
+        { "item": "espada_larga", "quantity": 2 },
+        { "item": "ballesta_ligera", "quantity": 1 },
+        { "item": "virotes_ballesta", "quantity": 1 },
+        { "item": "pack_explorador", "quantity": 1 }
+      ],
+      "option7": [
+        { "item": "armadura_cuero", "quantity": 1 },
+        { "item": "arco_largo", "quantity": 1 },
+        { "item": "aljaba", "quantity": 1 },
+        { "item": "espada_larga", "quantity": 2 },
+        { "item": "hacha_mano", "quantity": 2 },
+        { "item": "pack_explorador_mazmorras", "quantity": 1 }
+      ],
+      "option8": [
+        { "item": "armadura_cuero", "quantity": 1 },
+        { "item": "arco_largo", "quantity": 1 },
+        { "item": "aljaba", "quantity": 1 },
+        { "item": "espada_larga", "quantity": 2 },
+        { "item": "hacha_mano", "quantity": 2 },
+        { "item": "pack_explorador", "quantity": 1 }
+      ],
+      "additionalEquipment": []
+    }
+  }
+}

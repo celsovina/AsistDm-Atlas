@@ -1,0 +1,1073 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "lastUpdated": "2026-05-30",
+    "description": "Criaturas personalizadas creadas y actualizadas desde el editor de criaturas.",
+    "totalCreatures": 11
+  },
+  "creatures": [
+    {
+      "id": "custom-creature-drow-y46r",
+      "name": "Drowy",
+      "typeId": "humanoid",
+      "speciesId": [],
+      "inheritFromSpecies": false,
+      "size": "medium",
+      "alignment": "ne",
+      "cr": 2,
+      "ac": {
+        "value": 15,
+        "type": "armor",
+        "note": [
+          "armor",
+          "camisa de malla"
+        ]
+      },
+      "hp": {
+        "average": 13,
+        "formula": "3d8"
+      },
+      "speed": {
+        "walking": 30
+      },
+      "stats": {
+        "strength": 10,
+        "dexterity": 14,
+        "constitution": 10,
+        "intelligence": 11,
+        "wisdom": 11,
+        "charisma": 12
+      },
+      "savingThrows": {},
+      "skills": {
+        "perception": 2,
+        "stealth": 4
+      },
+      "damageImmunities": [],
+      "damageResistances": [],
+      "damageVulnerabilities": [],
+      "conditionImmunities": [],
+      "senses": {
+        "darkvision": 120,
+        "passivePerception": 12
+      },
+      "languages": {
+        "understands": [
+          "Elvish",
+          "Undercommon",
+          "Común",
+          "Élfico"
+        ],
+        "speaks": [
+          "Elvish",
+          "Undercommon",
+          "Común",
+          "Élfico"
+        ]
+      },
+      "traits": [
+        {
+          "id": "custom-trait-0",
+          "name": "",
+          "description": "Linaje Feérico. El drow tiene ventaja en las tiradas de salvación para evitar ser hechizado y la magia no puede dormirlo."
+        },
+        {
+          "id": "custom-trait-1",
+          "name": "",
+          "description": "Lanzamiento de Conjuros Innato. La aptitud mágica innata del drow es Carisma (salvación de conjuros CD 11). Puede lanzar de forma innata los siguientes conjuros, sin necesidad de componentes materiales: A voluntad: luces danzantes. 1/día cada uno: fuego feérico, oscuridad."
+        },
+        {
+          "id": "custom-trait-2",
+          "name": "",
+          "description": "Sensibilidad a la Luz Solar. El drow tiene desventaja en las tiradas de ataque y las pruebas de Sabiduría (Percepción) que dependan de la vista hechas bajo la luz del sol."
+        }
+      ],
+      "actions": [
+        {
+          "id": "custom-action-0",
+          "name": "Espada corta",
+          "description": "Ataque con arma cuerpo a cuerpo: +4 a impactar, alcance 5 pies, un objetivo. Impacto: 5 (1d6 + 2) de daño perforante.",
+          "type": null,
+          "attack": "+4",
+          "hit": "5 (1d6 + 2)"
+        },
+        {
+          "id": "custom-action-1",
+          "name": "Ballesta de mano",
+          "description": "Ataque con arma a distancia: +4 a impactar, alcance 30/120 pies, un objetivo. Impacto: 5 (1d6 + 2) de daño perforante, y el objetivo deberá superar una tirada de salvación de Constitución CD 13 o estará envenenado durante 1 hora. Si falla la tirada de salvación por 5 o más, también estará inconsciente mientras siga envenenado de esta forma. El objetivo se despertará si recibe algún daño o si otra criatura utiliza su acción para despertarlo.",
+          "type": null,
+          "attack": "+4",
+          "hit": "5 (1d6 + 2)"
+        }
+      ],
+      "legendaryActions": [],
+      "lairActions": [],
+      "reactions": [],
+      "isSpellCaster": true,
+      "spellSlots": null,
+      "spellsKnown": {
+        "nivel0": [
+          "prestidigitation",
+          "faerie_fire",
+          "darkness"
+        ]
+      },
+      "description": "",
+      "portrait": "database/Creatures/Portraits/creature.svg",
+      "source": "Manual de Monstruos",
+      "humanoidRaceId": "elf",
+      "humanoidVariantId": "dark_elf",
+      "_editorSkillsText": "perception +2, stealth +4",
+      "_editorSensesText": "darkvision 120, Percepción pasiva 12",
+      "_editorLanguagesText": "Entiende: Elvish, Undercommon | Habla: Elvish, Undercommon"
+    },
+    {
+      "id": "custom-creature-docr",
+      "name": "Rey Grol",
+      "cr": 3,
+      "humanoidRaceId": null,
+      "humanoidVariantId": null,
+      "ac": {
+        "value": 17,
+        "note": [
+          "armor",
+          "camisa de malla",
+          "escudo"
+        ]
+      },
+      "hp": {
+        "average": 65,
+        "formula": "10d8 + 20"
+      },
+      "speed": {
+        "walking": 30
+      },
+      "stats": {
+        "strength": 17,
+        "dexterity": 14,
+        "constitution": 14,
+        "intelligence": 11,
+        "wisdom": 12,
+        "charisma": 11
+      },
+      "_editorSkillsText": "intimidation +2, stealth +6, survival +3",
+      "_editorSensesText": "darkvision 60, Percepción pasiva 11",
+      "_editorLanguagesText": "Entiende: Common, Goblin | Habla: Common, Goblin",
+      "traits": [
+        {
+          "id": "custom-trait-0",
+          "name": "Bruto",
+          "description": "Bruto. Las armas cuerpo a cuerpo infligen un dado adicional de su daño cuando el osgo impacta con ellas (ya incluido en el ataque)."
+        },
+        {
+          "id": "custom-trait-1",
+          "name": "Corazón de Hruggek",
+          "description": "Corazón de Hruggek. El osgo tiene ventaja en las tiradas de salvación para evitar ser aturdido, asustado, hechizado, envenenado, paralizado o dormido."
+        },
+        {
+          "id": "custom-trait-2",
+          "name": "Ataque por Sorpresa",
+          "description": "Ataque por Sorpresa. Si el osgo sorprende a una criatura y la impacta con un ataque durante el primer asalto del combate, ese ataque causa 7 (2d6) de daño adicionales."
+        }
+      ],
+      "actions": [
+        {
+          "id": "custom-action-0",
+          "name": "Ataque múltiple",
+          "description": "El osgo realiza dos ataques cuerpo a cuerpo.",
+          "type": null,
+          "attack": "",
+          "hit": ""
+        },
+        {
+          "id": "custom-action-1",
+          "name": "Lucero del alba",
+          "description": "Ataque con arma cuerpo a cuerpo: +5 a impactar, alcance 5 pies, un objetivo. Impacto: 12 (2d8 + 3) de daño perforante.",
+          "type": null,
+          "attack": "+5",
+          "hit": "12 (2d8 + 3)"
+        },
+        {
+          "id": "custom-action-2",
+          "name": "Jabalina",
+          "description": "Ataque con arma cuerpo a cuerpo o a distancia: +5 a impactar, alcance 5 pies o alcance 30/120 pies, un objetivo. Impacto: 10 (2d6 + 3) de daño perforante en cuerpo a cuerpo, o 6 (1d6 + 3) de daño perforante a distancia.",
+          "type": null,
+          "attack": "+5",
+          "hit": "10 (2d6 + 3) or 6 (1d6 + 3)"
+        }
+      ],
+      "isSpellCaster": false,
+      "spellsKnown": null,
+      "spellSlots": null
+    },
+    {
+      "id": "custom-creature-snvu",
+      "name": "Rey Grol - Azote de Phandalin",
+      "cr": 6,
+      "speciesId": [
+        "goblinoid"
+      ],
+      "typeId": "humanoid",
+      "humanoidRaceId": "bugbear",
+      "humanoidVariantId": null,
+      "languages": {
+        "speaks": [
+          "Común"
+        ],
+        "understands": [
+          "Común"
+        ]
+      },
+      "senses": {
+        "darkvision": 60
+      },
+      "speed": {
+        "walking": 30
+      },
+      "ac": {
+        "value": 18,
+        "note": [
+          "armadura de placas"
+        ]
+      },
+      "hp": {
+        "average": 182,
+        "formula": "12D10 + 72"
+      },
+      "stats": {
+        "strength": 20,
+        "dexterity": 14,
+        "constitution": 18,
+        "intelligence": 16,
+        "wisdom": 14,
+        "charisma": 16
+      },
+      "_editorSkillsText": "intimidation +6, stealth +5, survival +3",
+      "_editorSensesText": "darkvision 60, Percepción pasiva 16",
+      "_editorLanguagesText": "Entiende: Common, Goblin | Habla: Common, Goblin",
+      "traits": [
+        {
+          "id": "custom-trait-0",
+          "name": "Bruto",
+          "description": "Bruto. Las armas cuerpo a cuerpo infligen un dado adicional de su daño cuando el osgo impacta con ellas (ya incluido en el ataque)."
+        },
+        {
+          "id": "custom-trait-1",
+          "name": "Corazón de Hruggek",
+          "description": "Corazón de Hruggek. El osgo tiene ventaja en las tiradas de salvación para evitar ser aturdido, asustado, hechizado, envenenado, paralizado o dormido."
+        },
+        {
+          "id": "custom-trait-2",
+          "name": "Comandante Goblin",
+          "description": "Comandante Goblin. Los aliados goblin y hobgoblin de Grol tienen ventaja en las tiradas de salvación contra ser asustados o hechizados mientras puedan verlo u oírlo."
+        },
+        {
+          "id": "custom-trait-3",
+          "name": "Líder Natural",
+          "description": "Líder Natural. Grol puede añadir su modificador de Carisma (+3) a las tiradas de iniciativa de sus aliados goblin y hobgoblin que puedan verlo u oírlo."
+        },
+        {
+          "id": "custom-trait-4",
+          "name": "Táctico Superior",
+          "description": "Táctico Superior. Grol tiene ventaja en las tiradas de iniciativa."
+        }
+      ],
+      "actions": [
+        {
+          "id": "custom-action-0",
+          "name": "Ataque múltiple",
+          "description": "Grol realiza tres ataques cuerpo a cuerpo.",
+          "type": null,
+          "attack": "",
+          "hit": ""
+        },
+        {
+          "id": "custom-action-1",
+          "name": "Espada Larga",
+          "description": "Ataque con arma cuerpo a cuerpo: +9 a impactar, alcance 10 ft., un objetivo. Impacto: 2d8 + 5 de daño cortante, o 2d10 + 5 si se usa a dos manos.",
+          "type": null,
+          "attack": "+8",
+          "hit": "13 (2d8 + 5)"
+        },
+        {
+          "id": "custom-action-2",
+          "name": "Jabalina",
+          "description": "Ataque con arma cuerpo a cuerpo o a distancia: +5 a impactar, alcance 5 pies o alcance 30/120 pies, un objetivo. Impacto: 10 (2d6 + 3) de daño perforante en cuerpo a cuerpo, o 6 (1d6 + 3) de daño perforante a distancia.",
+          "type": null,
+          "attack": "+8",
+          "hit": "10 (2d6 + 3) or 6 (1d6 + 3)"
+        },
+        {
+          "id": "custom-action-3",
+          "name": "Acciones legendarias",
+          "description": "Cuenta con 3 cada turno, recupera todas al inicio de su turno",
+          "type": null,
+          "attack": "",
+          "hit": ""
+        },
+        {
+          "id": "custom-action-4",
+          "name": "Lanzar Aliado 2 Acciones",
+          "description": "Si Grol tiene al menos dos aliados de tamaño Pequeño o Mediano a 10 ft. o menos de él, puede agarrar a dos de ellos y lanzarlos a un enemigo a 30 ft. o menos. El enemigo debe realizar una tirada de salvación de Destreza CD 17. Si falla, recibe 3d6 de daño contundente y queda derribado por 1 turno. Si tiene éxito, recibe la mitad de daño. \n\nEl aliado lanzado sufre 3d6 de daño contundente. El aliado lanzado, puede usar su reacción para intentar clavar su arma en el enemigo (si tiene una), haciendo un ataque con ventaja.",
+          "type": null,
+          "attack": "",
+          "hit": ""
+        },
+        {
+          "id": "custom-action-5",
+          "name": "Grito de Guerra 1 Acción",
+          "description": "Grol lanza un grito ensordecedor. Si el número de aliados goblin o hobgoblin en combate es inferior a 6, Grol tira 1d4 para determinar el tipo de aliado y 1d6 para determinar la cantidad de refuerzos que aparecen de un punto a 60 ft. de Grol y se unen al combate. No pueden aparecer en el mismo espacio que un personaje.\n\nTirada de 1d4 (Tipo de Aliado):\nOsgos: 1d6 osgos\nGoblins: 1d6 goblins\nHobgoblins: 1d6 hobgoblins\nTodos los Anteriores: El DM los reparte de acuerdo al dado. manejo a discreción",
+          "type": null,
+          "attack": "",
+          "hit": ""
+        },
+        {
+          "id": "custom-action-6",
+          "name": "Movimiento Táctico 1 acción",
+          "description": "Grol se mueve hasta la mitad de su velocidad sin provocar ataques de oportunidad.",
+          "type": null,
+          "attack": "",
+          "hit": ""
+        },
+        {
+          "id": "custom-action-7",
+          "name": "Escudo de Carne reacción",
+          "description": "Cuando Grol es el objetivo de un ataque a distancia y tiene un aliado de tamaño Pequeño o Mediano a 10 ft. o menos de él, puede usar su reacción para interponer a la fuerza a ese aliado en el camino del ataque. El ataque se resuelve contra la CA del aliado en lugar de la de Grol. Si el ataque impacta, el aliado recibe el daño normalmente.",
+          "type": null,
+          "attack": "",
+          "hit": ""
+        }
+      ],
+      "isSpellCaster": false,
+      "spellsKnown": null,
+      "spellSlots": null
+    },
+    {
+      "id": "custom-creature-hp07",
+      "name": "Nezznar - La Araña Negra",
+      "cr": 2,
+      "speciesId": [
+        "razas_jugables"
+      ],
+      "typeId": "humanoid",
+      "humanoidRaceId": "elf",
+      "humanoidVariantId": "dark_elf",
+      "languages": {
+        "speaks": [
+          "Común",
+          "Élfico"
+        ],
+        "understands": [
+          "Común",
+          "Élfico"
+        ]
+      },
+      "senses": {
+        "darkvision": 60
+      },
+      "speed": {
+        "walking": 30
+      },
+      "ac": {
+        "value": 11,
+        "note": [
+          "Armadura de mago"
+        ]
+      },
+      "hp": {
+        "average": 39,
+        "formula": "6d8"
+      },
+      "stats": {
+        "strength": 9,
+        "dexterity": 13,
+        "constitution": 10,
+        "intelligence": 16,
+        "wisdom": 14,
+        "charisma": 13
+      },
+      "_editorSkillsText": "arcano +5, perception +4, stealth +3",
+      "_editorSensesText": "darkvision 120, Percepción pasiva 14",
+      "_editorLanguagesText": "Entiende: Elvish, Undercommon | Habla: Elvish, Undercommon",
+      "traits": [
+        {
+          "id": "custom-trait-0",
+          "name": "Linaje Feérico",
+          "description": "Linaje Feérico. El drow tiene ventaja en las tiradas de salvación para evitar ser hechizado y la magia no puede dormirlo."
+        },
+        {
+          "id": "custom-trait-1",
+          "name": "Lanzamiento de Conjuros Innato",
+          "description": "Lanzamiento de Conjuros Innato. La aptitud mágica innata del drow es Carisma (salvación de conjuros CD 11). Puede lanzar de forma innata los siguientes conjuros, sin necesidad de componentes materiales: A voluntad: luces danzantes. 1/día cada uno: fuego feérico, oscuridad."
+        },
+        {
+          "id": "custom-trait-2",
+          "name": "Sensibilidad a la Luz Solar",
+          "description": "Sensibilidad a la Luz Solar. El drow tiene desventaja en las tiradas de ataque y las pruebas de Sabiduría (Percepción) que dependan de la vista hechas bajo la luz del sol."
+        }
+      ],
+      "actions": [
+        {
+          "id": "custom-action-0",
+          "name": "Espada corta",
+          "description": "Ataque con arma cuerpo a cuerpo: +4 a impactar, alcance 5 pies, un objetivo. Impacto: 5 (1d6 + 2) de daño perforante.",
+          "type": null,
+          "attack": "+4",
+          "hit": "5 (1d6 + 2)"
+        },
+        {
+          "id": "custom-action-1",
+          "name": "Vara de araña",
+          "description": "Ataque con arma cuerpo a cuerpo: +1 a impactar, alcance 5 pies, un objetivo. Impcto: 2(1D6-1) de daño contundente más 3(1d6) de daño por veneno",
+          "type": null,
+          "attack": "+1",
+          "hit": "2 (1d6 - 1) + 3(1d6)"
+        }
+      ],
+      "isSpellCaster": true,
+      "spellsKnown": {
+        "nivel0": [
+          "dancing_lights",
+          "mage_hand",
+          "ray_of_frost",
+          "shocking_grasp",
+          "prestidigitation",
+          "faerie_fire",
+          "darkness"
+        ],
+        "nivel1": [
+          "faerie_fire",
+          "mage_armor",
+          "magic_missile",
+          "shield"
+        ],
+        "nivel2": [
+          "darkness",
+          "invisibility",
+          "suggestion"
+        ],
+        "nivel3": [],
+        "nivel4": [],
+        "nivel5": [],
+        "nivel6": [],
+        "nivel7": [],
+        "nivel8": [],
+        "nivel9": []
+      },
+      "spellSlots": {
+        "nivel1": 4,
+        "nivel2": 3
+      }
+    },
+    {
+      "id": "custom-creature-l1r2",
+      "name": "Yegg",
+      "cr": 0.25,
+      "speciesId": [
+        "goblinoid"
+      ],
+      "typeId": "humanoid",
+      "humanoidRaceId": null,
+      "humanoidVariantId": null,
+      "ac": {
+        "value": 15,
+        "note": [
+          "armor",
+          "armadura de cuero"
+        ]
+      },
+      "hp": {
+        "average": 18,
+        "formula": "4d6"
+      },
+      "speed": {
+        "walking": 30
+      },
+      "stats": {
+        "strength": 8,
+        "dexterity": 14,
+        "constitution": 10,
+        "intelligence": 10,
+        "wisdom": 8,
+        "charisma": 8
+      },
+      "_editorSkillsText": "stealth +6",
+      "_editorSensesText": "darkvision 60, Percepción pasiva 9",
+      "_editorLanguagesText": "Entiende: Common, Goblin | Habla: Common, Goblin",
+      "traits": [
+        {
+          "id": "custom-trait-0",
+          "name": "Escape Agil",
+          "description": "Escape Ágil. El goblin puede realizar las acciones de Esconderse o Retirarse como acción adicional en cada uno de sus turnos."
+        }
+      ],
+      "actions": [
+        {
+          "id": "custom-action-0",
+          "name": "Cimitarra",
+          "description": "Ataque con arma cuerpo a cuerpo: +4 a impactar, alcance 5 pies, un objetivo. Impacto: 5 (1d6 + 2) de daño cortante.",
+          "type": null,
+          "attack": "+4",
+          "hit": "5 (1d6 + 2)"
+        },
+        {
+          "id": "custom-action-1",
+          "name": "Arco Corto",
+          "description": "Ataque con arma a distancia: +4 a impactar, alcance 80/320 pies, un objetivo. Impacto: 5 (1d6 + 2) de daño perforante.",
+          "type": null,
+          "attack": "+2",
+          "hit": "5 (1d6 + 2)"
+        }
+      ],
+      "isSpellCaster": false,
+      "spellsKnown": null,
+      "spellSlots": null
+    },
+    {
+      "id": "custom-creature-7gl7",
+      "name": "Lhupo",
+      "cr": 0.25,
+      "speciesId": [
+        "goblinoid"
+      ],
+      "typeId": "humanoid",
+      "humanoidRaceId": null,
+      "humanoidVariantId": null,
+      "ac": {
+        "value": 15,
+        "note": [
+          "armor",
+          "armadura de cuero"
+        ]
+      },
+      "hp": {
+        "average": 15,
+        "formula": "4d6"
+      },
+      "speed": {
+        "walking": 30
+      },
+      "stats": {
+        "strength": 8,
+        "dexterity": 14,
+        "constitution": 10,
+        "intelligence": 10,
+        "wisdom": 8,
+        "charisma": 8
+      },
+      "_editorSkillsText": "stealth +6",
+      "_editorSensesText": "darkvision 60, Percepción pasiva 9",
+      "_editorLanguagesText": "Entiende: Common, Goblin | Habla: Common, Goblin",
+      "traits": [
+        {
+          "id": "custom-trait-0",
+          "name": "",
+          "description": "Escape Ágil. El goblin puede realizar las acciones de Esconderse o Retirarse como acción adicional en cada uno de sus turnos."
+        }
+      ],
+      "actions": [
+        {
+          "id": "custom-action-0",
+          "name": "Cimitarra",
+          "description": "Ataque con arma cuerpo a cuerpo: +4 a impactar, alcance 5 pies, un objetivo. Impacto: 5 (1d6 + 2) de daño cortante.",
+          "type": null,
+          "attack": "+4",
+          "hit": "5 (1d6 + 2)"
+        },
+        {
+          "id": "custom-action-1",
+          "name": "Arco Corto",
+          "description": "Ataque con arma a distancia: +4 a impactar, alcance 80/320 pies, un objetivo. Impacto: 5 (1d6 + 2) de daño perforante.",
+          "type": null,
+          "attack": "+2",
+          "hit": "5 (1d6 + 2)"
+        }
+      ],
+      "isSpellCaster": false,
+      "spellsKnown": null,
+      "spellSlots": null
+    },
+    {
+      "id": "custom-creature-7v4y",
+      "name": "Puerta reforzada",
+      "cr": 2,
+      "speciesId": [
+        "construct"
+      ],
+      "typeId": "construct",
+      "humanoidRaceId": null,
+      "humanoidVariantId": null,
+      "ac": {
+        "value": 15,
+        "note": [
+          "Madera",
+          "metal"
+        ]
+      },
+      "hp": {
+        "average": 31,
+        "formula": "4d10"
+      },
+      "speed": {},
+      "stats": {
+        "strength": 10,
+        "dexterity": 0,
+        "constitution": 10,
+        "intelligence": 0,
+        "wisdom": 0,
+        "charisma": 0
+      },
+      "skills": {},
+      "_editorSkillsText": "",
+      "senses": {
+        "passivePerception": 5
+      },
+      "_editorSensesText": "passivePerception 5",
+      "damageImmunities": [],
+      "damageResistances": [],
+      "damageVulnerabilities": [
+        "frio"
+      ],
+      "languages": {
+        "speaks": [],
+        "understands": []
+      },
+      "_editorLanguagesText": "",
+      "traits": [
+        {
+          "id": "custom-trait-0",
+          "name": "Refuerzo minimo",
+          "description": "Umbral: Cuenta con un umbral mínimo de daño de 7. Si un ataque es menor a 7, no hace ningún daño daño"
+        },
+        {
+          "id": "custom-trait-1",
+          "name": "Debilidad al frio",
+          "description": "Debilidad al frío: Si se congela y es golpeada, el humbral queda inhabilitado por 1 turno"
+        },
+        {
+          "id": "custom-trait-2",
+          "name": "Amplificación de sonido",
+          "description": "Si recibe un golpe físico, el sonido es amplificado"
+        }
+      ],
+      "actions": [
+        {
+          "id": "custom-action-0",
+          "name": "Umbral",
+          "description": "Umbral: Cuenta con un umbral mínimo de daño de 7. Si un ataque es menor a 7, no hace ningún daño daño",
+          "type": null,
+          "attack": "7",
+          "hit": "",
+          "damageType": ""
+        },
+        {
+          "id": "custom-action-1",
+          "name": "Debilidad al frío",
+          "description": "Debilidad al frío: Si se congela y es golpeada, el humbral queda inhabilitado por 1 turno",
+          "type": null,
+          "attack": "",
+          "hit": "",
+          "damageType": ""
+        },
+        {
+          "id": "custom-action-2",
+          "name": "Ruido",
+          "description": "Si recibe un golpe físico, el sonido es amplificado",
+          "type": null,
+          "attack": "",
+          "hit": "",
+          "damageType": ""
+        }
+      ],
+      "isSpellCaster": false,
+      "spellsKnown": null,
+      "spellSlots": null
+    },
+    {
+      "id": "custom-creature-oz8v",
+      "name": "Snarl",
+      "cr": 0.25,
+      "humanoidRaceId": null,
+      "humanoidVariantId": null,
+      "ac": {
+        "value": 13,
+        "note": [
+          "natural",
+          "armadura natural"
+        ]
+      },
+      "hp": {
+        "average": 18,
+        "formula": "2d8 + 2"
+      },
+      "speed": {
+        "walking": 40
+      },
+      "stats": {
+        "strength": 12,
+        "dexterity": 15,
+        "constitution": 12,
+        "intelligence": 3,
+        "wisdom": 12,
+        "charisma": 6
+      },
+      "skills": {
+        "perception": 3,
+        "stealth": 4
+      },
+      "_editorSkillsText": "perception +3, stealth +4",
+      "senses": {
+        "passivePerception": 13
+      },
+      "_editorSensesText": "passivePerception 13",
+      "damageImmunities": [],
+      "damageResistances": [],
+      "damageVulnerabilities": [],
+      "languages": {
+        "speaks": [],
+        "understands": []
+      },
+      "_editorLanguagesText": "",
+      "traits": [
+        {
+          "id": "custom-trait-0",
+          "name": "Oído y Olfato Agudos",
+          "description": "El lobo posee ventaja en las pruebas de Sabiduría (Percepción) que dependan del oído o del olfato."
+        },
+        {
+          "id": "custom-trait-1",
+          "name": "Atacar en Manada",
+          "description": "El lobo tiene ventaja en las tiradas de ataque contra criaturas que estén a 5 pies o menos de, al menos, un aliado del lobo que no esté incapacitado."
+        }
+      ],
+      "actions": [
+        {
+          "id": "custom-action-0",
+          "name": "Mordisco",
+          "description": "Ataque con arma cuerpo a cuerpo: +4 a impactar, alcance 5 pies, un objetivo. Impacto: 7 (2d4 + 2) de daño perforante. Si el objetivo es una criatura, deberá superar una tirada de salvación de Fuerza CD 11 o será derribada.",
+          "type": null,
+          "attack": "+4",
+          "hit": "7 (2d4 + 2)",
+          "damageType": "perforante"
+        }
+      ],
+      "isSpellCaster": false,
+      "spellsKnown": null,
+      "spellSlots": null
+    },
+    {
+      "id": "custom-creature-djvo",
+      "name": "Vyerith",
+      "cr": 3,
+      "speciesId": [
+        "shapeshifter"
+      ],
+      "typeId": "humanoid",
+      "humanoidRaceId": null,
+      "humanoidVariantId": null,
+      "ac": {
+        "value": 14,
+        "note": [
+          "natural"
+        ]
+      },
+      "hp": {
+        "average": 52,
+        "formula": "8d8 + 16"
+      },
+      "speed": {
+        "walking": 30
+      },
+      "stats": {
+        "strength": 11,
+        "dexterity": 18,
+        "constitution": 14,
+        "intelligence": 11,
+        "wisdom": 12,
+        "charisma": 14
+      },
+      "skills": {
+        "deception": 6,
+        "insight": 3
+      },
+      "_editorSkillsText": "deception +6, insight +3",
+      "senses": {
+        "darkvision": 60,
+        "passivePerception": 11
+      },
+      "_editorSensesText": "darkvision 60, passivePerception 11",
+      "damageImmunities": [],
+      "damageResistances": [],
+      "damageVulnerabilities": [],
+      "languages": {
+        "speaks": [
+          "Common"
+        ],
+        "understands": [
+          "Common"
+        ]
+      },
+      "_editorLanguagesText": "Entiende: Common | Habla: Common",
+      "traits": [
+        {
+          "id": "custom-trait-0",
+          "name": "Cambiaformas",
+          "description": "Puede polimorfarse en un humanoide Mediano o Pequeño que haya visto, o volver a su forma auténtica, manteniendo sus estadísticas salvo por el tamaño."
+        },
+        {
+          "id": "custom-trait-1",
+          "name": "Emboscador",
+          "description": "Tiene ventaja en las tiradas de ataque contra cualquier criatura a la que haya sorprendido durante el primer asalto del combate."
+        },
+        {
+          "id": "custom-trait-2",
+          "name": "Ataque por sorpresa",
+          "description": "Si sorprende a una criatura y la golpea en el primer asalto, ese ataque inflige 10 (3d6) puntos de daño adicionales."
+        }
+      ],
+      "actions": [
+        {
+          "id": "custom-action-0",
+          "name": "Ataque múltiple",
+          "description": "Realiza dos ataques cuerpo a cuerpo.",
+          "type": null,
+          "attack": "",
+          "hit": "",
+          "damageType": ""
+        },
+        {
+          "id": "custom-action-1",
+          "name": "Golpe",
+          "description": "Ataque con arma cuerpo a cuerpo: +6 a impactar, alcance 5 pies, un objetivo. Impacto: 7 (1d6 + 4) puntos de daño contundente.",
+          "type": null,
+          "attack": "+6",
+          "hit": "7 (1d6 + 4)",
+          "damageType": ""
+        },
+        {
+          "id": "custom-action-2",
+          "name": "Leer pensamientos",
+          "description": "Puede leer mágicamente los pensamientos superficiales de una criatura a 60 pies mientras mantenga la concentración, obteniendo ventaja en tiradas sociales contra ella.",
+          "type": null,
+          "attack": "",
+          "hit": "",
+          "damageType": ""
+        },
+        {
+          "id": "custom-action-3",
+          "name": "Tornado espejo",
+          "description": "Agarra a una criatura humanoide enemiga y lo hace girar, para transformarse en esa criatura. Al hacerlo desarma e interfiere en la mente de la criatura. Solo puede usar ataques desarmado (1+ModFUE). El grupo debe hacer tirada de Perspicacia CD 15 para descubrir al impostor. Si falla el golpe se lo llevará el aliado.",
+          "type": null,
+          "attack": "",
+          "hit": "",
+          "damageType": ""
+        }
+      ],
+      "isSpellCaster": false,
+      "spellsKnown": null,
+      "spellSlots": null
+    },
+    {
+      "id": "custom-creature-4mj7",
+      "name": "Vhalak",
+      "cr": 3,
+      "speciesId": [
+        "shapeshifter"
+      ],
+      "typeId": "humanoid",
+      "humanoidRaceId": null,
+      "humanoidVariantId": null,
+      "ac": {
+        "value": 14,
+        "note": [
+          "natural"
+        ]
+      },
+      "hp": {
+        "average": 52,
+        "formula": "8d8 + 16"
+      },
+      "speed": {
+        "walking": 30
+      },
+      "stats": {
+        "strength": 11,
+        "dexterity": 18,
+        "constitution": 14,
+        "intelligence": 11,
+        "wisdom": 12,
+        "charisma": 14
+      },
+      "skills": {
+        "deception": 6,
+        "insight": 3
+      },
+      "_editorSkillsText": "deception +6, insight +3",
+      "senses": {
+        "darkvision": 60,
+        "passivePerception": 11
+      },
+      "_editorSensesText": "darkvision 60, passivePerception 11",
+      "damageImmunities": [],
+      "damageResistances": [],
+      "damageVulnerabilities": [],
+      "languages": {
+        "speaks": [
+          "Common"
+        ],
+        "understands": [
+          "Common"
+        ]
+      },
+      "_editorLanguagesText": "Entiende: Common | Habla: Common",
+      "traits": [
+        {
+          "id": "custom-trait-0",
+          "name": "Cambiaformas",
+          "description": "Puede polimorfarse en un humanoide Mediano o Pequeño que haya visto, o volver a su forma auténtica, manteniendo sus estadísticas salvo por el tamaño."
+        },
+        {
+          "id": "custom-trait-1",
+          "name": "Emboscador",
+          "description": "Tiene ventaja en las tiradas de ataque contra cualquier criatura a la que haya sorprendido durante el primer asalto del combate."
+        },
+        {
+          "id": "custom-trait-2",
+          "name": "Ataque por sorpresa",
+          "description": "Si sorprende a una criatura y la golpea en el primer asalto, ese ataque inflige 10 (3d6) puntos de daño adicionales."
+        }
+      ],
+      "actions": [
+        {
+          "id": "custom-action-0",
+          "name": "Ataque múltiple",
+          "description": "Realiza dos ataques cuerpo a cuerpo.",
+          "type": null,
+          "attack": "",
+          "hit": "",
+          "damageType": ""
+        },
+        {
+          "id": "custom-action-1",
+          "name": "Golpe",
+          "description": "Ataque con arma cuerpo a cuerpo: +6 a impactar, alcance 5 pies, un objetivo. Impacto: 7 (1d6 + 4) puntos de daño contundente.",
+          "type": null,
+          "attack": "+6",
+          "hit": "7 (1d6 + 4)",
+          "damageType": ""
+        },
+        {
+          "id": "custom-action-2",
+          "name": "Leer pensamientos",
+          "description": "Puede leer mágicamente los pensamientos superficiales de una criatura a 60 pies mientras mantenga la concentración, obteniendo ventaja en tiradas sociales contra ella.",
+          "type": null,
+          "attack": "",
+          "hit": "",
+          "damageType": ""
+        },
+        {
+          "id": "custom-action-3",
+          "name": "Tornado espejo",
+          "description": "Agarra a una criatura humanoide enemiga y lo hace girar, para transformarse en esa criatura. Al hacerlo desarma e interfiere en la mente de la criatura. Solo puede usar ataques desarmado (1+ModFUE). El grupo debe hacer tirada de Perspicacia CD 15 para descubrir al impostor. Si falla el golpe se lo llevará el aliado.",
+          "type": null,
+          "attack": "",
+          "hit": "",
+          "damageType": ""
+        }
+      ],
+      "isSpellCaster": false,
+      "spellsKnown": null,
+      "spellSlots": null
+    },
+    {
+      "id": "custom-creature-13df",
+      "name": "Morsmek El Espectro",
+      "cr": 3,
+      "humanoidRaceId": null,
+      "humanoidVariantId": null,
+      "ac": {
+        "value": 13,
+        "note": []
+      },
+      "hp": {
+        "average": 66,
+        "formula": "6d8+18"
+      },
+      "speed": {
+        "volar": 60
+      },
+      "stats": {
+        "strength": 6,
+        "dexterity": 16,
+        "constitution": 16,
+        "intelligence": 12,
+        "wisdom": 14,
+        "charisma": 15
+      },
+      "skills": {},
+      "_editorSkillsText": "",
+      "senses": {
+        "darkvision": 60,
+        "passivePerception": 12
+      },
+      "_editorSensesText": "darkvision 60, passivePerception 12",
+      "damageImmunities": [
+        "encantado",
+        "paralizado",
+        "agarrado",
+        "petrificado",
+        "veneno",
+        "tumbado",
+        "incapacitado",
+        "necrotico"
+      ],
+      "damageResistances": [
+        "acido",
+        "frio",
+        "fuego",
+        "electrico",
+        "perforante",
+        "contundente",
+        "cortante"
+      ],
+      "damageVulnerabilities": [],
+      "languages": {
+        "speaks": [
+          "Común",
+          "Infernal"
+        ],
+        "understands": [
+          "Común",
+          "Infernal"
+        ]
+      },
+      "_editorLanguagesText": "Entiende: Común, Infernal | Habla: Común, Infernal",
+      "traits": [
+        {
+          "id": "custom-trait-0",
+          "name": "Movimiento incorporeo",
+          "description": "El espectro puede moverse a traves de cualquier criatura u objeto, pero no puede parar allí."
+        },
+        {
+          "id": "custom-trait-1",
+          "name": "Sensibilidad a la luz solar",
+          "description": "Mientras este expuesto a la luz del sol, el espectro tiene desventaja en ataque y miradas de Sabiduría (percepción) que se basen en la vista."
+        }
+      ],
+      "actions": [
+        {
+          "id": "custom-action-0",
+          "name": "Drenar vida",
+          "description": "Ataque de arma cuerpo a cuerpo: +5 a impactar, alcance 5 pies (1,5m), una criatura. Impacto: 16 (3d8+3) de daño necrótico y el objetivo debe hacer una tirada de salvación de Constitución CD 13 o sus puntos de golpe máximos se reducen a una cantidad igual al daño recibido. Si este ataque reduce los puntos de golpe del personaje a 0, muere. Esta reducción de los puntos de golpe máximos finaliza tras un descanso largo.",
+          "type": null,
+          "attack": "+5 a impactar",
+          "hit": "3d8+3",
+          "damageType": "necrotico"
+        }
+      ],
+      "isSpellCaster": false,
+      "spellsKnown": null,
+      "spellSlots": null
+    }
+  ]
+}

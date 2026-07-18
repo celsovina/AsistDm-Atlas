@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "lastUpdated": "2025-01-XX",
+    "description": "Tipos de criaturas estándar de D&D 5e - Tabla de referencia",
+    "totalTypes": 15
+  },
+  "types": [
+    {
+      "id": "aberration",
+      "name": "Aberración",
+      "description": "Las aberraciones son criaturas con una anatomía completamente ajena a las leyes de la naturaleza y la realidad. Sus formas extrañas y sus poderes sobrenaturales desafían la comprensión mortal."
+    },
+    {
+      "id": "beast",
+      "name": "Bestia",
+      "description": "Las bestias son criaturas no inteligentes que viven en la naturaleza. Son animales normales, aunque algunos pueden ser de tamaño inusual o tener habilidades mágicas."
+    },
+    {
+      "id": "celestial",
+      "name": "Celestial",
+      "description": "Los celestiales son criaturas nativas de los Planos Superiores. Muchos de ellos son servidores de las deidades y encarnan la bondad y la ley."
+    },
+    {
+      "id": "ooze",
+      "name": "Cieno",
+      "description": "Los cienos son criaturas gelatinosas que rara vez tienen una forma fija. Son criaturas primitivas que se mueven lentamente y se alimentan de materia orgánica."
+    },
+    {
+      "id": "dragon",
+      "name": "Dragón",
+      "description": "Los dragones son grandes reptiles mágicos que se encuentran en todo el multiverso. Son criaturas poderosas y antiguas, conocidas por su inteligencia y su capacidad para usar magia."
+    },
+    {
+      "id": "fey",
+      "name": "Feérico",
+      "description": "Los feéricos son criaturas mágicas estrechamente vinculadas con las fuerzas de la naturaleza. Viven en el Plano Feérico y son conocidos por su naturaleza caprichosa y su magia ilusoria."
+    },
+    {
+      "id": "giant",
+      "name": "Gigante",
+      "description": "Los gigantes son criaturas humanoides de gran tamaño que habitan en diversos entornos. Comparten una cultura común basada en la fuerza y el honor, aunque sus costumbres varían según el tipo de gigante."
+    },
+    {
+      "id": "humanoid",
+      "name": "Humanoide",
+      "description": "Los humanoides son criaturas bípedas con una forma básicamente humanoide. Incluyen humanos y muchas otras razas, desde elfos y enanos hasta goblins y orcos."
+    },
+    {
+      "id": "fiend",
+      "name": "Infernal",
+      "description": "Los infernales son criaturas nativas de los Planos Inferiores. Muchos de ellos son malvados por naturaleza y buscan corromper o destruir a los mortales."
+    },
+    {
+      "id": "monstrosity",
+      "name": "Monstruosidad",
+      "description": "Las monstruosidades son criaturas que no encajan en ninguna otra categoría. Son criaturas horribles que desafían la naturaleza, a menudo creadas por magia o experimentación."
+    },
+    {
+      "id": "undead",
+      "name": "Muerto Viviente",
+      "description": "Los muertos vivientes son criaturas que alguna vez vivieron pero que han sido animadas por magia o por otras fuerzas sobrenaturales. Incluyen esqueletos, zombis, liches y vampiros."
+    },
+    {
+      "id": "plant",
+      "name": "Planta",
+      "description": "Las plantas son criaturas vegetales, algunas de las cuales pueden moverse y atacar. Muchas plantas son inmunes a ciertos efectos y tienen una conexión especial con la naturaleza."
+    },
+    {
+      "id": "construct",
+      "name": "Constructo",
+      "description": "Los constructos son criaturas artificiales creadas mediante magia. Incluyen golems, autómatas y otras criaturas animadas. Son inmunes a muchos efectos que afectan a criaturas vivas."
+    },
+    {
+      "id": "elemental",
+      "name": "Elemental",
+      "description": "Los elementales son criaturas nativas de los Planos Elementales. Están compuestos de un elemento puro (aire, tierra, fuego o agua) y tienen resistencia o inmunidad a su elemento asociado."
+    },
+    {
+      "id": "swarm",
+      "name": "Enjambre",
+      "description": "Los enjambres son grupos de criaturas diminutas que actúan como una sola entidad. Pueden ser enjambres de bestias, insectos u otras criaturas pequeñas. Los enjambres tienen características especiales relacionadas con su naturaleza colectiva."
+    }
+  ]
+}
+

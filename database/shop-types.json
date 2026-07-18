@@ -1,0 +1,38 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "description": "Tipos de tienda con categorías y subcategorías de ítems admitidos. Los id coinciden con choices.json ShopType. itemCategories/itemSubcategories se usan para filtrar el catálogo al cargar ítems por tipo."
+  },
+  "shopTypes": [
+    {
+      "id": "abarrotes",
+      "itemCategories": ["consumible", "recurso"],
+      "itemSubcategories": ["alimento", "bebida", "recurso"]
+    },
+    {
+      "id": "general",
+      "itemCategories": ["arma", "armadura", "objeto_magico", "equipo", "recurso", "municion", "consumible", "bagatela", "instrumento", "pack", "componente"],
+      "itemSubcategories": []
+    },
+    {
+      "id": "armeria",
+      "itemCategories": ["arma", "armadura"],
+      "itemSubcategories": ["municion", "arma_simple", "arma_marcial", "armadura_ligera", "armadura_mediana", "armadura_pesada", "escudo"]
+    },
+    {
+      "id": "alquimia",
+      "itemCategories": ["recurso", "consumible","objeto_magico","componente"],
+      "itemSubcategories": ["pocion", "Vegetal", "alimento"]
+    },
+    {
+      "id": "magica",
+      "itemCategories": ["objeto_magico", "consumible", "componente"],
+      "itemSubcategories": ["grimorio", "pergamino"]
+    },
+    {
+      "id": "joyeria",
+      "itemCategories": ["recurso", "equipo"],
+      "itemSubcategories": ["gema", "anillo"]
+    }
+  ]
+}

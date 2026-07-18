@@ -1,0 +1,52 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "lastUpdated": "2024-12-19",
+    "description": "Base de datos de estilos de combate para D&D 5e - Manual del Jugador (2018)",
+    "totalEstilos": 0
+  },
+  "estilos": [
+    {
+      "id": "duelo",
+      "nombre": "Duelo",
+      "descripcion": "Cuando llevas un arma cuerpo a cuerpo en una mano y ninguna otra arma, ganas un bonificador de +2 a las tiradas de daño con esa arma.",
+      "clases": ["guerrero", "paladin", "ranger"],
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "defensa",
+      "nombre": "Defensa",
+      "descripcion": "Mientras llevas armadura, ganas un bonificador de +1 a tu CA.",
+      "clases": ["guerrero", "paladin", "ranger"],
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "dos_armas",
+      "nombre": "Dos Armas",
+      "descripcion": "Cuando te involucras en combate con dos armas, puedes añadir tu modificador de característica al daño del segundo ataque.",
+      "clases": ["guerrero", "ranger"],
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "tiro_con_arco",
+      "nombre": "Tiro con Arco",
+      "descripcion": "Ganas un bonificador de +2 a las tiradas de ataque que hagas con armas a distancia.",
+      "clases": ["guerrero", "ranger"],
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "proteccion",
+      "nombre": "Protección",
+      "descripcion": "Cuando una criatura que puedes ver ataca a un objetivo que no eres tú y que está a 5 pies de ti, puedes usar tu reacción para imponer desventaja en la tirada de ataque. Debes estar llevando un escudo.",
+      "clases": ["guerrero", "paladin"],
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "combate_armado",
+      "nombre": "Combate Armado",
+      "descripcion": "Cuando estás llevando una o más armas cuerpo a cuerpo, ganas un bonificador de +1 a las tiradas de ataque que hagas con ellas.",
+      "clases": ["guerrero", "paladin"],
+      "fuente": "Manual del Jugador"
+    }
+  ]
+}

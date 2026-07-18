@@ -1,0 +1,350 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "lastUpdated": "2026-04-13",
+    "description": "Base de datos dedicada a las disciplinas elementales del monje Camino de los Cuatro Elementos."
+  },
+  "generalRules": {
+    "classId": "monje",
+    "subclassName": "Camino de los Cuatro Elementos",
+    "choiceGroupId": "disciplinas_elementales",
+    "resourceType": "ki",
+    "resourceName": "Puntos de Ki",
+    "startingDisciplines": [
+      "armonia_elementos",
+      "choice"
+    ],
+    "additionalChoicesAtLevels": [
+      6,
+      11,
+      17
+    ],
+    "canReplaceOneKnownDisciplineWhenLearningNewOne": true,
+    "spellcastingRules": {
+      "ignoresMaterialComponents": true,
+      "upcastAvailableFromMonkLevel": 5,
+      "upcastCostPerLevel": 1,
+      "maxKiByMonkLevel": [
+        {
+          "minLevel": 5,
+          "maxLevel": 8,
+          "maxKi": 3
+        },
+        {
+          "minLevel": 9,
+          "maxLevel": 12,
+          "maxKi": 4
+        },
+        {
+          "minLevel": 13,
+          "maxLevel": 16,
+          "maxKi": 5
+        },
+        {
+          "minLevel": 17,
+          "maxLevel": 20,
+          "maxKi": 6
+        }
+      ]
+    }
+  },
+  "disciplines": [
+    {
+      "id": "agarrar_viento_norte",
+      "name": "Agarre del Viento del Norte",
+      "selectionDescription": "Inmovilizar persona",
+      "minLevel": 6,
+      "kind": "spell",
+      "resourceCost": {
+        "resource": "ki",
+        "amount": 3
+      },
+      "spell": {
+        "id": "hold_person",
+        "name": "Inmovilizar persona",
+        "castAtLevel": 2
+      },
+      "summary": "Lanzas Inmovilizar persona gastando 3 puntos de ki.",
+      "description": "Puedes gastar 3 puntos de ki para lanzar Inmovilizar persona."
+    },
+    {
+      "id": "aliento_invierno",
+      "name": "Aliento del Invierno",
+      "selectionDescription": "Cono de frío",
+      "minLevel": 17,
+      "kind": "spell",
+      "resourceCost": {
+        "resource": "ki",
+        "amount": 6
+      },
+      "spell": {
+        "id": "cone_of_cold",
+        "name": "Cono de frío",
+        "castAtLevel": 5
+      },
+      "summary": "Lanzas Cono de frío gastando 6 puntos de ki.",
+      "description": "Puedes gastar 6 puntos de ki para lanzar Cono de frío."
+    },
+    {
+      "id": "armonia_elementos",
+      "name": "Armonía con los Elementos",
+      "selectionDescription": "Control elemental menor",
+      "minLevel": 3,
+      "kind": "effect",
+      "resourceCost": {
+        "resource": "ki",
+        "amount": 0
+      },
+      "spell": null,
+      "summary": "Manipulas brevemente fuerzas elementales cercanas sin gastar ki.",
+      "description": "Como acción, puedes producir uno de estos efectos a elección: crear un efecto sensorial inocuo e instantáneo relacionado con aire, tierra, fuego o agua; encender o apagar instantáneamente una vela, antorcha u hoguera pequeña; enfriar o calentar hasta 1 libra de material inerte durante 1 hora; o hacer que 1 pie cúbico de tierra, fuego, agua o vapor tome una forma aproximada de tu elección durante 1 minuto."
+    },
+    {
+      "id": "barrido_ascuas",
+      "name": "Barrido de las Ascuas",
+      "selectionDescription": "Manos ardientes",
+      "minLevel": 3,
+      "kind": "spell",
+      "resourceCost": {
+        "resource": "ki",
+        "amount": 2
+      },
+      "spell": {
+        "id": "burning_hands",
+        "name": "Manos ardientes",
+        "castAtLevel": 1
+      },
+      "summary": "Lanzas Manos ardientes gastando 2 puntos de ki.",
+      "description": "Puedes gastar 2 puntos de ki para lanzar Manos ardientes."
+    },
+    {
+      "id": "cabalgar_viento",
+      "name": "Cabalgar el Viento",
+      "selectionDescription": "Volar",
+      "minLevel": 11,
+      "kind": "spell",
+      "resourceCost": {
+        "resource": "ki",
+        "amount": 4
+      },
+      "spell": {
+        "id": "fly",
+        "name": "Volar",
+        "castAtLevel": 3,
+        "targetRestriction": "solo a ti mismo"
+      },
+      "summary": "Lanzas Volar sobre ti mismo gastando 4 puntos de ki.",
+      "description": "Puedes gastar 4 puntos de ki para lanzar Volar eligiéndote como objetivo a ti mismo."
+    },
+    {
+      "id": "colmillos_serpiente_ignea",
+      "name": "Colmillos de la Serpiente Ígnea",
+      "selectionDescription": "Ataques ígneos con alcance aumentado",
+      "minLevel": 3,
+      "kind": "effect",
+      "resourceCost": {
+        "resource": "ki",
+        "amount": 1
+      },
+      "spell": null,
+      "summary": "Extiendes el alcance de tus ataques desarmados y los conviertes en daño de fuego.",
+      "description": "Cuando usas tu acción para Atacar durante tu turno, puedes gastar 1 punto de ki para extender en 10 pies el alcance de tus ataques desarmados para esa acción y el resto del turno. Los impactos realizados así causan daño de fuego en lugar de contundente. Además, cuando uno de esos ataques impacta, puedes gastar 1 punto de ki adicional para infligir 1d10 de daño de fuego extra."
+    },
+    {
+      "id": "defensa_montana_eterna",
+      "name": "Defensa de la Montaña Eterna",
+      "selectionDescription": "Piel pétrea",
+      "minLevel": 17,
+      "kind": "spell",
+      "resourceCost": {
+        "resource": "ki",
+        "amount": 5
+      },
+      "spell": {
+        "id": "stoneskin",
+        "name": "Piel pétrea",
+        "castAtLevel": 4,
+        "targetRestriction": "solo a ti mismo"
+      },
+      "summary": "Lanzas Piel pétrea sobre ti mismo gastando 5 puntos de ki.",
+      "description": "Puedes gastar 5 puntos de ki para lanzar Piel pétrea eligiéndote como objetivo a ti mismo."
+    },
+    {
+      "id": "gong_cumbre",
+      "name": "Gong de la Cumbre",
+      "selectionDescription": "Hacer añicos",
+      "minLevel": 6,
+      "kind": "spell",
+      "resourceCost": {
+        "resource": "ki",
+        "amount": 3
+      },
+      "spell": {
+        "id": "shatter",
+        "name": "Hacer añicos",
+        "castAtLevel": 2
+      },
+      "summary": "Lanzas Hacer añicos gastando 3 puntos de ki.",
+      "description": "Puedes gastar 3 puntos de ki para lanzar Hacer añicos."
+    },
+    {
+      "id": "latigo_agua",
+      "name": "Látigo de Agua",
+      "selectionDescription": "Látigo de agua que daña y reposiciona",
+      "minLevel": 3,
+      "kind": "effect",
+      "resourceCost": {
+        "resource": "ki",
+        "amount": 2
+      },
+      "spell": null,
+      "summary": "Creas un látigo de agua que hiere, derriba o atrae a un enemigo.",
+      "description": "Como acción, puedes gastar 2 puntos de ki para obligar a una criatura que veas a 30 pies o menos a hacer una salvación de Destreza. Si falla, recibe 3d10 de daño contundente, más 1d10 adicional por cada punto de ki extra invertido, y eliges entre derribarla o atraerla hasta 25 pies hacia ti. Si tiene éxito, solo recibe la mitad del daño y no es derribada ni desplazada.",
+      "scaling": {
+        "type": "extra_damage_per_extra_ki",
+        "damagePerPoint": "1d10 contundente"
+      }
+    },
+    {
+      "id": "llamas_fenix",
+      "name": "Llamas del Fénix",
+      "selectionDescription": "Bola de fuego",
+      "minLevel": 11,
+      "kind": "spell",
+      "resourceCost": {
+        "resource": "ki",
+        "amount": 4
+      },
+      "spell": {
+        "id": "fireball",
+        "name": "Bola de fuego",
+        "castAtLevel": 3
+      },
+      "summary": "Lanzas Bola de fuego gastando 4 puntos de ki.",
+      "description": "Puedes gastar 4 puntos de ki para lanzar Bola de fuego."
+    },
+    {
+      "id": "moldear_rio_fluye",
+      "name": "Moldear el Río que Fluye",
+      "selectionDescription": "Manipulación de agua o hielo",
+      "minLevel": 3,
+      "kind": "effect",
+      "resourceCost": {
+        "resource": "ki",
+        "amount": 1
+      },
+      "spell": null,
+      "summary": "Transformas agua en hielo o moldeas hielo y agua en un área amplia.",
+      "description": "Como acción, puedes gastar 1 punto de ki y elegir una zona de agua o hielo de hasta 30 pies por lado a 150 pies o menos de ti. Puedes transformar agua en hielo o viceversa, elevar o bajar su nivel, excavar una zanja, levantar o derribar un muro, o crear un pilar. La magnitud máxima del cambio no puede superar la mitad de la mayor dimensión del área afectada. No puedes moldear el hielo para atrapar o dañar a una criatura."
+    },
+    {
+      "id": "ola_tierra_ondulante",
+      "name": "Ola de la Tierra Ondulante",
+      "selectionDescription": "Muro de piedra",
+      "minLevel": 17,
+      "kind": "spell",
+      "resourceCost": {
+        "resource": "ki",
+        "amount": 6
+      },
+      "spell": {
+        "id": "wall_of_stone",
+        "name": "Muro de piedra",
+        "castAtLevel": 5
+      },
+      "summary": "Lanzas Muro de piedra gastando 6 puntos de ki.",
+      "description": "Puedes gastar 6 puntos de ki para lanzar Muro de piedra."
+    },
+    {
+      "id": "postura_niebla",
+      "name": "Postura de la Niebla",
+      "selectionDescription": "Forma gaseosa",
+      "minLevel": 11,
+      "kind": "spell",
+      "resourceCost": {
+        "resource": "ki",
+        "amount": 4
+      },
+      "spell": {
+        "id": "gaseous_form",
+        "name": "Forma gaseosa",
+        "castAtLevel": 3,
+        "targetRestriction": "solo a ti mismo"
+      },
+      "summary": "Lanzas Forma gaseosa sobre ti mismo gastando 4 puntos de ki.",
+      "description": "Puedes gastar 4 puntos de ki para lanzar Forma gaseosa eligiéndote como objetivo a ti mismo."
+    },
+    {
+      "id": "puño_cuatro_truenos",
+      "name": "Puño de los Cuatro Truenos",
+      "selectionDescription": "Onda atronadora",
+      "minLevel": 3,
+      "kind": "spell",
+      "resourceCost": {
+        "resource": "ki",
+        "amount": 2
+      },
+      "spell": {
+        "id": "thunderwave",
+        "name": "Onda atronadora",
+        "castAtLevel": 1
+      },
+      "summary": "Lanzas Onda atronadora gastando 2 puntos de ki.",
+      "description": "Puedes gastar 2 puntos de ki para lanzar Onda atronadora."
+    },
+    {
+      "id": "puño_aire_ingobernable",
+      "name": "Puño del Aire Inquebrantable",
+      "selectionDescription": "Estallido de aire comprimido",
+      "minLevel": 3,
+      "kind": "effect",
+      "resourceCost": {
+        "resource": "ki",
+        "amount": 2
+      },
+      "spell": null,
+      "summary": "Lanzas un golpe de aire que hiere, empuja y puede derribar.",
+      "description": "Como acción, puedes gastar 2 puntos de ki para elegir una criatura a 30 pies o menos. Debe hacer una salvación de Fuerza. Si falla, recibe 3d10 de daño contundente, más 1d10 adicional por cada punto de ki extra invertido, y puedes empujarla hasta 20 pies en dirección contraria a ti y derribarla. Si tiene éxito, solo recibe la mitad del daño y no es empujada ni derribada.",
+      "scaling": {
+        "type": "extra_damage_per_extra_ki",
+        "damagePerPoint": "1d10 contundente"
+      }
+    },
+    {
+      "id": "rafaga_espiritus_vendaval",
+      "name": "Ráfaga de los Espíritus del Vendaval",
+      "selectionDescription": "Ráfaga de viento",
+      "minLevel": 3,
+      "kind": "spell",
+      "resourceCost": {
+        "resource": "ki",
+        "amount": 2
+      },
+      "spell": {
+        "id": "gust_of_wind",
+        "name": "Ráfaga de viento",
+        "castAtLevel": 2
+      },
+      "summary": "Lanzas Ráfaga de viento gastando 2 puntos de ki.",
+      "description": "Puedes gastar 2 puntos de ki para lanzar Ráfaga de viento."
+    },
+    {
+      "id": "rio_llama_insaciable",
+      "name": "Río de la Llama Insaciable",
+      "selectionDescription": "Muro de fuego",
+      "minLevel": 17,
+      "kind": "spell",
+      "resourceCost": {
+        "resource": "ki",
+        "amount": 5
+      },
+      "spell": {
+        "id": "wall_of_fire",
+        "name": "Muro de fuego",
+        "castAtLevel": 4
+      },
+      "summary": "Lanzas Muro de fuego gastando 5 puntos de ki.",
+      "description": "Puedes gastar 5 puntos de ki para lanzar Muro de fuego."
+    }
+  ]
+}

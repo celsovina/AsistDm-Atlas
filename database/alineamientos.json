@@ -1,0 +1,64 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "lastUpdated": "2024-12-19",
+    "description": "Base de datos de alineamientos para D&D 5e",
+    "totalAlineamientos": 9
+  },
+  "alineamientos": [
+    {
+      "id": "lg",
+      "name": "Legal Bueno",
+      "abreviatura": "LG",
+      "description": "Pueden contar con que hagan lo que es correcto, como se espera de una sociedad buena. Los dragones dorados, paladines y la mayoría de los enanos son legales buenos."
+    },
+    {
+      "id": "ng",
+      "name": "Neutral Bueno",
+      "abreviatura": "NG",
+      "description": "Hacen lo mejor que pueden para ayudar a otros según sus necesidades. Muchos celestes, algunos gigantes de las nubes y la mayoría de los gnomes son neutrales buenos."
+    },
+    {
+      "id": "cg",
+      "name": "Caótico Bueno",
+      "abreviatura": "CG",
+      "description": "Actúan como su conciencia les dicta, con poca consideración por lo que otros esperan. Los dragones de cobre, muchos elfos y unicornios son caóticos buenos."
+    },
+    {
+      "id": "ln",
+      "name": "Legal Neutral",
+      "abreviatura": "LN",
+      "description": "Actúan de acuerdo con la ley, la tradición o los códigos personales. Muchos monjes y algunos magos son legales neutrales."
+    },
+    {
+      "id": "n",
+      "name": "Neutral",
+      "abreviatura": "N",
+      "description": "Es el alineamiento de aquellos que prefieren mantener el equilibrio entre las fuerzas del universo. Muchos druidas y algunos humanos son neutrales."
+    },
+    {
+      "id": "cn",
+      "name": "Caótico Neutral",
+      "abreviatura": "CN",
+      "description": "Siguen sus caprichos, manteniendo su libertad personal por encima de todo. Muchos bárbaros y pícaros, y algunos bardos, son caóticos neutrales."
+    },
+    {
+      "id": "le",
+      "name": "Legal Malvado",
+      "abreviatura": "LE",
+      "description": "Métodos sistemáticos, organizados e intencionados para hacer lo que es mejor para ellos, sin importar a quién dañen. Los diablos, dragones azules y hobgoblins son legales malvados."
+    },
+    {
+      "id": "ne",
+      "name": "Neutral Malvado",
+      "abreviatura": "NE",
+      "description": "Hacen lo que pueden obtener, sin compasión ni remordimiento. Muchos drow, algunos gigantes de las nubes y yugoloths son neutrales malvados."
+    },
+    {
+      "id": "ce",
+      "name": "Caótico Malvado",
+      "abreviatura": "CE",
+      "description": "Actúan con violencia arbitraria, estimulados por su codicia, odio o sed de sangre. Los demonios, dragones rojos y orcos son caóticos malvados."
+    }
+  ]
+}

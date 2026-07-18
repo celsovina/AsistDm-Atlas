@@ -1,0 +1,443 @@
+/* Atlas — sección Clases (independiente del módulo Conjuros) */
+
+.atlas-classes-page {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.atlas-classes-page[hidden] {
+  display: none !important;
+}
+
+.atlas-spells-page[hidden] {
+  display: none !important;
+}
+
+.class-detail {
+  padding: 4px 6px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 0;
+  flex: 1;
+}
+
+.class-detail__title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.class-detail__desc {
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #cbd5e0;
+}
+
+.class-detail__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.class-level-control {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--atlas-border);
+  border-radius: 6px;
+}
+
+.class-level-control__label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--atlas-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+#class-level-select-mount {
+  flex: 0 0 auto;
+  min-width: 120px;
+  max-width: 160px;
+}
+
+.class-level-control__hint {
+  flex: 1;
+  min-width: 140px;
+  font-size: 12px;
+  color: var(--atlas-text-dim);
+}
+
+.class-features-previous {
+  margin-top: 12px;
+  border: 1px solid var(--atlas-border);
+  border-radius: var(--atlas-radius);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.class-features-previous__summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 10px 12px;
+  font-size: 12px;
+  font-weight: 650;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--atlas-text-muted);
+  user-select: none;
+}
+
+.class-features-previous__summary::-webkit-details-marker {
+  display: none;
+}
+
+.class-features-previous__summary::before {
+  content: '▸';
+  display: inline-block;
+  margin-right: 8px;
+  color: var(--atlas-accent);
+  transition: transform 0.15s ease;
+}
+
+.class-features-previous[open] > .class-features-previous__summary::before {
+  transform: rotate(90deg);
+}
+
+.class-features--previous {
+  padding: 0 12px 12px;
+  gap: 8px;
+}
+
+.class-detail__section-title {
+  margin: 0 0 8px;
+  font-size: 12px;
+  font-weight: 650;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--atlas-text-muted);
+}
+
+.class-features {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.class-feature {
+  background: #1a202c;
+  border: 1px solid #4a5568;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.class-feature__summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 12px;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+.class-feature__summary::-webkit-details-marker {
+  display: none;
+}
+
+.class-feature__summary::before {
+  content: '▸';
+  flex: 0 0 auto;
+  color: var(--atlas-accent);
+  font-size: 12px;
+  transition: transform 0.15s ease;
+}
+
+.class-feature[open] > .class-feature__summary::before {
+  transform: rotate(90deg);
+}
+
+.class-feature__name {
+  flex: 1;
+  min-width: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.class-feature__desc {
+  margin: 0;
+  padding: 0 12px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #cbd5e0;
+}
+
+.class-feature__body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 12px 12px;
+}
+
+.class-feature__body .class-feature__desc {
+  padding: 0;
+}
+
+.class-feature__select {
+  width: 100%;
+  max-width: 360px;
+}
+
+.class-feature--archetype {
+  border-color: rgba(66, 153, 225, 0.45);
+}
+
+.class-detail__title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.class-detail__title-row .class-detail__title {
+  margin: 0;
+  flex: 1;
+  min-width: 0;
+}
+
+.class-favorite-btn {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--atlas-panel);
+  border: 1px solid var(--atlas-border);
+  border-radius: var(--atlas-radius);
+  color: var(--atlas-text-muted);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.class-favorite-btn svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 1.75;
+}
+
+.class-favorite-btn:hover {
+  background: var(--atlas-surface);
+  color: #f6e05e;
+  border-color: rgba(246, 224, 94, 0.45);
+}
+
+.class-favorite-btn.is-active {
+  color: #f6e05e;
+  border-color: rgba(246, 224, 94, 0.55);
+  background: rgba(246, 224, 94, 0.08);
+}
+
+/* Misma estética que el botón favorito activo */
+#classes-list .spells-list-item--favorite {
+  color: #f6e05e;
+  border-color: rgba(246, 224, 94, 0.55);
+  background: rgba(246, 224, 94, 0.08);
+}
+
+#classes-list .spells-list-item--favorite .spells-list-item__name {
+  color: #f6e05e;
+}
+
+#classes-list .spells-list-item--favorite:hover {
+  border-color: rgba(246, 224, 94, 0.7);
+  background: rgba(246, 224, 94, 0.12);
+}
+
+.spells-list-item__fav {
+  flex-shrink: 0;
+  color: #f6e05e;
+  display: inline-flex;
+  align-items: center;
+}
+
+.spells-list-item__fav svg {
+  width: 14px;
+  height: 14px;
+  stroke: #f6e05e;
+}
+
+.class-spells-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1 1 auto;
+  min-height: 380px;
+}
+
+.class-spells-toolbar {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.class-spells-toolbar .spells-search-input {
+  flex: 1;
+  min-width: 0;
+  height: auto;
+  min-height: 42px;
+  box-sizing: border-box;
+}
+
+#class-spells-filter-mount {
+  flex-shrink: 0;
+  display: flex;
+  align-self: stretch;
+}
+
+#class-spells-filter-mount .atlas-filter {
+  display: flex;
+  align-self: stretch;
+  height: 100%;
+}
+
+#class-spells-filter-mount .atlas-filter__toggle {
+  width: 42px;
+  height: 100%;
+  min-height: 42px;
+  align-self: stretch;
+  box-sizing: border-box;
+}
+
+.class-spells-list {
+  flex: 1 1 auto;
+  min-height: 320px;
+  max-height: none;
+  margin-bottom: 0;
+  overflow-y: auto;
+}
+
+.class-spell-detail {
+  flex: 1 1 auto;
+  min-height: 320px;
+  overflow-y: auto;
+}
+
+.class-spells-selected-bar[hidden] {
+  display: none !important;
+}
+
+/* Conjuro seleccionado: detalle sobre la lista (como módulo Conjuros en móvil) */
+.class-spells-section.has-class-spell-selection .class-spells-toolbar {
+  display: none !important;
+}
+
+.class-spells-section.has-class-spell-selection .class-spells-list {
+  display: none !important;
+}
+
+.class-spells-section.has-class-spell-selection .class-spells-selected-bar:not([hidden]) {
+  display: flex !important;
+}
+
+.class-spells-section.has-class-spell-selection .class-spell-detail:not([hidden]) {
+  display: block;
+}
+
+.class-spells-section:not(.has-class-spell-selection) .class-spell-detail {
+  display: none !important;
+}
+
+.class-spells-section:not(.has-class-spell-selection) .class-spells-selected-bar {
+  display: none !important;
+}
+
+#classes-detail-pane {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* —— Estado base de la barra de clase —— */
+#classes-selected-bar[hidden] {
+  display: none !important;
+}
+
+/* Mantener el alto aunque no haya chip de nivel */
+#classes-selected-bar:not([hidden]) {
+  min-height: 42px;
+  box-sizing: border-box;
+}
+
+/* Sin clase seleccionada: sin barra */
+.atlas-app:not(.has-class-selection) #classes-selected-bar {
+  display: none !important;
+}
+
+/* Con clase seleccionada: misma UX que conjuro seleccionado */
+.atlas-app.has-class-selection #classes-page {
+  flex-direction: column;
+  gap: 12px;
+}
+
+.atlas-app.has-class-selection #classes-catalog .atlas-search-row {
+  display: none !important;
+}
+
+.atlas-app.has-class-selection #classes-list {
+  display: none !important;
+}
+
+.atlas-app.has-class-selection #classes-selected-bar:not([hidden]) {
+  display: flex !important;
+}
+
+.atlas-app.has-class-selection #classes-catalog {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.atlas-app.has-class-selection #classes-detail {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+/* Desktop sin selección: dos columnas */
+@media (min-width: 768px) {
+  .atlas-app:not(.has-class-selection) #classes-page {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .atlas-app:not(.has-class-selection) #classes-detail {
+    display: flex;
+  }
+}
+
+@media (max-width: 767px) {
+  .atlas-classes-page {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .atlas-app:not(.has-class-selection) #classes-detail {
+    display: none;
+  }
+}

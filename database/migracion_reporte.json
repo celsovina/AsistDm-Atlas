@@ -1,0 +1,1523 @@
+{
+  "categoryFallback": [
+    {
+      "id": "baya_buena",
+      "name": "Baya buena",
+      "oldCategory": "recurso",
+      "oldSubcategory": "alimento",
+      "newCategory": "recurso",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "jabalina",
+      "name": "Jabalina",
+      "oldCategory": "municion",
+      "oldSubcategory": "arma_simple",
+      "newCategory": "municion",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "dardo",
+      "name": "Dardo",
+      "oldCategory": "municion",
+      "oldSubcategory": "arma_simple",
+      "newCategory": "municion",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "ropa_comun",
+      "name": "Ropa común",
+      "oldCategory": "ropa",
+      "oldSubcategory": "conjunto",
+      "newCategory": "recurso",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "ropa_disfraz",
+      "name": "Ropa de disfraz",
+      "oldCategory": "ropa",
+      "oldSubcategory": "conjunto",
+      "newCategory": "recurso",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "ropa_fina",
+      "name": "Ropa fina",
+      "oldCategory": "ropa",
+      "oldSubcategory": "conjunto",
+      "newCategory": "recurso",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "ropa_viajero",
+      "name": "Ropa de viajero",
+      "oldCategory": "ropa",
+      "oldSubcategory": "conjunto",
+      "newCategory": "recurso",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "tunica",
+      "name": "Túnica",
+      "oldCategory": "ropa",
+      "oldSubcategory": "prenda",
+      "newCategory": "recurso",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "aljaba",
+      "name": "Aljaba",
+      "oldCategory": "equipo",
+      "oldSubcategory": "contenedor_municion",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "anillo_sellado",
+      "name": "Anillo de sellar",
+      "oldCategory": "equipo",
+      "oldSubcategory": "accesorio",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "ariete_portatil",
+      "name": "Ariete portátil",
+      "oldCategory": "equipo",
+      "oldSubcategory": "herramienta",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "balanza_mercader",
+      "name": "Balanza de mercader",
+      "oldCategory": "equipo",
+      "oldSubcategory": "herramienta",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "bolas_metal",
+      "name": "Bolas de metal",
+      "oldCategory": "equipo",
+      "oldSubcategory": "trampa",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "bolsa",
+      "name": "Bolsa",
+      "oldCategory": "equipo",
+      "oldSubcategory": "contenedor",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "botella_cristal",
+      "name": "Botella de cristal",
+      "oldCategory": "equipo",
+      "oldSubcategory": "contenedor_liquido",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "cadena_10",
+      "name": "Cadena (10 ft)",
+      "oldCategory": "equipo",
+      "oldSubcategory": "herramienta",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "campana",
+      "name": "Campana",
+      "oldCategory": "equipo",
+      "oldSubcategory": "herramienta",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "canalizador_arcano_cristal",
+      "name": "Canalizador arcano (Cristal)",
+      "oldCategory": "equipo",
+      "oldSubcategory": "canalizador_arcano",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "canalizador_arcano_baston",
+      "name": "Canalizador arcano (Bastón)",
+      "oldCategory": "equipo",
+      "oldSubcategory": "canalizador_arcano",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "canalizador_arcano_orbe",
+      "name": "Canalizador arcano (Orbe)",
+      "oldCategory": "equipo",
+      "oldSubcategory": "canalizador_arcano",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "canalizador_arcano_vara",
+      "name": "Canalizador arcano (Vara)",
+      "oldCategory": "equipo",
+      "oldSubcategory": "canalizador_arcano",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "canalizador_arcano_varita",
+      "name": "Canalizador arcano (Varita)",
+      "oldCategory": "equipo",
+      "oldSubcategory": "canalizador_arcano",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "canalizador_druidico_baston",
+      "name": "Canalizador druídico (Bastón de madera)",
+      "oldCategory": "equipo",
+      "oldSubcategory": "canalizador_druidico",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "canalizador_druidico_muerdago",
+      "name": "Canalizador druídico (Rama de muérdago)",
+      "oldCategory": "equipo",
+      "oldSubcategory": "canalizador_druidico",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "canalizador_druidico_totem",
+      "name": "Canalizador druídico (Tótem)",
+      "oldCategory": "equipo",
+      "oldSubcategory": "canalizador_druidico",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "canalizador_druidico_varita_tejo",
+      "name": "Canalizador druídico (Varita de tejo)",
+      "oldCategory": "equipo",
+      "oldSubcategory": "canalizador_druidico",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "cantimplora",
+      "name": "Cantimplora",
+      "oldCategory": "equipo",
+      "oldSubcategory": "contenedor_liquido",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "cana_pescar",
+      "name": "Caña de pescar",
+      "oldCategory": "equipo",
+      "oldSubcategory": "herramienta",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "catalejo",
+      "name": "Catalejo",
+      "oldCategory": "equipo",
+      "oldSubcategory": "herramienta",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "cerradura",
+      "name": "Cerradura",
+      "oldCategory": "equipo",
+      "oldSubcategory": "seguridad",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "cesta",
+      "name": "Cesta",
+      "oldCategory": "equipo",
+      "oldSubcategory": "contenedor",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "cofre",
+      "name": "Cofre",
+      "oldCategory": "equipo",
+      "oldSubcategory": "contenedor",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "cuerda_canamo_50",
+      "name": "Cuerda de cáñamo (50 pies)",
+      "oldCategory": "equipo",
+      "oldSubcategory": "cuerda",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "cuerda_seda_50",
+      "name": "Cuerda de seda (50 pies)",
+      "oldCategory": "equipo",
+      "oldSubcategory": "cuerda",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "cubo",
+      "name": "Cubo",
+      "oldCategory": "equipo",
+      "oldSubcategory": "contenedor",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "escalera_10",
+      "name": "Escalera (10 pies)",
+      "oldCategory": "equipo",
+      "oldSubcategory": "herramienta",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "espejo_acero",
+      "name": "Espejito de acero",
+      "oldCategory": "equipo",
+      "oldSubcategory": "herramienta",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "esposas",
+      "name": "Esposas",
+      "oldCategory": "equipo",
+      "oldSubcategory": "restriccion",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "estuche_mapa",
+      "name": "Estuche para mapa o pergamino",
+      "oldCategory": "equipo",
+      "oldSubcategory": "contenedor",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "estuche_virotes",
+      "name": "Estuche para virotes de ballesta",
+      "oldCategory": "equipo",
+      "oldSubcategory": "contenedor_municion",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "frasco_jarra",
+      "name": "Frasco o jarra",
+      "oldCategory": "equipo",
+      "oldSubcategory": "contenedor_liquido",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "garfio_escalada",
+      "name": "Garfio de escalada",
+      "oldCategory": "equipo",
+      "oldSubcategory": "herramienta",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "jabon",
+      "name": "Jabón",
+      "oldCategory": "equipo",
+      "oldSubcategory": "suministro",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "jarro_cantaro",
+      "name": "Jarro o cántaro",
+      "oldCategory": "equipo",
+      "oldSubcategory": "contenedor_liquido",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "lacre",
+      "name": "Lacre",
+      "oldCategory": "equipo",
+      "oldSubcategory": "suministro",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "lampara",
+      "name": "Lámpara",
+      "oldCategory": "equipo",
+      "oldSubcategory": "iluminacion",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "libro_generico",
+      "name": "Libro",
+      "oldCategory": "equipo",
+      "oldSubcategory": "libro",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "linterna_ojo_buey",
+      "name": "Linterna de ojo de buey",
+      "oldCategory": "equipo",
+      "oldSubcategory": "iluminacion",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "linterna_sorda",
+      "name": "Linterna sorda",
+      "oldCategory": "equipo",
+      "oldSubcategory": "iluminacion",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "lupa",
+      "name": "Lupa",
+      "oldCategory": "equipo",
+      "oldSubcategory": "herramienta",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "manta",
+      "name": "Manta",
+      "oldCategory": "equipo",
+      "oldSubcategory": "campamento",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "martillo_herramienta",
+      "name": "Martillo",
+      "oldCategory": "equipo",
+      "oldSubcategory": "herramienta",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "mazo_herramienta",
+      "name": "Mazo",
+      "oldCategory": "equipo",
+      "oldSubcategory": "herramienta",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "mochila",
+      "name": "Mochila",
+      "oldCategory": "equipo",
+      "oldSubcategory": "contenedor",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "olla_hierro",
+      "name": "Olla de hierro",
+      "oldCategory": "equipo",
+      "oldSubcategory": "cocina",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "pala",
+      "name": "Pala",
+      "oldCategory": "equipo",
+      "oldSubcategory": "herramienta",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "palanqueta",
+      "name": "Palanqueta",
+      "oldCategory": "equipo",
+      "oldSubcategory": "herramienta",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "papel_hoja",
+      "name": "Papel (una hoja)",
+      "oldCategory": "equipo",
+      "oldSubcategory": "papeleria",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "perfume",
+      "name": "Perfume (vial)",
+      "oldCategory": "equipo",
+      "oldSubcategory": "suministro",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "pergamino_hoja",
+      "name": "Pergamino (una hoja)",
+      "oldCategory": "equipo",
+      "oldSubcategory": "papeleria",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "petate",
+      "name": "Petate",
+      "oldCategory": "equipo",
+      "oldSubcategory": "campamento",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "pico_minero",
+      "name": "Pico de minero",
+      "oldCategory": "equipo",
+      "oldSubcategory": "herramienta",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "piedra_afilar",
+      "name": "Piedra de afilar",
+      "oldCategory": "equipo",
+      "oldSubcategory": "mantenimiento",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "pinchos_hierro",
+      "name": "Pinchos de hierro (10)",
+      "oldCategory": "equipo",
+      "oldSubcategory": "trampa",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "piton",
+      "name": "Pitón",
+      "oldCategory": "equipo",
+      "oldSubcategory": "escalada",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "pluma",
+      "name": "Pluma (para escribir)",
+      "oldCategory": "equipo",
+      "oldSubcategory": "papeleria",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "polipasto",
+      "name": "Polipasto",
+      "oldCategory": "equipo",
+      "oldSubcategory": "herramienta",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "reloj_arena",
+      "name": "Reloj de arena",
+      "oldCategory": "equipo",
+      "oldSubcategory": "herramienta",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "saco",
+      "name": "Saco",
+      "oldCategory": "equipo",
+      "oldSubcategory": "contenedor",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "saquito_componentes",
+      "name": "Saquito de componentes",
+      "oldCategory": "equipo",
+      "oldSubcategory": "canalizador_arcano",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "silbato_supervivencia",
+      "name": "Silbato de supervivencia",
+      "oldCategory": "equipo",
+      "oldSubcategory": "senal",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "simbolo_sagrado_amuleto",
+      "name": "Símbolo sagrado (Amuleto)",
+      "oldCategory": "equipo",
+      "oldSubcategory": "simbolo_sagrado",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "simbolo_sagrado_emblema",
+      "name": "Símbolo sagrado (Emblema)",
+      "oldCategory": "equipo",
+      "oldSubcategory": "simbolo_sagrado",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "simbolo_sagrado_relicario",
+      "name": "Símbolo sagrado (Relicario)",
+      "oldCategory": "equipo",
+      "oldSubcategory": "simbolo_sagrado",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "tienda_campana_2p",
+      "name": "Tienda para dos personas",
+      "oldCategory": "equipo",
+      "oldSubcategory": "campamento",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "tinta",
+      "name": "Tinta (botella de 1 onza)",
+      "oldCategory": "equipo",
+      "oldSubcategory": "papeleria",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "tiza",
+      "name": "Tiza (1 trozo)",
+      "oldCategory": "equipo",
+      "oldSubcategory": "marcado",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "trampa_cazar",
+      "name": "Trampa para cazar",
+      "oldCategory": "equipo",
+      "oldSubcategory": "trampa",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "utensilios_cocina",
+      "name": "Utensilios de cocina",
+      "oldCategory": "equipo",
+      "oldSubcategory": "cocina",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "vara_10",
+      "name": "Vara (10 pies)",
+      "oldCategory": "equipo",
+      "oldSubcategory": "herramienta",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "vela",
+      "name": "Vela",
+      "oldCategory": "equipo",
+      "oldSubcategory": "iluminacion",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "vial",
+      "name": "Vial",
+      "oldCategory": "equipo",
+      "oldSubcategory": "contenedor_liquido",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "yesquero",
+      "name": "Yesquero",
+      "oldCategory": "equipo",
+      "oldSubcategory": "herramienta",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "pack_artista",
+      "name": "Paquete de artista",
+      "oldCategory": "kit",
+      "oldSubcategory": "pack",
+      "newCategory": "recurso",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "pack_diplomatico",
+      "name": "Paquete de diplomático",
+      "oldCategory": "kit",
+      "oldSubcategory": "pack",
+      "newCategory": "recurso",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "pack_erudito",
+      "name": "Paquete de erudito",
+      "oldCategory": "kit",
+      "oldSubcategory": "pack",
+      "newCategory": "recurso",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "pack_explorador",
+      "name": "Paquete de explorador",
+      "oldCategory": "kit",
+      "oldSubcategory": "pack",
+      "newCategory": "recurso",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "pack_explorador_mazmorras",
+      "name": "Paquete de explorador de mazmorras",
+      "oldCategory": "kit",
+      "oldSubcategory": "pack",
+      "newCategory": "recurso",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "pack_ladron",
+      "name": "Paquete de ladrón",
+      "oldCategory": "kit",
+      "oldSubcategory": "pack",
+      "newCategory": "recurso",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "herramientas_de_escriba",
+      "name": "Herramientas de escriba",
+      "oldCategory": "kit",
+      "oldSubcategory": "herramienta",
+      "newCategory": "recurso",
+      "newSubcategory": "herramienta"
+    },
+    {
+      "id": "pack_sacerdote",
+      "name": "Paquete de sacerdote",
+      "oldCategory": "kit",
+      "oldSubcategory": "pack",
+      "newCategory": "recurso",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "pocion_curacion",
+      "name": "Poción de curación",
+      "oldCategory": "objeto_magico",
+      "oldSubcategory": "pocion",
+      "newCategory": "objeto_magico",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "pocion_curacion_superior",
+      "name": "Poción de curación superior",
+      "oldCategory": "objeto_magico",
+      "oldSubcategory": "pocion",
+      "newCategory": "objeto_magico",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "pergamino_conjuro",
+      "name": "Pergamino de conjuro",
+      "oldCategory": "objeto_magico",
+      "oldSubcategory": "pergamino",
+      "newCategory": "objeto_magico",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "raciones",
+      "name": "Raciones (1 día)",
+      "oldCategory": "recurso",
+      "oldSubcategory": "alimento",
+      "newCategory": "recurso",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "balas_honda",
+      "name": "Balas de honda (20)",
+      "oldCategory": "municion",
+      "oldSubcategory": "bala_honda",
+      "newCategory": "municion",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "dardos_cerbatana",
+      "name": "Dardos de cerbatana (50)",
+      "oldCategory": "municion",
+      "oldSubcategory": "dardo_cerbatana",
+      "newCategory": "municion",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "flechas",
+      "name": "Flechas",
+      "oldCategory": "municion",
+      "oldSubcategory": "flecha",
+      "newCategory": "municion",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "virotes_ballesta",
+      "name": "Virotes de ballesta (20)",
+      "oldCategory": "municion",
+      "oldSubcategory": "virote_ballesta",
+      "newCategory": "municion",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "rubi",
+      "name": "Rubí",
+      "oldCategory": "gema",
+      "oldSubcategory": "piedra_preciosa",
+      "newCategory": "recurso",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "zafiro",
+      "name": "Zafiro",
+      "oldCategory": "gema",
+      "oldSubcategory": "piedra_preciosa",
+      "newCategory": "recurso",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "esmeralda",
+      "name": "Esmeralda",
+      "oldCategory": "gema",
+      "oldSubcategory": "piedra_preciosa",
+      "newCategory": "recurso",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "diamante",
+      "name": "Diamante",
+      "oldCategory": "gema",
+      "oldSubcategory": "piedra_preciosa",
+      "newCategory": "recurso",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "topacio",
+      "name": "Topacio",
+      "oldCategory": "gema",
+      "oldSubcategory": "piedra_preciosa",
+      "newCategory": "recurso",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "amatista",
+      "name": "Amatista",
+      "oldCategory": "gema",
+      "oldSubcategory": "piedra_preciosa",
+      "newCategory": "recurso",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "perla",
+      "name": "Perla",
+      "oldCategory": "gema",
+      "oldSubcategory": "piedra_preciosa",
+      "newCategory": "recurso",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "alforjas",
+      "name": "Alforjas",
+      "oldCategory": "equipo",
+      "oldSubcategory": "arreos",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "barda",
+      "name": "Barda",
+      "oldCategory": "equipo",
+      "oldSubcategory": "armadura_animal",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "bocado_bridas",
+      "name": "Bocado y bridas",
+      "oldCategory": "equipo",
+      "oldSubcategory": "arreos",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "carreta",
+      "name": "Carreta",
+      "oldCategory": "vehiculo",
+      "oldSubcategory": "terrestre",
+      "newCategory": "recurso",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "carro",
+      "name": "Carro",
+      "oldCategory": "vehiculo",
+      "oldSubcategory": "terrestre",
+      "newCategory": "recurso",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "carro_guerra",
+      "name": "Carro de guerra",
+      "oldCategory": "vehiculo",
+      "oldSubcategory": "terrestre",
+      "newCategory": "recurso",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "carruaje",
+      "name": "Carruaje",
+      "oldCategory": "vehiculo",
+      "oldSubcategory": "terrestre",
+      "newCategory": "recurso",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "silla_tiro",
+      "name": "Silla de tiro",
+      "oldCategory": "equipo",
+      "oldSubcategory": "silla_montar",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "silla_monta",
+      "name": "Silla de monta",
+      "oldCategory": "equipo",
+      "oldSubcategory": "silla_montar",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "silla_exotica",
+      "name": "Silla exótica",
+      "oldCategory": "equipo",
+      "oldSubcategory": "silla_montar",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "silla_militar",
+      "name": "Silla militar",
+      "oldCategory": "equipo",
+      "oldSubcategory": "silla_montar",
+      "newCategory": "equipo",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "trineo",
+      "name": "Trineo",
+      "oldCategory": "vehiculo",
+      "oldSubcategory": "terrestre",
+      "newCategory": "recurso",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "drakkar",
+      "name": "Drakkar",
+      "oldCategory": "vehiculo",
+      "oldSubcategory": "acuatico",
+      "newCategory": "recurso",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "galera",
+      "name": "Galera",
+      "oldCategory": "vehiculo",
+      "oldSubcategory": "acuatico",
+      "newCategory": "recurso",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "navio_guerra",
+      "name": "Navío de guerra",
+      "oldCategory": "vehiculo",
+      "oldSubcategory": "acuatico",
+      "newCategory": "recurso",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "velero",
+      "name": "Velero",
+      "oldCategory": "vehiculo",
+      "oldSubcategory": "acuatico",
+      "newCategory": "recurso",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "trigo",
+      "name": "Trigo (1 lb)",
+      "oldCategory": "mercancia",
+      "oldSubcategory": "grano",
+      "newCategory": "recurso",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "harina",
+      "name": "Harina (1 lb)",
+      "oldCategory": "mercancia",
+      "oldSubcategory": "alimento_procesado",
+      "newCategory": "recurso",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "sal_mercancia",
+      "name": "Sal (1 lb)",
+      "oldCategory": "mercancia",
+      "oldSubcategory": "condimento",
+      "newCategory": "recurso",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "comida_miserable",
+      "name": "Comida miserable (1 día)",
+      "oldCategory": "recurso",
+      "oldSubcategory": "alimento",
+      "newCategory": "recurso",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "comida_pobre",
+      "name": "Comida pobre (1 día)",
+      "oldCategory": "recurso",
+      "oldSubcategory": "alimento",
+      "newCategory": "recurso",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "comida_modesta",
+      "name": "Comida modesta (1 día)",
+      "oldCategory": "recurso",
+      "oldSubcategory": "alimento",
+      "newCategory": "recurso",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "comida_comoda",
+      "name": "Comida cómoda (1 día)",
+      "oldCategory": "recurso",
+      "oldSubcategory": "alimento",
+      "newCategory": "recurso",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "comida_lujosa",
+      "name": "Comida lujosa (1 día)",
+      "oldCategory": "recurso",
+      "oldSubcategory": "alimento",
+      "newCategory": "recurso",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "comida_aristocratica",
+      "name": "Comida aristocrática (1 día)",
+      "oldCategory": "recurso",
+      "oldSubcategory": "alimento",
+      "newCategory": "recurso",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "carne_trozo",
+      "name": "Carne (trozo)",
+      "oldCategory": "recurso",
+      "oldSubcategory": "alimento",
+      "newCategory": "recurso",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "cerveza_galon",
+      "name": "Cerveza (galón)",
+      "oldCategory": "recurso",
+      "oldSubcategory": "bebida",
+      "newCategory": "recurso",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "cerveza_jarra",
+      "name": "Cerveza (jarra)",
+      "oldCategory": "recurso",
+      "oldSubcategory": "bebida",
+      "newCategory": "recurso",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "pan_hogaza",
+      "name": "Pan (hogaza)",
+      "oldCategory": "recurso",
+      "oldSubcategory": "alimento",
+      "newCategory": "recurso",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "queso_trozo",
+      "name": "Queso (trozo)",
+      "oldCategory": "recurso",
+      "oldSubcategory": "alimento",
+      "newCategory": "recurso",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "vino_comun_jarra",
+      "name": "Vino común (jarra)",
+      "oldCategory": "recurso",
+      "oldSubcategory": "bebida",
+      "newCategory": "recurso",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "vino_calidad_botella",
+      "name": "Vino de calidad (botella)",
+      "oldCategory": "recurso",
+      "oldSubcategory": "bebida",
+      "newCategory": "recurso",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "vestiduras",
+      "name": "Vestiduras",
+      "oldCategory": "ropa",
+      "oldSubcategory": "conjunto",
+      "newCategory": "recurso",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "arpa",
+      "name": "Arpa",
+      "oldCategory": "instrumento",
+      "oldSubcategory": "herramienta",
+      "newCategory": "instrumento",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "laud",
+      "name": "Laúd",
+      "oldCategory": "instrumento",
+      "oldSubcategory": "herramienta",
+      "newCategory": "instrumento",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "lira",
+      "name": "Lira",
+      "oldCategory": "instrumento",
+      "oldSubcategory": "herramienta",
+      "newCategory": "instrumento",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "cuerno",
+      "name": "Cuerno",
+      "oldCategory": "instrumento",
+      "oldSubcategory": "herramienta",
+      "newCategory": "instrumento",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "flauta",
+      "name": "Flauta",
+      "oldCategory": "instrumento",
+      "oldSubcategory": "herramienta",
+      "newCategory": "instrumento",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "flauta_pan",
+      "name": "Flauta de pan",
+      "oldCategory": "instrumento",
+      "oldSubcategory": "herramienta",
+      "newCategory": "instrumento",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "gaita",
+      "name": "Gaita",
+      "oldCategory": "instrumento",
+      "oldSubcategory": "herramienta",
+      "newCategory": "instrumento",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "dulcimer",
+      "name": "Dulcémele",
+      "oldCategory": "instrumento",
+      "oldSubcategory": "herramienta",
+      "newCategory": "instrumento",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "shawm",
+      "name": "Chirimía",
+      "oldCategory": "instrumento",
+      "oldSubcategory": "herramienta",
+      "newCategory": "instrumento",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "tambor",
+      "name": "Tambor",
+      "oldCategory": "instrumento",
+      "oldSubcategory": "herramienta",
+      "newCategory": "instrumento",
+      "newSubcategory": "recurso"
+    },
+    {
+      "id": "viola",
+      "name": "Viola",
+      "oldCategory": "instrumento",
+      "oldSubcategory": "herramienta",
+      "newCategory": "instrumento",
+      "newSubcategory": "recurso"
+    }
+  ],
+  "totalInput": 315,
+  "totalOutput": 315,
+  "ids": [
+    "grimorio",
+    "baya_buena",
+    "garrote",
+    "daga",
+    "garrote_grande",
+    "hacha_mano",
+    "jabalina",
+    "martillo_ligero",
+    "maza",
+    "baston",
+    "hoz",
+    "lanza",
+    "ballesta_ligera",
+    "dardo",
+    "arco_corto",
+    "honda",
+    "hacha_batalla",
+    "mayal",
+    "guja",
+    "gran_hacha",
+    "mandoble",
+    "alabarda",
+    "lanza_caballeria",
+    "espada_larga",
+    "martillo_dos_manos",
+    "lucero_alba",
+    "pica",
+    "estoque",
+    "cimitarra",
+    "espada_corta",
+    "tridente",
+    "pico_guerra",
+    "martillo_guerra",
+    "latigo",
+    "cerbatana",
+    "ballesta_mano",
+    "ballesta_pesada",
+    "arco_largo",
+    "red",
+    "escudo",
+    "armadura_acolchada",
+    "armadura_cuero",
+    "armadura_cuero_tachonado",
+    "armadura_pieles",
+    "camisote_malla",
+    "armadura_escamas",
+    "coraza",
+    "armadura_medias_placas",
+    "armadura_anillas",
+    "cota_malla",
+    "armadura_segmentada",
+    "armadura_placas",
+    "ropa_comun",
+    "ropa_disfraz",
+    "ropa_fina",
+    "ropa_viajero",
+    "tunica",
+    "aljaba",
+    "anillo_sellado",
+    "ariete_portatil",
+    "balanza_mercader",
+    "bolas_metal",
+    "bolsa",
+    "botella_cristal",
+    "cadena_10",
+    "campana",
+    "canalizador_arcano_cristal",
+    "canalizador_arcano_baston",
+    "canalizador_arcano_orbe",
+    "canalizador_arcano_vara",
+    "canalizador_arcano_varita",
+    "canalizador_druidico_baston",
+    "canalizador_druidico_muerdago",
+    "canalizador_druidico_totem",
+    "canalizador_druidico_varita_tejo",
+    "cantimplora",
+    "cana_pescar",
+    "catalejo",
+    "cerradura",
+    "cesta",
+    "cofre",
+    "cuerda_canamo_50",
+    "cuerda_seda_50",
+    "cubo",
+    "escalera_10",
+    "espejo_acero",
+    "esposas",
+    "estuche_mapa",
+    "estuche_virotes",
+    "frasco_jarra",
+    "garfio_escalada",
+    "jabon",
+    "jarro_cantaro",
+    "lacre",
+    "lampara",
+    "libro_generico",
+    "linterna_ojo_buey",
+    "linterna_sorda",
+    "lupa",
+    "manta",
+    "martillo_herramienta",
+    "mazo_herramienta",
+    "mochila",
+    "olla_hierro",
+    "pala",
+    "palanqueta",
+    "papel_hoja",
+    "perfume",
+    "pergamino_hoja",
+    "petate",
+    "pico_minero",
+    "piedra_afilar",
+    "pinchos_hierro",
+    "piton",
+    "pluma",
+    "polipasto",
+    "reloj_arena",
+    "saco",
+    "saquito_componentes",
+    "silbato_supervivencia",
+    "simbolo_sagrado_amuleto",
+    "simbolo_sagrado_emblema",
+    "simbolo_sagrado_relicario",
+    "tienda_campana_2p",
+    "tinta",
+    "tiza",
+    "trampa_cazar",
+    "utensilios_cocina",
+    "vara_10",
+    "vela",
+    "vial",
+    "yesquero",
+    "pack_artista",
+    "pack_diplomatico",
+    "pack_erudito",
+    "pack_explorador",
+    "pack_explorador_mazmorras",
+    "pack_ladron",
+    "herramientas_de_escriba",
+    "pack_sacerdote",
+    "acido",
+    "agua_bendita",
+    "fuego_alquimista",
+    "antitoxina",
+    "veneno_basico",
+    "pocion_curacion",
+    "pocion_curacion_superior",
+    "pergamino_conjuro",
+    "raciones",
+    "balas_honda",
+    "dardos_cerbatana",
+    "flechas",
+    "virotes_ballesta",
+    "hierro",
+    "cobre",
+    "plata",
+    "oro",
+    "thin",
+    "rubi",
+    "zafiro",
+    "esmeralda",
+    "diamante",
+    "topacio",
+    "amatista",
+    "perla",
+    "piel_animal_cruda",
+    "cuero_animal",
+    "huesos_criatura",
+    "escamas_criatura",
+    "fibras_vegetales",
+    "tela_ruda",
+    "alforjas",
+    "barda",
+    "bocado_bridas",
+    "carreta",
+    "carro",
+    "carro_guerra",
+    "carruaje",
+    "silla_tiro",
+    "silla_monta",
+    "silla_exotica",
+    "silla_militar",
+    "trineo",
+    "drakkar",
+    "galera",
+    "navio_guerra",
+    "velero",
+    "trigo",
+    "harina",
+    "sal_mercancia",
+    "comida_miserable",
+    "comida_pobre",
+    "comida_modesta",
+    "comida_comoda",
+    "comida_lujosa",
+    "comida_aristocratica",
+    "carne_trozo",
+    "cerveza_galon",
+    "cerveza_jarra",
+    "pan_hogaza",
+    "queso_trozo",
+    "vino_comun_jarra",
+    "vino_calidad_botella",
+    "mano_momificada_goblin",
+    "cristal_luz_luna",
+    "moneda_oro_tierra_desconocida",
+    "diario_idioma_desconocido",
+    "anillo_bronce_lustre",
+    "pieza_ajedrez_vidrio",
+    "dados_hueso_nudillo",
+    "idolo_criatura_pesadilla",
+    "collar_dedos_elfo_momificados",
+    "documento_propiedad_reino_desconocido",
+    "bloque_material_desconocido",
+    "muneca_trapo_agujas",
+    "diente_bestia_desconocida",
+    "escama_enorme_dragon",
+    "pluma_verde_viva",
+    "carta_adivinacion_efigie",
+    "orbe_vidrio_humo",
+    "huevo_rojo_pesado",
+    "pipa_burbujas",
+    "jarra_carne_flotante",
+    "caja_musica_gnoma",
+    "estatuilla_mediano_engreido",
+    "orbe_bronce_runas",
+    "disco_piedra_multicolor",
+    "icono_plata_cuervo",
+    "bolsa_dientes_humanoide",
+    "esquirla_obsidiana_caliente",
+    "garra_dragon_colgante",
+    "calcetines_viejos",
+    "libro_en_blanco_inmarcable",
+    "emblema_plata_estrella_cinco_puntas",
+    "cuchillo_familiar",
+    "vial_unas_cortadas",
+    "artilugio_metal_chispas",
+    "guante_blanco_lentejuelas",
+    "chaleco_cien_bolsillos",
+    "bloque_piedra_sin_peso",
+    "retrato_goblin",
+    "vial_perfume_fantasma",
+    "gema_carbon_personal",
+    "jirones_estandarte_viejo",
+    "insignia_legionario_perdido",
+    "campanita_plata_sin_badajo",
+    "canario_mecanico_lampara_gnoma",
+    "cofre_muchos_pies",
+    "duendecillo_muerto_botella",
+    "lata_misteriosa",
+    "orbe_cristal_pez_mecanico",
+    "cuchara_plata_m",
+    "silbato_madera_dorada",
+    "escarabajo_muerto_grande",
+    "soldados_juguete_sin_cabeza",
+    "invitacion_fiesta_asesinato",
+    "caja_botones",
+    "pentaculo_rata_cabeza",
+    "vela_que_no_enciende",
+    "jaula_minusc_sin_puerta",
+    "panuelo_purpura_archimago",
+    "llave_vieja",
+    "plano_mitad_templo",
+    "mapa_tesoro_indescifrable",
+    "empuñadura_espada_rota",
+    "trozo_tela_gorro_distinguido",
+    "pata_conejo",
+    "recibo_banco_remoto",
+    "ojo_vidrio",
+    "camafeo_rostro_horroroso",
+    "diario_faltan_paginas",
+    "calavera_plata_moneda",
+    "petaca_suenos",
+    "mascara_alabastro",
+    "piramide_incienso_negro",
+    "incienso",
+    "simbolo_sagrado_hierro_desconocido",
+    "gorro_dormir_suenos_agradables",
+    "libro_heroe_sin_final",
+    "abrojo_hueso_unico",
+    "vial_sangre_dragon",
+    "montura_monoculo_oro",
+    "flecha_elfica_antigua",
+    "cubo_pulgada_colores",
+    "aguja_que_no_se_dobla",
+    "broche_diseno_enano",
+    "pomo_cristal",
+    "botella_vino_mago_vinos",
+    "fragmento_cancion_pergamino",
+    "loseta_mosaico_vidriada",
+    "pendiente_lagrima_plata",
+    "raton_petrificado",
+    "cascaron_huevo_miseria",
+    "bandera_pirata_dragon",
+    "abanico_gato_durmiendo",
+    "cangrejo_araña_mecanico",
+    "juego_pipas_hueso",
+    "trebol_cuatro_hojas_libro",
+    "jarra_grasa_grifo",
+    "pergamino_artefacto_mecanico",
+    "caja_madera_gusano_doble",
+    "vaina_ornamentada_sin_arma",
+    "vestiduras",
+    "urna_cenizas_heroe",
+    "arpa",
+    "laud",
+    "lira",
+    "cuerno",
+    "flauta",
+    "flauta_pan",
+    "gaita",
+    "dulcimer",
+    "shawm",
+    "tambor",
+    "viola"
+  ]
+}

@@ -1,0 +1,645 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "lastUpdated": "2024-12-19",
+    "description": "Base de datos de habilidades que consumen recursos de clase para D&D 5e",
+    "resourceNames": {
+      "ki": {
+        "name": "Puntos de Ki",
+        "unit": "punto de ki"
+      },
+      "inspiracion_bardica": {
+        "name": "Inspiración Bárdica",
+        "unit": "inspiración bárdica"
+      },
+      "rabia": {
+        "name": "Cargas de Rabia",
+        "unit": "carga de rabia"
+      },
+      "puntos_hechiceria": {
+        "name": "Puntos de Hechicería",
+        "unit": "punto de hechicería"
+      },
+      "dados_superioridad": {
+        "name": "Dados de Superioridad",
+        "unit": "dado de superioridad"
+      },
+      "invocaciones_misticas": {
+        "name": "Invocaciones Místicas",
+        "unit": "invocación mística"
+      },
+      "canalizar_divinidad": {
+        "name": "Canalizar Divinidad",
+        "unit": "uso de canalizar divinidad"
+      },
+      "forma_salvaje": {
+        "name": "Forma salvaje",
+        "unit": "uso de forma salvaje"
+      },
+      "recuperacion_arcana": {
+        "name": "Recuperación arcana",
+        "unit": "uso de recuperación arcana"
+      }
+    }
+  },
+  "resourceAbilities": {
+    "brujo": {
+      "invocaciones_misticas": []
+    },
+    "barbaro": {
+      "rabia": [
+        {
+          "id": "furia",
+          "name": "Furia",
+          "description": "En combate puedes usar tu acción adicional para entrar en furia, gastando 1 carga de rabia. Mientras estés enfurecido obtienes ventajas y resistencias según tu rasgo de clase de bárbaro. El número de veces que puedes entrar en furia entre descansos viene determinado por tu nivel y la tabla de progresión.",
+          "type": "accion_bonus",
+          "level": 1,
+          "cost": 1,
+          "source": "base"
+        }
+      ]
+    },
+    "monje": {
+      "ki": [
+        {
+          "id": "rafaga_golpes",
+          "name": "Ráfaga de golpes",
+          "description": "Inmediatamente después de tomar la acción de Ataque en tu turno, puedes gastar 1 punto de ki para hacer dos ataques desarmados como una acción bonus.",
+          "type": "accion_bonus",
+          "level": 2,
+          "cost": 1,
+          "source": "base"
+        },
+        {
+          "id": "defensa_paciente",
+          "name": "Defensa paciente",
+          "description": "Puedes gastar 1 punto de ki para usar la acción de Esquivar como una acción bonus en tu turno.",
+          "type": "accion_bonus",
+          "level": 2,
+          "cost": 1,
+          "source": "base"
+        },
+        {
+          "id": "paso_viento",
+          "name": "Paso del viento",
+          "description": "Puedes gastar 1 punto de ki para usar la acción de Correr o Retirarse como una acción bonus en tu turno, y tu distancia de salto se duplica durante ese turno.",
+          "type": "accion_bonus",
+          "level": 2,
+          "cost": 1,
+          "source": "base"
+        },
+        {
+          "id": "golpe_aturdidor",
+          "name": "Golpe aturdidor",
+          "description": "Puedes gastar 1 punto de ki cuando golpees a una criatura con un ataque desarmado para intentar aturdirlo. La criatura debe hacer una tirada de salvación de Constitución.",
+          "type": "accion",
+          "level": 5,
+          "cost": 1,
+          "source": "base"
+        },
+        {
+          "id": "cuerpo_vacio",
+          "name": "Cuerpo vacío",
+          "description": "Puedes gastar 4 puntos de ki como una acción para volverte invisible hasta el final de tu próximo turno. Durante ese tiempo, también eres etéreo.",
+          "type": "accion",
+          "level": 18,
+          "cost": 4,
+          "source": "base"
+        },
+        {
+          "id": "perfeccion_perfecta",
+          "name": "Perfección perfecta",
+          "description": "Cuando hagas una tirada de ataque y falles, puedes gastar 1 punto de ki para rerrolar el dado y usar el nuevo resultado.",
+          "type": "pasivo",
+          "level": 20,
+          "cost": 1,
+          "source": "base"
+        },
+        {
+          "id": "golpe_de_mano_vacia",
+          "name": "Golpe de mano vacía",
+          "description": "Puedes gastar 1 punto de ki cuando golpees a una criatura con un ataque desarmado para hacer que la criatura sea empujada hasta 15 pies lejos de ti o sea derribada.",
+          "type": "accion",
+          "level": 3,
+          "cost": 1,
+          "source": "archetype",
+          "archetype": "camino_mano_vacia"
+        },
+        {
+          "id": "idioma_de_la_luz_y_la_oscuridad",
+          "name": "Idioma de la luz y la oscuridad",
+          "description": "Aprendes a tocar la esencia de la luz y la oscuridad. Puedes gastar 4 puntos de ki como una acción para proyectar un rayo de luz brillante de 60 pies de largo y 5 pies de ancho. Las criaturas en el área deben hacer una tirada de salvación de Constitución.",
+          "type": "accion",
+          "level": 13,
+          "cost": 4,
+          "source": "archetype",
+          "archetype": "camino_mano_vacia"
+        },
+        {
+          "id": "artes_de_la_sombra",
+          "name": "Artes de la sombra",
+          "description": "Puedes gastar 2 puntos de ki como una acción para lanzar oscuridad, silencio o paso brumoso. También puedes gastar 2 puntos de ki como una acción para teletransportarte hasta 60 pies a un lugar que puedas ver.",
+          "type": "accion",
+          "level": 3,
+          "cost": 2,
+          "source": "archetype",
+          "archetype": "camino_sombra"
+        },
+        {
+          "id": "paso_de_la_sombra",
+          "name": "Paso de la sombra",
+          "description": "Puedes gastar 2 puntos de ki como una acción para teletransportarte hasta 60 pies a un lugar que puedas ver. Si terminas en un lugar que está en sombra, puedes hacer un ataque con ventaja contra una criatura que puedas ver.",
+          "type": "accion",
+          "level": 6,
+          "cost": 2,
+          "source": "archetype",
+          "archetype": "camino_sombra"
+        },
+        {
+          "id": "manto_de_sombras",
+          "name": "Manto de sombras",
+          "description": "Puedes gastar 4 puntos de ki como una acción para volverte invisible hasta el final de tu próximo turno. Durante ese tiempo, también eres etéreo.",
+          "type": "accion",
+          "level": 11,
+          "cost": 4,
+          "source": "archetype",
+          "archetype": "camino_sombra"
+        },
+        {
+          "id": "oportunista",
+          "name": "Oportunista",
+          "description": "Puedes gastar 3 puntos de ki como una reacción para hacer un ataque de oportunidad contra una criatura que se mueva a 5 pies de ti.",
+          "type": "reaccion",
+          "level": 17,
+          "cost": 3,
+          "source": "archetype",
+          "archetype": "camino_sombra"
+        },
+        {
+          "id": "armonia_elementos",
+          "name": "Armonía con los Elementos",
+          "description": "Disciplina base. A nivel 5+ puedes invertir puntos de ki adicionales para aumentar el nivel del conjuro de una disciplina elemental (1 ki adicional = +1 nivel de conjuro).",
+          "type": "pasivo",
+          "level": 3,
+          "cost": 0,
+          "source": "archetype",
+          "archetype": "camino_de_los_cuatro_elementos"
+        },
+        {
+          "id": "barrido_ascuas",
+          "name": "Barrido de las Ascuas",
+          "description": "Puedes gastar 2 puntos de ki como acción para lanzar manos ardientes.",
+          "type": "accion",
+          "level": 3,
+          "cost": 2,
+          "source": "archetype",
+          "archetype": "camino_de_los_cuatro_elementos"
+        },
+        {
+          "id": "puño_cuatro_truenos",
+          "name": "Puño de los Cuatro Truenos",
+          "description": "Puedes gastar 2 puntos de ki como acción para lanzar ola atronadora.",
+          "type": "accion",
+          "level": 3,
+          "cost": 2,
+          "source": "archetype",
+          "archetype": "camino_de_los_cuatro_elementos"
+        },
+        {
+          "id": "puño_aire_ingobernable",
+          "name": "Puño del Aire Inquebrantable",
+          "description": "Puedes gastar 2 o más puntos de ki como acción para un estallido de aire comprimido. TS Fuerza; 3d10 contundente, +1d10 por ki adicional; empuje hasta 20 pies; derribo opcional.",
+          "type": "accion",
+          "level": 3,
+          "cost": 2,
+          "source": "archetype",
+          "archetype": "camino_de_los_cuatro_elementos"
+        },
+        {
+          "id": "rafaga_espiritus_vendaval",
+          "name": "Ráfaga de los Espíritus del Vendaval",
+          "description": "Puedes gastar 2 puntos de ki como acción para lanzar ráfaga de viento.",
+          "type": "accion",
+          "level": 3,
+          "cost": 2,
+          "source": "archetype",
+          "archetype": "camino_de_los_cuatro_elementos"
+        },
+        {
+          "id": "gong_cumbre",
+          "name": "Gong de la Cumbre",
+          "description": "Puedes gastar 3 puntos de ki como acción para lanzar añicos.",
+          "type": "accion",
+          "level": 6,
+          "cost": 3,
+          "source": "archetype",
+          "archetype": "camino_de_los_cuatro_elementos"
+        },
+        {
+          "id": "agarrar_viento_norte",
+          "name": "Agarre del Viento del Norte",
+          "description": "Puedes gastar 3 puntos de ki como acción para inmovilizar a una persona (conjuro inmovilizar persona).",
+          "type": "accion",
+          "level": 6,
+          "cost": 3,
+          "source": "archetype",
+          "archetype": "camino_de_los_cuatro_elementos"
+        },
+        {
+          "id": "latigo_agua",
+          "name": "Látigo de Agua",
+          "description": "Puedes gastar 2 puntos de ki como acción para lanzar látigo de agua.",
+          "type": "accion",
+          "level": 3,
+          "cost": 2,
+          "source": "archetype",
+          "archetype": "camino_de_los_cuatro_elementos"
+        },
+        {
+          "id": "moldear_rio_fluye",
+          "name": "Moldear el Río que Fluye",
+          "description": "Puedes gastar 1 punto de ki para usar esta disciplina (ver descripción en el manual).",
+          "type": "accion",
+          "level": 3,
+          "cost": 1,
+          "source": "archetype",
+          "archetype": "camino_de_los_cuatro_elementos"
+        },
+        {
+          "id": "colmillos_serpiente_ignea",
+          "name": "Colmillos de la Serpiente Ígnea",
+          "description": "Puedes gastar 1 punto de ki para usar esta disciplina (ver descripción en el manual).",
+          "type": "accion",
+          "level": 3,
+          "cost": 1,
+          "source": "archetype",
+          "archetype": "camino_de_los_cuatro_elementos"
+        },
+        {
+          "id": "cabalgar_viento",
+          "name": "Cabalgar el Viento",
+          "description": "Puedes gastar 4 puntos de ki como acción para volar (conjuro volar).",
+          "type": "accion",
+          "level": 11,
+          "cost": 4,
+          "source": "archetype",
+          "archetype": "camino_de_los_cuatro_elementos"
+        },
+        {
+          "id": "postura_niebla",
+          "name": "Postura de la Niebla",
+          "description": "Puedes gastar 4 puntos de ki como acción para adoptar forma gaseosa.",
+          "type": "accion",
+          "level": 11,
+          "cost": 4,
+          "source": "archetype",
+          "archetype": "camino_de_los_cuatro_elementos"
+        },
+        {
+          "id": "llamas_fenix",
+          "name": "Llamas del Fénix",
+          "description": "Puedes gastar 4 puntos de ki como acción para lanzar bola de fuego.",
+          "type": "accion",
+          "level": 11,
+          "cost": 4,
+          "source": "archetype",
+          "archetype": "camino_de_los_cuatro_elementos"
+        },
+        {
+          "id": "defensa_montana_eterna",
+          "name": "Defensa de la Montaña Eterna",
+          "description": "Puedes gastar 5 puntos de ki como acción para obtener piel pétrea.",
+          "type": "accion",
+          "level": 17,
+          "cost": 5,
+          "source": "archetype",
+          "archetype": "camino_de_los_cuatro_elementos"
+        },
+        {
+          "id": "ola_tierra_ondulante",
+          "name": "Ola de la Tierra Ondulante",
+          "description": "Puedes gastar 6 puntos de ki como acción para lanzar muro de piedra.",
+          "type": "accion",
+          "level": 17,
+          "cost": 6,
+          "source": "archetype",
+          "archetype": "camino_de_los_cuatro_elementos"
+        },
+        {
+          "id": "rio_llama_insaciable",
+          "name": "Río de la Llama Insaciable",
+          "description": "Puedes gastar 5 puntos de ki como acción para lanzar muro de fuego.",
+          "type": "accion",
+          "level": 17,
+          "cost": 5,
+          "source": "archetype",
+          "archetype": "camino_de_los_cuatro_elementos"
+        },
+        {
+          "id": "aliento_invierno",
+          "name": "Aliento del Invierno",
+          "description": "Puedes gastar 6 puntos de ki como acción para lanzar cono de frío.",
+          "type": "accion",
+          "level": 17,
+          "cost": 6,
+          "source": "archetype",
+          "archetype": "camino_de_los_cuatro_elementos"
+        }
+      ]
+    },
+    "hechicero": {
+      "puntos_hechiceria": [
+        {
+          "id": "flexibilidad_de_conjuros",
+          "name": "Flexibilidad de conjuros",
+          "description": "Puedes gastar 1 punto de hechicería para cambiar un espacio de conjuro de un nivel por un espacio de conjuro de otro nivel. El nuevo nivel debe ser igual o menor que tu nivel de hechicero.",
+          "type": "accion",
+          "level": 2,
+          "cost": 1,
+          "source": "base"
+        },
+        {
+          "id": "ascendencia_draconica",
+          "name": "Ascendencia draconica",
+          "description": "Cuando hagas una tirada de golpe con un conjuro de hechicero, puedes gastar 1 punto de hechicería para hacer que el daño del conjuro sea del tipo asociado con tu ascendencia draconica.",
+          "type": "pasivo",
+          "level": 1,
+          "cost": 1,
+          "source": "archetype",
+          "archetype": "draconico"
+        },
+        {
+          "id": "aliento_de_dragon",
+          "name": "Aliento de dragón",
+          "description": "Puedes gastar 2 puntos de hechicería como una acción para exhalar energía destructiva. Todas las criaturas en un área deben hacer una tirada de salvación. El daño es del tipo asociado con tu ascendencia draconica.",
+          "type": "accion",
+          "level": 6,
+          "cost": 2,
+          "source": "archetype",
+          "archetype": "draconico"
+        },
+        {
+          "id": "alas_de_dragon",
+          "name": "Alas de dragón",
+          "description": "Puedes gastar 2 puntos de hechicería como una acción para hacer crecer alas de dragón de tu espalda. Las alas duran hasta que termines un descanso corto o largo. Mientras tengas las alas, tienes una velocidad de vuelo de 30 pies.",
+          "type": "accion",
+          "level": 14,
+          "cost": 2,
+          "source": "archetype",
+          "archetype": "draconico"
+        },
+        {
+          "id": "aspecto_de_dragon",
+          "name": "Aspecto de dragón",
+          "description": "Puedes gastar 5 puntos de hechicería como una acción para asumir el aspecto de un dragón. Mientras mantengas este aspecto, tienes resistencia al daño no mágico, y puedes usar tu aliento de dragón una vez por turno sin gastar puntos de hechicería.",
+          "type": "accion",
+          "level": 18,
+          "cost": 5,
+          "source": "archetype",
+          "archetype": "draconico"
+        },
+        {
+          "id": "bendicion_de_la_suerte",
+          "name": "Bendición de la suerte",
+          "description": "Puedes gastar 2 puntos de hechicería como una reacción para hacer que otra criatura rerrolle un d20. Debes elegir hacer esto antes de que se determine el resultado del dado.",
+          "type": "reaccion",
+          "level": 1,
+          "cost": 2,
+          "source": "archetype",
+          "archetype": "salvaje"
+        },
+        {
+          "id": "control_de_la_magia_salvaje",
+          "name": "Control de la magia salvaje",
+          "description": "Puedes gastar 2 puntos de hechicería como una acción para hacer que la próxima vez que lances un conjuro de hechicero, no ocurra un efecto de magia salvaje.",
+          "type": "accion",
+          "level": 6,
+          "cost": 2,
+          "source": "archetype",
+          "archetype": "salvaje"
+        }
+      ]
+    },
+    "bardo": {
+      "inspiracion_bardica": [
+        {
+          "id": "inspiracion_bardica",
+          "name": "Inspiración bárdica",
+          "description": "Puedes inspirar a otros mediante palabras o música. Para hacerlo, usas una acción adicional en tu turno para elegir a una criatura que no seas tú misma, que pueda oírte y esté a 60 pies o menos de ti. Gastas 1 uso de Inspiración Bárdica y esa criatura gana un dado de inspiración que podrá añadir a una tirada apropiada.",
+          "type": "accion_bono",
+          "level": 1,
+          "cost": 1,
+          "source": "base"
+        }
+      ]
+    },
+    "guerrero": {
+      "dados_superioridad": [
+        {
+          "id": "ataque_preciso",
+          "name": "Ataque Preciso",
+          "description": "Cuando haces un ataque con arma, puedes gastar un dado de superioridad para añadir el resultado del dado al daño del ataque.",
+          "type": "ataque",
+          "level": 3,
+          "cost": 1,
+          "source": "archetype",
+          "archetype": "maestro_combate"
+        },
+        {
+          "id": "ataque_paralizante",
+          "name": "Ataque Paralizante",
+          "description": "Cuando golpeas a una criatura con un ataque con arma, puedes gastar un dado de superioridad para intentar paralizar al objetivo. El objetivo debe hacer una tirada de salvación de Constitución. Si falla, queda paralizado hasta el final de tu siguiente turno.",
+          "type": "ataque",
+          "level": 3,
+          "cost": 1,
+          "source": "archetype",
+          "archetype": "maestro_combate",
+          "cd_salvacion": "Constitución"
+        },
+        {
+          "id": "ataque_desarmador",
+          "name": "Ataque Desarmador",
+          "description": "Cuando golpeas a una criatura con un ataque con arma, puedes gastar un dado de superioridad para intentar desarmar al objetivo. El objetivo debe hacer una tirada de salvación de Fuerza. Si falla, suelta un objeto que esté sosteniendo de tu elección.",
+          "type": "ataque",
+          "level": 3,
+          "cost": 1,
+          "source": "archetype",
+          "archetype": "maestro_combate",
+          "cd_salvacion": "Fuerza"
+        },
+        {
+          "id": "ataque_derribador",
+          "name": "Ataque Derribador",
+          "description": "Cuando golpeas a una criatura con un ataque con arma, puedes gastar un dado de superioridad para intentar derribar al objetivo. El objetivo debe hacer una tirada de salvación de Fuerza. Si falla, queda tumbado.",
+          "type": "ataque",
+          "level": 3,
+          "cost": 1,
+          "source": "archetype",
+          "archetype": "maestro_combate",
+          "cd_salvacion": "Fuerza"
+        },
+        {
+          "id": "ataque_empujador",
+          "name": "Ataque Empujador",
+          "description": "Cuando golpeas a una criatura con un ataque con arma, puedes gastar un dado de superioridad para intentar empujar al objetivo. El objetivo debe hacer una tirada de salvación de Fuerza. Si falla, lo empujas hasta 15 pies lejos de ti.",
+          "type": "ataque",
+          "level": 3,
+          "cost": 1,
+          "source": "archetype",
+          "archetype": "maestro_combate",
+          "cd_salvacion": "Fuerza"
+        },
+        {
+          "id": "ataque_menoscabador",
+          "name": "Ataque Menoscabador",
+          "description": "Cuando golpeas a una criatura con un ataque con arma, puedes gastar un dado de superioridad para intentar menoscabar al objetivo. El objetivo debe hacer una tirada de salvación de Constitución. Si falla, tiene desventaja en sus tiradas de ataque hasta el final de tu siguiente turno.",
+          "type": "ataque",
+          "level": 3,
+          "cost": 1,
+          "source": "archetype",
+          "archetype": "maestro_combate",
+          "cd_salvacion": "Constitución"
+        },
+        {
+          "id": "ataque_menoscabador_mental",
+          "name": "Ataque Menoscabador Mental",
+          "description": "Cuando golpeas a una criatura con un ataque con arma, puedes gastar un dado de superioridad para intentar menoscabar mentalmente al objetivo. El objetivo debe hacer una tirada de salvación de Sabiduría. Si falla, tiene desventaja en sus tiradas de ataque hasta el final de tu siguiente turno.",
+          "type": "ataque",
+          "level": 3,
+          "cost": 1,
+          "source": "archetype",
+          "archetype": "maestro_combate",
+          "cd_salvacion": "Sabiduría"
+        },
+        {
+          "id": "ataque_menoscabador_velocidad",
+          "name": "Ataque Menoscabador de Velocidad",
+          "description": "Cuando golpeas a una criatura con un ataque con arma, puedes gastar un dado de superioridad para intentar menoscabar la velocidad del objetivo. El objetivo debe hacer una tirada de salvación de Constitución. Si falla, su velocidad se reduce a 0 hasta el final de tu siguiente turno.",
+          "type": "ataque",
+          "level": 3,
+          "cost": 1,
+          "source": "archetype",
+          "archetype": "maestro_combate",
+          "cd_salvacion": "Constitución"
+        },
+        {
+          "id": "ataque_menoscabador_precision",
+          "name": "Ataque Menoscabador de Precisión",
+          "description": "Cuando golpeas a una criatura con un ataque con arma, puedes gastar un dado de superioridad para intentar menoscabar la precisión del objetivo. El objetivo debe hacer una tirada de salvación de Sabiduría. Si falla, tiene desventaja en sus tiradas de ataque hasta el final de tu siguiente turno.",
+          "type": "ataque",
+          "level": 3,
+          "cost": 1,
+          "source": "archetype",
+          "archetype": "maestro_combate",
+          "cd_salvacion": "Sabiduría"
+        },
+        {
+          "id": "ataque_menoscabador_fuerza",
+          "name": "Ataque Menoscabador de Fuerza",
+          "description": "Cuando golpeas a una criatura con un ataque con arma, puedes gastar un dado de superioridad para intentar menoscabar la fuerza del objetivo. El objetivo debe hacer una tirada de salvación de Constitución. Si falla, tiene desventaja en sus tiradas de ataque hasta el final de tu siguiente turno.",
+          "type": "ataque",
+          "level": 3,
+          "cost": 1,
+          "source": "archetype",
+          "archetype": "maestro_combate",
+          "cd_salvacion": "Constitución"
+        },
+        {
+          "id": "ataque_menoscabador_destreza",
+          "name": "Ataque Menoscabador de Destreza",
+          "description": "Cuando golpeas a una criatura con un ataque con arma, puedes gastar un dado de superioridad para intentar menoscabar la destreza del objetivo. El objetivo debe hacer una tirada de salvación de Constitución. Si falla, tiene desventaja en sus tiradas de ataque hasta el final de tu siguiente turno.",
+          "type": "ataque",
+          "level": 3,
+          "cost": 1,
+          "source": "archetype",
+          "archetype": "maestro_combate",
+          "cd_salvacion": "Constitución"
+        },
+        {
+          "id": "ataque_menoscabador_constitucion",
+          "name": "Ataque Menoscabador de Constitución",
+          "description": "Cuando golpeas a una criatura con un ataque con arma, puedes gastar un dado de superioridad para intentar menoscabar la constitución del objetivo. El objetivo debe hacer una tirada de salvación de Constitución. Si falla, tiene desventaja en sus tiradas de ataque hasta el final de tu siguiente turno.",
+          "type": "ataque",
+          "level": 3,
+          "cost": 1,
+          "source": "archetype",
+          "archetype": "maestro_combate",
+          "cd_salvacion": "Constitución"
+        },
+        {
+          "id": "ataque_menoscabador_inteligencia",
+          "name": "Ataque Menoscabador de Inteligencia",
+          "description": "Cuando golpeas a una criatura con un ataque con arma, puedes gastar un dado de superioridad para intentar menoscabar la inteligencia del objetivo. El objetivo debe hacer una tirada de salvación de Sabiduría. Si falla, tiene desventaja en sus tiradas de ataque hasta el final de tu siguiente turno.",
+          "type": "ataque",
+          "level": 3,
+          "cost": 1,
+          "source": "archetype",
+          "archetype": "maestro_combate",
+          "cd_salvacion": "Sabiduría"
+        },
+        {
+          "id": "ataque_menoscabador_sabiduria",
+          "name": "Ataque Menoscabador de Sabiduría",
+          "description": "Cuando golpeas a una criatura con un ataque con arma, puedes gastar un dado de superioridad para intentar menoscabar la sabiduría del objetivo. El objetivo debe hacer una tirada de salvación de Sabiduría. Si falla, tiene desventaja en sus tiradas de ataque hasta el final de tu siguiente turno.",
+          "type": "ataque",
+          "level": 3,
+          "cost": 1,
+          "source": "archetype",
+          "archetype": "maestro_combate",
+          "cd_salvacion": "Sabiduría"
+        },
+        {
+          "id": "ataque_menoscabador_carisma",
+          "name": "Ataque Menoscabador de Carisma",
+          "description": "Cuando golpeas a una criatura con un ataque con arma, puedes gastar un dado de superioridad para intentar menoscabar el carisma del objetivo. El objetivo debe hacer una tirada de salvación de Sabiduría. Si falla, tiene desventaja en sus tiradas de ataque hasta el final de tu siguiente turno.",
+          "type": "ataque",
+          "level": 3,
+          "cost": 1,
+          "source": "archetype",
+          "archetype": "maestro_combate",
+          "cd_salvacion": "Sabiduría"
+        }
+      ]
+    },
+    "mago": {
+      "recuperacion_arcana": [
+        {
+          "id": "recuperacion_arcana",
+          "name": "Recuperación arcana",
+          "description": "Has aprendido a recuperar parte de tu energía mágica durante un descanso corto. Una vez por día, cuando termines un descanso corto, puedes elegir espacios de conjuro que tengan un nivel combinado igual o inferior a la mitad de tu nivel de mago (redondeado hacia arriba). Los espacios elegidos se recuperan.",
+          "type": "pasivo",
+          "level": 1,
+          "cost": 1,
+          "source": "base"
+        }
+      ]
+    },
+    "druida": {
+      "forma_salvaje": [
+        {
+          "id": "forma_salvaje",
+          "name": "Forma salvaje",
+          "description": "Puedes usar tu acción para transformarte mágicamente en una bestia que hayas visto antes. Tus opciones de forma, la duración y otras limitaciones dependen de tu nivel de druida. Tienes un número limitado de usos por descanso.",
+          "type": "accion",
+          "level": 2,
+          "cost": 1,
+          "source": "base"
+        }
+      ]
+    },
+    "clerigo": {
+      "canalizar_divinidad": [
+        {
+          "id": "ahuyentar_muertos_vivientes",
+          "name": "Canalizar Divinidad: Ahuyentar muertos vivientes",
+          "description": "Como acción, presentas tu símbolo sagrado y recitas una plegaria, gastando 1 uso de Canalizar Divinidad. Cada muerto viviente a 30 pies de ti que pueda verte u oírte debe hacer una tirada de salvación de Sabiduría. Si falla, queda ahuyentado durante 1 minuto o hasta que reciba daño. A niveles superiores, los muertos vivientes de valor de desafío bajo son destruidos si fallan la tirada, según la tabla del clérigo.",
+          "type": "accion",
+          "level": 2,
+          "cost": 1,
+          "source": "base"
+        }
+      ]
+    }
+  }
+}
+

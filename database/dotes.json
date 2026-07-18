@@ -1,0 +1,752 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "lastUpdated": "2024-12-19",
+    "description": "Base de datos de dotes oficiales para D&D 5e - Manual del Jugador (2018)",
+    "totalDotes": 42,
+    "estructuraDote": {
+      "campos": ["id", "name", "prerrequisitos", "description", "beneficios", "efectos", "fuente"],
+      "prerrequisitos": "Array de objetos. Cada uno tiene 'tipo' (caracteristica|texto|raza|magia|competencia). Según tipo: caracteristica→caracteristica,valor,operador; texto→texto; raza→raza; magia→sabeMagia; competencia→competencia (id DoteEffectCompetenciaTipo).",
+      "efectos": "Objeto siempre presente (vacío {} si no hay). Claves posibles: caracteristicas ({statId: number}), modificadores ({modId: number|string}), resistencias ({tipoId: 'resistencia'}), competencias (armaduras|armas|idiomas|herramientas con su formato), conjuros (trucos, nivel1, clase, etc.), elemento."
+    }
+  },
+  "dotes": [
+    {
+      "id": "acechador",
+      "name": "Acechador",
+      "prerequisitos": [
+        {
+          "tipo": "caracteristica",
+          "caracteristica": "destreza",
+          "valor": 13,
+          "operador": ">="
+        }
+      ],
+      "description": "Eres experto en escabullirte entre las sombras, moverte sin ser visto y aprovechar la penumbra para ocultarte.",
+      "beneficios": [
+        "Puedes intentar esconderte cuando estés en una zona ligeramente oscura desde el punto de vista de la criatura de la que deseas ocultarte",
+        "Cuando estás escondido de una criatura y fallas un ataque con arma a distancia contra ella, ese ataque no revela tu ubicación",
+        "La luz tenue no te provoca desventaja en las pruebas de Sabiduría (Percepción) que dependan de la vista"
+      ],
+      "efectos": {},
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "actor",
+      "name": "Actor",
+      "prerequisitos": [],
+      "description": "Tu habilidad para la imitación y el arte dramático te permiten engañar y asumir otras identidades con facilidad.",
+      "beneficios": [
+        "Tu puntuación de Carisma aumenta en 1, hasta un máximo de 20",
+        "Tienes ventaja en las pruebas de Carisma (Engaño) y Carisma (Interpretación) que hagas para hacerte pasar por otra persona",
+        "Puedes imitar el habla de otra persona o los sonidos que hacen otras criaturas si los has oído durante al menos 1 minuto; una criatura que te escuche puede descubrir la imitación si supera una prueba de Sabiduría (Perspicacia) enfrentada a tu prueba de Carisma (Engaño)"
+      ],
+      "efectos": {
+        "caracteristicas": {
+          "carisma": 1
+        }
+      },
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "afortunado",
+      "name": "Afortunado",
+      "prerequisitos": [],
+      "description": "Posees una suerte inexplicable que tiende a sonreírte en los momentos críticos.",
+      "beneficios": [
+        "Tienes 3 puntos de suerte",
+        "Cuando hagas una tirada de ataque, una prueba de característica o una tirada de salvación, puedes gastar 1 punto de suerte para tirar 1d20 adicional y elegir cuál de los dos dados usar",
+        "Puedes gastar 1 punto de suerte cuando una criatura haga una tirada de ataque contra ti; tiras 1d20 y eliges si el ataque usa tu resultado o el del atacante",
+        "Si más de una criatura gasta puntos de suerte en la misma tirada, los puntos se cancelan entre sí y no se tiran dados adicionales",
+        "Recuperas todos los puntos de suerte al finalizar un descanso largo"
+      ],
+      "efectos": {},
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "alerta",
+      "name": "Alerta",
+      "prerequisitos": [],
+      "description": "Estás siempre atento al peligro y reaccionas con rapidez ante las amenazas.",
+      "beneficios": [
+        "Ganas un bonificador de +5 a la iniciativa",
+        "Mientras estés consciente no puedes ser sorprendido",
+        "Las criaturas que te ataquen sin que puedas verlas no obtienen ventaja en sus tiradas de ataque contra ti por este motivo"
+      ],
+      "efectos": {
+        "modificadores": {
+          "iniciativa": 5
+        }
+      },
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "apresador",
+      "name": "Apresador",
+      "prerequisitos": [
+        {
+          "tipo": "caracteristica",
+          "caracteristica": "fuerza",
+          "valor": 13,
+          "operador": ">="
+        }
+      ],
+      "description": "Has desarrollado aptitudes especiales para pelear cuerpo a cuerpo y someter a tus enemigos a corta distancia.",
+      "beneficios": [
+        "Tienes ventaja en las tiradas de ataque contra una criatura a la que estés agarrando",
+        "Puedes usar tu acción para intentar someter a un objetivo al que estés agarrando; si tienes éxito en una nueva prueba de agarrar, tú y la criatura quedáis apresados hasta que el agarre finalice"
+      ],
+      "efectos": {},
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "atacante_a_la_carga",
+      "name": "Atacante a la carga",
+      "prerequisitos": [],
+      "description": "Sabes aprovechar el impulso de una carrera para golpear con fuerza o empujar a tus enemigos.",
+      "beneficios": [
+        "Cuando utilizas tu acción para Correr, puedes usar una acción adicional para hacer un ataque con arma cuerpo a cuerpo o empujar a una criatura",
+        "Si te mueves al menos 10 pies en línea recta justo antes de usar esta acción adicional, puedes elegir entre ganar un bonificador de +5 al daño del ataque cuerpo a cuerpo (si impactas) o empujar al objetivo hasta 10 pies en dirección contraria a ti (si decides empujar y tienes éxito)"
+      ],
+      "efectos": {},
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "atacante_salvaje",
+      "name": "Atacante salvaje",
+      "prerequisitos": [],
+      "description": "Canalizas una ferocidad brutal en tus ataques cuerpo a cuerpo.",
+      "beneficios": [
+        "Una vez por turno, cuando tires el daño de un ataque con arma cuerpo a cuerpo, puedes repetir los dados de daño del arma y usar el resultado que prefieras"
+      ],
+      "efectos": {},
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "atleta",
+      "name": "Atleta",
+      "prerequisitos": [],
+      "description": "Has seguido un entrenamiento físico intenso que mejora tu capacidad atlética.",
+      "beneficios": [
+        "Tu puntuación de Fuerza o Destreza aumenta en 1, hasta un máximo de 20",
+        "Solo te cuesta 5 pies de movimiento levantarte cuando estás derribado",
+        "No necesitas invertir movimiento adicional para trepar",
+        "Puedes hacer un salto con carrerilla (de altura o de longitud) tras haberte movido solo 5 pies, en lugar de los 10 pies habituales"
+      ],
+      "efectos": {
+        "caracteristicas": {
+          "selectOne": {
+            "opciones": ["fuerza", "destreza"],
+            "valor": 1
+          }
+        }
+      },
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "azote_de_magos",
+      "name": "Azote de magos",
+      "prerequisitos": [],
+      "description": "Has ensayado técnicas para luchar eficazmente contra lanzadores de conjuros a corta distancia.",
+      "beneficios": [
+        "Si una criatura a 5 pies o menos de ti lanza un conjuro, puedes usar tu reacción para hacer un ataque con arma cuerpo a cuerpo contra ella",
+        "Si infliges daño a una criatura que esté concentrándose en un conjuro, tiene desventaja en la tirada de salvación para mantener la concentración",
+        "Tienes ventaja en las tiradas de salvación contra conjuros lanzados por criaturas que se encuentren a 5 pies o menos de ti"
+      ],
+      "efectos": {},
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "centinela",
+      "name": "Centinela",
+      "prerequisitos": [],
+      "description": "Has dominado técnicas para castigar a los enemigos que bajan la guardia o intentan escapar de tu alcance.",
+      "beneficios": [
+        "Si impactas a una criatura con un ataque de oportunidad, su velocidad se reduce a 0 durante el resto del turno",
+        "Puedes realizar ataques de oportunidad incluso contra criaturas que usan la acción Destrabarse antes de salir de tu alcance",
+        "Cuando una criatura a 5 pies o menos de ti ataca a un objetivo que no seas tú (y dicho objetivo no posea también esta dote), puedes usar tu reacción para hacer un ataque con arma cuerpo a cuerpo contra la criatura atacante"
+      ],
+      "efectos": {},
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "combatiente_con_dos_armas",
+      "name": "Combatiente con dos armas",
+      "prerequisitos": [],
+      "description": "Has dominado el estilo de combate con un arma en cada mano.",
+      "beneficios": [
+        "Recibes un +1 a tu CA cuando estás empuñando varias armas cuerpo a cuerpo, una en cada mano",
+        "Puedes combatir con dos armas incluso si las armas que utilizas no son ligeras",
+        "Puedes envainar y desenvainar dos armas a una mano en las circunstancias en las que normalmente solo podrías hacerlo con una"
+      ],
+      "efectos": {
+        "modificadores": {
+          "ca": 1
+        }
+      },
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "combatiente_montado",
+      "name": "Combatiente montado",
+      "prerequisitos": [],
+      "description": "Eres un enemigo temible cuando combates sobre una montura.",
+      "beneficios": [
+        "Tienes ventaja en las tiradas de ataque cuerpo a cuerpo contra criaturas que no estén montadas y sean de tamaño inferior al de tu montura",
+        "Puedes hacer que un ataque cuyo objetivo inicial sea tu montura te tenga como objetivo a ti en su lugar",
+        "Si tu montura se ve afectada por un efecto que permita una tirada de salvación de Destreza para recibir solo la mitad del daño, no recibe ningún daño si supera la tirada y solo la mitad si la falla"
+      ],
+      "efectos": {},
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "duelista_defensivo",
+      "name": "Duelista defensivo",
+      "prerequisitos": [
+        {
+          "tipo": "caracteristica",
+          "caracteristica": "destreza",
+          "valor": 13,
+          "operador": ">="
+        }
+      ],
+      "description": "Sabes usar un arma sutil para desviar golpes en el último instante.",
+      "beneficios": [
+        "Cuando empuñes un arma sutil con la que seas competente y otra criatura te impacte con un ataque cuerpo a cuerpo, puedes usar tu reacción para sumar tu bonificador por competencia a tu CA contra ese ataque, pudiendo hacer que falle"
+      ],
+      "efectos": {},
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "duro",
+      "name": "Duro",
+      "prerequisitos": [],
+      "description": "Tu resistencia física es excepcional, capaz de soportar grandes castigos.",
+      "beneficios": [
+        "Tus puntos de golpe máximos aumentan en dos veces tu nivel en el momento en que eliges esta dote",
+        "A partir de entonces, cada vez que subes de nivel, tus puntos de golpe máximos aumentan en 2 adicionales"
+      ],
+      "efectos": {
+        "modificadores": {
+          "hp_por_nivel": 2
+        }
+      },
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "experto_en_ballestas",
+      "name": "Experto en ballestas",
+      "prerequisitos": [],
+      "description": "Has entrenado intensamente con las ballestas, dominando su manejo y recarga.",
+      "beneficios": [
+        "Puedes ignorar la propiedad Recarga de las ballestas con las que seas competente",
+        "Estar a 5 pies o menos de una criatura hostil no te impone desventaja en las tiradas de ataque a distancia",
+        "Cuando realizas la acción de Atacar y atacas con un arma a una mano, puedes usar tu acción adicional para atacar con una ballesta de mano que estés sujetando"
+      ],
+      "efectos": {},
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "explorador_de_mazmorras",
+      "name": "Explorador de mazmorras",
+      "prerequisitos": [],
+      "description": "Estás especialmente atento a trampas ocultas y puertas secretas típicas de mazmorras.",
+      "beneficios": [
+        "Tienes ventaja en las pruebas de Sabiduría (Percepción) e Inteligencia (Investigación) para detectar puertas secretas",
+        "Tienes ventaja en las tiradas de salvación para evitar o resistir trampas",
+        "Tienes resistencia al daño causado por trampas",
+        "Puedes buscar trampas mientras viajas a ritmo normal, en lugar de tener que hacerlo a ritmo lento"
+      ],
+      "efectos": {
+        "resistencias": {
+          "trampas": "resistencia"
+        }
+      },
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "habilidoso",
+      "name": "Habilidoso",
+      "prerequisitos": [],
+      "description": "Eres especialmente versátil y dominas un amplio abanico de habilidades y herramientas.",
+      "beneficios": [
+        "Ganas competencia en cualquier combinación de tres habilidades o herramientas de tu elección"
+      ],
+      "efectos": {
+        "competencias": {
+          "herramientas": {
+            "cantidad": 3,
+            "fuente": "selector",
+            "selectMulti": true
+          }
+        }
+      },
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "iniciado_en_la_magia",
+      "name": "Iniciado en la magia",
+      "prerequisitos": [],
+      "description": "Has aprendido principios básicos de la magia de una clase concreta.",
+      "beneficios": [
+        "Elige una clase: bardo, brujo, clérigo, druida, hechicero o mago",
+        "Aprendes dos trucos de tu elección de la lista de conjuros de esa clase",
+        "Aprendes un conjuro de nivel 1 de esa misma lista",
+        "Puedes lanzar ese conjuro de nivel 1 una vez sin gastar espacio de conjuro y recuperas esta capacidad tras un descanso largo",
+        "La aptitud mágica para estos conjuros depende de la clase elegida: Carisma para bardo, brujo o hechicero; Sabiduría para clérigo o druida; Inteligencia para mago"
+      ],
+      "efectos": {
+        "conjuros": {
+          "trucos": 2,
+          "nivel1": 1,
+          "clase": "selector"
+        }
+      },
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "lanzador_en_combate",
+      "name": "Lanzador en combate",
+      "prerequisitos": [
+        {
+          "tipo": "magia",
+          "sabeMagia": true
+        }
+      ],
+      "description": "Has practicado cómo lanzar conjuros en medio del combate cuerpo a cuerpo.",
+      "beneficios": [
+        "Tienes ventaja en las tiradas de salvación de Constitución para mantener la concentración en un conjuro cuando recibes daño",
+        "Puedes ejecutar los componentes somáticos de tus conjuros incluso cuando empuñas armas o un escudo en una o ambas manos",
+        "Cuando el movimiento de una criatura hostil provoque un ataque de oportunidad, puedes usar tu reacción para lanzar un conjuro en lugar de hacer el ataque, siempre que el conjuro tenga tiempo de lanzamiento de 1 acción y tenga como objetivo una única criatura"
+      ],
+      "efectos": {},
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "lanzador_preciso",
+      "name": "Lanzador preciso",
+      "prerequisitos": [
+        {
+          "tipo": "magia",
+          "sabeMagia": true
+        }
+      ],
+      "description": "Has aprendido técnicas para mejorar tus ataques con conjuros a distancia.",
+      "beneficios": [
+        "Cuando lanzas un conjuro que requiere una tirada de ataque, su alcance se duplica",
+        "Tus ataques de conjuros a distancia ignoran las coberturas media y tres cuartos",
+        "Aprendes un truco que requiera una tirada de ataque de entre las listas de bardo, brujo, clérigo, druida, hechicero o mago; la aptitud mágica de este truco depende de la clase de donde proceda"
+      ],
+      "efectos": {
+        "conjuros": {
+          "trucos": 1,
+          "clase": "selector"
+        }
+      },
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "lanzador_ritual",
+      "name": "Lanzador ritual",
+      "prerequisitos": [
+        {
+          "tipo": "caracteristica",
+          "caracteristica": "inteligencia_o_sabiduria",
+          "valor": 13,
+          "operador": ">="
+        }
+      ],
+      "description": "Has aprendido una serie de conjuros que puedes lanzar como rituales usando un libro de rituales.",
+      "beneficios": [
+        "Obtienes un libro de rituales que contiene dos conjuros de nivel 1 de tu elección marcados como ritual y pertenecientes a la lista de una de las clases: bardo, brujo, clérigo, druida, hechicero o mago",
+        "La clase elegida determina tu aptitud mágica para estos conjuros: Carisma para bardo, brujo o hechicero; Sabiduría para clérigo o druida; Inteligencia para mago",
+        "Si encuentras conjuros escritos que cumplan los requisitos (en tu lista de clase, de nivel no superior a la mitad de tu nivel y marcados como ritual), puedes copiarlos en tu libro de rituales gastando tiempo y oro"
+      ],
+      "efectos": {},
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "lider_inspirador",
+      "name": "Líder inspirador",
+      "prerequisitos": [
+        {
+          "tipo": "caracteristica",
+          "caracteristica": "carisma",
+          "valor": 13,
+          "operador": ">="
+        }
+      ],
+      "description": "Sabes inspirar a tus compañeros con discursos y arengas motivadoras.",
+      "beneficios": [
+        "Puedes invertir 10 minutos en inspirar a tus compañeros; escoges hasta seis criaturas amistosas (incluyéndote) a 30 pies o menos de ti que puedan verte u oírte y entenderte",
+        "Cada objetivo recibe puntos de golpe temporales iguales a tu nivel + tu modificador por Carisma",
+        "Una criatura no puede volver a recibir puntos de golpe temporales de esta dote hasta que termine un descanso corto o largo"
+      ],
+      "efectos": {},
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "ligeramente_acorazado",
+      "name": "Ligeramente acorazado",
+      "prerequisitos": [],
+      "description": "Te has entrenado para combatir llevando armaduras ligeras.",
+      "beneficios": [
+        "Tu puntuación de Fuerza o Destreza aumenta en 1, hasta un máximo de 20",
+        "Ganas competencia con armaduras ligeras"
+      ],
+      "efectos": {
+        "competencias": {
+          "armaduras": {
+            "ligera": true
+          }
+        }
+      },
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "linguista",
+      "name": "Lingüista",
+      "prerequisitos": [],
+      "description": "Has estudiado idiomas y códigos con gran dedicación.",
+      "beneficios": [
+        "Tu puntuación de Inteligencia aumenta en 1, hasta un máximo de 20",
+        "Aprendes tres idiomas de tu elección",
+        "Puedes crear códigos escritos para cifrar mensajes; solo quienes conozcan el código, superen una prueba de Inteligencia adecuada o usen magia podrán descifrarlos"
+      ],
+      "efectos": {
+        "caracteristicas": {
+          "inteligencia": 1
+        },
+        "competencias": {
+          "idiomas": {
+            "cantidad": 3,
+            "fuente": "competencias.Languages",
+            "selectMulti": true
+          }
+        }
+      },
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "maestro_de_armas",
+      "name": "Maestro de armas",
+      "prerequisitos": [],
+      "description": "Has practicado con una gran variedad de armas y sabes manejarlas con soltura.",
+      "beneficios": [
+        "Tu puntuación de Fuerza o Destreza aumenta en 1, hasta un máximo de 20",
+        "Ganas competencia con cuatro armas de tu elección, que pueden ser armas simples o marciales"
+      ],
+      "efectos": {
+        "competencias": {
+          "armas": {
+            "cantidad": 4,
+            "fuente": "selector",
+            "selectMulti": true
+          }
+        }
+      },
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "maestro_en_armaduras_medias",
+      "name": "Maestro en armaduras medias",
+      "prerequisitos": [
+        {
+          "tipo": "competencia",
+          "competencia": "armadura_media"
+        }
+      ],
+      "description": "Te has acostumbrado a moverte con armaduras medias sin que entorpezcan tu sigilo.",
+      "beneficios": [
+        "Llevar armadura media no te da desventaja en las pruebas de Destreza (Sigilo)",
+        "Cuando lleves armadura media y tengas Destreza 16 o más, puedes sumar 3, en lugar de 2, a tu CA por tu modificador de Destreza"
+      ],
+      "efectos": {},
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "maestro_en_armaduras_pesadas",
+      "name": "Maestro en armaduras pesadas",
+      "prerequisitos": [
+        {
+          "tipo": "competencia",
+          "competencia": "armadura_pesada"
+        }
+      ],
+      "description": "Sabes usar tu armadura pesada para desviar golpes que matarían a otros.",
+      "beneficios": [
+        "Tu puntuación de Fuerza aumenta en 1, hasta un máximo de 20",
+        "Mientras lleves armadura pesada, el daño contundente, cortante y perforante de armas no mágicas que recibas se reduce en 3"
+      ],
+      "efectos": {
+        "caracteristicas": {
+          "fuerza": 1
+        },
+        "modificadores": {
+          "reduccion_daño_armas_no_magicas": 3
+        }
+      },
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "maestro_en_armas_de_asta",
+      "name": "Maestro en armas de asta",
+      "prerequisitos": [],
+      "description": "Has aprendido a sacar el máximo partido de armas largas como alabardas, bastones y gujas.",
+      "beneficios": [
+        "Cuando realizas la acción de Atacar y atacas únicamente con una alabarda, bastón o guja, puedes usar tu acción adicional para hacer un ataque cuerpo a cuerpo con el otro extremo del arma, que usa el mismo modificador y hace 1d4 de daño contundente",
+        "Mientras empuñas una alabarda, bastón, guja o pica, puedes hacer un ataque de oportunidad contra criaturas que entren en el alcance que estas armas te dan"
+      ],
+      "efectos": {},
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "maestro_en_armas_pesadas",
+      "name": "Maestro en armas pesadas",
+      "prerequisitos": [],
+      "description": "Has aprendido a usar el peso de tu arma pesada para encadenar golpes devastadores.",
+      "beneficios": [
+        "Una vez por turno, cuando con un arma cuerpo a cuerpo hagas un golpe crítico o reduzcas los puntos de golpe de una criatura a 0, puedes usar tu acción adicional para hacer un ataque con arma cuerpo a cuerpo",
+        "Antes de hacer un ataque cuerpo a cuerpo con un arma pesada con la que seas competente, puedes sufrir un penalizador de -5 a la tirada de ataque; si impactas, sumas +10 al daño del ataque"
+      ],
+      "efectos": {},
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "maestro_en_escudos",
+      "name": "Maestro en escudos",
+      "prerequisitos": [],
+      "description": "No solo usas el escudo para protegerte, sino también como arma y barrera mágica.",
+      "beneficios": [
+        "Si realizas la acción de Atacar durante tu turno, puedes usar una acción adicional para intentar empujar con tu escudo a una criatura a 5 pies o menos de ti",
+        "Si no estás incapacitado, puedes añadir el bonificador de CA de tu escudo a cualquier tirada de salvación de Destreza que hagas contra conjuros u otros efectos que te tengan solo a ti como objetivo",
+        "Si un efecto te permite hacer una tirada de salvación de Destreza para recibir solo la mitad del daño, puedes usar tu reacción para no recibir ningún daño si tienes éxito, interponiendo tu escudo entre tú y la fuente del efecto"
+      ],
+      "efectos": {},
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "maton_de_taberna",
+      "name": "Matón de taberna",
+      "prerequisitos": [],
+      "description": "Estás acostumbrado a las peleas de taberna y a usar todo tipo de objetos como armas improvisadas.",
+      "beneficios": [
+        "Tu puntuación de Fuerza o Constitución aumenta en 1, hasta un máximo de 20",
+        "Obtienes competencia con armas improvisadas",
+        "Tus ataques sin armas infligen 1d4 de daño",
+        "Cuando impactas a una criatura con un ataque sin armas o un arma improvisada durante tu turno, puedes usar una acción adicional para intentar agarrar al objetivo"
+      ],
+      "efectos": {
+        "competencias": {
+          "armas_improvisadas": 1
+        }
+      },
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "mente_aguda",
+      "name": "Mente aguda",
+      "prerequisitos": [],
+      "description": "Tu mente es excepcionalmente precisa para medir el tiempo, orientarte y recordar detalles.",
+      "beneficios": [
+        "Tu puntuación de Inteligencia aumenta en 1, hasta un máximo de 20",
+        "Siempre sabes dónde está el norte",
+        "Siempre sabes cuántas horas faltan para el siguiente amanecer o anochecer",
+        "Puedes recordar con exactitud todo lo que hayas visto u oído durante el último mes"
+      ],
+      "efectos": {
+        "caracteristicas": {
+          "inteligencia": 1
+        }
+      },
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "moderadamente_acorazado",
+      "name": "Moderadamente acorazado",
+      "prerequisitos": [
+        {
+          "tipo": "competencia",
+          "competencia": "armadura_ligera"
+        }
+      ],
+      "description": "Te has entrenado para usar armaduras medias y escudos con soltura.",
+      "beneficios": [
+        "Tu puntuación de Fuerza o Destreza aumenta en 1, hasta un máximo de 20",
+        "Ganas competencia con armaduras medias y escudos"
+      ],
+      "efectos": {
+        "competencias": {
+          "armaduras": {
+            "media": true,
+            "escudo": true
+          }
+        }
+      },
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "movil",
+      "name": "Móvil",
+      "prerequisitos": [],
+      "description": "Eres excepcionalmente ágil y veloz, capaz de moverte por el campo de batalla con facilidad.",
+      "beneficios": [
+        "Tu velocidad aumenta en 10 pies",
+        "Cuando realizas la acción de Correr, el terreno difícil no te cuesta movimiento adicional durante ese turno",
+        "Si realizas un ataque cuerpo a cuerpo contra una criatura (impactes o no), no provocas ataques de oportunidad de esa criatura durante el resto del turno"
+      ],
+      "efectos": {
+        "modificadores": {
+          "movimiento": "+10"
+        }
+      },
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "muy_acorazado",
+      "name": "Muy acorazado",
+      "prerequisitos": [
+        {
+          "tipo": "competencia",
+          "competencia": "armadura_media"
+        }
+      ],
+      "description": "Te has entrenado para usar armaduras pesadas con soltura.",
+      "beneficios": [
+        "Tu puntuación de Fuerza aumenta en 1, hasta un máximo de 20",
+        "Ganas competencia con armaduras pesadas"
+      ],
+      "efectos": {
+        "caracteristicas": {
+          "fuerza": 1
+        },
+        "competencias": {
+          "armaduras": {
+            "pesada": true
+          }
+        }
+      },
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "observador",
+      "name": "Observador",
+      "prerequisitos": [],
+      "description": "Te percatas con facilidad de los detalles de tu entorno.",
+      "beneficios": [
+        "Tu puntuación de Inteligencia o Sabiduría aumenta en 1, hasta un máximo de 20",
+        "Si puedes ver la boca de una criatura que habla un idioma que conoces, puedes interpretar lo que dice leyendo sus labios",
+        "Tienes un bonificador de +5 a tus puntuaciones pasivas de Sabiduría (Percepción) e Inteligencia (Investigación)"
+      ],
+      "efectos": {
+        "modificadores": {
+          "percepcion_pasiva": 5,
+          "investigacion_pasiva": 5
+        }
+      },
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "resiliente",
+      "name": "Resiliente",
+      "prerequisitos": [],
+      "description": "Tu fuerza de voluntad o tu dureza física te permiten resistir mejor los efectos perjudiciales.",
+      "beneficios": [
+        "Elige una puntuación de característica; tu puntuación en esa característica aumenta en 1, hasta un máximo de 20",
+        "Obtienes competencia en las tiradas de salvación de la característica elegida"
+      ],
+      "efectos": {},
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "resistente",
+      "name": "Resistente",
+      "prerequisitos": [],
+      "description": "Tu dureza y resistencia física te permiten recuperarte mejor del daño.",
+      "beneficios": [
+        "Tu puntuación de Constitución aumenta en 1, hasta un máximo de 20",
+        "Cuando tiras un Dado de Golpe para recuperar puntos de golpe, el mínimo que recuperas con esa tirada es dos veces tu modificador por Constitución (mínimo 2)"
+      ],
+      "efectos": {
+        "caracteristicas": {
+          "constitucion": 1
+        }
+      },
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "sanador",
+      "name": "Sanador",
+      "prerequisitos": [],
+      "description": "Tienes talento como médico y sabes cómo cerrar heridas rápidamente.",
+      "beneficios": [
+        "Cuando estabilizas a una criatura agonizante (0 puntos de golpe) usando útiles de sanador, esa criatura recupera también 1 punto de golpe",
+        "Como acción, puedes gastar un uso de unos útiles de sanador para hacer que una criatura recupere 1d6 + 4 puntos de golpe, más puntos adicionales iguales a su número de Dados de Golpe máximos; esa criatura no puede volver a beneficiarse de esta dote hasta que termine un descanso corto o largo"
+      ],
+      "efectos": {},
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "tirador_de_primera",
+      "name": "Tirador de primera",
+      "prerequisitos": [],
+      "description": "Eres un maestro de las armas a distancia, capaz de realizar disparos casi imposibles.",
+      "beneficios": [
+        "No tienes desventaja en las tiradas de ataque con armas a distancia a alcance largo",
+        "Tus ataques con armas a distancia ignoran las coberturas media y tres cuartos",
+        "Antes de hacer un ataque con un arma a distancia con la que seas competente, puedes sufrir un penalizador de -5 a la tirada de ataque; si impactas, sumas +10 al daño del ataque"
+      ],
+      "efectos": {
+        "caracteristicas": {
+          "destreza": 1
+        }
+      },
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "versado_en_las_armas",
+      "name": "Versado en las armas",
+      "prerequisitos": [],
+      "description": "Has recibido un entrenamiento marcial que te permite ejecutar maniobras especiales de combate.",
+      "beneficios": [
+        "Aprendes dos maniobras a tu elección de entre las disponibles para el arquetipo Maestro del combate de la clase guerrero",
+        "Si alguna maniobra exige que tu objetivo haga una tirada de salvación para resistir sus efectos, la CD será 8 + tu bonificador por competencia + tu modificador por Fuerza o Destreza (eliges uno)",
+        "Si ya tienes dados de superioridad, ganas uno más; si no, ganas un dado de superioridad d6 para usar en tus maniobras y recuperas todos tus dados de superioridad al finalizar un descanso corto o largo"
+      ],
+      "efectos": {},
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "versado_en_un_elemento",
+      "name": "Versado en un elemento",
+      "prerequisitos": [
+        {
+          "tipo": "magia",
+          "sabeMagia": true
+        }
+      ],
+      "description": "Has afinado tu magia con un tipo concreto de energía elemental.",
+      "beneficios": [
+        "Cuando obtienes esta dote, elige un tipo de daño: ácido, frío, fuego, relámpago o trueno",
+        "Los conjuros que lances ignoran la resistencia al tipo de daño elegido",
+        "Cuando tires el daño de un conjuro que inflija ese tipo de daño, puedes tratar cualquier resultado de 1 en los dados de daño como un 2",
+        "Puedes escoger esta dote varias veces, eligiendo un tipo de daño distinto cada vez"
+      ],
+      "efectos": {
+        "elemento": {
+          "tipo": "selector",
+          "opciones": [
+            "acido",
+            "frio",
+            "fuego",
+            "relampago",
+            "trueno"
+          ]
+        }
+      },
+      "fuente": "Manual del Jugador"
+    }
+  ]
+}
+
+

@@ -1,0 +1,118 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "lastUpdated": "2024-12-19",
+    "description": "Lista completa de habilidades D&D 5e - Manual del Jugador (2018)",
+    "totalHabilidades": 18
+  },
+  "habilidades": [
+    {
+      "id": "atletismo",
+      "nombre": "Atletismo",
+      "caracteristica": "fuerza",
+      "descripcion": "Tu fuerza (Atletismo) cubre situaciones difíciles que encuentras al escalar, saltar o nadar."
+    },
+    {
+      "id": "acrobacia",
+      "nombre": "Acrobacia",
+      "caracteristica": "destreza",
+      "descripcion": "Tu destreza (Acrobacia) determina tu capacidad para realizar acrobacias, mantener el equilibrio y aterrizar de pie."
+    },
+    {
+      "id": "juego_de_manos",
+      "nombre": "Juego de Manos",
+      "caracteristica": "destreza",
+      "descripcion": "Siempre que intentes un acto de legerdemain o manipulación manual, el DM puede pedirte una tirada de destreza (Juego de Manos)."
+    },
+    {
+      "id": "sigilo",
+      "nombre": "Sigilo",
+      "caracteristica": "destreza",
+      "descripcion": "Cuando intentas ocultarte de enemigos, el DM decide qué circunstancias son apropiadas para ocultarte."
+    },
+    {
+      "id": "conocimiento_arcano",
+      "nombre": "Conocimiento Arcano",
+      "caracteristica": "inteligencia",
+      "descripcion": "Tu inteligencia (Conocimiento Arcano) mide tu capacidad para recordar información sobre hechizos, objetos mágicos, tradiciones místicas, planos de existencia y los habitantes de esos planos."
+    },
+    {
+      "id": "historia",
+      "nombre": "Historia",
+      "caracteristica": "inteligencia",
+      "descripcion": "Tu inteligencia (Historia) mide tu capacidad para recordar información sobre leyendas, guerras, reinos, pueblos, fundadores, guerras, colonizaciones, migraciones y el establecimiento de ciudades y pueblos."
+    },
+    {
+      "id": "investigacion",
+      "nombre": "Investigación",
+      "caracteristica": "inteligencia",
+      "descripcion": "Cuando miras alrededor para encontrar pistas y sacar conclusiones basadas en esas pistas, haces una tirada de inteligencia (Investigación)."
+    },
+    {
+      "id": "naturaleza",
+      "nombre": "Naturaleza",
+      "caracteristica": "inteligencia",
+      "descripcion": "Tu inteligencia (Naturaleza) mide tu capacidad para recordar información sobre terreno, plantas y animales, el clima y ciclos naturales."
+    },
+    {
+      "id": "religion",
+      "nombre": "Religión",
+      "caracteristica": "inteligencia",
+      "descripcion": "Tu inteligencia (Religión) mide tu capacidad para recordar información sobre deidades, ritos y oraciones, jerarquías religiosas, símbolos sagrados y las prácticas de cultos secretos."
+    },
+    {
+      "id": "medicina",
+      "nombre": "Medicina",
+      "caracteristica": "sabiduria",
+      "descripcion": "Tu sabiduría (Medicina) mide tu capacidad para estabilizar a un compañero moribundo o diagnosticar una enfermedad."
+    },
+    {
+      "id": "percepcion",
+      "nombre": "Percepción",
+      "caracteristica": "sabiduria",
+      "descripcion": "Tu sabiduría (Percepción) te permite detectar, localizar o advertir la presencia de algo. Mide tu conciencia general de tu entorno y la agudeza de tus sentidos."
+    },
+    {
+      "id": "perspicacia",
+      "nombre": "Perspicacia",
+      "caracteristica": "sabiduria",
+      "descripcion": "Tu sabiduría (Perspicacia) decide si puedes determinar las verdaderas intenciones de una criatura, como cuando buscas mentiras o predecir el próximo movimiento de alguien."
+    },
+    {
+      "id": "supervivencia",
+      "nombre": "Supervivencia",
+      "caracteristica": "sabiduria",
+      "descripcion": "El DM puede pedirte una tirada de sabiduría (Supervivencia) para seguir rastros, cazar, guiar a tu grupo a través de tierras salvajes, identificar signos de que los osos habitan un área, predecir el clima o evitar arenas movedizas u otros peligros naturales."
+    },
+    {
+      "id": "trato_con_animales",
+      "nombre": "Trato con Animales",
+      "caracteristica": "sabiduria",
+      "descripcion": "Cuando hay alguna pregunta sobre si puedes calmar a un animal domesticado, mantener a un animal montado bajo control o intuir las intenciones de un animal, el DM podría pedirte una tirada de sabiduría (Trato con Animales)."
+    },
+    {
+      "id": "engano",
+      "nombre": "Engaño",
+      "caracteristica": "carisma",
+      "descripcion": "Tu carisma (Engaño) determina si puedes ocultar la verdad de manera convincente, ya sea verbalmente o a través de tus acciones."
+    },
+    {
+      "id": "interpretacion",
+      "nombre": "Interpretación",
+      "caracteristica": "carisma",
+      "descripcion": "Tu carisma (Interpretación) determina qué tan bien puedes entretener a una audiencia con música, danza, actuación, narración o alguna otra forma de entretenimiento."
+    },
+    {
+      "id": "intimidacion",
+      "nombre": "Intimidación",
+      "caracteristica": "carisma",
+      "descripcion": "Cuando intentas influir en alguien a través de amenazas abiertas, acciones hostiles y violencia física, el DM podría pedirte una tirada de carisma (Intimidación)."
+    },
+    {
+      "id": "persuasion",
+      "nombre": "Persuasión",
+      "caracteristica": "carisma",
+      "descripcion": "Cuando intentas influir en alguien o un grupo de personas con tacto, gracia social o buena naturaleza, el DM podría pedirte una tirada de carisma (Persuasión)."
+    }
+  ]
+}

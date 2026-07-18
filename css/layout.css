@@ -1,0 +1,274 @@
+/* Atlas — shell, sidebar y layout responsivo */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: var(--atlas-bg);
+  color: var(--atlas-text);
+  font-family: var(--atlas-font);
+  font-size: 14px;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.atlas-app {
+  display: flex;
+  height: 100dvh;
+  width: 100%;
+  overflow: hidden;
+  background: var(--atlas-shell);
+}
+
+/* —— Sidebar —— */
+.atlas-sidebar {
+  flex-shrink: 0;
+  width: var(--atlas-sidebar-w);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 0;
+  background: #22262e;
+  border-right: 1px solid var(--atlas-border-soft);
+  z-index: 20;
+}
+
+.atlas-nav-btn {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: var(--atlas-radius);
+  background: transparent;
+  color: var(--atlas-text-dim);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.atlas-nav-btn svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 1.75;
+}
+
+.atlas-nav-btn:hover {
+  background: var(--atlas-surface);
+  color: var(--atlas-text);
+  border-color: var(--atlas-border);
+}
+
+.atlas-nav-btn--active {
+  background: var(--atlas-accent-soft);
+  color: var(--atlas-accent);
+  border-color: rgba(66, 153, 225, 0.45);
+}
+
+/* Tooltip nativo mejorado vía data-tooltip */
+.atlas-nav-btn[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: calc(100% + 10px);
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: #0f141c;
+  border: 1px solid var(--atlas-border);
+  color: var(--atlas-text);
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.12s ease;
+  z-index: 50;
+}
+
+.atlas-nav-btn[data-tooltip]:hover::after,
+.atlas-nav-btn[data-tooltip]:focus-visible::after {
+  opacity: 1;
+}
+
+/* —— Workspace —— */
+.atlas-workspace {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--atlas-shell);
+  padding: 16px;
+}
+
+.atlas-spells-page {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.atlas-catalog,
+.atlas-detail {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.atlas-search-row {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.atlas-icon-btn {
+  flex-shrink: 0;
+  width: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--atlas-panel);
+  border: 1px solid var(--atlas-border);
+  border-radius: var(--atlas-radius);
+  color: var(--atlas-text-muted);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.atlas-icon-btn svg {
+  width: 18px;
+  height: 18px;
+  stroke-width: 1.75;
+}
+
+.atlas-icon-btn:hover {
+  background: var(--atlas-surface);
+  color: var(--atlas-text);
+  border-color: #5a6578;
+}
+
+.atlas-selected-bar {
+  display: none;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 12px;
+  background: var(--atlas-panel);
+  border: 1px solid var(--atlas-border);
+  border-radius: var(--atlas-radius);
+  color: var(--atlas-text);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+  flex-shrink: 0;
+}
+
+.atlas-selected-bar__back {
+  display: inline-flex;
+  color: var(--atlas-text-muted);
+}
+
+.atlas-selected-bar__back svg {
+  width: 18px;
+  height: 18px;
+}
+
+.atlas-selected-bar__name {
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.atlas-selected-bar:hover {
+  border-color: rgba(59, 130, 246, 0.6);
+  background: rgba(46, 60, 82, 0.35);
+}
+
+/* —— Desktop: catálogo | detalle —— */
+@media (min-width: 768px) {
+  .atlas-detail {
+    display: flex;
+  }
+
+  /* Solo conjuros: en desktop no colapsa a barra */
+  #spells-page #selected-bar {
+    display: none !important;
+  }
+
+  #spells-page #spells-list {
+    display: block;
+  }
+
+  #spells-page #atlas-search-row {
+    display: flex;
+  }
+}
+
+/* —— Móvil: catálogo o detalle (solo módulo Conjuros) —— */
+@media (max-width: 767px) {
+  .atlas-workspace {
+    padding: 12px;
+    padding-bottom: calc(12px + var(--atlas-safe-bottom));
+  }
+
+  .atlas-spells-page {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .atlas-nav-btn[data-tooltip]::after {
+    left: 50%;
+    top: calc(100% + 8px);
+    transform: translateX(-50%);
+  }
+
+  /* Sin conjuro seleccionado */
+  .atlas-app:not(.has-selection) #spells-page .atlas-detail {
+    display: none;
+  }
+
+  .atlas-app:not(.has-selection) #spells-page #selected-bar {
+    display: none !important;
+  }
+
+  /* Con conjuro seleccionado: barra + detalle */
+  .atlas-app.has-selection #spells-page #atlas-search-row {
+    display: none;
+  }
+
+  .atlas-app.has-selection #spells-page #spells-list {
+    display: none;
+  }
+
+  .atlas-app.has-selection #spells-page #selected-bar {
+    display: flex;
+  }
+
+  .atlas-app.has-selection #spells-page .atlas-detail {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+  }
+
+  .atlas-app.has-selection #spells-page .atlas-catalog {
+    flex: 0 0 auto;
+  }
+}

@@ -1,0 +1,80 @@
+/* Atlas — CustomSelect (tokens) */
+
+.custom-select {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+  min-width: 0;
+}
+
+.custom-select select {
+  background: var(--atlas-panel);
+  border: 1px solid var(--atlas-border);
+  border-radius: var(--atlas-radius);
+  color: var(--atlas-text);
+  padding: 10px 40px 10px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: inherit;
+  outline: none;
+}
+
+.custom-select__arrow {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #8fa3b7;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.custom-select select:hover {
+  border-color: #5a5568;
+}
+
+.custom-select select:focus {
+  border-color: var(--atlas-accent);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.custom-select select:disabled {
+  background: var(--atlas-surface);
+  color: #718096;
+  cursor: not-allowed;
+  border-color: var(--atlas-border);
+}
+
+.custom-select select:disabled + .custom-select__arrow {
+  border-top-color: #718096;
+}
+
+.custom-select select option {
+  background: var(--atlas-panel);
+  color: var(--atlas-text);
+  padding: 8px 12px;
+}
+
+.custom-select--compact {
+  max-width: 140px;
+}
+
+.custom-select--compact select {
+  padding: 8px 36px 8px 10px;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .custom-select select {
+    font-size: 16px; /* evita zoom en iOS */
+  }
+}

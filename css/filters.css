@@ -1,0 +1,303 @@
+/* Atlas — filtros: menú de categorías + submenú con toggles */
+
+#filter-mount {
+  flex-shrink: 0;
+  display: flex;
+  align-self: stretch;
+}
+
+.atlas-filter {
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  align-self: stretch;
+}
+
+.atlas-filter__toggle {
+  position: relative;
+  height: 100%;
+  align-self: stretch;
+  box-sizing: border-box;
+}
+
+.atlas-filter__badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 4px;
+  border-radius: 999px;
+  background: var(--atlas-accent);
+  color: #0f141c;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: center;
+}
+
+.atlas-filter__panel {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  z-index: 40;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  background: #2a2e36;
+  border: 1px solid var(--atlas-border);
+  border-radius: 8px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+  overflow: visible;
+}
+
+.atlas-filter__panel[hidden] {
+  display: none !important;
+}
+
+.atlas-filter__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--atlas-border-soft);
+  flex-shrink: 0;
+}
+
+.atlas-filter__title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--atlas-text);
+}
+
+.atlas-filter__clear {
+  background: transparent;
+  border: 1px solid var(--atlas-border);
+  border-radius: 6px;
+  color: var(--atlas-text-muted);
+  font-size: 12px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.atlas-filter__clear:hover {
+  color: var(--atlas-text);
+  border-color: #5a6578;
+  background: var(--atlas-surface);
+}
+
+.atlas-filter__body {
+  padding: 6px 0;
+}
+
+/* —— Categoría del menú principal —— */
+.atlas-filter__item {
+  position: relative;
+}
+
+.atlas-filter__item-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  padding: 9px 14px;
+  border: none;
+  background: transparent;
+  color: var(--atlas-text-muted);
+  font-size: 13px;
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.atlas-filter__item-btn:hover,
+.atlas-filter__item.is-open > .atlas-filter__item-btn {
+  background: rgba(46, 60, 82, 0.45);
+  color: var(--atlas-text);
+}
+
+.atlas-filter__item.has-active > .atlas-filter__item-btn {
+  color: var(--atlas-text);
+}
+
+.atlas-filter__item-name {
+  min-width: 0;
+}
+
+.atlas-filter__item-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.atlas-filter__item-count {
+  min-width: 16px;
+  height: 16px;
+  padding: 0 5px;
+  border-radius: 999px;
+  background: rgba(66, 153, 225, 0.25);
+  border: 1px solid rgba(66, 153, 225, 0.5);
+  color: var(--atlas-accent);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 14px;
+  text-align: center;
+}
+
+.atlas-filter__item-chevron {
+  color: var(--atlas-text-dim);
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* —— Submenú (opciones + toggles) —— */
+.atlas-filter__submenu {
+  position: absolute;
+  top: 0;
+  right: 100%;
+  z-index: 45;
+  width: min(280px, calc(100vw - 80px));
+  max-height: min(60dvh, 420px);
+  overflow-y: auto;
+  padding: 6px 0 8px;
+  margin-right: 2px;
+  background: #2a2e36;
+  border: 1px solid var(--atlas-border);
+  border-radius: 8px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+  scrollbar-width: thin;
+  scrollbar-color: var(--atlas-border) transparent;
+}
+
+.atlas-filter__submenu[hidden] {
+  display: none !important;
+}
+
+.atlas-filter__submenu-title {
+  padding: 6px 14px 8px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--atlas-text-dim);
+  border-bottom: 1px solid var(--atlas-border-soft);
+  margin-bottom: 4px;
+}
+
+/* Modo plano: un solo grupo de opciones ya desplegado */
+.atlas-filter--flat .atlas-filter__panel {
+  width: min(260px, calc(100vw - 72px));
+}
+
+.atlas-filter--flat .atlas-filter__flat-group {
+  padding: 0 0 4px;
+}
+
+.atlas-filter--flat .atlas-filter__submenu-title {
+  display: block;
+}
+
+.atlas-filter__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 7px 14px;
+  cursor: pointer;
+  margin: 0;
+}
+
+.atlas-filter__row:hover {
+  background: rgba(46, 60, 82, 0.35);
+}
+
+.atlas-filter__row:hover .atlas-filter__label {
+  color: var(--atlas-text);
+}
+
+.atlas-filter__row.is-active .atlas-filter__label {
+  color: var(--atlas-text);
+}
+
+.atlas-filter__label {
+  min-width: 0;
+  font-size: 13px;
+  color: var(--atlas-text-muted);
+}
+
+/* —— Toggle del proyecto —— */
+.atlas-filter__switch.switch-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  padding: 0;
+  position: relative;
+  cursor: pointer;
+  font-size: 14px;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.atlas-filter__switch.switch-container input {
+  display: none;
+}
+
+.atlas-filter__switch .switch-slider {
+  position: relative;
+  width: 40px;
+  height: 22px;
+  background-color: #4a5568;
+  border-radius: 22px;
+  transition: background-color 0.3s ease;
+  border: 1px solid #2d3748;
+  display: block;
+}
+
+.atlas-filter__switch .switch-slider::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  top: 2px;
+  left: 3px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.atlas-filter__switch.switch-container input:checked + .switch-slider {
+  background-color: #4299e1;
+}
+
+.atlas-filter__switch.switch-container input:checked + .switch-slider::before {
+  transform: translateX(16px);
+  background-color: #ffffff;
+}
+
+/* Móvil: submenú debajo del ítem (sin espacio a la izquierda) */
+@media (max-width: 767px) {
+  .atlas-filter__panel {
+    width: min(260px, calc(100vw - 72px));
+  }
+
+  .atlas-filter__submenu {
+    position: static;
+    right: auto;
+    width: 100%;
+    max-height: min(40dvh, 280px);
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .atlas-filter__submenu-title {
+    display: none;
+  }
+}

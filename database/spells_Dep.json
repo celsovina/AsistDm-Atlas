@@ -1,0 +1,990 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "lastUpdated": "2024-12-19",
+    "description": "Base de datos de hechizos para D&D 5e - Manual del Jugador (2018)",
+    "totalSpells": 29
+  },
+  "spells": [
+    {
+      "id": "goodberry",
+      "name": "Buenas bayas",
+      "school": "Transmutación",
+      "level": 1,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "24 horas (14400 turnos)",
+      "concentration": false,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Una ramita de muérdago"
+      ],
+      "description": "Hasta diez bayas mágicas aparecen en tu mano. Una criatura puede usar su acción para comer una baya para recuperar 1 punto de golpe.",
+      "damage": null,
+      "effect": "Curación (crea ítems)",
+      "range": "Personal",
+      "areaOfEffect": null,
+      "savingThrow": null,
+      "source": "Manual del Jugador",
+      "createsItems": [
+        {
+          "itemId": "baya_buena",
+          "quantity": 10,
+          "expires": "24h"
+        }
+      ]
+    },
+    {
+      "id": "create_food_and_water",
+      "name": "Crear comida y agua",
+      "school": "Conjuración",
+      "level": 3,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "24 horas (14400 turnos)",
+      "concentration": false,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": [],
+      "description": "Creas 45 libras de comida y 30 galones de agua que se echan a perder tras 24 horas.",
+      "damage": null,
+      "effect": "Suministros (crea ítems)",
+      "range": "30 pies",
+      "areaOfEffect": null,
+      "savingThrow": null,
+      "source": "Manual del Jugador",
+      "createsItems": [
+        {
+          "itemId": "guiso_tonificante",
+          "quantity": 9,
+          "expires": "24h"
+        }
+      ]
+    },
+    {
+      "id": "cloud_of_daggers",
+      "name": "Nube de dagas",
+      "school": "Conjuración",
+      "level": 2,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "1 minuto (10 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Un trozo de cristal"
+      ],
+      "description": "Llenas el aire con dagas giratorias en un cubo de 5 pies de lado. Cualquier criatura que entre en el área por primera vez en un turno o que empiece su turno ahí recibe 4d4 de daño cortante.",
+      "upcast": "Por cada nivel de ranura de conjuro superior al 2º, el daño aumenta en 1d4",
+      "damage": {
+        "stat": "DAM",
+        "value": "4d4",
+        "mod": ""
+      },
+      "effect": "Cortante",
+      "range": "60 pies",
+      "areaOfEffect": "Cubo de 5 pies",
+      "savingThrow": {
+        "type": "Destreza",
+        "dc": 14,
+        "effect": "Mitad de daño"
+      },
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "acid_splash",
+      "name": "Salpicadura ácida",
+      "school": "Conjuración",
+      "level": 0,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Instantáneo",
+      "concentration": false,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": [],
+      "description": "Lanzas una burbuja de ácido. Elige una criatura dentro del alcance, o elige dos criaturas dentro del alcance que estén a 5 pies una de la otra. Un objetivo debe hacer una tirada de salvación de Destreza.",
+      "upcast": null,
+      "damage": {
+        "stat": "DAM",
+        "value": "1d6",
+        "mod": ""
+      },
+      "effect": "Ácido",
+      "range": "60 pies",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": "Destreza",
+        "dc": 14,
+        "effect": "Mitad de daño"
+      },
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "spike_growth",
+      "name": "Tormenta de espinas",
+      "school": "Conjuración",
+      "level": 1,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "10 minutos (100 turnos)",
+      "concentration": true,
+      "components": [
+        "V"
+      ],
+      "materials": [],
+      "description": "La próxima vez que impactes a una criatura con un ataque con arma a distancia antes del final de la duración del conjuro, este creará una lluvia de espinas que saldrá disparada de tu arma a distancia. Además del efecto normal del ataque, tanto el objetivo de este como cada criatura que se encuentre a 5 pies del mismo deben realizar una tira da de salvación de Destreza. Sufrirán 1d10 de daño perforante si fallan la tirada o la mitad del daño si las superan",
+      "upcast": "Cuando lanzas este conjuro utilizando un espacio de conjuro de nivel 2 o más, el daño aumenta en 1d10 por cada nivel por encima de 1 que tenga el espacio que hayas empleado (hasta un máximo de 6dl0)",
+      "damage": {
+        "stat": "DAM",
+        "value": "1d10",
+        "mod": ""
+      },
+      "effect": "Perforante",
+      "range": "150 pies",
+      "areaOfEffect": "Radio de 20 pies",
+      "savingThrow": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "spike_stones",
+      "name": "Crecimiento espinoso",
+      "school": "Transmutación",
+      "level": 2,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 10 minutos (100 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Siete espinas afiladas o siete pequeñas ramas puntiagudas"
+      ],
+      "description": "El suelo en un radio de 20 pies centrado en un punto dentro del alcance se retuerce y se llena de espinas y zarzas. El área se convierte en terreno difícil por la duración del conjuro. Cuando una criatura se mueve dentro o dentro del área por primera vez en un turno o termina su turno ahí, la criatura recibe 2d4 de daño perforante por cada 5 pies que se mueva.",
+      "upcast": "Cuando lanzas este conjuro usando una ranura de conjuro de 3º nivel o superior, el daño aumenta en 1d4 por cada nivel de ranura por encima del 4º.",
+      "damage": {
+        "stat": "DAM",
+        "value": "2d4",
+        "mod": "5ft"
+      },
+      "effect": "Perforante",
+      "range": "150 pies",
+      "areaOfEffect": "Radio de 20 pies",
+      "savingThrow": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "conjure_animals",
+      "name": "Conjurar animales",
+      "school": "Conjuración",
+      "level": 3,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 hora (600 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": [],
+      "description": "Conjuras bestias que aparecen en espacios desocupados que puedas ver dentro del alcance. Elige una de las siguientes opciones para lo que aparece: Una bestia de desafío 2 o inferior, Dos bestias de desafío 1 o inferior, Cuatro bestias de desafío 1/2 o inferior, Ocho bestias de desafío 1/4 o inferior. Cada bestia también se considera feérica, y desaparece cuando se reduce a 0 puntos de golpe o cuando termina el conjuro.",
+      "upcast": "Cuando lanzas este conjuro usando ciertos niveles de ranura de conjuro, eliges una de las opciones de conjuración anteriores, y aparecen más criaturas: 5º nivel, dos veces más criaturas; 7º nivel, tres veces más criaturas; 9º nivel, cuatro veces más criaturas.",
+      "damage": null,
+      "effect": null,
+      "range": "60 pies",
+      "areaOfEffect": null,
+      "savingThrow": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "lightning_arrow",
+      "name": "Flecha relámpago",
+      "school": "Transmutación",
+      "level": 3,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 minuto (10 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Una flecha"
+      ],
+      "description": "La siguiente vez que hagas un ataque a distancia con un arma durante la duración del conjuro, el arma o munición se convierte en un rayo. Haz el ataque normalmente. El objetivo recibe 4d8 de daño por rayo en lugar del daño normal del arma. Si el ataque falla, el objetivo recibe la mitad del daño por rayo.",
+      "upcast": "Cuando lanzas este conjuro usando una ranura de conjuro de 4º nivel o superior, el daño aumenta en 1d8 por cada nivel de ranura por encima del 3º.",
+      "damage": {
+        "stat": "DAM",
+        "value": "4d8",
+        "mod": ""
+      },
+      "effect": "Rayo",
+      "range": "Alcance del arma",
+      "areaOfEffect": null,
+      "savingThrow": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "fire_bolt",
+      "name": "Rayo de fuego",
+      "school": "Evocación",
+      "level": 0,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Instantáneo",
+      "concentration": false,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": null,
+      "description": "Lanzas un rayo de fuego a una criatura o objeto dentro del alcance. Haz un ataque a distancia con conjuro contra el objetivo. Si impactas, el objetivo recibe 1d10 de daño por fuego.",
+      "damage": {
+        "stat": "DAM",
+        "value": "1d10",
+        "mod": ""
+      },
+      "effect": "Fuego",
+      "range": "120 pies",
+      "areaOfEffect": null,
+      "savingThrow": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "mage_hand",
+      "name": "Mano de mago",
+      "school": "Conjuración",
+      "level": 0,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "1 minuto (10 turnos)",
+      "concentration": false,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": null,
+      "description": "Una mano espectral flotante aparece en un punto que elijas dentro del alcance. La mano dura mientras el conjuro permanezca activo o hasta que la disipes como acción.",
+      "damage": null,
+      "effect": "Utilidad",
+      "range": "30 pies",
+      "areaOfEffect": null,
+      "savingThrow": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "magic_missile",
+      "name": "Proyectil mágico",
+      "school": "Evocación",
+      "level": 1,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Instantáneo",
+      "concentration": false,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": null,
+      "description": "Creas tres dardos brillantes de energía mística. Cada dardo impacta a una criatura de tu elección que puedas ver dentro del alcance. Un dardo inflige 1d4+1 de daño por fuerza.",
+      "damage": {
+        "stat": "DAM",
+        "value": "1d4",
+        "mod": "1"
+      },
+      "effect": "Fuerza",
+      "range": "120 pies",
+      "areaOfEffect": null,
+      "savingThrow": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "shield",
+      "name": "Escudo",
+      "school": "Abjuración",
+      "level": 1,
+      "ritual": false,
+      "castingTime": "1 reacción",
+      "duration": "1 turno (1 turno)",
+      "concentration": false,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": null,
+      "description": "Una barrera invisible de fuerza mágica aparece y te protege. Hasta el inicio de tu próximo turno, tienes +5 a la CA, incluyendo contra el ataque que activó el conjuro, y no recibes daño del conjuro proyectil mágico.",
+      "damage": {
+        "stat": "CA",
+        "value": "+5",
+        "mod": ""
+      },
+      "effect": "Protección",
+      "range": "Personal",
+      "areaOfEffect": null,
+      "savingThrow": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "cure_wounds",
+      "name": "Curar heridas",
+      "school": "Evocación",
+      "level": 1,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Instantáneo",
+      "concentration": false,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": null,
+      "description": "Una criatura que toques recupera una cantidad de puntos de golpe igual a 1d8 + tu modificador de característica de conjuro. Este conjuro no tiene efecto sobre no muertos o constructos.",
+      "damage": {
+        "stat": "HP",
+        "value": "1d8",
+        "mod": "mod"
+      },
+      "effect": "Curación",
+      "range": "Toque",
+      "areaOfEffect": null,
+      "savingThrow": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "misty_step",
+      "name": "Paso brumoso",
+      "school": "Conjuración",
+      "level": 2,
+      "ritual": false,
+      "castingTime": "1 acción bonus",
+      "duration": "Instantáneo",
+      "concentration": false,
+      "components": [
+        "V"
+      ],
+      "materials": null,
+      "description": "Te teletransportas brevemente al reino de las hadas y apareces en el espacio que elijas que puedas ver dentro del alcance.",
+      "damage": null,
+      "effect": "Teletransporte",
+      "range": "30 pies",
+      "areaOfEffect": null,
+      "savingThrow": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "fireball",
+      "name": "Bola de fuego",
+      "school": "Evocación",
+      "level": 3,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Instantáneo",
+      "concentration": false,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Una pequeña bola de guano de murciélago y azufre"
+      ],
+      "description": "Una brillante racha de fuego sale de tu dedo hacia un punto que elijas dentro del alcance y luego estalla con un estruendo sordo. Cada criatura en una esfera de 20 pies de radio centrada en ese punto debe hacer una tirada de salvación de Destreza.",
+      "damage": {
+        "stat": "DAM",
+        "value": "8d6",
+        "mod": ""
+      },
+      "effect": "Fuego",
+      "range": "150 pies",
+      "areaOfEffect": "Esfera de 20 pies de radio",
+      "savingThrow": {
+        "type": "Destreza",
+        "dc": 14,
+        "effect": "Mitad de daño"
+      },
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "counterspell",
+      "name": "Contraconjuro",
+      "school": "Abjuración",
+      "level": 3,
+      "ritual": false,
+      "castingTime": "1 reacción",
+      "duration": "Instantáneo",
+      "concentration": false,
+      "components": [
+        "S"
+      ],
+      "materials": null,
+      "description": "Intentas interrumpir una criatura en el proceso de lanzar un conjuro. Si la criatura está lanzando un conjuro de nivel 3 o inferior, su conjuro falla y no tiene efecto.",
+      "damage": null,
+      "effect": "Interrupción",
+      "range": "60 pies",
+      "areaOfEffect": null,
+      "savingThrow": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "jump",
+      "name": "Salto",
+      "school": "Transmutación",
+      "level": 1,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "1 minuto (10 turnos)",
+      "concentration": false,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Una pata de saltamontes"
+      ],
+      "description": "Tocas a una criatura. La distancia máxima de salto de la criatura se triplica hasta que el conjuro termine.",
+      "damage": null,
+      "effect": "Mejora de salto",
+      "range": "Toque",
+      "areaOfEffect": null,
+      "savingThrow": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "mage_armor",
+      "name": "Armadura de mago",
+      "school": "Abjuración",
+      "level": 1,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "8 horas (4800 turnos)",
+      "concentration": false,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Un trozo de cuero curtido"
+      ],
+      "description": "Tocas a una criatura voluntaria que no lleve armadura. La CA base de la criatura se convierte en 13 + su modificador de Destreza. El conjuro termina si la criatura se quita la armadura o si disipas el conjuro como acción.",
+      "damage": {
+        "stat": "CA",
+        "value": "13",
+        "mod": "DES"
+      },
+      "effect": "Protección",
+      "range": "Toque",
+      "areaOfEffect": null,
+      "savingThrow": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "detect_magic",
+      "name": "Detectar magia",
+      "school": "Adivinación",
+      "level": 1,
+      "ritual": true,
+      "castingTime": "1 acción",
+      "duration": "10 minutos (100 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": null,
+      "description": "Por la duración, sientes la presencia de magia dentro de 30 pies de ti. Si sientes magia de esta manera, puedes usar tu acción para ver una tenue aura alrededor de cualquier criatura u objeto visible en el área que porte magia, y aprendes su escuela de magia, si la tiene.",
+      "damage": null,
+      "effect": "Detección de magia",
+      "range": "30 pies",
+      "areaOfEffect": "Esfera de 30 pies",
+      "savingThrow": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "bulls_strength",
+      "name": "Fuerza de toro",
+      "school": "Transmutación",
+      "level": 2,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "1 hora (600 turnos)",
+      "concentration": false,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Pelo o excremento de toro"
+      ],
+      "description": "Tocas a una criatura voluntaria. Por la duración, la puntuación de Fuerza de la criatura se convierte en 19 si no es ya 19 o superior. El conjuro no tiene efecto sobre no muertos o constructos.",
+      "damage": {
+        "stat": "FUE",
+        "value": "19",
+        "mod": ""
+      },
+      "effect": "Modificación de estadística",
+      "range": "Toque",
+      "areaOfEffect": null,
+      "savingThrow": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "cats_grace",
+      "name": "Agilidad de gato",
+      "school": "Transmutación",
+      "level": 2,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "1 hora (600 turnos)",
+      "concentration": false,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Pelo de gato"
+      ],
+      "description": "Tocas a una criatura voluntaria. Por la duración, la puntuación de Destreza de la criatura se convierte en 19 si no es ya 19 o superior. El conjuro no tiene efecto sobre no muertos o constructos.",
+      "damage": {
+        "stat": "DES",
+        "value": "19",
+        "mod": ""
+      },
+      "effect": "Modificación de estadística",
+      "range": "Toque",
+      "areaOfEffect": null,
+      "savingThrow": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "ray_of_frost",
+      "name": "Rayo de escarcha",
+      "school": "Evocación",
+      "level": 0,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Instantáneo",
+      "concentration": false,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": null,
+      "description": "Un rayo helado de luz azulada sale de tu mano hacia una criatura dentro del alcance. Haz un ataque a distancia de conjuro. Si impactas, el objetivo recibe daño de frío y su velocidad se reduce en 10 pies hasta el inicio de tu próximo turno.",
+      "damage": {
+        "stat": "DAM",
+        "value": "1d8",
+        "mod": ""
+      },
+      "effect": "Frío",
+      "range": "60 pies",
+      "areaOfEffect": null,
+      "savingThrow": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "shocking_grasp",
+      "name": "Toque chocante",
+      "school": "Evocación",
+      "level": 0,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Instantáneo",
+      "concentration": false,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": null,
+      "description": "Descargas electricidad a través de tu toque. Haz un ataque de conjuro cuerpo a cuerpo. Si impactas, el objetivo recibe daño por rayo y no puede realizar reacciones hasta el inicio de tu próximo turno.",
+      "damage": {
+        "stat": "DAM",
+        "value": "1d8",
+        "mod": ""
+      },
+      "effect": "Rayo",
+      "range": "Toque",
+      "areaOfEffect": null,
+      "savingThrow": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "prestidigitation",
+      "name": "Prestidigitación",
+      "school": "Transmutación",
+      "level": 0,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "1 hora (600 turnos)",
+      "concentration": false,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": null,
+      "description": "Este conjuro es un truco mágico menor que los novatos usan para practicar. Creas uno de los siguientes efectos mágicos dentro del alcance: creas un efecto sensorial instantáneo e inofensivo, enciendes o apagas una vela, una antorcha o una pequeña hoguera, limpias o ensucias un objeto de no más de 1 pie cúbico, enfrias, calientas o condimentas hasta 1 pie cúbico de material no vivo por 1 hora, haces que aparezca un color, una pequeña marca o un símbolo en un objeto o superficie por 1 hora, o creas un nonatato o un ruido no musical que se origina desde un punto que elijas dentro del alcance. Si lanzas este conjuro varias veces, puedes tener hasta tres de sus efectos no instantáneos activos a la vez, y puedes disipar tal efecto como acción.",
+      "damage": null,
+      "effect": "Utilidad",
+      "range": "10 pies",
+      "areaOfEffect": null,
+      "savingThrow": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "minor_illusion",
+      "name": "Ilusión menor",
+      "school": "Ilusión",
+      "level": 0,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "1 minuto (10 turnos)",
+      "concentration": false,
+      "components": [
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Un pedacito de lana"
+      ],
+      "description": "Creas una imagen o sonido de un objeto que aparece dentro del alcance y dura por la duración. La ilusión también termina si disipas el conjuro como acción o si lanzas este conjuro de nuevo.",
+      "damage": null,
+      "effect": "Ilusión",
+      "range": "30 pies",
+      "areaOfEffect": null,
+      "savingThrow": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "faerie_fire",
+      "name": "Rayo de luna",
+      "school": "Evocación",
+      "level": 1,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 minuto (10 turnos)",
+      "concentration": true,
+      "components": [
+        "V"
+      ],
+      "materials": null,
+      "description": "Cada objeto en un cubo de 20 pies dentro del alcance es bañado en una luz multicolor. Cualquier cosa en el área emite una luz tenue en un radio de 10 pies. Cualquier criatura en el área cuando lanzas el conjuro también es bañada en esta luz si falla una tirada de salvación de Destreza. Por la duración, los objetos y criaturas afectados emiten una luz tenue en un radio de 10 pies, y los ataques contra las criaturas afectadas tienen ventaja si el atacante puede verlas, y las criaturas afectadas no pueden beneficiarse de invisibilidad.",
+      "damage": null,
+      "effect": "Iluminación y ventaja",
+      "range": "60 pies",
+      "areaOfEffect": "Cubo de 20 pies",
+      "savingThrow": {
+        "type": "Destreza",
+        "dc": 13,
+        "effect": "No afectado"
+      },
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "darkness",
+      "name": "Oscuridad",
+      "school": "Evocación",
+      "level": 2,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 10 minutos (100 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "M"
+      ],
+      "materials": [
+        "Pelo de murciélago o una gota de brea"
+      ],
+      "description": "Magia oscura llena una esfera de 15 pies de radio centrada en un punto dentro del alcance. La oscuridad se extiende alrededor de las esquinas. Una criatura con visión en la oscuridad no puede ver a través de esta oscuridad, y la luz no mágica no puede iluminarla. Si el punto que eliges está en un objeto que estás sosteniendo o que no está siendo usado o llevado por nadie, la oscuridad emana del objeto y se mueve con él. Completamente cubrir la fuente de la oscuridad con un objeto opaco (como un cuenco o un casco) bloquea la oscuridad. Si cualquier parte de esta área de oscuridad se superpone con un área de luz creada por un conjuro de nivel 2 o inferior, el conjuro que creó la luz es disipado.",
+      "damage": null,
+      "effect": "Oscuridad mágica",
+      "range": "60 pies",
+      "areaOfEffect": "Esfera de 15 pies de radio",
+      "savingThrow": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "feather_fall",
+      "name": "Caída de pluma",
+      "school": "Transmutación",
+      "level": 1,
+      "ritual": false,
+      "castingTime": "1 reacción",
+      "duration": "1 minuto (10 turnos)",
+      "concentration": false,
+      "components": [
+        "V",
+        "M"
+      ],
+      "materials": [
+        "Una pequeña pluma o plumón"
+      ],
+      "description": "Elige hasta cinco criaturas que caigan dentro del alcance. La velocidad de caída de una criatura se reduce a 60 pies por ronda hasta que el conjuro termine. Si la criatura aterriza antes de que el conjuro termine, no recibe daño por la caída y puede aterrizar de pie, y el conjuro termina para esa criatura.",
+      "damage": null,
+      "effect": "Reducción de daño por caída",
+      "range": "60 pies",
+      "areaOfEffect": null,
+      "savingThrow": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "levitate",
+      "name": "Levitación",
+      "school": "Transmutación",
+      "level": 1,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 10 minutos (100 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Una pequeña correa de cuero o un brazalete de cobre con un zafiro engastado"
+      ],
+      "description": "Una criatura u objeto de tu elección que puedas ver dentro del alcance se eleva verticalmente hasta 20 pies y permanece suspendido ahí por la duración. El conjuro puede levitar un objetivo que pese hasta 500 libras. Un objetivo no consciente es un objeto.",
+      "damage": null,
+      "effect": "Suspensión aérea",
+      "range": "60 pies",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": "Constitucion",
+        "dc": 15,
+        "effect": "No afectado"
+      },
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "floating_disc",
+      "name": "Disco flotante",
+      "school": "Conjuración",
+      "level": 1,
+      "ritual": true,
+      "castingTime": "1 acción",
+      "duration": "1 hora (600 turnos)",
+      "concentration": false,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Una gota de mercurio"
+      ],
+      "description": "Este conjuro crea un disco circular, horizontal de fuerza pura de 3 pies de diámetro y 1 pulgada de grosor, que flota a 3 pies sobre el suelo en un espacio desocupado de tu elección que puedas ver dentro del alcance. El disco permanece por la duración y puede sostener hasta 500 libras. Si se coloca más peso sobre él, el conjuro falla y todo lo que estaba sobre el disco cae al suelo.",
+      "damage": null,
+      "effect": "Plataforma flotante",
+      "range": "30 pies",
+      "areaOfEffect": null,
+      "savingThrow": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "expeditious_retreat",
+      "name": "Retirada expeditiva",
+      "school": "Transmutación",
+      "level": 1,
+      "ritual": false,
+      "castingTime": "1 acción bonus",
+      "duration": "Concentración, hasta 10 minutos (100 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": null,
+      "description": "Esta magia te permite moverte a una velocidad extraordinaria. Cuando lanzas este conjuro y luego como acción bonus en cada uno de tus turnos hasta que el conjuro termine, puedes tomar la acción de Carrera.",
+      "damage": {
+        "stat": "MOV",
+        "value": "+10",
+        "mod": ""
+      },
+      "effect": "Aumento de velocidad",
+      "range": "Personal",
+      "areaOfEffect": null,
+      "savingThrow": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "zephyr_strike",
+      "name": "Golpe de céfiro",
+      "school": "Transmutación",
+      "level": 1,
+      "ritual": false,
+      "castingTime": "1 acción bonus",
+      "duration": "Concentración, hasta 1 minuto (10 turnos)",
+      "concentration": true,
+      "components": [
+        "V"
+      ],
+      "materials": null,
+      "description": "Te mueves como el viento. Hasta que el conjuro termine, tu movimiento no provoca ataques de oportunidad. Una vez antes de que el conjuro termine, puedes dar ventaja a una tirada de ataque con arma que hagas. Si ese ataque impacta, el objetivo recibe 1d8 de daño adicional de fuerza y, si es de tamaño Grande o menor, debe hacer una tirada de salvación de Fuerza o ser empujado 10 pies lejos de ti.",
+      "damage": null,
+      "effect": "Movimiento mejorado",
+      "range": "Personal",
+      "areaOfEffect": null,
+      "savingThrow": null,
+      "source": "Xanathar's Guide to Everything"
+    },
+    {
+      "id": "air_walk",
+      "name": "Caminar por el aire",
+      "school": "Transmutación",
+      "level": 1,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 10 minutos (100 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": null,
+      "description": "Este conjuro te permite caminar sobre el aire como si fuera terreno sólido. Mientras el conjuro esté activo, puedes moverte por el aire como si tuvieras una velocidad de vuelo igual a tu velocidad de caminata. Puedes subir o bajar verticalmente hasta la mitad de tu velocidad de vuelo durante tu movimiento. Si terminas tu movimiento en el aire, caes a menos que algo te sostenga.",
+      "damage": {
+        "stat": "MOV",
+        "value": "walking",
+        "mod": "flying"
+      },
+      "effect": "Vuelo temporal",
+      "range": "Personal",
+      "areaOfEffect": null,
+      "savingThrow": null,
+      "source": "Manual del Jugador (adaptado)"
+    },
+    {
+      "id": "fire_burst",
+      "name": "Descarga de fuego",
+      "school": "Evocación",
+      "level": 0,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Instantáneo",
+      "concentration": false,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": [],
+      "description": "Lanzas una descarga concentrada de llamas contra una criatura u objeto dentro del alcance. Haz un ataque de conjuro a distancia contra el objetivo. Si impactas, el objetivo recibe 1d10 de daño por fuego.",
+      "upcast": null,
+      "damage": {
+        "stat": "DAM",
+        "value": "1d10",
+        "mod": ""
+      },
+      "effect": "Fuego",
+      "range": "120 pies",
+      "areaOfEffect": null,
+      "savingThrow": null,
+      "source": "Conjuro personalizado"
+    },
+    {
+      "id": "eldritch_burst",
+      "name": "Descarga sobrenatural",
+      "school": "Evocación",
+      "level": 0,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Instantáneo",
+      "concentration": false,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": [],
+      "description": "Libera un rayo de energía sobrenatural hacia una criatura dentro del alcance. Haz un ataque de conjuro a distancia contra el objetivo. Si impactas, el objetivo recibe 1d10 de daño de fuerza.",
+      "upcast": null,
+      "damage": {
+        "stat": "DAM",
+        "value": "1d10",
+        "mod": ""
+      },
+      "effect": "Fuerza",
+      "range": "120 pies",
+      "areaOfEffect": null,
+      "savingThrow": null,
+      "source": "Conjuro personalizado"
+    },
+    {
+      "id": "blade_guard",
+      "name": "Guardia de cuchillas",
+      "school": "Abjuración",
+      "level": 0,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "1 asalto (1 turno)",
+      "concentration": false,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": [],
+      "description": "Extiendes tu mano y trazas un símbolo de protección sobre el aire. Hasta el final de tu próximo turno, tienes resistencia al daño contundente, perforante y cortante infligido por ataques de arma.",
+      "upcast": null,
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Protección",
+      "range": "Personal",
+      "areaOfEffect": null,
+      "savingThrow": null,
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "thunderwave",
+      "name": "Onda atronadora",
+      "school": "Evocación",
+      "level": 1,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Instantáneo",
+      "concentration": false,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": [],
+      "description": "Una onda de fuerza atronadora se origina en ti. Cada criatura en un cubo de 15 pies que se origina en ti debe hacer una tirada de salvación de Constitución. Si falla, la criatura recibe 2d8 de daño de trueno y es empujada 10 pies lejos de ti. Si tiene éxito en la tirada, recibe la mitad del daño y no es empujada. Además, los objetos no sujetos en el área son empujados 10 pies lejos de ti y el estruendo se oye a 300 pies.",
+      "upcast": "Cuando lanzas este conjuro utilizando un espacio de conjuro de nivel 2 o superior, el daño aumenta en 1d8 por cada nivel por encima de 1.",
+      "damage": {
+        "stat": "DAM",
+        "value": "2d8",
+        "mod": ""
+      },
+      "effect": "Trueno",
+      "range": "Personal",
+      "areaOfEffect": "Cubo de 15 pies",
+      "savingThrow": {
+        "type": "Constitución",
+        "dc": null,
+        "effect": "Mitad de daño y sin empuje"
+      },
+      "source": "Manual del Jugador"
+    }
+  ]
+}

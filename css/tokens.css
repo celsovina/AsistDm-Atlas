@@ -1,0 +1,28 @@
+/* Atlas — tokens (alineados al modal de conjuros / create-character) */
+
+:root {
+  --atlas-bg: #1a1a1a;
+  --atlas-shell: #2a2e36;
+  --atlas-panel: #1a202c;
+  --atlas-surface: #2d3748;
+  --atlas-border: #4a5568;
+  --atlas-border-soft: #3a3f47;
+
+  --atlas-text: #e2e8f0;
+  --atlas-text-muted: #a0aec0;
+  --atlas-text-dim: #9ca3af;
+  --atlas-placeholder: #a0aec0;
+
+  --atlas-accent: #4299e1;
+  --atlas-accent-soft: rgba(59, 130, 246, 0.14);
+  --atlas-accent-border: rgba(59, 130, 246, 0.9);
+  --atlas-hover-row: rgba(46, 60, 82, 0.2);
+
+  --atlas-sidebar-w: 56px;
+  --atlas-radius: 6px;
+  --atlas-radius-lg: 12px;
+  --atlas-font: "Segoe UI", system-ui, -apple-system, sans-serif;
+
+  --atlas-safe-bottom: env(safe-area-inset-bottom, 0px);
+  --atlas-mobile-bp: 768px;
+}

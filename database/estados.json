@@ -1,0 +1,303 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "lastUpdated": "2024-12-19",
+    "description": "Estados y condiciones oficiales para D&D 5e - Manual del Jugador (2018)",
+    "totalEstados": 16
+  },
+  "estados": [
+    {
+      "id": "agarrado",
+      "name": "Agarrado",
+      "tipo": "control",
+      "efecto_id": null,
+      "descripcion": "La velocidad de una criatura agarrada es 0 y no puede aumentar por encima de ese valor.",
+      "efectos": [
+        "Velocidad = 0",
+        "No puede aumentar su velocidad",
+        "Termina si quien agarra queda incapacitado",
+        "Termina si algún efecto aleja a la criatura de quien la tiene agarrada"
+      ],
+      "duracion": "variable",
+      "cura": "condicion_especifica",
+      "color": "blue",
+      "icono": "fa-star",
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "inmovilizado",
+      "name": "Inmovilizado",
+      "tipo": "control",
+      "efecto_id": null,
+      "descripcion": "La velocidad de una criatura inmovilizada es 0 y no puede aumentar por encima de este valor.",
+      "efectos": [
+        "Velocidad = 0",
+        "No puede aumentar su velocidad",
+        "Las tiradas de ataque contra la criatura tienen ventaja",
+        "Las tiradas de ataque hechas por la criatura tienen desventaja",
+        "Desventaja en las tiradas de salvación de Destreza"
+      ],
+      "duracion": "variable",
+      "cura": "condicion_especifica",
+      "color": "blue",
+      "icono": "fa-lock",
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "asustado",
+      "name": "Asustado",
+      "tipo": "control",
+      "efecto_id": "psiquico",
+      "descripcion": "Una criatura asustada tiene desventaja en las pruebas de característica y tiradas de ataque mientras pueda ver a la fuente de su miedo.",
+      "efectos": [
+        "Desventaja en pruebas de característica",
+        "Desventaja en tiradas de ataque",
+        "No puede acercarse a la fuente de su miedo voluntariamente"
+      ],
+      "duracion": "variable",
+      "cura": "remove_fear",
+      "color": "blue",
+      "icono": "fa-exclamation-triangle",
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "aturdido",
+      "name": "Aturdido",
+      "tipo": "control",
+      "efecto_id": "trueno",
+      "descripcion": "Una criatura aturdida está incapacitada, no puede moverse y solo es capaz de hablar con voz entrecortada.",
+      "efectos": [
+        "Está incapacitado",
+        "No puede moverse",
+        "Solo puede hablar con voz entrecortada",
+        "Falla automáticamente las tiradas de salvación de Fuerza y Destreza",
+        "Las tiradas de ataque contra la criatura tienen ventaja"
+      ],
+      "duracion": "variable",
+      "cura": "tiempo",
+      "color": "blue",
+      "icono": "fa-face-dizzy",
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "cegado",
+      "name": "Cegado",
+      "tipo": "control",
+      "efecto_id": "radiante",
+      "descripcion": "Una criatura cegada no puede ver y falla automáticamente todas las pruebas de característica que requieran la vista.",
+      "efectos": [
+        "No puede ver",
+        "Falla automáticamente todas las pruebas de característica que requieran la vista",
+        "Las tiradas de ataque contra la criatura tienen ventaja",
+        "Las tiradas de ataque hechas por la criatura tienen desventaja"
+      ],
+      "duracion": "variable",
+      "cura": "lesser_restoration",
+      "color": "blue",
+      "icono": "fa-eye-slash",
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "derribado",
+      "name": "Derribado",
+      "tipo": "control",
+      "efecto_id": null,
+      "descripcion": "Una criatura derribada solo podrá moverse arrastrándose, a no ser que se levante, terminando así el estado.",
+      "efectos": [
+        "Solo puede moverse arrastrándose",
+        "Desventaja en las tiradas de ataque",
+        "Las tiradas de ataque contra la criatura tienen ventaja si el atacante está a 5 pies o menos",
+        "Las tiradas de ataque contra la criatura tienen desventaja si el atacante está a más distancia"
+      ],
+      "duracion": "variable",
+      "cura": "accion_levantarse",
+      "color": "blue",
+      "icono": "fa-circle",
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "ensordecido",
+      "name": "Ensordecido",
+      "tipo": "control",
+      "efecto_id": "trueno",
+      "descripcion": "Una criatura ensordecida no puede oír y falla automáticamente todas las pruebas de característica que requieran el oído.",
+      "efectos": [
+        "No puede oír",
+        "Falla automáticamente todas las pruebas de característica que requieran el oído"
+      ],
+      "duracion": "variable",
+      "cura": "lesser_restoration",
+      "color": "blue",
+      "icono": "fa-square",
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "envenenado",
+      "name": "Envenenado",
+      "tipo": "damage",
+      "efecto_id": "veneno",
+      "descripcion": "Una criatura envenenada tiene desventaja en las tiradas de ataque y las pruebas de característica.",
+      "efectos": [
+        "Desventaja en las tiradas de ataque",
+        "Desventaja en las pruebas de característica"
+      ],
+      "duracion": "variable",
+      "cura": "lesser_restoration",
+      "color": "blue",
+      "icono": "fa-skull",
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "cansancio",
+      "name": "Cansancio",
+      "tipo": "damage",
+      "efecto_id": null,
+      "descripcion": "El cansancio se mide usando seis niveles. Cada nivel tiene consecuencias específicas.",
+      "efectos": [
+        "Nivel 1: Desventaja en pruebas de característica",
+        "Nivel 2: Velocidad reducida a la mitad",
+        "Nivel 3: Desventaja en tiradas de ataque y de salvación",
+        "Nivel 4: Puntos de golpe máximos reducidos a la mitad",
+        "Nivel 5: Velocidad reducida a 0",
+        "Nivel 6: Muerte"
+      ],
+      "duracion": "variable",
+      "cura": "descanso_largo",
+      "color": "blue",
+      "icono": "fa-bed",
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "hechizado",
+      "name": "Hechizado",
+      "tipo": "control",
+      "efecto_id": "psiquico",
+      "descripcion": "Una criatura hechizada no puede atacar ni elegir como objetivo de efectos dañinos o mágicos a quien la hechizó.",
+      "efectos": [
+        "No puede atacar a quien la hechizó",
+        "No puede elegir como objetivo de efectos dañinos o mágicos a quien la hechizó",
+        "Quien hechizó a la criatura tiene ventaja en las pruebas de característica para interaccionar socialmente con ella"
+      ],
+      "duracion": "variable",
+      "cura": "remove_charm",
+      "color": "blue",
+      "icono": "fa-heart",
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "incapacitado",
+      "name": "Incapacitado",
+      "tipo": "control",
+      "efecto_id": null,
+      "descripcion": "Una criatura incapacitada no puede llevar a cabo acciones ni reacciones.",
+      "efectos": [
+        "No puede llevar a cabo acciones",
+        "No puede llevar a cabo reacciones"
+      ],
+      "duracion": "variable",
+      "cura": "condicion_especifica",
+      "color": "blue",
+      "icono": "fa-ban",
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "inconsciente",
+      "name": "Inconsciente",
+      "tipo": "control",
+      "efecto_id": null,
+      "descripcion": "Una criatura inconsciente está incapacitada, no puede moverse o hablar y no es consciente de su entorno.",
+      "efectos": [
+        "Está incapacitado",
+        "No puede moverse o hablar",
+        "No es consciente de su entorno",
+        "Deja caer cualquier cosa que esté sujetando y cae derribada",
+        "Falla automáticamente las tiradas de salvación de Fuerza y Destreza",
+        "Las tiradas de ataque contra la criatura tienen ventaja",
+        "Todos los ataques que impacten a la criatura son críticos si el atacante está a 5 pies o menos"
+      ],
+      "duracion": "variable",
+      "cura": "daño_o_accion",
+      "color": "blue",
+      "icono": "fa-moon",
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "invisible",
+      "name": "Invisible",
+      "tipo": "beneficio",
+      "efecto_id": null,
+      "descripcion": "Es imposible ver a una criatura invisible sin la ayuda de magia o sentidos especiales.",
+      "efectos": [
+        "Es imposible verla sin la ayuda de magia o sentidos especiales",
+        "Se considera que se encuentra en una zona muy oscura para esconderse",
+        "Las tiradas de ataque contra la criatura tienen desventaja",
+        "Las tiradas de ataque hechas por la criatura tienen ventaja"
+      ],
+      "duracion": "variable",
+      "cura": "tiempo",
+      "color": "blue",
+      "icono": "fa-eye-slash",
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "paralizado",
+      "name": "Paralizado",
+      "tipo": "control",
+      "efecto_id": "relampago",
+      "descripcion": "Una criatura paralizada está incapacitada y no puede moverse ni hablar.",
+      "efectos": [
+        "Está incapacitado",
+        "No puede moverse ni hablar",
+        "Falla automáticamente las tiradas de salvación de Fuerza y Destreza",
+        "Las tiradas de ataque contra la criatura tienen ventaja",
+        "Todos los ataques que impacten a la criatura son críticos si el atacante está a 5 pies o menos"
+      ],
+      "duracion": "variable",
+      "cura": "greater_restoration",
+      "color": "blue",
+      "icono": "fa-bolt",
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "petrificado",
+      "name": "Petrificado",
+      "tipo": "control",
+      "efecto_id": null,
+      "descripcion": "Una criatura petrificada es transformada, junto con todos los objetos no mágicos que lleve encima o tenga puestos, en una sustancia sólida e inanimada.",
+      "efectos": [
+        "Transformada en sustancia sólida e inanimada (normalmente piedra)",
+        "Su peso se multiplica por diez",
+        "Deja de envejecer",
+        "Está incapacitada",
+        "No puede moverse o hablar",
+        "No es consciente de su entorno",
+        "Falla automáticamente las tiradas de salvación de Fuerza y Destreza",
+        "Las tiradas de ataque contra la criatura tienen ventaja",
+        "Tiene resistencia contra todo el daño",
+        "Es inmune al veneno y la enfermedad"
+      ],
+      "duracion": "permanente",
+      "cura": "greater_restoration",
+      "color": "gray",
+      "icono": "fa-mountain",
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "concentracion",
+      "name": "Concentración",
+      "tipo": "neutral",
+      "efecto_id": null,
+      "descripcion": "El personaje está concentrándose en un hechizo.",
+      "efectos": [
+        "Debe mantener concentración",
+        "Si recibe daño, debe hacer tirada de salvación de Constitución",
+        "Si falla, pierde el hechizo"
+      ],
+      "duracion": "variable",
+      "cura": "interrupcion",
+      "color": "purple",
+      "icono": "fa-eye",
+      "fuente": "Manual del Jugador"
+    }
+  ]
+}

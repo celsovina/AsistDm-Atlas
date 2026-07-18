@@ -1,0 +1,133 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "lastUpdated": "2024-12-19",
+    "description": "Base de datos de trasfondos para D&D 5e - Manual del Jugador (2018)",
+    "totalTrasfondos": 0
+  },
+  "trasfondos": [
+    {
+      "id": "ladron_traicionado",
+      "nombre": "Ladrón Traicionado",
+      "descripcion": "Una vez fuiste parte de una banda de ladrones, pero tus compañeros te traicionaron y te dejaron por muerto. Ahora buscas venganza contra aquellos que te traicionaron.",
+      "rasgos": [
+        {
+          "id": "contactos_del_crimen",
+          "nombre": "Contactos del Crimen",
+          "descripcion": "Conoces a varios criminales y puedes obtener información sobre actividades ilegales en la ciudad."
+        },
+        {
+          "id": "instinto_de_supervivencia",
+          "nombre": "Instinto de Supervivencia",
+          "descripcion": "Tienes ventaja en tiradas de Sabiduría (Percepción) para detectar emboscadas y trampas."
+        }
+      ],
+      "equipamiento": [
+        {"item_id": "daga", "cantidad": 1},
+        {"item_id": "cuerda_seda", "cantidad": 1},
+        {"item_id": "kit_herrero", "cantidad": 1}
+      ],
+      "monedas": {"po": 10},
+      "competencias": ["sigilo", "juego_de_manos"],
+      "idiomas": ["thieves_cant"],
+      "herramientas": ["herramientas_ladron"],
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "noble",
+      "nombre": "Noble",
+      "descripcion": "Naciste en una familia noble y has crecido con privilegios y responsabilidades que vienen con el título.",
+      "rasgos": [
+        {
+          "id": "posicion_de_privilegio",
+          "nombre": "Posición de Privilegio",
+          "descripcion": "Gracias a tu noble nacimiento, la gente está dispuesta a creer lo mejor de ti. Puedes obtener audiencia con nobles locales y eres bienvenido en la alta sociedad."
+        }
+      ],
+      "equipamiento": [
+        {"item_id": "espada_corta", "cantidad": 1},
+        {"item_id": "pack_erudito", "cantidad": 1}
+      ],
+      "monedas": {"po": 25},
+      "competencias": ["historia", "persuasion"],
+      "idiomas": ["comun", "elfico"],
+      "herramientas": [],
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "soldado",
+      "nombre": "Soldado",
+      "descripcion": "Desde que tienes memoria, la guerra ha sido tu vida. Te entrenaste desde pequeño en el uso de armas y armaduras, aprendiendo técnicas básicas de supervivencia, entre ellas cómo salir con vida del campo de batalla. Puede que formaras parte de las fuerzas regulares de un ejército nacional, de una compañía mercenaria o de una milicia local que ganó protagonismo durante una guerra reciente.",
+      "rasgos": [
+        {
+          "id": "rango_militar",
+          "nombre": "Rango militar",
+          "descripcion": "Posees un rango de tus días como militar. Aquellos leales a tu antigua organización reconocen tu autoridad e influencia y obedecerán tus órdenes si son de rango inferior. Puedes hacer uso de tu posición para ejercer tu influencia sobre otros soldados, así como solicitar equipo y caballos de forma temporal. Probablemente también puedas entrar en campamentos y fortalezas en los que tu rango sea reconocido."
+        }
+      ],
+      "equipamiento": [
+        {"item_id": "insignia_rango_militar", "cantidad": 1},
+        {"item_id": "trofeo_enemigo", "cantidad": 1},
+        {"item_id": "juego_dados_o_cartas", "cantidad": 1},
+        {"item_id": "ropa_comun", "cantidad": 1},
+        {"item_id": "bolsa_monedas", "cantidad": 1}
+      ],
+      "monedas": {"po": 10},
+      "competencias": ["atletismo", "intimidacion"],
+      "idiomas": [],
+      "herramientas": ["juego_azar_a_eleccion", "vehiculos_terrestres"],
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "Test",
+      "nombre": "test",
+      "descripcion": "Has pasado años en el ejército, luchando en batallas y sirviendo a tu nación o señor.",
+      "rasgos": [
+        {
+          "id": "rango_militar",
+          "nombre": "Rango Militar",
+          "descripcion": "Tienes un rango militar que te otorga ciertos privilegios y responsabilidades."
+        }
+      ],
+      "equipamiento": [
+        {"item_id": "espada_larga", "cantidad": 1},
+        {"item_id": "armadura_escamas", "cantidad": 1},
+        {"item_id": "pack_explorador", "cantidad": 1}
+      ],
+      "competencias": ["atletismo", "intimidacion"],
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "forjador_de_luz",
+      "nombre": "Forjador de Luz",
+      "descripcion": "Eres un soldado draenei imbuido por la Luz, entrenado en la disciplina militar de Templeluz y al servicio de la Vindicaar. Tu vida combina fe, combate y estudio arcano, y ves cada batalla como parte de una misión divina.",
+      "rasgos": [
+        {
+          "id": "guia_de_los_naaru",
+          "nombre": "Guía de los Naaru",
+          "descripcion": "Una vez por descanso largo, cuando fallas una tirada importante (como un ataque, una tirada de habilidad o una tirada de salvación), puedes repetirla, aceptando el nuevo resultado. Esta guía refleja la intervención sutil de los Naaru sobre tu destino."
+        },
+        {
+          "id": "prestigio_de_luz",
+          "nombre": "Prestigio de la Luz",
+          "descripcion": "Tu historial como forjador de luz te otorga respeto entre templos, draenei y órdenes consagradas a la Luz. En contextos apropiados, es más fácil obtener audiencia, ayuda logística básica o un trato favorable por parte de estas organizaciones."
+        }
+      ],
+      "equipamiento": [
+        {"item_id": "herramientas_de_escriba", "cantidad": 1}
+      ],
+      "monedas": {
+        "po": 0
+      },
+      "competencias": [
+        "conocimiento_arcano",
+        "atletismo"
+      ],
+      "idiomas": [],
+      "herramientas": [
+        "herramientas_de_escriba"
+      ],
+      "fuente": "Trasfondo personalizado"
+    }
+  ]
+}

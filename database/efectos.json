@@ -1,0 +1,114 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "lastUpdated": "2024-12-19",
+    "description": "Tipos de daño para D&D 5e - Manual del Jugador (2018)",
+    "totalEfectos": 13
+  },
+  "efectos": [
+    {
+      "id": "acido",
+      "nombre": "Ácido",
+      "tipo": "daño",
+      "descripcion": "El aliento corrosivo de un dragón negro y las enzimas disolventes secretadas por un pudin negro causan daño de ácido.",
+      "color": "green",
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "contundente",
+      "nombre": "Contundente",
+      "tipo": "daño",
+      "descripcion": "Los impactos contra objetos romos, como golpes de un martillo, caídas o ser estrangulado causan daño contundente.",
+      "color": "brown",
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "cortante",
+      "nombre": "Cortante",
+      "tipo": "daño",
+      "descripcion": "Las espadas, hachas y garras de los monstruos causan daño cortante.",
+      "color": "silver",
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "frio",
+      "nombre": "Frío",
+      "tipo": "daño",
+      "descripcion": "El frío infernal que irradia de la lanza de un diablo de hielo y el gélido aliento de un dragón blanco causan daño de frío.",
+      "color": "lightblue",
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "fuego",
+      "nombre": "Fuego",
+      "tipo": "daño",
+      "descripcion": "El abrasador aliento de un dragón rojo y los muchos conjuros que crean llamas causan daño de fuego.",
+      "color": "orange",
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "fuerza",
+      "nombre": "Fuerza",
+      "tipo": "daño",
+      "descripcion": "La fuerza es energía mágica en su forma más pura, enfocada a hacer daño. La mayoría de efectos que causan daño de fuerza son conjuros, como proyectil mágico y arma espiritual.",
+      "color": "gray",
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "necrotico",
+      "nombre": "Necrótico",
+      "tipo": "daño",
+      "descripcion": "El daño necrótico, causado por ciertos muertos vivientes y conjuros como toque helado, consume la materia e incluso el alma.",
+      "color": "darkgreen",
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "perforante",
+      "nombre": "Perforante",
+      "tipo": "daño",
+      "descripcion": "Los ataques que pinchan o empalan, como los de las lanzas o los mordiscos de muchos monstruos, causan daño perforante.",
+      "color": "darkred",
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "psiquico",
+      "nombre": "Psíquico",
+      "tipo": "daño",
+      "descripcion": "Las habilidades mentales, como la descarga psiónica de un azotamentes, causan daño psíquico.",
+      "color": "pink",
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "radiante",
+      "nombre": "Radiante",
+      "tipo": "daño",
+      "descripcion": "El daño radiante, como el que causan el conjuro golpe flamígero de los clérigos o el arma aniquiladora de un ángel, abrasa la piel como el fuego y sobrecarga el espíritu de poder.",
+      "color": "gold",
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "relampago",
+      "nombre": "Relámpago",
+      "tipo": "daño",
+      "descripcion": "Un conjuro de relámpago y el aliento de un dragón azul causan daño de relámpago.",
+      "color": "yellow",
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "trueno",
+      "nombre": "Trueno",
+      "tipo": "daño",
+      "descripcion": "Los estallidos sonoros ensordecedores, como el causado por el conjuro ola atronadora, causan daño de trueno.",
+      "color": "purple",
+      "fuente": "Manual del Jugador"
+    },
+    {
+      "id": "veneno",
+      "nombre": "Veneno",
+      "tipo": "daño",
+      "descripcion": "Aguijones venenosos y el gas tóxico exhalado por un dragón verde causan daño de veneno.",
+      "color": "darkgreen",
+      "fuente": "Manual del Jugador"
+    }
+  ]
+}

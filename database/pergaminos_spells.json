@@ -1,0 +1,100 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "lastUpdated": "2024-12-19",
+    "description": "Mapeo de pergaminos con conjuros específicos - D&D 5e",
+    "totalPergaminos": 0
+  },
+  "pergaminosConjuros": {
+    "pergamino_fuego": {
+      "pergamino": "pergamino_fuego",
+      "conjuro": "fireball",
+      "nivel": 3,
+      "requisitos": {
+        "conjuros": {
+          "nivelMinimo": 3
+        },
+        "caracteristica": {
+          "tipo": "inteligencia",
+          "valor": 12,
+          "operador": ">="
+        }
+      }
+    },
+    "pergamino_escudo": {
+      "pergamino": "pergamino_escudo",
+      "conjuro": "shield",
+      "nivel": 1,
+      "requisitos": {
+        "conjuros": {
+          "nivelMinimo": 1
+        },
+        "caracteristica": {
+          "tipo": "inteligencia",
+          "valor": 10,
+          "operador": ">="
+        }
+      }
+    },
+    "pergamino_tormenta_espinas": {
+      "pergamino": "pergamino_tormenta_espinas",
+      "conjuro": "spike_growth",
+      "nivel": 2,
+      "requisitos": {
+        "conjuros": {
+          "nivelMinimo": 2
+        },
+        "caracteristica": {
+          "tipo": "sabiduria",
+          "valor": 11,
+          "operador": ">="
+        }
+      }
+    },
+    "pergamino_crecimiento_espinoso": {
+      "pergamino": "pergamino_crecimiento_espinoso",
+      "conjuro": "spike_stones",
+      "nivel": 4,
+      "requisitos": {
+        "conjuros": {
+          "nivelMinimo": 4
+        },
+        "caracteristica": {
+          "tipo": "sabiduria",
+          "valor": 13,
+          "operador": ">="
+        }
+      }
+    },
+    "pergamino_conjurar_animales": {
+      "pergamino": "pergamino_conjurar_animales",
+      "conjuro": "conjure_animals",
+      "nivel": 3,
+      "requisitos": {
+        "conjuros": {
+          "nivelMinimo": 3
+        },
+        "caracteristica": {
+          "tipo": "sabiduria",
+          "valor": 12,
+          "operador": ">="
+        }
+      }
+    },
+    "pergamino_flecha_relampago": {
+      "pergamino": "pergamino_flecha_relampago",
+      "conjuro": "lightning_arrow",
+      "nivel": 3,
+      "requisitos": {
+        "conjuros": {
+          "nivelMinimo": 3
+        },
+        "caracteristica": {
+          "tipo": "sabiduria",
+          "valor": 12,
+          "operador": ">="
+        }
+      }
+    }
+  }
+}

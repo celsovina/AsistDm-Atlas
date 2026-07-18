@@ -1,0 +1,538 @@
+{
+  "metadata": {
+    "version": "2.0",
+    "lastUpdated": "2024-12-19",
+    "description": "Base de datos de razas para D&D 5e - Estructura Universal de Mecánicas",
+    "changes": [
+      "Keys en inglés para evitar problemas con caracteres especiales",
+      "Valores en español para contenido descriptivo",
+      "Estructura universal de mecanica para todos los rasgos",
+      "Movimiento explícito por tipo (walking, climbing, swimming, flying)",
+      "Separación clara: rasgos base vs rasgos de variante"
+    ]
+  },
+  "races": [
+    {
+      "id": "dragonborn",
+      "name": "Dragoniano",
+      "description": "Los dragonianos son humanoides con rasgos draconicos. Son orgullosos, independientes y a menudo se consideran superiores a otras razas.",
+      "age": "Jóvenes a los 3 años, viven hasta 80 años",
+      "size": "Mediano",
+      "movement": {
+        "walking": 30
+      },
+      "ability_bonuses": {
+        "strength": 2,
+        "charisma": 1
+      },
+      "traits": [
+        {
+          "id": "vision_en_la_oscuridad",
+          "trait_type": "racial_base",
+          "name": "Visión en la oscuridad",
+          "description": "Puedes ver en la oscuridad hasta 60 pies como si fuera luz tenue, y en luz tenue como si fuera luz brillante. No puedes discernir colores en la oscuridad, solo tonos de gris.",
+          "mechanics": {
+            "type": "vision",
+            "target": "senses",
+            "operation": "add",
+            "value": "darkvision",
+            "condition": null,
+            "metadata": {
+              "range": 60,
+              "vision_type": "darkvision"
+            }
+          }
+        }
+      ],
+      "variants": [
+        {
+          "id": "dragonborn_red",
+          "name": "Dragoniano Rojo",
+          "color": "Rojo",
+          "alignment": ["Caótico Bueno", "Caótico Neutral", "Caótico Malvado"],
+          "ability_bonuses": {},
+          "traits": [
+            {
+          "id": "ataque_de_aliento",
+              "trait_type": "racial_variant",
+              "name": "Ataque de aliento",
+              "description": "Puedes usar tu acción para exhalar energía destructiva. Todas las criaturas en un área deben hacer una tirada de salvación.",
+              "uses": "1 por descanso corto o largo",
+              "mechanics": {
+                "type": "attack",
+                "target": "action",
+                "operation": "special_ability",
+                "value": null,
+                "condition": null,
+                "metadata": {
+                  "shape": "line",
+                  "distance": 15,
+                  "damage": "2d6",
+                  "damage_type": "fire",
+                  "saving_throw": {
+                    "ability": "dexterity",
+                    "dc": 8,
+                    "on_success": "half_damage",
+                    "on_failure": "full_damage"
+                  }
+                }
+              }
+            },
+            {
+          "id": "resistencia_al_dano",
+              "trait_type": "racial_variant",
+              "name": "Resistencia al daño",
+              "description": "Tienes resistencia al tipo de daño de tu ancestro draconico",
+              "mechanics": {
+                "type": "resistance",
+                "target": "damage",
+                "operation": "add",
+                "value": ["fire"],
+                "condition": null,
+                "metadata": {}
+              }
+            }
+          ]
+        },
+        {
+          "id": "dragonborn_blue",
+          "name": "Dragoniano Azul",
+          "color": "Azul",
+          "alignment": ["Legal Bueno", "Legal Neutral", "Legal Malvado"],
+          "ability_bonuses": {},
+          "traits": [
+            {
+          "id": "ataque_de_aliento",
+              "trait_type": "racial_variant",
+              "name": "Ataque de aliento",
+              "description": "Puedes usar tu acción para exhalar energía destructiva. Todas las criaturas en un área deben hacer una tirada de salvación.",
+              "uses": "1 por descanso corto o largo",
+              "mechanics": {
+                "type": "attack",
+                "target": "action",
+                "operation": "special_ability",
+                "value": null,
+                "condition": null,
+                "metadata": {
+                  "shape": "line",
+                  "distance": 30,
+                  "damage": "2d6",
+                  "damage_type": "lightning",
+                  "saving_throw": {
+                    "ability": "dexterity",
+                    "dc": 8,
+                    "on_success": "half_damage",
+                    "on_failure": "full_damage"
+                  }
+                }
+              }
+            },
+            {
+          "id": "resistencia_al_dano",
+              "trait_type": "racial_variant",
+              "name": "Resistencia al daño",
+              "description": "Tienes resistencia al tipo de daño de tu ancestro draconico",
+              "mechanics": {
+                "type": "resistance",
+                "target": "damage",
+                "operation": "add",
+                "value": ["lightning"],
+                "condition": null,
+                "metadata": {}
+              }
+            }
+          ]
+        },
+        {
+          "id": "dragonborn_green",
+          "name": "Dragoniano Verde",
+          "color": "Verde",
+          "alignment": ["Neutral Bueno", "Neutral", "Neutral Malvado"],
+          "ability_bonuses": {},
+          "traits": [
+            {
+          "id": "ataque_de_aliento",
+              "trait_type": "racial_variant",
+              "name": "Ataque de aliento",
+              "description": "Puedes usar tu acción para exhalar energía destructiva. Todas las criaturas en un área deben hacer una tirada de salvación.",
+              "uses": "1 por descanso corto o largo",
+              "mechanics": {
+                "type": "attack",
+                "target": "action",
+                "operation": "special_ability",
+                "value": null,
+                "condition": null,
+                "metadata": {
+                  "shape": "cone",
+                  "distance": 15,
+                  "damage": "2d6",
+                  "damage_type": "poison",
+                  "saving_throw": {
+                    "ability": "constitution",
+                    "dc": 8,
+                    "on_success": "half_damage",
+                    "on_failure": "full_damage"
+                  }
+                }
+              }
+            },
+            {
+          "id": "resistencia_al_dano",
+              "trait_type": "racial_variant",
+              "name": "Resistencia al daño",
+              "description": "Tienes resistencia al tipo de daño de tu ancestro draconico",
+              "mechanics": {
+                "type": "resistance",
+                "target": "damage",
+                "operation": "add",
+                "value": ["poison"],
+                "condition": null,
+                "metadata": {}
+              }
+            }
+          ]
+        },
+        {
+          "id": "dragonborn_bronze",
+          "name": "Dragoniano de Bronce",
+          "color": "Bronce",
+          "alignment": ["Legal Bueno", "Neutral Bueno"],
+          "ability_bonuses": {},
+          "traits": [
+            {
+          "id": "ataque_de_aliento",
+              "trait_type": "racial_variant",
+              "name": "Ataque de aliento",
+              "description": "Puedes usar tu acción para exhalar energía destructiva. Todas las criaturas en un área deben hacer una tirada de salvación.",
+              "uses": "1 por descanso corto o largo",
+              "mechanics": {
+                "type": "attack",
+                "target": "action",
+                "operation": "special_ability",
+                "value": null,
+                "condition": null,
+                "metadata": {
+                  "shape": "line",
+                  "distance": 30,
+                  "damage": "2d6",
+                  "damage_type": "lightning",
+                  "saving_throw": {
+                    "ability": "dexterity",
+                    "dc": 8,
+                    "on_success": "half_damage",
+                    "on_failure": "full_damage"
+                  }
+                }
+              }
+            },
+            {
+          "id": "resistencia_al_dano",
+              "trait_type": "racial_variant",
+              "name": "Resistencia al daño",
+              "description": "Tienes resistencia al tipo de daño de tu ancestro draconico",
+              "mechanics": {
+                "type": "resistance",
+                "target": "damage",
+                "operation": "add",
+                "value": ["lightning"],
+                "condition": null,
+                "metadata": {}
+              }
+            }
+          ]
+        }
+      ],
+      "proficiencies": {
+        "languages": ["Común", "Draconico"],
+        "tools": [],
+        "weapons": [],
+        "armor": []
+      },
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "elf",
+      "name": "Elfo",
+      "description": "Los elfos son una raza mágica de gracia sobrenatural, viviendo en el mundo pero no completamente parte de él. Viven en lugares de belleza etérea, en medio de antiguos bosques o en torres plateadas brillantes.",
+      "age": "Aunque alcanzan la madurez física aproximadamente a la misma edad que los humanos, la comprensión elfa de la adultez va más allá del crecimiento físico para abarcar la experiencia mundial. Un elfo típicamente reclama la adultez y un nombre adulto alrededor de los 100 años y puede vivir hasta 750 años.",
+      "size": "Mediano",
+      "movement": {
+        "walking": 30
+      },
+      "ability_bonuses": {
+        "dexterity": 2
+      },
+      "traits": [
+        {
+          "id": "vision_en_la_oscuridad",
+          "trait_type": "racial_base",
+          "name": "Visión en la oscuridad",
+          "description": "Puedes ver en la oscuridad hasta 60 pies como si fuera luz tenue, y en luz tenue como si fuera luz brillante. No puedes discernir colores en la oscuridad, solo tonos de gris.",
+          "mechanics": {
+            "type": "vision",
+            "target": "senses",
+            "operation": "add",
+            "value": "darkvision",
+            "condition": null,
+            "metadata": {
+              "range": 60,
+              "vision_type": "darkvision"
+            }
+          }
+        },
+        {
+          "id": "inmunidad_al_encantamiento",
+          "trait_type": "racial_base",
+          "name": "Inmunidad al encantamiento",
+          "description": "Tienes ventaja en las tiradas de salvación contra ser encantado, y la magia no puede ponerte a dormir.",
+          "mechanics": {
+            "type": "modifier",
+            "target": "saving_throw",
+            "operation": "advantage",
+            "value": null,
+            "condition": "vs_charmed",
+            "metadata": {
+              "additional": "immune_magic_sleep"
+            }
+          }
+        },
+        {
+          "id": "trance",
+          "trait_type": "racial_base",
+          "name": "Trance",
+          "description": "Los elfos no necesitan dormir. En lugar de eso, meditan profundamente, permaneciendo semiconscientes, durante 4 horas al día. (La palabra común para tal meditación es \"trance\".) Mientras meditas, puedes soñar después de una moda; tales sueños son en realidad ejercicios mentales que se han convertido en reflejos a través de años de práctica. Después de descansar de esta manera, obtienes el mismo beneficio que un humano obtiene de 8 horas de sueño.",
+          "mechanics": {
+            "type": "passive",
+            "target": null,
+            "operation": null,
+            "value": null,
+            "condition": null,
+            "metadata": {
+              "mechanic_description": "Reemplaza 8 horas de sueño por 4 horas de trance"
+            }
+          }
+        }
+      ],
+      "variants": [
+        {
+          "id": "high_elf",
+          "name": "Alto Elfo",
+          "alignment": ["Legal Bueno", "Legal Neutral", "Neutral Bueno"],
+          "ability_bonuses": {
+            "intelligence": 1
+          },
+          "abilities": [
+            {
+              "quantity": 2,
+              "proficiencies": ["investigacion", "conocimiento_arcano", "historia", "perspicacia", "percepcion"]
+            }
+          ],
+          "traits": [
+            {
+              "id": "conjuro_racial",
+              "trait_type": "racial_variant",
+              "name": "Conjuro racial",
+              "description": "Conoces un truco de la lista de conjuros de mago. Inteligencia es tu característica de lanzamiento de conjuros para él.",
+              "mechanics": {
+                "type": "spell",
+                "target": "spell_list",
+                "operation": "add",
+                "value": ["prestidigitation"],
+                "condition": null,
+                "metadata": {
+                  "spellcasting_ability": "intelligence",
+                  "uses": "at_will"
+                }
+              }
+            },
+            {
+              "id": "competencia_con_armas",
+              "trait_type": "racial_variant",
+              "name": "Competencia con armas",
+              "description": "Tienes competencia con la espada larga, la espada corta, el arco corto y el arco largo.",
+              "mechanics": {
+                "type": "proficiency",
+                "target": "weapons",
+                "operation": "add",
+                "value": ["longsword", "shortsword", "shortbow", "longbow"],
+                "condition": null,
+                "metadata": {}
+              }
+            }
+          ]
+        },
+        {
+          "id": "wood_elf",
+          "name": "Elfo del Bosque",
+          "alignment": ["Neutral Bueno", "Neutral", "Caótico Bueno"],
+          "ability_bonuses": {
+            "wisdom": 1
+          },
+          "abilities": [
+            {
+              "quantity": 1,
+              "proficiencies": []
+            }
+          ],
+          "traits": [
+            {
+              "id": "velocidad_de_elfo",
+              "trait_type": "racial_variant",
+              "name": "Velocidad de elfo",
+              "description": "Tu velocidad base de caminar aumenta a 35 pies.",
+              "mechanics": {
+                "type": "modifier",
+                "target": "movement.walking",
+                "operation": "set",
+                "value": 5,
+                "condition": null,
+                "metadata": {}
+              }
+            },
+            {
+              "id": "mascarada_de_la_naturaleza",
+              "trait_type": "racial_variant",
+              "name": "Mascarada de la naturaleza",
+              "description": "Puedes intentar ocultarte incluso cuando solo estás ligeramente oculto por el follaje, la lluvia intensa, la nieve caída, la niebla natural u otros fenómenos naturales.",
+              "mechanics": {
+                "type": "ability",
+                "target": "skill.stealth",
+                "operation": "special_condition",
+                "value": null,
+                "condition": "lightly_obscured_nature",
+                "metadata": {
+                  "mechanic_description": "Permite ocultarse con cobertura ligera natural"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "dark_elf",
+          "name": "Elfo Oscuro (Drow)",
+          "alignment": ["Neutral Malvado", "Caótico Malvado"],
+          "ability_bonuses": {
+            "charisma": 1
+          },
+          "traits": [
+            {
+              "id": "conjuros_raciales",
+              "trait_type": "racial_variant",
+              "name": "Conjuros raciales",
+              "description": "Conoces el truco prestidigitación. Cuando alcances el nivel 3, puedes lanzar el conjuro de 1er nivel rayo de luna una vez por día. Cuando alcances el nivel 5, puedes lanzar el conjuro de 2º nivel oscuridad una vez por día. Carisma es tu característica de lanzamiento de conjuros para estos conjuros.",
+              "mechanics": {
+                "type": "spell",
+                "target": "spell_list",
+                "operation": "add",
+                "value": ["prestidigitation", "faerie_fire", "darkness"],
+                "condition": null,
+                "metadata": {
+                  "spellcasting_ability": "charisma",
+                  "level_progression": {
+                    "1": ["prestidigitation"],
+                    "3": ["faerie_fire"],
+                    "5": ["darkness"]
+                  },
+                  "uses": "1_per_day"
+                }
+              }
+            },
+            {
+              "id": "competencia_con_armas",
+              "trait_type": "racial_variant",
+              "name": "Competencia con armas",
+              "description": "Tienes competencia con la espada corta, la ballesta de mano, el látigo y la red.",
+              "mechanics": {
+                "type": "proficiency",
+                "target": "weapons",
+                "operation": "add",
+                "value": ["shortsword", "hand_crossbow", "whip", "net"],
+                "condition": null,
+                "metadata": {}
+              }
+            }
+          ]
+        }
+      ],
+      "proficiencies": {
+        "languages": ["Común", "Élfico"],
+        "tools": [],
+        "weapons": ["longsword", "shortbow", "longbow"],
+        "armor": []
+      },
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "human",
+      "name": "Humano",
+      "description": "Los humanos son la raza más adaptable y ambiciosa entre los pueblos comunes. Son diversos en sus gustos, moralidad, costumbres y hábitos. Su corta vida los impulsa a lograr tanto como puedan en los años que tienen, o a aventurarse para asegurar que su nombre sea recordado después de su muerte.",
+      "age": "Los humanos alcanzan la madurez alrededor de los 20 años y rara vez viven más de un siglo.",
+      "size": "Mediano",
+      "movement": {
+        "walking": 30
+      },
+      "ability_bonuses": {
+        "strength": 1,
+        "dexterity": 1,
+        "constitution": 1,
+        "intelligence": 1,
+        "wisdom": 1,
+        "charisma": 1
+      },
+      "traits": [],
+      "variants": [],
+      "proficiencies": {
+        "languages": ["Común"],
+        "tools": [],
+        "weapons": [],
+        "armor": []
+      },
+      "source": "Manual del Jugador"
+    },
+    {
+      "id": "aarakocra",
+      "name": "Aarakocra",
+      "description": "Los aarakocra son una raza de humanoides aviares que habitan en las cumbres de las montañas más altas. Con plumas que cubren sus cuerpos y alas poderosas, son criaturas de los cielos que rara vez descienden a las tierras bajas. Valoran la libertad y la independencia, y su sociedad está organizada en clanes que compiten entre sí en vuelos acrobáticos y hazañas aéreas.",
+      "age": "Los aarakocra alcanzan la madurez a los 3 años. Comparados con los humanos, los aarakocra no viven mucho. Rara vez superan los 30 años.",
+      "size": "Mediano",
+      "movement": {
+        "walking": 25,
+        "flying": 50
+      },
+      "ability_bonuses": {
+        "dexterity": 2,
+        "wisdom": 1
+      },
+      "traits": [
+        {
+          "id": "garras",
+          "trait_type": "racial_base",
+          "name": "Garras",
+          "description": "Tus garras son armas naturales, que puedes usar para hacer ataques sin armas. Si impactas con ellas, infliges daño cortante igual a 1d4 + tu modificador de Fuerza.",
+          "mechanics": {
+            "type": "attack",
+            "target": "weapon",
+            "operation": "add",
+            "value": null,
+            "condition": null,
+            "metadata": {
+              "weapon_type": "natural_weapon",
+              "damage": "1d4",
+              "damage_type": "slashing",
+              "ability_modifier": "strength",
+              "name": "Garras"
+            }
+          }
+        }
+      ],
+      "variants": [],
+      "proficiencies": {
+        "languages": ["Común", "Aarakocra", "Auran"],
+        "tools": [],
+        "weapons": [],
+        "armor": []
+      },
+      "source": "Elemental Evil Player's Companion"
+    }
+  ]
+}
