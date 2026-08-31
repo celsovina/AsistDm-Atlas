@@ -2700,7 +2700,13 @@
           "level": 2,
           "id": "forma_salvaje",
           "name": "Forma salvaje",
-          "description": "Puedes usar tu acción para transformarte mágicamente en una bestia que hayas visto antes. Tus opciones de forma, la duración y otras limitaciones dependen de tu nivel de druida, y el número de usos viene dado por la progresión de Forma salvaje. Recuperas todos los usos tras un descanso corto o largo.",
+          "description": "Puedes usar tu acción para transformarte mágicamente en una bestia que hayas visto antes. Tus opciones de forma, la duración y otras limitaciones dependen de tu nivel de druida, y el número de usos viene dado por la progresión de Forma salvaje. Recuperas todos los usos tras un descanso corto o largo.
+          Tu nivel de druida determina aquellas bestias en las que te puedes transformar. Por ejemplo, a nivel 2 puedes adoptar la forma de cualquier bestia que tenga un valor de desafío de 1/4 o menos y que no posea velocidades nadando ni volando. </br> 
+          | Nivel | VD max. |    Limitaciones    |    Ejemplo     | </br>
+          |   2   |   1/4   |  Sin nadar / volar |     Lobo       | </br>
+          |   4   |   1/2   |     Sin volar      |   Cocodrilo    | </br>
+          |   8   |    1    |         -          | Aguila gigante | </br>
+          ",
           "type": "accion",
           "uses": null,
           "canSelected": false,
