@@ -28,6 +28,13 @@ export const LEVEL_OPTIONS = [
   { id: '9', label: 'Nivel 9' },
 ];
 
+export const SOURCE_OPTIONS = [
+  { id: 'Manual del Jugador', label: 'Manual del Jugador' },
+  { id: 'Caldero de Tasha', label: 'Caldero de Tasha' },
+  { id: 'Guia de Xanathar', label: 'Guía de Xanathar' },
+  { id: 'Dragones de Fizban', label: 'Dragones de Fizban' },
+];
+
 export const SCHOOL_OPTIONS = [
   { id: 'Abjuración', label: 'Abjuración' },
   { id: 'Adivinación', label: 'Adivinación' },
@@ -73,9 +80,9 @@ export const DURATION_OPTIONS = [
 export const RANGE_OPTIONS = [
   { id: 'personal', label: 'Personal' },
   { id: 'toque', label: 'Toque' },
-  { id: 'corto', label: 'Corto (≤ 30 pies)' },
-  { id: 'medio', label: 'Medio (31–90 pies)' },
-  { id: 'largo', label: 'Largo (≥ 120 pies)' },
+  { id: 'corto', label: 'Corto (≤ 30 ft)' },
+  { id: 'medio', label: 'Medio (31–90 ft)' },
+  { id: 'largo', label: 'Largo (≥ 120 ft)' },
   { id: 'especial', label: 'Especial / ilimitado' },
 ];
 
@@ -92,6 +99,7 @@ export function createEmptyFilters() {
   return {
     levels: new Set(),
     classes: new Set(),
+    sources: new Set(),
     schools: new Set(),
     flags: new Set(),
     cast: new Set(),
@@ -165,7 +173,7 @@ function normalizeDurationBucket(duration) {
 }
 
 function parseFeet(range) {
-  const m = (range || '').match(/(\d+)\s*pies/i);
+  const m = (range || '').match(/(\d+)\s*(?:ft|pies)\b/i);
   return m ? Number(m[1]) : null;
 }
 
@@ -251,6 +259,8 @@ export function applySpellFilters(spells, filters, classSpellIds = null) {
       if (!inClass) return false;
     }
 
+    if (!matchesGroup(filters.sources, [spell.source])) return false;
+
     if (!matchesGroup(filters.schools, [spell.school])) return false;
 
     if (filters.flags.has('concentration') && !spell.concentration) return false;
@@ -296,6 +306,7 @@ export function applySpellFilters(spells, filters, classSpellIds = null) {
 export const FILTER_SECTIONS = [
   { key: 'levels', title: 'Nivel', options: LEVEL_OPTIONS },
   { key: 'classes', title: 'Clase', options: CLASS_OPTIONS },
+  { key: 'sources', title: 'Origen', options: SOURCE_OPTIONS },
   { key: 'schools', title: 'Escuela', options: SCHOOL_OPTIONS },
   { key: 'flags', title: 'Propiedades', options: FLAG_OPTIONS },
   { key: 'saves', title: 'Salvación', options: SAVE_OPTIONS },

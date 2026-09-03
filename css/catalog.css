@@ -166,11 +166,96 @@
 }
 
 .spells-description-content p {
-  margin: 0;
+  margin: 0 0 10px;
   color: #cbd5e0;
   font-size: 13px;
   line-height: 1.55;
-  white-space: pre-wrap;
+}
+
+.spells-description-content > *:last-child {
+  margin-bottom: 0;
+}
+
+.spells-description-content strong {
+  color: #e2e8f0;
+  font-weight: 600;
+}
+
+/* Encabezado de sección dentro de la descripción (p. ej. "Acciones") */
+.spells-description-content .spells-md-h {
+  margin: 14px 0 6px;
+  color: #94a3b8;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.spells-description-content .spells-md-h strong {
+  color: inherit;
+  font-weight: inherit;
+}
+
+.spells-description-content .spells-md-list {
+  margin: 0 0 10px;
+  display: grid;
+  gap: 5px;
+}
+
+.spells-description-content ul.spells-md-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.spells-description-content ol.spells-md-list {
+  list-style: decimal;
+  padding-left: 20px;
+}
+
+.spells-description-content .spells-md-list li {
+  color: #cbd5e0;
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+
+.spells-description-content ul.spells-md-list li strong:first-child,
+.spells-description-content ul.spells-md-list li em:first-child {
+  color: #e2e8f0;
+}
+
+.spells-description-content .spells-md-hr {
+  margin: 14px 0;
+  border: 0;
+  border-top: 1px solid #2d3748;
+}
+
+/* Tabla (perfil de criatura invocada, etc.) */
+.spells-description-content .spells-md-tablewrap {
+  margin: 8px 0 12px;
+  overflow-x: auto;
+}
+
+.spells-description-content .spells-md-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 12px;
+  color: #cbd5e0;
+}
+
+.spells-description-content .spells-md-table th,
+.spells-description-content .spells-md-table td {
+  border: 1px solid #2d3748;
+  padding: 4px 8px;
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.4;
+}
+
+.spells-description-content .spells-md-table th {
+  background: rgba(148, 163, 184, 0.1);
+  color: #a0aec0;
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 .spells-description-content .spells-upcast {

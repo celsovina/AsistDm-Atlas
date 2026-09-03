@@ -1,3 +1,5 @@
+import { renderSpellMarkdown } from './markdown.js';
+
 /**
  * Render compartido del detalle de un conjuro.
  * @param {HTMLElement} pane
@@ -50,7 +52,7 @@ export function renderSpellDetail(pane, spell) {
         ${metaRows.map(([k, v]) => `<li><strong>${k}:</strong> ${v}</li>`).join('')}
       </ul>
       <div class="spells-description-content">
-        <p>${spell.description || '—'}</p>
+        ${renderSpellMarkdown(spell.description)}
         ${upcastHtml}
       </div>
     </div>

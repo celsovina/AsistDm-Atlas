@@ -11,6 +11,7 @@ import {
   applySpellFilters,
 } from './spells/filter-model.js';
 import { createFilterPanel } from './spells/filter-panel.js';
+import { renderSpellMarkdown } from './spells/markdown.js';
 import { createClassesPage } from './classes/class-page.js';
 import { createHomePage } from './home/home-page.js';
 import { createWalletPage } from './wallet/wallet-page.js';
@@ -166,7 +167,7 @@ function renderDetail(spell) {
         ${metaRows.map(([k, v]) => `<li><strong>${k}:</strong> ${v}</li>`).join('')}
       </ul>
       <div class="spells-description-content">
-        <p>${spell.description || '—'}</p>
+        ${renderSpellMarkdown(spell.description)}
         ${upcastHtml}
       </div>
     </div>

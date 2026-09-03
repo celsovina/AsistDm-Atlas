@@ -23,7 +23,20 @@
         "poison_spray",
         "fire_burst",
         "acid_splash",
-        "chill_touch"
+        "chill_touch",
+        "lightning_lure",
+        "sword_burst",
+        "booming_blade",
+        "green_flame_blade",
+        "mind_sliver",
+        "frostbite",
+        "control_flames",
+        "create_bonfire",
+        "infestation",
+        "mold_earth",
+        "thunderclap",
+        "gust",
+        "shape_water"
       ],
       "level1": [
         "mage_armor",
@@ -45,7 +58,13 @@
         "color_spray",
         "jump",
         "false_life",
-        "witch_bolt"
+        "witch_bolt",
+        "tashas_caustic_brew",
+        "absorb_elements",
+        "catapult",
+        "ice_knife",
+        "chaos_bolt",
+        "earth_tremor"
       ],
       "level2": [
         "enlarge_reduce",
@@ -71,7 +90,20 @@
         "web",
         "spider_climb",
         "see_invisibility",
-        "darkvision"
+        "darkvision",
+        "mind_whip",
+        "aganazzars_scorcher",
+        "maximilians_earthen_grasp",
+        "dragons_breath",
+        "earthbind",
+        "dust_devil",
+        "mind_spike",
+        "shadow_blade",
+        "pyrotechnics",
+        "snilloccs_snowball_swarm",
+        "warding_wind",
+        "rimes_binding_ice",
+        "nathairs_mischief"
       ],
       "level3": [
         "haste",
@@ -93,7 +125,17 @@
         "lightning_bolt",
         "water_breathing",
         "sleet_storm",
-        "fly"
+        "fly",
+        "intellect_fortress",
+        "enemies_abound",
+        "flame_arrows",
+        "melfs_minute_meteors",
+        "wall_of_water",
+        "tidal_wave",
+        "thunder_step",
+        "catnap",
+        "erupting_earth",
+        "ashardalons_stride"
       ],
       "level4": [
         "confusion",
@@ -105,7 +147,13 @@
         "stoneskin",
         "polymorph",
         "dimension_door",
-        "ice_storm"
+        "ice_storm",
+        "watery_sphere",
+        "storm_sphere",
+        "vitriolic_sphere",
+        "charm_monster",
+        "sickening_radiance",
+        "raulothims_psychic_lance"
       ],
       "level5": [
         "animate_objects",
@@ -118,7 +166,15 @@
         "cloudkill",
         "insect_plague",
         "seeming",
-        "telekinesis"
+        "telekinesis",
+        "control_winds",
+        "skill_empowerment",
+        "enervation",
+        "synaptic_static",
+        "immolation",
+        "wall_of_light",
+        "far_step",
+        "summon_draconic_spirit"
       ],
       "level6": [
         "chain_lightning",
@@ -130,7 +186,15 @@
         "sunbeam",
         "move_earth",
         "mass_suggestion",
-        "true_seeing"
+        "true_seeing",
+        "tashas_otherworldly_guise",
+        "scatter",
+        "investiture_of_ice",
+        "investiture_of_flame",
+        "investiture_of_stone",
+        "investiture_of_wind",
+        "mental_prison",
+        "fizbans_platinum_shield"
       ],
       "level7": [
         "delayed_blast_fireball",
@@ -140,21 +204,30 @@
         "reverse_gravity",
         "prismatic_spray",
         "teleport",
-        "fire_storm"
+        "fire_storm",
+        "dream_of_the_blue_veil",
+        "crown_of_stars",
+        "power_word_pain",
+        "whirlwind",
+        "draconic_transformation"
       ],
       "level8": [
         "dominate_monster",
         "sunburst",
         "incendiary_cloud",
         "power_word_stun",
-        "earthquake"
+        "earthquake",
+        "abi_dalzims_horrid_wilting"
       ],
       "level9": [
         "wish",
         "time_stop",
         "power_word_kill",
         "meteor_swarm",
-        "gate"
+        "gate",
+        "blade_of_disaster",
+        "psychic_scream",
+        "mass_polymorph"
       ]
     },
     "brujo": {
@@ -167,7 +240,18 @@
         "mage_hand",
         "prestidigitation",
         "poison_spray",
-        "chill_touch"
+        "chill_touch",
+        "lightning_lure",
+        "sword_burst",
+        "booming_blade",
+        "green_flame_blade",
+        "mind_sliver",
+        "frostbite",
+        "create_bonfire",
+        "infestation",
+        "magic_stone",
+        "thunderclap",
+        "toll_the_dead"
       ],
       "level1": [
         "armor_of_agathys",
@@ -180,7 +264,8 @@
         "illusory_script",
         "protection_from_evil_and_good",
         "unseen_servant",
-        "witch_bolt"
+        "witch_bolt",
+        "cause_fear"
       ],
       "level2": [
         "cloud_of_daggers",
@@ -194,7 +279,10 @@
         "ray_of_enfeeblement",
         "shatter",
         "spider_climb",
-        "suggestion"
+        "suggestion",
+        "earthbind",
+        "mind_spike",
+        "shadow_blade"
       ],
       "level3": [
         "counterspell",
@@ -208,19 +296,41 @@
         "major_image",
         "remove_curse",
         "tongues",
-        "vampiric_touch"
+        "vampiric_touch",
+        "intellect_fortress",
+        "summon_fey",
+        "summon_shadowspawn",
+        "summon_undead",
+        "spirit_shroud",
+        "enemies_abound",
+        "summon_lesser_demons",
+        "thunder_step"
       ],
       "level4": [
         "banishment",
         "blight",
         "dimension_door",
-        "hallucinatory_terrain"
+        "hallucinatory_terrain",
+        "summon_aberration",
+        "charm_monster",
+        "summon_greater_demon",
+        "elemental_bane",
+        "sickening_radiance",
+        "shadow_of_moil",
+        "raulothims_psychic_lance"
       ],
       "level5": [
         "contact_other_plane",
         "dream",
         "hold_monster",
-        "scrying"
+        "scrying",
+        "danse_macabre",
+        "enervation",
+        "synaptic_static",
+        "negative_energy_flood",
+        "infernal_calling",
+        "wall_of_light",
+        "far_step"
       ],
       "level6": [
         "arcane_gate",
@@ -230,27 +340,42 @@
         "eyes_of_the_dark",
         "flesh_to_stone",
         "mass_suggestion",
-        "true_seeing"
+        "true_seeing",
+        "tashas_otherworldly_guise",
+        "summon_fiend",
+        "investiture_of_ice",
+        "investiture_of_flame",
+        "investiture_of_stone",
+        "investiture_of_wind",
+        "mental_prison",
+        "scatter",
+        "soul_cage"
       ],
       "level7": [
         "plane_shift",
         "forcecage",
         "finger_of_death",
-        "etherealness_short"
+        "etherealness_short",
+        "dream_of_the_blue_veil",
+        "crown_of_stars",
+        "power_word_pain"
       ],
       "level8": [
         "demiplane",
         "dominate_monster",
         "feeblemind",
         "glibness",
-        "power_word_stun"
+        "power_word_stun",
+        "maddening_darkness"
       ],
       "level9": [
         "astral_projection",
         "foresight",
         "imprisonment",
         "power_word_kill",
-        "true_polymorph"
+        "true_polymorph",
+        "blade_of_disaster",
+        "psychic_scream"
       ]
     },
     "bardo": {
@@ -265,7 +390,8 @@
         "mage_hand",
         "message",
         "prestidigitation",
-        "mending"
+        "mending",
+        "thunderclap"
       ],
       "level1": [
         "animal_friendship",
@@ -288,7 +414,8 @@
         "speak_with_animals",
         "tashas_hideous_laughter",
         "thunderwave",
-        "unseen_servant"
+        "unseen_servant",
+        "earth_tremor"
       ],
       "level2": [
         "animal_messenger",
@@ -312,7 +439,11 @@
         "shatter",
         "silence",
         "suggestion",
-        "zone_of_truth"
+        "zone_of_truth",
+        "skywrite",
+        "pyrotechnics",
+        "warding_wind",
+        "nathairs_mischief"
       ],
       "level3": [
         "bestow_curse",
@@ -330,7 +461,10 @@
         "speak_with_dead",
         "speak_with_plants",
         "stinking_cloud",
-        "tongues"
+        "tongues",
+        "intellect_fortress",
+        "enemies_abound",
+        "catnap"
       ],
       "level4": [
         "compulsion",
@@ -340,7 +474,9 @@
         "greater_invisibility",
         "hallucinatory_terrain",
         "locate_creature",
-        "polymorph"
+        "polymorph",
+        "charm_monster",
+        "raulothims_psychic_lance"
       ],
       "level5": [
         "animate_objects",
@@ -358,7 +494,9 @@
         "raise_dead",
         "scrying",
         "seeming",
-        "teleportation_circle"
+        "teleportation_circle",
+        "skill_empowerment",
+        "synaptic_static"
       ],
       "level6": [
         "eyes_of_the_dark",
@@ -379,7 +517,8 @@
         "regenerate",
         "resurrection",
         "symbol",
-        "teleport"
+        "teleport",
+        "dream_of_the_blue_veil"
       ],
       "level8": [
         "dominate_monster",
@@ -392,7 +531,9 @@
         "foresight",
         "power_word_kill",
         "power_word_heal",
-        "true_polymorph"
+        "true_polymorph",
+        "psychic_scream",
+        "mass_polymorph"
       ]
     },
     "mago": {
@@ -412,7 +553,21 @@
         "mending",
         "poison_spray",
         "acid_splash",
-        "chill_touch"
+        "chill_touch",
+        "lightning_lure",
+        "sword_burst",
+        "booming_blade",
+        "green_flame_blade",
+        "mind_sliver",
+        "frostbite",
+        "control_flames",
+        "create_bonfire",
+        "infestation",
+        "mold_earth",
+        "gust",
+        "toll_the_dead",
+        "shape_water",
+        "thunderclap"
       ],
       "level1": [
         "alarm",
@@ -444,7 +599,14 @@
         "jump",
         "unseen_servant",
         "illusory_script",
-        "longstrider"
+        "longstrider",
+        "tashas_caustic_brew",
+        "absorb_elements",
+        "catapult",
+        "cause_fear",
+        "ice_knife",
+        "earth_tremor",
+        "snare"
       ],
       "level2": [
         "knock",
@@ -480,7 +642,21 @@
         "spider_climb",
         "rope_trick",
         "see_invisibility",
-        "darkvision"
+        "darkvision",
+        "mind_whip",
+        "aganazzars_scorcher",
+        "maximilians_earthen_grasp",
+        "dragons_breath",
+        "earthbind",
+        "dust_devil",
+        "skywrite",
+        "mind_spike",
+        "shadow_blade",
+        "pyrotechnics",
+        "snilloccs_snowball_swarm",
+        "warding_wind",
+        "rimes_binding_ice",
+        "nathairs_mischief"
       ],
       "level3": [
         "haste",
@@ -511,7 +687,25 @@
         "fear",
         "vampiric_touch",
         "sleet_storm",
-        "fly"
+        "fly",
+        "intellect_fortress",
+        "summon_fey",
+        "summon_shadowspawn",
+        "summon_undead",
+        "spirit_shroud",
+        "enemies_abound",
+        "flame_arrows",
+        "summon_lesser_demons",
+        "wall_of_sand",
+        "wall_of_water",
+        "melfs_minute_meteors",
+        "tidal_wave",
+        "thunder_step",
+        "tiny_servant",
+        "catnap",
+        "erupting_earth",
+        "life_transference",
+        "ashardalons_stride"
       ],
       "level4": [
         "phantasmal_killer",
@@ -536,7 +730,18 @@
         "mordenkainens_private_sanctum",
         "evards_black_tentacles",
         "hallucinatory_terrain",
-        "ice_storm"
+        "ice_storm",
+        "summon_aberration",
+        "summon_construct",
+        "summon_elemental",
+        "watery_sphere",
+        "storm_sphere",
+        "vitriolic_sphere",
+        "charm_monster",
+        "summon_greater_demon",
+        "elemental_bane",
+        "sickening_radiance",
+        "raulothims_psychic_lance"
       ],
       "level5": [
         "modify_memory",
@@ -560,7 +765,21 @@
         "wall_of_stone",
         "cloudkill",
         "passwall",
-        "telekinesis"
+        "telekinesis",
+        "dawn",
+        "control_winds",
+        "danse_macabre",
+        "skill_empowerment",
+        "enervation",
+        "synaptic_static",
+        "steel_wind_strike",
+        "immolation",
+        "negative_energy_flood",
+        "infernal_calling",
+        "wall_of_light",
+        "far_step",
+        "transmute_rock",
+        "summon_draconic_spirit"
       ],
       "level6": [
         "ottos_irresistible_dance",
@@ -582,7 +801,19 @@
         "chain_lightning",
         "mass_suggestion",
         "magic_jar",
-        "true_seeing"
+        "true_seeing",
+        "tashas_otherworldly_guise",
+        "summon_fiend",
+        "create_homunculus",
+        "scatter",
+        "investiture_of_ice",
+        "investiture_of_flame",
+        "investiture_of_stone",
+        "investiture_of_wind",
+        "soul_cage",
+        "mental_prison",
+        "tensers_transformation",
+        "fizbans_platinum_shield"
       ],
       "level7": [
         "delayed_blast_fireball",
@@ -598,7 +829,12 @@
         "sequester",
         "prismatic_spray",
         "symbol",
-        "simulacrum"
+        "simulacrum",
+        "dream_of_the_blue_veil",
+        "crown_of_stars",
+        "power_word_pain",
+        "whirlwind",
+        "draconic_transformation"
       ],
       "level8": [
         "antipathy_sympathy",
@@ -613,7 +849,11 @@
         "power_word_stun",
         "feeblemind",
         "demiplane",
-        "telepathy"
+        "telepathy",
+        "illusory_dragon",
+        "mighty_fortress",
+        "abi_dalzims_horrid_wilting",
+        "maddening_darkness"
       ],
       "level9": [
         "shapechange",
@@ -627,7 +867,11 @@
         "foresight",
         "astral_projection",
         "meteor_swarm",
-        "weird"
+        "weird",
+        "blade_of_disaster",
+        "psychic_scream",
+        "invulnerability",
+        "mass_polymorph"
       ]
     },
     "druida": {
@@ -639,7 +883,17 @@
         "guidance",
         "mending",
         "resistance",
-        "poison_spray"
+        "poison_spray",
+        "control_flames",
+        "create_bonfire",
+        "frostbite",
+        "infestation",
+        "mold_earth",
+        "thunderclap",
+        "magic_stone",
+        "gust",
+        "primal_savagery",
+        "shape_water"
       ],
       "level1": [
         "animal_friendship",
@@ -657,7 +911,12 @@
         "purify_food_and_drink",
         "speak_with_animals",
         "thunderwave",
-        "charm_person"
+        "charm_person",
+        "absorb_elements",
+        "ice_knife",
+        "earth_tremor",
+        "snare",
+        "beast_bond"
       ],
       "level2": [
         "animal_messenger",
@@ -677,7 +936,13 @@
         "moonbeam",
         "pass_without_trace",
         "protection_from_poison",
-        "spike_growth"
+        "spike_growth",
+        "summon_beast",
+        "earthbind",
+        "dust_devil",
+        "skywrite",
+        "healing_spirit",
+        "warding_wind"
       ],
       "level3": [
         "call_lightning",
@@ -692,7 +957,12 @@
         "speak_with_plants",
         "water_breathing",
         "water_walk",
-        "wind_wall"
+        "wind_wall",
+        "summon_fey",
+        "flame_arrows",
+        "wall_of_water",
+        "tidal_wave",
+        "erupting_earth"
       ],
       "level4": [
         "blight",
@@ -710,7 +980,12 @@
         "polymorph",
         "stone_shape",
         "stoneskin",
-        "wall_of_fire"
+        "wall_of_fire",
+        "summon_elemental",
+        "watery_sphere",
+        "guardian_of_nature",
+        "charm_monster",
+        "elemental_bane"
       ],
       "level5": [
         "antilife_shell",
@@ -726,7 +1001,12 @@
         "reincarnate",
         "scrying",
         "wall_of_stone",
-        "tree_stride"
+        "tree_stride",
+        "control_winds",
+        "wrath_of_nature",
+        "transmute_rock",
+        "maelstrom",
+        "summon_draconic_spirit"
       ],
       "level6": [
         "conjure_fey",
@@ -737,14 +1017,23 @@
         "sunbeam",
         "transport_via_plants",
         "wall_of_thorns",
-        "wind_walk"
+        "wind_walk",
+        "druid_grove",
+        "primordial_ward",
+        "bones_of_the_earth",
+        "investiture_of_ice",
+        "investiture_of_flame",
+        "investiture_of_stone",
+        "investiture_of_wind"
       ],
       "level7": [
         "plane_shift",
         "mirage_arcane",
         "reverse_gravity",
         "regenerate",
-        "fire_storm"
+        "fire_storm",
+        "whirlwind",
+        "draconic_transformation"
       ],
       "level8": [
         "antipathy_sympathy",
@@ -776,7 +1065,11 @@
         "hunters_mark",
         "jump",
         "longstrider",
-        "speak_with_animals"
+        "speak_with_animals",
+        "absorb_elements",
+        "zephyr_strike",
+        "snare",
+        "beast_bond"
       ],
       "level2": [
         "animal_messenger",
@@ -791,7 +1084,9 @@
         "pass_without_trace",
         "protection_from_poison",
         "silence",
-        "spike_growth"
+        "spike_growth",
+        "summon_beast",
+        "healing_spirit"
       ],
       "level3": [
         "conjure_animals",
@@ -804,20 +1099,27 @@
         "speak_with_plants",
         "water_breathing",
         "water_walk",
-        "wind_wall"
+        "wind_wall",
+        "summon_fey",
+        "flame_arrows",
+        "ashardalons_stride"
       ],
       "level4": [
         "conjure_woodland_beings",
         "freedom_of_movement",
         "grasping_vine",
         "locate_creature",
-        "stoneskin"
+        "stoneskin",
+        "summon_elemental",
+        "guardian_of_nature"
       ],
       "level5": [
         "commune_with_nature",
         "conjure_volley",
         "swift_quiver",
-        "tree_stride"
+        "tree_stride",
+        "steel_wind_strike",
+        "wrath_of_nature"
       ]
     },
     "paladin": {
@@ -836,7 +1138,8 @@
         "heroism",
         "command",
         "protection_from_evil_and_good",
-        "purify_food_and_drink"
+        "purify_food_and_drink",
+        "ceremony"
       ],
       "level2": [
         "magic_weapon",
@@ -858,7 +1161,8 @@
         "crusaders_mantle",
         "remove_curse",
         "daylight",
-        "revivify"
+        "revivify",
+        "spirit_shroud"
       ],
       "level4": [
         "aura_of_purity",
@@ -866,7 +1170,8 @@
         "staggering_smite",
         "banishment",
         "death_ward",
-        "locate_creature"
+        "locate_creature",
+        "find_greater_steed"
       ],
       "level5": [
         "raise_dead",
@@ -874,7 +1179,9 @@
         "circle_of_power",
         "dispel_evil_and_good",
         "geas",
-        "destructive_wave"
+        "destructive_wave",
+        "summon_celestial",
+        "holy_weapon"
       ]
     },
     "clerigo": {
@@ -885,7 +1192,9 @@
         "spare_the_dying",
         "prestidigitation",
         "mending",
-        "resistance"
+        "resistance",
+        "word_of_radiance",
+        "toll_the_dead"
       ],
       "level1": [
         "bless",
@@ -902,7 +1211,8 @@
         "sanctuary",
         "guiding_bolt",
         "shield_of_faith",
-        "healing_word"
+        "healing_word",
+        "ceremony"
       ],
       "level2": [
         "aid",
@@ -943,7 +1253,9 @@
         "speak_with_dead",
         "spirit_guardians",
         "tongues",
-        "water_walk"
+        "water_walk",
+        "spirit_shroud",
+        "life_transference"
       ],
       "level4": [
         "banishment",
@@ -968,7 +1280,10 @@
         "mass_cure_wounds",
         "planar_binding",
         "raise_dead",
-        "scrying"
+        "scrying",
+        "summon_celestial",
+        "dawn",
+        "holy_weapon"
       ],
       "level6": [
         "blade_barrier",
@@ -990,7 +1305,8 @@
         "plane_shift",
         "regenerate",
         "resurrection",
-        "symbol"
+        "symbol",
+        "temple_of_the_gods"
       ],
       "level8": [
         "antimagic_field",
@@ -1003,6 +1319,27 @@
         "gate",
         "mass_heal",
         "true_resurrection"
+      ]
+    }
+  },
+  "pending_class_spells": {
+    "_comment": "Asignaciones a clases o subclases todavía no disponibles en la app. El handler de clase_conjuros solo lee class_spells; esta clave se conserva para no perder la información pero no se renderiza.",
+    "artifice": {
+      "cantrips": [
+        "lightning_lure",
+        "sword_burst",
+        "booming_blade",
+        "green_flame_blade"
+      ],
+      "level1": [
+        "tashas_caustic_brew"
+      ],
+      "level3": [
+        "intellect_fortress",
+        "ashardalons_stride"
+      ],
+      "level4": [
+        "summon_construct"
       ]
     }
   }

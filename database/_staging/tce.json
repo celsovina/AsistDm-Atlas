@@ -1,0 +1,893 @@
+{
+  "module": "Caldero de Tasha para Todo",
+  "source": "Caldero de Tasha",
+  "sourcePages": "107 (tabla de clases) / 108-118 (descripciones)",
+  "extractedOn": "2026-09-02",
+  "status": "FUSIONADO en spells.json + clase_conjuros.json el 2026-09-02",
+  "notes": [
+    "Escuela / nivel / concentración / clase tomados de la tabla oficial (pantallazo pág. 107).",
+    "Range 'Lanzador' del libro se normaliza a 'Personal' para encajar con la convención de spells.json.",
+    "Duración '1 asalto' del libro se registra como '1 turno'.",
+    "Los 9 conjuros 'Invocar ...' llevan un marcador donde irá la tabla markdown del perfil de la criatura (pendiente de pantallazos).",
+    "Artífice no existe como clase en clase_conjuros.json → sus asignaciones van a 'pending_class_spells_additions'.",
+    "Sin colisiones de id con spells.json → no se usan prefijos tce_."
+  ],
+  "verify": [
+    "summon_construct: 'Cuerpo Abrasador (solo metal)' y 'Letargo Pétreo (solo piedra)' — sufijos añadidos por decisión del usuario (2026-09-02).",
+    "summon_fey (Espíritu Feérico): 'Espada Corta' -> se usa '+ 1d6 de daño de fuerza' (el pantallazo mostraba '+ 16', casi seguro OCR de '1d6'; el oficial es 1d6).",
+    "summon_fiend: 'Arrojar Llama' se marca '(solo diablo)' y summon_undead: 'Saeta de Ultratumba' se marca '(solo esquelético)'; los pantallazos no muestran el sufijo pero el reparto demonio/diablo/yugoloth y fantasmal/pútrido/esquelético lo implica.",
+    "Nombres de estados de ánimo/emoción alineados a los perfiles: feérico = furioso/alborozado/engañoso; sombrío = furia/desesperación/miedo. Revisar contra el texto del conjuro si difiere."
+  ],
+  "spells": [
+    {
+      "id": "lightning_lure",
+      "name": "Atracción del relámpago",
+      "school": "Evocación",
+      "level": 0,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Instantáneo",
+      "concentration": false,
+      "components": [
+        "V"
+      ],
+      "materials": [],
+      "description": "Creas un látigo de energía de relámpago que golpea a una criatura de tu elección que puedas ver a 15 pies o menos de ti. El objetivo deberá superar una tirada de salvación de Fuerza o será arrastrado hasta 10 pies en línea recta hacia ti y luego recibirá 1d8 de daño de relámpago si está a 5 pies o menos de ti.",
+      "upcast": "El daño del conjuro aumenta en 1d8 cuando alcanzas el nivel 5 (2d8), el nivel 11 (3d8) y el nivel 17 (4d8).",
+      "damage": {
+        "stat": "DAM",
+        "value": "1d8",
+        "mod": "Relámpago"
+      },
+      "effect": "Truco de melé que atrae a una criatura y le inflige daño de relámpago",
+      "range": "Personal (radio de 15 pies)",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": "Fuerza",
+        "dc": null,
+        "effect": "Si supera, no es arrastrado ni recibe daño"
+      },
+      "createsItems": [],
+      "source": "Caldero de Tasha"
+    },
+    {
+      "id": "sword_burst",
+      "name": "Estallido de espadas",
+      "school": "Conjuración",
+      "level": 0,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Instantáneo",
+      "concentration": false,
+      "components": [
+        "V"
+      ],
+      "materials": [],
+      "description": "Creas un círculo momentáneo de espadas espectrales que hacen un barrido a tu alrededor. Todas las demás criaturas que estén a 5 pies o menos de ti deberán superar una tirada de salvación de Destreza o recibirán 1d6 de daño de fuerza.",
+      "upcast": "El daño del conjuro aumenta en 1d6 cuando alcanzas el nivel 5 (2d6), el nivel 11 (3d6) y el nivel 17 (4d6).",
+      "damage": {
+        "stat": "DAM",
+        "value": "1d6",
+        "mod": "Fuerza"
+      },
+      "effect": "Truco que daña a todas las criaturas adyacentes con espadas espectrales",
+      "range": "Personal (radio de 5 pies)",
+      "areaOfEffect": "Radio de 5 pies",
+      "savingThrow": {
+        "type": "Destreza",
+        "dc": null,
+        "effect": "Sin daño si supera la tirada"
+      },
+      "createsItems": [],
+      "source": "Caldero de Tasha"
+    },
+    {
+      "id": "booming_blade",
+      "name": "Filo atronador",
+      "school": "Evocación",
+      "level": 0,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "1 turno",
+      "concentration": false,
+      "components": [
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Un arma cuerpo a cuerpo que valga al menos 1 pp"
+      ],
+      "description": "Blandes el arma utilizada para lanzar el conjuro y haces con ella un ataque cuerpo a cuerpo contra una criatura que esté a 5 pies o menos de ti. Si impacta, el objetivo sufre los efectos normales del ataque con arma y luego queda envuelto en una energía explosiva hasta el principio de tu siguiente turno. Si el objetivo se mueve voluntariamente 5 pies o más antes de ese momento, recibe 1d8 de daño de trueno y el conjuro termina.",
+      "upcast": "El daño de este conjuro aumenta cuando alcanzas ciertos niveles. En el nivel 5, el ataque cuerpo a cuerpo causa 1d8 de daño de trueno adicional al objetivo si impacta, y el daño que este recibe por moverse aumenta a 2d8. Las dos tiradas de daño aumentan en 1d8 en el nivel 11 (2d8 y 3d8) y en el nivel 17 (3d8 y 4d8).",
+      "damage": {
+        "stat": "ATAQUE",
+        "value": "1d8",
+        "mod": "Trueno (si el objetivo se mueve voluntariamente)"
+      },
+      "effect": "Truco que carga un arma para castigar el movimiento del objetivo con daño de trueno",
+      "range": "Personal (radio de 5 pies)",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Caldero de Tasha"
+    },
+    {
+      "id": "green_flame_blade",
+      "name": "Filo de llamas verdes",
+      "school": "Evocación",
+      "level": 0,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Instantáneo",
+      "concentration": false,
+      "components": [
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Un arma cuerpo a cuerpo que valga al menos 1 pp"
+      ],
+      "description": "Blandes el arma utilizada para lanzar el conjuro y haces con ella un ataque cuerpo a cuerpo contra una criatura que esté a 5 pies o menos de ti. Si impacta, el objetivo sufre los efectos normales del ataque con arma y puedes hacer que salte fuego verde de ese objetivo a otra criatura de tu elección que puedas ver a 5 pies o menos de él. La segunda criatura recibirá daño de fuego igual a tu modificador por aptitud mágica.",
+      "upcast": "El daño de este conjuro aumenta cuando alcanzas ciertos niveles. En el nivel 5, el ataque cuerpo a cuerpo causa 1d8 de daño de fuego adicional al objetivo si impacta, y el daño de fuego a la segunda criatura aumenta a 1d8 + tu modificador por aptitud mágica. Las dos tiradas de daño aumentan en 1d8 en el nivel 11 (2d8 y 2d8) y el nivel 17 (3d8 y 3d8).",
+      "damage": {
+        "stat": "ATAQUE",
+        "value": null,
+        "mod": "El objetivo secundario recibe fuego = tu modificador por aptitud mágica"
+      },
+      "effect": "Truco que carga un arma y propaga fuego a una segunda criatura cercana",
+      "range": "Personal (radio de 5 pies)",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Caldero de Tasha"
+    },
+    {
+      "id": "mind_sliver",
+      "name": "Fragmento mental",
+      "school": "Encantamiento",
+      "level": 0,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "1 turno",
+      "concentration": false,
+      "components": [
+        "V"
+      ],
+      "materials": [],
+      "description": "Introduces una púa desorientadora de energía psíquica en la mente de una criatura que puedas ver dentro del alcance. El objetivo deberá superar una tirada de salvación de Inteligencia o recibirá 1d6 de daño psíquico y restará 1d4 en la siguiente tirada de salvación que haga antes del final de tu siguiente turno.",
+      "upcast": "El daño de este conjuro aumenta en 1d6 cuando alcanzas ciertos niveles: el nivel 5 (2d6), el nivel 11 (3d6) y el nivel 17 (4d6).",
+      "damage": {
+        "stat": "DAM",
+        "value": "1d6",
+        "mod": "Psíquico"
+      },
+      "effect": "Truco de daño psíquico que penaliza la siguiente salvación del objetivo",
+      "range": "60 pies",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": "Inteligencia",
+        "dc": null,
+        "effect": "Sin efecto si supera la tirada"
+      },
+      "createsItems": [],
+      "source": "Caldero de Tasha"
+    },
+    {
+      "id": "tashas_caustic_brew",
+      "name": "Brebaje cáustico de Tasha",
+      "school": "Evocación",
+      "level": 1,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 minuto (10 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Un poco de comida podrida"
+      ],
+      "description": "De ti emana un chorro de ácido en una línea recta de 30 pies de largo y 5 pies de ancho en la dirección que elijas. Cada criatura que se encuentre en esta línea deberá superar una tirada de salvación de Destreza o quedará cubierta de ácido hasta que el conjuro termine o hasta que una criatura use su acción para quitarse el ácido a sí misma o a otra criatura. Una criatura cubierta de ácido sufre 2d4 de daño de ácido al principio de cada uno de sus turnos.",
+      "upcast": "Cuando lanzas este conjuro mediante un espacio de conjuro de nivel 2 o superior, el daño aumenta en 2d4 por cada nivel por encima de 1 que tenga el espacio que hayas empleado.",
+      "damage": {
+        "stat": "DAM",
+        "value": "2d4",
+        "mod": "Ácido (al principio de cada uno de sus turnos)"
+      },
+      "effect": "Línea de ácido persistente que daña cada turno",
+      "range": "Personal (línea de 30 pies)",
+      "areaOfEffect": "Línea de 30 pies de largo y 5 pies de ancho",
+      "savingThrow": {
+        "type": "Destreza",
+        "dc": null,
+        "effect": "Evita quedar cubierto de ácido"
+      },
+      "createsItems": [],
+      "source": "Caldero de Tasha"
+    },
+    {
+      "id": "mind_whip",
+      "name": "Látigo mental de Tasha",
+      "school": "Encantamiento",
+      "level": 2,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "1 turno",
+      "concentration": false,
+      "components": [
+        "V"
+      ],
+      "materials": [],
+      "description": "Atacas con un látigo psíquico a una criatura que puedas ver dentro del alcance. El objetivo tiene que hacer una tirada de salvación de Inteligencia. Si la falla, recibirá 3d6 de daño psíquico y no podrá llevar a cabo ninguna reacción hasta el final de su siguiente turno. Además, en su siguiente turno deberá elegir entre un movimiento, una acción o una acción adicional; solo podrá hacer una de las tres. Si supera la tirada, el objetivo recibirá la mitad de daño y no sufrirá el resto de efectos del conjuro.",
+      "upcast": "Cuando lanzas este conjuro mediante un espacio de conjuro de nivel 3 o superior, puedes elegir como objetivo a una criatura adicional por cada nivel por encima de 2 que tenga el espacio que hayas empleado. En el momento de elegirlas como objetivo, las criaturas deben estar a 30 pies o menos de todas las demás.",
+      "damage": {
+        "stat": "DAM",
+        "value": "3d6",
+        "mod": "Psíquico"
+      },
+      "effect": "Daño psíquico que restringe las acciones del objetivo en su siguiente turno",
+      "range": "90 pies",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": "Inteligencia",
+        "dc": null,
+        "effect": "Mitad de daño y sin efectos secundarios si supera la tirada"
+      },
+      "createsItems": [],
+      "source": "Caldero de Tasha"
+    },
+    {
+      "id": "intellect_fortress",
+      "name": "Fortaleza del intelecto",
+      "school": "Abjuración",
+      "level": 3,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 hora (600 turnos)",
+      "concentration": true,
+      "components": [
+        "V"
+      ],
+      "materials": [],
+      "description": "Hasta que acabe el conjuro, tú o una criatura voluntaria que puedas ver dentro del alcance obtiene resistencia al daño psíquico y ventaja en las tiradas de salvación de Inteligencia, Sabiduría y Carisma.",
+      "upcast": "Cuando lanzas este conjuro mediante un espacio de conjuro de nivel 4 o superior, puedes elegir como objetivo a una criatura adicional por cada nivel por encima de 3 que tenga el espacio que hayas empleado. En el momento de elegirlas como objetivo, las criaturas deben estar a 30 pies o menos de todas las demás.",
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": "Resistencia a daño psíquico y ventaja en salvaciones de INT, SAB y CAR"
+      },
+      "effect": "Protección contra daño psíquico y ventaja en salvaciones mentales",
+      "range": "30 pies",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Caldero de Tasha"
+    },
+    {
+      "id": "summon_beast",
+      "name": "Invocar bestia",
+      "school": "Conjuración",
+      "level": 2,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 hora (600 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Una pluma, un poco de pelaje y cola de pez dentro de una bellota dorada que valga al menos 200 po"
+      ],
+      "description": "Invocas un espíritu bestial que se manifiesta en un espacio sin ocupar que puedas ver dentro del alcance. Esta forma corpórea usa el perfil del espíritu bestial. Cuando lances el conjuro, elige un hábitat: tierra, mar o aire. La criatura se parecerá a un animal de tu elección de ese hábitat, lo que determinará ciertos atributos de su perfil. La criatura desaparecerá si sus puntos de golpe se reducen a 0 o si el conjuro termina.\n\nLa criatura se considera un aliado para ti y para tus compañeros. En combate, la criatura comparte tu orden de iniciativa, pero su turno va justo después del tuyo. Obedece tus órdenes verbales (no requiere acción) y, si no le das ninguna, hace la acción de Esquivar y usa su movimiento para evitar el peligro.\n\n---\n\n**Espíritu Bestial**  \n*Bestia Mediana*\n\n| | |\n|---|---|\n| **Clase de Armadura** | 11 + el nivel del conjuro (armadura natural) |\n| **Puntos de Golpe** | 20 (solo aire) o 30 (solo agua o tierra) + 5 por cada nivel de conjuro por encima de 2 |\n| **Velocidad** | 30 pies, trepar 30 pies (solo tierra), volar 60 pies (solo aire), nadar 30 pies (solo agua) |\n\n| FUE | DES | CON | INT | SAB | CAR |\n|---|---|---|---|---|---|\n| 18 (+4) | 11 (+0) | 16 (+3) | 4 (-3) | 14 (+2) | 5 (-3) |\n\n**Sentidos** visión en la oscuridad 60 pies, Percepción pasiva 12  \n**Idiomas** comprende los idiomas que hablas  \n**Desafío** — · **Bonificador por Competencia** igual al tuyo\n\n**Rasgos**\n\n- ***Pasar Volando (solo aire).*** La bestia no provoca ataques de oportunidad cuando vuela para moverse fuera del alcance de un enemigo.\n- ***Atacar en Manada.*** La bestia tiene ventaja en las tiradas de ataque contra criaturas que estén a 5 pies o menos de, al menos, un aliado de la bestia que no esté incapacitado.\n- ***Respirar en el Agua (solo agua).*** La bestia solo puede respirar bajo el agua.\n\n**Acciones**\n\n- ***Ataque Múltiple.*** La bestia hace tantos ataques como la mitad del nivel de este conjuro (redondeado a la baja).\n- ***Mutilar.*** *Ataque con arma cuerpo a cuerpo:* tu modificador de ataque de conjuros a impactar, alcance 5 pies, un objetivo. *Impacto:* 1d8 + 4 + el nivel del conjuro de daño perforante.",
+      "upcast": "Cuando lanzas este conjuro mediante un espacio de conjuro de nivel 3 o superior, usa el nivel más alto en lugar del nivel del conjuro cuando aparezca en el perfil de la criatura.",
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Invoca un espíritu bestial que combate a tu lado",
+      "range": "90 pies",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Caldero de Tasha"
+    },
+    {
+      "id": "summon_fey",
+      "name": "Invocar feérico",
+      "school": "Conjuración",
+      "level": 3,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 hora (600 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Una flor bañada en oro que valga al menos 300 po"
+      ],
+      "description": "Invocas un espíritu feérico que se manifiesta en un espacio sin ocupar que puedas ver dentro del alcance. Esta forma corpórea usa el perfil del espíritu feérico. Cuando lances el conjuro, elige un estado de ánimo: furioso, alborozado o engañoso. La criatura se parecerá a un ser feérico de tu elección con ese estado de ánimo, lo que determinará uno de los atributos de su perfil. La criatura desaparecerá si sus puntos de golpe se reducen a 0 o si el conjuro termina.\n\nLa criatura se considera un aliado para ti y para tus compañeros. En combate, la criatura comparte tu orden de iniciativa, pero su turno va justo después del tuyo. Obedece tus órdenes verbales (no requiere acción) y, si no le das ninguna, hace la acción de Esquivar y usa su movimiento para evitar el peligro.\n\n---\n\n**Espíritu Feérico**  \n*Feérico Pequeño*\n\n| | |\n|---|---|\n| **Clase de Armadura** | 12 + el nivel del conjuro (armadura natural) |\n| **Puntos de Golpe** | 30 + 10 por cada nivel de conjuro por encima de 3 |\n| **Velocidad** | 40 pies |\n\n| FUE | DES | CON | INT | SAB | CAR |\n|---|---|---|---|---|---|\n| 13 (+1) | 16 (+3) | 14 (+2) | 14 (+2) | 11 (+0) | 16 (+3) |\n\n**Inmunidad a Estados** hechizado  \n**Sentidos** visión en la oscuridad 60 pies, Percepción pasiva 10  \n**Idiomas** silvano, comprende los idiomas que hablas  \n**Desafío** — · **Bonificador por Competencia** igual al tuyo\n\n**Acciones**\n\n- ***Ataque Múltiple.*** El feérico hace tantos ataques como la mitad del nivel de este conjuro (redondeado a la baja).\n- ***Espada Corta.*** *Ataque con arma cuerpo a cuerpo:* tu modificador de ataque de conjuros a impactar, alcance 5 pies, un objetivo. *Impacto:* 1d6 + 3 + el nivel del conjuro de daño perforante + 1d6 de daño de fuerza.\n\n**Acciones adicionales**\n\n- ***Zancada Feérica.*** El feérico se teletransporta mágicamente a un espacio desocupado que pueda ver a 30 pies o menos. Entonces ocurre uno de los siguientes efectos, según el estado de ánimo del feérico: **Furioso** — el feérico tiene ventaja en la próxima tirada de ataque que haga antes del final de este turno; **Alborozado** — el feérico puede obligar a una criatura que pueda ver a 10 pies o menos a hacer una tirada de salvación de Sabiduría contra tu CD de salvación de conjuros; si falla, el objetivo queda hechizado por el feérico y por ti durante 1 minuto o hasta que reciba cualquier daño; **Engañoso** — el feérico puede llenar un cubo de 5 pies de lado a 5 pies o menos de él con oscuridad mágica, que permanece hasta el final de su próximo turno.",
+      "upcast": "Cuando lanzas este conjuro mediante un espacio de conjuro de nivel 4 o superior, usa el nivel más alto en lugar del nivel del conjuro cuando aparezca en el perfil de la criatura.",
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Invoca un espíritu feérico ligado a un estado de ánimo",
+      "range": "90 pies",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Caldero de Tasha"
+    },
+    {
+      "id": "summon_shadowspawn",
+      "name": "Invocar engendro de las sombras",
+      "school": "Conjuración",
+      "level": 3,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 hora (600 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Lágrimas dentro de una gema que valga al menos 300 po"
+      ],
+      "description": "Invocas un espíritu de las sombras que se manifiesta en un espacio sin ocupar que puedas ver dentro del alcance. Esta forma corpórea usa el perfil del espíritu de las sombras. Cuando lances el conjuro, elige una emoción: furia, desesperación o miedo. La criatura se parecerá a un ser bípedo deforme marcado por la emoción elegida, lo que determinará ciertos atributos de su perfil. La criatura desaparecerá si sus puntos de golpe se reducen a 0 o si el conjuro termina.\n\nLa criatura se considera un aliado para ti y para tus compañeros. En combate, la criatura comparte tu orden de iniciativa, pero su turno va justo después del tuyo. Obedece tus órdenes verbales (no requiere acción) y, si no le das ninguna, hace la acción de Esquivar y usa su movimiento para evitar el peligro.\n\n---\n\n**Espíritu Sombrío**  \n*Monstruosidad Mediana*\n\n| | |\n|---|---|\n| **Clase de Armadura** | 11 + el nivel del conjuro (armadura natural) |\n| **Puntos de Golpe** | 35 + 15 por cada nivel de conjuro por encima de 3 |\n| **Velocidad** | 40 pies |\n\n| FUE | DES | CON | INT | SAB | CAR |\n|---|---|---|---|---|---|\n| 13 (+1) | 16 (+3) | 15 (+2) | 4 (-3) | 10 (+0) | 16 (+3) |\n\n**Resistencia al Daño** necrótico  \n**Inmunidad a Estados** asustado  \n**Sentidos** visión en la oscuridad 120 pies, Percepción pasiva 10  \n**Idiomas** comprende los idiomas que hablas  \n**Desafío** — · **Bonificador por Competencia** igual al tuyo\n\n**Rasgos**\n\n- ***Frenesí del Terror (solo furia).*** El espíritu tiene ventaja en las tiradas de ataque contra criaturas asustadas.\n- ***Peso del Dolor (solo desesperación).*** Cualquier criatura, que no seas tú, que inicie su turno a 5 pies o menos del espíritu verá su velocidad reducida en 20 pies hasta el inicio del próximo turno de esa criatura.\n\n**Acciones**\n\n- ***Ataque Múltiple.*** El espíritu hace tantos ataques como la mitad del nivel de este conjuro (redondeado a la baja).\n- ***Desgarro Gélido.*** *Ataque con arma cuerpo a cuerpo:* tu modificador de ataque de conjuros a impactar, alcance 5 pies, un objetivo. *Impacto:* 1d12 + 3 + el nivel del conjuro de daño de frío.\n- ***Grito Terrorífico (1/día).*** El espíritu grita. Cada criatura a 30 pies o menos de él deberá superar una tirada de salvación de Sabiduría contra tu CD de salvación de conjuros o quedará asustada del espíritu por 1 minuto. La criatura puede repetir la tirada de salvación al final de cada uno de sus turnos, terminando el efecto sobre sí misma si la supera.\n\n**Acciones adicionales**\n\n- ***Sigilo Sombrío (solo miedo).*** Mientras está en luz tenue u oscuridad, el espíritu realiza la acción de Esconderse.",
+      "upcast": "Cuando lanzas este conjuro mediante un espacio de conjuro de nivel 4 o superior, usa el nivel más alto en lugar del nivel del conjuro cuando aparezca en el perfil de la criatura.",
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Invoca un espíritu de las sombras ligado a una emoción",
+      "range": "90 pies",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Caldero de Tasha"
+    },
+    {
+      "id": "summon_undead",
+      "name": "Invocar muerto viviente",
+      "school": "Nigromancia",
+      "level": 3,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 hora (600 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Una calavera bañada en oro que valga al menos 300 po"
+      ],
+      "description": "Invocas un espíritu muerto viviente que se manifiesta en un espacio sin ocupar que puedas ver dentro del alcance. Esta forma corpórea usa el perfil del espíritu muerto viviente. Cuando lances el conjuro, elige la forma de la criatura: fantasmal, pútrida o esquelética. El espíritu se parecerá a un muerto viviente con la forma elegida, lo que determinará ciertos atributos de su perfil. La criatura desaparecerá si sus puntos de golpe se reducen a 0 o si el conjuro termina.\n\nLa criatura se considera un aliado para ti y para tus compañeros. En combate, la criatura comparte tu orden de iniciativa, pero su turno va justo después del tuyo. Obedece tus órdenes verbales (no requiere acción) y, si no le das ninguna, hace la acción de Esquivar y usa su movimiento para evitar el peligro.\n\n---\n\n**Espíritu Muerto Viviente**  \n*Muerto viviente Mediano*\n\n| | |\n|---|---|\n| **Clase de Armadura** | 11 + el nivel del conjuro (armadura natural) |\n| **Puntos de Golpe** | 30 (solo fantasmal y pútrido) o 20 (solo esquelético) + 10 por cada nivel de conjuro por encima de 3 |\n| **Velocidad** | 30 pies, volar 40 pies (levitar) (solo fantasmal) |\n\n| FUE | DES | CON | INT | SAB | CAR |\n|---|---|---|---|---|---|\n| 12 (+1) | 16 (+3) | 15 (+2) | 4 (-3) | 10 (+0) | 9 (-1) |\n\n**Inmunidad al Daño** necrótico, veneno  \n**Inmunidad a Estados** asustado, cansancio, envenenado, paralizado  \n**Sentidos** visión en la oscuridad 60 pies, Percepción pasiva 10  \n**Idiomas** comprende los idiomas que hablas  \n**Desafío** — · **Bonificador por Competencia** igual al tuyo\n\n**Rasgos**\n\n- ***Aura Enconada (solo pútrido).*** Cualquier criatura, que no seas tú, que empiece su turno situada a 5 pies o menos del espíritu deberá superar una tirada de salvación de Sabiduría contra tu CD de salvación de conjuros o quedará envenenada hasta el principio de su siguiente turno.\n- ***Movimiento Incorpóreo (solo fantasmal).*** El espíritu puede moverse a través de otras criaturas y objetos como si fueran terreno difícil. Si acaba su turno dentro de un objeto, es empujado al espacio desocupado más cercano y recibe 1d10 de daño de fuerza por cada 5 pies recorridos.\n\n**Acciones**\n\n- ***Ataque Múltiple.*** El espíritu hace tantos ataques como la mitad del nivel de este conjuro (redondeado a la baja).\n- ***Toque Sepulcral (solo fantasmal).*** *Ataque con arma cuerpo a cuerpo:* tu modificador de ataque de conjuros a impactar, alcance 5 pies, un objetivo. *Impacto:* 1d8 + 3 + el nivel del conjuro de daño necrótico, y la criatura deberá superar una tirada de salvación de Sabiduría contra tu CD de salvación de conjuros o quedará asustada del espíritu hasta el final del próximo turno del objetivo.\n- ***Saeta de Ultratumba (solo esquelético).*** *Ataque de conjuro a distancia:* tu modificador de ataque de conjuros a impactar, alcance 150 pies, un objetivo. *Impacto:* 2d4 + 3 + el nivel del conjuro de daño necrótico.\n- ***Garra Pútrida (solo pútrido).*** *Ataque con arma cuerpo a cuerpo:* tu modificador de ataque de conjuros a impactar, alcance 5 pies, un objetivo. *Impacto:* 1d6 + 3 + el nivel del conjuro de daño cortante. Si el objetivo está envenenado, deberá superar una tirada de salvación de Constitución contra tu CD de salvación de conjuros o quedará paralizado hasta el final de su próximo turno.",
+      "upcast": "Cuando lanzas este conjuro mediante un espacio de conjuro de nivel 4 o superior, usa el nivel más alto en lugar del nivel del conjuro cuando aparezca en el perfil de la criatura.",
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Invoca un espíritu muerto viviente con la forma elegida",
+      "range": "90 pies",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Caldero de Tasha"
+    },
+    {
+      "id": "spirit_shroud",
+      "name": "Mortaja espiritual",
+      "school": "Nigromancia",
+      "level": 3,
+      "ritual": false,
+      "castingTime": "1 acción adicional",
+      "duration": "Concentración, hasta 1 minuto (10 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": [],
+      "description": "Invocas a espíritus de criaturas muertas, que revolotean a tu alrededor hasta que el conjuro termine. Los espíritus son intangibles e invulnerables. Hasta que el conjuro termine, cualquier ataque que hagas causará 1d8 de daño adicional cuando impactes a una criatura que esté a 10 pies o menos de ti. Este daño es radiante, necrótico o de frío (a tu elección cuando lances el conjuro). Cualquier criatura que reciba este daño no podrá recuperar puntos de golpe hasta el principio de tu siguiente turno. Además, cualquier criatura de tu elección que puedas ver y que empiece su turno a 10 pies o menos de ti verá su velocidad reducida en 10 pies hasta el principio de tu siguiente turno.",
+      "upcast": "Cuando lanzas este conjuro mediante un espacio de conjuro de nivel 4 o superior, el daño aumenta en 1d8 por cada dos niveles por encima de 3 que tenga el espacio que hayas empleado.",
+      "damage": {
+        "stat": "DAM",
+        "value": "1d8",
+        "mod": "Radiante, necrótico o de frío (a tu elección); impide recuperar PG"
+      },
+      "effect": "Aura que añade daño a tus ataques y frena a los enemigos cercanos",
+      "range": "Personal",
+      "areaOfEffect": "Radio de 10 pies alrededor de ti",
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Caldero de Tasha"
+    },
+    {
+      "id": "summon_aberration",
+      "name": "Invocar aberración",
+      "school": "Conjuración",
+      "level": 4,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 hora (600 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Un tentáculo en salmuera y un globo ocular en un vial con incrustaciones de platino que valga al menos 400 po"
+      ],
+      "description": "Invocas un espíritu aberrante que se manifiesta en un espacio sin ocupar que puedas ver dentro del alcance. Esta forma corpórea usa el perfil del espíritu aberrante. Cuando lances el conjuro, elige contemplador, slaad o semilla estelar. La criatura se parecerá a una aberración de ese tipo, lo que determinará ciertos atributos de su perfil. La criatura desaparecerá si sus puntos de golpe se reducen a 0 o si el conjuro termina.\n\nLa criatura se considera un aliado para ti y para tus compañeros. En combate, la criatura comparte tu orden de iniciativa, pero su turno va justo después del tuyo. Obedece tus órdenes verbales (no requiere acción) y, si no le das ninguna, hace la acción de Esquivar y usa su movimiento para evitar el peligro.\n\n---\n\n**Espíritu Aberrante**  \n*Aberración Mediana*\n\n| | |\n|---|---|\n| **Clase de Armadura** | 11 + el nivel del conjuro (armadura natural) |\n| **Puntos de Golpe** | 40 + 10 por cada nivel de conjuro por encima de 4 |\n| **Velocidad** | 30 pies, volar 30 pies (levitar) (solo contempladores) |\n\n| FUE | DES | CON | INT | SAB | CAR |\n|---|---|---|---|---|---|\n| 16 (+3) | 10 (+0) | 15 (+2) | 16 (+3) | 10 (+0) | 6 (-2) |\n\n**Inmunidad al Daño** psíquico  \n**Sentidos** visión en la oscuridad 60 pies, Percepción pasiva 10  \n**Idiomas** habla de las profundidades, comprende los idiomas que hablas  \n**Desafío** — · **Bonificador por Competencia** igual al tuyo\n\n**Rasgos**\n\n- ***Regeneración (solo slaad).*** Si la aberración tiene al menos 1 punto de golpe al principio de su turno, recupera 5 puntos de golpe.\n- ***Aura Susurrante (solo engendros estelares).*** Al principio de cada uno de los turnos de la aberración, cada criatura a 5 pies o menos de ella deberá superar una tirada de salvación de Sabiduría contra tu CD de salvación de conjuros o recibirá 2d6 de daño psíquico, siempre y cuando la aberración no esté incapacitada.\n\n**Acciones**\n\n- ***Ataque Múltiple.*** La aberración hace tantos ataques como la mitad del nivel de este conjuro (redondeado a la baja).\n- ***Garras (solo slaad).*** *Ataque con arma cuerpo a cuerpo:* tu modificador de ataque de conjuros a impactar, alcance 5 pies, un objetivo. *Impacto:* 1d10 + 3 + el nivel del conjuro de daño cortante. Si el objetivo es una criatura, no puede recuperar puntos de golpe hasta el inicio del próximo turno de la aberración.\n- ***Rayo Ocular (solo contempladores).*** *Ataque de conjuro a distancia:* tu modificador de ataque de conjuros a impactar, alcance 150 pies, una criatura. *Impacto:* 1d8 + 3 + el nivel del conjuro de daño psíquico.\n- ***Golpe Psíquico (solo engendros estelares).*** *Ataque de conjuro cuerpo a cuerpo:* tu modificador de ataque de conjuros a impactar, alcance 5 pies, una criatura. *Impacto:* 1d8 + 3 + el nivel del conjuro de daño psíquico.",
+      "upcast": "Cuando lanzas este conjuro mediante un espacio de conjuro de nivel 5 o superior, usa el nivel más alto en lugar del nivel del conjuro cuando aparezca en el perfil de la criatura.",
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Invoca un espíritu aberrante (contemplador, slaad o semilla estelar)",
+      "range": "90 pies",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Caldero de Tasha"
+    },
+    {
+      "id": "summon_construct",
+      "name": "Invocar autómata",
+      "school": "Conjuración",
+      "level": 4,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 hora (600 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Una piedra adornada y una caja de seguridad de metal que valga al menos 400 po"
+      ],
+      "description": "Invocas el espíritu de un autómata que se manifiesta en un espacio sin ocupar que puedas ver dentro del alcance. Esta forma corpórea usa el perfil del autómata. Cuando lances el conjuro, elige un material: arcilla, metal o piedra. La criatura se parecerá a un gólem o a un modron (a tu elección) del material en cuestión, lo que determinará ciertos atributos de su perfil. La criatura desaparecerá si sus puntos de golpe se reducen a 0 o si el conjuro termina.\n\nLa criatura se considera un aliado para ti y para tus compañeros. En combate, la criatura comparte tu orden de iniciativa, pero su turno va justo después del tuyo. Obedece tus órdenes verbales (no requiere acción) y, si no le das ninguna, hace la acción de Esquivar y usa su movimiento para evitar el peligro.\n\n---\n\n**Espíritu Autómata**  \n*Constructo Mediano*\n\n| | |\n|---|---|\n| **Clase de Armadura** | 13 + el nivel del conjuro (armadura natural) |\n| **Puntos de Golpe** | 40 + 15 por cada nivel de conjuro por encima de 4 |\n| **Velocidad** | 30 pies |\n\n| FUE | DES | CON | INT | SAB | CAR |\n|---|---|---|---|---|---|\n| 18 (+4) | 10 (+0) | 18 (+4) | 14 (+2) | 11 (+0) | 5 (-3) |\n\n**Resistencia al Daño** veneno  \n**Inmunidad a Estados** hechizado, cansancio, asustado  \n**Sentidos** visión en la oscuridad 60 pies, Percepción pasiva 10  \n**Idiomas** comprende los idiomas que hablas  \n**Desafío** — · **Bonificador por Competencia** igual al tuyo\n\n**Rasgos**\n\n- ***Cuerpo Abrasador (solo metal).*** Cualquier criatura que toque al autómata o le impacte con un ataque cuerpo a cuerpo estando a 5 pies o menos de distancia recibirá 1d10 de daño de fuego.\n- ***Letargo Pétreo (solo piedra).*** Cuando una criatura que el autómata puede ver comienza su turno a 10 pies o menos de este, el autómata puede obligarle a hacer una tirada de salvación de Sabiduría contra tu CD de salvación de conjuros. Si falla la tirada, el objetivo no podrá usar reacciones y su velocidad se reduce a la mitad hasta el inicio de su próximo turno.\n\n**Acciones**\n\n- ***Ataque Múltiple.*** El autómata hace tantos ataques como la mitad del nivel de este conjuro (redondeado a la baja).\n- ***Golpe.*** *Ataque con arma cuerpo a cuerpo:* tu modificador de ataque de conjuros a impactar, alcance 5 pies, un objetivo. *Impacto:* 1d8 + 4 + el nivel del conjuro de daño contundente.\n\n**Reacciones**\n\n- ***Arremetida Berserk (solo arcilla).*** Cuando el autómata recibe daño, hace un ataque de golpe contra una criatura aleatoria a 5 pies o menos de él. Si no hay criaturas dentro del alcance, el autómata se mueve hasta la mitad de su movimiento hacia un enemigo que pueda ver, sin provocar ataques de oportunidad.",
+      "upcast": "Cuando lanzas este conjuro mediante un espacio de conjuro de nivel 5 o superior, usa el nivel más alto en lugar del nivel del conjuro cuando aparezca en el perfil de la criatura.",
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Invoca un espíritu de autómata (arcilla, metal o piedra)",
+      "range": "90 pies",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Caldero de Tasha"
+    },
+    {
+      "id": "summon_elemental",
+      "name": "Invocar elemental",
+      "school": "Conjuración",
+      "level": 4,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 hora (600 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Aire, un guijarro, ceniza y agua dentro de un vial con incrustaciones de oro que valga al menos 400 po"
+      ],
+      "description": "Invocas un espíritu elemental que se manifiesta en un espacio sin ocupar que puedas ver dentro del alcance. Esta forma corpórea usa el perfil del espíritu elemental. Cuando lances el conjuro, elige un elemento: aire, tierra, fuego o agua. La criatura se parecerá a un ser bípedo envuelto en el elemento elegido, lo que determinará ciertos atributos de su perfil. La criatura desaparecerá si sus puntos de golpe se reducen a 0 o si el conjuro termina.\n\nLa criatura se considera un aliado para ti y para tus compañeros. En combate, la criatura comparte tu orden de iniciativa, pero su turno va justo después del tuyo. Obedece tus órdenes verbales (no requiere acción) y, si no le das ninguna, hace la acción de Esquivar y usa su movimiento para evitar el peligro.\n\n---\n\n**Espíritu Elemental**  \n*Elemental Mediano*\n\n| | |\n|---|---|\n| **Clase de Armadura** | 11 + el nivel del conjuro (armadura natural) |\n| **Puntos de Golpe** | 50 + 10 por cada nivel de conjuro por encima de 4 |\n| **Velocidad** | 40 pies, excavar 40 pies (solo tierra), volar 40 pies (levitar) (solo aire), nadar 40 pies (solo agua) |\n\n| FUE | DES | CON | INT | SAB | CAR |\n|---|---|---|---|---|---|\n| 18 (+4) | 15 (+2) | 17 (+3) | 4 (-3) | 10 (+0) | 16 (+3) |\n\n**Resistencia al Daño** ácido (solo agua); relámpago y trueno (solo aire); perforante y cortante (solo tierra)  \n**Inmunidad al Daño** veneno; fuego (solo fuego)  \n**Inmunidad a Estados** cansancio, envenenado, paralizado, petrificado, inconsciente  \n**Sentidos** visión en la oscuridad 60 pies, Percepción pasiva 10  \n**Idiomas** primordial, comprende los idiomas que hablas  \n**Desafío** — · **Bonificador por Competencia** igual al tuyo\n\n**Rasgos**\n\n- ***Forma Amorfa (solo agua, aire, fuego).*** El elemental puede moverse a través de espacios de tan solo 1 pulgada de ancho sin apretarse.\n\n**Acciones**\n\n- ***Ataque Múltiple.*** El elemental hace tantos ataques como la mitad del nivel de este conjuro (redondeado a la baja).\n- ***Golpe.*** *Ataque con arma cuerpo a cuerpo:* tu modificador de ataque de conjuros a impactar, alcance 5 pies, un objetivo. *Impacto:* 1d10 + 4 + el nivel del conjuro de daño contundente (solo agua, aire y tierra) o daño de fuego (solo fuego).",
+      "upcast": "Cuando lanzas este conjuro mediante un espacio de conjuro de nivel 5 o superior, usa el nivel más alto en lugar del nivel del conjuro cuando aparezca en el perfil de la criatura.",
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Invoca un espíritu elemental (aire, tierra, fuego o agua)",
+      "range": "90 pies",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Caldero de Tasha"
+    },
+    {
+      "id": "summon_celestial",
+      "name": "Invocar celestial",
+      "school": "Conjuración",
+      "level": 5,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 hora (600 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Un relicario dorado que valga al menos 500 po"
+      ],
+      "description": "Invocas un espíritu celestial que se manifiesta con una forma angelical en un espacio sin ocupar que puedas ver dentro del alcance. Esta forma corpórea usa el perfil del espíritu celestial. Cuando lances el conjuro, elige vengador o defensor. Tu elección determinará cómo es el ataque de la criatura (consulta su perfil). La criatura desaparecerá si sus puntos de golpe se reducen a 0 o si el conjuro termina.\n\nLa criatura se considera un aliado para ti y para tus compañeros. En combate, la criatura comparte tu orden de iniciativa, pero su turno va justo después del tuyo. Obedece tus órdenes verbales (no requiere acción) y, si no le das ninguna, hace la acción de Esquivar y usa su movimiento para evitar el peligro.\n\n---\n\n**Espíritu Celestial**  \n*Celestial Grande*\n\n| | |\n|---|---|\n| **Clase de Armadura** | 11 + el nivel del conjuro (armadura natural) + 2 (solo defensor) |\n| **Puntos de Golpe** | 40 + 10 por cada nivel de conjuro por encima de 4 |\n| **Velocidad** | 30 pies, volar 40 pies |\n\n| FUE | DES | CON | INT | SAB | CAR |\n|---|---|---|---|---|---|\n| 16 (+3) | 14 (+2) | 16 (+3) | 10 (+0) | 14 (+2) | 16 (+3) |\n\n**Resistencia al Daño** radiante  \n**Inmunidad a Estados** hechizado, asustado  \n**Sentidos** visión en la oscuridad 60 pies, Percepción pasiva 12  \n**Idiomas** celestial, comprende los idiomas que hablas  \n**Desafío** — · **Bonificador por Competencia** igual al tuyo\n\n**Acciones**\n\n- ***Ataque Múltiple.*** El celestial hace tantos ataques como la mitad del nivel de este conjuro (redondeado a la baja).\n- ***Arco Radiante (solo vengador).*** *Ataque con arma a distancia:* tu modificador de ataque de conjuros a impactar, alcance 150/600 pies, un objetivo. *Impacto:* 2d6 + 2 + el nivel del conjuro de daño radiante.\n- ***Maza Radiante (solo defensor).*** *Ataque con arma cuerpo a cuerpo:* tu modificador de ataque de conjuros a impactar, alcance 5 pies, un objetivo. *Impacto:* 1d10 + 3 + el nivel del conjuro de daño radiante, y el celestial puede elegir a otra criatura que pueda ver a 10 pies o menos del objetivo o a sí mismo. La criatura elegida gana 1d10 puntos de golpe temporales.\n- ***Toque Sanador (1/día).*** El celestial toca a otra criatura. El objetivo recupera tantos puntos de golpe como 2d8 + el nivel del conjuro.",
+      "upcast": "Cuando lanzas este conjuro mediante un espacio de conjuro de nivel 6 o superior, usa el nivel más alto en lugar del nivel del conjuro cuando aparezca en el perfil de la criatura.",
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Invoca un espíritu celestial (vengador o defensor)",
+      "range": "90 pies",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Caldero de Tasha"
+    },
+    {
+      "id": "tashas_otherworldly_guise",
+      "name": "Apariencia espectral de Tasha",
+      "school": "Transmutación",
+      "level": 6,
+      "ritual": false,
+      "castingTime": "1 acción adicional",
+      "duration": "Concentración, hasta 1 minuto (10 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Un objeto que tenga grabado un símbolo de los Planos Exteriores y que valga al menos 500 po"
+      ],
+      "description": "Pronuncias unas palabras de poder y recurres a la magia de los Planos Inferiores o los Planos Superiores (a tu elección) para transformarte. Hasta que el conjuro termine, obtienes los siguientes beneficios: eres inmune al daño de fuego y de veneno (Planos Inferiores) o al daño radiante y necrótico (Planos Superiores); eres inmune al estado \"envenenado\" (Planos Inferiores) o \"hechizado\" (Planos Superiores); de tu espalda brotan unas alas espectrales que te otorgan una velocidad volando de 40 pies; obtienes un bonificador de +2 a la CA; todos tus ataques con arma son mágicos y, cuando haces un ataque con arma, puedes usar tu modificador por aptitud mágica en lugar de tu Fuerza o Destreza para las tiradas de ataque y de daño; y cuando lleves a cabo la acción de Atacar durante tu turno, podrás hacer dos ataques en lugar de uno (ignoras este beneficio si ya tienes un rasgo, como Ataque Adicional, que te permite atacar más de una vez).",
+      "upcast": null,
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": "+2 CA, vuelo 40 pies, inmunidades y 2 ataques al Atacar; ataques mágicos con aptitud mágica"
+      },
+      "effect": "Transformación que otorga vuelo, inmunidades, +2 CA y ataques mágicos",
+      "range": "Personal",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Caldero de Tasha"
+    },
+    {
+      "id": "summon_fiend",
+      "name": "Invocar infernal",
+      "school": "Conjuración",
+      "level": 6,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 hora (600 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Sangre de humanoide dentro de un vial de rubí que valga al menos 600 po"
+      ],
+      "description": "Invocas un espíritu infernal que se manifiesta en un espacio sin ocupar que puedas ver dentro del alcance. Esta forma corpórea usa el perfil del espíritu infernal. Cuando lances el conjuro, elige demonio, diablo o yugoloth. La criatura se asemejará a un infernal de ese tipo, lo que determinará ciertos atributos de su perfil. La criatura desaparecerá si sus puntos de golpe se reducen a 0 o si el conjuro termina.\n\nLa criatura se considera un aliado para ti y para tus compañeros. En combate, la criatura comparte tu orden de iniciativa, pero su turno va justo después del tuyo. Obedece tus órdenes verbales (no requiere acción) y, si no le das ninguna, hace la acción de Esquivar y usa su movimiento para evitar el peligro.\n\n---\n\n**Espíritu Infernal**  \n*Infernal Grande*\n\n| | |\n|---|---|\n| **Clase de Armadura** | 12 + el nivel del conjuro (armadura natural) |\n| **Puntos de Golpe** | 50 (solo demonio) o 40 (solo diablo) o 60 (solo yugoloth) + 15 por cada nivel de conjuro por encima de 6 |\n| **Velocidad** | 40 pies, trepar 40 pies (solo demonio), volar 60 pies (solo diablo) |\n\n| FUE | DES | CON | INT | SAB | CAR |\n|---|---|---|---|---|---|\n| 13 (+1) | 16 (+3) | 15 (+2) | 10 (+0) | 10 (+0) | 16 (+3) |\n\n**Resistencia al Daño** fuego  \n**Inmunidad al Daño** veneno  \n**Inmunidad a Estados** envenenado  \n**Sentidos** visión en la oscuridad 60 pies, Percepción pasiva 10  \n**Idiomas** abisal, infernal, telepatía a 60 pies  \n**Desafío** — · **Bonificador por Competencia** igual al tuyo\n\n**Rasgos**\n\n- ***Últimos Estertores (solo demonio).*** Cuando el infernal cae a 0 puntos de golpe o termina el conjuro, explota. Todas las criaturas que se encuentren a 10 pies o menos de él deben hacer una tirada de salvación de Destreza contra tu CD de salvación de conjuros. Una criatura sufre 2d10 + el nivel de este conjuro de daño de fuego si falla la tirada, o la mitad de ese daño si la supera.\n- ***Vista del Diablo (solo diablo).*** La oscuridad mágica no impide la visión en la oscuridad del infernal.\n- ***Resistencia Mágica.*** El infernal tiene ventaja en las tiradas de salvación contra conjuros y otros efectos mágicos.\n\n**Acciones**\n\n- ***Ataque Múltiple.*** El infernal hace tantos ataques como la mitad del nivel de este conjuro (redondeado a la baja).\n- ***Mordisco (solo demonio).*** *Ataque con arma cuerpo a cuerpo:* tu modificador de ataque de conjuros a impactar, alcance 5 pies, un objetivo. *Impacto:* 1d12 + 3 + el nivel del conjuro de daño necrótico.\n- ***Garras (solo yugoloth).*** *Ataque con arma cuerpo a cuerpo:* tu modificador de ataque de conjuros a impactar, alcance 5 pies, un objetivo. *Impacto:* 1d8 + 3 + el nivel del conjuro de daño cortante. Inmediatamente después de impactar o fallar el ataque, el infernal se puede teletransportar mágicamente a un espacio desocupado que pueda ver a 30 pies o menos.\n- ***Arrojar Llama (solo diablo).*** *Ataque de conjuro a distancia:* tu modificador de ataque de conjuros a impactar, alcance 150 pies, un objetivo. *Impacto:* 2d6 + 3 + el nivel del conjuro de daño de fuego. Si el objetivo es un objeto inflamable que no lleve o vista nadie, también se prende en llamas.",
+      "upcast": "Cuando lanzas este conjuro mediante un espacio de conjuro de nivel 7 o superior, usa el nivel más alto en lugar del nivel del conjuro cuando aparezca en el perfil de la criatura.",
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Invoca un espíritu infernal (demonio, diablo o yugoloth)",
+      "range": "90 pies",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Caldero de Tasha"
+    },
+    {
+      "id": "dream_of_the_blue_veil",
+      "name": "Sueño del velo azul",
+      "school": "Conjuración",
+      "level": 7,
+      "ritual": false,
+      "castingTime": "10 minutos",
+      "duration": "6 horas",
+      "concentration": false,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Un objeto mágico o una criatura voluntaria del mundo de destino"
+      ],
+      "description": "Tú y hasta ocho criaturas voluntarias dentro del alcance quedáis inconscientes hasta que el conjuro termine y tenéis visiones de otro mundo del Plano Material, como Oerth, Toril, Krynn o Eberron. Si el conjuro alcanza su duración máxima, las visiones concluyen con todos vosotros encontrando y descorriendo un misterioso telón azul. Al hacerlo, el conjuro termina y todos os transportáis física y mentalmente al mundo de las visiones. Para lanzar este conjuro debes tener un objeto mágico que se haya originado en el mundo al que deseas viajar y debes ser consciente de la existencia de ese mundo, aunque desconozcas su nombre. Vuestro destino en ese mundo es un lugar seguro que se encuentre a 1 milla o menos del lugar donde se creó el objeto mágico. Como alternativa, puedes lanzar el conjuro si una de las criaturas elegidas nació en el mundo de destino, lo que hace que aparezcáis en un lugar seguro a 1 milla o menos de donde nació esa criatura. El conjuro termina para una criatura si recibe daño, por lo que no se teletransportará. Si tú recibes daño, el conjuro termina para todas las criaturas (incluyéndote a ti) y nadie se teletransportará.",
+      "upcast": null,
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Duerme al grupo para viajar a otro mundo del Plano Material",
+      "range": "20 pies",
+      "areaOfEffect": "Hasta ocho criaturas voluntarias a 20 pies",
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Caldero de Tasha"
+    },
+    {
+      "id": "blade_of_disaster",
+      "name": "Hoja de desastre",
+      "school": "Conjuración",
+      "level": 9,
+      "ritual": false,
+      "castingTime": "1 acción adicional",
+      "duration": "Concentración, hasta 1 minuto (10 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": [],
+      "description": "Creas una grieta planar en forma de hoja de aproximadamente 3 pies de largo en un espacio sin ocupar que puedas ver dentro del alcance. La hoja durará hasta que acabe el conjuro. Al lanzar este conjuro, puedes hacer hasta dos ataques de conjuro cuerpo a cuerpo con la hoja, cada uno contra una criatura, un objeto suelto o una estructura que se encuentre a 5 pies o menos de la hoja. Si impacta, el objetivo recibe 4d12 de daño de fuerza. Este ataque causará críticos si la tirada del d20 es de 18 o más. Con un crítico, la hoja causa un daño de fuerza adicional de 8d12 (total de 12d12 de daño de fuerza). Como acción adicional durante tu turno, puedes mover la hoja hasta 30 pies a un espacio sin ocupar que puedas ver y luego volver a hacer con ella dos ataques de conjuro cuerpo a cuerpo. La hoja puede atravesar cualquier barrera sin dañarse, incluido un muro de fuerza.",
+      "upcast": null,
+      "damage": {
+        "stat": "ATAQUE",
+        "value": "4d12",
+        "mod": "Fuerza; crítico con 18-20 (daño adicional de 8d12)"
+      },
+      "effect": "Crea una hoja de fuerza planar que ataca dos veces por turno y critica con 18-20",
+      "range": "60 pies",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Caldero de Tasha"
+    }
+  ],
+  "classAssignments": {
+    "_comment": "Se fusionará en clase_conjuros.json → class_spells (renderizable) y pending_class_spells (Artífice, no renderizable).",
+    "class_spells_additions": {
+      "hechicero": {
+        "cantrips": [
+          "lightning_lure",
+          "sword_burst",
+          "booming_blade",
+          "green_flame_blade",
+          "mind_sliver"
+        ],
+        "level1": [
+          "tashas_caustic_brew"
+        ],
+        "level2": [
+          "mind_whip"
+        ],
+        "level3": [
+          "intellect_fortress"
+        ],
+        "level6": [
+          "tashas_otherworldly_guise"
+        ],
+        "level7": [
+          "dream_of_the_blue_veil"
+        ],
+        "level9": [
+          "blade_of_disaster"
+        ]
+      },
+      "brujo": {
+        "cantrips": [
+          "lightning_lure",
+          "sword_burst",
+          "booming_blade",
+          "green_flame_blade",
+          "mind_sliver"
+        ],
+        "level3": [
+          "intellect_fortress",
+          "summon_fey",
+          "summon_shadowspawn",
+          "summon_undead",
+          "spirit_shroud"
+        ],
+        "level4": [
+          "summon_aberration"
+        ],
+        "level6": [
+          "tashas_otherworldly_guise",
+          "summon_fiend"
+        ],
+        "level7": [
+          "dream_of_the_blue_veil"
+        ],
+        "level9": [
+          "blade_of_disaster"
+        ]
+      },
+      "mago": {
+        "cantrips": [
+          "lightning_lure",
+          "sword_burst",
+          "booming_blade",
+          "green_flame_blade",
+          "mind_sliver"
+        ],
+        "level1": [
+          "tashas_caustic_brew"
+        ],
+        "level2": [
+          "mind_whip"
+        ],
+        "level3": [
+          "intellect_fortress",
+          "summon_fey",
+          "summon_shadowspawn",
+          "summon_undead",
+          "spirit_shroud"
+        ],
+        "level4": [
+          "summon_aberration",
+          "summon_construct",
+          "summon_elemental"
+        ],
+        "level6": [
+          "tashas_otherworldly_guise",
+          "summon_fiend"
+        ],
+        "level7": [
+          "dream_of_the_blue_veil"
+        ],
+        "level9": [
+          "blade_of_disaster"
+        ]
+      },
+      "bardo": {
+        "level3": [
+          "intellect_fortress"
+        ],
+        "level7": [
+          "dream_of_the_blue_veil"
+        ]
+      },
+      "druida": {
+        "level2": [
+          "summon_beast"
+        ],
+        "level3": [
+          "summon_fey"
+        ],
+        "level4": [
+          "summon_elemental"
+        ]
+      },
+      "explorador": {
+        "level2": [
+          "summon_beast"
+        ],
+        "level3": [
+          "summon_fey"
+        ],
+        "level4": [
+          "summon_elemental"
+        ]
+      },
+      "clerigo": {
+        "level3": [
+          "spirit_shroud"
+        ],
+        "level5": [
+          "summon_celestial"
+        ]
+      },
+      "paladin": {
+        "level3": [
+          "spirit_shroud"
+        ],
+        "level5": [
+          "summon_celestial"
+        ]
+      }
+    },
+    "pending_class_spells_additions": {
+      "artifice": {
+        "cantrips": [
+          "lightning_lure",
+          "sword_burst",
+          "booming_blade",
+          "green_flame_blade"
+        ],
+        "level1": [
+          "tashas_caustic_brew"
+        ],
+        "level3": [
+          "intellect_fortress"
+        ],
+        "level4": [
+          "summon_construct"
+        ]
+      }
+    }
+  }
+}

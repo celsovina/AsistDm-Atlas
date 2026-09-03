@@ -1,0 +1,4426 @@
+{
+  "module": "Guía de Xanathar para Todo",
+  "source": "Guia de Xanathar",
+  "sourcePages": "150-153 (listas de clase) / 155-179 (descripciones)",
+  "status": "Asignación de clases validada y lista para fusionar (2026-09-02)",
+  "verify": [
+    "'Tronada' (mago, truco) confirmado = Palmada Atronadora (thunderclap). Añadido a mago/trucos. [Resuelto 2026-09-02]",
+    "'Grito psíquico' aparece en hechicero 6º Y 9º en el libro; es 9º nivel. Solo se asigna a 9º. Confirmar.",
+    "'Perno de caos' (lista) = 'Virote de Caos' (descripción) = chaos_bolt. Elegir el nombre español definitivo para spells.json.",
+    "Nombres español-oficiales se tomarán de los encabezados de las páginas de descripción cuando lleguen."
+  ],
+  "roster_preview": [
+    {
+      "id": "control_flames",
+      "name_es": "Controlar llamas",
+      "level": 0,
+      "classes": [
+        "druida:cantrips",
+        "hechicero:cantrips",
+        "mago:cantrips"
+      ]
+    },
+    {
+      "id": "create_bonfire",
+      "name_es": "Crear hoguera",
+      "level": 0,
+      "classes": [
+        "brujo:cantrips",
+        "druida:cantrips",
+        "hechicero:cantrips",
+        "mago:cantrips"
+      ]
+    },
+    {
+      "id": "frostbite",
+      "name_es": "Congelación",
+      "level": 0,
+      "classes": [
+        "brujo:cantrips",
+        "druida:cantrips",
+        "hechicero:cantrips",
+        "mago:cantrips"
+      ]
+    },
+    {
+      "id": "gust",
+      "name_es": "Ráfaga",
+      "level": 0,
+      "classes": [
+        "druida:cantrips",
+        "hechicero:cantrips",
+        "mago:cantrips"
+      ]
+    },
+    {
+      "id": "infestation",
+      "name_es": "Infestación",
+      "level": 0,
+      "classes": [
+        "brujo:cantrips",
+        "druida:cantrips",
+        "hechicero:cantrips",
+        "mago:cantrips"
+      ]
+    },
+    {
+      "id": "magic_stone",
+      "name_es": "Piedra mágica",
+      "level": 0,
+      "classes": [
+        "brujo:cantrips",
+        "druida:cantrips"
+      ]
+    },
+    {
+      "id": "mold_earth",
+      "name_es": "Moldear tierra",
+      "level": 0,
+      "classes": [
+        "druida:cantrips",
+        "hechicero:cantrips",
+        "mago:cantrips"
+      ]
+    },
+    {
+      "id": "primal_savagery",
+      "name_es": "Salvajismo primigenio",
+      "level": 0,
+      "classes": [
+        "druida:cantrips"
+      ]
+    },
+    {
+      "id": "shape_water",
+      "name_es": "Transformar agua",
+      "level": 0,
+      "classes": [
+        "druida:cantrips",
+        "hechicero:cantrips",
+        "mago:cantrips"
+      ]
+    },
+    {
+      "id": "thunderclap",
+      "name_es": "Palmada atronadora",
+      "level": 0,
+      "classes": [
+        "bardo:cantrips",
+        "brujo:cantrips",
+        "druida:cantrips",
+        "hechicero:cantrips",
+        "mago:cantrips"
+      ]
+    },
+    {
+      "id": "toll_the_dead",
+      "name_es": "Tocar a los muertos",
+      "level": 0,
+      "classes": [
+        "brujo:cantrips",
+        "clerigo:cantrips",
+        "mago:cantrips"
+      ]
+    },
+    {
+      "id": "word_of_radiance",
+      "name_es": "Palabra de resplandor",
+      "level": 0,
+      "classes": [
+        "clerigo:cantrips"
+      ]
+    },
+    {
+      "id": "absorb_elements",
+      "name_es": "Absorber elementos",
+      "level": 1,
+      "classes": [
+        "druida:level1",
+        "explorador:level1",
+        "hechicero:level1",
+        "mago:level1"
+      ]
+    },
+    {
+      "id": "beast_bond",
+      "name_es": "Vínculo bestial",
+      "level": 1,
+      "classes": [
+        "druida:level1",
+        "explorador:level1"
+      ]
+    },
+    {
+      "id": "catapult",
+      "name_es": "Catapulta",
+      "level": 1,
+      "classes": [
+        "hechicero:level1",
+        "mago:level1"
+      ]
+    },
+    {
+      "id": "cause_fear",
+      "name_es": "Causar miedo",
+      "level": 1,
+      "classes": [
+        "brujo:level1",
+        "mago:level1"
+      ]
+    },
+    {
+      "id": "ceremony",
+      "name_es": "Ceremonia",
+      "level": 1,
+      "classes": [
+        "clerigo:level1",
+        "paladin:level1"
+      ]
+    },
+    {
+      "id": "chaos_bolt",
+      "name_es": "Perno de caos",
+      "level": 1,
+      "classes": [
+        "hechicero:level1"
+      ]
+    },
+    {
+      "id": "earth_tremor",
+      "name_es": "Temblor de tierra",
+      "level": 1,
+      "classes": [
+        "bardo:level1",
+        "druida:level1",
+        "hechicero:level1",
+        "mago:level1"
+      ]
+    },
+    {
+      "id": "ice_knife",
+      "name_es": "Cuchillo de hielo",
+      "level": 1,
+      "classes": [
+        "druida:level1",
+        "hechicero:level1",
+        "mago:level1"
+      ]
+    },
+    {
+      "id": "snare",
+      "name_es": "Trampa de lazo",
+      "level": 1,
+      "classes": [
+        "druida:level1",
+        "explorador:level1",
+        "mago:level1"
+      ]
+    },
+    {
+      "id": "zephyr_strike",
+      "name_es": "Golpe de céfiro",
+      "level": 1,
+      "classes": [
+        "explorador:level1"
+      ]
+    },
+    {
+      "id": "aganazzars_scorcher",
+      "name_es": "Abrasador de Aganazzar",
+      "level": 2,
+      "classes": [
+        "hechicero:level2",
+        "mago:level2"
+      ]
+    },
+    {
+      "id": "dragons_breath",
+      "name_es": "Aliento del dragón",
+      "level": 2,
+      "classes": [
+        "hechicero:level2",
+        "mago:level2"
+      ]
+    },
+    {
+      "id": "dust_devil",
+      "name_es": "Diablo de polvo",
+      "level": 2,
+      "classes": [
+        "druida:level2",
+        "hechicero:level2",
+        "mago:level2"
+      ]
+    },
+    {
+      "id": "earthbind",
+      "name_es": "Atar a la Tierra",
+      "level": 2,
+      "classes": [
+        "brujo:level2",
+        "druida:level2",
+        "hechicero:level2",
+        "mago:level2"
+      ]
+    },
+    {
+      "id": "healing_spirit",
+      "name_es": "Espíritu curativo",
+      "level": 2,
+      "classes": [
+        "druida:level2",
+        "explorador:level2"
+      ]
+    },
+    {
+      "id": "maximilians_earthen_grasp",
+      "name_es": "Agarre de tierra de Maximlliano",
+      "level": 2,
+      "classes": [
+        "hechicero:level2",
+        "mago:level2"
+      ]
+    },
+    {
+      "id": "mind_spike",
+      "name_es": "Espina mental",
+      "level": 2,
+      "classes": [
+        "brujo:level2",
+        "hechicero:level2",
+        "mago:level2"
+      ]
+    },
+    {
+      "id": "pyrotechnics",
+      "name_es": "Pirotecnia",
+      "level": 2,
+      "classes": [
+        "bardo:level2",
+        "hechicero:level2",
+        "mago:level2"
+      ]
+    },
+    {
+      "id": "shadow_blade",
+      "name_es": "Hoja de sombra",
+      "level": 2,
+      "classes": [
+        "brujo:level2",
+        "hechicero:level2",
+        "mago:level2"
+      ]
+    },
+    {
+      "id": "skywrite",
+      "name_es": "Escritura celeste",
+      "level": 2,
+      "classes": [
+        "bardo:level2",
+        "druida:level2",
+        "mago:level2"
+      ]
+    },
+    {
+      "id": "snilloccs_snowball_swarm",
+      "name_es": "Tormenta de bolas de nieve de Snilloc",
+      "level": 2,
+      "classes": [
+        "hechicero:level2",
+        "mago:level2"
+      ]
+    },
+    {
+      "id": "warding_wind",
+      "name_es": "Viento de salvaguardia",
+      "level": 2,
+      "classes": [
+        "bardo:level2",
+        "druida:level2",
+        "hechicero:level2",
+        "mago:level2"
+      ]
+    },
+    {
+      "id": "catnap",
+      "name_es": "Siestecita",
+      "level": 3,
+      "classes": [
+        "bardo:level3",
+        "hechicero:level3",
+        "mago:level3"
+      ]
+    },
+    {
+      "id": "enemies_abound",
+      "name_es": "Enemigos abundantes",
+      "level": 3,
+      "classes": [
+        "bardo:level3",
+        "brujo:level3",
+        "hechicero:level3",
+        "mago:level3"
+      ]
+    },
+    {
+      "id": "erupting_earth",
+      "name_es": "Tierra en erupción",
+      "level": 3,
+      "classes": [
+        "druida:level3",
+        "hechicero:level3",
+        "mago:level3"
+      ]
+    },
+    {
+      "id": "flame_arrows",
+      "name_es": "Flechas flamígeras",
+      "level": 3,
+      "classes": [
+        "druida:level3",
+        "explorador:level3",
+        "hechicero:level3",
+        "mago:level3"
+      ]
+    },
+    {
+      "id": "life_transference",
+      "name_es": "Transferencia de vida",
+      "level": 3,
+      "classes": [
+        "clerigo:level3",
+        "mago:level3"
+      ]
+    },
+    {
+      "id": "melfs_minute_meteors",
+      "name_es": "Meteoros diminutos de Melf",
+      "level": 3,
+      "classes": [
+        "hechicero:level3",
+        "mago:level3"
+      ]
+    },
+    {
+      "id": "summon_lesser_demons",
+      "name_es": "Invocar demonios menores",
+      "level": 3,
+      "classes": [
+        "brujo:level3",
+        "mago:level3"
+      ]
+    },
+    {
+      "id": "thunder_step",
+      "name_es": "Paso de trueno",
+      "level": 3,
+      "classes": [
+        "brujo:level3",
+        "hechicero:level3",
+        "mago:level3"
+      ]
+    },
+    {
+      "id": "tidal_wave",
+      "name_es": "Ola de marea",
+      "level": 3,
+      "classes": [
+        "druida:level3",
+        "hechicero:level3",
+        "mago:level3"
+      ]
+    },
+    {
+      "id": "tiny_servant",
+      "name_es": "Servidor minúsculo",
+      "level": 3,
+      "classes": [
+        "mago:level3"
+      ]
+    },
+    {
+      "id": "wall_of_sand",
+      "name_es": "Muro de arena",
+      "level": 3,
+      "classes": [
+        "mago:level3"
+      ]
+    },
+    {
+      "id": "wall_of_water",
+      "name_es": "Muro de agua",
+      "level": 3,
+      "classes": [
+        "druida:level3",
+        "hechicero:level3",
+        "mago:level3"
+      ]
+    },
+    {
+      "id": "charm_monster",
+      "name_es": "Hechizar Monstruo",
+      "level": 4,
+      "classes": [
+        "bardo:level4",
+        "brujo:level4",
+        "druida:level4",
+        "hechicero:level4",
+        "mago:level4"
+      ]
+    },
+    {
+      "id": "elemental_bane",
+      "name_es": "Perdición elemental",
+      "level": 4,
+      "classes": [
+        "brujo:level4",
+        "druida:level4",
+        "mago:level4"
+      ]
+    },
+    {
+      "id": "find_greater_steed",
+      "name_es": "Encontrar corcel mayor",
+      "level": 4,
+      "classes": [
+        "paladin:level4"
+      ]
+    },
+    {
+      "id": "guardian_of_nature",
+      "name_es": "Guardián de la naturaleza",
+      "level": 4,
+      "classes": [
+        "druida:level4",
+        "explorador:level4"
+      ]
+    },
+    {
+      "id": "shadow_of_moil",
+      "name_es": "Sombra de moil",
+      "level": 4,
+      "classes": [
+        "brujo:level4"
+      ]
+    },
+    {
+      "id": "sickening_radiance",
+      "name_es": "Resplandor enfermizo",
+      "level": 4,
+      "classes": [
+        "brujo:level4",
+        "hechicero:level4",
+        "mago:level4"
+      ]
+    },
+    {
+      "id": "storm_sphere",
+      "name_es": "Esfera de tormenta",
+      "level": 4,
+      "classes": [
+        "hechicero:level4",
+        "mago:level4"
+      ]
+    },
+    {
+      "id": "summon_greater_demon",
+      "name_es": "Invocar demonio mayor",
+      "level": 4,
+      "classes": [
+        "brujo:level4",
+        "mago:level4"
+      ]
+    },
+    {
+      "id": "vitriolic_sphere",
+      "name_es": "Esfera vitriólica",
+      "level": 4,
+      "classes": [
+        "hechicero:level4",
+        "mago:level4"
+      ]
+    },
+    {
+      "id": "watery_sphere",
+      "name_es": "Esfera acuosa",
+      "level": 4,
+      "classes": [
+        "druida:level4",
+        "hechicero:level4",
+        "mago:level4"
+      ]
+    },
+    {
+      "id": "control_winds",
+      "name_es": "Controlar vientos",
+      "level": 5,
+      "classes": [
+        "druida:level5",
+        "hechicero:level5",
+        "mago:level5"
+      ]
+    },
+    {
+      "id": "danse_macabre",
+      "name_es": "Danza macabra",
+      "level": 5,
+      "classes": [
+        "brujo:level5",
+        "mago:level5"
+      ]
+    },
+    {
+      "id": "dawn",
+      "name_es": "Amanecer",
+      "level": 5,
+      "classes": [
+        "clerigo:level5",
+        "mago:level5"
+      ]
+    },
+    {
+      "id": "enervation",
+      "name_es": "Enervación",
+      "level": 5,
+      "classes": [
+        "brujo:level5",
+        "hechicero:level5",
+        "mago:level5"
+      ]
+    },
+    {
+      "id": "far_step",
+      "name_es": "Paso lejano",
+      "level": 5,
+      "classes": [
+        "brujo:level5",
+        "hechicero:level5",
+        "mago:level5"
+      ]
+    },
+    {
+      "id": "holy_weapon",
+      "name_es": "Arma sagrada",
+      "level": 5,
+      "classes": [
+        "clerigo:level5",
+        "paladin:level5"
+      ]
+    },
+    {
+      "id": "immolation",
+      "name_es": "Inmolación",
+      "level": 5,
+      "classes": [
+        "hechicero:level5",
+        "mago:level5"
+      ]
+    },
+    {
+      "id": "infernal_calling",
+      "name_es": "Llamada infernal",
+      "level": 5,
+      "classes": [
+        "brujo:level5",
+        "mago:level5"
+      ]
+    },
+    {
+      "id": "maelstrom",
+      "name_es": "Vorágine",
+      "level": 5,
+      "classes": [
+        "druida:level5"
+      ]
+    },
+    {
+      "id": "negative_energy_flood",
+      "name_es": "Inundación de energía negativa",
+      "level": 5,
+      "classes": [
+        "brujo:level5",
+        "mago:level5"
+      ]
+    },
+    {
+      "id": "skill_empowerment",
+      "name_es": "Empoderar habilidades",
+      "level": 5,
+      "classes": [
+        "bardo:level5",
+        "hechicero:level5",
+        "mago:level5"
+      ]
+    },
+    {
+      "id": "steel_wind_strike",
+      "name_es": "Golpe de viento de acero",
+      "level": 5,
+      "classes": [
+        "explorador:level5",
+        "mago:level5"
+      ]
+    },
+    {
+      "id": "synaptic_static",
+      "name_es": "Estática sináptica",
+      "level": 5,
+      "classes": [
+        "bardo:level5",
+        "brujo:level5",
+        "hechicero:level5",
+        "mago:level5"
+      ]
+    },
+    {
+      "id": "transmute_rock",
+      "name_es": "Transmutar roca",
+      "level": 5,
+      "classes": [
+        "druida:level5",
+        "mago:level5"
+      ]
+    },
+    {
+      "id": "wall_of_light",
+      "name_es": "Muro de luz",
+      "level": 5,
+      "classes": [
+        "brujo:level5",
+        "hechicero:level5",
+        "mago:level5"
+      ]
+    },
+    {
+      "id": "wrath_of_nature",
+      "name_es": "Ira de la naturaleza",
+      "level": 5,
+      "classes": [
+        "druida:level5",
+        "explorador:level5"
+      ]
+    },
+    {
+      "id": "bones_of_the_earth",
+      "name_es": "Huesos de la tierra",
+      "level": 6,
+      "classes": [
+        "druida:level6"
+      ]
+    },
+    {
+      "id": "create_homunculus",
+      "name_es": "Crear homúnculo",
+      "level": 6,
+      "classes": [
+        "mago:level6"
+      ]
+    },
+    {
+      "id": "druid_grove",
+      "name_es": "Arboleda druida",
+      "level": 6,
+      "classes": [
+        "druida:level6"
+      ]
+    },
+    {
+      "id": "investiture_of_flame",
+      "name_es": "Investidura de llamas",
+      "level": 6,
+      "classes": [
+        "brujo:level6",
+        "druida:level6",
+        "hechicero:level6",
+        "mago:level6"
+      ]
+    },
+    {
+      "id": "investiture_of_ice",
+      "name_es": "Investidura de hielo",
+      "level": 6,
+      "classes": [
+        "brujo:level6",
+        "druida:level6",
+        "hechicero:level6",
+        "mago:level6"
+      ]
+    },
+    {
+      "id": "investiture_of_stone",
+      "name_es": "Investidura de piedra",
+      "level": 6,
+      "classes": [
+        "brujo:level6",
+        "druida:level6",
+        "hechicero:level6",
+        "mago:level6"
+      ]
+    },
+    {
+      "id": "investiture_of_wind",
+      "name_es": "Investidura de viento",
+      "level": 6,
+      "classes": [
+        "brujo:level6",
+        "druida:level6",
+        "hechicero:level6",
+        "mago:level6"
+      ]
+    },
+    {
+      "id": "mental_prison",
+      "name_es": "Prisión mental",
+      "level": 6,
+      "classes": [
+        "brujo:level6",
+        "hechicero:level6",
+        "mago:level6"
+      ]
+    },
+    {
+      "id": "primordial_ward",
+      "name_es": "Custodia primordial",
+      "level": 6,
+      "classes": [
+        "druida:level6"
+      ]
+    },
+    {
+      "id": "scatter",
+      "name_es": "Dispersión",
+      "level": 6,
+      "classes": [
+        "brujo:level6",
+        "hechicero:level6",
+        "mago:level6"
+      ]
+    },
+    {
+      "id": "soul_cage",
+      "name_es": "Jaula de alma",
+      "level": 6,
+      "classes": [
+        "brujo:level6",
+        "mago:level6"
+      ]
+    },
+    {
+      "id": "tensers_transformation",
+      "name_es": "Transformación de Tenser",
+      "level": 6,
+      "classes": [
+        "mago:level6"
+      ]
+    },
+    {
+      "id": "crown_of_stars",
+      "name_es": "Corona de estrellas",
+      "level": 7,
+      "classes": [
+        "brujo:level7",
+        "hechicero:level7",
+        "mago:level7"
+      ]
+    },
+    {
+      "id": "power_word_pain",
+      "name_es": "Palabra de poder: dolor",
+      "level": 7,
+      "classes": [
+        "brujo:level7",
+        "hechicero:level7",
+        "mago:level7"
+      ]
+    },
+    {
+      "id": "temple_of_the_gods",
+      "name_es": "Templo de los dioses",
+      "level": 7,
+      "classes": [
+        "clerigo:level7"
+      ]
+    },
+    {
+      "id": "whirlwind",
+      "name_es": "Torbellino",
+      "level": 7,
+      "classes": [
+        "druida:level7",
+        "hechicero:level7",
+        "mago:level7"
+      ]
+    },
+    {
+      "id": "abi_dalzims_horrid_wilting",
+      "name_es": "Marchitamiento horrible de Abi-Dalzim",
+      "level": 8,
+      "classes": [
+        "hechicero:level8",
+        "mago:level8"
+      ]
+    },
+    {
+      "id": "illusory_dragon",
+      "name_es": "Dragón ilusorio",
+      "level": 8,
+      "classes": [
+        "mago:level8"
+      ]
+    },
+    {
+      "id": "maddening_darkness",
+      "name_es": "Oscuridad enloquecedora",
+      "level": 8,
+      "classes": [
+        "brujo:level8",
+        "mago:level8"
+      ]
+    },
+    {
+      "id": "mighty_fortress",
+      "name_es": "Fortaleza poderosa",
+      "level": 8,
+      "classes": [
+        "mago:level8"
+      ]
+    },
+    {
+      "id": "invulnerability",
+      "name_es": "Invulnerabilidad",
+      "level": 9,
+      "classes": [
+        "mago:level9"
+      ]
+    },
+    {
+      "id": "mass_polymorph",
+      "name_es": "Polimorfar en grupo",
+      "level": 9,
+      "classes": [
+        "bardo:level9",
+        "hechicero:level9",
+        "mago:level9"
+      ]
+    },
+    {
+      "id": "psychic_scream",
+      "name_es": "Grito psíquico",
+      "level": 9,
+      "classes": [
+        "bardo:level9",
+        "brujo:level9",
+        "hechicero:level9",
+        "mago:level9"
+      ]
+    }
+  ],
+  "classAssignments": {
+    "class_spells_additions": {
+      "bardo": {
+        "cantrips": [
+          "thunderclap"
+        ],
+        "level1": [
+          "earth_tremor"
+        ],
+        "level2": [
+          "skywrite",
+          "pyrotechnics",
+          "warding_wind"
+        ],
+        "level3": [
+          "enemies_abound",
+          "catnap"
+        ],
+        "level4": [
+          "charm_monster"
+        ],
+        "level5": [
+          "skill_empowerment",
+          "synaptic_static"
+        ],
+        "level9": [
+          "psychic_scream",
+          "mass_polymorph"
+        ]
+      },
+      "brujo": {
+        "cantrips": [
+          "frostbite",
+          "create_bonfire",
+          "infestation",
+          "magic_stone",
+          "thunderclap",
+          "toll_the_dead"
+        ],
+        "level1": [
+          "cause_fear"
+        ],
+        "level2": [
+          "earthbind",
+          "mind_spike",
+          "shadow_blade"
+        ],
+        "level3": [
+          "enemies_abound",
+          "summon_lesser_demons",
+          "thunder_step"
+        ],
+        "level4": [
+          "charm_monster",
+          "summon_greater_demon",
+          "elemental_bane",
+          "sickening_radiance",
+          "shadow_of_moil"
+        ],
+        "level5": [
+          "danse_macabre",
+          "enervation",
+          "synaptic_static",
+          "negative_energy_flood",
+          "infernal_calling",
+          "wall_of_light",
+          "far_step"
+        ],
+        "level6": [
+          "investiture_of_ice",
+          "investiture_of_flame",
+          "investiture_of_stone",
+          "investiture_of_wind",
+          "mental_prison",
+          "scatter",
+          "soul_cage"
+        ],
+        "level7": [
+          "crown_of_stars",
+          "power_word_pain"
+        ],
+        "level8": [
+          "maddening_darkness"
+        ],
+        "level9": [
+          "psychic_scream"
+        ]
+      },
+      "clerigo": {
+        "cantrips": [
+          "word_of_radiance",
+          "toll_the_dead"
+        ],
+        "level1": [
+          "ceremony"
+        ],
+        "level3": [
+          "life_transference"
+        ],
+        "level5": [
+          "dawn",
+          "holy_weapon"
+        ],
+        "level7": [
+          "temple_of_the_gods"
+        ]
+      },
+      "druida": {
+        "cantrips": [
+          "control_flames",
+          "create_bonfire",
+          "frostbite",
+          "infestation",
+          "mold_earth",
+          "thunderclap",
+          "magic_stone",
+          "gust",
+          "primal_savagery",
+          "shape_water"
+        ],
+        "level1": [
+          "absorb_elements",
+          "ice_knife",
+          "earth_tremor",
+          "snare",
+          "beast_bond"
+        ],
+        "level2": [
+          "earthbind",
+          "dust_devil",
+          "skywrite",
+          "healing_spirit",
+          "warding_wind"
+        ],
+        "level3": [
+          "flame_arrows",
+          "wall_of_water",
+          "tidal_wave",
+          "erupting_earth"
+        ],
+        "level4": [
+          "watery_sphere",
+          "guardian_of_nature",
+          "charm_monster",
+          "elemental_bane"
+        ],
+        "level5": [
+          "control_winds",
+          "wrath_of_nature",
+          "transmute_rock",
+          "maelstrom"
+        ],
+        "level6": [
+          "druid_grove",
+          "primordial_ward",
+          "bones_of_the_earth",
+          "investiture_of_ice",
+          "investiture_of_flame",
+          "investiture_of_stone",
+          "investiture_of_wind"
+        ],
+        "level7": [
+          "whirlwind"
+        ]
+      },
+      "explorador": {
+        "level1": [
+          "absorb_elements",
+          "zephyr_strike",
+          "snare",
+          "beast_bond"
+        ],
+        "level2": [
+          "healing_spirit"
+        ],
+        "level3": [
+          "flame_arrows"
+        ],
+        "level4": [
+          "guardian_of_nature"
+        ],
+        "level5": [
+          "steel_wind_strike",
+          "wrath_of_nature"
+        ]
+      },
+      "hechicero": {
+        "cantrips": [
+          "frostbite",
+          "control_flames",
+          "create_bonfire",
+          "infestation",
+          "mold_earth",
+          "thunderclap",
+          "gust",
+          "shape_water"
+        ],
+        "level1": [
+          "absorb_elements",
+          "catapult",
+          "ice_knife",
+          "chaos_bolt",
+          "earth_tremor"
+        ],
+        "level2": [
+          "aganazzars_scorcher",
+          "maximilians_earthen_grasp",
+          "dragons_breath",
+          "earthbind",
+          "dust_devil",
+          "mind_spike",
+          "shadow_blade",
+          "pyrotechnics",
+          "snilloccs_snowball_swarm",
+          "warding_wind"
+        ],
+        "level3": [
+          "enemies_abound",
+          "flame_arrows",
+          "melfs_minute_meteors",
+          "wall_of_water",
+          "tidal_wave",
+          "thunder_step",
+          "catnap",
+          "erupting_earth"
+        ],
+        "level4": [
+          "watery_sphere",
+          "storm_sphere",
+          "vitriolic_sphere",
+          "charm_monster",
+          "sickening_radiance"
+        ],
+        "level5": [
+          "control_winds",
+          "skill_empowerment",
+          "enervation",
+          "synaptic_static",
+          "immolation",
+          "wall_of_light",
+          "far_step"
+        ],
+        "level6": [
+          "scatter",
+          "investiture_of_ice",
+          "investiture_of_flame",
+          "investiture_of_stone",
+          "investiture_of_wind",
+          "mental_prison"
+        ],
+        "level7": [
+          "crown_of_stars",
+          "power_word_pain",
+          "whirlwind"
+        ],
+        "level8": [
+          "abi_dalzims_horrid_wilting"
+        ],
+        "level9": [
+          "psychic_scream",
+          "mass_polymorph"
+        ]
+      },
+      "mago": {
+        "cantrips": [
+          "frostbite",
+          "control_flames",
+          "create_bonfire",
+          "infestation",
+          "mold_earth",
+          "gust",
+          "toll_the_dead",
+          "shape_water",
+          "thunderclap"
+        ],
+        "level1": [
+          "absorb_elements",
+          "catapult",
+          "cause_fear",
+          "ice_knife",
+          "earth_tremor",
+          "snare"
+        ],
+        "level2": [
+          "aganazzars_scorcher",
+          "maximilians_earthen_grasp",
+          "dragons_breath",
+          "earthbind",
+          "dust_devil",
+          "skywrite",
+          "mind_spike",
+          "shadow_blade",
+          "pyrotechnics",
+          "snilloccs_snowball_swarm",
+          "warding_wind"
+        ],
+        "level3": [
+          "enemies_abound",
+          "flame_arrows",
+          "summon_lesser_demons",
+          "wall_of_sand",
+          "wall_of_water",
+          "melfs_minute_meteors",
+          "tidal_wave",
+          "thunder_step",
+          "tiny_servant",
+          "catnap",
+          "erupting_earth",
+          "life_transference"
+        ],
+        "level4": [
+          "watery_sphere",
+          "storm_sphere",
+          "vitriolic_sphere",
+          "charm_monster",
+          "summon_greater_demon",
+          "elemental_bane",
+          "sickening_radiance"
+        ],
+        "level5": [
+          "dawn",
+          "control_winds",
+          "danse_macabre",
+          "skill_empowerment",
+          "enervation",
+          "synaptic_static",
+          "steel_wind_strike",
+          "immolation",
+          "negative_energy_flood",
+          "infernal_calling",
+          "wall_of_light",
+          "far_step",
+          "transmute_rock"
+        ],
+        "level6": [
+          "create_homunculus",
+          "scatter",
+          "investiture_of_ice",
+          "investiture_of_flame",
+          "investiture_of_stone",
+          "investiture_of_wind",
+          "soul_cage",
+          "mental_prison",
+          "tensers_transformation"
+        ],
+        "level7": [
+          "crown_of_stars",
+          "power_word_pain",
+          "whirlwind"
+        ],
+        "level8": [
+          "illusory_dragon",
+          "mighty_fortress",
+          "abi_dalzims_horrid_wilting",
+          "maddening_darkness"
+        ],
+        "level9": [
+          "psychic_scream",
+          "invulnerability",
+          "mass_polymorph"
+        ]
+      },
+      "paladin": {
+        "level1": [
+          "ceremony"
+        ],
+        "level4": [
+          "find_greater_steed"
+        ],
+        "level5": [
+          "holy_weapon"
+        ]
+      }
+    }
+  },
+  "spells": [
+    {
+      "id": "aganazzars_scorcher",
+      "name": "Abrasador de Aganazzar",
+      "school": "Evocación",
+      "level": 2,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Instantáneo",
+      "concentration": false,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Una escama de dragón rojo"
+      ],
+      "description": "Una línea de llamas rugientes de 30 ft de largo y 5 ft de ancho emana de ti en la dirección que elijas. Cada criatura en la línea debe hacer una tirada de salvación de Destreza. Una criatura recibe 3d8 de daño de fuego en una salvación fallida, o la mitad de daño en una exitosa.",
+      "upcast": "Cuando lances este conjuro usando una ranura de conjuro de 2° nivel o superior, el daño aumenta en 1d8 por cada nivel de ranura por encima de 2°.",
+      "damage": {
+        "stat": "DAM",
+        "value": "3d8",
+        "mod": "Fuego"
+      },
+      "effect": "Línea de fuego",
+      "range": "30 ft",
+      "areaOfEffect": "Línea de 30 ft de largo y 5 ft de ancho",
+      "savingThrow": {
+        "type": "Destreza",
+        "dc": null,
+        "effect": "Mitad de daño si supera la tirada"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "absorb_elements",
+      "name": "Absorber Elementos",
+      "school": "Abjuración",
+      "level": 1,
+      "ritual": false,
+      "castingTime": "1 reacción",
+      "duration": "1 turno",
+      "concentration": false,
+      "components": [
+        "S"
+      ],
+      "materials": [],
+      "description": "Lanzas este conjuro como reacción al recibir daño de ácido, frío, fuego, rayo o trueno. El conjuro captura parte de la energía entrante, disminuyendo su efecto en ti y almacenándola para tu próximo ataque cuerpo a cuerpo. Tienes resistencia al tipo de daño desencadenante hasta el comienzo de tu siguiente turno. Además, la primera vez que golpees con un ataque cuerpo a cuerpo en tu siguiente turno, el objetivo sufre un daño adicional de 1d6 del tipo de daño almacenado, y el conjuro termina.",
+      "upcast": "Cuando lances este conjuro usando una ranura de conjuro de 2° nivel o superior, el daño adicional aumenta en 1d6 por cada nivel de ranura por encima de 1. [El libro imprime 'la sanación aumenta por 1d8'; probable errata de la traducción.]",
+      "damage": {
+        "stat": "ATAQUE",
+        "value": "1d6",
+        "mod": "Del tipo de daño absorbido; solo el siguiente ataque c/c"
+      },
+      "effect": "Resistencia reactiva a daño elemental + daño elemental al siguiente ataque",
+      "range": "Personal",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "maximilians_earthen_grasp",
+      "name": "Agarre de Tierra de Maximiliano",
+      "school": "Transmutación",
+      "level": 2,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 minuto (10 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Una mano en miniatura esculpida en arcilla"
+      ],
+      "description": "Eliges un espacio desocupado de 5 ft cuadrados en el suelo que puedes ver dentro del alcance. Una mano Mediana hecha de tierra compactada se eleva allí y alcanza una criatura que puedes ver a 5 ft de ella. El objetivo debe hacer una tirada de salvación de Fuerza. En una salvación fallida, el objetivo recibe 2d6 de daño contundente y queda apresado por la duración del conjuro. Como acción, puedes hacer que la mano aplaste al objetivo apresado, que debe hacer una tirada de salvación de Fuerza; recibe 2d6 de daño contundente en una fallida, o la mitad en una exitosa. Para liberarse, el objetivo apresado puede usar su acción para hacer una prueba de Fuerza contra tu CD de salvación de conjuros. Como acción, puedes hacer que la mano alcance a una criatura diferente o que se mueva a otro espacio desocupado dentro del alcance; la mano libera a cualquier objetivo apresado si haces esto.",
+      "upcast": null,
+      "damage": {
+        "stat": "DAM",
+        "value": "2d6",
+        "mod": "Contundente"
+      },
+      "effect": "Mano de tierra que apresa y aplasta",
+      "range": "30 ft",
+      "areaOfEffect": "Cuadrado de 5 ft (mano Mediana)",
+      "savingThrow": {
+        "type": "Fuerza",
+        "dc": null,
+        "effect": "Evita quedar apresado / mitad de daño al aplastar"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "dragons_breath",
+      "name": "Aliento del Dragón",
+      "school": "Transmutación",
+      "level": 2,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 minuto (10 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Un pimiento picante"
+      ],
+      "description": "Tocas una criatura dispuesta y la imbuyes con el poder de expulsar energía mágica de su boca, siempre que tenga una. Elige ácido, frío, fuego, rayo o veneno. Hasta que el conjuro termine, la criatura puede usar una acción para exhalar energía del tipo elegido en un cono de 15 ft. Cada criatura en esa área debe hacer una tirada de salvación de Destreza, recibiendo 3d6 de daño del tipo elegido en una salvación fallida, o la mitad de daño en una exitosa.",
+      "upcast": "Cuando lances este conjuro usando una ranura de conjuro de nivel 3 o superior, el daño aumenta en 1d6 por cada nivel de ranura por encima de 2°.",
+      "damage": {
+        "stat": "DAM",
+        "value": "3d6",
+        "mod": "Ácido, frío, fuego, rayo o veneno (a elección)"
+      },
+      "effect": "Otorga a un aliado un aliento de dragón en cono",
+      "range": "Toque",
+      "areaOfEffect": "Cono de 15 ft",
+      "savingThrow": {
+        "type": "Destreza",
+        "dc": null,
+        "effect": "Mitad de daño si supera la tirada"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "dawn",
+      "name": "Amanecer",
+      "school": "Evocación",
+      "level": 5,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 minuto (10 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Un colgante de explosión solar con un valor de al menos 100 po"
+      ],
+      "description": "La luz del amanecer brilla en una ubicación que especifiques dentro del alcance. Hasta que termine el conjuro, un cilindro de luz brillante de 30 ft de radio y 40 ft de altura brilla allí. Esta luz es luz solar. Cuando aparece el cilindro, cada criatura en él debe hacer una tirada de salvación de Constitución, recibiendo 4d10 de daño radiante en una salvación fallida, o la mitad de daño en una exitosa. Una criatura también debe hacer esta tirada cada vez que termina su turno en el cilindro. Si estás a no más de 60 ft del cilindro, puedes moverlo hasta 60 ft como acción adicional en tu turno.",
+      "upcast": null,
+      "damage": {
+        "stat": "DAM",
+        "value": "4d10",
+        "mod": "Radiante (luz solar)"
+      },
+      "effect": "Cilindro de luz solar que daña repetidamente",
+      "range": "60 ft",
+      "areaOfEffect": "Cilindro de 30 ft de radio y 40 ft de altura",
+      "savingThrow": {
+        "type": "Constitución",
+        "dc": null,
+        "effect": "Mitad de daño si supera la tirada"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "druid_grove",
+      "name": "Arboleda Druida",
+      "school": "Abjuración",
+      "level": 6,
+      "ritual": false,
+      "castingTime": "10 minutos",
+      "duration": "24 horas",
+      "concentration": false,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Muérdago cosechado con una hoz de oro bajo una luna llena, consumido por el conjuro"
+      ],
+      "description": "Invocas a los espíritus de la naturaleza para proteger un área al aire libre o bajo tierra, tan pequeña como un cubo de 30 ft o tan grande como un cubo de 90 ft (los edificios y estructuras quedan excluidos). Si lanzas este conjuro en la misma zona todos los días durante un año, dura hasta que sea disipado. Al lanzarlo puedes designar criaturas amigas inmunes a los efectos y una contraseña que otorga inmunidad al que la pronuncia. Toda la zona irradia magia; un disipar magia con éxito elimina solo uno de los efectos. El conjuro crea: (Niebla sólida) casillas de 5 ft con niebla espesa de 10 ft de alto que oscurece y cuesta 2 ft extra de movimiento por pie; (Maleza aferradora) casillas con vides como enmarañar; (Guardianes de la arboleda) hasta cuatro árboles animados con perfil de árbol despertado (sin habla) que atacan a los intrusos y obedecen tus órdenes habladas mientras estés en el área, sin poder abandonarla; y un efecto mágico adicional a tu elección: una ráfaga de viento constante en dos puntos, un crecimiento espinoso, o una pared de viento en dos puntos. Para las criaturas inmunes, los efectos parecen inofensivos.",
+      "upcast": null,
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Santuario natural con niebla, maleza, árboles guardianes y un efecto extra",
+      "range": "Toque",
+      "areaOfEffect": "Cubo de 30 a 90 ft",
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "holy_weapon",
+      "name": "Arma Sagrada",
+      "school": "Evocación",
+      "level": 5,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 hora (600 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": [],
+      "description": "Imbuyes un arma que tocas con poder sagrado. Hasta que termina el conjuro, el arma emite luz brillante en un radio de 30 ft y luz tenue 30 ft más. Además, los ataques hechos con ella infligen 2d8 de daño radiante adicional en un golpe. Si el arma no es ya mágica, se convierte en una por la duración. Como acción adicional en tu turno, puedes descartar este conjuro y hacer que el arma emita un estallido de resplandor: cada criatura de tu elección que puedas ver a 30 ft o menos debe hacer una tirada de salvación de Constitución; en una fallida recibe 4d8 de daño radiante y queda ciega durante 1 minuto, en una exitosa recibe la mitad de daño y no es cegada. Una criatura ciega repite la salvación al final de cada uno de sus turnos.",
+      "upcast": null,
+      "damage": {
+        "stat": "DAM",
+        "value": "2d8",
+        "mod": "Radiante adicional en cada golpe (4d8 al detonar)"
+      },
+      "effect": "Potencia un arma con daño radiante y un estallido cegador",
+      "range": "Toque",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": "Constitución",
+        "dc": null,
+        "effect": "Al detonar: mitad de daño y sin ceguera si supera"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "earthbind",
+      "name": "Atar a la Tierra",
+      "school": "Transmutación",
+      "level": 2,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 minuto (10 turnos)",
+      "concentration": true,
+      "components": [
+        "V"
+      ],
+      "materials": [],
+      "description": "Elige una criatura que puedas ver dentro del alcance. Tiras amarillas de energía mágica se enrollan alrededor de la criatura. El objetivo debe tener éxito en una tirada de salvación de Fuerza, o su velocidad de vuelo (si tuviese) se reduce a 0 ft por la duración del conjuro. Una criatura voladora afectada desciende con seguridad a 60 ft por ronda hasta que llega al suelo o termina el conjuro.",
+      "upcast": null,
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Anula la velocidad de vuelo de una criatura",
+      "range": "300 ft",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": "Fuerza",
+        "dc": null,
+        "effect": "Sin efecto si supera la tirada"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "catapult",
+      "name": "Catapulta",
+      "school": "Transmutación",
+      "level": 1,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Instantáneo",
+      "concentration": false,
+      "components": [
+        "S"
+      ],
+      "materials": [],
+      "description": "Elige un objeto que pese entre 1 y 5 libras dentro del alcance que no se esté usando ni cargando. El objeto vuela en línea recta hasta 90 ft en la dirección que elijas antes de caer al suelo, deteniéndose antes si impacta contra una superficie sólida. Si el objeto golpea a una criatura, esa criatura debe hacer una tirada de salvación de Destreza; en una fallida el objeto la golpea y deja de moverse. Cuando el objeto golpea algo, tanto el proyectil como lo golpeado reciben 3d8 de daño contundente.",
+      "upcast": "Cuando lances este conjuro usando una ranura de conjuro de 2° nivel o superior, el peso máximo del objeto aumenta en 5 libras y el daño aumenta en 1d8 por cada nivel de ranura por encima de 1°.",
+      "damage": {
+        "stat": "DAM",
+        "value": "3d8",
+        "mod": "Contundente"
+      },
+      "effect": "Lanza un objeto como proyectil",
+      "range": "60 ft",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": "Destreza",
+        "dc": null,
+        "effect": "Evita ser golpeado por el objeto"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "cause_fear",
+      "name": "Causar Miedo",
+      "school": "Nigromancia",
+      "level": 1,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 minuto (10 turnos)",
+      "concentration": true,
+      "components": [
+        "V"
+      ],
+      "materials": [],
+      "description": "Despiertas el sentido de mortalidad en una criatura que puedas ver dentro del alcance. Un constructo o un no-muerto es inmune a este efecto. El objetivo debe tener éxito en una tirada de salvación de Sabiduría o quedar asustado de ti hasta que el conjuro termine. El objetivo asustado puede repetir la salvación al final de cada uno de sus turnos, terminando el efecto sobre sí mismo en un éxito.",
+      "upcast": "Cuando lances este conjuro usando una ranura de conjuro de nivel 2 o superior, puedes afectar una criatura adicional por cada nivel de ranura por encima de 1°. Las criaturas deben estar dentro de 30 ft unas de otras cuando las señales.",
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Asusta a una criatura",
+      "range": "60 ft",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": "Sabiduría",
+        "dc": null,
+        "effect": "Sin efecto si supera la tirada"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "ceremony",
+      "name": "Ceremonia",
+      "school": "Abjuración",
+      "level": 1,
+      "ritual": true,
+      "castingTime": "1 hora",
+      "duration": "Instantáneo",
+      "concentration": false,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "25 po de plata en polvo, consumidos por el conjuro"
+      ],
+      "description": "Realizas una ceremonia religiosa especial impregnada de magia. Al lanzarla, elige uno de los siguientes ritos, cuyo objetivo debe estar a 10 ft de ti: Expiación (tocas una criatura dispuesta cuyo alineamiento cambió y haces una prueba de Sabiduría (Perspicacia) CD 20; en un éxito, restauras su alineamiento original); Bendecir agua (conviertes un frasco de agua en agua bendita); Mayoría de edad (tocas a un humanoide adulto joven: durante 24 horas suma un d4 a cada prueba de característica; una vez por criatura); Dedicación (tocas a un humanoide que desea servir a tu dios: durante 24 horas suma un d4 a cada tirada de salvación; una vez por criatura); Rito funerario (tocas un cadáver: durante 7 días no puede volverse muerto viviente por ningún medio salvo un conjuro deseo); Boda (tocas a humanoides adultos dispuestos a casarse: durante 7 días ganan +2 a la CA mientras estén a 30 ft entre sí; se puede repetir solo si uno enviuda).",
+      "upcast": null,
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Ritos religiosos: expiación, bendecir agua, mayoría de edad, dedicación, rito funerario, boda",
+      "range": "Toque",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "frostbite",
+      "name": "Congelación",
+      "school": "Evocación",
+      "level": 0,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Instantáneo",
+      "concentration": false,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": [],
+      "description": "Haces que se forme escarcha entumecedora en una criatura que puedas ver dentro del alcance. El objetivo debe hacer una tirada de salvación de Constitución. En una salvación fallida, el objetivo recibe 1d6 de daño por frío y tiene desventaja en la siguiente tirada de ataque con arma que realice antes del final de su siguiente turno.",
+      "upcast": "El daño del conjuro aumenta en 1d6 cuando alcanzas el nivel 5 (2d6), el nivel 11 (3d6) y el nivel 17 (4d6).",
+      "damage": {
+        "stat": "DAM",
+        "value": "1d6",
+        "mod": "Frío"
+      },
+      "effect": "Truco de frío que impone desventaja al ataque",
+      "range": "60 ft",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": "Constitución",
+        "dc": null,
+        "effect": "Sin efecto si supera la tirada"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "control_flames",
+      "name": "Controlar Llamas",
+      "school": "Transmutación",
+      "level": 0,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Instantáneo o 1 hora (ver descripción)",
+      "concentration": false,
+      "components": [
+        "S"
+      ],
+      "materials": [],
+      "description": "Eliges una llama no mágica que puedas ver dentro del alcance y que quepa en un cubo de 5 ft. La afectas de una de estas maneras: expandes instantáneamente la llama 5 ft en una dirección si hay combustible; extingues instantáneamente las llamas del cubo; duplicas o reduces a la mitad el área de luz brillante y tenue que emite, cambias su color o ambos (dura 1 hora); haces que aparezcan formas simples dentro de las llamas y se animen como quieras (duran 1 hora). Si lanzas el conjuro varias veces, puedes mantener hasta tres efectos no instantáneos a la vez, y puedes descartar uno como acción.",
+      "upcast": null,
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Truco de manipulación de fuego mundano",
+      "range": "60 ft",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "control_winds",
+      "name": "Controlar Vientos",
+      "school": "Transmutación",
+      "level": 5,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 hora (600 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": [],
+      "description": "Tomas el control del aire en un cubo de 100 ft que puedas ver dentro del alcance. Elige uno de los siguientes efectos al lanzar el conjuro; dura la duración, salvo que uses tu acción para cambiar de efecto, detenerlo temporalmente o reiniciarlo. Ráfagas: un viento sopla continuamente en una dirección horizontal que designes, de intensidad calmada, moderada o fuerte; con viento fuerte, los ataques a distancia que entran/salen/pasan por el cubo tienen desventaja y moverse contra el viento cuesta 1 ft extra por pie. Corriente descendente: viento fuerte sopla hacia abajo desde la parte superior; los ataques a distancia a través del cubo o contra objetivos dentro tienen desventaja, y una criatura que vuele hacia el cubo por primera vez en un turno o empiece a volar allí debe superar una salvación de Fuerza o ser derribada. Corriente ascendente: viento que se eleva desde el lado inferior; las criaturas que terminen una caída en el cubo solo reciben la mitad del daño por caída, y un salto vertical dentro alcanza 10 ft más de lo normal.",
+      "upcast": null,
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Controla un cubo de aire: ráfagas, corriente descendente o ascendente",
+      "range": "300 ft",
+      "areaOfEffect": "Cubo de 100 ft",
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "crown_of_stars",
+      "name": "Corona de Estrellas",
+      "school": "Evocación",
+      "level": 7,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "1 hora (60 minutos)",
+      "concentration": false,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": [],
+      "description": "Siete motas de luz con forma de estrella aparecen y orbitan tu cabeza hasta que termine el conjuro. Puedes usar una acción adicional para enviar una de las motas hacia una criatura u objeto a 120 ft de ti; haz un ataque de conjuro a distancia y, en un golpe, el objetivo recibe 4d12 de daño radiante. Si golpeas o no, la mota se gasta. El conjuro termina antes si gastas la última mota. Con cuatro o más motas restantes, arrojan luz brillante en un radio de 30 ft y luz tenue 30 ft más; con una a tres motas, emiten luz tenue en un radio de 30 ft.",
+      "upcast": "Cuando lances este conjuro usando una ranura de conjuro de nivel 8 o superior, el número de motas creadas aumenta en dos por cada nivel de ranura por encima de 7°.",
+      "damage": {
+        "stat": "ATAQUE",
+        "value": "4d12",
+        "mod": "Radiante"
+      },
+      "effect": "Orbe de estrellas que disparas como acción adicional",
+      "range": "Personal",
+      "areaOfEffect": "Siete motas orbitando; ataques a 120 ft",
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "create_bonfire",
+      "name": "Crear Hoguera",
+      "school": "Conjuración",
+      "level": 0,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 minuto (10 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": [],
+      "description": "Creas una hoguera en el suelo que puedas ver dentro del alcance. Hasta que termina el conjuro, la hoguera mágica llena un cubo de 5 ft. Cualquier criatura en el espacio de la hoguera al lanzarse el conjuro debe superar una tirada de salvación de Destreza o recibir 1d8 de daño de fuego. Una criatura también debe hacer la salvación al moverse al espacio de la hoguera por primera vez en un turno o terminar su turno allí. La hoguera enciende objetos inflamables en su área que no estén siendo usados ni cargados.",
+      "upcast": "El daño de este conjuro se incrementa en 1d8 cuando alcanzas el nivel 5 (2d8), el nivel 11 (3d8) y el nivel 17 (4d8).",
+      "damage": {
+        "stat": "DAM",
+        "value": "1d8",
+        "mod": "Fuego"
+      },
+      "effect": "Hoguera mágica que daña a quien la pisa",
+      "range": "60 ft",
+      "areaOfEffect": "Cubo de 5 ft",
+      "savingThrow": {
+        "type": "Destreza",
+        "dc": null,
+        "effect": "Sin daño si supera la tirada"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "create_homunculus",
+      "name": "Crear Homúnculo",
+      "school": "Transmutación",
+      "level": 6,
+      "ritual": false,
+      "castingTime": "1 hora",
+      "duration": "Instantáneo",
+      "concentration": false,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Arcilla, ceniza y raíz de mandrágora (consumidos), y una daga con joyas incrustadas por valor de al menos 1.000 po"
+      ],
+      "description": "Mientras hablas un conjuro intrincado, te cortas con una daga incrustada de joyas y recibes 2d4 de daño penetrante que no puede reducirse de ninguna manera. Luego goteas tu sangre en los otros componentes y los tocas, transformándolos en un constructo especial llamado homúnculo (sus estadísticas están en el Manual de Monstruos). Es tu fiel compañero y muere si mueres. Cuando terminas un descanso largo, puedes gastar hasta la mitad de tus Dados de Golpe si el homúnculo está en tu mismo plano: tira cada dado, suma tu modificador de Constitución, y tanto tu máximo de puntos de golpe como el máximo y actual del homúnculo aumentan en ese total (reduciendo tu máximo a no menos de 1). Esta reducción no puede eliminarse antes de tu siguiente descanso largo, salvo por la muerte del homúnculo. Solo puedes tener un homúnculo a la vez; si lanzas el conjuro mientras el tuyo vive, el conjuro falla.",
+      "upcast": null,
+      "damage": {
+        "stat": "DAM",
+        "value": "2d4",
+        "mod": "Penetrante al lanzador (irreducible)"
+      },
+      "effect": "Crea un homúnculo permanente a costa de tu máximo de PG",
+      "range": "Toque",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "ice_knife",
+      "name": "Cuchillo de Hielo",
+      "school": "Conjuración",
+      "level": 1,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Instantáneo",
+      "concentration": false,
+      "components": [
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Una gota de agua o un trozo de hielo"
+      ],
+      "description": "Creas un fragmento de hielo y lo arrojas a una criatura dentro del alcance. Haz un ataque de conjuro a distancia contra la criatura. En un golpe, el objetivo recibe 1d10 de daño perforante. Aunque falle o acierte, el fragmento luego explota: el objetivo y cada criatura dentro de 5 ft debe tener éxito en una tirada de salvación de Destreza o recibir 2d6 de daño por frío.",
+      "upcast": "Cuando lances este conjuro usando una ranura de conjuro de 2° nivel o superior, el daño por frío aumenta en 1d6 por cada nivel de ranura por encima de 1°.",
+      "damage": {
+        "stat": "ATAQUE",
+        "value": "1d10",
+        "mod": "Perforante + explosión de 2d6 frío (salvación de Destreza)"
+      },
+      "effect": "Proyectil de hielo que explota en frío",
+      "range": "60 ft",
+      "areaOfEffect": "Explosión de 5 ft de radio",
+      "savingThrow": {
+        "type": "Destreza",
+        "dc": null,
+        "effect": "Evita el daño por frío de la explosión"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "primordial_ward",
+      "name": "Custodia Primordial",
+      "school": "Abjuración",
+      "level": 6,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 minuto (10 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": [],
+      "description": "Tienes resistencia al daño por ácido, frío, fuego, rayo y trueno mientras dure el conjuro. Cuando sufres daño de uno de esos tipos, puedes usar tu reacción para obtener inmunidad contra ese tipo de daño, incluso contra el daño desencadenante. Si lo haces, las resistencias terminan y tienes inmunidad hasta el final de tu siguiente turno, momento en el que termina el conjuro.",
+      "upcast": null,
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Resistencia a los cinco daños elementales, convertible en inmunidad breve",
+      "range": "Personal",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "danse_macabre",
+      "name": "Danza Macabra",
+      "school": "Nigromancia",
+      "level": 5,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 hora (600 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": [],
+      "description": "Hilos de poder oscuro saltan de tus dedos para perforar hasta cinco cadáveres Pequeños o Medianos que puedas ver dentro del alcance. Cada cadáver se levanta de inmediato como muerto viviente. Tú decides si es un zombi o un esqueleto (estadísticas en el Manual de Monstruos), y gana una bonificación a sus tiradas de ataque y daño igual a tu modificador de característica de lanzamiento de conjuros. Puedes usar una acción adicional para controlar mentalmente a las criaturas que creas con este conjuro, emitiendo el mismo comando a todas (deben estar a 60 ft o menos de ti). Si no emites órdenes, se defienden pero no hacen nada más. Las criaturas están bajo tu control hasta que el conjuro termina, tras lo cual se vuelven inanimadas.",
+      "upcast": "Cuando lances este conjuro usando una ranura de conjuro de nivel 6 o superior, animas hasta dos cadáveres adicionales por cada nivel de ranura por encima de 5°.",
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Anima hasta 5 cadáveres como muertos vivientes bajo tu control",
+      "range": "60 ft",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "dust_devil",
+      "name": "Diablo de Polvo",
+      "school": "Conjuración",
+      "level": 2,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 minuto (10 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Una pizca de polvo"
+      ],
+      "description": "Elige un cubo de aire de 5 ft desocupado que puedas ver dentro del alcance. Una fuerza elemental que se asemeja a un diablo del polvo aparece en el cubo y dura la duración del conjuro. Cualquier criatura que termine su turno a 5 ft del diablo del polvo debe hacer una tirada de salvación de Fuerza; en una fallida recibe 1d8 de daño contundente y es empujada 10 ft, en una exitosa la mitad del daño y no es empujada. Como acción adicional, puedes mover el diablo del polvo hasta 30 ft en cualquier dirección. Si se mueve sobre arena, polvo, tierra suelta o grava liviana, succiona el material y forma una nube de escombros de 10 ft de radio a su alrededor que dura hasta el comienzo de su próximo turno y oscurece mucho su área.",
+      "upcast": "Cuando lances este conjuro usando una ranura de conjuro de nivel 3 o superior, el daño aumenta en 1d8 por cada nivel de ranura por encima de 2°.",
+      "damage": {
+        "stat": "DAM",
+        "value": "1d8",
+        "mod": "Contundente"
+      },
+      "effect": "Torbellino móvil de polvo que golpea y empuja",
+      "range": "60 ft",
+      "areaOfEffect": "Cubo de 5 ft (móvil)",
+      "savingThrow": {
+        "type": "Fuerza",
+        "dc": null,
+        "effect": "Mitad de daño y sin empuje si supera la tirada"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "scatter",
+      "name": "Dispersión",
+      "school": "Conjuración",
+      "level": 6,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Instantáneo",
+      "concentration": false,
+      "components": [
+        "V"
+      ],
+      "materials": [],
+      "description": "El aire tiembla alrededor de hasta cinco criaturas de tu elección que puedas ver dentro del alcance. Una criatura no dispuesta debe tener éxito en una tirada de salvación de Sabiduría para resistir este conjuro. Teletransportas a cada objetivo afectado a un espacio desocupado que puedas ver en un radio de 120 ft de ti; ese espacio debe estar en el suelo o en un piso.",
+      "upcast": null,
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Teletransporta hasta 5 criaturas a 120 ft",
+      "range": "30 ft",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": "Sabiduría",
+        "dc": null,
+        "effect": "Una criatura no dispuesta puede resistir el traslado"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "illusory_dragon",
+      "name": "Dragón Ilusorio",
+      "school": "Ilusión",
+      "level": 8,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 minuto (10 turnos)",
+      "concentration": true,
+      "components": [
+        "S"
+      ],
+      "materials": [],
+      "description": "Al reunir hilos de material de sombras del Shadowfell, creas un dragón sombrío Enorme en un espacio desocupado que puedas ver dentro del alcance. La ilusión permanece la duración del conjuro y ocupa su espacio como si fuera una criatura. Cuando aparece, cualquiera de tus enemigos que pueda verla debe superar una tirada de salvación de Sabiduría o quedar asustado durante 1 minuto (repite la salvación al final de su turno si no tiene línea de visión con la ilusión). Como acción adicional puedes mover la ilusión hasta 60 ft y, en cualquier punto del movimiento, provocar que exhale una explosión de energía en un cono de 60 ft desde su espacio. Al crearla eliges un tipo de daño: ácido, frío, fuego, rayo, necrótico o veneno. Cada criatura en el cono hace una tirada de salvación de Inteligencia, recibiendo 7d6 de daño del tipo elegido en una fallida, o la mitad en una exitosa. La ilusión es tangible pero los ataques la atraviesan, tiene éxito en todas las salvaciones y es inmune a todo daño y condición. Con éxito en una prueba de Inteligencia (Investigación) contra tu CD de salvación de conjuros, una criatura la reconoce como ilusión, puede ver a través de ella y tiene ventaja en salvaciones contra su aliento.",
+      "upcast": null,
+      "damage": {
+        "stat": "DAM",
+        "value": "7d6",
+        "mod": "Ácido, frío, fuego, rayo, necrótico o veneno (a elección)"
+      },
+      "effect": "Dragón ilusorio que asusta y exhala un cono de energía",
+      "range": "120 ft",
+      "areaOfEffect": "Cono de 60 ft (aliento)",
+      "savingThrow": {
+        "type": "Inteligencia",
+        "dc": null,
+        "effect": "Mitad de daño si supera la tirada"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "skill_empowerment",
+      "name": "Empoderar Habilidades",
+      "school": "Transmutación",
+      "level": 5,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 hora (600 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": [],
+      "description": "Tu magia profundiza la comprensión de una criatura de su propio talento. Tocas una criatura dispuesta y le das experiencia en una habilidad de tu elección: hasta que el conjuro termine, la criatura duplica su bonificador de competencia para las pruebas de habilidad que haga con esa habilidad. Debes elegir una habilidad en la que el objetivo sea competente y que no se esté beneficiando ya de un efecto, como Pericia, que duplique su bono de competencia.",
+      "upcast": null,
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Duplica el bono de competencia en una habilidad",
+      "range": "Toque",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "enemies_abound",
+      "name": "Enemigos Abundantes",
+      "school": "Encantamiento",
+      "level": 3,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 minuto (10 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": [],
+      "description": "Llegas a la mente de una criatura que puedas ver y la obligas a hacer una tirada de salvación de Inteligencia. Una criatura tiene éxito automáticamente si es inmune a estar asustada. En una salvación fallida, el objetivo pierde la habilidad de distinguir amigo de enemigo, considerando a todas las criaturas que puede ver como enemigos hasta que el conjuro termine. Cada vez que el objetivo recibe daño, puede repetir la salvación, terminando el efecto en un éxito. Siempre que la criatura afectada elija un objetivo, debe elegirlo al azar entre las criaturas que puede ver. Si un enemigo provoca un ataque de oportunidad de la criatura afectada, esta debe realizar ese ataque si es capaz.",
+      "upcast": null,
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Hace que una criatura vea a todos como enemigos y ataque al azar",
+      "range": "120 ft",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": "Inteligencia",
+        "dc": null,
+        "effect": "Sin efecto si supera la tirada"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "enervation",
+      "name": "Enervación",
+      "school": "Nigromancia",
+      "level": 5,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 minuto (10 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": [],
+      "description": "Un tendón de oscuridad se extiende desde ti, tocando una criatura que puedas ver dentro del alcance para drenar su vida. El objetivo debe hacer una tirada de salvación de Destreza. En una salvación exitosa, recibe 2d8 de daño necrótico y el conjuro termina. En una salvación fallida, recibe 4d8 de daño necrótico y, hasta que el conjuro finalice, puedes usar tu acción en cada uno de tus turnos para infligir automáticamente 4d8 de daño necrótico al objetivo. El conjuro termina si usas tu acción para otra cosa, si el objetivo sale del alcance o si obtiene cobertura total de ti. Cada vez que el conjuro causa daño a un objetivo, recuperas puntos de golpe iguales a la mitad del daño necrótico infligido.",
+      "upcast": "Cuando lances este conjuro usando una ranura de conjuro de nivel 6 o superior, el daño aumenta en 1d8 por cada nivel de ranura por encima de 5°.",
+      "damage": {
+        "stat": "DAM",
+        "value": "4d8",
+        "mod": "Necrótico (2d8 si supera; te curas la mitad del daño)"
+      },
+      "effect": "Drena vida con daño necrótico repetido y te cura",
+      "range": "60 ft",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": "Destreza",
+        "dc": null,
+        "effect": "Solo 2d8 y el conjuro termina si supera"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "skywrite",
+      "name": "Escritura Celeste",
+      "school": "Transmutación",
+      "level": 2,
+      "ritual": true,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 hora (600 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": [],
+      "description": "Puedes hacer que se formen hasta diez palabras en una parte del cielo que puedas ver. Las palabras parecen estar hechas de nube y permanecen hasta el final de la duración del conjuro. Se disipan cuando el conjuro termina. Un viento fuerte puede dispersar las nubes y terminar el conjuro antes.",
+      "upcast": null,
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Escribe palabras de nube en el cielo",
+      "range": "Vista",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "watery_sphere",
+      "name": "Esfera Acuosa",
+      "school": "Conjuración",
+      "level": 4,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 minuto (10 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Una gota de agua"
+      ],
+      "description": "Conjuras una esfera de agua con un radio de 5 ft en un punto que puedas ver dentro del alcance. La esfera puede flotar pero no más de 10 ft del suelo y permanece hasta el final de la duración. Cualquier criatura en el espacio de la esfera debe hacer una tirada de salvación de Fuerza; en una exitosa es expulsada al espacio no ocupado más cercano fuera de la esfera (una criatura Enorme o mayor tiene éxito automático; una Grande o menor puede elegir fallar), en una fallida queda apresada por la esfera y engullida. Al final de cada turno repite la salvación, terminando el efecto en un éxito. La esfera contiene hasta cuatro criaturas Medianas o menores, o una Grande; si excede la capacidad, una criatura aleatoria ya apresada cae de ella y queda derribada a 5 ft. Como acción, puedes mover la esfera hasta 30 ft en línea recta; si se mueve sobre un foso, acantilado u otra caída, desciende con seguridad hasta flotar a 10 ft del suelo. Puedes embestir criaturas con la esfera, obligándolas a la salvación. Cuando termina el conjuro, la esfera cae y apaga las llamas normales a 30 ft; cualquier criatura apresada queda derribada donde cae y el agua se desvanece.",
+      "upcast": null,
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Esfera de agua móvil que apresa y engulle criaturas",
+      "range": "90 ft",
+      "areaOfEffect": "Esfera de 5 ft de radio (móvil)",
+      "savingThrow": {
+        "type": "Fuerza",
+        "dc": null,
+        "effect": "Es expulsada de la esfera si supera / repite al final de su turno"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "storm_sphere",
+      "name": "Esfera de Tormenta",
+      "school": "Evocación",
+      "level": 4,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 minuto (10 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": [],
+      "description": "Una esfera de 20 ft de radio de aire giratorio nace, centrada en un punto que elijas dentro del alcance, y permanece hasta el final de la duración. Cada criatura en la esfera al aparecer, o que termine su turno allí, debe tener éxito en una tirada de salvación de Fuerza o recibir 2d6 de daño contundente. El espacio dentro de la esfera es terreno difícil. Hasta que termine el conjuro, puedes usar una acción adicional en cada uno de tus turnos para hacer que un rayo salte desde el centro de la esfera hacia una criatura que elijas a 60 ft del centro: haz un ataque de conjuro a distancia (con ventaja si el objetivo está en la esfera), y en un golpe el objetivo recibe 4d6 de daño de relámpago. Las criaturas a menos de 30 ft de la esfera tienen desventaja en las pruebas de Sabiduría (Percepción) hechas para escuchar.",
+      "upcast": "Cuando lances este conjuro usando una ranura de conjuro de 5° nivel o superior, el daño de cada uno de sus efectos aumenta en 1d6 por cada nivel de ranura por encima de 4°.",
+      "damage": {
+        "stat": "DAM",
+        "value": "2d6",
+        "mod": "Contundente (esfera) / 4d6 relámpago (rayo, ataque de conjuro)"
+      },
+      "effect": "Esfera de tormenta que golpea y dispara rayos",
+      "range": "150 ft",
+      "areaOfEffect": "Esfera de 20 ft de radio",
+      "savingThrow": {
+        "type": "Fuerza",
+        "dc": null,
+        "effect": "Sin daño contundente si supera la tirada"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "vitriolic_sphere",
+      "name": "Esfera Vitriólica",
+      "school": "Evocación",
+      "level": 4,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Instantáneo",
+      "concentration": false,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Una gota de bilis de babosa gigante"
+      ],
+      "description": "Apuntas a una ubicación dentro del alcance, y una bola brillante de ácido esmeralda de 1 ft de diámetro se vierte allí y explota en una esfera de 20 ft de radio. Cada criatura en esa área debe hacer una tirada de salvación de Destreza. En una salvación fallida, una criatura recibe 10d4 de daño ácido y otros 5d4 de daño ácido al final de su siguiente turno. En una salvación exitosa, una criatura recibe la mitad del daño inicial y ningún daño al final de su siguiente turno.",
+      "upcast": "Cuando lances este conjuro usando una ranura de conjuro de 5° nivel o superior, el daño inicial aumenta en 2d4 por cada nivel de ranura por encima de 4°.",
+      "damage": {
+        "stat": "DAM",
+        "value": "10d4",
+        "mod": "Ácido (+5d4 ácido al final del siguiente turno)"
+      },
+      "effect": "Explosión de ácido con daño persistente",
+      "range": "150 ft",
+      "areaOfEffect": "Esfera de 20 ft de radio",
+      "savingThrow": {
+        "type": "Destreza",
+        "dc": null,
+        "effect": "Mitad del daño inicial y sin daño persistente si supera"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "mind_spike",
+      "name": "Espina Mental",
+      "school": "Adivinación",
+      "level": 2,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 hora (600 turnos)",
+      "concentration": true,
+      "components": [
+        "S"
+      ],
+      "materials": [],
+      "description": "Penetras en la mente de una criatura que puedas ver dentro del alcance. El objetivo debe hacer una tirada de salvación de Sabiduría, recibiendo 3d8 de daño psíquico en una salvación fallida, o la mitad de daño en una exitosa. En una salvación fallida, también conoces siempre la ubicación del objetivo hasta que el conjuro finalice, pero solo mientras estéis en el mismo plano de existencia. Mientras tengas este conocimiento, el objetivo no puede ocultarse de ti y, si es invisible, no obtiene ningún beneficio de esa condición contra ti.",
+      "upcast": "Cuando lances este conjuro usando una ranura de conjuro de 3° nivel o superior, el daño aumenta en 1d6 por cada nivel de ranura por encima de 2°.",
+      "damage": {
+        "stat": "DAM",
+        "value": "3d8",
+        "mod": "Psíquico"
+      },
+      "effect": "Daño psíquico y rastreo del objetivo",
+      "range": "60 ft",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": "Sabiduría",
+        "dc": null,
+        "effect": "Mitad de daño y sin rastreo si supera"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "healing_spirit",
+      "name": "Espíritu Curativo",
+      "school": "Conjuración",
+      "level": 2,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 minuto (10 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": [],
+      "description": "Llamas a un espíritu de la naturaleza para calmar a los heridos. El espíritu intangible aparece en un cubo de 5 ft que puedas ver dentro del alcance y se ve como una bestia o feérico transparente (a tu elección). Hasta que el conjuro termine, cada vez que tú o una criatura que puedas ver se mueve al espacio del espíritu por primera vez en un turno o comienza su turno allí, puedes hacer que el espíritu restaure 1d6 puntos de golpe a esa criatura (no requiere acción). El espíritu no puede curar constructos ni no-muertos. Como acción adicional en tu turno, puedes mover el espíritu hasta 30 ft a un espacio que puedas ver.",
+      "upcast": "Cuando lances este conjuro usando una ranura de conjuro de nivel 3 o superior, la sanación aumenta en 1d6 por cada nivel de ranura por encima de 2°.",
+      "damage": {
+        "stat": "CURE",
+        "value": "1d6",
+        "mod": "Curación por entrar/empezar el turno en su espacio"
+      },
+      "effect": "Espíritu móvil que cura a quien pasa por él",
+      "range": "60 ft",
+      "areaOfEffect": "Cubo de 5 ft (móvil)",
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "synaptic_static",
+      "name": "Estática Sináptica",
+      "school": "Encantamiento",
+      "level": 5,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Instantáneo",
+      "concentration": false,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": [],
+      "description": "Eliges un punto dentro del alcance y haces que la energía psíquica explote allí. Cada criatura en una esfera de 20 ft de radio centrada en ese punto debe hacer una tirada de salvación de Inteligencia. Una criatura con puntuación de Inteligencia de 2 o inferior no puede ser afectada. Un objetivo recibe 8d6 de daño psíquico en una salvación fallida, o la mitad de daño en una exitosa. Tras una salvación fallida, un objetivo tiene pensamientos confusos durante 1 minuto: tira un d6 y resta el número de todas sus tiradas de ataque y pruebas de característica, así como de sus tiradas de salvación de Constitución para mantener la concentración. El objetivo puede hacer una tirada de salvación de Inteligencia al final de cada uno de sus turnos, terminando el efecto en un éxito.",
+      "upcast": null,
+      "damage": {
+        "stat": "DAM",
+        "value": "8d6",
+        "mod": "Psíquico"
+      },
+      "effect": "Explosión psíquica que aturde el pensamiento",
+      "range": "120 ft",
+      "areaOfEffect": "Esfera de 20 ft de radio",
+      "savingThrow": {
+        "type": "Inteligencia",
+        "dc": null,
+        "effect": "Mitad de daño y sin penalización si supera"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "flame_arrows",
+      "name": "Flechas Flamígeras",
+      "school": "Transmutación",
+      "level": 3,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 hora (600 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": [],
+      "description": "Tocas un carcaj que contiene flechas o virotes. Cuando un objetivo es alcanzado por un ataque de arma a distancia con una pieza de munición extraída del carcaj, el objetivo recibe 1d6 de daño de fuego adicional. La magia del conjuro termina en una munición cuando golpea o falla, y el conjuro termina cuando se han extraído doce municiones del carcaj.",
+      "upcast": "Cuando lances este conjuro usando una ranura de conjuro de 4° nivel o superior, el número de piezas de munición que puedes afectar aumenta en dos por cada nivel de ranura por encima de 3°.",
+      "damage": {
+        "stat": "DAM",
+        "value": "1d6",
+        "mod": "Fuego adicional por munición"
+      },
+      "effect": "Imbuye la munición de un carcaj con daño de fuego",
+      "range": "Toque",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "mighty_fortress",
+      "name": "Fortaleza Poderosa",
+      "school": "Conjuración",
+      "level": 8,
+      "ritual": false,
+      "castingTime": "1 minuto",
+      "duration": "Instantáneo",
+      "concentration": false,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Un diamante con un valor de al menos 500 po, consumido por el conjuro"
+      ],
+      "description": "Una fortaleza de piedra brota de un área cuadrada de terreno a tu elección que puedas ver dentro del alcance. El área es de 120 ft a cada lado y no debe tener ningún edificio ni estructura dentro; cualquier criatura en el área es levantada inofensivamente a medida que la fortaleza se alza. La fortaleza tiene cuatro torretas de base cuadrada de 20 ft de lado y 30 ft de altura, una en cada esquina, conectadas por muros de piedra de 80 ft de largo que crean un área cerrada. Cada muro tiene 1 ft de grosor y está compuesto por paneles de 10 ft de ancho y 20 de alto. Puedes colocar hasta cuatro puertas de piedra en el muro exterior. Una pequeña torre se mantiene dentro del área: base cuadrada de 50 ft de lado, tres pisos con techos de 10 ft, subdividibles en tantas habitaciones como desees (mínimo 5 ft de lado), conectados por escaleras de piedra; la bodega está amueblada y contiene comida para servir un banquete de nueve platos para hasta 100 personas por día. Los muebles y alimentos creados se convierten en polvo si se retiran de la fortaleza. Un centenar de sirvientes invisibles obedece las órdenes de las criaturas que designes al lanzar el conjuro, cada uno como si fuera creado por el conjuro sirviente invisible. Las paredes, torrecillas y torre son de piedra que puede dañarse: cada sección de 10 por 10 ft tiene CA 15 y 30 puntos de golpe por pulgada de espesor, y es inmune al veneno y al daño psíquico. Después de 7 días, o si lanzas este conjuro en otro lugar, la fortaleza se desmorona inofensivamente y se hunde en el suelo. Lanzarlo en el mismo lugar una vez cada 7 días durante un año la hace permanente.",
+      "upcast": null,
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Crea una fortaleza de piedra con sirvientes invisibles",
+      "range": "1 milla",
+      "areaOfEffect": "Cuadrado de 120 ft de lado",
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "zephyr_strike",
+      "name": "Golpe de Céfiro",
+      "school": "Transmutación",
+      "level": 1,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 minuto (10 turnos)",
+      "concentration": true,
+      "components": [
+        "V"
+      ],
+      "materials": [],
+      "description": "Te mueves como el viento. Hasta que el conjuro termine, tu movimiento no provoca ataques de oportunidad. Una vez antes de que termine el conjuro, puedes darte ventaja en una tirada de ataque con arma en tu turno; ese ataque hace 1d8 de daño de fuerza adicional en un impacto. Tanto si golpeas como si fallas, tu velocidad de movimiento aumenta 30 ft hasta el final de ese turno.",
+      "upcast": null,
+      "damage": {
+        "stat": "ATAQUE",
+        "value": "1d8",
+        "mod": "Fuerza (un ataque, con ventaja)"
+      },
+      "effect": "Movilidad, ventaja a un ataque y velocidad extra",
+      "range": "Personal",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "steel_wind_strike",
+      "name": "Golpe de Viento de Acero",
+      "school": "Conjuración",
+      "level": 5,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Instantáneo",
+      "concentration": false,
+      "components": [
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Un arma cuerpo a cuerpo con valor de al menos 1 pp"
+      ],
+      "description": "Blandes el arma utilizada en el lanzamiento y luego desapareces para golpear como el viento. Elige hasta cinco criaturas que puedas ver dentro del alcance. Realiza un ataque de conjuro cuerpo a cuerpo contra cada objetivo; en un golpe, un objetivo recibe 6d10 de daño de fuerza. Luego puedes teletransportarte a un espacio desocupado que puedas ver a menos de 5 ft de uno de los objetivos que alcanzaste o no.",
+      "upcast": null,
+      "damage": {
+        "stat": "ATAQUE",
+        "value": "6d10",
+        "mod": "Fuerza (contra hasta 5 objetivos)"
+      },
+      "effect": "Ataca a hasta 5 criaturas y te teletransportas",
+      "range": "30 ft",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "psychic_scream",
+      "name": "Grito Psíquico",
+      "school": "Encantamiento",
+      "level": 9,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Instantáneo",
+      "concentration": false,
+      "components": [
+        "S"
+      ],
+      "materials": [],
+      "description": "Desatas el poder de tu mente para destruir el intelecto de hasta diez criaturas de tu elección que puedas ver dentro del alcance. Las criaturas con puntuación de Inteligencia de 2 o inferior no se ven afectadas. Cada objetivo debe hacer una tirada de salvación de Inteligencia. En una salvación fallida, un objetivo recibe 14d6 de daño psíquico y queda aturdido; en una exitosa recibe la mitad de daño y no queda aturdido. Si un objetivo muere por este daño, su cabeza explota, asumiendo que tiene una. Un objetivo aturdido puede hacer una tirada de salvación de Inteligencia al final de cada uno de sus turnos, terminando el efecto aturdidor en un éxito.",
+      "upcast": null,
+      "damage": {
+        "stat": "DAM",
+        "value": "14d6",
+        "mod": "Psíquico"
+      },
+      "effect": "Daño psíquico masivo y aturdimiento",
+      "range": "90 ft",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": "Inteligencia",
+        "dc": null,
+        "effect": "Mitad de daño y sin aturdimiento si supera"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "guardian_of_nature",
+      "name": "Guardián de la Naturaleza",
+      "school": "Transmutación",
+      "level": 4,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 minuto (10 turnos)",
+      "concentration": true,
+      "components": [
+        "V"
+      ],
+      "materials": [],
+      "description": "Un espíritu de la naturaleza responde a tu llamado y te transforma en un guardián poderoso hasta que el conjuro termine. Eliges una de las siguientes formas. Bestia Primigenia: un pelaje bestial cubre tu cuerpo y tus rasgos faciales se vuelven salvajes; tu velocidad de movimiento aumenta 10 ft, obtienes visión oscura con alcance de 120 ft, haces tiradas de ataque basadas en Fuerza con ventaja, y tus ataques de arma cuerpo a cuerpo infligen 1d6 de daño de fuerza adicional en un golpe. Gran Árbol: tu piel parece corteza, brotan hojas de tu cabello; ganas 10 puntos de golpe temporales, haces tiradas de salvación de Constitución con ventaja, haces tiradas de ataque basadas en Destreza y Sabiduría con ventaja, y mientras estés en el suelo, el suelo hasta a 15 ft de ti es terreno difícil para tus enemigos.",
+      "upcast": null,
+      "damage": {
+        "stat": "ATAQUE",
+        "value": "1d6",
+        "mod": "Fuerza adicional (solo forma Bestia Primigenia)"
+      },
+      "effect": "Te transformas en Bestia Primigenia o Gran Árbol",
+      "range": "Personal",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "find_greater_steed",
+      "name": "Hallar Corcel Mayor",
+      "school": "Conjuración",
+      "level": 4,
+      "ritual": false,
+      "castingTime": "10 minutos",
+      "duration": "Instantáneo",
+      "concentration": false,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": [],
+      "description": "Invocas un espíritu que asume la forma de un corcel leal y majestuoso. Apareciendo en un espacio desocupado dentro del alcance, el espíritu toma la forma que elijas: un grifo, un pegaso, un peryton, un lobo terrible, un rinoceronte o un tigre dientes de sable. La criatura tiene el perfil del Manual de Monstruos para esa forma, aunque es un celestial, feérico o infernal (tu elección) en lugar de su tipo normal. Además, si tiene una puntuación de Inteligencia de 5 o inferior, su Inteligencia se convierte en 6 y obtiene la capacidad de entender un idioma que hables. Controlas al corcel en combate; mientras esté a 1 milla de ti, puedes comunicarte telepáticamente. Mientras estés montado, puedes hacer que cualquier conjuro que lances que solo te tenga a ti como objetivo también afecte al corcel. El corcel desaparece temporalmente cuando cae a 0 puntos de golpe o cuando lo descartas como acción; volver a lanzar el conjuro lo reinvoca con todos sus PG y sin condiciones. No puedes tener más de una montura vinculada por este conjuro o hallar corcel a la vez. Como acción, puedes liberar la montura de su vínculo, haciendo que desaparezca permanentemente. Cada vez que el corcel desaparece, deja atrás cualquier objeto que llevara.",
+      "upcast": null,
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Invoca un corcel volador/poderoso (grifo, pegaso, tigre dientes de sable, etc.)",
+      "range": "30 ft",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "charm_monster",
+      "name": "Hechizar Monstruo",
+      "school": "Encantamiento",
+      "level": 4,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "1 hora (60 minutos)",
+      "concentration": false,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": [],
+      "description": "Intentas hechizar a una criatura que puedas ver dentro del alcance. Debe hacer una tirada de salvación de Sabiduría, y lo hace con ventaja si tú o tus compañeros estáis luchando contra ella. Si falla la salvación, queda hechizada por ti hasta el fin del conjuro o hasta que tú o tus compañeros le hagáis daño. La criatura hechizada es amistosa contigo. Cuando el conjuro termina, la criatura sabe que fue hechizada por ti.",
+      "upcast": "Cuando lances este conjuro usando una ranura de conjuro de 5° nivel o superior, puedes afectar una criatura adicional por cada nivel de ranura por encima de 4°. Las criaturas deben estar dentro de 30 ft unas de otras cuando las señales.",
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Hechiza a una criatura de cualquier tipo",
+      "range": "30 ft",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": "Sabiduría",
+        "dc": null,
+        "effect": "Sin efecto si supera la tirada (ventaja si está en combate contigo)"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "shadow_blade",
+      "name": "Hoja de Sombra",
+      "school": "Ilusión",
+      "level": 2,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 minuto (10 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": [],
+      "description": "Tejes hilos de sombra para crear una espada de oscuridad solidificada en tu mano. Esta espada mágica dura hasta que el conjuro termine. Cuenta como un arma cuerpo a cuerpo simple con la que eres competente. Inflige 2d8 de daño psíquico en un golpe y tiene las propiedades de ligera, sutil y arrojadiza (alcance 20/60). Además, cuando usas la espada para atacar a un objetivo que está en luz tenue u oscuridad, haces la tirada de ataque con ventaja. Si sueltas el arma o la arrojas, se disipa al final del turno; mientras el conjuro persiste, puedes usar una acción adicional para hacer que la espada reaparezca en tu mano.",
+      "upcast": "Cuando lances este conjuro usando una ranura de conjuro de 3° o 4° nivel, el daño aumenta a 3d8. Con una ranura de 5° o 6° nivel, aumenta a 4d8. Con una ranura de 7° nivel o superior, aumenta a 5d8.",
+      "damage": {
+        "stat": "ATAQUE",
+        "value": "2d8",
+        "mod": "Psíquico (ventaja en penumbra/oscuridad)"
+      },
+      "effect": "Crea una espada de sombra arrojadiza",
+      "range": "Personal",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "bones_of_the_earth",
+      "name": "Huesos de la Tierra",
+      "school": "Transmutación",
+      "level": 6,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Instantáneo",
+      "concentration": false,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": [],
+      "description": "Haces que hasta seis pilares de piedra estallen desde lugares en el suelo que puedas ver dentro del alcance. Cada pilar es un cilindro de 5 ft de diámetro y hasta 30 ft de altura; el suelo donde aparece debe ser lo bastante ancho para su diámetro, y puedes apuntar bajo una criatura Mediana o menor. Cada pilar tiene 5 de CA y 30 puntos de golpe; al reducirse a 0 se derrumba en escombros, creando terreno difícil en un radio de 10 ft que dura hasta que se despejan (cada porción de 5 ft requiere al menos 1 minuto para despejar a mano). Si un pilar se crea bajo una criatura, esta debe superar una tirada de salvación de Destreza o ser levantada por el pilar (puede elegir fallar). Si un pilar es impedido de alcanzar su altura máxima por un techo u obstáculo, una criatura sobre él recibe 6d6 de daño contundente y queda apresada, pellizcada entre el pilar y el obstáculo; puede usar una acción para hacer una prueba de Fuerza o Destreza contra tu CD de salvación y, en un éxito, dejar de estar restringida y moverse fuera del pilar o caerse de él.",
+      "upcast": "Cuando lances este conjuro usando una ranura de conjuro de 7° nivel o superior, puedes crear dos pilares adicionales por cada nivel de ranura por encima de 6°.",
+      "damage": {
+        "stat": "DAM",
+        "value": "6d6",
+        "mod": "Contundente (solo si el pilar queda bloqueado por un obstáculo)"
+      },
+      "effect": "Levanta pilares de piedra del suelo",
+      "range": "120 ft",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": "Destreza",
+        "dc": null,
+        "effect": "Evita ser levantado por un pilar"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "infestation",
+      "name": "Infestación",
+      "school": "Conjuración",
+      "level": 0,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Instantáneo",
+      "concentration": false,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Una pulga viva"
+      ],
+      "description": "Haces que una nube de ácaros, pulgas y otros parásitos aparezca momentáneamente en una criatura que puedas ver dentro del alcance. El objetivo debe tener éxito en una tirada de salvación de Constitución, o recibe 1d6 de daño de veneno y se mueve 5 ft en una dirección aleatoria si puede moverse y su velocidad es de al menos 5 ft. Tira un d4 para la dirección: 1, norte; 2, sur; 3, este; o 4, oeste. Este movimiento no provoca ataques de oportunidad, y si la dirección está bloqueada, el objetivo no se mueve.",
+      "upcast": "El daño de este conjuro incrementa en 1d6 cuando alcanzas el nivel 5 (2d6), el nivel 11 (3d6) y el nivel 17 (4d6).",
+      "damage": {
+        "stat": "DAM",
+        "value": "1d6",
+        "mod": "Veneno"
+      },
+      "effect": "Truco de veneno que desplaza al objetivo al azar",
+      "range": "30 ft",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": "Constitución",
+        "dc": null,
+        "effect": "Sin efecto si supera la tirada"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "immolation",
+      "name": "Inmolación",
+      "school": "Evocación",
+      "level": 5,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 minuto (10 turnos)",
+      "concentration": true,
+      "components": [
+        "V"
+      ],
+      "materials": [],
+      "description": "Las llamas envuelven a una criatura que puedas ver dentro del alcance. El objetivo debe hacer una tirada de salvación de Destreza. Sufre 8d6 de daño de fuego en una salvación fallida, o la mitad en una exitosa. En una salvación fallida, el objetivo también se quema por la duración del conjuro: arroja luz brillante en un radio de 30 ft y luz tenue 30 ft más, y al final de cada uno de sus turnos repite la salvación, sufriendo 4d6 de daño de fuego en una fallida, y el conjuro termina en una exitosa. Estas llamas mágicas no pueden extinguirse por medios no mágicos. Si el daño mata a un objetivo, este se convierte en ceniza.",
+      "upcast": null,
+      "damage": {
+        "stat": "DAM",
+        "value": "8d6",
+        "mod": "Fuego (4d6 al final de cada turno mientras arde)"
+      },
+      "effect": "Prende fuego a una criatura con daño continuo",
+      "range": "90 ft",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": "Destreza",
+        "dc": null,
+        "effect": "Mitad de daño y sin quemadura si supera"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "negative_energy_flood",
+      "name": "Inundación de Energía Negativa",
+      "school": "Nigromancia",
+      "level": 5,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Instantáneo",
+      "concentration": false,
+      "components": [
+        "V",
+        "M"
+      ],
+      "materials": [
+        "Un hueso roto y un cuadrado de seda negra"
+      ],
+      "description": "Envías cintas de energía negativa a una criatura que puedas ver dentro del alcance. A menos que el objetivo sea un no-muerto, debe realizar una tirada de salvación de Constitución, recibiendo 5d12 de daño necrótico en una salvación fallida, o la mitad de daño en una exitosa. Un objetivo muerto por este daño se eleva como un zombi al comienzo de tu siguiente turno; el zombi persigue a cualquier criatura que pueda ver que esté más cerca de él (estadísticas en el Manual de Monstruos). Si el objetivo es un no-muerto, no hace tirada de salvación; en su lugar, tira 5d12 y el objetivo gana la mitad del total como puntos de golpe temporales.",
+      "upcast": null,
+      "damage": {
+        "stat": "DAM",
+        "value": "5d12",
+        "mod": "Necrótico (o 5d12 PG temporales si el objetivo es no-muerto)"
+      },
+      "effect": "Daño necrótico que reanima al objetivo como zombi (o cura a no-muertos)",
+      "range": "60 ft",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": "Constitución",
+        "dc": null,
+        "effect": "Mitad de daño si supera la tirada (los no-muertos no salvan)"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "investiture_of_ice",
+      "name": "Investidura de Hielo",
+      "school": "Transmutación",
+      "level": 6,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 10 minutos (100 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": [],
+      "description": "Hasta que el conjuro termine, el hielo rima tu cuerpo y obtienes los siguientes beneficios: eres inmune al daño por frío y tienes resistencia al daño por fuego; puedes moverte por terrenos difíciles creados por hielo o nieve sin gastar movimiento adicional; el terreno en un radio de 10 ft a tu alrededor está helado y es terreno difícil para otras criaturas (el radio se mueve contigo); y puedes usar tu acción para crear un cono de 15 ft de viento helado desde tu mano extendida: cada criatura en el cono hace una tirada de salvación de Constitución, recibiendo 4d6 de daño por frío en una fallida, o la mitad en una exitosa, y una criatura que falle ve su velocidad reducida a la mitad hasta el comienzo de tu siguiente turno.",
+      "upcast": null,
+      "damage": {
+        "stat": "DAM",
+        "value": "4d6",
+        "mod": "Frío (cono de viento helado)"
+      },
+      "effect": "Te reviste de hielo: inmunidad al frío y cono helado",
+      "range": "Personal",
+      "areaOfEffect": "Aura de 10 ft + cono de 15 ft",
+      "savingThrow": {
+        "type": "Constitución",
+        "dc": null,
+        "effect": "Mitad de daño y sin ralentización si supera"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "investiture_of_flame",
+      "name": "Investidura de Llamas",
+      "school": "Transmutación",
+      "level": 6,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 10 minutos (100 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": [],
+      "description": "Las llamas corren a través de tu cuerpo, arrojando luz brillante en un radio de 30 ft y luz tenue 30 ft más por la duración del conjuro; las llamas no te hacen daño. Hasta que el conjuro termine, ganas: inmunidad al daño por fuego y resistencia al daño por frío; cualquier criatura que se mueva a un radio de 5 ft de ti por primera vez en un turno o termine su turno allí recibe 1d10 de daño de fuego; y puedes usar tu acción para crear una línea de fuego de 15 ft de largo y 5 ft de ancho que se extiende desde ti en la dirección que elijas: cada criatura en la línea hace una tirada de salvación de Destreza, recibiendo 4d8 de daño de fuego en una fallida, o la mitad en una exitosa.",
+      "upcast": null,
+      "damage": {
+        "stat": "DAM",
+        "value": "4d8",
+        "mod": "Fuego (línea); 1d10 a quien se acerque"
+      },
+      "effect": "Te reviste de fuego: inmunidad al fuego, aura y línea de llamas",
+      "range": "Personal",
+      "areaOfEffect": "Aura de 5 ft + línea de 15 ft",
+      "savingThrow": {
+        "type": "Destreza",
+        "dc": null,
+        "effect": "Mitad de daño si supera la tirada"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "investiture_of_stone",
+      "name": "Investidura de Piedra",
+      "school": "Transmutación",
+      "level": 6,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 10 minutos (100 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": [],
+      "description": "Hasta que el conjuro termine, trozos de roca se esparcen por tu cuerpo y obtienes: resistencia al daño contundente, perforante y cortante de ataques no mágicos; puedes usar tu acción para crear un pequeño terremoto en el suelo en un radio de 15 ft centrado en ti (otras criaturas en ese terreno deben superar una tirada de salvación de Destreza o ser derribadas); y puedes moverte por terrenos difíciles de tierra o piedra sin gastar movimiento adicional, e incluso atravesar tierra o piedra sólida como si fuera aire, sin desestabilizarla, pero no puedes terminar tu movimiento allí (si lo haces, eres expulsado al espacio no ocupado más cercano, el conjuro termina y quedas aturdido hasta el final de tu siguiente turno).",
+      "upcast": null,
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Te reviste de piedra: resistencia física, terremoto y movimiento por roca",
+      "range": "Personal",
+      "areaOfEffect": "Terremoto de 15 ft de radio",
+      "savingThrow": {
+        "type": "Destreza",
+        "dc": null,
+        "effect": "Evita ser derribado por el terremoto"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "investiture_of_wind",
+      "name": "Investidura de Viento",
+      "school": "Transmutación",
+      "level": 6,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 10 minutos (100 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": [],
+      "description": "Hasta que el conjuro termine, el viento se arremolina a tu alrededor y obtienes: los ataques con armas a distancia realizados contra ti tienen desventaja en la tirada de ataque; ganas una velocidad de vuelo de 60 ft (si aún vuelas al terminar el conjuro, caes salvo que puedas evitarlo); y puedes usar tu acción para crear un cubo de 15 ft de viento giratorio centrado en un punto que puedas ver a 60 ft de ti: cada criatura en esa área hace una tirada de salvación de Constitución, recibiendo 2d10 de daño de golpe en una fallida, o la mitad en una exitosa, y una criatura Grande o menor que falle también es empujada hasta 10 ft del centro del cubo.",
+      "upcast": null,
+      "damage": {
+        "stat": "DAM",
+        "value": "2d10",
+        "mod": "Contundente (cubo de viento)"
+      },
+      "effect": "Te reviste de viento: vuelo, desventaja a distancia y cubo de viento",
+      "range": "Personal",
+      "areaOfEffect": "Cubo de 15 ft de viento",
+      "savingThrow": {
+        "type": "Constitución",
+        "dc": null,
+        "effect": "Mitad de daño y sin empuje si supera"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "summon_greater_demon",
+      "name": "Invocar Demonio Mayor",
+      "school": "Conjuración",
+      "level": 4,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 hora (600 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Un vial de sangre de un humanoide muerto en las últimas 24 horas"
+      ],
+      "description": "Pronuncias palabras desagradables, convocando a un demonio desde el caos del Abismo. Eliges el tipo de demonio, que debe ser de clasificación de desafío 5 o inferior, como un demonio de la sombra o un barlgura. El demonio aparece en un espacio desocupado que puedas ver dentro del alcance, y desaparece cuando cae a 0 puntos de golpe o cuando termina el conjuro. Tira iniciativa para el demonio, que tiene sus propios turnos y es hostil a ti y tus compañeros. En cada uno de tus turnos puedes emitir un comando verbal (no requiere acción); si no emites ninguno, ataca a la criatura más cercana que lo haya atacado. Al final de cada turno del demonio, este hace una tirada de salvación de Carisma (con desventaja si dices su nombre verdadero): en una fallida continúa obedeciéndote, en una exitosa el control termina y el demonio persigue y ataca a los no-demonios más cercanos que pueda durante el resto de la duración. Si dejas de concentrarte antes de que termine la duración, un demonio incontrolado no desaparece durante 1d6 rondas si aún tiene puntos de golpe. Como parte de lanzarlo puedes formar un círculo en el suelo con la sangre usada como componente material, lo bastante grande para abarcar tu espacio; mientras dure el conjuro, el demonio no puede cruzar el círculo ni dañarlo ni atacar a nadie dentro. Usar el componente material así lo consume cuando termina el conjuro.",
+      "upcast": "Cuando lances este conjuro usando una ranura de conjuro de 5° nivel o superior, el valor de desafío aumenta en 1 por cada nivel de ranura por encima de 4°.",
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Invoca un demonio (DD 5 o menos) hostil que debes controlar",
+      "range": "60 ft",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": "Carisma",
+        "dc": null,
+        "effect": "El demonio salva para liberarse de tu control"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "summon_lesser_demons",
+      "name": "Invocar Demonios Menores",
+      "school": "Conjuración",
+      "level": 3,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 hora (600 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Un vial de sangre de un humanoide muerto en las últimas 24 horas"
+      ],
+      "description": "Pronuncias palabras desagradables, invocando a los demonios del caos del Abismo. Tira en la tabla siguiente para determinar qué aparece: con 1-2, dos demonios de DD 1 o menor; con 3-4, cuatro demonios de DD 1/2 o menor; con 5-6, ocho demonios de DD 1/4 o menor. El DM elige los demonios (como manes o dretches) y tú eliges los espacios desocupados que puedas ver dentro del alcance donde aparecen. Un demonio invocado desaparece cuando cae a 0 puntos de golpe o cuando termina el conjuro. Los demonios son hostiles a todas las criaturas, incluyéndote a ti. Tira iniciativa para los demonios como grupo, que tienen sus propios turnos; persiguen y atacan a los no-demonios más cercanos que puedan. Como parte de lanzarlo puedes formar un círculo en el suelo con la sangre usada como componente; mientras dure el conjuro, los demonios no pueden cruzar el círculo ni dañarlo ni atacar a nadie dentro. Usar el componente así lo consume al terminar el conjuro.",
+      "upcast": "Cuando lances este conjuro usando una ranura de conjuro de 6° o 7° nivel, convocas el doble de demonios. Con una ranura de 8° o 9° nivel, convocas tres veces más.",
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Invoca 2-8 demonios menores hostiles a todos",
+      "range": "60 ft",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "invulnerability",
+      "name": "Invulnerabilidad",
+      "school": "Abjuración",
+      "level": 9,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 10 minutos (100 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Una pequeña pieza de adamantina que vale al menos 500 po, consumida por el conjuro"
+      ],
+      "description": "Eres inmune a todo daño hasta que el conjuro termine.",
+      "upcast": null,
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Inmunidad total al daño",
+      "range": "Personal",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "wrath_of_nature",
+      "name": "Ira de la Naturaleza",
+      "school": "Evocación",
+      "level": 5,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 minuto (10 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": [],
+      "description": "Llamas a los espíritus de la naturaleza para alentarlos contra tus enemigos. Elige un punto que puedas ver dentro del alcance; los espíritus animan los árboles, las rocas y el pasto en un cubo de 60 ft centrado en ese punto por la duración del conjuro. Pastos y maleza: cualquier área de tierra en el cubo cubierta por hierba o maleza es terreno difícil para tus enemigos. Árboles: al comienzo de cada uno de tus turnos, cada enemigo a 10 ft de cualquier árbol en el cubo debe superar una tirada de salvación de Destreza o recibir 4d6 de daño cortante por azotes de ramas. Raíces y vides: al final de cada uno de tus turnos, una criatura de tu elección en el suelo del cubo debe superar una tirada de salvación de Fuerza o quedar apresada hasta que el conjuro termine (una criatura apresada puede usar una acción para hacer una prueba de Fuerza (Atletismo) contra tu CD de salvación y liberarse en un éxito). Rocas: como acción adicional en tu turno, puedes lanzar una roca suelta del cubo contra una criatura que puedas ver; haz un ataque de conjuro a distancia y, en un impacto, el objetivo recibe 3d8 de daño contundente no mágico y debe superar una tirada de salvación de Fuerza o caer derribado.",
+      "upcast": null,
+      "damage": {
+        "stat": "DAM",
+        "value": "4d6",
+        "mod": "Cortante (árboles); 3d8 contundente (rocas, ataque de conjuro)"
+      },
+      "effect": "Anima un bosque hostil: ramas, raíces y rocas contra tus enemigos",
+      "range": "120 ft",
+      "areaOfEffect": "Cubo de 60 ft",
+      "savingThrow": {
+        "type": "Destreza / Fuerza",
+        "dc": null,
+        "effect": "Según el efecto: evita daño de ramas, apresamiento o derribo"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "soul_cage",
+      "name": "Jaula de Alma",
+      "school": "Nigromancia",
+      "level": 6,
+      "ritual": false,
+      "castingTime": "1 reacción",
+      "duration": "8 horas",
+      "concentration": false,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Una pequeña jaula de plata que vale 100 po"
+      ],
+      "description": "Lanzas este conjuro como reacción cuando muere un humanoide que puedas ver a menos de 60 ft. El conjuro arrebata el alma del humanoide y la atrapa dentro de la jaula de plata que usas como componente. Un alma robada permanece hasta que el conjuro termina o hasta que destruyes la jaula, lo que termina el conjuro. Mientras tengas un alma dentro, puedes explotarla de las siguientes formas hasta seis veces; una vez que la explotas por sexta vez, se libera y el conjuro termina, y el humanoide muerto no puede ser revivido. Robar vida: usa una acción adicional para drenar el vigor del alma y recuperar 2d8 puntos de golpe. Interrogar alma: le haces una pregunta (sin acción) y recibes una breve respuesta telepática, que entiendes sin importar el idioma; el alma solo sabe lo que sabía en vida, pero debe responder con sinceridad y con su mejor capacidad, en una o dos frases, posiblemente crípticas. Experiencia prestada: usa una acción adicional para reforzarte con la experiencia de vida del alma, haciendo tu próxima tirada de ataque, prueba de habilidad o tirada de salvación con ventaja (se pierde si no la usas antes del inicio de tu próximo turno). Ojos de los muertos: usa una acción para nombrar un lugar que el humanoide vio en vida, lo que crea un sensor invisible en algún lugar de ese sitio si está en tu plano actual; el sensor permanece mientras te concentres, hasta 10 minutos, y recibes información visual y auditiva de él como si estuvieras en su espacio.",
+      "upcast": null,
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Atrapa el alma de un humanoide muerto para explotarla de varias formas",
+      "range": "60 ft",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "infernal_calling",
+      "name": "Llamada Infernal",
+      "school": "Conjuración",
+      "level": 5,
+      "ritual": false,
+      "castingTime": "1 minuto",
+      "duration": "Concentración, hasta 1 hora (600 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Un rubí por valor de al menos 999 po"
+      ],
+      "description": "Con un conjuro oscuro, convocas a un diablo de los Nueve Infiernos. Eliges el tipo de diablo, que debe ser de valor de desafío 6 o inferior, como un diablo punzante o un diablo barbado. El diablo aparece en un espacio desocupado que puedas ver dentro del alcance, y desaparece cuando cae a 0 puntos de golpe o cuando termina el conjuro. Tira iniciativa para el diablo, que tiene sus propios turnos y está bajo el control del DM, actuando de acuerdo a su naturaleza. En cada uno de tus turnos puedes intentar emitir un comando verbal al diablo (no requiere acción). El diablo obedece si el resultado probable está de acuerdo con sus deseos, especialmente si te llevaría hacia el mal; de lo contrario, debes realizar una prueba de Carisma (Engaño, Intimidación o Persuasión) enfrentada a su prueba de Sabiduría (Perspicacia), con ventaja si dices su nombre verdadero. Si tu prueba falla, el diablo se vuelve inmune a tus órdenes verbales por la duración del conjuro, aunque aún puede ejecutar tus órdenes si así lo desea. Si tu concentración termina antes de la duración completa, el diablo no desaparece si se ha vuelto inmune a tus órdenes; en su lugar actúa a su antojo durante 3 minutos y luego desaparece. Si posees un talismán del diablo individual, puedes convocar a ese diablo (si tiene el valor de desafío apropiado más 1) y obedece todas tus órdenes sin prueba de Carisma.",
+      "upcast": "Cuando lances este conjuro usando una ranura de conjuro de 6° nivel o superior, el valor de desafío aumenta en 1 por cada nivel de ranura por encima de 5°.",
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Convoca un diablo (DD 6 o menos) al que negocias órdenes",
+      "range": "90 ft",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": "Carisma vs Sabiduría",
+        "dc": null,
+        "effect": "Prueba enfrentada para que el diablo obedezca órdenes contrarias a su naturaleza"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "abi_dalzims_horrid_wilting",
+      "name": "Marchitamiento Horrible de Abi-Dalzim",
+      "school": "Nigromancia",
+      "level": 8,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Instantáneo",
+      "concentration": false,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Un poco de esponja"
+      ],
+      "description": "Extraes la humedad de cada criatura en un cubo de 30 ft centrado en un punto que elijas dentro del alcance. Cada criatura en esa área debe hacer una tirada de salvación de Constitución. Las construcciones y los no-muertos no se ven afectados, y las plantas y los elementales de agua hacen esta salvación con desventaja. Una criatura recibe 12d8 de daño necrótico en una salvación fallida, o la mitad de daño en una exitosa. Las plantas no mágicas del área que no son criaturas, como árboles y arbustos, se marchitan y mueren instantáneamente.",
+      "upcast": null,
+      "damage": {
+        "stat": "DAM",
+        "value": "12d8",
+        "mod": "Necrótico"
+      },
+      "effect": "Deseca a todas las criaturas de un cubo",
+      "range": "150 ft",
+      "areaOfEffect": "Cubo de 30 ft",
+      "savingThrow": {
+        "type": "Constitución",
+        "dc": null,
+        "effect": "Mitad de daño si supera (desventaja para plantas y elementales de agua)"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "tidal_wave",
+      "name": "Marejada",
+      "school": "Conjuración",
+      "level": 3,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Instantáneo",
+      "concentration": false,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Una gota de agua"
+      ],
+      "description": "Conjuras una ola de agua que se estrella en un área dentro del alcance. El área puede tener hasta 30 ft de largo, hasta 10 ft de ancho y hasta 10 ft de altura. Cada criatura en esa área debe hacer una tirada de salvación de Destreza. En una salvación fallida, una criatura recibe 4d8 de daño por golpes y es derribada; en una exitosa recibe la mitad de daño y no es derribada. Luego, el agua se extiende por el suelo en todas las direcciones, extinguiendo las llamas desprotegidas en su área y a 30 ft de ella, y luego desaparece.",
+      "upcast": null,
+      "damage": {
+        "stat": "DAM",
+        "value": "4d8",
+        "mod": "Contundente"
+      },
+      "effect": "Ola de agua que derriba y apaga fuegos",
+      "range": "120 ft",
+      "areaOfEffect": "30 ft de largo, 10 de ancho, 10 de alto",
+      "savingThrow": {
+        "type": "Destreza",
+        "dc": null,
+        "effect": "Mitad de daño y sin derribo si supera"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "melfs_minute_meteors",
+      "name": "Meteoros Diminutos de Melf",
+      "school": "Evocación",
+      "level": 3,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 10 minutos (100 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Nitrato, azufre y resina formados en una bolita"
+      ],
+      "description": "Creas seis pequeños meteoritos en tu espacio; flotan en el aire y te orbitan hasta el final de la duración del conjuro. Cuando lanzas el conjuro, y como acción adicional en cada uno de tus turnos posteriores, puedes gastar uno o dos de los meteoros enviándolos a un punto o puntos que elijas a 120 ft de ti. Una vez que un meteorito llega a su destino o impacta contra una superficie sólida, explota: cada criatura dentro de 5 ft del punto donde explota el meteoro debe hacer una tirada de salvación de Destreza, recibiendo 2d6 de daño de fuego en una salvación fallida, o la mitad en una exitosa.",
+      "upcast": "Cuando lances este conjuro usando una ranura de conjuro de 4° nivel o superior, el número de meteoros creados aumenta en dos por cada nivel de ranura por encima de 3°.",
+      "damage": {
+        "stat": "DAM",
+        "value": "2d6",
+        "mod": "Fuego (por meteoro)"
+      },
+      "effect": "Seis meteoros orbitantes que lanzas de a uno o dos",
+      "range": "Personal",
+      "areaOfEffect": "Explosión de 5 ft de radio (por meteoro)",
+      "savingThrow": {
+        "type": "Destreza",
+        "dc": null,
+        "effect": "Mitad de daño si supera la tirada"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "mold_earth",
+      "name": "Moldear Tierra",
+      "school": "Transmutación",
+      "level": 0,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Instantáneo o 1 hora (ver descripción)",
+      "concentration": false,
+      "components": [
+        "S"
+      ],
+      "materials": [],
+      "description": "Eliges una porción de tierra o piedra que puedas ver dentro del alcance y que quepa en un cubo de 5 ft. La manipulas de una de estas maneras: si señalas un área de tierra suelta, la excavas, mueves a lo largo del suelo y depositas hasta a 5 ft de distancia (sin fuerza suficiente para causar daño); haces que aparezcan formas, colores o ambos en la tierra o piedra, formando imágenes o patrones (duran 1 hora); si la tierra o piedra está en el suelo, la conviertes en terreno difícil, o alternativamente conviertes terreno difícil en terreno normal (dura 1 hora). Si lanzas el conjuro varias veces, no puedes tener activos más de dos efectos no instantáneos a la vez, y puedes descartar uno como acción.",
+      "upcast": null,
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Truco de manipulación de tierra y piedra",
+      "range": "30 ft",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "wall_of_water",
+      "name": "Muro de Agua",
+      "school": "Evocación",
+      "level": 3,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 10 minutos (100 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Una gota de agua"
+      ],
+      "description": "Creas una pared de agua en el suelo en un punto que puedas ver dentro del alcance. Puedes hacer que la pared sea de hasta 30 ft de largo, 10 ft de alto y 1 ft de grosor, o un muro de anillos de hasta 20 ft de diámetro, 20 ft de alto y 1 ft de grosor. El muro se desvanece cuando el conjuro termina, y su espacio es terreno difícil. Cualquier ataque de arma a distancia que entre en el espacio de la pared tiene desventaja en la tirada de ataque, y el daño de fuego se reduce a la mitad si el efecto de fuego pasa a través de la pared. Los conjuros que causan daño por frío que pasan a través de la pared congelan el área que atraviesan (al menos una sección de 5 ft cuadrados). Cada sección congelada tiene CA 5 y 15 puntos de golpe; reducir una sección a 0 la destruye, y cuando se destruye una sección, el agua no la llena.",
+      "upcast": null,
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Muro de agua que frena proyectiles y fuego",
+      "range": "60 ft",
+      "areaOfEffect": "Muro de 30x10x1 ft o anillo de 20 ft de diámetro",
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "wall_of_sand",
+      "name": "Muro de Arena",
+      "school": "Evocación",
+      "level": 3,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 10 minutos (100 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Un puñado de arena"
+      ],
+      "description": "Creas un muro de arena arremolinada en el suelo en un punto que puedas ver dentro del alcance. Puedes hacer que el muro mida hasta 30 ft de largo, 10 ft de alto y 10 ft de espesor, y se desvanece cuando termina el conjuro. Bloquea la línea de visión pero no el movimiento. Una criatura está cegada mientras está en el espacio del muro y debe gastar 3 ft de movimiento por cada 1 ft que se mueva allí.",
+      "upcast": null,
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Muro de arena que ciega y ralentiza",
+      "range": "90 ft",
+      "areaOfEffect": "Muro de hasta 30x10x10 ft",
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "wall_of_light",
+      "name": "Muro de Luz",
+      "school": "Evocación",
+      "level": 5,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 10 minutos (100 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Un espejo de mano"
+      ],
+      "description": "Aparece un muro resplandeciente de luz brillante en un punto que elijas dentro del alcance, en la orientación que elijas: horizontal, vertical o diagonal. Puede flotar libremente o apoyarse en una superficie sólida. El muro puede tener hasta 60 ft de largo, 10 ft de alto y 5 ft de espesor. Bloquea la línea de visión, pero las criaturas y objetos pueden atravesarlo. Emite luz brillante a 120 ft y luz tenue 120 ft más. Cuando aparece el muro, cada criatura en su área debe hacer una tirada de salvación de Constitución; en una fallida recibe 4d8 de daño radiante y queda ciega durante 1 minuto, en una exitosa la mitad de daño y no es cegada (una criatura ciega repite la salvación al final de cada uno de sus turnos). Una criatura que termina su turno en el área del muro recibe 4d8 de daño radiante. Hasta que termine el conjuro, puedes usar una acción para lanzar un rayo de resplandor desde el muro a una criatura que puedas ver a 60 ft de este: haz un ataque de conjuro a distancia y, en un golpe, la criatura recibe 4d8 de daño radiante; golpees o no, reduces la longitud del muro en 10 ft, y si cae a 0 ft el conjuro termina.",
+      "upcast": "Cuando lances este conjuro usando una ranura de conjuro de 6° nivel o superior, el daño aumenta en 1d8 por cada nivel de ranura por encima de 5°.",
+      "damage": {
+        "stat": "DAM",
+        "value": "4d8",
+        "mod": "Radiante"
+      },
+      "effect": "Muro de luz que ciega y dispara rayos",
+      "range": "120 ft",
+      "areaOfEffect": "Muro de hasta 60x10x5 ft",
+      "savingThrow": {
+        "type": "Constitución",
+        "dc": null,
+        "effect": "Mitad de daño y sin ceguera si supera"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "maddening_darkness",
+      "name": "Oscuridad Enloquecedora",
+      "school": "Evocación",
+      "level": 8,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 10 minutos (100 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "M"
+      ],
+      "materials": [
+        "Una gota de brea mezclada con una gota de mercurio"
+      ],
+      "description": "La oscuridad mágica se extiende desde un punto que elijas dentro del alcance para llenar una esfera de 60 ft hasta que el conjuro termine. La oscuridad se extiende por las esquinas. Una criatura con visión oscura no puede ver a través de esta oscuridad; la luz no mágica, así como la luz creada por conjuros de 8° nivel o inferior, no puede iluminar el área. Gritos, balbuceos y risas locas pueden escucharse dentro de la esfera. Cada vez que una criatura comienza su turno en la esfera, debe realizar una tirada de salvación de Sabiduría, recibiendo 8d8 de daño psíquico en una salvación fallida, o la mitad de daño en una exitosa.",
+      "upcast": null,
+      "damage": {
+        "stat": "DAM",
+        "value": "8d8",
+        "mod": "Psíquico"
+      },
+      "effect": "Esfera de oscuridad total con daño psíquico y locura",
+      "range": "150 ft",
+      "areaOfEffect": "Esfera de 60 ft de radio",
+      "savingThrow": {
+        "type": "Sabiduría",
+        "dc": null,
+        "effect": "Mitad de daño si supera la tirada"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "power_word_pain",
+      "name": "Palabra de Poder: Dolor",
+      "school": "Encantamiento",
+      "level": 7,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Instantáneo",
+      "concentration": false,
+      "components": [
+        "V"
+      ],
+      "materials": [],
+      "description": "Dices una palabra de poder que hace que oleadas de intenso dolor asalten a una criatura que puedas ver dentro del alcance. Si el objetivo tiene 100 puntos de golpe o menos, está sujeto a un dolor paralizante; de lo contrario, el conjuro no tiene efecto sobre él. Un objetivo tampoco se ve afectado si es inmune a estar hechizado. Mientras el objetivo se ve afectado por el dolor paralizante, cualquier velocidad que tenga no puede ser superior a 10 ft. El objetivo también tiene desventaja en tiradas de ataque, pruebas de habilidad y tiradas de salvación, exceptuando las de Constitución. Finalmente, si el objetivo intenta lanzar un conjuro, primero debe tener éxito en una tirada de salvación de Constitución, o el lanzamiento falla y el conjuro se desperdicia. Un objetivo que sufre este dolor puede hacer una tirada de salvación de Constitución al final de cada uno de sus turnos, terminando el efecto en un éxito.",
+      "upcast": null,
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Dolor paralizante que ralentiza y penaliza (objetivo de ≤100 PG)",
+      "range": "60 ft",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": "Constitución",
+        "dc": null,
+        "effect": "Repite al final de su turno para terminar el efecto"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "word_of_radiance",
+      "name": "Palabra de Resplandor",
+      "school": "Evocación",
+      "level": 0,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Instantáneo",
+      "concentration": false,
+      "components": [
+        "V",
+        "M"
+      ],
+      "materials": [
+        "Un símbolo sagrado"
+      ],
+      "description": "Pronuncias una palabra divina, y un ardor radiante surge de ti. Cada criatura de tu elección que puedas ver dentro del alcance debe tener éxito en una tirada de salvación de Constitución o recibir 1d6 de daño radiante.",
+      "upcast": "El daño de este conjuro aumenta en 1d6 cuando alcanzas el nivel 5 (2d6), el nivel 11 (3d6) y el nivel 17 (4d6).",
+      "damage": {
+        "stat": "DAM",
+        "value": "1d6",
+        "mod": "Radiante"
+      },
+      "effect": "Truco radiante en área cercana",
+      "range": "5 ft",
+      "areaOfEffect": "Criaturas elegidas a 5 ft",
+      "savingThrow": {
+        "type": "Constitución",
+        "dc": null,
+        "effect": "Sin daño si supera la tirada"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "thunderclap",
+      "name": "Palmada Atronadora",
+      "school": "Evocación",
+      "level": 0,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Instantáneo",
+      "concentration": false,
+      "components": [
+        "S"
+      ],
+      "materials": [],
+      "description": "Creas un estallido de sonido atronador que puede escucharse hasta a 100 ft de distancia. Cada criatura dentro del alcance, que no seas tú, debe tener éxito en una tirada de salvación de Constitución o recibir 1d6 de daño de trueno.",
+      "upcast": "El daño de este conjuro incrementa en 1d6 cuando alcanzas el nivel 5 (2d6), el nivel 11 (3d6) y el nivel 17 (4d6).",
+      "damage": {
+        "stat": "DAM",
+        "value": "1d6",
+        "mod": "Trueno"
+      },
+      "effect": "Truco de trueno en área cercana",
+      "range": "5 ft",
+      "areaOfEffect": "Cada criatura a 5 ft (salvo tú)",
+      "savingThrow": {
+        "type": "Constitución",
+        "dc": null,
+        "effect": "Sin daño si supera la tirada"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "thunder_step",
+      "name": "Paso de Trueno",
+      "school": "Conjuración",
+      "level": 3,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Instantáneo",
+      "concentration": false,
+      "components": [
+        "V"
+      ],
+      "materials": [],
+      "description": "Te teletransportas a un espacio desocupado que puedas ver dentro del alcance. Inmediatamente después de que desaparezcas, suena un estruendo atronador, y cada criatura a 10 ft del espacio que dejaste debe hacer una tirada de salvación de Constitución, recibiendo 3d10 de daño de trueno en una salvación fallida, o la mitad de daño en una exitosa. El trueno se puede escuchar hasta 300 ft de distancia. Puedes llevar objetos siempre que su peso no exceda lo que puedes llevar; también puedes teletransportar a una criatura de tu tamaño o menor que esté llevando equipo hasta su capacidad de carga, si está a no más de 5 ft de ti al lanzar el conjuro y hay un espacio desocupado a 5 ft de tu destino.",
+      "upcast": "Cuando lances este conjuro usando una ranura de conjuro de 4° nivel o superior, el daño aumenta en 1d10 por cada nivel de ranura por encima de 3°.",
+      "damage": {
+        "stat": "DAM",
+        "value": "3d10",
+        "mod": "Trueno"
+      },
+      "effect": "Teletransporte con estallido de trueno en el origen",
+      "range": "90 ft",
+      "areaOfEffect": "Explosión de 10 ft en el punto de partida",
+      "savingThrow": {
+        "type": "Constitución",
+        "dc": null,
+        "effect": "Mitad de daño si supera la tirada"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "far_step",
+      "name": "Paso Lejano",
+      "school": "Conjuración",
+      "level": 5,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 minuto (10 turnos)",
+      "concentration": true,
+      "components": [
+        "V"
+      ],
+      "materials": [],
+      "description": "Te teletransportas hasta 60 ft a un espacio desocupado que puedas ver. En cada uno de tus turnos antes de que termine el conjuro, puedes usar una acción adicional para teletransportarte de esta manera nuevamente.",
+      "upcast": null,
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Teletransporte repetible de 60 ft como acción adicional",
+      "range": "Personal",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "elemental_bane",
+      "name": "Perdición Elemental",
+      "school": "Transmutación",
+      "level": 4,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 minuto (10 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": [],
+      "description": "Elige una criatura que puedas ver dentro del alcance y elige uno de los siguientes tipos de daño: ácido, frío, fuego, rayo o trueno. El objetivo debe tener éxito en una tirada de salvación de Constitución o ser afectado por el conjuro por su duración. La primera vez en cada turno que el objetivo afectado recibe daño del tipo elegido, recibe 2d6 de daño adicional de ese tipo. Además, el objetivo pierde cualquier resistencia a ese tipo de daño hasta que termina el conjuro.",
+      "upcast": "Cuando lances este conjuro usando una ranura de conjuro de nivel 5° o superior, puedes afectar una criatura adicional por cada nivel de ranura por encima de 4°. Las criaturas deben estar dentro de 30 ft unas de otras cuando las señales.",
+      "damage": {
+        "stat": "DAM",
+        "value": "2d6",
+        "mod": "Del tipo elegido; una vez por turno al recibir ese daño"
+      },
+      "effect": "Anula la resistencia elegida y añade daño elemental",
+      "range": "90 ft",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": "Constitución",
+        "dc": null,
+        "effect": "Sin efecto si supera la tirada"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "magic_stone",
+      "name": "Piedra Mágica",
+      "school": "Transmutación",
+      "level": 0,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "1 minuto (10 turnos)",
+      "concentration": false,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": [],
+      "description": "Tocas de una a tres piedritas y las imbuyes de magia. Tú u otra persona puede realizar un ataque de conjuro a distancia con una de las piedras aventándola o lanzándola con una honda. Si se tira, una piedra tiene un alcance de 60 ft. Si alguien más ataca con una piedra, ese atacante agrega tu modificador de habilidad de lanzar conjuros, no el del atacante, a la tirada de ataque. En un golpe, el objetivo recibe daño contundente igual a 1d6 + tu modificador de habilidad de lanzamiento de conjuros. Si el ataque golpea o falla, el conjuro termina en la piedra. Si vuelves a lanzar este conjuro, el conjuro finaliza en las piedras aún afectadas por tu lanzamiento anterior.",
+      "upcast": null,
+      "damage": {
+        "stat": "ATAQUE",
+        "value": "1d6",
+        "mod": "Contundente + mod. de aptitud mágica"
+      },
+      "effect": "Imbuye hasta 3 piedras como proyectiles mágicos",
+      "range": "Toque",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "pyrotechnics",
+      "name": "Pirotecnia",
+      "school": "Transmutación",
+      "level": 2,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Instantáneo",
+      "concentration": false,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": [],
+      "description": "Elige un área de llamas no mágicas que puedas ver y de un tamaño de hasta 5 ft dentro del alcance. Puedes apagar el fuego en esa área, y creas fuegos artificiales o humo cuando lo hagas. Fuegos artificiales: el objetivo explota con un deslumbrante despliegue de colores. Cada criatura dentro de 10 ft del objetivo debe tener éxito en una tirada de salvación de Constitución o quedar cegada hasta el final de tu siguiente turno. Humo: el humo negro y espeso se extiende desde el objetivo en un radio de 20 ft, moviéndose en las esquinas; el área está muy oculta. El humo persiste durante 1 minuto o hasta que un viento fuerte lo dispersa.",
+      "upcast": null,
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Apaga un fuego y crea fuegos artificiales cegadores o humo",
+      "range": "60 ft",
+      "areaOfEffect": "Fuegos artificiales: 10 ft; humo: 20 ft de radio",
+      "savingThrow": {
+        "type": "Constitución",
+        "dc": null,
+        "effect": "Evita la ceguera de los fuegos artificiales"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "mass_polymorph",
+      "name": "Polimorfar en Grupo",
+      "school": "Transmutación",
+      "level": 9,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 hora (600 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Un capullo de oruga"
+      ],
+      "description": "Transformas hasta diez criaturas de tu elección que puedas ver dentro del alcance. Un objetivo no dispuesto debe tener éxito en una tirada de salvación de Sabiduría para resistir la transformación; un objetivo dispuesto tiene éxito automático. Cada objetivo asume una forma de bestia de su elección, y puede elegir la misma o diferentes formas; la nueva forma puede ser cualquier bestia cuya calificación de desafío sea igual o menor que la del objetivo (o la mitad del nivel del objetivo, si el objetivo no tiene calificación de desafío). Las estadísticas del juego, incluidas las puntuaciones de habilidad mental, se reemplazan por las de la bestia elegida, pero el objetivo conserva sus puntos de golpe, alineamiento y personalidad. Cada objetivo gana puntos de golpe temporales iguales a los puntos de golpe de su nueva forma; no pueden reemplazarse por otra fuente. Un objetivo vuelve a su forma normal cuando no tiene más puntos de golpe temporales o muere; si el conjuro termina antes, pierde todos los PG temporales y vuelve a su forma normal. La criatura está limitada por la naturaleza de su nueva forma: no puede hablar, lanzar conjuros ni hacer nada que requiera manos o habla. El equipaje del objetivo se funde en la nueva forma y no puede usarse.",
+      "upcast": null,
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Transforma hasta 10 criaturas en bestias",
+      "range": "120 ft",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": "Sabiduría",
+        "dc": null,
+        "effect": "Un objetivo no dispuesto puede resistir la transformación"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "mental_prison",
+      "name": "Prisión Mental",
+      "school": "Ilusión",
+      "level": 6,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 minuto (10 turnos)",
+      "concentration": true,
+      "components": [
+        "S"
+      ],
+      "materials": [],
+      "description": "Intentas atar a una criatura dentro de una celda ilusoria que solo ella percibe. Una criatura que puedas ver dentro del alcance debe hacer una tirada de salvación de Inteligencia (tiene éxito automático si es inmune a estar hechizada). En una salvación exitosa, el objetivo recibe 5d10 de daño psíquico y el conjuro termina. En una salvación fallida, el objetivo recibe 5d10 de daño psíquico y percibe el área a su alrededor como peligrosa de alguna manera (fuego, navajas de afeitar flotantes, fauces con dientes que gotean, a tu elección): no puede ver ni oír nada más allá de ella y está apresado por la duración del conjuro. Si el objetivo sale de la ilusión, hace un ataque cuerpo a cuerpo a través de ella, o pasa cualquier parte de su cuerpo a través de esta, recibe 10d10 de daño psíquico y el conjuro finaliza.",
+      "upcast": null,
+      "damage": {
+        "stat": "DAM",
+        "value": "5d10",
+        "mod": "Psíquico (10d10 si intenta atravesar la celda)"
+      },
+      "effect": "Aprisiona a una criatura en una celda ilusoria",
+      "range": "60 ft",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": "Inteligencia",
+        "dc": null,
+        "effect": "Solo daño y el conjuro termina si supera"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "gust",
+      "name": "Ráfaga",
+      "school": "Transmutación",
+      "level": 0,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Instantáneo",
+      "concentration": false,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": [],
+      "description": "Tomas el aire y lo obligas a crear uno de los siguientes efectos en un punto que puedas ver dentro del alcance: una criatura Mediana o menor que elijas debe superar una tirada de salvación de Fuerza o ser empujada hasta 5 ft de ti; creas una pequeña ráfaga de aire capaz de mover un objeto que no se sostiene ni se transporta y que no pesa más de 5 libras, empujándolo hasta 10 ft de ti (sin fuerza suficiente para causar daño); o creas un efecto sensorial inofensivo con el aire, como hacer que las hojas se muevan, que el viento cierre puertas y ventanas de golpe, o que tu ropa ondule con la brisa.",
+      "upcast": null,
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Truco de viento menor: empuje o efecto sensorial",
+      "range": "30 ft",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": "Fuerza",
+        "dc": null,
+        "effect": "Evita ser empujada 5 ft"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "sickening_radiance",
+      "name": "Resplandor Enfermizo",
+      "school": "Evocación",
+      "level": 4,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 10 minutos (100 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": [],
+      "description": "Luz tenue y verdosa se extiende dentro de una esfera de 30 ft de radio centrada en un punto que elijas dentro del alcance. La luz se extiende alrededor de las esquinas y dura hasta que el conjuro termine. Cuando una criatura se mueve al área del conjuro por primera vez en un turno o comienza su turno allí, esa criatura debe tener éxito en una tirada de salvación de Constitución o recibir 4d10 de daño radiante, sufrir un nivel de agotamiento y emitir una luz tenue y verdosa en un radio de 5 ft (lo que hace imposible que se beneficie de ser invisible). La luz y los niveles de agotamiento causados por este conjuro desaparecen cuando el conjuro termina.",
+      "upcast": null,
+      "damage": {
+        "stat": "DAM",
+        "value": "4d10",
+        "mod": "Radiante (+1 nivel de agotamiento)"
+      },
+      "effect": "Esfera de luz enfermiza que daña y agota",
+      "range": "120 ft",
+      "areaOfEffect": "Esfera de 30 ft de radio",
+      "savingThrow": {
+        "type": "Constitución",
+        "dc": null,
+        "effect": "Sin efecto si supera la tirada"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "primal_savagery",
+      "name": "Salvajismo Primigenio",
+      "school": "Transmutación",
+      "level": 0,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Instantáneo",
+      "concentration": false,
+      "components": [
+        "S"
+      ],
+      "materials": [],
+      "description": "Canalizas la magia primordial para hacer que tus dientes o uñas se afilen, listos para lanzar un ataque corrosivo. Haz un ataque de conjuro cuerpo a cuerpo contra una criatura a menos de 5 ft de ti. En un golpe, el objetivo recibe 1d10 de daño ácido. Después de realizar el ataque, tus dientes o uñas vuelven a la normalidad.",
+      "upcast": "El daño del conjuro aumenta en 1d10 cuando alcanzas el nivel 5 (2d10), el nivel 11 (3d10) y el nivel 17 (4d10).",
+      "damage": {
+        "stat": "ATAQUE",
+        "value": "1d10",
+        "mod": "Ácido"
+      },
+      "effect": "Truco de ataque cuerpo a cuerpo con ácido",
+      "range": "Personal (alcance cuerpo a cuerpo)",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "tiny_servant",
+      "name": "Servidor Minúsculo",
+      "school": "Transmutación",
+      "level": 3,
+      "ritual": false,
+      "castingTime": "1 minuto",
+      "duration": "8 horas",
+      "concentration": false,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": [],
+      "description": "Tocas un objeto diminuto, no mágico, que no está unido a otro objeto ni a una superficie y que no está siendo cargado por otra criatura. El objetivo se anima, le brotan pequeños brazos y piernas, y se convierte en una criatura bajo tu control hasta que el conjuro termina o la criatura cae a 0 puntos de golpe (consulta el bloque de estadísticas). Como acción adicional puedes comandar mentalmente a la criatura si está a 120 ft de ti (si controlas varias, puedes comandarlas a todas con el mismo comando); decides qué acción tomará y dónde se moverá en su próximo turno, o le das un comando simple y general. Si no emites órdenes, se limita a defenderse. Una vez que le das una orden, la sigue hasta completar la tarea. Cuando la criatura cae a 0 puntos de golpe, vuelve a su forma de objeto y el daño restante se transfiere a esa forma.\n\n---\n\n**Servidor Minúsculo**  \n*Constructo diminuto, sin alineamiento*\n\n| | |\n|---|---|\n| **Clase de Armadura** | 15 (armadura natural) |\n| **Puntos de Golpe** | 10 (4d4) |\n| **Velocidad** | 30 ft, trepar 30 ft |\n\n| FUE | DES | CON | INT | SAB | CAR |\n|---|---|---|---|---|---|\n| 3 (-3) | 16 (+3) | 10 (+0) | 2 (-4) | 10 (+0) | 1 (-5) |\n\n**Inmunidad al Daño** veneno, psíquico  \n**Inmunidad a Estados** asustado, cegado, ensordecido, envenenado, exhausto, hechizado, paralizado, petrificado  \n**Sentidos** visión ciega 30 ft (ciego más allá de este radio), Percepción pasiva 10  \n**Idiomas** —\n\n**Acciones**\n\n- ***Embestir.*** *Ataque con arma cuerpo a cuerpo:* +5 a impactar, alcance 5 ft, un objetivo. *Impacto:* 5 (1d4 + 3) de daño contundente.",
+      "upcast": "Cuando lances este conjuro usando una ranura de conjuro de 4° nivel o superior, puedes animar dos objetos adicionales por cada nivel de ranura por encima de 3°.",
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Anima un objeto diminuto como sirviente autómata",
+      "range": "Toque",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "catnap",
+      "name": "Siestecita",
+      "school": "Encantamiento",
+      "level": 3,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "10 minutos",
+      "concentration": false,
+      "components": [
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Una pizca de arena"
+      ],
+      "description": "Haces un gesto de calma, y hasta tres criaturas voluntarias de tu elección que puedas ver dentro del alcance quedan inconscientes hasta el final de la duración del conjuro. El conjuro termina antes en un objetivo si recibe daño o alguien usa una acción para sacudirlo o golpearlo para despertarlo. Si un objetivo permanece inconsciente durante toda la duración, obtiene el beneficio de un descanso corto, y este conjuro no lo puede afectar de nuevo hasta que finalice un descanso largo.",
+      "upcast": "Cuando lances este conjuro usando una ranura de conjuro de nivel 4 o superior, puedes afectar una criatura adicional por cada nivel de ranura por encima de 3°.",
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Descanso corto para hasta 3 criaturas voluntarias en 10 minutos",
+      "range": "30 ft",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "shadow_of_moil",
+      "name": "Sombra de Moil",
+      "school": "Nigromancia",
+      "level": 4,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 minuto (10 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Un globo ocular no-muerto encerrado en una joya con valor de al menos 150 po"
+      ],
+      "description": "Sombras parecidas a las llamas invaden tu cuerpo hasta que el conjuro termina, haciendo que tu espacio se vuelva muy oscuro ante los demás. Las sombras convierten la luz tenue dentro de 10 ft de ti en oscuridad, y la luz brillante en la misma área en luz tenue. Hasta que termina el conjuro, tienes resistencia al daño radiante. Además, cada vez que una criatura en un área de 10 ft de ti te golpea con un ataque, las sombras golpean a esa criatura, infligiéndole 2d8 de daño necrótico.",
+      "upcast": null,
+      "damage": {
+        "stat": "DAM",
+        "value": "2d8",
+        "mod": "Necrótico (a quien te golpea)"
+      },
+      "effect": "Manto de sombras: penumbra, resistencia radiante y represalia necrótica",
+      "range": "Personal",
+      "areaOfEffect": "Oscuridad en un radio de 10 ft alrededor de ti",
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "earth_tremor",
+      "name": "Temblor de Tierra",
+      "school": "Evocación",
+      "level": 1,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Instantáneo",
+      "concentration": false,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": [],
+      "description": "Causas un temblor en el suelo dentro del alcance. Cada criatura que no seas tú en esa área debe hacer una tirada de salvación de Destreza. En una salvación fallida, una criatura recibe 1d6 de daño contundente y es derribada. Si el terreno en esa área es tierra o piedra suelta, se convierte en terreno difícil hasta que se despeje, y cada porción de 5 ft de diámetro requiere al menos 1 minuto para despejar a mano.",
+      "upcast": "Cuando lances este conjuro usando una ranura de conjuro de nivel 2 o superior, el daño aumenta en 1d6 por cada nivel de ranura por encima de 1°.",
+      "damage": {
+        "stat": "DAM",
+        "value": "1d6",
+        "mod": "Contundente"
+      },
+      "effect": "Sacude el suelo, derriba y crea terreno difícil",
+      "range": "10 ft",
+      "areaOfEffect": "Radio de 10 ft centrado en ti",
+      "savingThrow": {
+        "type": "Destreza",
+        "dc": null,
+        "effect": "Sin daño ni derribo si supera la tirada"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "temple_of_the_gods",
+      "name": "Templo de los Dioses",
+      "school": "Conjuración",
+      "level": 7,
+      "ritual": false,
+      "castingTime": "1 hora",
+      "duration": "24 horas",
+      "concentration": false,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Un símbolo sagrado con un valor de al menos 5 po"
+      ],
+      "description": "Haces que un templo se materialice con un resplandor en un suelo que puedas ver dentro del alcance, cabiendo dentro de un cubo de hasta 120 ft de lado. El templo permanece hasta que el conjuro termina, dedicado a cualquier dios, panteón o filosofía representada por el símbolo sagrado usado. Tú decides su apariencia; solo tú y las criaturas que designes al lanzarlo pueden abrir o cerrar la puerta. Tú decides si el interior está iluminado con luz brillante o tenue; huele a incienso y la temperatura es suave. El templo se opone a los tipos de criaturas que elijas (celestiales, elementales, feéricos, infernales o no-muertos): una criatura de ese tipo que intente entrar debe superar una tirada de salvación de Carisma o no poder entrar durante 24 horas, e incluso si entra, cada tirada de ataque, prueba de habilidad y salvación que haga dentro requiere restar un d4. Los sensores de conjuros de adivinación no pueden aparecer dentro y las criaturas internas no pueden ser objetivo de conjuros de adivinación. Cada vez que una criatura en el templo recupera puntos de golpe de un conjuro de nivel 1 o superior, recupera puntos de golpe adicionales iguales a tu modificador de Sabiduría (mínimo 1). El templo está hecho de una fuerza mágica opaca que se extiende al plano etéreo, bloqueando el viaje etéreo hacia el interior. Nada puede pasar físicamente por su exterior. No se puede disipar mediante disipar magia y campo antimagia no le afecta; un conjuro desintegrar lo destruye al instante. Lanzarlo en el mismo lugar todos los días durante un año lo hace permanente.",
+      "upcast": null,
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Templo protegido contra un tipo de criatura, con curación reforzada",
+      "range": "120 ft",
+      "areaOfEffect": "Cubo de hasta 120 ft de lado",
+      "savingThrow": {
+        "type": "Carisma",
+        "dc": null,
+        "effect": "Las criaturas del tipo excluido no pueden entrar si fallan"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "erupting_earth",
+      "name": "Tierra en Erupción",
+      "school": "Transmutación",
+      "level": 3,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Instantáneo",
+      "concentration": false,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Una pieza de obsidiana"
+      ],
+      "description": "Elige un punto que puedas ver en el suelo dentro del alcance. Una fuente de tierra y piedra batidas estalla en un cubo de 20 ft centrado en ese punto. Cada criatura en esa área debe hacer una tirada de salvación de Destreza. Una criatura recibe 3d12 de daño contundente en una salvación fallida, o la mitad de daño en una exitosa. Además, el terreno en esa área se convierte en terreno difícil hasta que se despeje; cada porción de 5 ft cuadrados requiere al menos 1 minuto para despejarse a mano.",
+      "upcast": "Cuando lances este conjuro usando una ranura de conjuro de nivel 4° o superior, el daño aumenta en 1d12 por cada nivel de ranura por encima de 3°.",
+      "damage": {
+        "stat": "DAM",
+        "value": "3d12",
+        "mod": "Contundente"
+      },
+      "effect": "Erupción de tierra que daña y crea terreno difícil",
+      "range": "120 ft",
+      "areaOfEffect": "Cubo de 20 ft",
+      "savingThrow": {
+        "type": "Destreza",
+        "dc": null,
+        "effect": "Mitad de daño si supera la tirada"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "toll_the_dead",
+      "name": "Tocar a los Muertos",
+      "school": "Nigromancia",
+      "level": 0,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Instantáneo",
+      "concentration": false,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": [],
+      "description": "Señala a una criatura que puedas ver dentro del alcance, y el sonido de una campana dolorosa llena el aire a su alrededor por un momento. El objetivo debe tener éxito en una tirada de salvación de Sabiduría o recibir 1d8 de daño necrótico. Si al objetivo le falta alguno de sus puntos de golpe, en su lugar recibe 1d12 de daño necrótico.",
+      "upcast": "El daño de este conjuro aumenta en un dado cuando alcanzas el nivel 5 (2d8 o 2d12), el nivel 11 (3d8 o 3d12) y el nivel 17 (4d8 o 4d12).",
+      "damage": {
+        "stat": "DAM",
+        "value": "1d8",
+        "mod": "Necrótico (1d12 si al objetivo le faltan PG)"
+      },
+      "effect": "Truco necrótico, más fuerte contra objetivos heridos",
+      "range": "60 ft",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": "Sabiduría",
+        "dc": null,
+        "effect": "Sin daño si supera la tirada"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "whirlwind",
+      "name": "Torbellino",
+      "school": "Evocación",
+      "level": 7,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 minuto (10 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "M"
+      ],
+      "materials": [
+        "Un trozo de paja"
+      ],
+      "description": "Un torbellino aúlla hasta formarse en un punto que puedas ver en el suelo dentro del alcance: un cilindro de 10 ft de radio y 30 ft de altura centrado en ese punto. Hasta que termine el conjuro, puedes usar tu acción para mover el torbellino hasta 30 ft en cualquier dirección a lo largo del suelo; aspira cualquier objeto Mediano o menor no sujeto ni portado. Una criatura debe hacer una tirada de salvación de Destreza la primera vez que entra en el torbellino en un turno o que este entra en su espacio, incluso al aparecer: recibe 10d6 de daño contundente en una salvación fallida, o la mitad en una exitosa. Además, una criatura Grande o menor que falle debe superar una tirada de salvación de Fuerza o quedar apresada en el torbellino hasta que este termine. Una criatura que comience su turno apresada es jalada 5 ft más arriba en su interior, salvo que esté en la parte superior; se mueve con el torbellino y cae cuando el conjuro termina, salvo que pueda mantenerse en el aire. Una criatura apresada puede usar una acción para hacer una prueba de Fuerza o Destreza contra tu CD de salvación de conjuros; en un éxito, deja de estar apresada y es lanzada 3d6 x 10 ft de distancia en una dirección aleatoria.",
+      "upcast": null,
+      "damage": {
+        "stat": "DAM",
+        "value": "10d6",
+        "mod": "Contundente"
+      },
+      "effect": "Tornado móvil que golpea y atrapa criaturas",
+      "range": "300 ft",
+      "areaOfEffect": "Cilindro de 10 ft de radio y 30 ft de altura (móvil)",
+      "savingThrow": {
+        "type": "Destreza / Fuerza",
+        "dc": null,
+        "effect": "Destreza para mitad de daño; Fuerza para no quedar apresado"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "snilloccs_snowball_swarm",
+      "name": "Tormenta de Bolas de Nieve de Snilloc",
+      "school": "Evocación",
+      "level": 2,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Instantáneo",
+      "concentration": false,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Un trozo de hielo o una pequeña viruta de roca blanca"
+      ],
+      "description": "Una ráfaga de bolas de nieve mágicas brota de un punto que elijas dentro del alcance. Cada criatura en una esfera de 5 ft de radio centrada en ese punto debe hacer una tirada de salvación de Destreza. Una criatura recibe 3d6 de daño por frío en una salvación fallida, o la mitad de daño en una exitosa.",
+      "upcast": "Cuando lances este conjuro usando una ranura de conjuro de 3° nivel o superior, el daño aumenta en 1d6 por cada nivel de ranura por encima de 2°.",
+      "damage": {
+        "stat": "DAM",
+        "value": "3d6",
+        "mod": "Frío"
+      },
+      "effect": "Explosión de bolas de nieve",
+      "range": "90 ft",
+      "areaOfEffect": "Esfera de 5 ft de radio",
+      "savingThrow": {
+        "type": "Destreza",
+        "dc": null,
+        "effect": "Mitad de daño si supera la tirada"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "snare",
+      "name": "Trampa de Lazo",
+      "school": "Abjuración",
+      "level": 1,
+      "ritual": false,
+      "castingTime": "1 minuto",
+      "duration": "8 horas",
+      "concentration": false,
+      "components": [
+        "S",
+        "M"
+      ],
+      "materials": [
+        "25 ft de cuerda, consumidos por el conjuro"
+      ],
+      "description": "Al lanzar este conjuro, usas la cuerda para crear un círculo con un radio de 5 ft en la tierra o el suelo. Al terminar de lanzarlo, la cuerda desaparece y el círculo se convierte en una trampa mágica casi invisible, que requiere una prueba de Inteligencia (Investigación) contra tu CD de salvación de conjuros para discernirla. La trampa se dispara cuando una criatura Pequeña, Mediana o Grande se desplaza a la tierra o al suelo en el radio del conjuro: esa criatura debe superar una tirada de salvación de Destreza o ser izada mágicamente en el aire, colgando de cabeza a 3 ft sobre el suelo y quedando apresada allí. Una criatura apresada puede repetir la salvación al final de cada uno de sus turnos, liberándose en un éxito; alternativamente, la criatura u otra que la alcance puede usar una acción para hacer una prueba de Inteligencia (Arcanos) contra tu CD de salvación, terminando el efecto en un éxito. Tras dispararse, el conjuro termina cuando ninguna criatura está apresada por él.",
+      "upcast": null,
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Trampa mágica oculta que cuelga a una criatura de los tobillos",
+      "range": "Toque",
+      "areaOfEffect": "Círculo de 5 ft de radio",
+      "savingThrow": {
+        "type": "Destreza",
+        "dc": null,
+        "effect": "Evita quedar colgado y apresado"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "life_transference",
+      "name": "Transferencia de Vida",
+      "school": "Nigromancia",
+      "level": 3,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Instantáneo",
+      "concentration": false,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": [],
+      "description": "Sacrificas algo de tu salud para reparar las heridas de otra criatura. Recibes 4d8 de daño necrótico, y una criatura de tu elección que puedas ver dentro del alcance recupera una cantidad de puntos de golpe igual al doble del daño necrótico que recibes.",
+      "upcast": "Cuando lances este conjuro usando una ranura de conjuro de 4° nivel o superior, el daño aumenta en 1d8 por cada nivel de ranura por encima de 3°.",
+      "damage": {
+        "stat": "CURE",
+        "value": "8d8",
+        "mod": "Cura al objetivo el doble del daño necrótico que sufres (4d8)"
+      },
+      "effect": "Te dañas para curar al doble a un aliado",
+      "range": "30 ft",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "tensers_transformation",
+      "name": "Transformación de Tenser",
+      "school": "Transmutación",
+      "level": 6,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 10 minutos (100 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Algunos pelos de un toro"
+      ],
+      "description": "Te dotas de resistencia y destreza marcial alimentada por magia. Hasta que el conjuro termine, no puedes lanzar conjuros y obtienes: 50 puntos de golpe temporales (los que queden al terminar el conjuro se pierden); ventaja en las tiradas de ataque con armas simples y marciales; 2d12 de daño de fuerza adicional al golpear a un objetivo con un ataque con arma; competencia con todas las armaduras, escudos, armas simples y marciales; competencia en tiradas de salvación de Fuerza y Constitución; y puedes atacar dos veces en lugar de una al realizar la acción de Atacar (se ignora si ya tienes Ataque Adicional). Inmediatamente después de que termine el conjuro, debes superar una tirada de salvación de Constitución CD 15 o sufrir un nivel de agotamiento.",
+      "upcast": null,
+      "damage": {
+        "stat": "ATAQUE",
+        "value": "2d12",
+        "mod": "Fuerza adicional en cada golpe con arma"
+      },
+      "effect": "Te vuelves un guerrero mágico: PG temporales, ventaja y ataque doble",
+      "range": "Personal",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "shape_water",
+      "name": "Transformar Agua",
+      "school": "Transmutación",
+      "level": 0,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Instantáneo o 1 hora (ver descripción)",
+      "concentration": false,
+      "components": [
+        "S"
+      ],
+      "materials": [],
+      "description": "Eliges un área de agua que puedas ver dentro del alcance y que quepa en un cubo de 5 ft. La manipulas de una de estas maneras: instantáneamente mueves o cambias el flujo del agua hasta 5 ft en cualquier dirección (sin fuerza suficiente para causar daño); haces que el agua forme figuras simples y se anime según tu dirección (dura 1 hora); cambias el color o la opacidad del agua, de la misma manera en todas partes (dura 1 hora); congelas el agua, siempre que no haya criaturas en ella (se descongela en 1 hora). Si lanzas el conjuro varias veces, no puedes tener activos más de dos efectos no instantáneos a la vez, y puedes descartar uno como acción.",
+      "upcast": null,
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Truco de manipulación de agua (mover, animar, colorear, congelar)",
+      "range": "30 ft",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "transmute_rock",
+      "name": "Transmutar Roca",
+      "school": "Transmutación",
+      "level": 5,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Hasta que sea disipado",
+      "concentration": false,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Arcilla y agua"
+      ],
+      "description": "Eliges un área de piedra o barro que puedas ver, que quepa en un cubo de 40 ft y esté dentro del alcance, y eliges uno de los siguientes efectos. Transmutar roca a barro: la roca no mágica del área se convierte en un volumen igual de barro espeso y fluido que permanece hasta el final de la duración; el suelo se vuelve tan fangoso que cada ft de movimiento cuesta 4 ft extra, y cualquier criatura en el suelo al lanzarse el conjuro (o que se mueva allí por primera vez en un turno, o termine su turno allí) debe superar una tirada de salvación de Fuerza o hundirse y quedar apresada (puede usar una acción para liberarse). Si lanzas el conjuro sobre un techo, el barro cae y las criaturas debajo hacen una salvación de Destreza, recibiendo 4d8 de daño contundente en una fallida, o la mitad en una exitosa. Transmutar barro a roca: el barro no mágico o las arenas movedizas de no más de 10 ft de profundidad se transforman en piedra blanda por la duración; cualquier criatura en el barro cuando se transforma hace una salvación de Destreza (en un éxito es desviada con seguridad a un espacio desocupado; en una fallida queda apresada por la roca). Una criatura apresada, u otra que la alcance, puede usar una acción para romper la roca con una prueba de Fuerza CD 20 o infligiéndole daño (la roca tiene CA 15, 25 puntos de golpe, y es inmune al daño psíquico y al veneno).",
+      "upcast": null,
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Convierte roca en barro o barro en roca en un gran cubo",
+      "range": "120 ft",
+      "areaOfEffect": "Cubo de 40 ft",
+      "savingThrow": {
+        "type": "Fuerza / Destreza",
+        "dc": null,
+        "effect": "Evita quedar apresado en el barro o la roca"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "maelstrom",
+      "name": "Vorágine",
+      "school": "Evocación",
+      "level": 5,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 minuto (10 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Papel o una hoja en forma de embudo"
+      ],
+      "description": "Una masa arremolinada de agua de 5 ft de profundidad aparece en un radio de 30 ft centrado en un punto que puedas ver dentro del alcance. El punto debe estar en el suelo o en un cuerpo de agua. Hasta que termine el conjuro, esa área es terreno difícil, y cualquier criatura que comience su turno allí debe superar una tirada de salvación de Fuerza o recibir 6d6 de daño contundente y ser jalada 10 ft hacia el centro.",
+      "upcast": null,
+      "damage": {
+        "stat": "DAM",
+        "value": "6d6",
+        "mod": "Contundente"
+      },
+      "effect": "Remolino de agua que daña y arrastra al centro",
+      "range": "120 ft",
+      "areaOfEffect": "Radio de 30 ft",
+      "savingThrow": {
+        "type": "Fuerza",
+        "dc": null,
+        "effect": "Evita el daño y el arrastre si supera"
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "warding_wind",
+      "name": "Viento de Salvaguardia",
+      "school": "Evocación",
+      "level": 2,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 10 minutos (100 turnos)",
+      "concentration": true,
+      "components": [
+        "V"
+      ],
+      "materials": [],
+      "description": "Un viento fuerte (20 millas por hora) sopla a tu alrededor en un radio de 10 ft y se mueve contigo, permaneciendo centrado en ti. El viento dura hasta el final de la duración del conjuro y tiene los siguientes efectos: te ensordece a ti y a otras criaturas en su área; apaga las llamas no protegidas en su área que son del tamaño de una antorcha o menores; cubre el vapor, el gas y la niebla que pueden ser dispersados por el viento fuerte; el área es terreno difícil para otras criaturas aparte de ti; y las tiradas de ataque con arma a distancia tienen desventaja si los ataques entran o salen del viento.",
+      "upcast": null,
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Aura de viento que ensordece, apaga llamas y frena proyectiles",
+      "range": "Personal",
+      "areaOfEffect": "Radio de 10 ft alrededor de ti (móvil)",
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "beast_bond",
+      "name": "Vínculo Bestial",
+      "school": "Adivinación",
+      "level": 1,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 10 minutos (100 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Un poco de pelaje envuelto en un paño"
+      ],
+      "description": "Estableces un vínculo telepático con una bestia que tocas y que es amigable contigo o que está hechizada por ti. El conjuro falla si la puntuación de Inteligencia de la bestia es 4 o mayor. Hasta que el conjuro termine, el enlace está activo mientras tú y la bestia estéis a la vista el uno del otro. A través del enlace, la bestia puede entender tus mensajes telepáticos y comunicarte emociones y conceptos simples de vuelta. Mientras el enlace está activo, la bestia gana ventaja en las tiradas de ataque contra cualquier criatura a 5 ft de ti que puedas ver.",
+      "upcast": null,
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Vínculo telepático con una bestia que la potencia en combate",
+      "range": "Toque",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    },
+    {
+      "id": "chaos_bolt",
+      "name": "Virote de Caos",
+      "school": "Evocación",
+      "level": 1,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Instantáneo",
+      "concentration": false,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": [],
+      "description": "Arrojas una masa gorjeante y ondulante de energía caótica a una criatura dentro del alcance. Haz un ataque de conjuro a distancia contra el objetivo. En un golpe, el objetivo recibe 2d8 + 1d6 de daño; elige uno de los d8: el número tirado en ese dado determina el tipo de daño del ataque (1 ácido, 2 frío, 3 fuego, 4 fuerza, 5 rayo, 6 psíquico, 7 trueno, 8 veneno). Si sacas el mismo número en ambos d8, la energía caótica salta del objetivo a otra criatura de tu elección a 30 ft de distancia: haz una nueva tirada de ataque contra el nuevo objetivo y una nueva tirada de daño, lo que podría hacer que la energía vuelva a saltar. Una criatura solo puede ser objetivo una vez por cada lanzamiento de este conjuro.",
+      "upcast": "Cuando lances este conjuro usando una ranura de conjuro de nivel 2 o superior, cada objetivo recibe 1d6 de daño extra del tipo que se lanza por cada nivel de ranura por encima de 1°.",
+      "damage": {
+        "stat": "ATAQUE",
+        "value": "2d8 + 1d6",
+        "mod": "Tipo aleatorio (ácido/frío/fuego/fuerza/rayo/psíquico/trueno/veneno)"
+      },
+      "effect": "Proyectil de energía caótica que puede rebotar",
+      "range": "120 ft",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Guia de Xanathar"
+    }
+  ]
+}

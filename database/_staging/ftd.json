@@ -1,0 +1,328 @@
+{
+  "module": "Dragones de Fizban: El Tesoro de Dragones",
+  "source": "Dragones de Fizban",
+  "sourcePages": "tabla de clases + 2,5 páginas de conjuros (pantallazos del usuario)",
+  "status": "Transcrito de pantallazos (los 7). Listo para fusionar.",
+  "notes": [
+    "La edición viene en METROS. Convertido a ft con el redondeo estándar D&D: 1,5 m=5 ft, 3 m=10 ft, 6 m=20 ft, 9 m=30 ft, 18 m=60 ft, 36 m=120 ft.",
+    "Escuela 'Ilusionismo' del libro normalizada a 'Ilusión'.",
+    "'Escudo de platino de Fizban' — esta edición ES difiere del inglés: usa 'cobertura media' en vez de '+2 CA / ventaja en salvaciones de Destreza'. Transcrito tal cual del libro."
+  ],
+  "spells": [
+    {
+      "id": "rimes_binding_ice",
+      "name": "Hielo inmovilizador de Escarcha",
+      "school": "Evocación",
+      "level": 2,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Instantáneo",
+      "concentration": false,
+      "components": [
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Un vial de agua de deshielo"
+      ],
+      "description": "Una ráfaga de energía fría emana de ti en un cono de 30 ft. Todas las criaturas situadas en esa zona deberán hacer una tirada de salvación de Constitución. Si la fallan, recibirán 3d8 de daño de frío y se verán entorpecidas por las formaciones de hielo durante 1 minuto o hasta que otra criatura a su alcance utilice una acción para romper el hielo; la velocidad de las criaturas entorpecidas se reduce a 0. Si la superan, recibirán la mitad de ese daño y no se verán entorpecidas por el hielo.",
+      "upcast": "Cuando lanzas este conjuro mediante un espacio de conjuro de nivel 3 o superior, el daño de frío aumenta en 1d8 por cada nivel por encima de 2 que tenga el espacio que hayas empleado.",
+      "damage": {
+        "stat": "DAM",
+        "value": "3d8",
+        "mod": "Frío"
+      },
+      "effect": "Cono de frío que inmoviliza",
+      "range": "Personal (cono de 30 ft)",
+      "areaOfEffect": "Cono de 30 ft",
+      "savingThrow": {
+        "type": "Constitución",
+        "dc": null,
+        "effect": "Mitad de daño y sin quedar entorpecido si supera"
+      },
+      "createsItems": [],
+      "source": "Dragones de Fizban"
+    },
+    {
+      "id": "nathairs_mischief",
+      "name": "Travesura de Nathair",
+      "school": "Ilusión",
+      "level": 2,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 minuto (10 turnos)",
+      "concentration": true,
+      "components": [
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Un trozo de corteza de una tarta de manzana"
+      ],
+      "description": "Llenas con magia feérica y dracónica un cubo de 20 ft que puedas ver dentro del alcance. Tira en la tabla \"Travesura súbita\" para determinar el efecto mágico producido, y tira de nuevo al principio de cada uno de tus turnos hasta que el conjuro termine. Puedes mover el cubo hasta 10 ft antes de tirar.\n\n**Travesura súbita (d4)**\n\n1. El olor a tarta de manzana impregna el ambiente y todas las criaturas situadas en el cubo deberán superar una tirada de salvación de Sabiduría o quedarán hechizadas por ti hasta el principio de tu siguiente turno.\n2. Aparecen ramos de flores por doquier y todas las criaturas situadas en el cubo deberán superar una tirada de salvación de Destreza o quedarán cegadas hasta el principio de tu siguiente turno mientras las flores les rocían agua en la cara.\n3. Todas las criaturas situadas en el cubo deberán superar una tirada de salvación de Sabiduría o les dará la risa tonta hasta el principio de tu siguiente turno. Una criatura con la risa tonta estará incapacitada y usará todo su movimiento para moverse en una dirección aleatoria.\n4. Gotas de melaza flotan en el cubo, lo que lo convierte en terreno difícil hasta el principio de tu siguiente turno.",
+      "upcast": null,
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Efecto ilusorio aleatorio en un cubo cada turno",
+      "range": "60 ft",
+      "areaOfEffect": "Cubo de 20 ft (móvil)",
+      "savingThrow": {
+        "type": "Sabiduría / Destreza (según efecto)",
+        "dc": null,
+        "effect": "Varía según el resultado de la tabla"
+      },
+      "createsItems": [],
+      "source": "Dragones de Fizban"
+    },
+    {
+      "id": "ashardalons_stride",
+      "name": "Zancada de Ashardalon",
+      "school": "Transmutación",
+      "level": 3,
+      "ritual": false,
+      "castingTime": "1 acción adicional",
+      "duration": "Concentración, hasta 1 minuto (10 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S"
+      ],
+      "materials": [],
+      "description": "Las llamas que exhala un dragón surgen de tus pies y te otorgan una velocidad explosiva. Hasta que el conjuro termine, tu velocidad aumenta en 20 ft y moverte no provoca ataques de oportunidad. Cuando te mueves a 5 ft o menos de una criatura o de un objeto que no lleve o vista nadie, recibe 1d6 de daño de fuego por tu rastro candente. Una criatura u objeto solo puede sufrir este daño una vez durante un turno.",
+      "upcast": "Cuando lanzas este conjuro mediante un espacio de conjuro de nivel 4 o superior, la velocidad aumenta en 5 ft por cada nivel por encima de 3 que tenga el espacio que hayas empleado, y el conjuro inflige 1d6 de daño de fuego adicional por cada nivel por encima de 3 que tenga el espacio que hayas empleado.",
+      "damage": {
+        "stat": "DAM",
+        "value": "1d6",
+        "mod": "Fuego (a quien pasas cerca)"
+      },
+      "effect": "Velocidad extra y rastro de fuego",
+      "range": "Personal",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Dragones de Fizban"
+    },
+    {
+      "id": "raulothims_psychic_lance",
+      "name": "Lanza psíquica de Raulothim",
+      "school": "Encantamiento",
+      "level": 4,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Instantáneo",
+      "concentration": false,
+      "components": [
+        "V"
+      ],
+      "materials": [],
+      "description": "Arrojas una lanza centelleante de poder psíquico desde la frente contra una criatura que puedas ver dentro del alcance. De forma alternativa, puedes pronunciar el nombre de una criatura: si está al alcance, se convierte en el objetivo del conjuro aunque no la puedas ver; si no está al alcance, la lanza se desvanece sin efecto. El objetivo tiene que hacer una tirada de salvación de Inteligencia. Si la falla, recibirá 7d6 de daño psíquico y quedará incapacitado hasta el principio de tu siguiente turno. Si la supera, sufrirá la mitad del daño y no quedará incapacitado.",
+      "upcast": "Cuando lanzas este conjuro mediante un espacio de conjuro de nivel 5 o superior, el daño aumenta en 1d6 por cada nivel por encima de 4 que tenga el espacio que hayas empleado.",
+      "damage": {
+        "stat": "DAM",
+        "value": "7d6",
+        "mod": "Psíquico"
+      },
+      "effect": "Lanza psíquica que puede apuntar por el nombre",
+      "range": "120 ft",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": "Inteligencia",
+        "dc": null,
+        "effect": "Mitad de daño y sin quedar incapacitado si supera"
+      },
+      "createsItems": [],
+      "source": "Dragones de Fizban"
+    },
+    {
+      "id": "summon_draconic_spirit",
+      "name": "Invocar espíritu dracónico",
+      "school": "Conjuración",
+      "level": 5,
+      "ritual": false,
+      "castingTime": "1 acción",
+      "duration": "Concentración, hasta 1 hora (600 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Un objeto con la imagen de un dragón grabada en él que valga al menos 500 po"
+      ],
+      "description": "Invocas un espíritu dracónico que se manifiesta en un espacio sin ocupar que puedas ver dentro del alcance. Esta forma corpórea usa el perfil del espíritu dracónico. Cuando lances el conjuro, elige una familia de dragones: cromáticos, gema o metálicos. La criatura se parecerá a un dragón de la familia elegida, lo que determinará ciertos atributos de su perfil. La criatura desaparecerá si sus puntos de golpe se reducen a 0 o si el conjuro termina.\n\nLa criatura se considera un aliado para ti y para tus compañeros. En combate, la criatura comparte tu orden de iniciativa, pero su turno va justo después del tuyo. Obedece tus órdenes verbales (no requiere acción) y, si no le das ninguna, hace la acción de Esquivar y usa su movimiento para evitar el peligro.\n\n---\n\n**Espíritu Dracónico**  \n*Dragón Grande, neutral*\n\n| | |\n|---|---|\n| **Clase de Armadura** | 14 + el nivel del conjuro (armadura natural) |\n| **Puntos de Golpe** | 50 + 10 por cada nivel de conjuro superior al 5 (el dragón tiene una cantidad de Dados de Golpe [d10] igual al nivel del conjuro) |\n| **Velocidad** | 30 ft, nadar 30 ft, volar 60 ft |\n\n| FUE | DES | CON | INT | SAB | CAR |\n|---|---|---|---|---|---|\n| 19 (+4) | 14 (+2) | 17 (+3) | 10 (+0) | 14 (+2) | 14 (+2) |\n\n**Resistencia a daño (solo cromático y metálico)** ácido, frío, fuego, relámpago, veneno  \n**Resistencia a daño (solo gema)** fuerza, necrótico, psíquico, radiante, trueno  \n**Inmunidad a estados** asustado, envenenado, hechizado  \n**Sentidos** visión ciega 30 ft, visión en la oscuridad 60 ft, Percepción pasiva 12  \n**Idiomas** dracónico, entiende los idiomas que hables tú  \n**Desafío** — · **Bonificador por competencia** igual a tu bonificador\n\n**Rasgos**\n\n- ***Resistencias Compartidas.*** Cuando invoques al dragón, elige una de sus resistencias a daño. Tienes resistencia al tipo de daño elegido hasta que el conjuro termine.\n\n**Acciones**\n\n- ***Ataque Múltiple.*** El dragón realiza una cantidad de ataques de desgarro igual a la mitad del nivel del conjuro (redondeado hacia abajo) y utiliza su ataque de aliento.\n- ***Desgarro.*** *Ataque con arma cuerpo a cuerpo:* tu modificador de ataque de conjuros a impactar, alcance 10 ft, un objetivo. *Impacto:* 1d6 + 4 + el nivel del conjuro de daño perforante.\n- ***Ataque de Aliento.*** El dragón exhala energía destructora en un cono de 30 ft. Todas las criaturas situadas en esa zona deberán hacer una tirada de salvación de Destreza contra tu CD de salvación de conjuros. Sufrirán 2d6 de un tipo de daño al que este dragón tenga resistencia (a tu elección) si la fallan, o la mitad del daño si la superan.",
+      "upcast": "Cuando lances este conjuro mediante un espacio de conjuro de nivel 6 o superior, usa el nivel más alto en lugar del nivel del conjuro cuando aparezca en el perfil de la criatura.",
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Invoca un espíritu de dragón (cromático, gema o metálico)",
+      "range": "60 ft",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Dragones de Fizban"
+    },
+    {
+      "id": "fizbans_platinum_shield",
+      "name": "Escudo de platino de Fizban",
+      "school": "Abjuración",
+      "level": 6,
+      "ritual": false,
+      "castingTime": "1 acción adicional",
+      "duration": "Concentración, hasta 1 minuto (10 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Una escama de dragón chapada en platino que valga al menos 500 po"
+      ],
+      "description": "Creas un campo de luz plateada que rodea a una criatura de tu elección dentro del alcance (puedes elegirte a ti mismo). El campo emite luz tenue hasta 5 ft. Mientras una criatura esté rodeada por este campo, obtiene los siguientes beneficios: Cobertura. La criatura tiene cobertura media. Evasión. Si la criatura sufre un efecto que le permita hacer una tirada de salvación de Destreza para sufrir solo la mitad de daño, no recibe ningún daño si la supera y solo sufre la mitad si la falla. Resistencia al daño. La criatura tiene resistencia al daño de ácido, frío, fuego, relámpago y veneno. Como acción adicional en los siguientes turnos, puedes mover el campo a otra criatura que esté a 60 ft o menos del campo.",
+      "upcast": null,
+      "damage": {
+        "stat": null,
+        "value": null,
+        "mod": null
+      },
+      "effect": "Escudo dracónico: cobertura media, evasión y resistencias elementales",
+      "range": "60 ft",
+      "areaOfEffect": null,
+      "savingThrow": {
+        "type": null,
+        "dc": null,
+        "effect": null
+      },
+      "createsItems": [],
+      "source": "Dragones de Fizban"
+    },
+    {
+      "id": "draconic_transformation",
+      "name": "Transformación dracónica",
+      "school": "Transmutación",
+      "level": 7,
+      "ritual": false,
+      "castingTime": "1 acción adicional",
+      "duration": "Concentración, hasta 1 minuto (10 turnos)",
+      "concentration": true,
+      "components": [
+        "V",
+        "S",
+        "M"
+      ],
+      "materials": [
+        "Una estatuilla de un dragón que valga al menos 500 po"
+      ],
+      "description": "Con un rugido, utilizas la magia de los dragones para transformarte y adoptas rasgos dracónicos. Hasta que el conjuro termine, obtienes los siguientes beneficios: Alas. De tu espalda brotan unas alas incorpóreas que te proporcionan una velocidad volando de 60 ft. Ataque de aliento. Cuando lanzas este conjuro, y como acción adicional en los siguientes turnos hasta que el conjuro termine, puedes exhalar una energía resplandeciente en un cono de 60 ft; todas las criaturas situadas en la zona deberán hacer una tirada de salvación de Destreza, sufriendo 6d8 de daño de fuerza si la fallan o la mitad del daño si la superan. Visión ciega. Tienes visión ciega hasta 30 ft; dentro de ese alcance puedes ver cualquier cosa que no esté tras una cobertura completa, incluso si estás cegado o en oscuridad, y puedes ver a las criaturas invisibles a no ser que consigan esconderse.",
+      "upcast": null,
+      "damage": {
+        "stat": "DAM",
+        "value": "6d8",
+        "mod": "Fuerza (cono de aliento)"
+      },
+      "effect": "Adoptas rasgos de dragón: alas, aliento y visión ciega",
+      "range": "Personal",
+      "areaOfEffect": "Cono de 60 ft (aliento)",
+      "savingThrow": {
+        "type": "Destreza",
+        "dc": null,
+        "effect": "Mitad de daño si supera la tirada"
+      },
+      "createsItems": [],
+      "source": "Dragones de Fizban"
+    }
+  ],
+  "classAssignments": {
+    "class_spells_additions": {
+      "bardo": {
+        "level2": [
+          "nathairs_mischief"
+        ],
+        "level4": [
+          "raulothims_psychic_lance"
+        ]
+      },
+      "brujo": {
+        "level4": [
+          "raulothims_psychic_lance"
+        ]
+      },
+      "druida": {
+        "level5": [
+          "summon_draconic_spirit"
+        ],
+        "level7": [
+          "draconic_transformation"
+        ]
+      },
+      "explorador": {
+        "level3": [
+          "ashardalons_stride"
+        ]
+      },
+      "hechicero": {
+        "level2": [
+          "rimes_binding_ice",
+          "nathairs_mischief"
+        ],
+        "level3": [
+          "ashardalons_stride"
+        ],
+        "level4": [
+          "raulothims_psychic_lance"
+        ],
+        "level5": [
+          "summon_draconic_spirit"
+        ],
+        "level6": [
+          "fizbans_platinum_shield"
+        ],
+        "level7": [
+          "draconic_transformation"
+        ]
+      },
+      "mago": {
+        "level2": [
+          "rimes_binding_ice",
+          "nathairs_mischief"
+        ],
+        "level3": [
+          "ashardalons_stride"
+        ],
+        "level4": [
+          "raulothims_psychic_lance"
+        ],
+        "level5": [
+          "summon_draconic_spirit"
+        ],
+        "level6": [
+          "fizbans_platinum_shield"
+        ],
+        "level7": [
+          "draconic_transformation"
+        ]
+      }
+    },
+    "pending_class_spells_additions": {
+      "artifice": {
+        "level3": [
+          "ashardalons_stride"
+        ]
+      }
+    }
+  }
+}
