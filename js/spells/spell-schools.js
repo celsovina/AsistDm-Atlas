@@ -29,7 +29,12 @@ export const SCHOOL_COLOR_FALLBACK = '#64748b';
  * @type {Record<string, string>}
  */
 export const SCHOOL_INK = {
-  Nigromancia: '#C7CDD6',
+  Nigromancia: '#9BA1AC',
+};
+
+/** Fondo del pill cuando el color base no sirve (Nigromancia: casi negro). */
+export const SCHOOL_PILL_BG = {
+  Nigromancia: 'rgba(18, 16, 22, 0.92)',
 };
 
 /**
@@ -71,10 +76,9 @@ export function hexToRgba(hex, alpha) {
  * @returns {string} valor para el atributo style
  */
 export function schoolPillStyle(school) {
-  const bg = schoolColor(school);
   const ink = schoolInk(school);
-  const bgAlpha = school === 'Nigromancia' ? 0.5 : 0.3;
-  return `color:${ink};border-color:${ink};background:${hexToRgba(bg, bgAlpha)}`;
+  const bg = SCHOOL_PILL_BG[school] || hexToRgba(schoolColor(school), 0.3);
+  return `color:${ink};border-color:${ink};background:${bg}`;
 }
 
 /**
