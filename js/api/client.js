@@ -54,3 +54,45 @@ export async function apiGet(path, options = {}) {
 
   return data;
 }
+
+/**
+ * Envía un cuerpo JSON (POST/PUT) a la API.
+ * @param {string} path
+ * @param {'POST'|'PUT'|'PATCH'|'DELETE'} method
+ * @param {unknown} [body]
+ * @returns {Promise<any>}
+ */
+export async function apiSend(path, method, body) {
+  const url = path.startsWith('/') ? path.slice(1) : path;
+
+  let response;
+  try {
+    response = await fetch(url, {
+      method,
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: body === undefined ? undefined : JSON.stringify(body),
+    });
+  } catch (err) {
+    throw new ApiError('No se pudo conectar con la API.', 0, err);
+  }
+
+  let data = null;
+  try {
+    data = await response.json();
+  } catch {
+    throw new ApiError('Respuesta inválida del servidor', response.status);
+  }
+
+  if (!response.ok || data?.ok === false) {
+    throw new ApiError(
+      data?.error || `Error HTTP ${response.status}`,
+      response.status,
+      data
+    );
+  }
+
+  return data;
+}

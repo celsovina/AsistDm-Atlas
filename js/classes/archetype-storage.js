@@ -1,15 +1,19 @@
 /**
- * Persistencia de arquetipo elegido por clase (localStorage).
+ * Persistencia de arquetipo elegido por clase — vía sesión de jugador
+ * (Redis + espejo local). Misma firma pública que la versión localStorage.
  */
 
-const KEY_PREFIX = 'atlas:classArchetype:';
+import { isReady, getSection, update } from '../user/session.js';
 
-/**
- * @param {string} classId
- * @returns {string}
- */
-function storageKey(classId) {
-  return `${KEY_PREFIX}${classId}`;
+const LEGACY_PREFIX = 'atlas:classArchetype:';
+
+function readLegacy(classId) {
+  try {
+    const v = localStorage.getItem(LEGACY_PREFIX + classId);
+    return v && v.trim() ? v.trim() : null;
+  } catch {
+    return null;
+  }
 }
 
 /**
@@ -18,12 +22,11 @@ function storageKey(classId) {
  */
 export function loadArchetypeSelection(classId) {
   if (!classId) return null;
-  try {
-    const value = localStorage.getItem(storageKey(classId));
-    return value && value.trim() ? value.trim() : null;
-  } catch {
-    return null;
+  if (isReady()) {
+    const v = getSection('classArchetypes')?.[classId];
+    return typeof v === 'string' && v.trim() ? v.trim() : null;
   }
+  return readLegacy(classId);
 }
 
 /**
@@ -32,11 +35,9 @@ export function loadArchetypeSelection(classId) {
  */
 export function saveArchetypeSelection(classId, archetypeId) {
   if (!classId || !archetypeId) return;
-  try {
-    localStorage.setItem(storageKey(classId), archetypeId);
-  } catch {
-    /* ignore quota / private mode */
-  }
+  update((doc) => {
+    doc.classArchetypes[classId] = String(archetypeId).trim();
+  });
 }
 
 /**
@@ -44,16 +45,14 @@ export function saveArchetypeSelection(classId, archetypeId) {
  */
 export function clearArchetypeSelection(classId) {
   if (!classId) return;
-  try {
-    localStorage.removeItem(storageKey(classId));
-  } catch {
-    /* ignore */
-  }
+  update((doc) => {
+    delete doc.classArchetypes[classId];
+  });
 }
 
 /**
  * Resuelve la selección visible según el nivel.
- * Si `clearIfBelow` es true y el nivel baja del umbral, borra localStorage.
+ * Si `clearIfBelow` es true y el nivel baja del umbral, borra la selección.
  * @param {string} classId
  * @param {number} classLevel
  * @param {number|null} unlockLevel

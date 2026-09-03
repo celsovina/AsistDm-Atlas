@@ -5,12 +5,25 @@
 
 import express from 'express';
 import path from 'node:path';
+import fs from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { handleGetSpells } from './lib/spells-handler.js';
 import { handleGetClassSpells } from './lib/class-spells-handler.js';
 import { handleGetClasses } from './lib/classes-handler.js';
 import { handleGetProgression } from './lib/progression-handler.js';
 import { handleGetResources } from './lib/resources-handler.js';
+import { handleUser } from './lib/user-handler.js';
+
+// Carga .env en local (en Vercel las variables ya vienen inyectadas).
+// user-store.js lee process.env de forma perezosa, así que basta con hacerlo
+// antes de atender la primera petición.
+try {
+  if (typeof process.loadEnvFile === 'function' && fs.existsSync('.env')) {
+    process.loadEnvFile('.env');
+  }
+} catch {
+  /* .env ausente o Node sin soporte: se sigue con process.env tal cual */
+}
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PORT = Number(process.env.PORT) || 5180;
@@ -18,6 +31,7 @@ const PORT = Number(process.env.PORT) || 5180;
 const app = express();
 
 app.disable('x-powered-by');
+app.use(express.json({ limit: '256kb' }));
 
 app.all('/api/spells', (req, res) => handleGetSpells(req, res));
 app.all('/api/spells/', (req, res) => handleGetSpells(req, res));
@@ -29,6 +43,10 @@ app.all('/api/progression', (req, res) => handleGetProgression(req, res));
 app.all('/api/progression/', (req, res) => handleGetProgression(req, res));
 app.all('/api/resources', (req, res) => handleGetResources(req, res));
 app.all('/api/resources/', (req, res) => handleGetResources(req, res));
+app.all('/api/users', (req, res) => handleUser(req, res, 'users'));
+app.all('/api/users/', (req, res) => handleUser(req, res, 'users'));
+app.all('/api/user', (req, res) => handleUser(req, res, 'user'));
+app.all('/api/user/', (req, res) => handleUser(req, res, 'user'));
 
 app.use(express.static(__dirname, {
   extensions: ['html'],
@@ -55,4 +73,5 @@ app.listen(PORT, () => {
   console.log(`[Atlas] API GET /api/classes`);
   console.log(`[Atlas] API GET /api/progression`);
   console.log(`[Atlas] API GET /api/resources`);
+  console.log(`[Atlas] API GET/POST/PUT /api/user, GET /api/users`);
 });

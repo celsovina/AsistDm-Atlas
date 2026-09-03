@@ -18,6 +18,12 @@ import { createWalletPage } from './wallet/wallet-page.js';
 import { createResourcesPage } from './resources/resources-page.js';
 import { createDicePage } from './dice/dice-page.js';
 import { enhanceAllSearchClears } from './ui/search-clear.js';
+import {
+  initSession,
+  getActiveName,
+  isRemote,
+  logout,
+} from './user/session.js';
 
 const MOBILE_MQ = window.matchMedia('(max-width: 767px)');
 
@@ -409,10 +415,61 @@ function init() {
     });
   });
 
+  mountLogoutButton();
   bindEvents();
   enhanceAllSearchClears();
   refreshIcons();
   setSection('home');
 }
 
-init();
+/**
+ * Botones "Salir": uno en la barra lateral (fuera de Inicio) y otro en la
+ * pantalla de Inicio (donde la barra está oculta). Guardan todo, descargan
+ * los datos del navegador y vuelven a pedir el nombre.
+ */
+function mountLogoutButton() {
+  const name = getActiveName();
+
+  function confirmAndLogout() {
+    if (
+      window.confirm(
+        `¿Salir? Se guardan los datos de ${name} y se pedirá el nombre de nuevo.`
+      )
+    ) {
+      logout();
+    }
+  }
+
+  const sidebar = document.querySelector('.atlas-sidebar');
+  if (sidebar && !sidebar.querySelector('#atlas-logout-btn')) {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.id = 'atlas-logout-btn';
+    btn.className = 'atlas-nav-btn atlas-nav-btn--dock atlas-logout-btn';
+    btn.dataset.tooltip = `Salir (${name}${isRemote() ? '' : ' · local'})`;
+    btn.setAttribute('aria-label', `Salir. Jugador actual: ${name}`);
+    btn.innerHTML = '<i data-lucide="door-open"></i>';
+    btn.addEventListener('click', confirmAndLogout);
+    sidebar.appendChild(btn);
+  }
+
+  const homeBtn = document.getElementById('atlas-home-logout-btn');
+  if (homeBtn && !homeBtn.dataset.bound) {
+    homeBtn.dataset.bound = '1';
+    const hint = document.getElementById('atlas-home-logout-text');
+    if (hint) {
+      hint.textContent = `Guardar los datos de ${name}${
+        isRemote() ? '' : ' (local)'
+      } y volver a elegir jugador`;
+    }
+    homeBtn.addEventListener('click', confirmAndLogout);
+  }
+}
+
+initSession()
+  .catch((err) => {
+    console.error('[Atlas] Error inicializando la sesión:', err);
+  })
+  .finally(() => {
+    init();
+  });
