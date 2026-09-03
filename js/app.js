@@ -12,6 +12,7 @@ import {
 } from './spells/filter-model.js';
 import { createFilterPanel } from './spells/filter-panel.js';
 import { renderSpellMarkdown } from './spells/markdown.js';
+import { schoolPillStyle } from './spells/spell-schools.js';
 import { createClassesPage } from './classes/class-page.js';
 import { createHomePage } from './home/home-page.js';
 import { createWalletPage } from './wallet/wallet-page.js';
@@ -116,7 +117,9 @@ function renderList() {
       <span class="spells-list-item__name">${spell.name || spell.id}</span>
       <span class="spells-list-item__meta">
         <span class="spells-badge">${levelBadge(spell.level)}</span>
-        <span class="spells-badge">${spell.school || '—'}</span>
+        <span class="spells-badge spells-badge--school"${
+          spell.school ? ` style="${schoolPillStyle(spell.school)}"` : ''
+        }>${spell.school || '—'}</span>
       </span>
     `;
 

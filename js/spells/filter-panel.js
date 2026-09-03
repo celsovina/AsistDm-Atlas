@@ -6,6 +6,7 @@ import {
   FILTER_SECTIONS,
   countActiveFilters,
 } from './filter-model.js';
+import { schoolColor } from './spell-schools.js';
 
 /**
  * @param {object} options
@@ -82,6 +83,11 @@ export function createFilterPanel({
       row.htmlFor = rowId;
       row.dataset.group = section.key;
       row.dataset.id = opt.id;
+
+      if (section.key === 'schools') {
+        row.classList.add('atlas-filter__row--school');
+        row.style.setProperty('--school-color', schoolColor(opt.id));
+      }
 
       const labelText = document.createElement('span');
       labelText.className = 'atlas-filter__label';

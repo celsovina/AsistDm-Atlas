@@ -6,6 +6,7 @@
 import { createFilterPanel } from '../spells/filter-panel.js';
 import { SOURCE_OPTIONS } from '../spells/filter-model.js';
 import { renderSpellDetail, spellLevelBadge } from '../spells/spell-detail.js';
+import { schoolColor } from '../spells/spell-schools.js';
 
 /**
  * Opciones de nivel disponibles según slots desbloqueados.
@@ -158,11 +159,13 @@ export function createClassSpellsPanelController(opts) {
           'spells-list-item class-spell-row' +
           (sp.id === selectedSpellId ? ' spells-list-item--selected' : '');
         row.dataset.spellId = sp.id;
+        if (sp.school) row.dataset.school = sp.school;
+        row.style.setProperty('--school-color', schoolColor(sp.school));
+        row.title = sp.school || '';
         row.innerHTML = `
           <span class="spells-list-item__name">${escapeHtml(sp.name || sp.id)}</span>
           <span class="spells-list-item__meta">
             <span class="spells-badge">${spellLevelBadge(sp.level)}</span>
-            <span class="spells-badge">${escapeHtml(sp.school || '—')}</span>
           </span>`;
         row.addEventListener('click', () => {
           setSelectedSpellId(sp.id);

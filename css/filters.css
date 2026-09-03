@@ -239,6 +239,22 @@
   color: var(--atlas-text-muted);
 }
 
+/* Franja de color de escuela, conectada con el catálogo (borde izquierdo) */
+.atlas-filter__row--school {
+  position: relative;
+  padding-left: 16px;
+}
+
+.atlas-filter__row--school::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--school-color, transparent);
+}
+
 /* —— Toggle del proyecto —— */
 .atlas-filter__switch.switch-container {
   display: inline-flex;

@@ -329,6 +329,26 @@
   overflow-y: auto;
 }
 
+/* Franja lateral con el color de la escuela (pegada al borde izquierdo) */
+.class-spell-row {
+  position: relative;
+  padding-left: 14px;
+}
+
+.class-spell-row::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--school-color, transparent);
+}
+
+.class-spell-row .spells-list-item__name {
+  padding-left: 6px;
+}
+
 .class-spell-detail {
   flex: 1 1 auto;
   min-height: 320px;
