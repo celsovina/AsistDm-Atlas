@@ -7,6 +7,11 @@ import { createFilterPanel } from '../spells/filter-panel.js';
 import { SOURCE_OPTIONS } from '../spells/filter-model.js';
 import { renderSpellDetail, spellLevelBadge } from '../spells/spell-detail.js';
 import { schoolColor } from '../spells/spell-schools.js';
+import {
+  getSpellbook,
+  allMarkedIds,
+  toggleFavorite,
+} from './class-spellbook-storage.js';
 
 /**
  * Opciones de nivel disponibles según slots desbloqueados.
@@ -98,6 +103,9 @@ function escapeHtml(text) {
  * @param {(id: string|null) => void} opts.setSelectedSpellId
  * @param {() => string|null} [opts.getSubtitle]
  * @param {() => void} [opts.onLevelFilterChange]
+ * @param {() => string} [opts.getClassId]
+ * @param {() => string|null} [opts.getCasterType]
+ * @param {() => void} [opts.onFavoriteChange]
  */
 export function createClassSpellsPanelController(opts) {
   const {
@@ -113,7 +121,37 @@ export function createClassSpellsPanelController(opts) {
     setSelectedSpellId,
     getSubtitle,
     onLevelFilterChange,
+    getClassId = () => null,
+    getCasterType = () => null,
+    onFavoriteChange,
   } = opts;
+
+  function markedIds() {
+    const classId = getClassId();
+    const book = classId ? getSpellbook(classId) : null;
+    return book ? allMarkedIds(book) : new Set();
+  }
+
+  function toggleFav(spell) {
+    const classId = getClassId();
+    if (!classId) return;
+    toggleFavorite(classId, spell.id, {
+      casterType: getCasterType(),
+      level: spell.level ?? 0,
+    });
+    if (typeof onFavoriteChange === 'function') onFavoriteChange();
+    renderListAndDetail();
+  }
+
+  function starButtonHtml(marked) {
+    const label = marked ? 'Quitar de mis conjuros' : 'Añadir a mis conjuros';
+    return `
+      <button type="button" class="class-favorite-btn class-spell-star${
+        marked ? ' is-active' : ''
+      }" aria-pressed="${marked ? 'true' : 'false'}" aria-label="${label}" title="${label}">
+        <i data-lucide="${marked ? 'star-check' : 'star'}"></i>
+      </button>`;
+  }
 
   /** @type {string} */
   let mountedKey = '';
@@ -146,6 +184,9 @@ export function createClassSpellsPanelController(opts) {
 
     if (!listEl || !detailEl || !selectedBar) return;
 
+    const marked = markedIds();
+    const canFavorite = !!getClassId();
+
     listEl.innerHTML = '';
     if (!filtered.length) {
       listEl.innerHTML =
@@ -153,24 +194,30 @@ export function createClassSpellsPanelController(opts) {
     } else {
       const frag = document.createDocumentFragment();
       filtered.forEach((sp) => {
-        const row = document.createElement('button');
-        row.type = 'button';
+        const isMarked = marked.has(sp.id);
+        const row = document.createElement('div');
         row.className =
           'spells-list-item class-spell-row' +
-          (sp.id === selectedSpellId ? ' spells-list-item--selected' : '');
+          (sp.id === selectedSpellId ? ' spells-list-item--selected' : '') +
+          (isMarked ? ' class-spell-row--marked' : '');
         row.dataset.spellId = sp.id;
         if (sp.school) row.dataset.school = sp.school;
         row.style.setProperty('--school-color', schoolColor(sp.school));
         row.title = sp.school || '';
         row.innerHTML = `
-          <span class="spells-list-item__name">${escapeHtml(sp.name || sp.id)}</span>
-          <span class="spells-list-item__meta">
-            <span class="spells-badge">${spellLevelBadge(sp.level)}</span>
-          </span>`;
-        row.addEventListener('click', () => {
+          ${canFavorite ? starButtonHtml(isMarked) : ''}
+          <button type="button" class="class-spell-row__body">
+            <span class="spells-list-item__name">${escapeHtml(sp.name || sp.id)}</span>
+            <span class="spells-list-item__meta">
+              <span class="spells-badge">${spellLevelBadge(sp.level)}</span>
+            </span>
+          </button>`;
+        row.querySelector('.class-spell-row__body').addEventListener('click', () => {
           setSelectedSpellId(sp.id);
           renderListAndDetail();
         });
+        const star = row.querySelector('.class-spell-star');
+        if (star) star.addEventListener('click', () => toggleFav(sp));
         frag.appendChild(row);
       });
       listEl.appendChild(frag);
@@ -186,6 +233,15 @@ export function createClassSpellsPanelController(opts) {
       }
       detailEl.hidden = false;
       renderSpellDetail(detailEl, selectedSpell);
+      if (canFavorite) {
+        const wrap = document.createElement('div');
+        wrap.className = 'class-spell-detail__star';
+        wrap.innerHTML = starButtonHtml(marked.has(selectedSpell.id));
+        wrap
+          .querySelector('.class-spell-star')
+          .addEventListener('click', () => toggleFav(selectedSpell));
+        detailEl.prepend(wrap);
+      }
     } else {
       selectedBar.hidden = true;
       detailEl.hidden = true;
