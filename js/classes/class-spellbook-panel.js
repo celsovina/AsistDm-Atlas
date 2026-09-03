@@ -180,7 +180,10 @@ export function createClassSpellbookPanelController(opts) {
       sectionEl.className = 'class-detail__section class-spellbook-section class-spellbook-section--optin';
       sectionEl.innerHTML = `
         <label class="spellbook-config__toggle spellbook-optin">
-          <input type="checkbox" id="spellbook-extra-toggle" />
+          <span class="atlas-switch atlas-switch--sm">
+            <input type="checkbox" id="spellbook-extra-toggle" />
+            <span class="switch-slider"></span>
+          </span>
           <span>Conjuros de otros orígenes (raza, dotes, objetos…)</span>
         </label>`;
       const t = sectionEl.querySelector('#spellbook-extra-toggle');
@@ -251,7 +254,10 @@ export function createClassSpellbookPanelController(opts) {
         ${modHtml}
         ${grimoireMaxHtml}
         <label class="spellbook-config__toggle">
-          <input type="checkbox" id="spellbook-extra-toggle" ${bk.extraUnlocked ? 'checked' : ''} />
+          <span class="atlas-switch atlas-switch--sm">
+            <input type="checkbox" id="spellbook-extra-toggle" ${bk.extraUnlocked ? 'checked' : ''} />
+            <span class="switch-slider"></span>
+          </span>
           <span>Tengo conjuros de otros orígenes (raza, dotes, objetos…)</span>
         </label>
       </div>
@@ -392,17 +398,23 @@ export function createClassSpellbookPanelController(opts) {
       const inList = chosen.has(sp.id);
       const row = document.createElement('div');
       row.className =
-        'spellbook-row spells-list-item' + (inList ? ' spellbook-row--in' : '');
+        'spellbook-row spells-list-item' +
+        (inList ? ' spells-list-item--selected' : '');
 
+      const toggle = document.createElement('label');
+      toggle.className = 'atlas-switch atlas-switch--sm spellbook-row__switch';
       const check = document.createElement('input');
       check.type = 'checkbox';
-      check.className = 'spellbook-row__check';
       check.checked = inList;
       check.setAttribute('aria-label', `Añadir ${sp.name || sp.id} a mi lista`);
       check.addEventListener('change', () => {
         toggleSpell(getClassId(), ui.bucket, sp.id);
         render();
       });
+      const slider = document.createElement('span');
+      slider.className = 'switch-slider';
+      toggle.appendChild(check);
+      toggle.appendChild(slider);
 
       const body = document.createElement('button');
       body.type = 'button';
@@ -418,7 +430,7 @@ export function createClassSpellbookPanelController(opts) {
         renderList(bk);
       });
 
-      row.appendChild(check);
+      row.appendChild(toggle);
       row.appendChild(body);
       frag.appendChild(row);
     });
