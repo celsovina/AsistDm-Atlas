@@ -57,6 +57,7 @@ export function createClassesPage(rootEls) {
     selectedSpellId: null,
     spellQuery: '',
     spellLevelFilter: new Set(),
+    spellSourceFilter: new Set(),
     isFavorite: false,
     query: '',
     previousFeaturesOpen: false,
@@ -206,6 +207,7 @@ export function createClassesPage(rootEls) {
       archetypeId,
       spellQuery: state.spellQuery,
       spellLevels: [...state.spellLevelFilter],
+      spellSources: [...state.spellSourceFilter],
       previousFeaturesOpen: state.previousFeaturesOpen,
       selectedSpellId: state.selectedSpellId,
       // Uso en Clases = favorito real (deja de ser efímero de Recursos)
@@ -232,6 +234,7 @@ export function createClassesPage(rootEls) {
       state.selectedArchetypeId = null;
       state.spellQuery = '';
       state.spellLevelFilter.clear();
+      state.spellSourceFilter.clear();
       state.previousFeaturesOpen = false;
       state.selectedSpellId = null;
       clearArchetypeSelection(classId);
@@ -243,6 +246,7 @@ export function createClassesPage(rootEls) {
     state.selectedArchetypeId = snap.archetypeId;
     state.spellQuery = snap.spellQuery;
     state.spellLevelFilter = new Set(snap.spellLevels);
+    state.spellSourceFilter = new Set(snap.spellSources);
     state.previousFeaturesOpen = snap.previousFeaturesOpen;
     state.selectedSpellId = snap.selectedSpellId;
     if (snap.archetypeId) {
@@ -551,6 +555,7 @@ export function createClassesPage(rootEls) {
       state.selectedSpellId = null;
       state.spellQuery = '';
       state.spellLevelFilter.clear();
+      state.spellSourceFilter.clear();
     } else if (
       state.selectedSpellId &&
       !spells.some((s) => s.id === state.selectedSpellId)
@@ -733,6 +738,7 @@ export function createClassesPage(rootEls) {
           persistFavoriteIfNeeded();
         },
         levelFilter: state.spellLevelFilter,
+        sourceFilter: state.spellSourceFilter,
         getSelectedSpellId: () => state.selectedSpellId,
         setSelectedSpellId: (id) => {
           state.selectedSpellId = id;
@@ -765,6 +771,7 @@ export function createClassesPage(rootEls) {
       state.selectedArchetypeId = null;
       state.spellQuery = '';
       state.spellLevelFilter.clear();
+      state.spellSourceFilter.clear();
       state.previousFeaturesOpen = false;
       state.selectedSpellId = null;
     }
@@ -829,6 +836,7 @@ export function createClassesPage(rootEls) {
     state.selectedSpellId = null;
     state.spellQuery = '';
     state.spellLevelFilter.clear();
+    state.spellSourceFilter.clear();
     state.isFavorite = false;
     renderDetail();
     renderClassList();

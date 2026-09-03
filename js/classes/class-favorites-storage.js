@@ -18,6 +18,7 @@ function storageKey(classId) {
  * @property {string|null} archetypeId
  * @property {string} spellQuery
  * @property {string[]} spellLevels
+ * @property {string[]} spellSources
  * @property {boolean} previousFeaturesOpen
  * @property {string|null} [selectedSpellId]
  * @property {boolean} [fromResources] favorito creado solo desde Recursos (efímero)
@@ -55,6 +56,9 @@ export function loadClassFavorite(classId) {
       spellLevels: Array.isArray(data.spellLevels)
         ? data.spellLevels.map(String)
         : [],
+      spellSources: Array.isArray(data.spellSources)
+        ? data.spellSources.map(String)
+        : [],
       previousFeaturesOpen: !!data.previousFeaturesOpen,
       selectedSpellId:
         typeof data.selectedSpellId === 'string' && data.selectedSpellId
@@ -82,6 +86,9 @@ export function saveClassFavorite(classId, snapshot) {
         spellQuery: snapshot.spellQuery ?? '',
         spellLevels: Array.isArray(snapshot.spellLevels)
           ? snapshot.spellLevels
+          : [],
+        spellSources: Array.isArray(snapshot.spellSources)
+          ? snapshot.spellSources
           : [],
         previousFeaturesOpen: !!snapshot.previousFeaturesOpen,
         selectedSpellId: snapshot.selectedSpellId ?? null,

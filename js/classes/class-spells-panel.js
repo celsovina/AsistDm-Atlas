@@ -4,6 +4,7 @@
  */
 
 import { createFilterPanel } from '../spells/filter-panel.js';
+import { SOURCE_OPTIONS } from '../spells/filter-model.js';
 import { renderSpellDetail, spellLevelBadge } from '../spells/spell-detail.js';
 
 /**
@@ -41,13 +42,18 @@ export function pruneLevelFilter(levelFilter, options) {
  * @param {object[]} spells
  * @param {string} query
  * @param {Set<string>} levelFilter
+ * @param {Set<string>} [sourceFilter]
  * @returns {object[]}
  */
-export function filterClassSpells(spells, query, levelFilter) {
+export function filterClassSpells(spells, query, levelFilter, sourceFilter) {
   let list = spells.slice();
 
   if (levelFilter && levelFilter.size > 0) {
     list = list.filter((sp) => levelFilter.has(String(sp.level ?? 0)));
+  }
+
+  if (sourceFilter && sourceFilter.size > 0) {
+    list = list.filter((sp) => sourceFilter.has(sp.source));
   }
 
   if (query && query.trim()) {
@@ -86,6 +92,7 @@ function escapeHtml(text) {
  * @param {() => string} opts.getQuery
  * @param {(q: string) => void} opts.setQuery
  * @param {Set<string>} opts.levelFilter
+ * @param {Set<string>} [opts.sourceFilter]
  * @param {() => string|null} opts.getSelectedSpellId
  * @param {(id: string|null) => void} opts.setSelectedSpellId
  * @param {() => string|null} [opts.getSubtitle]
@@ -100,6 +107,7 @@ export function createClassSpellsPanelController(opts) {
     getQuery,
     setQuery,
     levelFilter,
+    sourceFilter = new Set(),
     getSelectedSpellId,
     setSelectedSpellId,
     getSubtitle,
@@ -119,7 +127,7 @@ export function createClassSpellsPanelController(opts) {
     const spells = getSpells();
     const query = getQuery();
     const selectedSpellId = getSelectedSpellId();
-    const filtered = filterClassSpells(spells, query, levelFilter);
+    const filtered = filterClassSpells(spells, query, levelFilter, sourceFilter);
 
     const selectedSpell =
       selectedSpellId && spells.find((s) => s.id === selectedSpellId)
@@ -245,12 +253,14 @@ export function createClassSpellsPanelController(opts) {
     if (levelOptions.length > 0 && filterMount) {
       filterPanel = createFilterPanel({
         mountEl: filterMount,
-        filters: { levels: levelFilter },
-        sections: [{ key: 'levels', title: 'Nivel', options: levelOptions }],
+        filters: { levels: levelFilter, sources: sourceFilter },
+        sections: [
+          { key: 'levels', title: 'Nivel', options: levelOptions },
+          { key: 'sources', title: 'Origen', options: SOURCE_OPTIONS },
+        ],
         toggleId: 'class-spells-filter-btn',
-        ariaLabel: 'Filtro de nivel de conjuros',
+        ariaLabel: 'Filtros de conjuros',
         idPrefix: 'class-spells-filter',
-        flat: true,
         onChange: () => {
           if (typeof onLevelFilterChange === 'function') {
             onLevelFilterChange();
