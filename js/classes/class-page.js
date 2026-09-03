@@ -10,6 +10,7 @@ import { ApiError } from '../api/client.js';
 import { spellAvailableWithSlots } from './progression-utils.js';
 import { CustomSelect } from '../ui/custom-select.js';
 import { createClassSpellsPanelController } from './class-spells-panel.js';
+import { createClassSpellbookPanelController } from './class-spellbook-panel.js';
 import {
   clearArchetypeSelection,
   saveArchetypeSelection,
@@ -69,6 +70,8 @@ export function createClassesPage(rootEls) {
   let archetypeSelect = null;
   /** @type {ReturnType<typeof createClassSpellsPanelController>|null} */
   let spellsPanel = null;
+  /** @type {ReturnType<typeof createClassSpellbookPanelController>|null} */
+  let spellbookPanel = null;
 
   const els = rootEls;
 
@@ -601,6 +604,11 @@ export function createClassesPage(rootEls) {
       ? `<section class="class-detail__section class-spells-section" id="class-spells-section"></section>`
       : '';
 
+    const showSpellbook = state.isFavorite && !!state.classDetail;
+    const spellbookSectionHtml = showSpellbook
+      ? `<section class="class-detail__section class-spellbook-section" id="class-spellbook-section"></section>`
+      : '';
+
     els.detail.innerHTML = `
       <div class="class-detail">
         <header class="class-detail__header">
@@ -660,6 +668,7 @@ export function createClassesPage(rootEls) {
         </section>
 
         ${spellsSectionHtml}
+        ${spellbookSectionHtml}
       </div>
     `;
 
@@ -701,6 +710,8 @@ export function createClassesPage(rootEls) {
       spellsPanel.reset();
       spellsPanel = null;
     }
+
+    syncSpellbookPanel();
 
     // Iconos Lucide (favorito, barra, etc.) después de montar el DOM
     if (window.lucide && typeof window.lucide.createIcons === 'function') {
@@ -757,6 +768,39 @@ export function createClassesPage(rootEls) {
     }
 
     spellsPanel.sync();
+  }
+
+  function syncSpellbookPanel() {
+    const section = els.detail.querySelector('#class-spellbook-section');
+    if (!section || !state.isFavorite || !state.classDetail) {
+      if (spellbookPanel) {
+        spellbookPanel.reset();
+        spellbookPanel = null;
+      }
+      return;
+    }
+
+    if (!spellbookPanel || spellbookPanel._sectionEl !== section) {
+      spellbookPanel = createClassSpellbookPanelController({
+        sectionEl: section,
+        getClassId: () => state.selectedClassId,
+        getArchetypeId: () => state.selectedArchetypeId,
+        getArchetypeName: () =>
+          state.selectedArchetypeId
+            ? findArchetype(state.classDetail, state.selectedArchetypeId)?.name ||
+              null
+            : null,
+        getClassLevel: () => state.classLevel,
+        getClassDetail: () => state.classDetail,
+        getProgressionRow: () => getProgressionRow(),
+        getClassSpellPool: () => getClassSpellsForLevel(),
+        getAllSpells: () => state.allSpells,
+        getCanCast: () => shouldShowClassSpellsSection(),
+      });
+      spellbookPanel._sectionEl = section;
+    }
+
+    spellbookPanel.sync();
   }
 
   async function selectClass(classId) {
@@ -827,6 +871,10 @@ export function createClassesPage(rootEls) {
     if (spellsPanel) {
       spellsPanel.reset();
       spellsPanel = null;
+    }
+    if (spellbookPanel) {
+      spellbookPanel.reset();
+      spellbookPanel = null;
     }
     state.selectedClassId = null;
     state.classDetail = null;
