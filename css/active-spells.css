@@ -1,0 +1,277 @@
+/* Atlas — módulo Conjuros activos */
+
+.atlas-active-spells-page {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.atlas-active-spells-page[hidden] {
+  display: none !important;
+}
+
+.atlas-active-spells-page:not([hidden]) {
+  display: flex !important;
+  flex-direction: column;
+}
+
+.active-spells-page {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  max-width: 620px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.active-spells-page__scroll {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 8px 4px 24px;
+  box-sizing: border-box;
+}
+
+.active-spells-page__header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.active-spells-page__title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--atlas-text);
+}
+
+.active-spells-page__lead {
+  margin: 0;
+  font-size: 13px;
+  color: var(--atlas-text-muted);
+}
+
+.active-spells-root {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.active-spells-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 32px 16px;
+  color: var(--atlas-text-muted);
+  text-align: center;
+}
+
+/* —— Tarjeta por clase —— */
+.asp-card {
+  background: var(--atlas-panel);
+  border: 1px solid var(--atlas-border-soft);
+  border-radius: var(--atlas-radius-lg);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.asp-card__header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.asp-card__title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 650;
+  color: var(--atlas-text);
+}
+
+.asp-card__open {
+  margin-left: auto;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--atlas-surface);
+  border: 1px solid var(--atlas-border);
+  border-radius: var(--atlas-radius);
+  color: var(--atlas-text-muted);
+  cursor: pointer;
+}
+
+.asp-card__open:hover {
+  color: var(--atlas-text);
+  border-color: var(--atlas-accent-border);
+}
+
+.asp-card__open svg {
+  width: 15px;
+  height: 15px;
+}
+
+.asp-card__pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.asp-pill {
+  padding: 5px 10px;
+  font-size: 12px;
+  color: var(--atlas-text-muted);
+  background: var(--atlas-surface);
+  border: 1px solid var(--atlas-border);
+  border-radius: 999px;
+}
+
+.asp-pill b {
+  color: var(--atlas-text);
+  font-variant-numeric: tabular-nums;
+}
+
+.asp-pill.is-over,
+.asp-pill.is-over b {
+  color: #fc8181;
+  border-color: rgba(229, 62, 62, 0.5);
+}
+
+.asp-mod {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--atlas-text-muted);
+  align-self: flex-start;
+}
+
+.asp-mod__input {
+  width: 80px;
+  padding: 7px 9px;
+  font-size: 14px;
+  color: var(--atlas-text);
+  background: var(--atlas-surface);
+  border: 1px solid var(--atlas-border);
+  border-radius: var(--atlas-radius);
+}
+
+.asp-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.asp-section__title {
+  margin: 0 0 4px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--atlas-text-dim);
+}
+
+.asp-group + .asp-group {
+  margin-top: 6px;
+}
+
+.asp-group__label {
+  font-size: 11px;
+  color: var(--atlas-text-dim);
+  padding: 4px 0 2px;
+}
+
+/* —— Fila de conjuro —— */
+.asp-row {
+  position: relative;
+  gap: 6px;
+  padding-right: 12px;
+}
+
+.asp-row::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--school-color, transparent);
+}
+
+.asp-row__body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 8px 0 8px 8px;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.asp-row__body .spells-list-item__name {
+  padding-left: 0;
+}
+
+.asp-row__remove {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 0;
+  border-radius: var(--atlas-radius);
+  color: var(--atlas-text-dim);
+  cursor: pointer;
+}
+
+.asp-row__remove:hover {
+  color: #fc8181;
+  background: rgba(229, 62, 62, 0.12);
+}
+
+.asp-row__remove svg {
+  width: 15px;
+  height: 15px;
+}
+
+.asp-prep {
+  margin-left: 6px;
+}
+
+.asp-row--orphan .spells-list-item__name {
+  color: #fc8181;
+}
+
+/* —— Detalle —— */
+.asp-back[hidden] {
+  display: none !important;
+}
+
+.asp-back {
+  display: flex;
+}
+
+.asp-detail {
+  margin-top: 12px;
+  min-height: 260px;
+  overflow-y: auto;
+}

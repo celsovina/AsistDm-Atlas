@@ -1,0 +1,543 @@
+/**
+ * Conjuros activos — resumen por clase lanzadora favorita de los conjuros que el
+ * jugador ha marcado con la estrella en la ficha de clase.
+ *
+ * Una tarjeta por clase favorita lanzadora: contadores (rojo al pasarse del
+ * límite, sin bloquear), lista de conjuros agrupada por nivel y, para el mago,
+ * grimorio + preparados. Al pulsar un conjuro se abre su detalle (igual que en
+ * los demás catálogos).
+ */
+
+import { getClasses, getClassById } from '../api/classes-api.js';
+import { getClassProgression } from '../api/progression-api.js';
+import { getClassSpells } from '../api/class-spells-api.js';
+import { getAllSpells } from '../api/spells-api.js';
+import { renderSpellDetail, spellLevelBadge } from '../spells/spell-detail.js';
+import { schoolColor } from '../spells/spell-schools.js';
+import {
+  listClassFavoriteIds,
+  loadClassFavorite,
+} from '../classes/class-favorites-storage.js';
+import {
+  getSpellbook,
+  updateSpellbook,
+  togglePrepared,
+  toggleFavorite,
+} from '../classes/class-spellbook-storage.js';
+import {
+  resolveCasterType,
+  needsAbilityMod,
+  hasGrimoire,
+  cantripLimit,
+  spellLimit,
+  defaultGrimoireSize,
+} from '../classes/spellcasting-limits.js';
+import {
+  resolveProgressionClassId,
+  resolveSpellListClassId,
+} from '../classes/spellcasting-source.js';
+
+function esc(s) {
+  return String(s ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+function refreshIcons() {
+  if (window.lucide?.createIcons) window.lucide.createIcons();
+}
+
+/**
+ * @param {object} opts
+ * @param {HTMLElement} opts.page
+ * @param {(classId: string, opts?: object) => void} [opts.onOpenClass]
+ */
+export function createActiveSpellsPage({ page, onOpenClass }) {
+  if (!page) {
+    return { show() {}, hide() {}, load() {} };
+  }
+
+  const state = {
+    mounted: false,
+    loading: false,
+    error: null,
+    /** @type {Map<string, object>} classId → detalle */
+    classDetail: new Map(),
+    /** @type {Map<string, object[]>} progId → byClassLevel */
+    progression: new Map(),
+    /** @type {Map<string, object>} id → conjuro */
+    spellsById: new Map(),
+    /** @type {Record<string, Set<string>>} listId → ids de la lista de clase */
+    classSpellIds: {},
+    classes: [],
+    /** conjuro abierto en detalle */
+    selectedSpellId: null,
+  };
+
+  /* ---------------------------------------------------------------- */
+
+  function classLabel(id) {
+    return state.classes.find((c) => c.id === id)?.name || id;
+  }
+
+  function progRow(progId, level) {
+    const rows = state.progression.get(progId) || [];
+    return rows.find((r) => r.classLevel === level) || null;
+  }
+
+  /** Clases favoritas que lanzan conjuros. */
+  function casterFavorites() {
+    const out = [];
+    for (const classId of listClassFavoriteIds()) {
+      const fav = loadClassFavorite(classId);
+      if (!fav) continue;
+      const detail = state.classDetail.get(classId);
+      const casterType = resolveCasterType(detail, fav.archetypeId);
+      if (!casterType) continue;
+      out.push({
+        classId,
+        archetypeId: fav.archetypeId || null,
+        classLevel: fav.classLevel || 1,
+        casterType,
+        detail,
+      });
+    }
+    out.sort((a, b) => classLabel(a.classId).localeCompare(classLabel(b.classId), 'es'));
+    return out;
+  }
+
+  function spellObjs(ids) {
+    return ids
+      .map((id) => state.spellsById.get(id))
+      .filter(Boolean)
+      .sort((a, b) => {
+        const l = (a.level ?? 0) - (b.level ?? 0);
+        return l !== 0 ? l : (a.name || '').localeCompare(b.name || '', 'es');
+      });
+  }
+
+  function groupByLevel(spells) {
+    const groups = new Map();
+    for (const sp of spells) {
+      const lvl = sp.level ?? 0;
+      if (!groups.has(lvl)) groups.set(lvl, []);
+      groups.get(lvl).push(sp);
+    }
+    return [...groups.entries()]
+      .sort((a, b) => a[0] - b[0])
+      .map(([level, list]) => ({
+        level,
+        label: level === 0 ? 'Trucos' : `Nivel ${level}`,
+        spells: list,
+      }));
+  }
+
+  /* ---------------------------------------------------------------- *
+   *  Carga
+   * ---------------------------------------------------------------- */
+
+  async function ensureClassData(classId, archetypeId) {
+    if (!state.classDetail.has(classId)) {
+      try {
+        state.classDetail.set(classId, await getClassById(classId));
+      } catch {
+        state.classDetail.set(classId, null);
+      }
+    }
+    const detail = state.classDetail.get(classId);
+    const classProg = state.progression.has(classId)
+      ? state.progression.get(classId)
+      : null;
+
+    if (!state.progression.has(classId)) {
+      try {
+        const p = await getClassProgression(classId);
+        state.progression.set(classId, p.byClassLevel || []);
+      } catch {
+        state.progression.set(classId, []);
+      }
+    }
+
+    const hasProg = (state.progression.get(classId) || []).length > 0;
+    const progId = resolveProgressionClassId(classId, archetypeId, hasProg);
+    if (progId !== classId && !state.progression.has(progId)) {
+      try {
+        const p = await getClassProgression(progId);
+        state.progression.set(progId, p.byClassLevel || []);
+      } catch {
+        state.progression.set(progId, []);
+      }
+    }
+    void classProg;
+    void detail;
+  }
+
+  async function load() {
+    if (!state.mounted) mountShell();
+    state.loading = true;
+    state.error = null;
+    state.selectedSpellId = null;
+    render();
+
+    try {
+      const [classesRes, spellsRes, classSpellsRes] = await Promise.all([
+        getClasses(),
+        getAllSpells(),
+        getClassSpells(),
+      ]);
+      state.classes = classesRes.classes || [];
+      state.spellsById = new Map((spellsRes.spells || []).map((s) => [s.id, s]));
+      const map = {};
+      for (const [cid, ids] of Object.entries(classSpellsRes.byClass || {})) {
+        map[cid] = new Set(ids);
+      }
+      state.classSpellIds = map;
+
+      // Detalle + progresión de cada clase favorita
+      for (const classId of listClassFavoriteIds()) {
+        const fav = loadClassFavorite(classId);
+        await ensureClassData(classId, fav?.archetypeId || null);
+      }
+      state.loading = false;
+    } catch (err) {
+      console.error('[Atlas] Conjuros activos:', err);
+      state.loading = false;
+      state.error = 'No se pudieron cargar los datos.';
+    }
+    render();
+  }
+
+  /* ---------------------------------------------------------------- *
+   *  Render
+   * ---------------------------------------------------------------- */
+
+  function mountShell() {
+    page.innerHTML = `
+      <div class="active-spells-page">
+        <div class="active-spells-page__scroll">
+          <header class="active-spells-page__header">
+            <h2 class="active-spells-page__title">Conjuros activos</h2>
+            <p class="active-spells-page__lead">
+              Los conjuros que marcas con la estrella en la ficha de cada clase.
+            </p>
+          </header>
+          <div id="active-spells-root" class="active-spells-root"></div>
+        </div>
+      </div>
+    `;
+    state.mounted = true;
+  }
+
+  function render() {
+    const root = page.querySelector('#active-spells-root');
+    if (!root) return;
+
+    if (state.loading) {
+      root.innerHTML =
+        '<div class="description-placeholder">Cargando…</div>';
+      return;
+    }
+    if (state.error) {
+      root.innerHTML = `<div class="description-placeholder">${esc(state.error)}</div>`;
+      return;
+    }
+
+    if (state.selectedSpellId) {
+      renderDetail(root);
+      return;
+    }
+
+    const favs = casterFavorites();
+    if (!favs.length) {
+      root.innerHTML = `
+        <div class="active-spells-empty">
+          <p>No hay ninguna clase lanzadora marcada como favorita.</p>
+          <button type="button" class="resources-btn resources-btn--primary" id="asp-go-classes">
+            Ir a Clases
+          </button>
+        </div>`;
+      root
+        .querySelector('#asp-go-classes')
+        ?.addEventListener('click', () => onOpenClass?.(null));
+      return;
+    }
+
+    root.innerHTML = favs.map((f) => cardHtml(f)).join('');
+    favs.forEach((f) => wireCard(root, f));
+    refreshIcons();
+  }
+
+  function pill(label, count, cap, over) {
+    if (count === 0 && cap === 0) return '';
+    const capTxt = cap != null ? `/${cap}` : '';
+    return `<span class="asp-pill${over ? ' is-over' : ''}">
+      ${esc(label)} <b>${count}${capTxt}</b></span>`;
+  }
+
+  function cardHtml(f) {
+    const book = getSpellbook(f.classId);
+    if (!book) return '';
+    const row = progRow(
+      resolveProgressionClassId(
+        f.classId,
+        f.archetypeId,
+        (state.progression.get(f.classId) || []).length > 0
+      ),
+      f.classLevel
+    );
+    const archName = f.archetypeId
+      ? (f.detail?.archetypes || []).find((a) => a.id === f.archetypeId)?.name
+      : null;
+
+    const cLimit = cantripLimit(row);
+    const sLimit = spellLimit({
+      casterType: f.casterType,
+      classId: f.classId,
+      classLevel: f.classLevel,
+      progressionRow: row,
+      abilityMod: book.abilityMod,
+    });
+
+    const grimoireSpells = book.grimoires.flatMap((g) => g.spellIds);
+
+    let pills;
+    if (hasGrimoire(f.casterType)) {
+      pills = [
+        pill('Trucos', book.cantrips.length, cLimit, book.cantrips.length > cLimit),
+        pill('Grimorio', grimoireSpells.length, null, false),
+        pill(
+          'Preparados',
+          book.prepared.length,
+          sLimit.value,
+          sLimit.value != null && book.prepared.length > sLimit.value
+        ),
+      ];
+    } else {
+      pills = [
+        pill('Trucos', book.cantrips.length, cLimit, book.cantrips.length > cLimit),
+        pill(
+          'Conjuros',
+          book.spells.length,
+          sLimit.value,
+          sLimit.value != null && book.spells.length > sLimit.value
+        ),
+      ];
+    }
+    if (book.extraUnlocked) {
+      pills.push(pill('Otros orígenes', book.extra.length, null, false));
+    }
+
+    const modHtml = needsAbilityMod(f.casterType)
+      ? `<label class="asp-mod">
+           <span>Mod. de característica</span>
+           <input type="number" class="asp-mod__input" data-class="${f.classId}"
+             value="${book.abilityMod ?? ''}" placeholder="0" inputmode="numeric" />
+         </label>`
+      : '';
+
+    let body;
+    if (hasGrimoire(f.casterType)) {
+      body = `
+        ${listSection('Trucos', groupByLevel(spellObjs(book.cantrips)), f)}
+        ${grimoireSection(f, book)}
+        ${preparedSection(f, book)}`;
+    } else {
+      const all = spellObjs([...book.cantrips, ...book.spells]);
+      body = listSection(null, groupByLevel(all), f);
+    }
+    if (book.extra.length) {
+      body += extraSection(f, book);
+    }
+
+    return `
+      <section class="asp-card" data-class="${f.classId}">
+        <header class="asp-card__header">
+          <h3 class="asp-card__title">${esc(classLabel(f.classId))}</h3>
+          ${archName ? `<span class="spells-badge">${esc(archName)}</span>` : ''}
+          <span class="spells-badge">Nivel ${f.classLevel}</span>
+          <button type="button" class="asp-card__open" data-class="${f.classId}"
+            title="Abrir ficha de la clase" aria-label="Abrir ficha de la clase">
+            <i data-lucide="arrow-up-right"></i>
+          </button>
+        </header>
+        <div class="asp-card__pills">${pills.join('')}</div>
+        ${modHtml}
+        <div class="asp-card__body">${body || placeholder()}</div>
+      </section>`;
+  }
+
+  function placeholder() {
+    return `<div class="description-placeholder">Aún no has marcado conjuros. Ábre la ficha de la clase y usa la estrella.</div>`;
+  }
+
+  function spellRowHtml(sp, f, opts = {}) {
+    const { orphan = false, prepared = null } = opts;
+    const prep =
+      prepared === null
+        ? ''
+        : `<span class="atlas-switch atlas-switch--sm asp-prep" data-spell="${sp.id}" data-class="${f.classId}">
+             <input type="checkbox" ${prepared ? 'checked' : ''} aria-label="Preparar" />
+             <span class="switch-slider"></span>
+           </span>`;
+    return `
+      <div class="spells-list-item asp-row${orphan ? ' asp-row--orphan' : ''}"
+        data-spell="${sp.id}" style="--school-color:${schoolColor(sp.school)}" title="${esc(sp.school || '')}">
+        ${prep}
+        <button type="button" class="asp-row__body" data-spell="${sp.id}">
+          <span class="spells-list-item__name">${esc(sp.name || sp.id)}</span>
+          <span class="spells-list-item__meta">
+            <span class="spells-badge">${spellLevelBadge(sp.level)}</span>
+          </span>
+        </button>
+        <button type="button" class="asp-row__remove" data-spell="${sp.id}" data-class="${f.classId}"
+          title="Quitar" aria-label="Quitar de mis conjuros"><i data-lucide="x"></i></button>
+      </div>`;
+  }
+
+  /**
+   * @param {(sp:object)=>string} rowFn
+   */
+  function groupsHtml(groups, rowFn, hideLabels) {
+    return groups
+      .map(
+        (g) => `
+        <div class="asp-group">
+          ${hideLabels ? '' : `<div class="asp-group__label">${esc(g.label)}</div>`}
+          ${g.spells.map(rowFn).join('')}
+        </div>`
+      )
+      .join('');
+  }
+
+  function listSection(title, groups, f) {
+    if (!groups.length) return '';
+    const hideLabels = !!title && groups.length === 1;
+    const inner = groupsHtml(groups, (sp) => spellRowHtml(sp, f), hideLabels);
+    return title
+      ? `<div class="asp-section"><h4 class="asp-section__title">${esc(title)}</h4>${inner}</div>`
+      : inner;
+  }
+
+  function section(title, inner) {
+    return `<div class="asp-section"><h4 class="asp-section__title">${esc(
+      title
+    )}</h4>${inner}</div>`;
+  }
+
+  function grimoireSection(f, book) {
+    const spells = spellObjs(book.grimoires.flatMap((g) => g.spellIds));
+    if (!spells.length) {
+      return section('Grimorio', '<div class="description-placeholder">Grimorio vacío.</div>');
+    }
+    const prepared = new Set(book.prepared);
+    const groups = groupByLevel(spells);
+    return section(
+      'Grimorio',
+      groupsHtml(
+        groups,
+        (sp) => spellRowHtml(sp, f, { prepared: prepared.has(sp.id) }),
+        groups.length === 1
+      )
+    );
+  }
+
+  function preparedSection(f, book) {
+    const spells = spellObjs(book.prepared);
+    if (!spells.length) {
+      return section(
+        'Preparados',
+        '<div class="description-placeholder">Marca conjuros del grimorio para prepararlos.</div>'
+      );
+    }
+    const groups = groupByLevel(spells);
+    return section(
+      'Preparados',
+      groupsHtml(groups, (sp) => spellRowHtml(sp, f), groups.length === 1)
+    );
+  }
+
+  function extraSection(f, book) {
+    const spells = spellObjs(book.extra);
+    const orphan = !book.extraUnlocked;
+    const groups = groupByLevel(spells);
+    return section(
+      `Otros orígenes${orphan ? ' — sin confirmar' : ''}`,
+      groupsHtml(groups, (sp) => spellRowHtml(sp, f, { orphan }), groups.length === 1)
+    );
+  }
+
+  function wireCard(root, f) {
+    const card = root.querySelector(`.asp-card[data-class="${f.classId}"]`);
+    if (!card) return;
+
+    card
+      .querySelector('.asp-card__open')
+      ?.addEventListener('click', () => onOpenClass?.(f.classId, { classLevel: f.classLevel }));
+
+    card.querySelector('.asp-mod__input')?.addEventListener('change', (e) => {
+      const v = parseInt(e.target.value, 10);
+      updateSpellbook(f.classId, (b) => {
+        b.abilityMod = Number.isFinite(v) ? v : null;
+      });
+      render();
+    });
+
+    card.querySelectorAll('.asp-row__body').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        state.selectedSpellId = btn.dataset.spell;
+        render();
+      });
+    });
+
+    card.querySelectorAll('.asp-row__remove').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const sp = state.spellsById.get(btn.dataset.spell);
+        toggleFavorite(f.classId, btn.dataset.spell, {
+          casterType: f.casterType,
+          level: sp?.level ?? 0,
+        });
+        render();
+      });
+    });
+
+    card.querySelectorAll('.asp-prep input').forEach((input) => {
+      input.addEventListener('change', () => {
+        const wrap = input.closest('.asp-prep');
+        togglePrepared(f.classId, wrap.dataset.spell);
+        render();
+      });
+    });
+  }
+
+  function renderDetail(root) {
+    const sp = state.spellsById.get(state.selectedSpellId);
+    root.innerHTML = `
+      <button type="button" class="atlas-selected-bar asp-back" id="asp-back">
+        <span class="atlas-selected-bar__back" aria-hidden="true"><i data-lucide="chevron-left"></i></span>
+        <span class="atlas-selected-bar__name">${esc(sp?.name || '—')}</span>
+        <span class="spells-badge">${sp ? spellLevelBadge(sp.level) : ''}</span>
+      </button>
+      <div class="description-box asp-detail" id="asp-detail"></div>`;
+    renderSpellDetail(root.querySelector('#asp-detail'), sp || null);
+    root.querySelector('#asp-back').addEventListener('click', () => {
+      state.selectedSpellId = null;
+      render();
+    });
+    refreshIcons();
+  }
+
+  /* ---------------------------------------------------------------- */
+
+  return {
+    load,
+    show() {
+      page.hidden = false;
+      page.removeAttribute('hidden');
+    },
+    hide() {
+      page.hidden = true;
+    },
+  };
+}

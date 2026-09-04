@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="css/search-clear.css" />
   <link rel="stylesheet" href="css/switch.css" />
   <link rel="stylesheet" href="css/session.css" />
+  <link rel="stylesheet" href="css/active-spells.css" />
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
@@ -60,6 +61,15 @@
         data-tooltip="Rasgos activos"
       >
         <i data-lucide="flame"></i>
+      </button>
+      <button
+        type="button"
+        class="atlas-nav-btn"
+        data-section="conjuros-activos"
+        aria-label="Conjuros activos"
+        data-tooltip="Conjuros activos"
+      >
+        <i data-lucide="book-heart"></i>
       </button>
       <button
         type="button"
@@ -125,6 +135,15 @@
               <span class="atlas-home__module-text">
                 <span class="atlas-home__module-label">Rasgos activos</span>
                 <span class="atlas-home__module-hint">Slots, ki, rabia y usos de sesión</span>
+              </span>
+            </button>
+            <button type="button" class="atlas-home__module" data-section="conjuros-activos">
+              <span class="atlas-home__module-icon" aria-hidden="true">
+                <i data-lucide="book-heart"></i>
+              </span>
+              <span class="atlas-home__module-text">
+                <span class="atlas-home__module-label">Conjuros activos</span>
+                <span class="atlas-home__module-hint">Tu lista de conjuros marcados por clase</span>
               </span>
             </button>
             <button type="button" class="atlas-home__module" data-section="billetera">
@@ -225,6 +244,9 @@
 
       <!-- Sección Rasgos activos -->
       <div class="atlas-resources-page atlas-section" id="resources-page" data-section-panel="recursos" hidden></div>
+
+      <!-- Sección Conjuros activos -->
+      <div class="atlas-active-spells-page atlas-section" id="active-spells-page" data-section-panel="conjuros-activos" hidden></div>
 
       <!-- Sección Dados -->
       <div class="atlas-dice-page atlas-section" id="dice-page" data-section-panel="dados" hidden></div>

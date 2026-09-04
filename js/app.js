@@ -17,6 +17,7 @@ import { createClassesPage } from './classes/class-page.js';
 import { createHomePage } from './home/home-page.js';
 import { createWalletPage } from './wallet/wallet-page.js';
 import { createResourcesPage } from './resources/resources-page.js';
+import { createActiveSpellsPage } from './active-spells/active-spells-page.js';
 import { createDicePage } from './dice/dice-page.js';
 import { enhanceAllSearchClears } from './ui/search-clear.js';
 import {
@@ -321,6 +322,7 @@ function init() {
   const spellsPage = document.getElementById('spells-page');
   const walletPageEl = document.getElementById('wallet-page');
   const resourcesPageEl = document.getElementById('resources-page');
+  const activeSpellsPageEl = document.getElementById('active-spells-page');
   const dicePageEl = document.getElementById('dice-page');
   const homePageEl = document.getElementById('home-page');
   let classesLoaded = false;
@@ -338,16 +340,23 @@ function init() {
     page: walletPageEl,
   });
 
+  async function openClassSheet(classId, opts = {}) {
+    setSection('clases');
+    if (!classesLoaded) {
+      classesLoaded = true;
+      await classesPage.load();
+    }
+    if (classId) await classesPage.openClass(classId, opts);
+  }
+
   const resourcesPage = createResourcesPage({
     page: resourcesPageEl,
-    onOpenClass: async (classId, opts = {}) => {
-      setSection('clases');
-      if (!classesLoaded) {
-        classesLoaded = true;
-        await classesPage.load();
-      }
-      await classesPage.openClass(classId, opts);
-    },
+    onOpenClass: openClassSheet,
+  });
+
+  const activeSpellsPage = createActiveSpellsPage({
+    page: activeSpellsPageEl,
+    onOpenClass: openClassSheet,
   });
 
   const dicePage = createDicePage({
@@ -368,6 +377,7 @@ function init() {
     spellsPage.hidden = true;
     walletPage.hide();
     resourcesPage.hide();
+    activeSpellsPage.hide();
     dicePage.hide();
 
     els.app.classList.remove('has-selection');
@@ -386,6 +396,9 @@ function init() {
       resourcesPage.show();
       resourcesPage.load();
       resourcesLoaded = true;
+    } else if (sectionId === 'conjuros-activos') {
+      activeSpellsPage.show();
+      activeSpellsPage.load();
     } else if (sectionId === 'dados') {
       dicePage.show();
       dicePage.load();
