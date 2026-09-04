@@ -87,7 +87,7 @@
 .asp-card__header {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
 .asp-card__title {
@@ -97,29 +97,9 @@
   color: var(--atlas-text);
 }
 
-.asp-card__open {
+.asp-card__level {
   margin-left: auto;
   flex-shrink: 0;
-  width: 30px;
-  height: 30px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--atlas-surface);
-  border: 1px solid var(--atlas-border);
-  border-radius: var(--atlas-radius);
-  color: var(--atlas-text-muted);
-  cursor: pointer;
-}
-
-.asp-card__open:hover {
-  color: var(--atlas-text);
-  border-color: var(--atlas-accent-border);
-}
-
-.asp-card__open svg {
-  width: 15px;
-  height: 15px;
 }
 
 .asp-card__pills {
@@ -148,23 +128,33 @@
   border-color: rgba(229, 62, 62, 0.5);
 }
 
+/* Mod. de característica: en línea con el título de la tarjeta */
 .asp-mod {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-size: 12px;
-  color: var(--atlas-text-muted);
-  align-self: flex-start;
+  color: var(--atlas-text-dim);
+  flex-shrink: 0;
 }
 
 .asp-mod__input {
-  width: 80px;
-  padding: 7px 9px;
-  font-size: 14px;
+  width: 44px;
+  padding: 5px 6px;
+  font-size: 13px;
+  text-align: center;
   color: var(--atlas-text);
   background: var(--atlas-surface);
   border: 1px solid var(--atlas-border);
   border-radius: var(--atlas-radius);
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.asp-mod__input::-webkit-outer-spin-button,
+.asp-mod__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .asp-card__body {
@@ -259,6 +249,103 @@
 
 .asp-row--orphan .spells-list-item__name {
   color: #fc8181;
+}
+
+/* —— Botón "Usar" + espacios de conjuro —— */
+.asp-row__use {
+  flex-shrink: 0;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--atlas-text-muted);
+  background: var(--atlas-surface);
+  border: 1px solid var(--atlas-border);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.asp-row__use:hover,
+.asp-row__use.is-open {
+  color: var(--atlas-accent);
+  border-color: var(--atlas-accent-border);
+}
+
+.asp-row-slots {
+  padding: 8px 12px 10px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.asp-row-slots[hidden] {
+  display: none;
+}
+
+.asp-slots {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.asp-slots__empty {
+  font-size: 12px;
+  color: var(--atlas-text-dim);
+}
+
+.asp-slot-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.asp-slot-row__label {
+  min-width: 62px;
+  font-size: 12px;
+  color: var(--atlas-text-muted);
+}
+
+.asp-slot-row__cells {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.asp-slot-btn {
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  font-size: 11px;
+  color: var(--atlas-text-muted);
+  background: var(--atlas-panel);
+  border: 1px solid var(--atlas-border);
+  border-radius: var(--atlas-radius);
+  cursor: not-allowed;
+}
+
+/* —— Botón "Ir a Clases" (fuera de las tarjetas) —— */
+.asp-go-classes {
+  align-self: center;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+  padding: 9px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--atlas-text-muted);
+  background: transparent;
+  border: 1px solid var(--atlas-border);
+  border-radius: var(--atlas-radius);
+  cursor: pointer;
+}
+
+.asp-go-classes:hover {
+  color: var(--atlas-text);
+  border-color: var(--atlas-accent-border);
+}
+
+.asp-go-classes svg {
+  width: 16px;
+  height: 16px;
 }
 
 /* —— Detalle —— */

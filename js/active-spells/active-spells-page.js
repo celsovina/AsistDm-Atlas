@@ -32,10 +32,7 @@ import {
   spellLimit,
   defaultGrimoireSize,
 } from '../classes/spellcasting-limits.js';
-import {
-  resolveProgressionClassId,
-  resolveSpellListClassId,
-} from '../classes/spellcasting-source.js';
+import { resolveProgressionClassId } from '../classes/spellcasting-source.js';
 
 function esc(s) {
   return String(s ?? '')
@@ -220,7 +217,7 @@ export function createActiveSpellsPage({ page, onOpenClass }) {
           <header class="active-spells-page__header">
             <h2 class="active-spells-page__title">Conjuros activos</h2>
             <p class="active-spells-page__lead">
-              Los conjuros que marcas con la estrella en la ficha de cada clase.
+              Los conjuros que has seleccionado para tu uso.
             </p>
           </header>
           <div id="active-spells-root" class="active-spells-root"></div>
@@ -250,22 +247,24 @@ export function createActiveSpellsPage({ page, onOpenClass }) {
     }
 
     const favs = casterFavorites();
+    const goBtn = `
+      <button type="button" class="asp-go-classes" id="asp-go-classes">
+        <i data-lucide="swords"></i> Ir a Clases
+      </button>`;
+
     if (!favs.length) {
       root.innerHTML = `
         <div class="active-spells-empty">
           <p>No hay ninguna clase lanzadora marcada como favorita.</p>
-          <button type="button" class="resources-btn resources-btn--primary" id="asp-go-classes">
-            Ir a Clases
-          </button>
-        </div>`;
-      root
-        .querySelector('#asp-go-classes')
-        ?.addEventListener('click', () => onOpenClass?.(null));
-      return;
+        </div>
+        ${goBtn}`;
+    } else {
+      root.innerHTML = favs.map((f) => cardHtml(f)).join('') + goBtn;
+      favs.forEach((f) => wireCard(root, f));
     }
-
-    root.innerHTML = favs.map((f) => cardHtml(f)).join('');
-    favs.forEach((f) => wireCard(root, f));
+    root
+      .querySelector('#asp-go-classes')
+      ?.addEventListener('click', () => onOpenClass?.(null));
     refreshIcons();
   }
 
@@ -287,9 +286,7 @@ export function createActiveSpellsPage({ page, onOpenClass }) {
       ),
       f.classLevel
     );
-    const archName = f.archetypeId
-      ? (f.detail?.archetypes || []).find((a) => a.id === f.archetypeId)?.name
-      : null;
+    f.row = row;
 
     const cLimit = cantripLimit(row);
     const sLimit = spellLimit({
@@ -330,8 +327,8 @@ export function createActiveSpellsPage({ page, onOpenClass }) {
     }
 
     const modHtml = needsAbilityMod(f.casterType)
-      ? `<label class="asp-mod">
-           <span>Mod. de característica</span>
+      ? `<label class="asp-mod" title="Modificador de característica lanzadora">
+           <span>Mod.</span>
            <input type="number" class="asp-mod__input" data-class="${f.classId}"
              value="${book.abilityMod ?? ''}" placeholder="0" inputmode="numeric" />
          </label>`
@@ -355,25 +352,55 @@ export function createActiveSpellsPage({ page, onOpenClass }) {
       <section class="asp-card" data-class="${f.classId}">
         <header class="asp-card__header">
           <h3 class="asp-card__title">${esc(classLabel(f.classId))}</h3>
-          ${archName ? `<span class="spells-badge">${esc(archName)}</span>` : ''}
-          <span class="spells-badge">Nivel ${f.classLevel}</span>
-          <button type="button" class="asp-card__open" data-class="${f.classId}"
-            title="Abrir ficha de la clase" aria-label="Abrir ficha de la clase">
-            <i data-lucide="arrow-up-right"></i>
-          </button>
+          ${modHtml}
+          <span class="asp-card__level spells-badge">Nivel ${f.classLevel}</span>
         </header>
         <div class="asp-card__pills">${pills.join('')}</div>
-        ${modHtml}
         <div class="asp-card__body">${body || placeholder()}</div>
       </section>`;
   }
 
   function placeholder() {
-    return `<div class="description-placeholder">Aún no has marcado conjuros. Ábre la ficha de la clase y usa la estrella.</div>`;
+    return `<div class="description-placeholder">Aún no has marcado conjuros. Ábrelos en la ficha de la clase con la estrella.</div>`;
+  }
+
+  /** Niveles de espacio disponibles desde `minLevel` en adelante. */
+  function slotLevels(f, minLevel) {
+    const slots = f.row?.spellSlots || {};
+    const out = [];
+    for (let lvl = Math.max(1, minLevel || 1); lvl <= 9; lvl += 1) {
+      const n = Number(slots[`level${lvl}`] || 0);
+      if (n > 0) out.push({ lvl, count: n });
+    }
+    return out;
+  }
+
+  function slotsPanelHtml(f, sp) {
+    const levels = slotLevels(f, sp.level ?? 1);
+    if (!levels.length) {
+      return `<div class="asp-slots"><span class="asp-slots__empty">Sin espacios de conjuro disponibles.</span></div>`;
+    }
+    const rows = levels
+      .map(
+        (l) => `
+        <div class="asp-slot-row">
+          <span class="asp-slot-row__label">Nivel ${l.lvl}</span>
+          <span class="asp-slot-row__cells">
+            ${Array.from(
+              { length: l.count },
+              (_, i) =>
+                `<button type="button" class="asp-slot-btn" disabled>${i + 1}</button>`
+            ).join('')}
+          </span>
+        </div>`
+      )
+      .join('');
+    return `<div class="asp-slots">${rows}</div>`;
   }
 
   function spellRowHtml(sp, f, opts = {}) {
     const { orphan = false, prepared = null } = opts;
+    const lvl = sp.level ?? 0;
     const prep =
       prepared === null
         ? ''
@@ -381,18 +408,27 @@ export function createActiveSpellsPage({ page, onOpenClass }) {
              <input type="checkbox" ${prepared ? 'checked' : ''} aria-label="Preparar" />
              <span class="switch-slider"></span>
            </span>`;
+    const use =
+      lvl >= 1
+        ? `<button type="button" class="asp-row__use" data-spell="${sp.id}"
+             aria-expanded="false" title="Usar un espacio de conjuro">Usar</button>`
+        : '';
     return `
-      <div class="spells-list-item asp-row${orphan ? ' asp-row--orphan' : ''}"
-        data-spell="${sp.id}" style="--school-color:${schoolColor(sp.school)}" title="${esc(sp.school || '')}">
-        ${prep}
-        <button type="button" class="asp-row__body" data-spell="${sp.id}">
-          <span class="spells-list-item__name">${esc(sp.name || sp.id)}</span>
-          <span class="spells-list-item__meta">
-            <span class="spells-badge">${spellLevelBadge(sp.level)}</span>
-          </span>
-        </button>
-        <button type="button" class="asp-row__remove" data-spell="${sp.id}" data-class="${f.classId}"
-          title="Quitar" aria-label="Quitar de mis conjuros"><i data-lucide="x"></i></button>
+      <div class="asp-row-wrap" data-spell="${sp.id}">
+        <div class="spells-list-item asp-row${orphan ? ' asp-row--orphan' : ''}"
+          data-spell="${sp.id}" style="--school-color:${schoolColor(sp.school)}" title="${esc(sp.school || '')}">
+          ${prep}
+          <button type="button" class="asp-row__body" data-spell="${sp.id}">
+            <span class="spells-list-item__name">${esc(sp.name || sp.id)}</span>
+            <span class="spells-list-item__meta">
+              <span class="spells-badge">${spellLevelBadge(sp.level)}</span>
+            </span>
+          </button>
+          ${use}
+          <button type="button" class="asp-row__remove" data-spell="${sp.id}" data-class="${f.classId}"
+            title="Quitar" aria-label="Quitar de mis conjuros"><i data-lucide="x"></i></button>
+        </div>
+        ${lvl >= 1 ? `<div class="asp-row-slots" data-spell="${sp.id}" hidden>${slotsPanelHtml(f, sp)}</div>` : ''}
       </div>`;
   }
 
@@ -472,10 +508,6 @@ export function createActiveSpellsPage({ page, onOpenClass }) {
     const card = root.querySelector(`.asp-card[data-class="${f.classId}"]`);
     if (!card) return;
 
-    card
-      .querySelector('.asp-card__open')
-      ?.addEventListener('click', () => onOpenClass?.(f.classId, { classLevel: f.classLevel }));
-
     card.querySelector('.asp-mod__input')?.addEventListener('change', (e) => {
       const v = parseInt(e.target.value, 10);
       updateSpellbook(f.classId, (b) => {
@@ -507,6 +539,19 @@ export function createActiveSpellsPage({ page, onOpenClass }) {
         const wrap = input.closest('.asp-prep');
         togglePrepared(f.classId, wrap.dataset.spell);
         render();
+      });
+    });
+
+    card.querySelectorAll('.asp-row__use').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const panel = btn
+          .closest('.asp-row-wrap')
+          ?.querySelector('.asp-row-slots');
+        if (!panel) return;
+        const open = panel.hidden;
+        panel.hidden = !open;
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        btn.classList.toggle('is-open', open);
       });
     });
   }

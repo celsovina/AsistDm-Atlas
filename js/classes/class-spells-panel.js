@@ -13,6 +13,7 @@ import {
   toggleFavorite,
   setExtraUnlocked,
 } from './class-spellbook-storage.js';
+import { spellLimit, hasGrimoire } from './spellcasting-limits.js';
 
 /**
  * Opciones de nivel disponibles según slots desbloqueados.
@@ -129,6 +130,8 @@ export function createClassSpellsPanelController(opts) {
     onFavoriteChange,
     getAllSpells = () => [],
     getClassSpellIdSet = () => new Set(),
+    getClassLevel = () => 1,
+    getProgressionRow = () => null,
   } = opts;
 
   function extraUnlocked() {
@@ -166,6 +169,28 @@ export function createClassSpellsPanelController(opts) {
 
   function inClassList(spellId) {
     return getClassSpellIdSet().has(spellId);
+  }
+
+  /** Pill "Seleccionados: N/M" (conjuros marcados vs. límite de la clase). */
+  function selectedCountHtml() {
+    const classId = getClassId();
+    const book = classId ? getSpellbook(classId) : null;
+    if (!book) return '';
+    const ct = getCasterType();
+    const lim = spellLimit({
+      casterType: ct,
+      classId,
+      classLevel: getClassLevel(),
+      progressionRow: getProgressionRow(),
+      abilityMod: book.abilityMod,
+    });
+    const count = hasGrimoire(ct) ? book.prepared.length : book.spells.length;
+    const cap = lim.value;
+    const over = cap != null && count > cap;
+    const capTxt = cap != null ? `/${cap}` : '';
+    return `<span class="class-spells-count__pill${
+      over ? ' is-over' : ''
+    }">Seleccionados: <b>${count}${capTxt}</b></span>`;
   }
 
   function markedIds() {
@@ -212,10 +237,12 @@ export function createClassSpellsPanelController(opts) {
 
   function renderListAndDetail() {
     // Re-sincroniza el interruptor de "otros orígenes" (puede cambiar desde fuera)
-    const extraRow = sectionEl.querySelector('#class-spells-extra');
+    const selRow = sectionEl.querySelector('#class-spells-selrow');
     const extraCheck = sectionEl.querySelector('#class-spells-extra-check');
-    if (extraRow) extraRow.hidden = !getClassId();
+    const countEl = sectionEl.querySelector('#class-spells-count');
+    if (selRow) selRow.hidden = !getClassId();
     if (extraCheck) extraCheck.checked = extraUnlocked();
+    if (countEl) countEl.innerHTML = selectedCountHtml();
 
     const query = getQuery();
     // Con "otros orígenes" activo, la búsqueda ignora TODOS los filtros
@@ -338,13 +365,16 @@ export function createClassSpellsPanelController(opts) {
         <div id="class-spells-filter-mount"></div>
       </div>
 
-      <label class="class-spells-extra" id="class-spells-extra" hidden>
-        <span class="atlas-switch atlas-switch--sm">
-          <input type="checkbox" id="class-spells-extra-check" />
-          <span class="switch-slider"></span>
-        </span>
-        <span>Conjuros de otros orígenes (raza, dotes, objetos…)</span>
-      </label>
+      <div class="class-spells-selrow" id="class-spells-selrow" hidden>
+        <label class="class-spells-extra" id="class-spells-extra">
+          <span class="atlas-switch atlas-switch--sm">
+            <input type="checkbox" id="class-spells-extra-check" />
+            <span class="switch-slider"></span>
+          </span>
+          <span>Conjuros de otros orígenes (raza, dotes, objetos…)</span>
+        </label>
+        <span class="class-spells-count" id="class-spells-count"></span>
+      </div>
 
       <button type="button" class="atlas-selected-bar class-spells-selected-bar" id="class-spells-selected-bar" hidden>
         <span class="atlas-selected-bar__back" aria-hidden="true">
@@ -372,11 +402,11 @@ export function createClassSpellsPanelController(opts) {
         renderListAndDetail();
       });
 
-    const extraRow = sectionEl.querySelector('#class-spells-extra');
+    const selRow = sectionEl.querySelector('#class-spells-selrow');
     const extraCheck = sectionEl.querySelector('#class-spells-extra-check');
-    if (extraRow && extraCheck) {
+    if (selRow && extraCheck) {
       const classId = getClassId();
-      extraRow.hidden = !classId;
+      selRow.hidden = !classId;
       extraCheck.checked = extraUnlocked();
       extraCheck.addEventListener('change', () => {
         const cid = getClassId();

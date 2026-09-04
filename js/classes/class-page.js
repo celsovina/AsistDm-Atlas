@@ -766,6 +766,8 @@ export function createClassesPage(rootEls) {
           const listId = getSpellListClassId();
           return state.classSpellMap?.[listId] || new Set();
         },
+        getClassLevel: () => state.classLevel,
+        getProgressionRow: () => getProgressionRow(),
       });
       spellsPanel._sectionEl = spellsSection;
     }
