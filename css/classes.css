@@ -349,9 +349,10 @@
   padding-right: 6px;
 }
 
-/* Fila con estrella de favorito (misma estética que el botón favorito de clase) */
+/* Fila con estrella de favorito — fina, estilo catálogo general */
 .class-spell-row {
-  gap: 6px;
+  gap: 4px;
+  padding: 0;
 }
 
 .class-spell-row__body {
@@ -361,7 +362,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  padding: 8px 0 8px 10px;
+  padding: 7px 0 7px 6px;
   background: transparent;
   border: 0;
   color: inherit;
@@ -370,19 +371,38 @@
   cursor: pointer;
 }
 
+/* Estrella: icono sin borde ni fondo */
 .class-spell-star {
-  margin-left: 4px;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  color: var(--atlas-text-dim);
+  cursor: pointer;
+  transition: color 0.15s ease;
 }
 
-/* En las filas, algo más compacto que en la cabecera */
-.class-spell-row .class-spell-star {
-  width: 34px;
-  height: 34px;
+.class-spell-star svg {
+  width: 16px;
+  height: 16px;
+  stroke-width: 1.75;
 }
 
-.class-spell-row .class-spell-star svg {
-  width: 17px;
-  height: 17px;
+.class-spell-star:hover {
+  color: #f6e05e;
+}
+
+.class-spell-star.is-marked {
+  color: #f6e05e;
+}
+
+.class-spell-star.is-marked svg {
+  fill: #f6e05e;
 }
 
 .class-spell-row--marked {
@@ -398,13 +418,23 @@
 
 .class-spell-detail__star {
   position: absolute;
-  top: 6px;
-  right: 10px;
+  top: 4px;
+  right: 8px;
   z-index: 1;
 }
 
+.class-spell-detail__star .class-spell-star {
+  width: 32px;
+  height: 32px;
+}
+
+.class-spell-detail__star .class-spell-star svg {
+  width: 19px;
+  height: 19px;
+}
+
 .class-spell-detail .spells-detail-content h4 {
-  padding-right: 52px;
+  padding-right: 40px;
 }
 
 .class-spells-extra {

@@ -146,18 +146,22 @@ export function createClassSpellsPanelController(opts) {
     return classScopeFilter.has('mine');
   }
 
-  /**
-   * Con "otros orígenes" activo y sin el filtro "Clase", el catálogo abarca toda
-   * la base de conjuros; en cualquier otro caso, solo la lista de la clase.
-   */
-  function activeSpellSource() {
-    if (!extraUnlocked() || classScoped()) return getSpells();
+  function sortedAllSpells() {
     return (getAllSpells() || []).slice().sort((a, b) => {
       const byLvl = (a.level ?? 0) - (b.level ?? 0);
       return byLvl !== 0
         ? byLvl
         : (a.name || '').localeCompare(b.name || '', 'es');
     });
+  }
+
+  /**
+   * Con "otros orígenes" activo y sin el filtro "Clase", el catálogo abarca toda
+   * la base de conjuros; en cualquier otro caso, solo la lista de la clase.
+   */
+  function activeSpellSource() {
+    if (!extraUnlocked() || classScoped()) return getSpells();
+    return sortedAllSpells();
   }
 
   function inClassList(spellId) {
@@ -185,9 +189,8 @@ export function createClassSpellsPanelController(opts) {
   function starButtonHtml(marked) {
     const label = marked ? 'Quitar de mis conjuros' : 'Añadir a mis conjuros';
     return `
-      <button type="button" class="class-favorite-btn class-spell-star${
-        marked ? ' is-active' : ''
-      }" aria-pressed="${marked ? 'true' : 'false'}" aria-label="${label}" title="${label}">
+      <button type="button" class="class-spell-star${marked ? ' is-marked' : ''}"
+        aria-pressed="${marked ? 'true' : 'false'}" aria-label="${label}" title="${label}">
         <i data-lucide="${marked ? 'star-check' : 'star'}"></i>
       </button>`;
   }
@@ -214,10 +217,15 @@ export function createClassSpellsPanelController(opts) {
     if (extraRow) extraRow.hidden = !getClassId();
     if (extraCheck) extraCheck.checked = extraUnlocked();
 
-    const spells = activeSpellSource();
     const query = getQuery();
+    // Con "otros orígenes" activo, la búsqueda ignora TODOS los filtros
+    // (clase, nivel, origen) y busca en toda la base de conjuros.
+    const searchingAll = extraUnlocked() && !!(query && query.trim());
+    const spells = searchingAll ? sortedAllSpells() : activeSpellSource();
     const selectedSpellId = getSelectedSpellId();
-    const filtered = filterClassSpells(spells, query, levelFilter, sourceFilter);
+    const filtered = searchingAll
+      ? filterClassSpells(spells, query, new Set(), new Set())
+      : filterClassSpells(spells, query, levelFilter, sourceFilter);
 
     const selectedSpell =
       selectedSpellId && spells.find((s) => s.id === selectedSpellId)
