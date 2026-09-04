@@ -401,10 +401,6 @@
   color: #f6e05e;
 }
 
-.class-spell-star.is-marked svg {
-  fill: #f6e05e;
-}
-
 .class-spell-row--marked {
   background: rgba(246, 224, 94, 0.05);
 }
