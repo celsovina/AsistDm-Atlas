@@ -137,11 +137,21 @@ export function createClassSpellsPanelController(opts) {
   }
 
   /**
-   * Con "otros orígenes" activo el catálogo abarca toda la base de conjuros;
-   * si no, solo la lista de la clase.
+   * Filtro "Clase": solo aparece con "otros orígenes" activo. Por defecto
+   * restringe el catálogo a la lista de la clase ('mine' presente).
+   */
+  const classScopeFilter = new Set(['mine']);
+
+  function classScoped() {
+    return classScopeFilter.has('mine');
+  }
+
+  /**
+   * Con "otros orígenes" activo y sin el filtro "Clase", el catálogo abarca toda
+   * la base de conjuros; en cualquier otro caso, solo la lista de la clase.
    */
   function activeSpellSource() {
-    if (!extraUnlocked()) return getSpells();
+    if (!extraUnlocked() || classScoped()) return getSpells();
     return (getAllSpells() || []).slice().sort((a, b) => {
       const byLvl = (a.level ?? 0) - (b.level ?? 0);
       return byLvl !== 0
@@ -189,6 +199,12 @@ export function createClassSpellsPanelController(opts) {
 
   function levelOptionsKey(options) {
     return options.map((o) => o.id).join(',');
+  }
+
+  function mountKey(maxSpellLevel, hasCantrips, levelOptions) {
+    return `${maxSpellLevel ?? 'x'}|${hasCantrips ? 1 : 0}|${levelOptionsKey(
+      levelOptions
+    )}|${extraUnlocked() ? 1 : 0}`;
   }
 
   function renderListAndDetail() {
@@ -294,9 +310,7 @@ export function createClassSpellsPanelController(opts) {
     const levelOptions = buildUnlockedLevelOptions(maxSpellLevel, hasCantrips);
     pruneLevelFilter(levelFilter, levelOptions);
 
-    const key = `${maxSpellLevel ?? 'x'}|${hasCantrips ? 1 : 0}|${levelOptionsKey(
-      levelOptions
-    )}`;
+    const key = mountKey(maxSpellLevel, hasCantrips, levelOptions);
     const subtitle = getSubtitle ? getSubtitle() : null;
     const titleExtra = subtitle ? ` (${escapeHtml(subtitle)})` : '';
 
@@ -362,23 +376,37 @@ export function createClassSpellsPanelController(opts) {
         setExtraUnlocked(cid, extraCheck.checked);
         setSelectedSpellId(null);
         if (typeof onFavoriteChange === 'function') onFavoriteChange();
-        renderListAndDetail();
+        // El filtro "Clase" aparece/desaparece → reconstruir el shell.
+        mountShell();
       });
     }
 
     filterPanel = null;
     const filterMount = sectionEl.querySelector('#class-spells-filter-mount');
-    if (levelOptions.length > 0 && filterMount) {
+    const filterSections = [
+      { key: 'levels', title: 'Nivel', options: levelOptions },
+      { key: 'sources', title: 'Origen', options: SOURCE_OPTIONS },
+    ];
+    if (extraUnlocked()) {
+      filterSections.unshift({
+        key: 'classScope',
+        title: 'Clase',
+        options: [{ id: 'mine', label: 'Solo conjuros de mi clase' }],
+      });
+    }
+    if (filterSections.some((s) => s.options.length) && filterMount) {
       filterPanel = createFilterPanel({
         mountEl: filterMount,
-        filters: { levels: levelFilter, sources: sourceFilter },
-        sections: [
-          { key: 'levels', title: 'Nivel', options: levelOptions },
-          { key: 'sources', title: 'Origen', options: SOURCE_OPTIONS },
-        ],
+        filters: {
+          levels: levelFilter,
+          sources: sourceFilter,
+          classScope: classScopeFilter,
+        },
+        sections: filterSections,
         toggleId: 'class-spells-filter-btn',
         ariaLabel: 'Filtros de conjuros',
         idPrefix: 'class-spells-filter',
+        badgeExcludeKeys: ['classScope'],
         onChange: () => {
           if (typeof onLevelFilterChange === 'function') {
             onLevelFilterChange();
@@ -400,9 +428,7 @@ export function createClassSpellsPanelController(opts) {
     const hasCantrips = getHasCantrips();
     const levelOptions = buildUnlockedLevelOptions(maxSpellLevel, hasCantrips);
     pruneLevelFilter(levelFilter, levelOptions);
-    const key = `${maxSpellLevel ?? 'x'}|${hasCantrips ? 1 : 0}|${levelOptionsKey(
-      levelOptions
-    )}`;
+    const key = mountKey(maxSpellLevel, hasCantrips, levelOptions);
 
     const needsShell =
       !sectionEl.querySelector('#class-spells-list') || mountedKey !== key;

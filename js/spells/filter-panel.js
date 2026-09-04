@@ -28,6 +28,7 @@ export function createFilterPanel({
   ariaLabel = 'Filtros de conjuros',
   idPrefix = 'filter',
   flat = false,
+  badgeExcludeKeys = [],
 }) {
   const root = document.createElement('div');
   root.className = `atlas-filter${flat ? ' atlas-filter--flat' : ''}`.trim();
@@ -249,7 +250,7 @@ export function createFilterPanel({
   function updateItemCounts() {
     panel.querySelectorAll('.atlas-filter__item').forEach((item) => {
       const key = item.dataset.key;
-      const n = filters[key]?.size || 0;
+      const n = badgeExcludeKeys.includes(key) ? 0 : filters[key]?.size || 0;
       const countEl = item.querySelector('.atlas-filter__item-count');
       if (!countEl) return;
       if (n > 0) {
@@ -265,7 +266,8 @@ export function createFilterPanel({
   }
 
   function updateBadge() {
-    const n = countActiveFilters(filters);
+    let n = countActiveFilters(filters);
+    for (const k of badgeExcludeKeys) n -= filters[k]?.size || 0;
     if (n > 0) {
       badge.hidden = false;
       badge.textContent = String(n);
