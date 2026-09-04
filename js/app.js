@@ -357,6 +357,12 @@ function init() {
   const activeSpellsPage = createActiveSpellsPage({
     page: activeSpellsPageEl,
     onOpenClass: openClassSheet,
+    onOpenResources: async (classId, slot) => {
+      setSection('recursos');
+      resourcesLoaded = true;
+      await resourcesPage.load();
+      if (slot) resourcesPage.flashSpellSlot?.(classId, slot);
+    },
   });
 
   const dicePage = createDicePage({

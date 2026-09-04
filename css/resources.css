@@ -403,6 +403,24 @@
   background: rgba(229, 62, 62, 0.28);
 }
 
+/* Resalte al llegar desde "Conjuros activos" */
+.resources-slot-btn--flash {
+  animation: resources-slot-flash 1.8s ease;
+}
+
+@keyframes resources-slot-flash {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(66, 153, 225, 0);
+  }
+  15% {
+    box-shadow: 0 0 0 4px rgba(66, 153, 225, 0.55);
+  }
+  60% {
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.35);
+  }
+}
+
 .resources-pool-actions {
   display: flex;
   gap: 8px;

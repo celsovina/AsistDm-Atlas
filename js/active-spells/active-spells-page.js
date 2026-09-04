@@ -33,6 +33,11 @@ import {
   defaultGrimoireSize,
 } from '../classes/spellcasting-limits.js';
 import { resolveProgressionClassId } from '../classes/spellcasting-source.js';
+import {
+  spellSlotUsage,
+  ensureResourceEntry,
+  consumeSpellSlot,
+} from '../resources/resources-storage.js';
 
 function esc(s) {
   return String(s ?? '')
@@ -50,8 +55,9 @@ function refreshIcons() {
  * @param {object} opts
  * @param {HTMLElement} opts.page
  * @param {(classId: string, opts?: object) => void} [opts.onOpenClass]
+ * @param {(classId: string, slot: object) => void} [opts.onOpenResources]
  */
-export function createActiveSpellsPage({ page, onOpenClass }) {
+export function createActiveSpellsPage({ page, onOpenClass, onOpenResources }) {
   if (!page) {
     return { show() {}, hide() {}, load() {} };
   }
@@ -364,7 +370,7 @@ export function createActiveSpellsPage({ page, onOpenClass }) {
     return `<div class="description-placeholder">Aún no has marcado conjuros. Ábrelos en la ficha de la clase con la estrella.</div>`;
   }
 
-  /** Niveles de espacio disponibles desde `minLevel` en adelante. */
+  /** Niveles de espacio (nivel + cuenta) desde `minLevel` en adelante. */
   function slotLevels(f, minLevel) {
     const slots = f.row?.spellSlots || {};
     const out = [];
@@ -375,25 +381,38 @@ export function createActiveSpellsPage({ page, onOpenClass }) {
     return out;
   }
 
+  /** ¿Queda algún espacio libre de nivel ≥ `spellLevel` para lanzar el conjuro? */
+  function hasFreeSlot(f, spellLevel) {
+    const usage = spellSlotUsage(f.classId);
+    return slotLevels(f, spellLevel).some(({ lvl, count }) => {
+      const used = Array.isArray(usage[lvl]) ? usage[lvl] : [];
+      for (let i = 0; i < count; i += 1) if (!used[i]) return true;
+      return false;
+    });
+  }
+
   function slotsPanelHtml(f, sp) {
     const levels = slotLevels(f, sp.level ?? 1);
     if (!levels.length) {
-      return `<div class="asp-slots"><span class="asp-slots__empty">Sin espacios de conjuro disponibles.</span></div>`;
+      return `<div class="asp-slots"><span class="asp-slots__empty">Sin espacios de conjuro.</span></div>`;
     }
+    const usage = spellSlotUsage(f.classId);
     const rows = levels
-      .map(
-        (l) => `
+      .map(({ lvl, count }) => {
+        const used = Array.isArray(usage[lvl]) ? usage[lvl] : [];
+        const cells = Array.from({ length: count }, (_, i) => {
+          const consumed = !!used[i];
+          return `<button type="button" class="asp-slot-btn${
+            consumed ? ' is-consumed' : ''
+          }" ${consumed ? 'disabled' : ''} data-class="${f.classId}"
+            data-level="${lvl}" data-index="${i}" data-count="${count}">${i + 1}</button>`;
+        }).join('');
+        return `
         <div class="asp-slot-row">
-          <span class="asp-slot-row__label">Nivel ${l.lvl}</span>
-          <span class="asp-slot-row__cells">
-            ${Array.from(
-              { length: l.count },
-              (_, i) =>
-                `<button type="button" class="asp-slot-btn" disabled>${i + 1}</button>`
-            ).join('')}
-          </span>
-        </div>`
-      )
+          <span class="asp-slot-row__label">Nivel ${lvl}</span>
+          <span class="asp-slot-row__cells">${cells}</span>
+        </div>`;
+      })
       .join('');
     return `<div class="asp-slots">${rows}</div>`;
   }
@@ -410,10 +429,12 @@ export function createActiveSpellsPage({ page, onOpenClass }) {
              aria-label="${prepared ? 'Quitar de preparados' : 'Preparar'}">
              <i data-lucide="${prepared ? 'book-open-check' : 'book-open'}"></i>
            </button>`;
+    const canUse = lvl >= 1 && hasFreeSlot(f, lvl);
     const use =
       lvl >= 1
         ? `<button type="button" class="asp-row__use" data-spell="${sp.id}"
-             aria-expanded="false" title="Usar un espacio de conjuro">Usar</button>`
+             aria-expanded="false" ${canUse ? '' : 'disabled'}
+             title="${canUse ? 'Usar un espacio de conjuro' : 'Sin espacios de conjuro disponibles'}">Usar</button>`
         : '';
     return `
       <div class="asp-row-wrap" data-spell="${sp.id}">
@@ -545,6 +566,7 @@ export function createActiveSpellsPage({ page, onOpenClass }) {
     card.querySelectorAll('.asp-row__use').forEach((btn) => {
       btn.addEventListener('click', (e) => {
         e.stopPropagation();
+        if (btn.disabled) return;
         const panel = btn
           .closest('.asp-row-wrap')
           ?.querySelector('.asp-row-slots');
@@ -552,6 +574,22 @@ export function createActiveSpellsPage({ page, onOpenClass }) {
         const willOpen = panel.hidden;
         closeAllSlotPopovers();
         if (willOpen) openSlotPopover(btn, panel);
+      });
+    });
+
+    card.querySelectorAll('.asp-slot-btn:not([disabled])').forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const level = Number(btn.dataset.level);
+        const index = Number(btn.dataset.index);
+        const count = Number(btn.dataset.count);
+        ensureResourceEntry(f.classId, {
+          classLevel: f.classLevel,
+          archetypeId: f.archetypeId,
+        });
+        const entryId = consumeSpellSlot(f.classId, level, index, count);
+        closeAllSlotPopovers();
+        onOpenResources?.(f.classId, { entryId, level, index });
       });
     });
   }

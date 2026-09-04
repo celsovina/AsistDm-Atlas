@@ -968,8 +968,37 @@ export function createResourcesPage({ page, onOpenClass }) {
     render();
   }
 
+  /**
+   * Resalta un espacio de conjuro concreto (venido de "Conjuros activos").
+   * @param {string} classId
+   * @param {{ entryId?: string, level: number, index: number }} slot
+   */
+  function flashSpellSlot(classId, slot) {
+    if (!slot) return;
+    const entry =
+      state.entries.find((e) => e.id === slot.entryId) ||
+      state.entries.find((e) => e.classId === classId);
+    if (!entry) return;
+
+    let tries = 0;
+    const tick = () => {
+      const btn = page.querySelector(
+        `[data-slot-toggle][data-entry-id="${entry.id}"][data-level="${slot.level}"][data-index="${slot.index}"]`
+      );
+      if (btn) {
+        btn.scrollIntoView({ block: 'center', behavior: 'smooth' });
+        btn.classList.add('resources-slot-btn--flash');
+        setTimeout(() => btn.classList.remove('resources-slot-btn--flash'), 1800);
+        return;
+      }
+      if (tries++ < 8) setTimeout(tick, 60);
+    };
+    tick();
+  }
+
   return {
     load,
+    flashSpellSlot,
     show() {
       page.hidden = false;
       page.removeAttribute('hidden');

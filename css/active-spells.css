@@ -382,6 +382,26 @@
   background: var(--atlas-panel);
   border: 1px solid var(--atlas-border);
   border-radius: var(--atlas-radius);
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.asp-slot-btn:hover:not(:disabled) {
+  color: var(--atlas-accent);
+  border-color: var(--atlas-accent-border);
+  background: var(--atlas-accent-soft);
+}
+
+.asp-slot-btn.is-consumed,
+.asp-slot-btn:disabled {
+  color: #fca5a5;
+  background: rgba(220, 38, 38, 0.22);
+  border-color: rgba(239, 68, 68, 0.5);
+  cursor: not-allowed;
+}
+
+.asp-row__use:disabled {
+  opacity: 0.4;
   cursor: not-allowed;
 }
 

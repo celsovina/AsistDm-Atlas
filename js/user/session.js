@@ -26,9 +26,11 @@ const DOC_PREFIX = 'atlas:userDoc:';
 const LEGACY_WALLET_KEY = 'atlas:wallet';
 const LEGACY_FAV_PREFIX = 'atlas:classFavorite:';
 const LEGACY_ARCHETYPE_PREFIX = 'atlas:classArchetype:';
+const LEGACY_RESOURCES_KEY = 'atlas:resources:entries';
+const LEGACY_RESOURCES_MAIN_KEY = 'atlas:resources:main';
 const SAVE_DEBOUNCE_MS = 1500;
 
-/** @typedef {{ name: string, slug: string, schemaVersion: number, classFavorites: Record<string, object>, classArchetypes: Record<string, string>, spellbooks: Record<string, object>, wallet: object|null }} UserDoc */
+/** @typedef {{ name: string, slug: string, schemaVersion: number, classFavorites: Record<string, object>, classArchetypes: Record<string, string>, spellbooks: Record<string, object>, resources: object|null, wallet: object|null }} UserDoc */
 
 const state = {
   /** @type {UserDoc|null} */
@@ -68,6 +70,7 @@ function emptyDoc(name, slug) {
     classFavorites: {},
     classArchetypes: {},
     spellbooks: {},
+    resources: null,
     wallet: null,
   };
 }
@@ -89,6 +92,8 @@ function normalizeDoc(raw, fallbackName, slug) {
         : {},
     spellbooks:
       raw.spellbooks && typeof raw.spellbooks === 'object' ? raw.spellbooks : {},
+    resources:
+      raw.resources && typeof raw.resources === 'object' ? raw.resources : null,
     wallet: raw.wallet && typeof raw.wallet === 'object' ? raw.wallet : null,
   };
 }
@@ -116,10 +121,24 @@ function writeLocalDoc() {
  * ------------------------------------------------------------------ */
 
 function collectLegacyData() {
-  const out = { wallet: null, classFavorites: {}, classArchetypes: {} };
+  const out = {
+    wallet: null,
+    classFavorites: {},
+    classArchetypes: {},
+    resources: null,
+  };
   try {
     const w = localStorage.getItem(LEGACY_WALLET_KEY);
     if (w) out.wallet = JSON.parse(w);
+  } catch {
+    /* ignore */
+  }
+  try {
+    const r = localStorage.getItem(LEGACY_RESOURCES_KEY);
+    if (r) {
+      const parsed = JSON.parse(r);
+      if (parsed && typeof parsed === 'object') out.resources = parsed;
+    }
   } catch {
     /* ignore */
   }
@@ -169,6 +188,16 @@ function migrateLegacyInto(doc) {
     changed = true;
   }
 
+  if (
+    doc.resources == null &&
+    legacy.resources &&
+    Array.isArray(legacy.resources.entries) &&
+    legacy.resources.entries.length > 0
+  ) {
+    doc.resources = legacy.resources;
+    changed = true;
+  }
+
   return changed;
 }
 
@@ -178,7 +207,11 @@ function migrateLegacyInto(doc) {
  */
 function clearLegacyKeys() {
   try {
-    const toRemove = [LEGACY_WALLET_KEY];
+    const toRemove = [
+      LEGACY_WALLET_KEY,
+      LEGACY_RESOURCES_KEY,
+      LEGACY_RESOURCES_MAIN_KEY,
+    ];
     for (let i = 0; i < localStorage.length; i += 1) {
       const key = localStorage.key(i);
       if (
@@ -272,7 +305,7 @@ export function getActiveName() {
 }
 
 /**
- * @param {'classFavorites'|'classArchetypes'|'spellbooks'|'wallet'} key
+ * @param {'classFavorites'|'classArchetypes'|'spellbooks'|'resources'|'wallet'} key
  */
 export function getSection(key) {
   return state.doc ? state.doc[key] : undefined;
@@ -292,7 +325,7 @@ export function update(mutator) {
 }
 
 /**
- * @param {'wallet'} key
+ * @param {'wallet'|'resources'} key
  * @param {object} value
  */
 export function setSection(key, value) {
