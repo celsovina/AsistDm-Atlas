@@ -78,6 +78,18 @@
 }
 
 /* —— Tarjeta por clase —— */
+/* Tarjeta de clase + su fila propia con el botón "ir a la ficha" encima */
+.asp-card-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.asp-card-open-row {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .asp-card {
   background: var(--atlas-panel);
   border: 1px solid var(--atlas-border-soft);
@@ -106,11 +118,11 @@
   flex-shrink: 0;
 }
 
-/* Botón "ir a la ficha" — anclado en la cabecera, estilo del botón de filtro */
+/* Botón "ir a la ficha" — estilo del botón de filtro */
 .asp-card__open {
   flex-shrink: 0;
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   padding: 0;
 }
 

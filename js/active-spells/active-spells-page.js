@@ -247,6 +247,15 @@ export function createActiveSpellsPage({ page, onOpenClass }) {
     } else {
       root.innerHTML = favs.map((f) => cardHtml(f)).join('');
       favs.forEach((f) => wireCard(root, f));
+      root.querySelectorAll('.asp-card__open').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const lvl = Number(btn.dataset.level);
+          onOpenClass?.(
+            btn.dataset.class,
+            Number.isFinite(lvl) ? { classLevel: lvl } : {}
+          );
+        });
+      });
     }
     refreshIcons();
   }
@@ -331,20 +340,24 @@ export function createActiveSpellsPage({ page, onOpenClass }) {
     }
 
     return `
-      <section class="asp-card" data-class="${f.classId}">
-        <header class="asp-card__header">
-          <h3 class="asp-card__title">${esc(classLabel(f.classId))}</h3>
-          ${modHtml}
-          <span class="asp-card__level spells-badge">Nivel ${f.classLevel}</span>
+      <div class="asp-card-wrap" data-class="${f.classId}">
+        <div class="asp-card-open-row">
           <button type="button" class="atlas-icon-btn asp-card__open"
             data-class="${f.classId}" data-level="${f.classLevel}"
             title="Ir a la ficha de la clase" aria-label="Ir a la ficha de la clase">
             <i data-lucide="square-arrow-out-up-right"></i>
           </button>
-        </header>
-        <div class="asp-card__pills">${pills.join('')}</div>
-        <div class="asp-card__body">${body || placeholder()}</div>
-      </section>`;
+        </div>
+        <section class="asp-card" data-class="${f.classId}">
+          <header class="asp-card__header">
+            <h3 class="asp-card__title">${esc(classLabel(f.classId))}</h3>
+            ${modHtml}
+            <span class="asp-card__level spells-badge">Nivel ${f.classLevel}</span>
+          </header>
+          <div class="asp-card__pills">${pills.join('')}</div>
+          <div class="asp-card__body">${body || placeholder()}</div>
+        </section>
+      </div>`;
   }
 
   function placeholder() {
@@ -488,10 +501,6 @@ export function createActiveSpellsPage({ page, onOpenClass }) {
   function wireCard(root, f) {
     const card = root.querySelector(`.asp-card[data-class="${f.classId}"]`);
     if (!card) return;
-
-    card.querySelector('.asp-card__open')?.addEventListener('click', () => {
-      onOpenClass?.(f.classId, { classLevel: f.classLevel });
-    });
 
     card.querySelector('.asp-mod__input')?.addEventListener('change', (e) => {
       const v = parseInt(e.target.value, 10);
