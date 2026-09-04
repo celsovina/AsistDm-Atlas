@@ -761,6 +761,11 @@ export function createClassesPage(rootEls) {
         onFavoriteChange: () => {
           /* la sesión persiste sola; hook para futuros contadores */
         },
+        getAllSpells: () => state.allSpells,
+        getClassSpellIdSet: () => {
+          const listId = getSpellListClassId();
+          return state.classSpellMap?.[listId] || new Set();
+        },
       });
       spellsPanel._sectionEl = spellsSection;
     }
@@ -930,6 +935,8 @@ export function createClassesPage(rootEls) {
       if (!state.loading && state.classes.length) {
         renderClassList();
       }
+      // Las estrellas / "otros orígenes" pueden haber cambiado desde Conjuros activos
+      spellsPanel?.renderListAndDetail?.();
     },
     hide() {
       els.page.hidden = true;

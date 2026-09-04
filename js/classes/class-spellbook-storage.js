@@ -147,9 +147,11 @@ export function isFavorite(classId, spellId) {
  * Bucket donde vive (o iría) un conjuro según tipo de lanzador y nivel.
  * @param {'aprendidos'|'preparados'|'grimorio'|null} casterType
  * @param {number} spellLevel
- * @returns {'cantrips'|'spells'|'grimoire'}
+ * @param {boolean} inClassList
+ * @returns {'cantrips'|'spells'|'grimoire'|'extra'}
  */
-function targetBucket(casterType, spellLevel) {
+function targetBucket(casterType, spellLevel, inClassList) {
+  if (inClassList === false) return 'extra';
   if ((spellLevel ?? 0) === 0) return 'cantrips';
   if (casterType === 'grimorio') return 'grimoire';
   return 'spells';
@@ -159,13 +161,13 @@ function targetBucket(casterType, spellLevel) {
  * Marca / desmarca un conjuro para la clase. Lo coloca en el bucket correcto.
  * @param {string} classId
  * @param {string} spellId
- * @param {{ casterType: string|null, level: number }} ctx
+ * @param {{ casterType: string|null, level: number, inClassList?: boolean }} ctx
  * @returns {boolean} nuevo estado (true = marcado)
  */
-export function toggleFavorite(classId, spellId, { casterType, level }) {
+export function toggleFavorite(classId, spellId, { casterType, level, inClassList = true }) {
   let marked = false;
   updateSpellbook(classId, (book) => {
-    const bucket = targetBucket(casterType, level);
+    const bucket = targetBucket(casterType, level, inClassList);
     const removeFrom = (list) => {
       const i = list.indexOf(spellId);
       if (i >= 0) list.splice(i, 1);
@@ -188,6 +190,16 @@ export function toggleFavorite(classId, spellId, { casterType, level }) {
     }
   });
   return marked;
+}
+
+/**
+ * @param {string} classId
+ * @param {boolean} on
+ */
+export function setExtraUnlocked(classId, on) {
+  updateSpellbook(classId, (book) => {
+    book.extraUnlocked = !!on;
+  });
 }
 
 /**

@@ -11,6 +11,7 @@ import {
   getSpellbook,
   allMarkedIds,
   toggleFavorite,
+  setExtraUnlocked,
 } from './class-spellbook-storage.js';
 
 /**
@@ -106,6 +107,8 @@ function escapeHtml(text) {
  * @param {() => string} [opts.getClassId]
  * @param {() => string|null} [opts.getCasterType]
  * @param {() => void} [opts.onFavoriteChange]
+ * @param {() => object[]} [opts.getAllSpells]
+ * @param {() => Set<string>} [opts.getClassSpellIdSet]
  */
 export function createClassSpellsPanelController(opts) {
   const {
@@ -124,7 +127,32 @@ export function createClassSpellsPanelController(opts) {
     getClassId = () => null,
     getCasterType = () => null,
     onFavoriteChange,
+    getAllSpells = () => [],
+    getClassSpellIdSet = () => new Set(),
   } = opts;
+
+  function extraUnlocked() {
+    const classId = getClassId();
+    return !!(classId && getSpellbook(classId)?.extraUnlocked);
+  }
+
+  /**
+   * Con "otros orígenes" activo el catálogo abarca toda la base de conjuros;
+   * si no, solo la lista de la clase.
+   */
+  function activeSpellSource() {
+    if (!extraUnlocked()) return getSpells();
+    return (getAllSpells() || []).slice().sort((a, b) => {
+      const byLvl = (a.level ?? 0) - (b.level ?? 0);
+      return byLvl !== 0
+        ? byLvl
+        : (a.name || '').localeCompare(b.name || '', 'es');
+    });
+  }
+
+  function inClassList(spellId) {
+    return getClassSpellIdSet().has(spellId);
+  }
 
   function markedIds() {
     const classId = getClassId();
@@ -138,6 +166,7 @@ export function createClassSpellsPanelController(opts) {
     toggleFavorite(classId, spell.id, {
       casterType: getCasterType(),
       level: spell.level ?? 0,
+      inClassList: inClassList(spell.id),
     });
     if (typeof onFavoriteChange === 'function') onFavoriteChange();
     renderListAndDetail();
@@ -163,7 +192,13 @@ export function createClassSpellsPanelController(opts) {
   }
 
   function renderListAndDetail() {
-    const spells = getSpells();
+    // Re-sincroniza el interruptor de "otros orígenes" (puede cambiar desde fuera)
+    const extraRow = sectionEl.querySelector('#class-spells-extra');
+    const extraCheck = sectionEl.querySelector('#class-spells-extra-check');
+    if (extraRow) extraRow.hidden = !getClassId();
+    if (extraCheck) extraCheck.checked = extraUnlocked();
+
+    const spells = activeSpellSource();
     const query = getQuery();
     const selectedSpellId = getSelectedSpellId();
     const filtered = filterClassSpells(spells, query, levelFilter, sourceFilter);
@@ -281,6 +316,14 @@ export function createClassSpellsPanelController(opts) {
         <div id="class-spells-filter-mount"></div>
       </div>
 
+      <label class="class-spells-extra" id="class-spells-extra" hidden>
+        <span class="atlas-switch atlas-switch--sm">
+          <input type="checkbox" id="class-spells-extra-check" />
+          <span class="switch-slider"></span>
+        </span>
+        <span>Conjuros de otros orígenes (raza, dotes, objetos…)</span>
+      </label>
+
       <button type="button" class="atlas-selected-bar class-spells-selected-bar" id="class-spells-selected-bar" hidden>
         <span class="atlas-selected-bar__back" aria-hidden="true">
           <i data-lucide="chevron-left"></i>
@@ -306,6 +349,22 @@ export function createClassSpellsPanelController(opts) {
         setSelectedSpellId(null);
         renderListAndDetail();
       });
+
+    const extraRow = sectionEl.querySelector('#class-spells-extra');
+    const extraCheck = sectionEl.querySelector('#class-spells-extra-check');
+    if (extraRow && extraCheck) {
+      const classId = getClassId();
+      extraRow.hidden = !classId;
+      extraCheck.checked = extraUnlocked();
+      extraCheck.addEventListener('change', () => {
+        const cid = getClassId();
+        if (!cid) return;
+        setExtraUnlocked(cid, extraCheck.checked);
+        setSelectedSpellId(null);
+        if (typeof onFavoriteChange === 'function') onFavoriteChange();
+        renderListAndDetail();
+      });
+    }
 
     filterPanel = null;
     const filterMount = sectionEl.querySelector('#class-spells-filter-mount');
