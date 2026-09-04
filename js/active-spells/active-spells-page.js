@@ -332,15 +332,15 @@ export function createActiveSpellsPage({ page, onOpenClass }) {
 
     return `
       <section class="asp-card" data-class="${f.classId}">
+        <button type="button" class="atlas-icon-btn asp-card__open"
+          data-class="${f.classId}" data-level="${f.classLevel}"
+          title="Ir a la ficha de la clase" aria-label="Ir a la ficha de la clase">
+          <i data-lucide="square-arrow-out-up-right"></i>
+        </button>
         <header class="asp-card__header">
           <h3 class="asp-card__title">${esc(classLabel(f.classId))}</h3>
           ${modHtml}
           <span class="asp-card__level spells-badge">Nivel ${f.classLevel}</span>
-          <button type="button" class="atlas-icon-btn asp-card__open"
-            data-class="${f.classId}" data-level="${f.classLevel}"
-            title="Ir a la ficha de la clase" aria-label="Ir a la ficha de la clase">
-            <i data-lucide="square-arrow-out-up-right"></i>
-          </button>
         </header>
         <div class="asp-card__pills">${pills.join('')}</div>
         <div class="asp-card__body">${body || placeholder()}</div>
@@ -527,16 +527,44 @@ export function createActiveSpellsPage({ page, onOpenClass }) {
     });
 
     card.querySelectorAll('.asp-row__use').forEach((btn) => {
-      btn.addEventListener('click', () => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
         const panel = btn
           .closest('.asp-row-wrap')
           ?.querySelector('.asp-row-slots');
         if (!panel) return;
-        const open = panel.hidden;
-        panel.hidden = !open;
-        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-        btn.classList.toggle('is-open', open);
+        const willOpen = panel.hidden;
+        closeAllSlotPopovers();
+        if (willOpen) openSlotPopover(btn, panel);
       });
+    });
+  }
+
+  function openSlotPopover(btn, panel) {
+    panel.hidden = false;
+    btn.setAttribute('aria-expanded', 'true');
+    btn.classList.add('is-open');
+    // Posición: bajo el botón, alineado a su borde derecho, dentro del viewport.
+    const r = btn.getBoundingClientRect();
+    panel.style.visibility = 'hidden';
+    const pw = panel.offsetWidth;
+    const ph = panel.offsetHeight;
+    let left = Math.min(r.right - pw, window.innerWidth - pw - 12);
+    left = Math.max(12, left);
+    let top = r.bottom + 6;
+    if (top + ph > window.innerHeight - 12) top = Math.max(12, r.top - ph - 6);
+    panel.style.left = `${Math.round(left)}px`;
+    panel.style.top = `${Math.round(top)}px`;
+    panel.style.visibility = '';
+  }
+
+  function closeAllSlotPopovers() {
+    page.querySelectorAll('.asp-row-slots').forEach((p) => {
+      p.hidden = true;
+    });
+    page.querySelectorAll('.asp-row__use.is-open').forEach((b) => {
+      b.classList.remove('is-open');
+      b.setAttribute('aria-expanded', 'false');
     });
   }
 
@@ -558,6 +586,15 @@ export function createActiveSpellsPage({ page, onOpenClass }) {
   }
 
   /* ---------------------------------------------------------------- */
+
+  document.addEventListener('click', (e) => {
+    if (page.hidden) return;
+    if (!e.target.closest('.asp-row-slots') && !e.target.closest('.asp-row__use')) {
+      closeAllSlotPopovers();
+    }
+  });
+  page.addEventListener('scroll', () => closeAllSlotPopovers(), true);
+  window.addEventListener('resize', () => closeAllSlotPopovers());
 
   return {
     load,
