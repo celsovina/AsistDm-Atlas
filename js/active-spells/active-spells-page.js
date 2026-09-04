@@ -466,7 +466,7 @@ export function createActiveSpellsPage({ page, onOpenClass }) {
   /** Lista plana ordenada por nivel; el nivel se ve en la pill de cada fila. */
   function listSection(title, spells, f, rowOpts) {
     if (!spells.length) return '';
-    const inner = rowsHtml(spells, f, rowOpts);
+    const inner = scrollList(rowsHtml(spells, f, rowOpts), spells.length);
     return title ? section(title, inner) : inner;
   }
 
@@ -501,7 +501,7 @@ export function createActiveSpellsPage({ page, onOpenClass }) {
     const orphan = !book.extraUnlocked;
     return section(
       `Otros orígenes${orphan ? ' — sin confirmar' : ''}`,
-      rowsHtml(spells, f, { orphan })
+      scrollList(rowsHtml(spells, f, { orphan }), spells.length)
     );
   }
 
