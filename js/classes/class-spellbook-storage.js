@@ -13,6 +13,7 @@
  *
  * v1: `grimoires` siempre tiene un único elemento "default". La estructura queda
  * lista para una biblioteca de varios grimorios sin migración.
+ * Falta la UI (varios grimorios, nombrar, mover conjuros): ver PENDIENTE.md.
  */
 
 import { isReady, getSection, update, getActiveSlug } from '../user/session.js';
