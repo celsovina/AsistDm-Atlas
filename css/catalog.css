@@ -55,6 +55,32 @@
   background: #5a6578;
 }
 
+/* Barra de scroll reutilizable (mismo estilo que .description-box) */
+.atlas-scroll {
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #4a5568 #1a202c;
+}
+
+.atlas-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.atlas-scroll::-webkit-scrollbar-track {
+  background: #1a202c;
+  border-radius: 3px;
+}
+
+.atlas-scroll::-webkit-scrollbar-thumb {
+  background: #4a5568;
+  border-radius: 3px;
+}
+
+.atlas-scroll::-webkit-scrollbar-thumb:hover {
+  background: #5a6578;
+}
+
 .description-placeholder {
   color: #a0aec0;
   font-style: italic;

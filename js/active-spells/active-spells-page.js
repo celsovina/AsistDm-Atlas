@@ -241,29 +241,13 @@ export function createActiveSpellsPage({ page, onOpenClass }) {
             Ir a Clases
           </button>
         </div>`;
+      root.querySelector('.asp-go-classes')?.addEventListener('click', () => {
+        onOpenClass?.(null);
+      });
     } else {
-      root.innerHTML = favs
-        .map(
-          (f) => `
-          <div class="asp-card-wrap">
-            ${cardHtml(f)}
-            <button type="button" class="resources-btn resources-btn--primary asp-go-classes"
-              data-class="${f.classId}" data-level="${f.classLevel}">
-              Ir a Clases
-            </button>
-          </div>`
-        )
-        .join('');
+      root.innerHTML = favs.map((f) => cardHtml(f)).join('');
       favs.forEach((f) => wireCard(root, f));
     }
-
-    root.querySelectorAll('.asp-go-classes').forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const cid = btn.dataset.class || null;
-        const lvl = Number(btn.dataset.level);
-        onOpenClass?.(cid, Number.isFinite(lvl) ? { classLevel: lvl } : {});
-      });
-    });
     refreshIcons();
   }
 
@@ -352,6 +336,11 @@ export function createActiveSpellsPage({ page, onOpenClass }) {
           <h3 class="asp-card__title">${esc(classLabel(f.classId))}</h3>
           ${modHtml}
           <span class="asp-card__level spells-badge">Nivel ${f.classLevel}</span>
+          <button type="button" class="atlas-icon-btn asp-card__open"
+            data-class="${f.classId}" data-level="${f.classLevel}"
+            title="Ir a la ficha de la clase" aria-label="Ir a la ficha de la clase">
+            <i data-lucide="square-arrow-out-up-right"></i>
+          </button>
         </header>
         <div class="asp-card__pills">${pills.join('')}</div>
         <div class="asp-card__body">${body || placeholder()}</div>
@@ -402,10 +391,12 @@ export function createActiveSpellsPage({ page, onOpenClass }) {
     const prep =
       prepared === null
         ? ''
-        : `<span class="atlas-switch atlas-switch--sm asp-prep" data-spell="${sp.id}" data-class="${f.classId}">
-             <input type="checkbox" ${prepared ? 'checked' : ''} aria-label="Preparar" />
-             <span class="switch-slider"></span>
-           </span>`;
+        : `<button type="button" class="asp-prep-btn${prepared ? ' is-on' : ''}"
+             data-spell="${sp.id}" data-class="${f.classId}" aria-pressed="${prepared ? 'true' : 'false'}"
+             title="${prepared ? 'Quitar de preparados' : 'Preparar'}"
+             aria-label="${prepared ? 'Quitar de preparados' : 'Preparar'}">
+             <i data-lucide="${prepared ? 'book-open-check' : 'book-open'}"></i>
+           </button>`;
     const use =
       lvl >= 1
         ? `<button type="button" class="asp-row__use" data-spell="${sp.id}"
@@ -466,7 +457,11 @@ export function createActiveSpellsPage({ page, onOpenClass }) {
     const prepared = new Set(book.prepared);
     return section(
       'Grimorio',
-      rowsHtml(spells, f, (sp) => ({ prepared: prepared.has(sp.id) }))
+      `<div class="asp-grimoire-list atlas-scroll">${rowsHtml(
+        spells,
+        f,
+        (sp) => ({ prepared: prepared.has(sp.id) })
+      )}</div>`
     );
   }
 
@@ -494,6 +489,10 @@ export function createActiveSpellsPage({ page, onOpenClass }) {
     const card = root.querySelector(`.asp-card[data-class="${f.classId}"]`);
     if (!card) return;
 
+    card.querySelector('.asp-card__open')?.addEventListener('click', () => {
+      onOpenClass?.(f.classId, { classLevel: f.classLevel });
+    });
+
     card.querySelector('.asp-mod__input')?.addEventListener('change', (e) => {
       const v = parseInt(e.target.value, 10);
       updateSpellbook(f.classId, (b) => {
@@ -520,10 +519,9 @@ export function createActiveSpellsPage({ page, onOpenClass }) {
       });
     });
 
-    card.querySelectorAll('.asp-prep input').forEach((input) => {
-      input.addEventListener('change', () => {
-        const wrap = input.closest('.asp-prep');
-        togglePrepared(f.classId, wrap.dataset.spell);
+    card.querySelectorAll('.asp-prep-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        togglePrepared(f.classId, btn.dataset.spell);
         render();
       });
     });
