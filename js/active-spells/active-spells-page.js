@@ -115,21 +115,6 @@ export function createActiveSpellsPage({ page, onOpenClass }) {
       });
   }
 
-  function groupByLevel(spells) {
-    const groups = new Map();
-    for (const sp of spells) {
-      const lvl = sp.level ?? 0;
-      if (!groups.has(lvl)) groups.set(lvl, []);
-      groups.get(lvl).push(sp);
-    }
-    return [...groups.entries()]
-      .sort((a, b) => a[0] - b[0])
-      .map(([level, list]) => ({
-        level,
-        label: level === 0 ? 'Trucos' : `Nivel ${level}`,
-        spells: list,
-      }));
-  }
 
   /* ---------------------------------------------------------------- *
    *  Carga
@@ -247,24 +232,38 @@ export function createActiveSpellsPage({ page, onOpenClass }) {
     }
 
     const favs = casterFavorites();
-    const goBtn = `
-      <button type="button" class="asp-go-classes" id="asp-go-classes">
-        <i data-lucide="swords"></i> Ir a Clases
-      </button>`;
 
     if (!favs.length) {
       root.innerHTML = `
         <div class="active-spells-empty">
           <p>No hay ninguna clase lanzadora marcada como favorita.</p>
-        </div>
-        ${goBtn}`;
+          <button type="button" class="resources-btn resources-btn--primary asp-go-classes" data-class="">
+            Ir a Clases
+          </button>
+        </div>`;
     } else {
-      root.innerHTML = favs.map((f) => cardHtml(f)).join('') + goBtn;
+      root.innerHTML = favs
+        .map(
+          (f) => `
+          <div class="asp-card-wrap">
+            ${cardHtml(f)}
+            <button type="button" class="resources-btn resources-btn--primary asp-go-classes"
+              data-class="${f.classId}" data-level="${f.classLevel}">
+              Ir a Clases
+            </button>
+          </div>`
+        )
+        .join('');
       favs.forEach((f) => wireCard(root, f));
     }
-    root
-      .querySelector('#asp-go-classes')
-      ?.addEventListener('click', () => onOpenClass?.(null));
+
+    root.querySelectorAll('.asp-go-classes').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const cid = btn.dataset.class || null;
+        const lvl = Number(btn.dataset.level);
+        onOpenClass?.(cid, Number.isFinite(lvl) ? { classLevel: lvl } : {});
+      });
+    });
     refreshIcons();
   }
 
@@ -337,12 +336,11 @@ export function createActiveSpellsPage({ page, onOpenClass }) {
     let body;
     if (hasGrimoire(f.casterType)) {
       body = `
-        ${listSection('Trucos', groupByLevel(spellObjs(book.cantrips)), f)}
+        ${listSection('Trucos', spellObjs(book.cantrips), f)}
         ${grimoireSection(f, book)}
         ${preparedSection(f, book)}`;
     } else {
-      const all = spellObjs([...book.cantrips, ...book.spells]);
-      body = listSection(null, groupByLevel(all), f);
+      body = listSection(null, spellObjs([...book.cantrips, ...book.spells]), f);
     }
     if (book.extra.length) {
       body += extraSection(f, book);
@@ -435,25 +433,16 @@ export function createActiveSpellsPage({ page, onOpenClass }) {
   /**
    * @param {(sp:object)=>string} rowFn
    */
-  function groupsHtml(groups, rowFn, hideLabels) {
-    return groups
-      .map(
-        (g) => `
-        <div class="asp-group">
-          ${hideLabels ? '' : `<div class="asp-group__label">${esc(g.label)}</div>`}
-          ${g.spells.map(rowFn).join('')}
-        </div>`
+  function rowsHtml(spells, f, rowOpts) {
+    return spells
+      .map((sp) =>
+        spellRowHtml(
+          sp,
+          f,
+          typeof rowOpts === 'function' ? rowOpts(sp) : rowOpts || {}
+        )
       )
       .join('');
-  }
-
-  function listSection(title, groups, f) {
-    if (!groups.length) return '';
-    const hideLabels = !!title && groups.length === 1;
-    const inner = groupsHtml(groups, (sp) => spellRowHtml(sp, f), hideLabels);
-    return title
-      ? `<div class="asp-section"><h4 class="asp-section__title">${esc(title)}</h4>${inner}</div>`
-      : inner;
   }
 
   function section(title, inner) {
@@ -462,20 +451,22 @@ export function createActiveSpellsPage({ page, onOpenClass }) {
     )}</h4>${inner}</div>`;
   }
 
+  /** Lista plana ordenada por nivel; el nivel se ve en la pill de cada fila. */
+  function listSection(title, spells, f, rowOpts) {
+    if (!spells.length) return '';
+    const inner = rowsHtml(spells, f, rowOpts);
+    return title ? section(title, inner) : inner;
+  }
+
   function grimoireSection(f, book) {
     const spells = spellObjs(book.grimoires.flatMap((g) => g.spellIds));
     if (!spells.length) {
       return section('Grimorio', '<div class="description-placeholder">Grimorio vacío.</div>');
     }
     const prepared = new Set(book.prepared);
-    const groups = groupByLevel(spells);
     return section(
       'Grimorio',
-      groupsHtml(
-        groups,
-        (sp) => spellRowHtml(sp, f, { prepared: prepared.has(sp.id) }),
-        groups.length === 1
-      )
+      rowsHtml(spells, f, (sp) => ({ prepared: prepared.has(sp.id) }))
     );
   }
 
@@ -487,20 +478,15 @@ export function createActiveSpellsPage({ page, onOpenClass }) {
         '<div class="description-placeholder">Marca conjuros del grimorio para prepararlos.</div>'
       );
     }
-    const groups = groupByLevel(spells);
-    return section(
-      'Preparados',
-      groupsHtml(groups, (sp) => spellRowHtml(sp, f), groups.length === 1)
-    );
+    return section('Preparados', rowsHtml(spells, f));
   }
 
   function extraSection(f, book) {
     const spells = spellObjs(book.extra);
     const orphan = !book.extraUnlocked;
-    const groups = groupByLevel(spells);
     return section(
       `Otros orígenes${orphan ? ' — sin confirmar' : ''}`,
-      groupsHtml(groups, (sp) => spellRowHtml(sp, f, { orphan }), groups.length === 1)
+      rowsHtml(spells, f, { orphan })
     );
   }
 
