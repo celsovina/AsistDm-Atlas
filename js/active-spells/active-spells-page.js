@@ -455,6 +455,14 @@ export function createActiveSpellsPage({ page, onOpenClass }) {
     )}</h4>${inner}</div>`;
   }
 
+  /** A partir de 10 conjuros, la lista scrollea; si no, altura natural. */
+  const SCROLL_AT = 10;
+  function scrollList(inner, count) {
+    return `<div class="asp-scroll-list atlas-scroll${
+      count > SCROLL_AT ? ' is-scroll' : ''
+    }">${inner}</div>`;
+  }
+
   /** Lista plana ordenada por nivel; el nivel se ve en la pill de cada fila. */
   function listSection(title, spells, f, rowOpts) {
     if (!spells.length) return '';
@@ -470,11 +478,10 @@ export function createActiveSpellsPage({ page, onOpenClass }) {
     const prepared = new Set(book.prepared);
     return section(
       'Grimorio',
-      `<div class="asp-grimoire-list atlas-scroll">${rowsHtml(
-        spells,
-        f,
-        (sp) => ({ prepared: prepared.has(sp.id) })
-      )}</div>`
+      scrollList(
+        rowsHtml(spells, f, (sp) => ({ prepared: prepared.has(sp.id) })),
+        spells.length
+      )
     );
   }
 
@@ -486,7 +493,7 @@ export function createActiveSpellsPage({ page, onOpenClass }) {
         '<div class="description-placeholder">Marca conjuros del grimorio para prepararlos.</div>'
       );
     }
-    return section('Preparados', rowsHtml(spells, f));
+    return section('Preparados', scrollList(rowsHtml(spells, f), spells.length));
   }
 
   function extraSection(f, book) {

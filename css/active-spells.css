@@ -298,8 +298,9 @@
   color: #f6e05e;
 }
 
-.asp-grimoire-list {
-  max-height: 300px;
+/* Lista con scroll a partir de ~10 conjuros */
+.asp-scroll-list.is-scroll {
+  max-height: 360px;
 }
 
 .asp-row--orphan .spells-list-item__name {
